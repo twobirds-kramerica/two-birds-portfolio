@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Birds Portfolio Dashboard — Aaron Kramer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #2B5EA7;
+      --primary-dark: #1a4a8a;
+      --accent: #E8845C;
+      --bg: #FAF8F5;
+      --white: #ffffff;
+      --text: #2C2C2C;
+      --text-muted: #666;
+      --border: #ddd;
+      --success: #4CAF82;
+      --critical: #C0392B;
+      --warning: #D4A017;
+      --parked: #888;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header .meta {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* ── Section headers ── */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title .icon {
+      font-size: 1rem;
+    }
+
+    /* ── Morning Briefing ── */
+    .briefing-section {
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .briefing-section h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .briefing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .briefing-card {
+      background: rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .briefing-card .rank {
+      font-size: 1.5rem;
+      font-weight: 900;
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .briefing-card .title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .briefing-card .note {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+    .briefing-card .badge-inline {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── Weekly Review ── */
+    .weekly-section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .weekly-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .weekly-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: #f9f9f9;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+    }
+    .weekly-item .time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      margin-top: 0.1rem;
+      min-width: 80px;
+    }
+    .weekly-item .task {
+      font-size: 0.9rem;
+    }
+
+    /* ── Status Badges ── */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+    .badge-critical { background: #fde8e8; color: var(--critical); border: 1px solid #f5c6c6; }
+    .badge-active   { background: #e8f0fb; color: var(--primary); border: 1px solid #b8cfee; }
+    .badge-backlog  { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
+    .badge-complete { background: #e8f5ee; color: #2e7d52; border: 1px solid #a8d8bb; }
+    .badge-parked   { background: #fdf6e0; color: #8a6900; border: 1px solid #e8d888; }
+    .badge-urgent   { background: #fff0e8; color: #c05010; border: 1px solid #f0c0a0; }
+
+    /* ── Themes & Epics ── */
+    .themes-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .theme-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .theme-header {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .theme-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .theme-header .theme-badge {
+      font-size: 0.75rem;
+      background: rgba(255,255,255,0.2);
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    .epics-list {
+      padding: 0;
+    }
+
+    .epic-card {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #f0f0f0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem 1rem;
+      align-items: start;
+      transition: background 0.15s;
+    }
+    .epic-card:last-child { border-bottom: none; }
+    .epic-card:hover { background: #f9f9f9; }
+
+    .epic-main {}
+    .epic-id {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .epic-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+    .epic-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+    .epic-time {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .epic-notes {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .epic-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.4rem;
+      min-width: 100px;
+    }
+    .priority-dot {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-critical { background: var(--critical); }
+    .dot-high     { background: var(--accent); }
+    .dot-medium   { background: var(--warning); }
+    .dot-low      { background: var(--parked); }
+
+    /* ── Recurring Reviews ── */
+    .recurring-section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .recurring-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .recurring-item {
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+    }
+    .recurring-item .cadence {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      header { padding: 1rem; }
+      .container { padding: 1rem; }
+      .epic-card {
+        grid-template-columns: 1fr;
+      }
+      .epic-right {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .theme-header { padding: 0.75rem 1rem; }
+      .epic-card { padding: 0.75rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Two Birds Portfolio Dashboard</h1>
+    <div class="meta">Aaron Kramer &nbsp;|&nbsp; St. Thomas, Ontario &nbsp;|&nbsp; Updated: 2026-03-15</div>
+  </header>
+
+  <div class="container">
+
+    <!-- Morning Briefing -->
+    <div class="briefing-section">
+      <h2>Morning Briefing — Top 3 Priorities</h2>
+      <div class="briefing-grid">
+        <div class="briefing-card">
+          <div class="rank">01</div>
+          <div class="badge-inline">CRITICAL</div>
+          <div class="title">Grant/Loan Deadline — Idea Vault Triage</div>
+          <div class="note">Ingest decade of ideas from PDF. Identify 2-3 lead ideas for application. Deadline in days.</div>
+        </div>
+        <div class="briefing-card">
+          <div class="rank">02</div>
+          <div class="badge-inline">CRITICAL</div>
+          <div class="title">Grant Funding Exploration</div>
+          <div class="note">New Horizons for Seniors + Ontario Seniors Community Grant. Resolve non-profit eligibility gap.</div>
+        </div>
+        <div class="briefing-card">
+          <div class="rank">03</div>
+          <div class="badge-inline">ACTIVE</div>
+          <div class="title">DCC Images — Fix Before Showing Anyone</div>
+          <div class="note">Visual pipeline now in place. Run image fix sprint (45 min). Site must be presentable for grant meeting.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Review -->
+    <div class="weekly-section">
+      <div class="section-title">
+        <span class="icon">&#128197;</span> Weekly Review — This Week's Focus
+      </div>
+      <ul class="weekly-list">
+        <li class="weekly-item">
+          <span class="time">30 min</span>
+          <span class="task"><strong>Backlog review</strong> — all projects + enterprise. Update statuses after any milestone.</span>
+        </li>
+        <li class="weekly-item">
+          <span class="time">2–4 hrs</span>
+          <span class="task"><strong>Idea vault deep session</strong> — ingest PDF, add WhatsApp ideas, triage for grant application.</span>
+        </li>
+        <li class="weekly-item">
+          <span class="time">45 min</span>
+          <span class="task"><strong>DCC image sprint</strong> — apply visual pipeline, get site presentable.</span>
+        </li>
+        <li class="weekly-item">
+          <span class="time">2 hrs</span>
+          <span class="task"><strong>Grant funding research</strong> — confirm eligibility, prepare application outline.</span>
+        </li>
+        <li class="weekly-item">
+          <span class="time">15 min</span>
+          <span class="task"><strong>Credit efficiency review</strong> — assess Claude usage this week.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- All Themes & Epics -->
+    <div class="section-title">
+      <span class="icon">&#128195;</span> Full Portfolio Backlog
+    </div>
+
+    <div class="themes-wrapper">
+
+      <!-- THEME 0 -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <h3>Theme 0 — Master Idea Vault &amp; Strategic Prioritisation</h3>
+          <span class="theme-badge">URGENT — deadline in days</span>
+        </div>
+        <div class="epics-list">
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 0.1</div>
+              <div class="epic-title">Ingest &amp; triage decade of ideas from PDF</div>
+              <div class="epic-meta">
+                <span class="badge badge-critical">Not Started</span>
+                <span class="epic-time">3–4 hours (deep working session)</span>
+              </div>
+              <div class="epic-notes">PDF lives in Google NotebookLM. WhatsApp ideas to be added. Goal is to identify 2-3 bangers for grant application.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-critical">Critical</span>
+              <div class="priority-dot"><span class="dot dot-critical"></span>Critical</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 0.2</div>
+              <div class="epic-title">Add recent WhatsApp ideas to vault</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Not Started</span>
+                <span class="epic-time">30 minutes</span>
+              </div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-active">High</span>
+              <div class="priority-dot"><span class="dot dot-high"></span>High</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 0.3</div>
+              <div class="epic-title">Verbal vetting sessions with Claude</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Not Started</span>
+                <span class="epic-time">2 hours/session, multiple sessions</span>
+              </div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-active">High</span>
+              <div class="priority-dot"><span class="dot dot-high"></span>High</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 0.4</div>
+              <div class="epic-title">Identify grant/loan lead ideas</div>
+              <div class="epic-meta">
+                <span class="badge badge-critical">Not Started</span>
+                <span class="epic-time">1 hour once vault is triaged</span>
+              </div>
+              <div class="epic-notes">Deadline in days.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-critical">Critical</span>
+              <div class="priority-dot"><span class="dot dot-critical"></span>Critical</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- THEME 1 -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <h3>Theme 1 — Digital Services Business (Two Birds)</h3>
+          <span class="theme-badge">Active</span>
+        </div>
+        <div class="epics-list">
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 1.1</div>
+              <div class="epic-title">Digital Confidence Centre</div>
+              <div class="epic-meta">
+                <span class="badge badge-active">Active — MVP Sprint</span>
+                <span class="epic-time">Image fix: 45 min · Full MVP: 2–3 sessions · QA: 1 hr</span>
+              </div>
+              <div class="epic-notes">Images currently unacceptable. Fix before showing to anyone. Visual pipeline now in place.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-active">High</span>
+              <div class="priority-dot"><span class="dot dot-high"></span>High</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 1.2</div>
+              <div class="epic-title">Kirks Karate Website</div>
+              <div class="epic-meta">
+                <span class="badge badge-active">Active — needs attention</span>
+                <span class="epic-time">1–2 hours to assess current state</span>
+              </div>
+              <div class="epic-notes">No feedback form set up yet.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-parked">Medium</span>
+              <div class="priority-dot"><span class="dot dot-medium"></span>Medium</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 1.3</div>
+              <div class="epic-title">HAL Stack (voice-first AI dev rig)</div>
+              <div class="epic-meta">
+                <span class="badge badge-parked">Parked — 1-2 weeks</span>
+                <span class="epic-time">2–3 hours to resume planning</span>
+              </div>
+              <div class="epic-notes">Handoff document exists. HAL 9000 inspired. Social Stack Diary Entry 1.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-backlog">Low</span>
+              <div class="priority-dot"><span class="dot dot-low"></span>Low (for now)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- THEME 2 -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <h3>Theme 2 — Infrastructure &amp; Security</h3>
+          <span class="theme-badge">Mixed status</span>
+        </div>
+        <div class="epics-list">
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.1</div>
+              <div class="epic-title">Claude Code Environment</div>
+              <div class="epic-meta">
+                <span class="badge badge-complete">COMPLETED</span>
+              </div>
+              <div class="epic-notes">CLAUDE.md, context-mode MCP, project template, visual pipeline — all live on GitHub.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-complete">Done</span>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.2</div>
+              <div class="epic-title">Google Workspace CLI Integration</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Backlogged</span>
+                <span class="epic-time">1 hour once Google Sheet exists</span>
+              </div>
+              <div class="epic-notes">Use case: weekly feedback summary for Digital Confidence Centre.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-backlog">Low</span>
+              <div class="priority-dot"><span class="dot dot-low"></span>Low</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.3</div>
+              <div class="epic-title">Aaron OS / Master Prompt</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Backlogged</span>
+                <span class="epic-time">1 focused hour</span>
+              </div>
+              <div class="epic-notes">Most ingredients already exist in preferences and session history.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-parked">Medium</span>
+              <div class="priority-dot"><span class="dot dot-medium"></span>Medium</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.4</div>
+              <div class="epic-title">Portfolio Backlog System (this)</div>
+              <div class="epic-meta">
+                <span class="badge badge-active">In Progress</span>
+                <span class="epic-time">30 minutes to complete</span>
+              </div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-active">High</span>
+              <div class="priority-dot"><span class="dot dot-high"></span>High</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.5</div>
+              <div class="epic-title">SSO &amp; Account Migration</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Backlogged — post grant</span>
+                <span class="epic-time">2 hours with checklist</span>
+              </div>
+              <div class="epic-notes">Personal Gmail used for all SSO. Single point of failure risk. Not an emergency today.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-active">High</span>
+              <div class="priority-dot"><span class="dot dot-high"></span>High (not urgent)</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.6</div>
+              <div class="epic-title">Gemini-to-Claude Voice Workflow</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Backlogged</span>
+                <span class="epic-time">1 hour to design and test</span>
+              </div>
+              <div class="epic-notes">Use Gemini for dictation, Claude for reasoning. Design clean handoff between them.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-backlog">Low</span>
+              <div class="priority-dot"><span class="dot dot-low"></span>Low</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 2.7</div>
+              <div class="epic-title">Email Architecture (3-Account Model)</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Backlogged — post grant</span>
+                <span class="epic-time">1 hr plan + 2 hrs migrate</span>
+              </div>
+              <div class="epic-notes">Personal / Business ops / AI sandbox. ProtonMail for vault-level. GitHub migration is one-setting change.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-parked">Medium</span>
+              <div class="priority-dot"><span class="dot dot-medium"></span>Medium</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- THEME 3 -->
+      <div class="theme-block">
+        <div class="theme-header">
+          <h3>Theme 3 — Revenue &amp; Growth</h3>
+          <span class="theme-badge">Strategic</span>
+        </div>
+        <div class="epics-list">
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 3.1</div>
+              <div class="epic-title">B2B White-Label Licensing</div>
+              <div class="epic-meta">
+                <span class="badge badge-backlog">Strategy Only</span>
+                <span class="epic-time">2 hours to develop pitch</span>
+              </div>
+              <div class="epic-notes">Libraries, credit unions, banks. Highest ceiling revenue model.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-parked">Medium</span>
+              <div class="priority-dot"><span class="dot dot-medium"></span>Medium</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 3.2</div>
+              <div class="epic-title">Grant Funding Exploration</div>
+              <div class="epic-meta">
+                <span class="badge badge-critical">Active — deadline in days</span>
+                <span class="epic-time">2 hours</span>
+              </div>
+              <div class="epic-notes">New Horizons for Seniors, Ontario Seniors Community Grant. Non-profit eligibility gap to resolve.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-critical">Critical</span>
+              <div class="priority-dot"><span class="dot dot-critical"></span>Critical</div>
+            </div>
+          </div>
+
+          <div class="epic-card">
+            <div class="epic-main">
+              <div class="epic-id">Epic 3.3</div>
+              <div class="epic-title">Master Strategy Document Review</div>
+              <div class="epic-meta">
+                <span class="badge badge-parked">Unread — parked</span>
+                <span class="epic-time">1 hr read + 1 hr action</span>
+              </div>
+              <div class="epic-notes">Covers competitive landscape, defensibility, monetisation, SEO/AEO, scale, architecture.</div>
+            </div>
+            <div class="epic-right">
+              <span class="badge badge-parked">Medium</span>
+              <div class="priority-dot"><span class="dot dot-medium"></span>Medium (post-grant)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- end themes-wrapper -->
+
+    <!-- Recurring Reviews -->
+    <div class="recurring-section">
+      <div class="section-title">
+        <span class="icon">&#128260;</span> Recurring Weekly Reviews
+      </div>
+      <div class="recurring-grid">
+        <div class="recurring-item">
+          <div class="cadence">30 min/week</div>
+          Backlog review — all projects + enterprise
+        </div>
+        <div class="recurring-item">
+          <div class="cadence">15 min/week</div>
+          Credit efficiency review
+        </div>
+        <div class="recurring-item">
+          <div class="cadence">30 min/week</div>
+          New tool evaluation
+        </div>
+        <div class="recurring-item">
+          <div class="cadence">15 min/week</div>
+          Progress toward shipping
+        </div>
+        <div class="recurring-item">
+          <div class="cadence">As needed</div>
+          Research &amp; automation pipeline
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end container -->
+
+  <footer>
+    Two Birds &mdash; Aaron Kramer &mdash; St. Thomas, Ontario &mdash; Portfolio v1.0 &mdash; 2026-03-15
+  </footer>
+
+</body>
+</html>

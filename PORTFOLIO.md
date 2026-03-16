@@ -1,6 +1,6 @@
 # Two Birds Portfolio Backlog
 # Aaron Kramer | St. Thomas, Ontario
-# Last Updated: 2026-03-15
+# Last Updated: 2026-03-16
 
 ---
 
@@ -35,14 +35,25 @@ Estimated session time: 1 hour once vault is triaged
 ## THEME 1: Digital Services Business (Two Birds)
 
 ### Epic 1.1 — Digital Confidence Centre
-Status: Active — MVP sprint in progress
+Status: Active — MVP near-complete, image replacement pending
 Priority: High
 Estimated session time:
-- Image fix (presentable for grant meeting): 45 minutes
-- Full MVP completion: 2-3 sessions of 1-2 hours each
-- QA/QC pass: 1 session, 1 hour
-Notes: Images currently unacceptable. Fix before showing
-to anyone. Visual pipeline now in place.
+- Image replacement (apply approved ImageFX images): 30 minutes
+- Final QA/QC pass: 1 session, 1 hour
+Notes: Sprint 2026-03-16 complete. Feedback form fixed +
+version-stamped. Image audit done. Canadian English pass
+clean. Meta tags and SEO complete across all pages. Copyright
+year updated site-wide. Story personalisation fallback fixed.
+Visual pipeline operational. Module pages fully consistent.
+
+#### Sub-tasks remaining:
+- Image replacement — ImageFX prompts generated for family-setup.html
+  hero (duplicate photo issue). Awaiting Aaron approval before applying.
+  Prompts in: _visual-pipeline/IMAGEFX-PROMPTS.md
+- Module 10 hero image is generic (laptop/hands) — low priority, prompt
+  available on request
+- "recognize" → "recognise" in final-quiz.js quiz text — needs explicit
+  approval to edit instructional content
 
 ### Epic 1.2 — Kirks Karate website
 Status: Active — needs attention

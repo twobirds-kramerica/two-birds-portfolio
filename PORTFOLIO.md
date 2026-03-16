@@ -45,15 +45,25 @@ version-stamped. Image audit done. Canadian English pass
 clean. Meta tags and SEO complete across all pages. Copyright
 year updated site-wide. Story personalisation fallback fixed.
 Visual pipeline operational. Module pages fully consistent.
+digital-literacy-101.html stub page live. Foundations nav
+link added to all 24 pages site-wide.
 
 #### Sub-tasks remaining:
-- Image replacement — ImageFX prompts generated for family-setup.html
-  hero (duplicate photo issue). Awaiting Aaron approval before applying.
-  Prompts in: _visual-pipeline/IMAGEFX-PROMPTS.md
-- Module 10 hero image is generic (laptop/hands) — low priority, prompt
-  available on request
+- Image replacement — ImageFX prompts generated for family-setup.html,
+  module-10.html, and digital-literacy-101.html. Awaiting Aaron approval
+  before applying. Prompts in: _visual-pipeline/IMAGEFX-PROMPTS.md
+- Full content sprint for digital-literacy-101.html (2–3 hours)
 - "recognize" → "recognise" in final-quiz.js quiz text — needs explicit
   approval to edit instructional content
+
+### Epic 1.1b — Digital Literacy Foundations Module
+Status: Stub live — content sprint needed
+Priority: Medium
+Estimated session time: 2–3 hours for full content build
+Notes: digital-literacy-101.html stub deployed 2026-03-16.
+Hero image pending ImageFX approval. Glossary has 5 starter
+terms (Button, Tap, Scroll, Icon, Menu). Comic Corner section
+placeholder in place. Foundations link in all site nav.
 
 ### Epic 1.2 — Kirks Karate website
 Status: Active — needs attention

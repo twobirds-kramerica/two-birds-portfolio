@@ -1,6 +1,6 @@
 # Two Birds Portfolio Backlog
 # Aaron Kramer | St. Thomas, Ontario
-# Last Updated: 2026-03-16
+# Last Updated: 2026-03-17
 
 ---
 
@@ -35,35 +35,41 @@ Estimated session time: 1 hour once vault is triaged
 ## THEME 1: Digital Services Business (Two Birds)
 
 ### Epic 1.1 — Digital Confidence Centre
-Status: Active — MVP near-complete, image replacement pending
+Status: Active — MVP near-complete, ImageFX image replacement pending
 Priority: High
 Estimated session time:
-- Image replacement (apply approved ImageFX images): 30 minutes
-- Final QA/QC pass: 1 session, 1 hour
-Notes: Sprint 2026-03-16 complete. Feedback form fixed +
-version-stamped. Image audit done. Canadian English pass
-clean. Meta tags and SEO complete across all pages. Copyright
-year updated site-wide. Story personalisation fallback fixed.
-Visual pipeline operational. Module pages fully consistent.
-digital-literacy-101.html stub page live. Foundations nav
-link added to all 24 pages site-wide.
+- ImageFX image replacement (apply approved images): 30 minutes
+Notes: Sprint 2026-03-17 complete. All local images wired up.
+All CDN duplicates and wrong-context images replaced with local
+images. Custom 404 page live. Scam simulator confidence messages
+added. Title format consistent across all pages. Mobile touch
+targets WCAG compliant (44px min). Accessibility pass clean.
+
+Completion status:
+- Feedback form: COMPLETE ✅
+- Image audit + local image swaps: COMPLETE ✅
+- Canadian English: COMPLETE ✅
+- Meta tags + SEO: COMPLETE ✅
+- Digital Literacy 101 (20-term glossary + Comic Corner): COMPLETE ✅
+- Custom 404 page: COMPLETE ✅
+- Mobile responsiveness pass: COMPLETE ✅
+- Accessibility pass: COMPLETE ✅
 
 #### Sub-tasks remaining:
-- Image replacement — ImageFX prompts generated for family-setup.html,
-  module-10.html, and digital-literacy-101.html. Awaiting Aaron approval
-  before applying. Prompts in: _visual-pipeline/IMAGEFX-PROMPTS.md
-- Full content sprint for digital-literacy-101.html (2–3 hours)
-- "recognize" → "recognise" in final-quiz.js quiz text — needs explicit
-  approval to edit instructional content
+- ImageFX image replacement — prompts ready for family-setup.html,
+  module-10.html, digital-literacy-101.html. Select A/B/C and apply.
+  Prompts in: _visual-pipeline/IMAGEFX-PROMPTS.md
+- "recognize" → "recognise" in final-quiz.js — needs explicit approval
 
 ### Epic 1.1b — Digital Literacy Foundations Module
-Status: Stub live — content sprint needed
+Status: LIVE — full 20-term glossary + Comic Corner deployed 2026-03-17
 Priority: Medium
-Estimated session time: 2–3 hours for full content build
-Notes: digital-literacy-101.html stub deployed 2026-03-16.
-Hero image pending ImageFX approval. Glossary has 5 starter
-terms (Button, Tap, Scroll, Icon, Menu). Comic Corner section
-placeholder in place. Foundations link in all site nav.
+Estimated session time: 1 hour for additional terms / content expansion
+Notes: digital-literacy-101.html fully built. 20 terms with
+plain-English definitions, iPad Try It notes, and example
+sentences. Comic Corner has 3 senior-friendly jokes. Hero image
+is local temp placeholder — ImageFX replacement pending.
+Foundations link in all 25 pages site-wide.
 
 ### Epic 1.2 — Kirks Karate website
 Status: Active — needs attention
@@ -152,6 +158,33 @@ Priority: Medium (after grant deadline)
 Estimated session time: 1 hour to read, 1 hour to action
 Notes: Covers competitive landscape, defensibility,
 monetisation, SEO/AEO, scale, architecture.
+
+---
+
+## THEME 4: Personal Productivity & Wellness Tools
+
+### Epic 4.1 — P3 Personal Priority Partner
+Status: Concept — ready for ideation sprint
+Priority: High (founder is the user)
+Estimated session time: 2 hours for MVP design sprint
+Features logged:
+- Rigidity scale 0–100% (how hard to push back today)
+- User-defined pushback personas in their own voice
+- Escalating tone ladder with emoji progression
+- Red Zone intervention bundle (text + video + cartoon, under 10 min)
+- Lockdown mode with user consent
+- Irony as origin story — built while avoiding the thing it solves
+Origin: Built by Aaron during job application avoidance, March 2026.
+The founder is the target user. First mover advantage is personal
+credibility. B2C and B2B pathways (ADHD coaching, HR wellness).
+
+### Epic 4.2 — P3 Clinical Partnership
+Status: Concept
+Priority: High
+Estimated session time: 1 hour to prep pitch
+Notes: Local ADHD doctor, entrepreneurial, new book.
+Coffee meeting as first step. Clinical validation = credibility +
+potential co-author relationship. Explore referral model.
 
 ---
 

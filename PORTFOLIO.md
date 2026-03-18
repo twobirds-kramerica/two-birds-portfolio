@@ -1,11 +1,38 @@
 # Two Birds Portfolio Backlog
 # Aaron Kramer | St. Thomas, Ontario
-# Last Updated: 2026-03-17
+# Last Updated: 2026-03-18
+
+---
+
+## THIS WEEK (2026-03-18 to 2026-03-21)
+
+### iA Financial — Interview Friday 2026-03-20
+- Technical interview or hiring conversation
+- Prep: review iA products, financial services context, digital literacy angle
+- Action: dedicate Thursday to prep
+
+### Grant/Loan Deadline — IMMINENT
+- New Horizons for Seniors, Ontario Seniors Community Grant
+- Idea vault PDF in Google NotebookLM — needs triage session
+- Non-profit eligibility gap to resolve before applying
+- Target: identify 2-3 lead ideas this week, draft application
+
+### Sprint 2026-03-18 Complete
+- Phase 1: ImageFX placeholder comments standardised (4 pages)
+- Phase 2: digital-literacy-101.html — search/filter added (pure JS), Comic Corner 3→5 jokes
+- Phase 3: p3-prototype.html — standalone P3 prototype with Anthropic API (haiku-4-5),
+  rigidity slider, 4 personas, escalation counter, KUNO/PAISLEY safewords, session summary
+- Phase 4: Kirks Karate — git init, meta tags + OG tags pass, committed
+- Phase 5: scam-simulator.html — Round 4 added (Rogers courier fraud + call forwarding)
+- Phase 6: module-8.html comment format normalised; site-wide placeholder scan complete
+- Phase 7: Performance pass — all 16 hero images: loading="eager" + height="400" attribute
+- Phase 8: This portfolio update
+- Phase 9: Push brenda-digital-confidence (pending)
 
 ---
 
 ## THEME 0: Master Idea Vault & Strategic Prioritisation
-STATUS: URGENT — grant/loan deadline in days
+STATUS: URGENT — grant/loan deadline this week
 
 ### Epic 0.1 — Ingest & triage decade of ideas from PDF
 Status: Not started
@@ -27,7 +54,7 @@ Estimated session time: 2 hours per session, multiple sessions
 
 ### Epic 0.4 — Identify grant/loan lead ideas
 Status: Not started
-Priority: Critical — deadline in days
+Priority: Critical — deadline this week
 Estimated session time: 1 hour once vault is triaged
 
 ---
@@ -39,21 +66,22 @@ Status: Active — MVP near-complete, ImageFX image replacement pending
 Priority: High
 Estimated session time:
 - ImageFX image replacement (apply approved images): 30 minutes
-Notes: Sprint 2026-03-17 complete. All local images wired up.
-All CDN duplicates and wrong-context images replaced with local
-images. Custom 404 page live. Scam simulator confidence messages
-added. Title format consistent across all pages. Mobile touch
-targets WCAG compliant (44px min). Accessibility pass clean.
+Notes: Sprint 2026-03-18 complete. All placeholder comments
+standardised. Performance pass complete (loading=eager, height attrs).
+Rogers Bank Round 4 scam scenarios live. P3 prototype shipped.
 
 Completion status:
 - Feedback form: COMPLETE ✅
 - Image audit + local image swaps: COMPLETE ✅
 - Canadian English: COMPLETE ✅
 - Meta tags + SEO: COMPLETE ✅
-- Digital Literacy 101 (20-term glossary + Comic Corner): COMPLETE ✅
+- Digital Literacy 101 (20-term glossary + Comic Corner + search/filter): COMPLETE ✅
 - Custom 404 page: COMPLETE ✅
 - Mobile responsiveness pass: COMPLETE ✅
 - Accessibility pass: COMPLETE ✅
+- Performance pass (hero images eager + height attrs): COMPLETE ✅
+- ImageFX placeholder comments standardised: COMPLETE ✅
+- Scam Simulator Round 4 (Rogers Bank): COMPLETE ✅
 
 #### Sub-tasks remaining:
 - ImageFX image replacement — prompts ready for family-setup.html,
@@ -62,20 +90,22 @@ Completion status:
 - "recognize" → "recognise" in final-quiz.js — needs explicit approval
 
 ### Epic 1.1b — Digital Literacy Foundations Module
-Status: LIVE — full 20-term glossary + Comic Corner deployed 2026-03-17
+Status: LIVE — 20-term glossary + Comic Corner (5 jokes) + search/filter deployed 2026-03-18
 Priority: Medium
 Estimated session time: 1 hour for additional terms / content expansion
 Notes: digital-literacy-101.html fully built. 20 terms with
 plain-English definitions, iPad Try It notes, and example
-sentences. Comic Corner has 3 senior-friendly jokes. Hero image
-is local temp placeholder — ImageFX replacement pending.
-Foundations link in all 25 pages site-wide.
+sentences. Interactive search/filter (pure JS) added. Comic Corner
+expanded to 5 senior-friendly jokes. Hero image is local temp
+placeholder — ImageFX replacement pending.
 
 ### Epic 1.2 — Kirks Karate website
-Status: Active — needs attention
+Status: Active — health check done 2026-03-18
 Priority: Medium
-Estimated session time: 1-2 hours to assess current state
-Notes: No feedback form set up yet.
+Estimated session time: 1-2 hours for feedback form + full content review
+Notes: Git repo initialised. Meta tags + OG tags added. Vue/Vite/Tailwind stack.
+No feedback form set up yet (Formspree or similar needed).
+No GitHub remote configured — push pending once remote created.
 
 ### Epic 1.3 — HAL Stack (voice-first AI dev rig)
 Status: Parked — return in 1-2 weeks
@@ -83,6 +113,16 @@ Priority: Low (for now)
 Estimated session time: 2-3 hours to resume planning
 Notes: Handoff document exists. HAL 9000 inspired.
 Social Stack Diary Entry 1.
+
+### Epic 1.4 — P3 Personal Priority Partner (prototype)
+Status: PROTOTYPE LIVE — p3-prototype.html deployed 2026-03-18
+Priority: High
+Notes: Standalone HTML prototype. Anthropic API (claude-haiku-4-5).
+Rigidity slider 0-100%, 4 personas (Coach/Friend/Drill/Therapist),
+custom persona field, escalation counter, KUNO/PAISLEY safewords,
+session summary. API key session-only — never stored.
+Next: gather real-world test feedback, iterate on escalation ladder,
+Red Zone intervention bundle (text + video + cartoon).
 
 ---
 
@@ -108,9 +148,9 @@ Notes: Most ingredients already exist in preferences
 and session history.
 
 ### Epic 2.4 — Portfolio backlog system (this)
-Status: In progress
+Status: In progress — actively maintained
 Priority: High
-Estimated session time: 30 minutes to complete
+Estimated session time: 15 minutes per sprint update
 
 ### Epic 2.5 — SSO & account migration
 Status: Backlogged — post grant deadline
@@ -146,7 +186,7 @@ Notes: Libraries, credit unions, banks.
 Highest ceiling revenue model.
 
 ### Epic 3.2 — Grant funding exploration
-Status: Active — deadline in days
+Status: Active — deadline this week
 Priority: Critical
 Estimated session time: 2 hours
 Notes: New Horizons for Seniors, Ontario Seniors
@@ -164,16 +204,18 @@ monetisation, SEO/AEO, scale, architecture.
 ## THEME 4: Personal Productivity & Wellness Tools
 
 ### Epic 4.1 — P3 Personal Priority Partner
-Status: Concept — ready for ideation sprint
+Status: PROTOTYPE LIVE — see Epic 1.4 for details
 Priority: High (founder is the user)
-Estimated session time: 2 hours for MVP design sprint
+Estimated session time: Next sprint — test feedback + Red Zone bundle
 Features logged:
-- Rigidity scale 0–100% (how hard to push back today)
-- User-defined pushback personas in their own voice
-- Escalating tone ladder with emoji progression
-- Red Zone intervention bundle (text + video + cartoon, under 10 min)
-- Lockdown mode with user consent
-- Irony as origin story — built while avoiding the thing it solves
+- Rigidity scale 0–100% (how hard to push back today) ✅ BUILT
+- User-defined pushback personas in their own voice ✅ BUILT
+- Escalating tone ladder with emoji progression ✅ BUILT
+- Escalation counter + visual pip meter ✅ BUILT
+- KUNO (pause) + PAISLEY (end + summary) safewords ✅ BUILT
+- Session summary via API ✅ BUILT
+- Red Zone intervention bundle (text + video + cartoon, under 10 min) — PENDING
+- Lockdown mode with user consent — PENDING
 Origin: Built by Aaron during job application avoidance, March 2026.
 The founder is the target user. First mover advantage is personal
 credibility. B2C and B2B pathways (ADHD coaching, HR wellness).

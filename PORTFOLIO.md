@@ -4,7 +4,13 @@
 
 ---
 
-## THIS WEEK (2026-03-18 to 2026-03-21)
+## THIS WEEK CRITICAL (2026-03-18 to 2026-03-21)
+
+- [ ] iA Financial interview Friday 1pm ET — PREP NEEDED
+- [ ] Grant deadline — confirm exact date with Aaron
+- [ ] Shoppers Drug Mart application — submit today
+- [ ] MealSuite application — submit today
+- [ ] Workwolf 172-question assessment — redo today
 
 ### iA Financial — Interview Friday 2026-03-20
 - Technical interview or hiring conversation
@@ -28,6 +34,14 @@
 - Phase 7: Performance pass — all 16 hero images: loading="eager" + height="400" attribute
 - Phase 8: This portfolio update
 - Phase 9: Push brenda-digital-confidence (pending)
+
+### Sprint 2026-03-18 (Session 2) Complete
+- French toggle fixed — 🇫🇷 replaced with ⚜ across faq.html + faq-fr.html ✅
+- lang-toggle.js built — ⚜ FR|EN button on all 29 pages, nav + footer translate ✅
+- Senior Tech Stars — 5 new stories (video call grandchild, banking, photo email,
+  Google debate, virtual doctor appointment) ✅
+- Comic Corner removed ✅
+- P3 prototype v0.1 rebuilt — coral/blue palette, full spec, no localStorage ✅
 
 ---
 
@@ -66,22 +80,24 @@ Status: Active — MVP near-complete, ImageFX image replacement pending
 Priority: High
 Estimated session time:
 - ImageFX image replacement (apply approved images): 30 minutes
-Notes: Sprint 2026-03-18 complete. All placeholder comments
-standardised. Performance pass complete (loading=eager, height attrs).
-Rogers Bank Round 4 scam scenarios live. P3 prototype shipped.
+Notes: Sprint 2026-03-18 (Session 2) complete. French toggle live
+on all 29 pages. Senior Tech Stars live. P3 v0.1 rebuilt.
 
 Completion status:
 - Feedback form: COMPLETE ✅
 - Image audit + local image swaps: COMPLETE ✅
 - Canadian English: COMPLETE ✅
 - Meta tags + SEO: COMPLETE ✅
-- Digital Literacy 101 (20-term glossary + Comic Corner + search/filter): COMPLETE ✅
+- Digital Literacy 101 (20-term glossary + Senior Tech Stars + search/filter): COMPLETE ✅
+- Comic Corner removed: COMPLETE ✅
 - Custom 404 page: COMPLETE ✅
 - Mobile responsiveness pass: COMPLETE ✅
 - Accessibility pass: COMPLETE ✅
 - Performance pass (hero images eager + height attrs): COMPLETE ✅
 - ImageFX placeholder comments standardised: COMPLETE ✅
 - Scam Simulator Round 4 (Rogers Bank): COMPLETE ✅
+- French toggle fixed — ⚜ FR|EN, Ontario French, no country flags: COMPLETE ✅
+- Nav + footer translation JS (lang-toggle.js, all 29 pages): COMPLETE ✅
 
 #### Sub-tasks remaining:
 - ImageFX image replacement — prompts ready for family-setup.html,
@@ -90,14 +106,15 @@ Completion status:
 - "recognize" → "recognise" in final-quiz.js — needs explicit approval
 
 ### Epic 1.1b — Digital Literacy Foundations Module
-Status: LIVE — 20-term glossary + Comic Corner (5 jokes) + search/filter deployed 2026-03-18
+Status: LIVE — 20-term glossary + Senior Tech Stars (5 stories) + search/filter
 Priority: Medium
 Estimated session time: 1 hour for additional terms / content expansion
 Notes: digital-literacy-101.html fully built. 20 terms with
-plain-English definitions, iPad Try It notes, and example
-sentences. Interactive search/filter (pure JS) added. Comic Corner
-expanded to 5 senior-friendly jokes. Hero image is local temp
-placeholder — ImageFX replacement pending.
+plain-English definitions, iPad Try It notes, and example sentences.
+Interactive search/filter (pure JS) added. Comic Corner replaced
+with Senior Tech Stars — 5 empowerment micro-stories, diverse Canadian
+names, zero condescension. Hero image is local temp placeholder
+— ImageFX replacement pending.
 
 ### Epic 1.2 — Kirks Karate website
 Status: Active — health check done 2026-03-18
@@ -115,14 +132,22 @@ Notes: Handoff document exists. HAL 9000 inspired.
 Social Stack Diary Entry 1.
 
 ### Epic 1.4 — P3 Personal Priority Partner (prototype)
-Status: PROTOTYPE LIVE — p3-prototype.html deployed 2026-03-18
+Status: Prototype built — alpha testing
 Priority: High
-Notes: Standalone HTML prototype. Anthropic API (claude-haiku-4-5).
-Rigidity slider 0-100%, 4 personas (Coach/Friend/Drill/Therapist),
-custom persona field, escalation counter, KUNO/PAISLEY safewords,
-session summary. API key session-only — never stored.
-Next: gather real-world test feedback, iterate on escalation ladder,
-Red Zone intervention bundle (text + video + cartoon).
+Notes: Standalone p3-prototype.html. Anthropic API (claude-haiku-4-5).
+No localStorage — session memory only.
+
+Features complete in v0.1:
+- Rigidity slider 0-100% with 5 live persona labels ✅
+- Custom persona field (speak in someone's authentic voice) ✅
+- Escalation ladder emoji progression 😄 🧐 😤 🚨 LOCKDOWN ✅
+- KUNO safeword (pauses, warm response, counts uses, prompts Paisley at 3) ✅
+- PAISLEY safeword (reactivates construct) ✅
+- Red Zone bundle at 5th escalation (quote + YouTube search + 4-7-8 breathing) ✅
+- LOCKDOWN overlay at 5th deviation ✅
+- Session summary log (stated priority + deviation count + pushback log) ✅
+- Coral/blue palette (#E8845C / #2B5EA7), dark bg, mobile-friendly ✅
+Next: gather real-world test feedback, iterate persona prompting.
 
 ---
 
@@ -204,18 +229,20 @@ monetisation, SEO/AEO, scale, architecture.
 ## THEME 4: Personal Productivity & Wellness Tools
 
 ### Epic 4.1 — P3 Personal Priority Partner
-Status: PROTOTYPE LIVE — see Epic 1.4 for details
+Status: Prototype built — alpha testing
 Priority: High (founder is the user)
-Estimated session time: Next sprint — test feedback + Red Zone bundle
-Features logged:
+Estimated session time: Next sprint — real-world test + persona refinement
+Features complete in v0.1:
 - Rigidity scale 0–100% (how hard to push back today) ✅ BUILT
 - User-defined pushback personas in their own voice ✅ BUILT
 - Escalating tone ladder with emoji progression ✅ BUILT
-- Escalation counter + visual pip meter ✅ BUILT
-- KUNO (pause) + PAISLEY (end + summary) safewords ✅ BUILT
-- Session summary via API ✅ BUILT
-- Red Zone intervention bundle (text + video + cartoon, under 10 min) — PENDING
-- Lockdown mode with user consent — PENDING
+- Escalation counter + LOCKDOWN overlay at 5th deviation ✅ BUILT
+- KUNO (pause) + PAISLEY (return) safewords ✅ BUILT
+- KUNO use counter — prompts Paisley after 3 uses ✅ BUILT
+- Red Zone bundle at 5th escalation ✅ BUILT
+  (quote + YouTube search suggestion + 4-7-8 breathing, text only)
+- Session summary log ✅ BUILT
+- No localStorage — session memory only ✅ BUILT
 Origin: Built by Aaron during job application avoidance, March 2026.
 The founder is the target user. First mover advantage is personal
 credibility. B2C and B2B pathways (ADHD coaching, HR wellness).

@@ -1,6 +1,6 @@
 # Two Birds Portfolio Backlog
 # Aaron Kramer | St. Thomas, Ontario
-# Last Updated: 2026-03-18
+# Last Updated: 2026-03-26
 
 ---
 
@@ -42,6 +42,30 @@
   Google debate, virtual doctor appointment) ✅
 - Comic Corner removed ✅
 - P3 prototype v0.1 rebuilt — coral/blue palette, full spec, no localStorage ✅
+
+### Sprint 2026-03-26 Complete
+- iA interview prep tool built — standalone HTML, Claude API (haiku), structured coaching ✅
+- Career Coach tool built and live — Phase 3 this session ✅
+- Brenda Guide built — https://twobirds-kramerica.github.io/digital-confidence/brenda-guide/ ✅
+- Quality Dashboard built — https://twobirds-kramerica.github.io/quality-dashboard/ ✅
+- Portfolio WIP dashboard updated ✅
+
+---
+
+## ACTIVE — RUNNING NOW
+
+### Career Coach (Two Birds)
+Status: Active — Running Now (built Phase 3, 2026-03-26)
+Priority: High
+Notes: Standalone tool built in this session. Helps users with job search, CV review,
+and interview prep. Deployed as part of the Two Birds toolset.
+
+### Quality Dashboard
+Status: Active — Live
+Priority: High
+URL: https://twobirds-kramerica.github.io/quality-dashboard/
+Repo: twobirds-kramerica/quality-dashboard
+Notes: Built previous session. Tracks project quality metrics across Two Birds projects.
 
 ---
 
@@ -98,6 +122,7 @@ Completion status:
 - Scam Simulator Round 4 (Rogers Bank): COMPLETE ✅
 - French toggle fixed — ⚜ FR|EN, Ontario French, no country flags: COMPLETE ✅
 - Nav + footer translation JS (lang-toggle.js, all 29 pages): COMPLETE ✅
+- Brenda Guide: COMPLETE ✅ — https://twobirds-kramerica.github.io/digital-confidence/brenda-guide/
 
 #### Sub-tasks remaining:
 - ImageFX image replacement — prompts ready for family-setup.html,
@@ -263,3 +288,20 @@ potential co-author relationship. Explore referral model.
 - New tool evaluation: 30 min/week
 - Progress toward shipping: 15 min/week
 - Research & automation pipeline: as needed
+
+---
+
+## BACKLOG / ACTION ITEMS
+
+- ⚠️ IMAGE LICENCE REVIEW NEEDED: senior-woman-ipad.jpg on DCC site — source unknown. Update _image-registry/image-log.md with licence before public launch.
+
+---
+
+## CLAUDE CHAT MAP — Active Repos
+
+| Repo | Description |
+|------|-------------|
+| twobirds-kramerica/brenda-digital-confidence | Digital Confidence Centre — seniors digital literacy platform |
+| twobirds-kramerica/two-birds-portfolio | This portfolio backlog file |
+| twobirds-kramerica/quality-dashboard | Quality Dashboard — project quality metrics tracker |
+| twobirds-kramerica/two-birds-command-centre | Two Birds command centre / ops hub |

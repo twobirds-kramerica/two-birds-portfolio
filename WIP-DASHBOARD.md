@@ -1,5 +1,5 @@
 # 🧠 Two Birds Innovation — Project Command Centre
-**Last Updated:** March 27, 2026 (Sprint 3 — 10-Phase Mega Build complete)
+**Last Updated:** March 27, 2026 (Unresolved Actions Audit complete)
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
@@ -13,7 +13,7 @@
 | # | Project | Initiative | Priority | Effort | Est. Credits | Human Time | Bot Time | Sprint Type |
 |---|---------|-----------|----------|--------|-------------|-----------|---------|------------|
 | 1 | Digital Confidence Centre | 10-Phase Sprint 3 COMPLETE: B2B system (30 prospects, dashboard, emails), Grant tracker, B2B pricing page, Module notes/ratings/share, Homepage personalisation, Advanced search (filters, highlights, recent), Newsletter signup, Accessibility statement, HTML sitemap, Final infrastructure sweep | P1 | High | 90% | 1h review | 3h | Dev Sprint |
-| 2 | Two Birds Innovation | Single-page company site (deep space, Playfair/Inter, 7 sections) | P1 | Medium | 25% | 30min review | 30min | Dev Sprint |
+| 2 | Two Birds Innovation | Single-page company site (deep space, Playfair/Inter, 7 sections) — ⚠️ LOCAL ONLY — needs GitHub repo created + pushed. See PUSH-TO-GITHUB.md | P2 | Low | 25% | 30min | Done | Awaiting Aaron |
 
 ---
 
@@ -68,15 +68,28 @@
 | French translation human review | DCC | Quality | P2 | Modules 1–6 need professional review — machine translation flagged |
 | New Horizons + Ontario Seniors grants | DCC | Funding | P2 | ⚠️ Requires non-profit status — Two Birds currently ineligible |
 | 10-year email backlog review | General | Admin | P3 | HITL work with Aaron when time permits |
-| Sidebar links audit (Modules 4–12) | DCC | Bug | P1 | Modules 13/14/15 missing from sidebars — in Mar 25 prompt |
-| Kevin's — archive 107 Grand Ave, 217 Hamilton Rd | Kevin's | Maintenance | P1 | In Mar 25 prompt |
-| Kevin's — clear local_image on 18 Queenston, 1 Court Lane | Kevin's | Bug | P1 | In Mar 25 prompt |
-| DCC — scrub word "free" (service references) | DCC | Content | P1 | In Mar 25 prompt |
-| DCC — scrub privacy absolutes | DCC | Content | P1 | In Mar 25 prompt |
-| Print Centre page | DCC | Feature | P2 | In Mar 25 prompt |
-| Product Reference page (/recommended-tools.html) | DCC | Feature | P2 | In Mar 25 prompt |
-| User personas (5 built) | DCC | Strategy | P2 | In Mar 25 prompt — output to /_strategy/ |
+| two-birds-innovation — push to GitHub + enable Pages | Two Birds | Deploy | P2 | Aaron creates repo, then tell Claude Code to push. See PUSH-TO-GITHUB.md |
+| Google Search Console — verify site + submit sitemap | DCC | SEO | P2 | search.google.com/search-console — submit sitemap.xml |
+| Admin page access control (Cloudflare Access) | DCC | Security | P2 | admin/*.html is noindex but publicly accessible by URL |
+| Beta Formspree endpoint — confirm live ID | DCC | Launch | P2 | beta/beta-landing.html — tell Claude Code new endpoint when ready |
+| DCC — scrub word "free" — NEEDS DECISION | DCC | Content | P2 | QA audit says no action needed (service is genuinely free). Aaron to confirm OK to close. |
+| DCC — scrub privacy absolutes — NEEDS DECISION | DCC | Content | P2 | Main issue (module-10) already fixed. Aaron to confirm all others acceptable. |
+| Image licence review — senior-woman-ipad.jpg | DCC | Legal | P2 | Confirm Unsplash licence type (free vs paid plan) |
+| B2B pricing confirmation before publishing | DCC | Sales | P2 | Starter $4,800 / Pro $12,000 / Enterprise $24,000 — confirm with Aaron |
 | SEO/AEO master strategy execution | DCC | Marketing | P2 | Strategy doc ready — execute after main site sprints |
+| User personas (5 built) | DCC | Strategy | P2 | In Mar 25 prompt — output to /_strategy/ |
+
+### ✅ RESOLVED BACKLOG (Verified March 27, 2026)
+
+| Item | Resolved How |
+|------|-------------|
+| Sidebar links audit (Modules 4–12) | ✅ All modules now have sidebar links to modules 12–17 |
+| Kevin's — archive 107 Grand Ave, 217 Hamilton Rd | ✅ Both marked `tier:archived, status:expired` in listings.json |
+| Kevin's — clear local_image on 18 Queenston, 1 Court Lane | ✅ Both have `local_image: null` in listings.json |
+| DCC — Canadian English (`realized`, `organizing`) | ✅ Fixed to `realised`, `organising` |
+| DCC — module-10 privacy absolute claim | ✅ Now reads "converted into a secure token" |
+| Print Centre page | ✅ print-centre.html built and live |
+| Product Reference page (/recommended-tools.html) | ✅ Built and live |
 
 ---
 

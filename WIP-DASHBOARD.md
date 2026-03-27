@@ -1,5 +1,5 @@
 # 🧠 Two Birds Innovation — Project Command Centre
-**Last Updated:** March 27, 2026 (Unresolved Actions Audit complete)
+**Last Updated:** March 27, 2026 (Witching Hour Mega Build — 15-phase sprint in progress)
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
@@ -12,8 +12,9 @@
 
 | # | Project | Initiative | Priority | Effort | Est. Credits | Human Time | Bot Time | Sprint Type |
 |---|---------|-----------|----------|--------|-------------|-----------|---------|------------|
-| 1 | Digital Confidence Centre | 10-Phase Sprint 3 COMPLETE: B2B system (30 prospects, dashboard, emails), Grant tracker, B2B pricing page, Module notes/ratings/share, Homepage personalisation, Advanced search (filters, highlights, recent), Newsletter signup, Accessibility statement, HTML sitemap, Final infrastructure sweep | P1 | High | 90% | 1h review | 3h | Dev Sprint |
-| 2 | Two Birds Innovation | Single-page company site (deep space, Playfair/Inter, 7 sections) — ⚠️ LOCAL ONLY — needs GitHub repo created + pushed. See PUSH-TO-GITHUB.md | P2 | Low | 25% | 30min | Done | Awaiting Aaron |
+| 1 | Digital Confidence Centre | **MEGA BUILD in progress** (15 phases): AEO answer pages ✅, Module polish ✅, French audit ✅, SEO audit ✅, Analytics ✅, Scam ecosystem ✅, Resource hub ✅, GitHub Actions ✅, White Label ✅ + Career Coach, Two Birds, Quality Dashboard, Portfolio, Kevin's, Final pass | P1 | High | 95% | 1h review | 6h | Dev Sprint |
+| 2 | Two Birds Innovation | Site enhancement — services detail, philosophy, contact form, responsive polish | P2 | Low | 80% | 30min review | Done | Dev Sprint |
+| 3 | Career Coach App | Demo card, keyboard shortcuts, history, mobile polish | P1 | Medium | 90% | 30min review | Done | Dev Sprint |
 
 ---
 
@@ -21,9 +22,8 @@
 
 | # | Project | Initiative | Priority | Effort | Est. Credits | Human Time | Bot Time | Sprint Type | Notes |
 |---|---------|-----------|----------|--------|-------------|-----------|---------|------------|-------|
-| 3 | Career Coach App | New product — AI job coaching tool | P1 | High | 85–95% | 1h setup | 90–120min | Dev Sprint | ⚠️ New repo needed first — intercept Aaron before Claude Code |
-| 4 | Digital Confidence Centre | Nuclear Option — video scripts, B2B outreach, beta recruiting | P2 | High | 75% | 3h review | 3–4h | Dev Sprint | Prompt in Gmail drafts, ready to paste |
-| 5 | Digital Confidence Centre | Module 2.5 — Common Digital Tasks | P2 | Medium | 12% | 30min review | 20min | Dev Sprint | Prompt in Gmail drafts |
+| 4 | Digital Confidence Centre | Phase 15 — Final infrastructure pass (humans.txt, security.txt, Canadian English sweep, final audit) | P1 | Low | 95% | 15min review | 30min | Dev Sprint | Follows current mega build |
+| 5 | Digital Confidence Centre | Nuclear Option — video scripts, B2B outreach, beta recruiting | P2 | High | 75% | 3h review | 3–4h | Dev Sprint | Prompt in Gmail drafts, ready to paste |
 
 ---
 

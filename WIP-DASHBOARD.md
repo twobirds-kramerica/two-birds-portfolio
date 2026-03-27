@@ -1,5 +1,5 @@
 # 🧠 Two Birds Innovation — Project Command Centre
-**Last Updated:** March 25, 2026
+**Last Updated:** March 27, 2026
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
@@ -12,8 +12,8 @@
 
 | # | Project | Initiative | Priority | Effort | Est. Credits | Human Time | Bot Time | Sprint Type |
 |---|---------|-----------|----------|--------|-------------|-----------|---------|------------|
-| 1 | Digital Confidence Centre | Mega QA + Feature Build (Mar 25 prompt) | P1 | High | 70–85% | 2h review | 60–90min | Dev Sprint |
-| 2 | Kevin's Apartment Search | 2.0 Overhaul (Mar 25 prompt) | P1 | Medium | 40–50% | 30min review | 30–45min | Dev Sprint |
+| 1 | Digital Confidence Centre | 15-Phase Mega Build (Mar 27 prompt) — GEO schemas, Clarity, Module 16 & 17, Living Alone hub, SW/offline, export, CI/CD | P1 | High | 90–95% | 2h review | 3–4h | Dev Sprint |
+| 2 | Two Birds Innovation | Single-page company site (deep space, Playfair/Inter, 7 sections) | P1 | Medium | 25% | 30min review | 30min | Dev Sprint |
 
 ---
 
@@ -85,7 +85,8 @@
 
 | Project | Claude Project | Last Active | Key Context File |
 |---------|---------------|-------------|-----------------|
-| Digital Confidence Centre | DCC Project | Mar 25, 2026 | Session handoff doc (pasted in chat) |
+| Digital Confidence Centre | DCC Project | Mar 27, 2026 | Session handoff doc (pasted in chat) |
+| Two Birds Innovation | DCC Project | Mar 27, 2026 | `C:/Users/getkr/two-birds-innovation/index.html` |
 | Kevin's Apartment Search | DCC Project (same) | Mar 25, 2026 | `backlog_kevins_site_photos_map_newtab.md` |
 | Career Coach App | DCC Project (same) | Mar 25, 2026 | Prompt 3 in `mega_prompt_march25.md` |
 | HAL Stack | TBD | TBD | `HAL-Stack-Handoff.md` |

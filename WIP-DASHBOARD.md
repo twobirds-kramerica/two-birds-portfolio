@@ -1,5 +1,5 @@
 # 🧠 Two Birds Innovation — Project Command Centre
-**Last Updated:** March 27, 2026 (Sprint 2 — 10-Phase Mega Build complete)
+**Last Updated:** March 27, 2026 (Sprint 3 — 10-Phase Mega Build complete)
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
@@ -12,7 +12,7 @@
 
 | # | Project | Initiative | Priority | Effort | Est. Credits | Human Time | Bot Time | Sprint Type |
 |---|---------|-----------|----------|--------|-------------|-----------|---------|------------|
-| 1 | Digital Confidence Centre | 10-Phase Sprint 2 COMPLETE: GEO pages, EEAT, Q&A accordions, Tips hub (8 articles), Social queue (40 posts), Scam deep dives (5), Error handling, CI/CD enhancements | P1 | High | 90% | 1h review | 3h | Dev Sprint |
+| 1 | Digital Confidence Centre | 10-Phase Sprint 3 COMPLETE: B2B system (30 prospects, dashboard, emails), Grant tracker, B2B pricing page, Module notes/ratings/share, Homepage personalisation, Advanced search (filters, highlights, recent), Newsletter signup, Accessibility statement, HTML sitemap, Final infrastructure sweep | P1 | High | 90% | 1h review | 3h | Dev Sprint |
 | 2 | Two Birds Innovation | Single-page company site (deep space, Playfair/Inter, 7 sections) | P1 | Medium | 25% | 30min review | 30min | Dev Sprint |
 
 ---

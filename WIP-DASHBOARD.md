@@ -1,5 +1,5 @@
-# 🧠 Two Birds Innovation — Project Command Centre
-**Last Updated:** March 28, 2026 — 12-PHASE CONTINUATION BUILD COMPLETE ✅
+# Two Birds Innovation — Project Command Centre
+**Last Updated:** March 28, 2026 — 15-PHASE PORTFOLIO BUILD COMPLETE (Pro Plan) ✅
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
@@ -8,7 +8,29 @@
 
 ---
 
-## ✅ SPRINT COMPLETE — Overnight 15-Phase Build (March 27–28, 2026)
+## ✅ SPRINT COMPLETE — Pro Plan Portfolio Build (March 28, 2026)
+
+15 phases across 2 repos. Quality Dashboard updated with local repo status, portfolio value, and revenue timeline. Two Birds Portfolio updated with sprint archive, product specs, consulting playbook, and this WIP update.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 13A | Phase 13A | Quality Dashboard | Local repo status — clarity + aaron-patzalek with orange badge | ✅ COMMITTED |
+| 13B | Phase 13B | Quality Dashboard | Portfolio Value Estimate section (collapsible, table) | ✅ COMMITTED |
+| 13C | Phase 13C | Quality Dashboard | Time to First Revenue callout cards (3 cards) | ✅ COMMITTED |
+| 14A | Phase 14A | Two Birds Portfolio | MARCH-2026-SPRINT-ARCHIVE.md — definitive sprint record | ✅ COMMITTED |
+| 14B | Phase 14B | Two Birds Portfolio | PRODUCT-SPECS.md — one-page spec per product (7 products) | ✅ COMMITTED |
+| 14C | Phase 14C | Two Birds Portfolio | CONSULTING-PLAYBOOK.md — templates, agendas, checklists | ✅ COMMITTED |
+| 14D | Phase 14D | Two Birds Portfolio | WIP-DASHBOARD.md — this update + Pro Plan sprint structure note | ✅ COMMITTED |
+
+---
+
+## ✅ SPRINT COMPLETE — 12-Phase Continuation Build (March 28, 2026) — COMPLETE
+
+*(See prior entries below)*
+
+---
+
+## ✅ SPRINT COMPLETE — Overnight 15-Phase Build (March 27–28, 2026) — COMPLETE
 
 15 phases across 7 repos. All committed. DCC, career-coach, quality-dashboard, two-birds-portfolio pushed.
 
@@ -179,6 +201,27 @@ All phases complete. All repos pushed. Switching to Pro plan.
 | HAL Stack | TBD | TBD | `HAL-Stack-Handoff.md` |
 | P3 Accountability Tool | TBD | TBD | Notes in memory |
 | Two Birds Strategy | General | Mar 18, 2026 | `Project_Memory_and_Ground_Truth_from_Gemini_March_18__2026.md` |
+
+---
+
+## Pro Plan Sprint Structure
+
+Effective March 28, 2026. Max plan sessions are no longer available. All future Claude Code sessions operate under the Pro plan constraint.
+
+**Constraint:** Maximum 5 phases per prompt. Each phase = one cohesive unit of work (one feature, one file cluster, one repo).
+
+**Why this matters:**
+- Pro plan has a smaller context window than Max plan
+- Prompts that exceed ~5 phases risk context truncation or degraded output quality
+- Breaking work into 5-phase chunks ensures complete, committed output every session
+
+**How to structure a sprint prompt:**
+1. State the repos being touched (max 2 per prompt recommended)
+2. Label phases clearly: Phase 1, Phase 2, etc.
+3. End each prompt with: Commit: [message] and Push: git push origin [branch]
+4. Begin the next prompt with: git log --oneline -10 first.
+
+**Target cadence:** 2–3 prompts per session = 6–15 phases of work per day. Sustainable indefinitely.
 
 ---
 

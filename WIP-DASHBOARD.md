@@ -1,10 +1,34 @@
 # 🧠 Two Birds Innovation — Project Command Centre
-**Last Updated:** March 27, 2026 — MAX PLAN SPRINT COMPLETE ✅
+**Last Updated:** March 28, 2026 — OVERNIGHT BUILD COMPLETE ✅
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
 > This is the single source of truth for all active, queued, and deferred initiatives.
 > Update this file at the end of every sprint. Commit with message: `chore: wip dashboard update [date]`
+
+---
+
+## ✅ SPRINT COMPLETE — Overnight 15-Phase Build (March 27–28, 2026)
+
+15 phases across 7 repos. All committed. DCC, career-coach, quality-dashboard, two-birds-portfolio pushed.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 1 | Phase 5 | Digital Confidence Centre | Modules 18 + 19 (Staying Connected, Digital Legacy) | ✅ PUSHED |
+| 2 | Phase 6 | Digital Confidence Centre | B2B email outreach sequences — 6 sequences, 28 emails | ✅ PUSHED |
+| 3 | Phase 7 | Digital Confidence Centre | Grant applications — New Horizons, OTF, Starter Co Plus | ✅ PUSHED |
+| 4 | Phase 9 | Digital Confidence Centre | Technical debt — storage-keys.js, utils.js, architecture.md | ✅ PUSHED |
+| 5 | Phase 13 | Digital Confidence Centre | GitHub Actions — sprint reminder + branch alert workflows | ✅ PUSHED |
+| 6 | Phase 14 | Digital Confidence Centre | Homepage — modules 18+19 in nav, grid, JSON-LD | ✅ PUSHED |
+| 7 | Phase 4 | Digital Confidence Centre | LinkedIn content system v2 — 4 social files | ✅ PUSHED (prior) |
+| 8 | Phase 3 | Career Coach | Full Career Coach build + beta landing page | ✅ PUSHED |
+| 9 | Phase 8 | Two Birds Innovation | Site enhancement — blog, services | ✅ LOCAL (no remote — A12) |
+| 10 | Phase 10 | Kevin's Apartment | Listing refresh | ✅ LOCAL |
+| 11 | Phase 1 | Clarity | AI decision reflection tool — v1.0 | ✅ LOCAL |
+| 12 | Phase 2 | Aaron Patzalek | Consulting site — services, rates, contact | ✅ LOCAL |
+| 13 | Phase 11 | Quality Dashboard | Add 3 new repos, update build history | ✅ PUSHED |
+| 14 | Phase 12 | Two Birds Portfolio | WIP sync — this update | ✅ PUSHED |
+| 15 | Phase 15 | All | Overnight build report | ✅ See _audit/overnight-build-march28.md in DCC |
 
 ---
 
@@ -23,7 +47,7 @@ All phases complete. All repos pushed. Switching to Pro plan.
 
 ## 🔵 ACTIVE — Running Now
 
-*Nothing active. Starting Pro plan next session.*
+*Nothing active. Next session: push clarity + aaron-patzalek to GitHub, A12 (two-birds-innovation), A13 (GSC verification).*
 
 ---
 
@@ -65,7 +89,7 @@ All phases complete. All repos pushed. Switching to Pro plan.
 
 | # | Project | Initiative | Decision | Date | Notes |
 |---|---------|-----------|----------|------|-------|
-| 18 | Grants | SBEC Starter Company Plus Application | Deprioritised | Mar 25, 2026 | Aaron call — bandwidth |
+| 18 | Grants | SBEC Starter Company Plus Application | Deprioritised → ✅ Draft built | Mar 28, 2026 | Application draft in /_grants/applications/sbec-next-cycle.md — needs Aaron review before submission |
 
 ---
 
@@ -87,10 +111,21 @@ All phases complete. All repos pushed. Switching to Pro plan.
 | SEO/AEO master strategy execution | DCC | Marketing | P2 | Strategy doc ready — execute after main site sprints |
 | User personas (5 built) | DCC | Strategy | P2 | In Mar 25 prompt — output to /_strategy/ |
 
-### ✅ RESOLVED BACKLOG (Verified March 27, 2026)
+### ✅ RESOLVED BACKLOG (Verified March 28, 2026)
 
 | Item | Resolved How |
 |------|-------------|
+| DCC Modules 18 + 19 | ✅ module-18-staying-connected.html + module-19-digital-legacy.html — bilingual, WCAG, pushed |
+| DCC B2B email sequences | ✅ 6 sequences (28 emails) in /_b2b/outreach-sequences/ — library, credit union, community org, warm, referral, grant |
+| DCC Grant applications | ✅ 3 fully written applications in /_grants/applications/ — NHSP ($25k), OTF ($48.5k), SBEC ($5k) |
+| DCC Technical debt | ✅ storage-keys.js (localStorage registry), utils.js (shared helpers), _docs/architecture.md |
+| DCC GitHub Actions | ✅ human-sprint-reminder.yml (weekly Sunday 8AM EST) + new-branch-alert.yml |
+| DCC homepage module grid | ✅ Modules 18+19 added to nav, card grid, breadcrumb nav, and JSON-LD |
+| Career Coach v1.0 | ✅ Full AI job application coaching tool — scoring, CV customisation, tracker, export, French toggle |
+| Aaron Kramer personal brand site | ✅ twobirds-kramerica/aaron-kramer — live at GitHub Pages |
+| Clarity AI tool | ✅ Local build complete — AI decision reflection tool with API key, prompts, journaling, export |
+| Aaron Patzalek consulting site | ✅ Local build complete — services, rates, contact |
+| Quality Dashboard — new repos | ✅ clarity, aaron-patzalek, aaron-kramer added; build history updated |
 | Sidebar links audit (Modules 4–12) | ✅ All modules now have sidebar links to modules 12–17 |
 | Kevin's — archive 107 Grand Ave, 217 Hamilton Rd | ✅ Both marked `tier:archived, status:expired` in listings.json |
 | Kevin's — clear local_image on 18 Queenston, 1 Court Lane | ✅ Both have `local_image: null` in listings.json |

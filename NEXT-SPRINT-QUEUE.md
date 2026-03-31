@@ -1,8 +1,18 @@
 # Next Sprint Queue — Two Birds Innovation
 
-**Last Updated:** 2026-03-31
-**Context:** Transitioning from Max Plan. HAL Stack foundation is complete. Ready for Pro Plan or continued free-tier building.
+**Last Updated:** 2026-03-31 (updated after site health audit sprint)
+**Context:** HAL Stack foundation complete. Site health audit complete. Career Coach privacy beta confirmed. Clarity push-ready. Next: n8n install to unlock prompt automation.
 **Owner:** Aaron Kramer | Two Birds Innovation
+
+---
+
+## Completed Since Last Update (March 31, 2026)
+
+- ✅ DCC site health audit — meta tags, broken links, service worker, touch targets, Canadian English
+- ✅ DCC print system — all 21 modules in cheat sheet generator
+- ✅ Career Coach — privacy modal added to beta, all stability items verified
+- ✅ Clarity — all push-prep items confirmed, PUSH-TO-GITHUB.md updated
+- ✅ Portfolio — NEW-MACHINE-SETUP.md Fast Track v2.0 created
 
 ---
 
@@ -14,13 +24,20 @@ Pick one. Open a new Claude Code session. Paste the sprint heading and bullet li
 
 ---
 
-## Sprint 1 — n8n Installation and Prompt Queue Automation
+## 🔴 SPRINT 1 (ACTIVE) — n8n Installation and Prompt Queue Automation
 **Priority:** High — unblocks US-002, US-003 from USER-STORIES.md
-**Estimated session time:** 2–3 hours (some manual steps on i5)
+**Estimated session time:** 2–3 hours (some manual steps required on the i5)
 **Repos:** digital-confidence, two-birds-portfolio
 
-### Tasks
-- [ ] Install n8n on i5 Lenovo: `npm install -g n8n && n8n start`
+### Exact Install Commands (run in Windows Terminal as Administrator)
+```
+npm install -g n8n
+n8n start
+```
+Access at: **http://localhost:5678** — create admin account on first visit.
+
+### Remaining Tasks
+- [ ] Install n8n: `npm install -g n8n && n8n start`
 - [ ] Create admin account at http://localhost:5678
 - [ ] Build Workflow 1: Gmail PROMPT-QUEUE label → SQLite row (PENDING)
 - [ ] Build Workflow 2: GitHub push webhook → match commit → update SQLite (COMPLETE)

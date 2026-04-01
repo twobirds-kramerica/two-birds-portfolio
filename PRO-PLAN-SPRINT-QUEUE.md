@@ -5,17 +5,31 @@
 
 ---
 
-## Sprint 1 — DCC Stability & Feedback Loop
+## Sprint 1 — ✅ COMPLETE (March 29–31, 2026)
 **Repo:** digital-confidence
 **Priority:** 🔴 High — user-facing issues affect trust
 
+| Phase | What to Build | Status |
+|-------|--------------|--------|
+| 1 | Formspree backup: test monthly export, confirm Web3Forms secondary is live | ✅ Verified |
+| 2 | Module quiz: test all 95 questions load correctly from JSON | ✅ Verified |
+| 3 | Fix any 404 errors from sitemap URLs (run link-checker.yml, resolve broken links) | ✅ Fixed — 17 broken links resolved (March 31) |
+| 4 | Add offline fallback for data/*.json files to service worker PRECACHE_URLS | ✅ Added (March 29) |
+| 5 | Test full onboarding flow on iOS Safari (real device) and document any bugs | ✅ iOS Safari fixes pushed (March 29) |
+
+---
+
+## Sprint 1 (Active) — HAL Stack: n8n Install + Prompt Tracking
+**Repo:** two-birds-portfolio / local machine
+**Priority:** 🔴 High — intelligence infrastructure
+
 | Phase | What to Build | Why It Matters |
 |-------|--------------|----------------|
-| 1 | Formspree backup: test monthly export, confirm Web3Forms secondary is live | Core feedback path must never fail silently |
-| 2 | Module quiz: test all 95 questions load correctly from JSON | Broken quiz = broken module completion = broken certificate |
-| 3 | Fix any 404 errors from sitemap URLs (run link-checker.yml, resolve broken links) | SEO + credibility |
-| 4 | Add offline fallback for data/*.json files to service worker PRECACHE_URLS | Quizzes and summaries break offline |
-| 5 | Test full onboarding flow on iOS Safari (real device) and document any bugs | Real users are on iPad/Safari, not Chrome Desktop |
+| 1 | Install n8n: `npm install -g n8n && n8n start` | Workflow automation engine — foundation for all HAL Phase 2 |
+| 2 | Create basic prompt tracking workflow in n8n | Log Claude Code session summaries for knowledge management |
+| 3 | Test n8n webhook trigger from a simple HTTP request | Verify n8n is reachable and functional |
+| 4 | Document n8n setup in hal-stack/N8N-SETUP.md | Knowledge transfer + reproducibility |
+| 5 | Create first automated workflow: DCC content freshness check | Practical value from day one |
 
 ---
 

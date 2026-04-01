@@ -1,10 +1,39 @@
 # Two Birds Innovation — Project Command Centre
-**Last Updated:** March 31, 2026 — SITE HEALTH AUDIT + PRINT SYSTEM + CAREER COACH SPRINT COMPLETE ✅
+**Last Updated:** March 31, 2026 — END-OF-MONTH FINAL: STABILITY + NEWSLETTER + HAL ROADMAP ✅
 **Owner:** Aaron Kramer | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
 > This is the single source of truth for all active, queued, and deferred initiatives.
 > Update this file at the end of every sprint. Commit with message: `chore: wip dashboard update [date]`
+
+---
+
+## ✅ SPRINT COMPLETE — End-of-Month Multi-Repo Build (March 31, 2026)
+
+4 phases across DCC, Career Coach, Kevin's Apartment, Aaron Patzalek, Two Birds Innovation, and Portfolio. Fully autonomous.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 1A | Phase 1 | Career Coach | Job stats card, print jobs, mission-driven cover letter, industry insights | ✅ PUSHED |
+| 1B | Phase 1 | Kevin's Apartment | Decision ready badge, print shortlist, 8-item checklist | ✅ PUSHED |
+| 1C | Phase 1 | Aaron Patzalek | Pushed to master | ✅ PUSHED |
+| 1D | Phase 1 | Two Birds Innovation | Pushed to master | ✅ PUSHED |
+| 2A | Phase 2A | DCC | Broken link audit — 17 broken links found and fixed across 6 files | ✅ PUSHED |
+| 2B | Phase 2B | DCC | GitHub Actions — all 15 YAML workflows validated (0 errors) | ✅ VERIFIED |
+| 2C | Phase 2C | DCC | robots.txt confirmed with both sitemap.xml + sitemap-news.xml refs | ✅ VERIFIED |
+| 2D | Phase 2D | DCC | Sitemap — all 21 module pages confirmed present (178 URLs total) | ✅ VERIFIED |
+| 2E | Phase 2E | DCC | OG tags — added to 21 tips pages, fixed on 52 answer pages | ✅ PUSHED |
+| 2F | Phase 2F | DCC | Audit report: _audit/broken-links-march31.md | ✅ PUSHED |
+| 3A | Phase 3A | DCC | Newsletter signup confirmed on homepage, tips hub, all modules | ✅ VERIFIED |
+| 3B | Phase 3B | DCC | "Share DCC" green card confirmed on homepage | ✅ VERIFIED |
+| 3C | Phase 3C | DCC | _marketing/subscriber-guide.md confirmed | ✅ VERIFIED |
+| 3D | Phase 3D | DCC | "Newsletter" footer link added to ~135 pages | ✅ PUSHED |
+| 3E | Phase 3E | DCC | newsletter.js added to 6 modules missing it (16–19, 2.5, visual-ai) | ✅ PUSHED |
+| 3F | Phase 3F | DCC | Footer added to tips/index.html (previously had none) | ✅ PUSHED |
+| 4A | Phase 4A | Portfolio | WIP-DASHBOARD.md updated | ✅ THIS |
+| 4B | Phase 4B | Portfolio | hal-stack/ROADMAP.md — Phase 1 complete, Phase 2 active | ✅ THIS |
+| 4C | Phase 4C | Portfolio | PRO-PLAN-SPRINT-QUEUE.md — Sprint 1 updated to n8n install | ✅ THIS |
+| 4D | Phase 4D | Portfolio | APRIL-2026-SPRINT-PLAN.md created | ✅ THIS |
 
 ---
 
@@ -72,6 +101,32 @@ Multi-repo autonomous build: DCC Phases 3–5, Career Coach Phase 6, Kevin's Apa
 | 8B | Portfolio | REVENUE-ROADMAP.md | ✅ THIS |
 | 8C | Portfolio | WIP-DASHBOARD.md updated | ✅ THIS |
 | 8D | Portfolio | MAX-PLAN-LEGACY.md — complete build record | ✅ THIS |
+
+---
+
+## ✅ SPRINT COMPLETE — Content Freshness + Tips/Answers Ecosystem (March 29, 2026)
+
+Review badges on all modules, tips index page, answers index page, weekly tip card on homepage.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 1 | Phase 1 | DCC | Content freshness review badges on all module pages | ✅ PUSHED |
+| 2 | Phase 2 | DCC | Tips index page (tips/index.html) | ✅ PUSHED |
+| 3 | Phase 3 | DCC | Answers index page (answers/index.html) | ✅ PUSHED |
+| 4 | Phase 4 | DCC | Weekly tip card on homepage | ✅ PUSHED |
+
+---
+
+## ✅ SPRINT COMPLETE — DCC Stability Pass (March 29, 2026)
+
+Offline JSON cache, broken link fixes, iOS Safari fixes, touch target improvements.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 1 | Phase 1 | DCC | Offline JSON cache for data/*.json files in service worker | ✅ PUSHED |
+| 2 | Phase 2 | DCC | Broken link fixes across multiple pages | ✅ PUSHED |
+| 3 | Phase 3 | DCC | iOS Safari compatibility improvements | ✅ PUSHED |
+| 4 | Phase 4 | DCC | Touch target sizing improvements (44x44 minimum) | ✅ PUSHED |
 
 ---
 
@@ -199,7 +254,9 @@ All phases complete. All repos pushed. Switching to Pro plan.
 
 ## 🔵 ACTIVE — Running Now
 
-*Nothing active.*
+| # | Project | Initiative | Status |
+|---|---------|-----------|--------|
+| 1 | HAL Stack | Phase 2: Intelligence — n8n install + basic prompt tracking workflow | 🔵 NEXT UP |
 
 ---
 

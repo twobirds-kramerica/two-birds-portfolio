@@ -183,20 +183,81 @@ Access at: **http://localhost:5678** — create admin account on first visit.
 
 ---
 
-## MANUAL VERIFICATION NEEDED
+## AARON MANUAL TASKS — Human Sprint Backlog
 
-### GitHub Pages Verification
+### GitHub Pages — Enable on 3 Repos
 **Date logged:** March 31, 2026
-**Status:** Pending Aaron manual Pages enable
 **Priority:** High
+**Effort:** 2 minutes
 
-Enable GitHub Pages in Settings → Pages → Source: Deploy from branch (master) for each repo, then verify:
+For each repo below, go to **Settings → Pages → Deploy from branch → master → / (root) → Save**
+Then verify the URL loads:
 
-- [ ] https://twobirds-kramerica.github.io/clarity
-- [ ] https://twobirds-kramerica.github.io/aaron-patzalek
-- [ ] https://twobirds-kramerica.github.io/two-birds-innovation
+- [ ] github.com/twobirds-kramerica/clarity → https://twobirds-kramerica.github.io/clarity
+- [ ] github.com/twobirds-kramerica/aaron-patzalek → https://twobirds-kramerica.github.io/aaron-patzalek
+- [ ] github.com/twobirds-kramerica/two-birds-innovation → https://twobirds-kramerica.github.io/two-birds-innovation
 
-All three repos have valid `index.html` and `_config.yml` (theme: null) already pushed. Pages just needs to be enabled in GitHub Settings.
+**Status:** Pending Aaron action.
+
+---
+
+### B2B Library Outreach — Review and Approve
+**Date logged:** March 31, 2026
+**Priority:** High — revenue facing
+**Effort:** 15 minutes
+
+Review 3 library contacts in the DCC B2B outreach dashboard:
+https://twobirds-kramerica.github.io/digital-confidence/_b2b/outreach-dashboard.html
+
+Review the 5-email sequence at `/_b2b/outreach-sequences/library-director-sequence.md`
+Approve contacts and send Email 1 to each.
+
+**Status:** Pending Aaron approval before any email is sent.
+
+---
+
+### Clarity — Add Real API Key and Test
+**Date logged:** March 31, 2026
+**Priority:** High
+**Effort:** 10 minutes
+
+Once GitHub Pages is live at https://twobirds-kramerica.github.io/clarity:
+1. Open the site
+2. Enter your Anthropic API key in the form field
+3. Test the diagnostic form end to end
+4. Confirm the SWOT analysis and recommendations generate correctly
+
+Note: The API key is entered by the user at runtime — it is not hardcoded in the source. It is stored in localStorage for convenience. Consider moving to a backend proxy before any public promotion of Clarity.
+
+**Status:** Pending GitHub Pages activation first.
+
+---
+
+### LinkedIn — First Gap-Framing Post
+**Date logged:** March 31, 2026
+**Priority:** Medium — brand building
+**Effort:** 20 minutes
+
+Write and publish first brand awareness post on LinkedIn.
+Theme: the AI gap in Southwestern Ontario SMEs.
+Draft exists in April sprint plan (Sprint 5). Review and post.
+
+**Status:** Pending Aaron action.
+
+---
+
+### Human Backlog Review Session
+**Date logged:** March 31, 2026
+**Priority:** High
+**Effort:** 30–60 minutes — schedule for April 1 morning
+
+This backlog is growing. Set aside time tomorrow morning to:
+- [ ] Review all items in this section
+- [ ] Prioritise and sequence
+- [ ] Clear any quick wins (GitHub Pages takes 2 minutes)
+- [ ] Flag anything that needs a Claude Code sprint to unblock
+
+**Status:** Schedule for April 1, 2026 morning.
 
 ---
 

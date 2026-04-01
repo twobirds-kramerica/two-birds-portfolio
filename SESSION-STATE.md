@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 1, 2026 (Session 3 — Overnight Scheduler Setup)
+**Last Session:** April 1, 2026 (Session 4 — Scheduler V2 Setup)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
 **Triggered from:** Digital Confidence repo context, manual session
 
@@ -7,17 +7,19 @@
 
 ## Phases Completed
 
-### Session 3 — Overnight Scheduler Setup ✅
-- Created `C:\twobirds\setup-overnight-scheduler.bat` — Windows Task Scheduler script
-- Task name: "TwoBirds-Overnight-Build"
-- Schedule: Daily at 2:00 AM
-- Runs Claude Code with `--dangerously-skip-permissions` against NEXT-SPRINT-QUEUE.md
-- Executes top 3 Claude Code executable items, skips Aaron manual tasks
-- Commits and pushes after each item, writes results to logs/automated-run-log.md
-- Admin check built in, clean re-install support, output logging to scheduler-output.log
-- Log file initialised at `logs/automated-run-log.md`
+### Session 4 — Scheduler V2 Setup ✅
+- Created `C:\twobirds\run-overnight-build.bat` — Claude Code autonomous agent script with smart path detection
+- Created `C:\twobirds\setup-task-scheduler.ps1` — PowerShell registration script (daily 2:00 AM, 2-hour timeout, auto-restart)
+- Task registration requires Administrator — **Aaron must run the PowerShell script once as admin**
+- Sleep disabled on AC power via `powercfg /change standby-timeout-ac 0` ✅
+- Log file updated at `logs/automated-run-log.md`
+- SCHEDULER-CONFIG.md created — documents local vs cloud scheduler roles
+- **Skipped:** Task Scheduler registration (Access Denied — requires admin elevation outside Claude Code sandbox)
 
-### Session 2 — Major Build Sprint (earlier today) ✅
+### Session 3 — Overnight Scheduler V1 ✅
+- Created initial `setup-overnight-scheduler.bat` (superseded by V2 above)
+
+### Session 2 — Major Build Sprint ✅
 - Phase 1: Clarity full build (API key setup, 7-field form, SWOT grid, quick wins, consultation CTA)
 - Phase 2: Aaron Patzalek personal brand site (story, projects, contact, availability)
 - Phase 3: Two Birds Innovation company site (problem section, 3 tools, Why Two Birds, about)
@@ -25,9 +27,9 @@
 - Phase 5: LinkedIn content system (8 posts, profile optimisation guide)
 - Phase 6: Portfolio intelligence (Mike K outcomes, grants, Q2 revenue plan)
 
-### Session 1 — Repo Investigations (earlier today) ✅
-- TBK repo investigated → empty since 2019 → archived
-- aaron-kramer repo investigated → superseded by aaron-patzalek → archived
+### Session 1 — Repo Investigations ✅
+- TBK repo → archived (empty since 2019)
+- aaron-kramer repo → archived (superseded by aaron-patzalek)
 - Elite Karate registered in portfolio backlog
 - GitHub Backup Account added to human backlog
 
@@ -37,6 +39,7 @@
 
 | Repo | Branch | Commit | Message | Pushed |
 |------|--------|--------|---------|--------|
+| two-birds-portfolio | master | `f9d11d5` | feat: Windows Task Scheduler — overnight build configured, run log created | ✅ |
 | two-birds-portfolio | master | `daa00cd` | feat: overnight scheduler setup — Windows Task Scheduler script | ✅ |
 | clarity | master | `c26e9e4` | feat: Clarity full build — improved form, SWOT grid, quick wins, consultation CTA | ✅ |
 | aaron-patzalek | master | `6ae3067` | feat: Aaron Patzalek full personal brand site — story, projects, contact details | ✅ |
@@ -49,15 +52,20 @@
 
 ---
 
-## Nothing Skipped
+## Skipped
 
-All tasks completed as requested across all 3 sessions today.
+- **Task Scheduler registration:** Access Denied — requires Aaron to run as Administrator once:
+  ```
+  powershell -ExecutionPolicy Bypass -File "C:\twobirds\setup-task-scheduler.ps1"
+  ```
 
 ---
 
 ## Next Recommended Actions
 
-1. **Run the scheduler setup:** Right-click `C:\twobirds\setup-overnight-scheduler.bat` → Run as Administrator
+1. **⚠️ REQUIRED: Register the scheduled task** — open PowerShell as Administrator and run:
+   `powershell -ExecutionPolicy Bypass -File "C:\twobirds\setup-task-scheduler.ps1"`
+   Then verify: `schtasks /query /tn "TwoBirds-Overnight-Build" /fo LIST`
 2. **Enable GitHub Pages** on clarity, aaron-patzalek, and two-birds-innovation (2 min each)
 3. **Test Clarity** with a real Anthropic API key end-to-end
 4. **Fill in Mike K meeting specifics** in intelligence/MIKE-K-MEETING-OUTCOMES.md
@@ -66,10 +74,11 @@ All tasks completed as requested across all 3 sessions today.
 7. **GitHub Backup Account** — create second account and add as org Owner (15 min)
 8. **Remove `noindex, nofollow`** from aaron-patzalek and two-birds-innovation when ready to go public
 
-## Note on Overnight Build Options
+## Overnight Build Architecture
 
-Aaron now has TWO overnight build systems:
-1. **Cloud:** Remote trigger on claude.ai/code — runs against two-birds-portfolio, no laptop needed
-2. **Local:** Windows Task Scheduler — runs on this machine at 2:00 AM, requires laptop on and Claude CLI installed
+| System | Role | Requires Laptop | Can Push |
+|--------|------|-----------------|----------|
+| Windows Task Scheduler (local) | Primary overnight builds | Yes (on + awake) | ✅ Yes |
+| Cloud trigger (claude.ai/code) | Manual "Run now" during day | No | ❌ Limited |
 
-The cloud trigger is more reliable (runs even when laptop is off). The local scheduler is a fallback or complement for tasks that need local file access.
+**Use local for overnight builds. Use cloud for ad-hoc daytime runs.**

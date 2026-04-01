@@ -44,6 +44,7 @@ Local AI tooling for prompt tracking, content generation assistance, and knowled
 | 8 | LightRAG: query interface | ⬜ Queued | Ask questions about DCC content, get sourced answers |
 | 9 | Mobile dashboard showing build status | ⬜ Queued | Quick status from phone |
 | 10 | Failure email alerts via n8n | ⬜ Queued | Proactive error notification |
+| 11 | **HAL-007: Portfolio as Live PMO** | ⬜ Queued | Cross-session backlog access — n8n webhooks expose portfolio files, Claude Web MCP connects |
 
 **Target:** April–May 2026
 

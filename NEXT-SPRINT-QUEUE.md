@@ -181,6 +181,25 @@ Access at: **http://localhost:5678** — create admin account on first visit.
 
 ---
 
+---
+
+## MANUAL VERIFICATION NEEDED
+
+### GitHub Pages Verification
+**Date logged:** March 31, 2026
+**Status:** Pending Aaron manual Pages enable
+**Priority:** High
+
+Enable GitHub Pages in Settings → Pages → Source: Deploy from branch (master) for each repo, then verify:
+
+- [ ] https://twobirds-kramerica.github.io/clarity
+- [ ] https://twobirds-kramerica.github.io/aaron-patzalek
+- [ ] https://twobirds-kramerica.github.io/two-birds-innovation
+
+All three repos have valid `index.html` and `_config.yml` (theme: null) already pushed. Pages just needs to be enabled in GitHub Settings.
+
+---
+
 ## Quick Reference — Priority Matrix
 
 | Sprint | Strategic Value | Effort | Revenue Path |

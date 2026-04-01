@@ -183,6 +183,20 @@ Access at: **http://localhost:5678** — create admin account on first visit.
 
 ---
 
+## BACKLOG PROJECTS — PENDING CLIENT FEEDBACK
+
+### Elite Karate Site
+**Date logged:** April 1, 2026
+**Repo:** twobirds-kramerica/elite-karate-site
+**Status:** Built — awaiting client feedback
+**Context:** First Claude Code project. Built as free service for Aaron's kids' karate school.
+**Owner contact:** Not yet confirmed — pending school owner decision.
+**Next action:** Follow up with karate school owner. Demo the site. Get yes/no on whether they want it live.
+**Priority:** P3 — low urgency, goodwill project.
+**Live URL:** GitHub Pages is NOT enabled on twobirds-kramerica/elite-karate-site. Add to backlog as a 2-minute fix when client confirms.
+
+---
+
 ## AARON MANUAL TASKS — Human Sprint Backlog
 
 ### GitHub Pages — Enable on 3 Repos
@@ -258,6 +272,23 @@ This backlog is growing. Set aside time tomorrow morning to:
 - [ ] Flag anything that needs a Claude Code sprint to unblock
 
 **Status:** Schedule for April 1, 2026 morning.
+
+---
+
+### GitHub Backup Owner Account
+**Date logged:** April 1, 2026
+**Priority:** High — business continuity
+**Effort:** 15 minutes
+
+**Steps:**
+1. Create a second GitHub account using twobirdsinnovation@gmail.com (or hello@twobirds.ca)
+2. Go to github.com/twobirds-kramerica → Settings → Members
+3. Invite the backup account as Owner
+4. Store backup account credentials in a safe place (password manager or printed copy)
+
+**Risk if not done:** All live products (DCC, Career Coach, Clarity) go dark if main account is compromised.
+
+**Status:** Pending Aaron action.
 
 ---
 

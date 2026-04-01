@@ -1,25 +1,23 @@
 # Session State — Two Birds Innovation
-**Last Session:** March 31, 2026 (Session 4)
+**Last Session:** March 31, 2026 (Session 5)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
 
 ---
 
 ## Phases Completed
 
-### Task 1 — GitHub Pages Verification Backlog ✅
-**File:** NEXT-SPRINT-QUEUE.md
-Added "MANUAL VERIFICATION NEEDED" section with checklist for 3 repos pending Pages activation:
-- clarity
-- aaron-patzalek
-- two-birds-innovation
+### Human Sprint Backlog Added to NEXT-SPRINT-QUEUE.md ✅
+Added 5 manual tasks under "AARON MANUAL TASKS — Human Sprint Backlog":
 
-### Task 2 — HAL-007 Backlog Item Created ✅
-**File:** hal-stack/HAL-BACKLOG.md (new)
-Logged HAL-007: Portfolio as Live PMO Layer — the vision for making the portfolio repo queryable by both Claude Web (via n8n MCP) and Claude Code (direct file access). Blocked on n8n install.
+| Task | Priority | Effort |
+|------|----------|--------|
+| GitHub Pages — Enable on 3 repos | High | 2 min |
+| B2B Library Outreach — Review and approve | High | 15 min |
+| Clarity — Test with real API key | High | 10 min |
+| LinkedIn — First gap-framing post | Medium | 20 min |
+| Human Backlog Review Session | High | 30–60 min |
 
-### Task 3 — ROADMAP.md Updated ✅
-**File:** hal-stack/ROADMAP.md
-Added HAL-007 as step 11 under Phase 2 Intelligence: "Portfolio as Live PMO — cross-session backlog access"
+Replaced the prior "MANUAL VERIFICATION NEEDED" section with the more comprehensive human backlog.
 
 ---
 
@@ -27,20 +25,20 @@ Added HAL-007 as step 11 under Phase 2 Intelligence: "Portfolio as Live PMO — 
 
 | Repo | Branch | Commit Message | Pushed |
 |------|--------|---------------|--------|
-| two-birds-portfolio | master | `feat: HAL-007 logged — portfolio as live PMO layer, GitHub Pages backlog added` | ✅ |
+| two-birds-portfolio | master | `chore: Aaron human sprint backlog — GitHub Pages, B2B outreach, Clarity API, LinkedIn, backlog review` | ✅ |
 
 ---
 
 ## Nothing Skipped
 
-All three tasks completed.
+All requested content added.
 
 ---
 
 ## Next Recommended Actions
 
-1. **Enable GitHub Pages** on clarity, aaron-patzalek, and two-birds-innovation repos (Settings → Pages → Deploy from branch: master)
-2. **April Sprint 1:** Install n8n (`npm install -g n8n && n8n start`) — unblocks HAL-007 and prompt tracking
-3. **B2B outreach:** Aaron to review and approve 3 library contacts in DCC outreach dashboard
+1. **April 1 morning:** Human backlog review session — clear quick wins (GitHub Pages = 2 min)
+2. **April Sprint 1:** Install n8n (`npm install -g n8n && n8n start`)
+3. **B2B outreach:** Review 3 library contacts, approve, send Email 1
 4. **Google Search Console:** Verify DCC domain and submit sitemap
-5. **LinkedIn gap-framing post:** Write and publish first brand awareness post
+5. **Clarity:** Test diagnostic end-to-end once Pages is live

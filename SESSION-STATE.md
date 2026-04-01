@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 1, 2026 (Session 2 — Major Build Sprint)
+**Last Session:** April 1, 2026 (Session 3 — Overnight Scheduler Setup)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
 **Triggered from:** Digital Confidence repo context, manual session
 
@@ -7,48 +7,29 @@
 
 ## Phases Completed
 
-### Phase 1 — Clarity Full Build ✅
-- API key setup screen (one-time entry, stored in localStorage as `clarity_api_key`)
-- Improved 7-field diagnostic form (business name, industry, years, team size, challenges checkbox max-3, AI usage, revenue goal)
-- SWOT 2x2 grid with effort/impact badges on recommendations
-- Quick Wins section (3 actions for next 30 days)
-- Consultation CTA → mailto:aaron.patzalek@gmail.com
-- Save Report to localStorage, Print, Run Another buttons
-- Animated loading dots, friendly error with retry
-- Mobile responsive, WCAG AA, Canadian English
+### Session 3 — Overnight Scheduler Setup ✅
+- Created `C:\twobirds\setup-overnight-scheduler.bat` — Windows Task Scheduler script
+- Task name: "TwoBirds-Overnight-Build"
+- Schedule: Daily at 2:00 AM
+- Runs Claude Code with `--dangerously-skip-permissions` against NEXT-SPRINT-QUEUE.md
+- Executes top 3 Claude Code executable items, skips Aaron manual tasks
+- Commits and pushes after each item, writes results to logs/automated-run-log.md
+- Admin check built in, clean re-install support, output logging to scheduler-output.log
+- Log file initialised at `logs/automated-run-log.md`
 
-### Phase 2 — Aaron Patzalek Personal Brand Site ✅
-- Hero updated: "Senior Product Manager turned AI Consultant"
-- Personal story (Telus, twin daughters, trust-first design)
-- Signature Projects section (DCC, Clarity, Career Coach cards)
-- Services with "What's included" bullets
-- Availability banner: "Currently accepting 2 new clients for Q2 2026"
-- Contact with email, phone (519-933-9294), LinkedIn, mailto dropdown
-- Footer updated
+### Session 2 — Major Build Sprint (earlier today) ✅
+- Phase 1: Clarity full build (API key setup, 7-field form, SWOT grid, quick wins, consultation CTA)
+- Phase 2: Aaron Patzalek personal brand site (story, projects, contact, availability)
+- Phase 3: Two Birds Innovation company site (problem section, 3 tools, Why Two Birds, about)
+- Phase 4: B2B outreach email templates (9 personalised emails, Copy Email 1 buttons)
+- Phase 5: LinkedIn content system (8 posts, profile optimisation guide)
+- Phase 6: Portfolio intelligence (Mike K outcomes, grants, Q2 revenue plan)
 
-### Phase 3 — Two Birds Innovation Company Site ✅
-- Hero: "Two Birds Innovation — AI Strategy and Digital Products for Southwestern Ontario"
-- Problem section: "The AI Gap Is Real" (3 pain point cards)
-- Services note: "Start with Clarity — it's free"
-- Free Tools expanded to 3 (Clarity, DCC, Career Coach)
-- Why Two Birds section (name, philosophy, motto)
-- About Aaron section
-- Contact with phone number and updated email
-
-### Phase 4 — B2B Outreach Email Sequence ✅
-- email-templates-ready-to-send.md: 9 personalised emails (3 per contact × 3 contacts)
-- Outreach dashboard updated with "Copy Email 1" button per contact
-- Clipboard copy with "Copied!" feedback
-
-### Phase 5 — LinkedIn Content System ✅
-- linkedin-content-calendar.md: 8 ready-to-post LinkedIn posts for April 2026
-- linkedin-profile-optimisation.md: 3 headline options, About section, Featured pins, 10 skills
-- Posting schedule: Tuesday/Thursday, 8-10 AM ET
-
-### Phase 6 — Portfolio Intelligence Layer ✅
-- MIKE-K-MEETING-OUTCOMES.md: Placeholder structure for March 30 Streamliners meeting (Aaron to fill in specifics)
-- GRANT-OPPORTUNITIES.md: 6 programs tracked (CDAP, NHSP, OSCGP, SBEC, OTF, Heritage Canada) with fit scores
-- Q2-2026-REVENUE-PLAN.md: $0 → $10K/month plan, 3-month ramp, risk factors, fallbacks
+### Session 1 — Repo Investigations (earlier today) ✅
+- TBK repo investigated → empty since 2019 → archived
+- aaron-kramer repo investigated → superseded by aaron-patzalek → archived
+- Elite Karate registered in portfolio backlog
+- GitHub Backup Account added to human backlog
 
 ---
 
@@ -56,30 +37,39 @@
 
 | Repo | Branch | Commit | Message | Pushed |
 |------|--------|--------|---------|--------|
+| two-birds-portfolio | master | `daa00cd` | feat: overnight scheduler setup — Windows Task Scheduler script | ✅ |
 | clarity | master | `c26e9e4` | feat: Clarity full build — improved form, SWOT grid, quick wins, consultation CTA | ✅ |
 | aaron-patzalek | master | `6ae3067` | feat: Aaron Patzalek full personal brand site — story, projects, contact details | ✅ |
 | two-birds-innovation | master | `393b6fc` | feat: Two Birds Innovation full company site — problem section, 3 tools, Why Two Birds, about | ✅ |
 | digital-confidence | main | `22bba61` | feat: B2B outreach email sequence complete — 3 emails ready to send | ✅ |
 | digital-confidence | main | `fef4577` | feat: LinkedIn content system — 8 posts ready, profile optimisation guide | ✅ |
 | two-birds-portfolio | master | `527725a` | feat: intelligence layer — Mike K outcomes, grant opportunities, Q2 revenue plan | ✅ |
+| two-birds-portfolio | master | `8332c19` | chore: aaron-kramer repo investigation — superseded by aaron-patzalek | ✅ |
+| two-birds-portfolio | master | `8873f49` | chore: TBK investigation, elite karate registered, GitHub backup backlog added | ✅ |
 
 ---
 
 ## Nothing Skipped
 
-All 6 phases completed as requested. All commits pushed.
+All tasks completed as requested across all 3 sessions today.
 
 ---
 
 ## Next Recommended Actions
 
-1. **Enable GitHub Pages** on clarity, aaron-patzalek, and two-birds-innovation (Settings → Pages → Deploy from branch → master → Save) — 2 minutes each
-2. **Test Clarity** with a real Anthropic API key end-to-end
-3. **Fill in Mike K meeting specifics** in intelligence/MIKE-K-MEETING-OUTCOMES.md
-4. **Send B2B Email 1** to 3 library contacts — use the "Copy Email 1" buttons on the outreach dashboard
-5. **Post LinkedIn Post 1** (gap framing) — ready in /_marketing/linkedin-content-calendar.md
-6. **Update LinkedIn profile** using /_marketing/linkedin-profile-optimisation.md
-7. **Apply to SBEC** for micro-grant (highest fit score, lowest complexity)
-8. **Register as CDAP advisor** if/when program reopens
-9. **GitHub Backup Account** — create second account and add as org Owner (15 min, high priority)
-10. **Remove `noindex, nofollow`** from aaron-patzalek and two-birds-innovation meta tags when ready to go public
+1. **Run the scheduler setup:** Right-click `C:\twobirds\setup-overnight-scheduler.bat` → Run as Administrator
+2. **Enable GitHub Pages** on clarity, aaron-patzalek, and two-birds-innovation (2 min each)
+3. **Test Clarity** with a real Anthropic API key end-to-end
+4. **Fill in Mike K meeting specifics** in intelligence/MIKE-K-MEETING-OUTCOMES.md
+5. **Send B2B Email 1** to 3 library contacts — use the outreach dashboard Copy buttons
+6. **Post LinkedIn Post 1** (gap framing) — ready in /_marketing/linkedin-content-calendar.md
+7. **GitHub Backup Account** — create second account and add as org Owner (15 min)
+8. **Remove `noindex, nofollow`** from aaron-patzalek and two-birds-innovation when ready to go public
+
+## Note on Overnight Build Options
+
+Aaron now has TWO overnight build systems:
+1. **Cloud:** Remote trigger on claude.ai/code — runs against two-birds-portfolio, no laptop needed
+2. **Local:** Windows Task Scheduler — runs on this machine at 2:00 AM, requires laptop on and Claude CLI installed
+
+The cloud trigger is more reliable (runs even when laptop is off). The local scheduler is a fallback or complement for tasks that need local file access.

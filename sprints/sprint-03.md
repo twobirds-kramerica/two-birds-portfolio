@@ -1,25 +1,15 @@
 # Sprint 03 — Commit Density Timeline
-Date created: April 1, 2026
 Status: READY TO RUN
 
-## Instructions for Claude Code
 Switch to: C:\twobirds\two-birds-portfolio
 
-Run git log across all repos to get commit timestamps:
+Aggregate commits by date across all repos March 1 through April 1.
 For each repo in C:\twobirds\: git log --format="%ai %s" --no-walk --all
 
-Aggregate commits by date. Build a timeline showing build intensity.
-Create journey/raw/commit-density-timeline.md with:
-- Date | Commits that day | Repos touched | Notable work
-- Cover March 1 through April 1, 2026
+Create journey/raw/commit-density-timeline.md — table of date, commits, repos, notable work.
 
-Also create a visual HTML version at:
-C:\twobirds\two-birds-command-centre\journey-timeline.html
-A single-page visual timeline. Dark theme. Each day is a bar.
-Sprint days (March 25-28) should show dramatically taller bars.
-Hover to see commit messages for that day.
+Create two-birds-command-centre/journey-timeline.html — visual timeline, dark theme,
+bar chart of daily commits, March 25-28 sprint days show dramatically taller bars.
+Hover shows commit messages for that day.
 
-Commit to command-centre: "feat: journey timeline visualisation"
-Commit to portfolio: "feat: commit density timeline raw data"
-Push both.
-Update LAST-RUN-SUMMARY.md. Push.
+Commit both repos. Push. Update LAST-RUN-SUMMARY.md. Push.

@@ -1,36 +1,37 @@
-# Next Sprint Queue — Two Birds Innovation
-
-**Last Updated:** 2026-03-31 (updated after site health audit sprint)
-**Context:** HAL Stack foundation complete. Site health audit complete. Career Coach privacy beta confirmed. Clarity push-ready. Next: n8n install to unlock prompt automation.
-**Owner:** Aaron Kramer | Two Birds Innovation
-
----
-
-## Completed Since Last Update (March 31, 2026)
-
-- ✅ DCC site health audit — meta tags, broken links, service worker, touch targets, Canadian English
-- ✅ DCC print system — all 21 modules in cheat sheet generator
-- ✅ Career Coach — privacy modal added to beta, all stability items verified
-- ✅ Clarity — all push-prep items confirmed, PUSH-TO-GITHUB.md updated
-- ✅ Portfolio — NEW-MACHINE-SETUP.md Fast Track v2.0 created
-
----
-
-## HOW TO RUN SPRINTS FROM CLAUDE CODE
-Type one of these commands directly in Claude Code terminal:
-- `/next-sprint` — runs top 3 backlog items automatically
-- `/retro` — reads what Claude Code last built
-- `/state` — reads SESSION-STATE.md and orients fully
-- `/dashboard` — reads WIP-DASHBOARD.md and gives portfolio status
-- `/hal` — reads HAL backlog and reports next infrastructure item
-- `/journey` — reads latest journey archive entry
-
-Named sprints (type the name in Claude Code):
+# HOW TO RUN SPRINTS FROM CLAUDE CODE
+No copy-paste needed. No Claude Web hunting. Just type:
+- "next sprint" — auto-executes top 3 backlog items
 - "sprint-01" — Journey Archive + Prompt Library (COMPLETE ✅)
 - "sprint-02" — Language Bank + Command Centre (COMPLETE ✅)
 - "sprint-03" — Commit Density Timeline (READY TO RUN)
 
-No copy-paste needed. No Claude Web hunting. Just type and go.
+---
+
+# Next Sprint Queue — Two Birds Innovation
+
+**Last Updated:** 2026-04-01
+**Context:** HAL Stack foundation complete. Sprint command system active. Clarity full build done. Journey archive chapters 1-3 written. Prompt library with 6 eureka prompts. Command Centre with Language Bank and Prompt Library pages.
+**Owner:** Aaron Patzalek | Two Birds Innovation
+
+---
+
+## Completed Since Last Update (April 1, 2026)
+
+- ✅ DCC site health audit — meta tags, broken links, service worker, touch targets, Canadian English
+- ✅ DCC print system — all 21 modules in cheat sheet generator
+- ✅ Career Coach — privacy modal added to beta, all stability items verified
+- ✅ Clarity — full rebuild with API key setup, 7-field form, SWOT grid, quick wins, consultation CTA
+- ✅ Aaron Patzalek — full personal brand site with story, projects, pricing, contact
+- ✅ Two Birds Innovation — full company site with problem section, 3 tools, Why Two Birds
+- ✅ B2B outreach — 9 personalised emails ready, Copy Email 1 buttons on dashboard
+- ✅ LinkedIn — 8 posts ready, profile optimisation guide written
+- ✅ Intelligence — Mike K outcomes, grant opportunities, Q2 revenue plan
+- ✅ Journey archive — chapters 1-3, raw session log, 3 social posts
+- ✅ Prompt library — 6 eureka prompts captured
+- ✅ Language Bank + Prompt Library pages on Command Centre
+- ✅ CLAUDE.md master context + sprint command system
+- ✅ Windows Task Scheduler — overnight builds configured
+- ✅ TBK and aaron-kramer repos archived
 
 ---
 

@@ -3,14 +3,14 @@ No copy-paste needed. No Claude Web hunting. Just type:
 - "next sprint" — auto-executes top 3 backlog items
 - "sprint-01" — Journey Archive + Prompt Library (COMPLETE ✅)
 - "sprint-02" — Language Bank + Command Centre (COMPLETE ✅)
-- "sprint-03" — Commit Density Timeline (READY TO RUN)
+- "sprint-03" — Commit Density Timeline (COMPLETE ✅)
 
 ---
 
 # Next Sprint Queue — Two Birds Innovation
 
-**Last Updated:** 2026-04-01
-**Context:** HAL Stack foundation complete. Sprint command system active. Clarity full build done. Journey archive chapters 1-3 written. Prompt library with 6 eureka prompts. Command Centre with Language Bank and Prompt Library pages.
+**Last Updated:** 2026-04-01 (end of day)
+**Context:** HAL Stack foundation complete. Sprint command system active. Sovereignty sprint complete (6 documents). Commit density timeline built (443 commits visualised). Journey archive chapters 1-3 written. Prompt library with 6 eureka prompts. Command Centre with Language Bank, Prompt Library, and Journey Timeline pages.
 **Owner:** Aaron Patzalek | Two Birds Innovation
 
 ---
@@ -32,6 +32,10 @@ No copy-paste needed. No Claude Web hunting. Just type:
 - ✅ CLAUDE.md master context + sprint command system
 - ✅ Windows Task Scheduler — overnight builds configured
 - ✅ TBK and aaron-kramer repos archived
+- ✅ Sovereignty sprint — 6 founding documents (audit, GitHub redundancy, LLM portability, prenuptial, IP register, HAL portability)
+- ✅ Commit density timeline — 443 commits across 9 repos, raw data + visual HTML chart
+- ✅ Journey timeline page on Command Centre — interactive bar chart with hover tooltips
+- ✅ Portfolio sync — WIP, session state, sprint queue, last run summary all updated
 
 ---
 
@@ -218,10 +222,10 @@ Access at: **http://localhost:5678** — create admin account on first visit.
 
 ## AARON MANUAL TASKS — Human Sprint Backlog
 
-### GitHub Pages — Enable on 3 Repos
+### GitHub Pages — Enable on 3 Repos (P1)
 **Date logged:** March 31, 2026
-**Priority:** High
-**Effort:** 2 minutes
+**Priority:** P1 — High
+**Effort:** 2 minutes each
 
 For each repo below, go to **Settings → Pages → Deploy from branch → master → / (root) → Save**
 Then verify the URL loads:
@@ -234,9 +238,9 @@ Then verify the URL loads:
 
 ---
 
-### B2B Library Outreach — Review and Approve
+### B2B Library Email 1 — Approve and Send to 3 Contacts (P1)
 **Date logged:** March 31, 2026
-**Priority:** High — revenue facing
+**Priority:** P1 — revenue facing
 **Effort:** 15 minutes
 
 Review 3 library contacts in the DCC B2B outreach dashboard:
@@ -249,54 +253,24 @@ Approve contacts and send Email 1 to each.
 
 ---
 
-### Clarity — Add Real API Key and Test
-**Date logged:** March 31, 2026
-**Priority:** High
-**Effort:** 10 minutes
+### Archive TBK and aaron-kramer Repos on GitHub (P2)
+**Date logged:** April 1, 2026
+**Priority:** P2
+**Effort:** 5 minutes
 
-Once GitHub Pages is live at https://twobirds-kramerica.github.io/clarity:
-1. Open the site
-2. Enter your Anthropic API key in the form field
-3. Test the diagnostic form end to end
-4. Confirm the SWOT analysis and recommendations generate correctly
+Both repos have been superseded:
+- TBK → replaced by twobirds-kramerica org
+- aaron-kramer → replaced by aaron-patzalek
 
-Note: The API key is entered by the user at runtime — it is not hardcoded in the source. It is stored in localStorage for convenience. Consider moving to a backend proxy before any public promotion of Clarity.
-
-**Status:** Pending GitHub Pages activation first.
-
----
-
-### LinkedIn — First Gap-Framing Post
-**Date logged:** March 31, 2026
-**Priority:** Medium — brand building
-**Effort:** 20 minutes
-
-Write and publish first brand awareness post on LinkedIn.
-Theme: the AI gap in Southwestern Ontario SMEs.
-Draft exists in April sprint plan (Sprint 5). Review and post.
+Go to each repo → Settings → Danger Zone → Archive this repository.
 
 **Status:** Pending Aaron action.
 
 ---
 
-### Human Backlog Review Session
-**Date logged:** March 31, 2026
-**Priority:** High
-**Effort:** 30–60 minutes — schedule for April 1 morning
-
-This backlog is growing. Set aside time tomorrow morning to:
-- [ ] Review all items in this section
-- [ ] Prioritise and sequence
-- [ ] Clear any quick wins (GitHub Pages takes 2 minutes)
-- [ ] Flag anything that needs a Claude Code sprint to unblock
-
-**Status:** Schedule for April 1, 2026 morning.
-
----
-
-### GitHub Backup Owner Account
+### GitHub Backup Owner Account (P2)
 **Date logged:** April 1, 2026
-**Priority:** High — business continuity
+**Priority:** P2 — business continuity
 **Effort:** 15 minutes
 
 **Steps:**
@@ -306,6 +280,63 @@ This backlog is growing. Set aside time tomorrow morning to:
 4. Store backup account credentials in a safe place (password manager or printed copy)
 
 **Risk if not done:** All live products (DCC, Career Coach, Clarity) go dark if main account is compromised.
+**See also:** sovereignty/02-github-redundancy-plan.md
+
+**Status:** Pending Aaron action.
+
+---
+
+### Silver Laptop — Disable Sleep on AC Power (P2)
+**Date logged:** April 1, 2026
+**Priority:** P2
+**Effort:** 1 minute
+
+Run in elevated PowerShell:
+```
+powercfg /change standby-timeout-ac 0
+```
+
+Keeps the silver laptop awake when plugged in for overnight builds.
+
+**Status:** Pending Aaron action.
+
+---
+
+### LinkedIn Post 1 — Gap Framing Post (P3)
+**Date logged:** March 31, 2026
+**Priority:** P3 — brand building
+**Effort:** 20 minutes
+
+Write and publish first brand awareness post on LinkedIn.
+Theme: the AI gap in Southwestern Ontario SMEs.
+Draft exists in DCC marketing assets. Review and post.
+
+**Status:** Pending Aaron action.
+
+---
+
+### Clarity — Add Real API Key and Test
+**Date logged:** March 31, 2026
+**Priority:** P2 (blocked by GitHub Pages)
+**Effort:** 10 minutes
+
+Once GitHub Pages is live at https://twobirds-kramerica.github.io/clarity:
+1. Open the site
+2. Enter your Anthropic API key in the form field
+3. Test the diagnostic form end to end
+4. Confirm the SWOT analysis and recommendations generate correctly
+
+**Status:** Pending GitHub Pages activation first.
+
+---
+
+### Codeberg Account — Mirror Top 3 Repos
+**Date logged:** April 1, 2026
+**Priority:** P2 — sovereignty
+**Effort:** 15 minutes
+
+Create Codeberg account and mirror digital-confidence, career-coach, clarity.
+Full instructions in sovereignty/02-github-redundancy-plan.md.
 
 **Status:** Pending Aaron action.
 

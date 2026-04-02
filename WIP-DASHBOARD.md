@@ -1,10 +1,34 @@
 # Two Birds Innovation — Project Command Centre
-**Last Updated:** March 31, 2026 — END-OF-MONTH FINAL: STABILITY + NEWSLETTER + HAL ROADMAP ✅
-**Owner:** Aaron Kramer | Two Birds Innovation
+**Last Updated:** April 1, 2026 — MEGA SPRINT: SOVEREIGNTY + TIMELINE + JOURNEY + SYNC ✅
+**Owner:** Aaron Patzalek | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
 > This is the single source of truth for all active, queued, and deferred initiatives.
 > Update this file at the end of every sprint. Commit with message: `chore: wip dashboard update [date]`
+
+---
+
+## ✅ SPRINT COMPLETE — April 1 Mega Sprint: Journey, Sovereignty, Timeline, Sync
+
+5 phases across two-birds-portfolio, two-birds-command-centre. Fully autonomous.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 1 | Phase 1 | Portfolio | Sprint-01: Journey archive chapters 1-3, prompt library EUREKA-001 through 006 | ✅ PUSHED (prior session) |
+| 2 | Phase 2 | Command Centre | Sprint-02: Language Bank + Prompt Library pages with cards, copy buttons | ✅ PUSHED (prior session) |
+| 3A | Phase 3 | Portfolio | sovereignty/README.md — overview, reading order, 3 actions this week | ✅ PUSHED |
+| 3B | Phase 3 | Portfolio | sovereignty/01-sovereignty-audit.md — 8 vendors mapped with risk ratings | ✅ PUSHED |
+| 3C | Phase 3 | Portfolio | sovereignty/02-github-redundancy-plan.md — Codeberg mirror + Cloudflare Pages | ✅ PUSHED |
+| 3D | Phase 3 | Portfolio | sovereignty/03-llm-portability-layer.md — JS abstraction for 4 LLM providers | ✅ PUSHED |
+| 3E | Phase 3 | Portfolio | sovereignty/04-prenuptial.md — exit triggers, 24h checklist, 30-day playbook | ✅ PUSHED |
+| 3F | Phase 3 | Portfolio | sovereignty/05-ip-register.md — all IP documented and timestamped | ✅ PUSHED |
+| 3G | Phase 3 | Portfolio | sovereignty/06-hal-portability-spec.md — rebuild HAL checklist, open-source map | ✅ PUSHED |
+| 4A | Phase 4 | Portfolio | journey/raw/commit-density-timeline.md — 443 commits across 9 repos | ✅ PUSHED |
+| 4B | Phase 4 | Command Centre | journey-timeline.html — visual bar chart, hover tooltips, sprint wave | ✅ PUSHED |
+| 5A | Phase 5 | Portfolio | WIP-DASHBOARD.md — this update | ✅ THIS |
+| 5B | Phase 5 | Portfolio | SESSION-STATE.md — April 1 session record | ✅ THIS |
+| 5C | Phase 5 | Portfolio | NEXT-SPRINT-QUEUE.md — completed items marked, new items added | ✅ THIS |
+| 5D | Phase 5 | Portfolio | LAST-RUN-SUMMARY.md — final session log | ✅ THIS |
 
 ---
 

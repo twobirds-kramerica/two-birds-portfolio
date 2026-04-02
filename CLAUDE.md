@@ -37,7 +37,7 @@ Sole income earner. Time is the most constrained asset.
 ## KEY FILES
 Backlog: C:\twobirds\two-birds-portfolio\NEXT-SPRINT-QUEUE.md
 Session state: C:\twobirds\two-birds-portfolio\SESSION-STATE.md
-Last run: C:\twobirds\two-birds-portfolio\logs\LAST-RUN-SUMMARY.md
+Last run: C:\twobirds\two-birds-portfolio\logs\RETRO.md
 HAL backlog: C:\twobirds\two-birds-portfolio\hal-stack\HAL-BACKLOG.md
 Journey archive: C:\twobirds\two-birds-portfolio\journey\
 

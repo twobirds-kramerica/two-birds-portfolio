@@ -15,9 +15,9 @@ Sole income earner. Time is the most constrained asset.
 - Run git log --oneline -30 before touching any repo.
 - Run as Administrator to avoid permission blocks.
 - Read SESSION-STATE.md before starting any work session.
-- After every session: overwrite logs/LAST-RUN-SUMMARY.md and push.
+- After every session: overwrite logs/RETRO.md and push.
 - Never rebuild something already built — check git log first.
-- TIMESTAMP RULE: Every LAST-RUN-SUMMARY.md, SESSION-STATE.md, and automated-run-log.md must end with these exact two lines as the final lines of the file — nothing after them:
+- TIMESTAMP RULE: Every RETRO.md, SESSION-STATE.md, and automated-run-log.md must end with these exact two lines as the final lines of the file — nothing after them:
   Last updated: [YYYY-MM-DD] at [HH:MM] EST (Toronto)
   CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
   Use PowerShell to get time: $ts = (Get-Date).ToString("yyyy-MM-dd HH:mm") + " EST (Toronto)"
@@ -44,7 +44,7 @@ Journey archive: C:\twobirds\two-birds-portfolio\journey\
 ## TRIGGER COMMANDS
 When the user types any of these, execute the corresponding action:
 "next sprint" — read backlog, execute top 3 Claude Code executable items
-"retro" — read and report LAST-RUN-SUMMARY.md contents
+"retro" — read and report logs/RETRO.md contents
 "state" — read SESSION-STATE.md, orient fully, report top 3 next actions
 "dashboard" — read WIP-DASHBOARD.md, report full portfolio status
 "hal" — read HAL-BACKLOG.md, report next infrastructure item

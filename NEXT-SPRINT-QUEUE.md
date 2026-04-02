@@ -16,6 +16,24 @@
 
 ---
 
+## HOW TO RUN SPRINTS FROM CLAUDE CODE
+Type one of these commands directly in Claude Code terminal:
+- `/next-sprint` — runs top 3 backlog items automatically
+- `/retro` — reads what Claude Code last built
+- `/state` — reads SESSION-STATE.md and orients fully
+- `/dashboard` — reads WIP-DASHBOARD.md and gives portfolio status
+- `/hal` — reads HAL backlog and reports next infrastructure item
+- `/journey` — reads latest journey archive entry
+
+Named sprints (type the name in Claude Code):
+- "sprint-01" — Journey Archive + Prompt Library (COMPLETE ✅)
+- "sprint-02" — Language Bank + Command Centre (COMPLETE ✅)
+- "sprint-03" — Commit Density Timeline (READY TO RUN)
+
+No copy-paste needed. No Claude Web hunting. Just type and go.
+
+---
+
 ## How to Use This Queue
 
 Each sprint below is a fully scoped unit of work. They are ordered by strategic priority — do them in sequence if possible, but any can be run independently.

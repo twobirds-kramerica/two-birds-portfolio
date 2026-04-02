@@ -98,3 +98,28 @@ Should show recent commits — if yes, setup is complete.
 - **If Node version error with n8n:** run `node --version` first, needs v18+
 
 ## TOTAL ESTIMATED TIME: 15 minutes on good internet
+
+---
+
+## KNOWN ISSUES AND FIXES
+Learned from i5 and silver laptop setups. Apply to all new machines.
+
+### ISSUE 1 — LAST-RUN-SUMMARY.md shows stale after push
+**Cause:** GitHub CDN caches the raw file for a few minutes after push.
+**Fix:** Wait 5 minutes and type Retro again. Not a system failure.
+**Prevention:** None needed — self-resolving.
+
+### ISSUE 2 — Cloud scheduler push blocked (403)
+**Cause:** claude.ai/code/scheduled runs in Anthropic cloud with read-only git proxy.
+**Fix:** Windows Task Scheduler on local machine has full push access.
+**Prevention:** Always use Windows Task Scheduler for overnight builds. Cloud scheduler = manual trigger only, not overnight automation.
+
+### ISSUE 3 — git push rejected on new machine
+**Cause:** Remote has changes not in local.
+**Fix:** `git pull --rebase` first, then `git push`.
+**Prevention:** Always pull before pushing on a new machine.
+
+### ISSUE 4 — icacls fails with %USERNAME%
+**Cause:** `%` syntax is cmd.exe, not PowerShell.
+**Fix:** Use `${env:USERNAME}` in PowerShell always.
+**Prevention:** Copy commands from this setup guide exactly.

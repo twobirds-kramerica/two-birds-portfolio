@@ -1,17 +1,23 @@
 # Retro
 Date: April 2, 2026
-Session: Sprint queue 13-17 created from Aaron voice dictations
+Session: Next Sprint — Modules 20, 21, 22 built (Sprints 13-15)
 
-Tasks completed:
-1. Sprint 13 — Module 20: Internet Plan literacy (with CRTC data, overage scenario, comparison tools)
-2. Sprint 14 — Module 21: Mobile Plan literacy (prepaid vs postpaid, negotiation script)
-3. Sprint 15 — Module 22: TV and Home Phone (unbundling, digital antenna, streaming basics)
-4. Sprint 16 — Module 23: Online Marketplace (buy/sell safety, scam checklist, e-transfer)
-5. Sprint 17 — Module 24: Communication (video calling, group chats, voice messages, notifications)
+What ran:
+- Module 20: Internet Plan Literacy — CRTC data, overage scenario, PlanHub/WhistleOut, negotiation script, CCTS rights (576 lines, 160 FR translations)
+- Module 21: Mobile Plan Literacy — prepaid vs postpaid, plan review call script, upgrade trap avoidance (576 lines, 162 FR translations)
+- Module 22: TV and Home Phone — unbundling guide, digital antenna, streaming for beginners, CCTS rights (571 lines, 167 FR translations)
+- Data files: module-summaries.json and module-qas.json updated for all 3 modules
+- Sitemap: 3 new entries added
 
-Each sprint file includes: opening scenario, section outline, technical requirements, FR translation, WCAG AA.
+Commits:
+- 28f4c21 DCC: module 20-22 data — summaries, Q&As, sitemap
+- 54d04b2 DCC: module 20 — Internet Plan literacy
+- 911a320 DCC: module 21 — Mobile Plan literacy
+- a154126 DCC: module 22 — TV and Home Phone
 
-Next recommended: Run next sprint to start building Module 20.
+DCC now has 24 modules (20-22 new + visual-ai bonus).
+Sprints 16-17 (modules 23-24) ready in queue.
+Next recommended: Run next sprint to build Modules 23 and 24.
 
-Last updated: 2026-04-02 at 17:36 EST (Toronto)
+Last updated: 2026-04-02 at 18:56 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

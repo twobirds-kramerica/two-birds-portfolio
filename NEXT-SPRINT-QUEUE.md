@@ -385,6 +385,29 @@ Full instructions in sovereignty/02-github-redundancy-plan.md.
 
 ---
 
+### Timestamp Rule — Apply to Silver Laptop and New Machines
+**Date logged:** April 2, 2026
+**Priority:** P2
+
+The CLAUDE.md timestamp rule is set on the i5 Lenovo (primary machine). Apply to all other machines during setup:
+
+**Silver laptop (LenovoHitch):**
+- CLAUDE.md already exists at C:\twobirds\CLAUDE.md
+- Run: `cd C:\twobirds && git pull origin master`
+- This will pull the updated CLAUDE.md with timestamp rule automatically
+- No manual action needed beyond git pull
+
+**New laptop (incoming):**
+- Follow SETUP-NEW-WINDOWS-MACHINE.md — timestamp rule is baked in
+- Step 5 (clone repos) will pull CLAUDE.md with rule already present
+
+**Home desktop (incoming):**
+- Same as new laptop — follow setup guide, rule arrives with CLAUDE.md
+
+**Status:** Silver laptop needs git pull. New machines get it automatically.
+
+---
+
 ## Quick Reference — Priority Matrix
 
 | Sprint | Strategic Value | Effort | Revenue Path |

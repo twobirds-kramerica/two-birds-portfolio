@@ -9,8 +9,8 @@ No copy-paste needed. No Claude Web hunting. Just type:
 
 # Next Sprint Queue — Two Birds Innovation
 
-**Last Updated:** 2026-04-01 (end of day)
-**Context:** HAL Stack foundation complete. Sprint command system active. Sovereignty sprint complete (6 documents). Commit density timeline built (443 commits visualised). Journey archive chapters 1-3 written. Prompt library with 6 eureka prompts. Command Centre with Language Bank, Prompt Library, and Journey Timeline pages.
+**Last Updated:** 2026-04-02 (overnight build)
+**Context:** HAL Stack foundation complete. Sprint command system active. Sovereignty sprint complete (6 documents). Commit density timeline built (443 commits visualised). Journey archive chapters 1-3 written. Prompt library with 6 eureka prompts. Command Centre with Language Bank (V2 with Wait For Native), Prompt Library, and Journey Timeline pages. Elite Karate site polished and ready for client review.
 **Owner:** Aaron Patzalek | Two Birds Innovation
 
 ---
@@ -36,6 +36,8 @@ No copy-paste needed. No Claude Web hunting. Just type:
 - ✅ Commit density timeline — 443 commits across 9 repos, raw data + visual HTML chart
 - ✅ Journey timeline page on Command Centre — interactive bar chart with hover tooltips
 - ✅ Portfolio sync — WIP, session state, sprint queue, last run summary all updated
+- ✅ Language Bank V2 — 7 new code words, Wait For Native section, updated friction points
+- ✅ Elite Karate site polished — classes, schedule, contact, mobile nav, Canadian English, Two Birds credit
 
 ---
 
@@ -204,19 +206,47 @@ Access at: **http://localhost:5678** — create admin account on first visit.
 
 ---
 
+## Sprint 11 — Sovereignty Opus Deep Dive
+**Priority:** Medium — infrastructure resilience
+**Estimated session time:** 2 hours
+**Repos:** two-birds-portfolio, career-coach, clarity
+
+### Tasks
+- [ ] Implement LLM portability layer (llm-provider.js) from sovereignty/03 spec
+- [ ] Integrate into Clarity — replace direct Anthropic fetch
+- [ ] Integrate into Career Coach — replace both API call sites
+- [ ] Test with Anthropic provider (default)
+- [ ] Document provider switching in README
+
+---
+
+## Sprint 12 — CV Feedback Integration
+**Priority:** Medium — product enhancement
+**Estimated session time:** 2–3 hours
+**Repos:** career-coach
+
+### Tasks
+- [ ] Add CV upload and parse (client-side, no backend)
+- [ ] Claude analyses CV against job posting
+- [ ] Generate tailored improvement suggestions
+- [ ] Add "Strengthen My CV" button to job detail view
+- [ ] Privacy notice: CV never stored, only sent to API during analysis
+
+---
+
 ---
 
 ## BACKLOG PROJECTS — PENDING CLIENT FEEDBACK
 
 ### Elite Karate Site
-**Date logged:** April 1, 2026
+**Date logged:** April 1, 2026 | **Updated:** April 2, 2026
 **Repo:** twobirds-kramerica/elite-karate-site
-**Status:** Built — awaiting client feedback
+**Status:** Polished — classes, schedule, contact, mobile nav, Canadian English, Two Birds credit added. Ready for client review.
 **Context:** First Claude Code project. Built as free service for Aaron's kids' karate school.
 **Owner contact:** Not yet confirmed — pending school owner decision.
-**Next action:** Follow up with karate school owner. Demo the site. Get yes/no on whether they want it live.
+**Next action:** Show site to school owner. Demo on mobile. Get yes/no on going live.
 **Priority:** P3 — low urgency, goodwill project.
-**Live URL:** GitHub Pages is NOT enabled on twobirds-kramerica/elite-karate-site. Add to backlog as a 2-minute fix when client confirms.
+**Live URL:** GitHub Pages is NOT enabled. Enable when client confirms.
 
 ---
 
@@ -330,7 +360,20 @@ Once GitHub Pages is live at https://twobirds-kramerica.github.io/clarity:
 
 ---
 
-### Codeberg Account — Mirror Top 3 Repos
+### Show Elite Karate Site to School Owner (P2)
+**Date logged:** April 2, 2026
+**Priority:** P2 — goodwill, potential portfolio piece
+**Effort:** 15 minutes
+
+Site has been polished: classes section, schedule, contact, mobile nav, Canadian English.
+Show to school owner on their phone. Get yes/no on going live.
+If yes: enable GitHub Pages on twobirds-kramerica/elite-karate-site (2 min).
+
+**Status:** Pending Aaron action.
+
+---
+
+### Codeberg Account — Mirror Top 3 Repos (P2)
 **Date logged:** April 1, 2026
 **Priority:** P2 — sovereignty
 **Effort:** 15 minutes
@@ -356,6 +399,8 @@ Full instructions in sovereignty/02-github-redundancy-plan.md.
 | 8 — Kevin's Apt | Low | Low | Polish |
 | 9 — LightRAG | Low | High | Infrastructure |
 | 10 — Two Birds Site | Low | Medium | Marketing |
+| 11 — Sovereignty Deep Dive | Medium | Medium | Infrastructure |
+| 12 — CV Feedback | Medium | Medium | Product enhancement |
 
 **Recommended order for maximum revenue impact:**
-5 → 3 → 2 → 4 → 6 → 1 → 7 → 10 → 8 → 9
+5 → 3 → 2 → 4 → 6 → 1 → 7 → 11 → 10 → 12 → 8 → 9

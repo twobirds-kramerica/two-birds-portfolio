@@ -1,10 +1,29 @@
 # Two Birds Innovation — Project Command Centre
-**Last Updated:** April 1, 2026 — MEGA SPRINT: SOVEREIGNTY + TIMELINE + JOURNEY + SYNC ✅
+**Last Updated:** April 2, 2026 — OVERNIGHT BUILD: LANGUAGE BANK V2 + ELITE KARATE + SYNC ✅
 **Owner:** Aaron Patzalek | Two Birds Innovation
 **Repo:** `twobirds-kramerica/two-birds-portfolio`
 
 > This is the single source of truth for all active, queued, and deferred initiatives.
 > Update this file at the end of every sprint. Commit with message: `chore: wip dashboard update [date]`
+
+---
+
+## ✅ SPRINT COMPLETE — April 1-2 Overnight Build
+
+7 phases across portfolio, command centre, elite-karate-site. Verified prior work, enhanced gaps, new builds.
+
+| # | Phase | Project | Initiative | Status |
+|---|-------|---------|-----------|--------|
+| 1 | Phase 1 | Portfolio | Journey archive chapters 1-3, social posts, 6 eureka prompts | ✅ PUSHED (prior session) |
+| 2 | Phase 2 | Portfolio | Sovereignty: 6 founding documents — audit, redundancy, LLM, prenuptial, IP, HAL | ✅ PUSHED (prior session) |
+| 3 | Phase 3 | Command Centre | Language Bank V2 — 7 new code words, Wait For Native section, updated friction points | ✅ PUSHED |
+| 4 | Phase 4 | Command Centre | Prompt Library page — 6 eureka prompt cards with copy buttons | ✅ PUSHED (prior session) |
+| 5 | Phase 5 | Portfolio + CC | Commit density timeline — raw data (443 commits) + visual HTML bar chart | ✅ PUSHED (prior session) |
+| 6 | Phase 6 | Elite Karate | Site polished — classes, schedule, contact, mobile nav, Canadian English, TBI credit | ✅ PUSHED |
+| 7A | Phase 7 | Portfolio | WIP-DASHBOARD.md — this update | ✅ THIS |
+| 7B | Phase 7 | Portfolio | SESSION-STATE.md — overnight build record | ✅ THIS |
+| 7C | Phase 7 | Portfolio | NEXT-SPRINT-QUEUE.md — new sprint items added | ✅ THIS |
+| 7D | Phase 7 | Portfolio | LAST-RUN-SUMMARY.md — final session log | ✅ THIS |
 
 ---
 
@@ -14,21 +33,11 @@
 
 | # | Phase | Project | Initiative | Status |
 |---|-------|---------|-----------|--------|
-| 1 | Phase 1 | Portfolio | Sprint-01: Journey archive chapters 1-3, prompt library EUREKA-001 through 006 | ✅ PUSHED (prior session) |
-| 2 | Phase 2 | Command Centre | Sprint-02: Language Bank + Prompt Library pages with cards, copy buttons | ✅ PUSHED (prior session) |
-| 3A | Phase 3 | Portfolio | sovereignty/README.md — overview, reading order, 3 actions this week | ✅ PUSHED |
-| 3B | Phase 3 | Portfolio | sovereignty/01-sovereignty-audit.md — 8 vendors mapped with risk ratings | ✅ PUSHED |
-| 3C | Phase 3 | Portfolio | sovereignty/02-github-redundancy-plan.md — Codeberg mirror + Cloudflare Pages | ✅ PUSHED |
-| 3D | Phase 3 | Portfolio | sovereignty/03-llm-portability-layer.md — JS abstraction for 4 LLM providers | ✅ PUSHED |
-| 3E | Phase 3 | Portfolio | sovereignty/04-prenuptial.md — exit triggers, 24h checklist, 30-day playbook | ✅ PUSHED |
-| 3F | Phase 3 | Portfolio | sovereignty/05-ip-register.md — all IP documented and timestamped | ✅ PUSHED |
-| 3G | Phase 3 | Portfolio | sovereignty/06-hal-portability-spec.md — rebuild HAL checklist, open-source map | ✅ PUSHED |
-| 4A | Phase 4 | Portfolio | journey/raw/commit-density-timeline.md — 443 commits across 9 repos | ✅ PUSHED |
-| 4B | Phase 4 | Command Centre | journey-timeline.html — visual bar chart, hover tooltips, sprint wave | ✅ PUSHED |
-| 5A | Phase 5 | Portfolio | WIP-DASHBOARD.md — this update | ✅ THIS |
-| 5B | Phase 5 | Portfolio | SESSION-STATE.md — April 1 session record | ✅ THIS |
-| 5C | Phase 5 | Portfolio | NEXT-SPRINT-QUEUE.md — completed items marked, new items added | ✅ THIS |
-| 5D | Phase 5 | Portfolio | LAST-RUN-SUMMARY.md — final session log | ✅ THIS |
+| 1 | Phase 1 | Portfolio | Sprint-01: Journey archive chapters 1-3, prompt library EUREKA-001 through 006 | ✅ PUSHED |
+| 2 | Phase 2 | Command Centre | Sprint-02: Language Bank + Prompt Library pages with cards, copy buttons | ✅ PUSHED |
+| 3A-G | Phase 3 | Portfolio | Sovereignty sprint — 6 founding documents | ✅ PUSHED |
+| 4A-B | Phase 4 | Portfolio + CC | Commit density timeline — raw data + visual chart | ✅ PUSHED |
+| 5A-D | Phase 5 | Portfolio | WIP, session state, sprint queue, last run summary | ✅ PUSHED |
 
 ---
 

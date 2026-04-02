@@ -1,16 +1,22 @@
 # Last Run Summary
 Date: April 2, 2026
-Session: Timestamp rule + machine registry update
+Session: Next Sprint — Career Coach Privacy, LLM Portability, Kevin's Apt
 
 Tasks completed:
-1. CLAUDE.md updated — EST timestamp rule with CDN note added to standing rules
-2. LAST-RUN-SUMMARY.md updated with timestamp as final two lines
-3. NEXT-SPRINT-QUEUE.md updated — silver laptop and new machines noted
-4. Master CLAUDE.md copied to portfolio repo for version control
+1. Sprint 4 — Career Coach: JSON export button, privacy notice in settings, ROADMAP.md created
+2. Sprint 11 — LLM portability: llm-provider.js created, integrated into Career Coach (3 API calls) and Clarity (1 API call). Supports Anthropic, OpenAI, Gemini, Ollama. Switching provider = changing one line.
+3. Sprint 8 — Kevin's Apt: verified already complete (compare mode, decision report, print shortlist, checklist edge cases all handled)
 
-Commits: 8a31cb9 pushed to master
-Skipped: nothing
-Next recommended: Type next sprint in Claude Code to keep building.
+Also verified as already complete (not rebuilt):
+- Sprint 2 (Modules 18-19), Sprint 3 (B2B Landing), Sprint 5 (Consulting Site), Sprint 6 (Grants), Sprint 7 (Clarity)
 
-Last updated: 2026-04-02 at 12:37 EST (Toronto)
+Commits:
+- 11d54bc career-coach: JSON export, privacy notice, ROADMAP.md
+- 09890c3 career-coach: LLM portability layer — 3 API calls migrated
+- acfa927 clarity: LLM portability layer — 1 API call migrated
+
+Skipped: Sprint 1 (n8n) — requires manual admin steps. Sprint 8 — already complete.
+Next recommended: Aaron enables GitHub Pages on clarity, aaron-patzalek, two-birds-innovation.
+
+Last updated: 2026-04-02 at 13:33 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

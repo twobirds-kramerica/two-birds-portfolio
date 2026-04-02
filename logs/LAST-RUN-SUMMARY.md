@@ -1,13 +1,12 @@
 # Last Run Summary
 Date: April 1, 2026
-Session: Sprint Command System Build
+Session: Sprint Command System
 
 Tasks completed:
-1. C:\twobirds\CLAUDE.md created — master context auto-loads every session
-2. 6 slash commands created in Claude commands directory (next-sprint, retro, state, dashboard, hal, journey)
-3. Sprint library created — sprint-01 (complete), sprint-02 (complete), sprint-03 (ready to run)
-4. NEXT-SPRINT-QUEUE.md updated with sprint command instructions
+1. C:\twobirds\CLAUDE.md updated — trigger commands now include sprint-01/02/03 execution
+2. Sprint library updated — sprint-01 (complete), sprint-02 (complete), sprint-03 (ready)
+3. NEXT-SPRINT-QUEUE.md updated — sprint commands at top, completed items refreshed for April 1
 
-Commits: 71c052d pushed to master
+Commits: 94958f3 pushed to master
 Skipped: nothing
-Next recommended: Close Claude Code. Reopen. Type "/next-sprint". Watch it work.
+Next recommended: Close Claude Code. Reopen it. Type "next sprint". It works.

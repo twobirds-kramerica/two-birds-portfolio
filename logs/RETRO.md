@@ -1,23 +1,22 @@
 # Retro
 Date: April 2, 2026
-Session: Next Sprint — Modules 20, 21, 22 built (Sprints 13-15)
+Session: Next Sprint — Modules 23 and 24 built (Sprints 16-17)
 
 What ran:
-- Module 20: Internet Plan Literacy — CRTC data, overage scenario, PlanHub/WhistleOut, negotiation script, CCTS rights (576 lines, 160 FR translations)
-- Module 21: Mobile Plan Literacy — prepaid vs postpaid, plan review call script, upgrade trap avoidance (576 lines, 162 FR translations)
-- Module 22: TV and Home Phone — unbundling guide, digital antenna, streaming for beginners, CCTS rights (571 lines, 167 FR translations)
-- Data files: module-summaries.json and module-qas.json updated for all 3 modules
-- Sitemap: 3 new entries added
+- Module 23: Online Marketplace Safety — Frank's 3 messages, scam checklist, e-transfer safety, CAFC reporting (563 lines, 155 FR translations)
+- Module 24: Communication Apps — Dorothy's missed calls, video calling, group chats, voice messages, notifications (645 lines, 195 FR translations)
+- Data files: module-summaries.json and module-qas.json updated for both modules
+- Sitemap: 2 new entries added
 
 Commits:
-- 28f4c21 DCC: module 20-22 data — summaries, Q&As, sitemap
-- 54d04b2 DCC: module 20 — Internet Plan literacy
-- 911a320 DCC: module 21 — Mobile Plan literacy
-- a154126 DCC: module 22 — TV and Home Phone
+- 6a66b2f DCC: module 23-24 data — summaries, Q&As, sitemap
+- 28e85b9 DCC: module 23 — Online Marketplace safety
+- 89a7ca0 DCC: module 24 — Communication apps
 
-DCC now has 24 modules (20-22 new + visual-ai bonus).
-Sprints 16-17 (modules 23-24) ready in queue.
-Next recommended: Run next sprint to build Modules 23 and 24.
+DCC curriculum is now COMPLETE: 26 modules total (24 numbered + 2.5 + visual-ai bonus).
+All 17 sprints in the queue have been executed.
 
-Last updated: 2026-04-02 at 18:56 EST (Toronto)
+Next recommended: Aaron types "retro" tomorrow morning. All sprint queue items done.
+
+Last updated: 2026-04-02 at 19:14 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

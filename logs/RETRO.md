@@ -1,22 +1,20 @@
 # Retro
 Date: April 2, 2026
-Session: Next Sprint — Modules 23 and 24 built (Sprints 16-17)
+Session: Pattern counter rule + reliability log
 
-What ran:
-- Module 23: Online Marketplace Safety — Frank's 3 messages, scam checklist, e-transfer safety, CAFC reporting (563 lines, 155 FR translations)
-- Module 24: Communication Apps — Dorothy's missed calls, video calling, group chats, voice messages, notifications (645 lines, 195 FR translations)
-- Data files: module-summaries.json and module-qas.json updated for both modules
-- Sitemap: 2 new entries added
+Tasks completed:
+1. CLAUDE.md — pattern counter rule added to standing rules
+2. CLAUDE.md — reliable workflow section added (retro primary/secondary, next sprint, remote control, overnight)
+3. RELIABILITY-ISSUES.md created with 5 documented issues:
+   - RI-001: GitHub CDN cache stale (FIXED — renamed to RETRO.md)
+   - RI-002: Remote control builds don't execute (DOCUMENTED — use scheduler instead)
+   - RI-003: Duplicate work across sessions (MITIGATED — git log check)
+   - RI-004: Pasted prompts arrive after work done (MITIGATED — git log check)
+   - RI-005: Claude says "done" without verification (DOCUMENTED — pattern counter rule)
 
-Commits:
-- 6a66b2f DCC: module 23-24 data — summaries, Q&As, sitemap
-- 28e85b9 DCC: module 23 — Online Marketplace safety
-- 89a7ca0 DCC: module 24 — Communication apps
+Commits: a86dbf0 pushed to master
+Skipped: nothing
+Next recommended: Aaron types "retro" in PowerShell to verify: cat logs/RETRO.md
 
-DCC curriculum is now COMPLETE: 26 modules total (24 numbered + 2.5 + visual-ai bonus).
-All 17 sprints in the queue have been executed.
-
-Next recommended: Aaron types "retro" tomorrow morning. All sprint queue items done.
-
-Last updated: 2026-04-02 at 19:14 EST (Toronto)
+Last updated: 2026-04-02 at 21:42 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

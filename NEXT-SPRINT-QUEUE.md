@@ -1,16 +1,15 @@
 # HOW TO RUN SPRINTS FROM CLAUDE CODE
 No copy-paste needed. No Claude Web hunting. Just type:
 - "next sprint" — auto-executes top 3 backlog items
-- "sprint-01" — Journey Archive + Prompt Library (COMPLETE ✅)
-- "sprint-02" — Language Bank + Command Centre (COMPLETE ✅)
-- "sprint-03" — Commit Density Timeline (COMPLETE ✅)
+- "sprint-01" through "sprint-17" — all COMPLETE ✅
+- "retro" — reads logs/RETRO.md
 
 ---
 
 # Next Sprint Queue — Two Birds Innovation
 
-**Last Updated:** 2026-04-02 (overnight build)
-**Context:** HAL Stack foundation complete. Sprint command system active. Sovereignty sprint complete (6 documents). Commit density timeline built (443 commits visualised). Journey archive chapters 1-3 written. Prompt library with 6 eureka prompts. Command Centre with Language Bank (V2 with Wait For Native), Prompt Library, and Journey Timeline pages. Elite Karate site polished and ready for client review.
+**Last Updated:** 2026-04-03
+**Context:** All 17 numbered sprints complete. DCC has 26 modules (24 + 2.5 + visual-ai). LLM portability layer in career-coach and clarity. Sovereignty docs, journey archive, commit timeline, human sprint manager all shipped. Career Coach has CV feedback, JSON export, ROADMAP. Quality Dashboard refreshed. Elite Karate polished.
 **Owner:** Aaron Patzalek | Two Birds Innovation
 
 ---
@@ -38,6 +37,16 @@ No copy-paste needed. No Claude Web hunting. Just type:
 - ✅ Portfolio sync — WIP, session state, sprint queue, last run summary all updated
 - ✅ Language Bank V2 — 7 new code words, Wait For Native section, updated friction points
 - ✅ Elite Karate site polished — classes, schedule, contact, mobile nav, Canadian English, Two Birds credit
+- ✅ Sprint 4: Career Coach — JSON export, privacy notice, ROADMAP.md
+- ✅ Sprint 11: LLM portability layer — llm-provider.js in career-coach (3 calls) and clarity (1 call)
+- ✅ Sprint 10: Two Birds Innovation — Kevin's Apt tool card, Work With Aaron section
+- ✅ Sprint 12: Career Coach — Strengthen My CV feature (AI CV analysis per job)
+- ✅ Quality Dashboard — April 2 refresh, 2 new repos added, local-only cleared
+- ✅ Sprints 13-17: DCC Modules 20-24 built (Internet, Mobile, TV/Phone, Marketplace, Communication)
+- ✅ DCC Homepage — modules 20-24 in grid, sidebar, JSON-LD, count updated to 24
+- ✅ Human Sprint Manager — standalone activity tracker on Command Centre
+- ✅ Pattern counter rule + reliability log (5 issues documented)
+- ✅ RETRO.md rename (fixes CDN cache)
 
 ---
 
@@ -49,7 +58,7 @@ Pick one. Open a new Claude Code session. Paste the sprint heading and bullet li
 
 ---
 
-## 🔴 SPRINT 1 (ACTIVE) — n8n Installation and Prompt Queue Automation
+## ⏸️ SPRINT 1 (BLOCKED — manual install) — n8n Installation and Prompt Queue Automation
 **Priority:** High — unblocks US-002, US-003 from USER-STORIES.md
 **Estimated session time:** 2–3 hours (some manual steps required on the i5)
 **Repos:** digital-confidence, two-birds-portfolio

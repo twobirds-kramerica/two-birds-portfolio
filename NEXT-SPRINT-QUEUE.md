@@ -259,6 +259,18 @@ Access at: **http://localhost:5678** — create admin account on first visit.
 
 ---
 
+## HUMAN REVIEW REQUIRED — Research Reports (April 3, 2026)
+
+These reports require Aaron's focused reading time before action:
+
+- [ ] Read research/paperwork-labs-opportunity.md (🧠 60 min) — 8 sections, compensation model, risks, next actions
+- [ ] Read research/competitive-intelligence-govtech.md (🧠 20 min) — 5 competitors, positioning
+- [ ] Read research/two-birds-product-advisor.md (🧠 90 min) — portfolio review, GTM, revenue bridge, kill list
+- [ ] Run revenue bridge session with Opus (🧠 90 min) — validate assumptions, stress-test timeline
+- [ ] Make Paperwork Labs decision: fractional yes/no (🧠 45 min) — after Mike K call
+
+---
+
 ## AARON MANUAL TASKS — Human Sprint Backlog
 
 ### GitHub Pages — Enable on 3 Repos (P1)

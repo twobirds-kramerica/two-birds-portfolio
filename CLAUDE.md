@@ -21,6 +21,14 @@ Sole income earner. Time is the most constrained asset.
   Last updated: [YYYY-MM-DD] at [HH:MM] EST (Toronto)
   CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
   Use PowerShell to get time: $ts = (Get-Date).ToString("yyyy-MM-dd HH:mm") + " EST (Toronto)"
+- PATTERN COUNTER RULE: If Aaron asks the same question 3+ times in a session, stop troubleshooting instances. Declare the pattern broken. Propose systemic fix. Log to RELIABILITY-ISSUES.md. Never say "yes it works" unless confirmed 3 times in a row.
+
+## RELIABLE WORKFLOW (as of April 2, 2026)
+- Retro PRIMARY: PowerShell `cat logs/RETRO.md` — always accurate
+- Retro SECONDARY: Claude Web — use when CDN cooperates only
+- Next sprint: Claude Code terminal — reliable
+- Remote Control builds: unreliable — use cloud scheduler "Run now" instead
+- Overnight: Windows Task Scheduler on i5 — reliable
 
 ## ALL REPOS (located at C:\twobirds\)
 - digital-confidence: DCC, 241 pages, 21 modules, bilingual EN/FR

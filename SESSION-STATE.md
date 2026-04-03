@@ -1,73 +1,79 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 2, 2026 (Session 7 — Overnight Build: Language Bank V2, Elite Karate, Sync)
+**Last Session:** April 2-3, 2026 (Session 8 — Mega Build: Modules 20-24, LLM Portability, CV Feedback, Human Sprint)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
-**Triggered from:** Digital Confidence repo context, autonomous overnight build
+**Triggered from:** Digital Confidence repo context, manual session
 
 ---
 
 ## Phases Completed
 
-### Session 7 — Overnight Build: Language Bank V2, Elite Karate, Sync ✅
-- Verified Phases 1-5 from Session 6 already complete (journey, sovereignty, timeline)
-- **Language Bank V2:** Added 7 new code words (STRAW MAN, POSITIVE FRICTION, SCAFFOLDING FIRST, WORKFLOW AUDIT, DAILY STANDUP, WAIT FOR NATIVE, LOSSLESS RECOVERY)
-- **Language Bank V2:** Added Section 6 — Wait For Native (4 items with estimated timelines)
-- **Language Bank V2:** Updated friction point log (FP-006 context rot, FP-007 human backlog, FP-008 retro blind spot)
-- **Language Bank V2:** Added Timeline nav link to language-bank.html and prompt-library.html
-- **Elite Karate Site:** Cloned repo, polished index.html — added classes section (Little Dragons, Youth, Adult), schedule table, contact section with mailto, mobile hamburger nav, Canadian English (specialise, honouring), Two Birds Innovation footer credit, removed Netlify Identity widget, unique gallery images, WCAG improvements (alt text, iframe title, semantic h1)
-- **Portfolio Sync:** WIP-DASHBOARD.md, SESSION-STATE.md, NEXT-SPRINT-QUEUE.md, LAST-RUN-SUMMARY.md all updated
-- **Sprint Queue:** Added Sprint 11 (Sovereignty Deep Dive) and Sprint 12 (CV Feedback Integration), show elite karate manual task
+### Session 8 — Mega Build: April 2-3, 2026 ✅
 
-### Session 6 — Mega Sprint: Sovereignty, Timeline, Sync ✅
-- Sprint-01 and Sprint-02 verified complete (journey archive, prompt library, language bank, prompt library page)
-- Sovereignty Sprint: 6 founding documents created in sovereignty/ directory
-- Commit Density Timeline: 443 commits aggregated, raw data + visual HTML bar chart
-- Portfolio Sync: WIP, session state, sprint queue, last run summary updated
+**DCC Modules 20-24 (Sprints 13-17):**
+- Module 20: Internet Plan Literacy (576 lines, CRTC data, PlanHub/WhistleOut, negotiation script)
+- Module 21: Mobile Plan Literacy (576 lines, prepaid vs postpaid, upgrade trap)
+- Module 22: TV and Home Phone (571 lines, unbundling, digital antenna, streaming)
+- Module 23: Online Marketplace Safety (563 lines, scam checklist, e-transfer, CAFC)
+- Module 24: Communication Apps (645 lines, video calling, group chats, voice messages)
+- All 5 modules: full EN/FR bilingual, quiz, What You Learned, WCAG AA
+- Data files: module-summaries.json + module-qas.json updated for all 5
+- Sitemap: 5 new URLs
+- Sidebar nav: all existing modules updated with 20-24 links
+- Homepage: modules 20-24 in grid, JSON-LD, count 19→24
 
-### Session 5 — Journey Archive + Machine Setup ✅
-- Journey archive structure: raw / narrative / social
-- Chapters 1-3 written. Social posts. 6 EUREKA prompts.
-- Machine setup guide and registry.
+**Product Enhancements (Sprints 4, 10-12):**
+- Career Coach: JSON export, privacy notice, ROADMAP.md, LLM portability (3 API calls), Strengthen My CV feature
+- Clarity: LLM portability layer (1 API call migrated)
+- Two Birds Innovation: Kevin's Apt tool card, Work With Aaron section
+- Quality Dashboard: April refresh — 10 repos, build history updated, local-only cleared
 
-### Session 4 — Scheduler V2 Setup ✅
-### Session 3 — Overnight Scheduler V1 ✅
-### Session 2 — Major Build Sprint ✅
-### Session 1 — Repo Investigations ✅
+**Infrastructure:**
+- Human Sprint Manager on Command Centre (localStorage, drag-to-reorder, print-friendly)
+- Language Bank V2: Wait For Native section, 7 new code words
+- Pattern counter rule + reliable workflow in CLAUDE.md
+- RELIABILITY-ISSUES.md: 5 systemic issues documented
+- RETRO.md rename (CDN cache fix)
+- Sprint queue: all 17 sprints marked complete
 
----
-
-## Commits Summary (Session 7)
-
-| Repo | Branch | Commit | Message | Pushed |
-|------|--------|--------|---------|--------|
-| two-birds-command-centre | main | `29ac441` | feat: language bank — Wait For Native section, 7 new code words | ✅ |
-| elite-karate-site | main | `0e7626e` | feat: elite karate site polished — classes, schedule, contact, mobile nav | ✅ |
+### Prior Sessions (1-7): See prior SESSION-STATE.md versions in git history.
 
 ---
 
-## Nothing Skipped
+## Commits Summary (Session 8 — across repos)
 
-Phases 1-5 were already complete from Session 6 — verified via git log and file existence checks. No work was duplicated.
+| Repo | Key Commits | Pushed |
+|------|-------------|--------|
+| digital-confidence | Modules 20-24, data files, sitemap, sidebar nav, homepage update | ✅ |
+| career-coach | JSON export, LLM portability, CV feedback, ROADMAP | ✅ |
+| clarity | LLM portability layer | ✅ |
+| two-birds-innovation | Kevin's Apt + Work With Aaron | ✅ |
+| quality-dashboard | April 2 refresh | ✅ |
+| two-birds-command-centre | Language Bank V2, Human Sprint Manager | ✅ |
+| elite-karate-site | Polished — classes, schedule, contact | ✅ |
+| two-birds-portfolio | Sovereignty, timeline, sprint queue, reliability log, RETRO rename | ✅ |
 
 ---
 
 ## Next Recommended Actions
 
-1. **GitHub Pages:** clarity, aaron-patzalek, two-birds-innovation (P1, 2 min each)
-2. **B2B Email 1:** approve and send to 3 library contacts (P1)
-3. **Show Elite Karate site** to school owner — polished and ready (P2)
-4. **Archive TBK and aaron-kramer repos** on GitHub (P2)
-5. **GitHub backup owner account** — create second account, invite as org owner (P2)
-6. **Codeberg account** — mirror top 3 repos per sovereignty plan (P2)
-7. **Silver laptop:** `powercfg /change standby-timeout-ac 0` (P2)
-8. **LinkedIn Post 1** — gap framing post ready (P3)
+1. **GitHub Pages** — enable on clarity, aaron-patzalek, two-birds-innovation (P1, 2 min each)
+2. **B2B Email 1** — fix outreach dashboard 404 first, then send to 3 library contacts (P1)
+3. **n8n install** — `npm install -g n8n && n8n start` on i5 (Sprint 1 — manual)
+4. **Codeberg mirror** — top 3 repos per sovereignty plan (P2)
+5. **GitHub backup owner account** (P2)
+6. **Open human-sprint.html** in browser and start using daily standup checklist
 
-## Today's Totals (April 2, 2026)
+## Session Totals
 
 | Metric | Count |
 |--------|-------|
-| Sessions | 7 |
-| Repos touched this session | 3 (command-centre, elite-karate-site, portfolio) |
-| Commits pushed this session | 2 new + portfolio sync |
-| New code words added | 7 |
-| Elite Karate sections added | 3 (classes, schedule, contact) |
-| Total commit count (all time, Mar 1–Apr 2) | 445+ across 10 repos |
+| Sessions | 8 |
+| Repos touched | 8 (all except kevins-apartment-search and two-birds-project-template) |
+| DCC modules built | 5 new (20-24), total now 26 |
+| Lines of module HTML | 2,932 |
+| Bilingual attributes | 830+ across 5 modules |
+| Products enhanced | 4 (Career Coach, Clarity, Two Birds Innovation, Quality Dashboard) |
+| Sprints completed | 17 out of 17 |
+
+Last updated: 2026-04-03 at 00:25 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

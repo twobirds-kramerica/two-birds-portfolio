@@ -1,20 +1,17 @@
 # Retro
 Date: April 3, 2026
-Session: Overnight mega research build
+Session: Next Sprint — revenue tools built (pitch deck, pilot proposal, audit template)
 
 Tasks completed:
-1. Paperwork Labs opportunity brief — 8 sections including company profile, market opportunity, 4-advisor model, compensation benchmarks, Aaron's positioning, 3-day pitch, risks/honest assessment, next actions
-2. Govtech competitive intelligence — 5 Canadian competitors mapped (Clariti, Thentia, GovPilot, OpenGov, Gtechna), positioning strategy for Two Birds alongside Paperwork Labs
-3. Two Birds product advisor report — 8 sections: portfolio honest assessment (all 7 products scored), prioritisation matrix, DCC GTM (10 buyers, grants, pilot offer), consulting GTM (10 SME targets, audit template, LinkedIn strategy), Career Coach monetisation, 20-day build plan, revenue bridge model (April–September), Persona Builder assessment
+1. DCC white-label pitch deck (_b2b/pitch-deck.html) — printable HTML for library directors and municipalities. Stats, module list, features, 3-tier pricing, pilot CTA.
+2. DCC 3-month pilot proposal template (_b2b/pilot-proposal-template.md) — CA$2,500 pilot with scope, timeline, payment terms, annual conversion.
+3. AI Workflow Audit deliverable template (templates/ai-workflow-audit-template.md) — CA$2,500 audit with current state assessment, 3 quick wins, 90-day roadmap, implemented quick win, retainer conversion to CA$4,000/month.
 
-Research files created:
-- research/paperwork-labs-opportunity.md (240 lines)
-- research/competitive-intelligence-govtech.md (102 lines)
-- research/two-birds-product-advisor.md (353 lines)
+These are the three revenue-enabling assets identified by the product advisor report as the highest-leverage Claude Code builds remaining.
 
-Key finding: The products are built. The only thing missing is customers. The next 20 days should be 80% selling, 20% building.
+Commits: 76d4828 + c40a590 (DCC), 16cd2f5 (portfolio)
+Skipped: LinkedIn content batch and Clarity funnel optimisation (next session)
+Next for Aaron: Enable GitHub Pages. Send B2B emails WITH pitch deck attached. Call Mike K.
 
-Next for Aaron: Read all three reports over coffee. Call Mike K this week. Send B2B emails. Enable GitHub Pages. The August $10k target is reachable.
-
-Last updated: 2026-04-03 at 02:17 EST (Toronto)
+Last updated: 2026-04-03 at 02:22 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

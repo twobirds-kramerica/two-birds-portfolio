@@ -92,3 +92,36 @@
 7. Total cost: **CA$0**
 
 The trade-off is speed and AI quality, not capability. Aaron can still build, deploy, and serve customers with zero vendor spend.
+
+---
+
+## Three-Layer Backup Specification (Added April 4, 2026)
+
+Every HAL component now has three backup layers documented in `research/float-free-architecture.md`:
+
+| Component | Layer 1 | Layer 2 | Layer 3 |
+|-----------|---------|---------|---------|
+| AI/LLM | Anthropic Claude | Gemini (free 1M tokens/min) | Ollama + Llama 3 (local) |
+| Code Hosting | GitHub | Codeberg (free, non-profit) | Gitea (self-hosted Docker) |
+| Static Hosting | GitHub Pages | Cloudflare Pages (free, unlimited BW) | Caddy (self-hosted) |
+| Forms | Formspree | Web3Forms (already active) | Formgrid or n8n webhook |
+| Secrets | LastPass | Bitwarden (free, open-source) | Vaultwarden (self-hosted) |
+| Automation | n8n (local) | Windows Task Scheduler | Cron + shell scripts |
+| Email | Gmail | ProtonMail | Mailcow (self-hosted) |
+
+## Float Free Index
+
+**Current score: 48/100** (April 4, 2026)
+**Target: 80/100** by end of April 2026
+**Path:** See implementation roadmap in `research/float-free-architecture.md` — 4 hours of work, CA$0 cost.
+
+## Quarterly Review Checklist
+
+- [ ] Run Float Free scorecard audit
+- [ ] Test one Layer 2 failover end-to-end
+- [ ] Verify Codeberg mirrors are current
+- [ ] Verify Cloudflare Pages deployments match GitHub Pages
+- [ ] Check all .gitignore files include .env
+- [ ] Update sovereignty dashboard with new score
+
+**Next review:** July 4, 2026

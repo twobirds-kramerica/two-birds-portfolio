@@ -394,13 +394,46 @@ If yes: enable GitHub Pages on twobirds-kramerica/elite-karate-site (2 min).
 
 ---
 
-### Codeberg Account — Mirror Top 3 Repos (P2)
-**Date logged:** April 1, 2026
-**Priority:** P2 — sovereignty
+### Connect Cloudflare Pages to Top 3 Repos (P1)
+**Date logged:** April 4, 2026
+**Priority:** P1 — sovereignty (Float Free Index +15 points)
+**Effort:** 30 minutes
+
+Follow sovereignty/cloudflare-pages-setup.md. Connect digital-confidence, two-birds-innovation, clarity.
+Auto-deploys on every push. No ongoing maintenance.
+
+**Status:** Pending Aaron action.
+
+---
+
+### Codeberg Account — Mirror Top 6 Repos (P2)
+**Date logged:** April 1, 2026 | Updated April 4, 2026
+**Priority:** P2 — sovereignty (Float Free Index +5 points)
+**Effort:** 30 minutes
+
+Create Codeberg account and mirror top 6 repos. Full step-by-step in sovereignty/codeberg-status.md.
+
+**Status:** Pending Aaron action.
+
+---
+
+### Set Up Bitwarden as LastPass Backup (P2)
+**Date logged:** April 4, 2026
+**Priority:** P2 — sovereignty (Float Free Index +5 points)
 **Effort:** 15 minutes
 
-Create Codeberg account and mirror digital-confidence, career-coach, clarity.
-Full instructions in sovereignty/02-github-redundancy-plan.md.
+Export from LastPass → import to Bitwarden. Bitwarden is free, open-source, never breached, supports unlimited devices. See float-free-architecture.md for rationale.
+
+**Status:** Pending Aaron action.
+
+---
+
+### Quarterly Sovereignty Review — July 4, 2026
+**Date logged:** April 4, 2026
+**Priority:** P2 — schedule in calendar now
+**Effort:** 60 minutes
+
+Re-run Float Free scorecard. Test one Layer 2 failover. Verify mirrors and backups. Update sovereignty dashboard.
 
 **Status:** Pending Aaron action.
 

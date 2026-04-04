@@ -106,12 +106,34 @@ For a full vendor exit (not just emergency patch):
 
 ---
 
+## Float Free Framework (Added April 4, 2026)
+
+Every critical service has three backup layers:
+- **Layer 1:** Primary vendor (current)
+- **Layer 2:** Free corporate-grade backup (ready to activate)
+- **Layer 3:** Open-source self-hosted (documented, tested quarterly)
+
+See `research/float-free-architecture.md` for the full three-layer backup specification for every service.
+
+**Current Float Free Index: 48/100** (target: 80+ by end of April)
+
+### Additional Exit Triggers (April 4, 2026)
+
+| Trigger | Action |
+|---------|--------|
+| Any vendor raises price >20% with <30 days notice | Execute 24-hour escape plan immediately |
+| Any vendor is acquired by a competitor | Evaluate within 7 days — activate Layer 2 preemptively |
+| Any vendor suffers a data breach affecting our accounts | Rotate all credentials within 24 hours, activate Layer 2, evaluate continued use within 7 days |
+
+---
+
 ## Annual Vendor Review
 
-**Schedule:** First week of January each year.
+**Schedule:** First week of January each year. Quarterly sovereignty check: April, July, October.
 
 1. Re-run sovereignty audit (01-sovereignty-audit.md)
 2. Verify all backups and mirrors are current
 3. Test one migration path end-to-end (rotate which vendor each year)
 4. Update cost tracking and risk ratings
 5. Review any new vendor dependencies added during the year
+6. Update Float Free Index scorecard on sovereignty dashboard

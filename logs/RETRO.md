@@ -1,22 +1,33 @@
 # Retro
-Date: April 3, 2026
-Session: Next Sprint — Clarity funnel + LinkedIn content batch (final 2 of advisor top 5)
+Date: April 4, 2026
+Session: Security audit, mobile UX fix, Lighthouse prep
 
-Tasks completed:
-1. Clarity CTA optimised — references CA$2,500 audit, better copy, no-obligation framing, mailto pre-fills audit request
-2. Clarity follow-up email sequence (templates/clarity-followup-sequence.md) — 3 emails over 10 days with conversion notes
-3. LinkedIn 10-post content batch (templates/linkedin-10-post-batch.md) — 3 weeks of 3x/week posts. Themes: AI gap, 90-day build proof, PowerCo effect, trust-first design, fractional leadership, engagement questions.
+Task 1 — Security Audit:
+- Searched all HTML/JS for hardcoded API keys, tokens, credentials
+- Patterns checked: AIza (Google), sk-ant (Anthropic), key/token/secret/password assignments
+- Findings: 0 CRITICAL, 0 HIGH, 1 MEDIUM (Web3Forms key — public by design), 4 LOW
+- Web3Forms key at js/feedback-github.js:647 is intentionally client-side — no action needed
+- Formspree ID, GA ID, Clarity placeholder — all public/placeholder, no action needed
+- Added .env/.env.local/.env.production to .gitignore preventively
 
-All 5 revenue-enabling builds from the product advisor report are now COMPLETE:
-✅ DCC pitch deck
-✅ DCC pilot proposal template
-✅ AI Workflow Audit template
-✅ Clarity funnel optimisation
-✅ LinkedIn content batch
+Task 2 — Mobile UX Fix:
+- Added 375px viewport media query to css/mobile.css (77 new lines)
+- body font-size forced to 16px minimum on small phones
+- All buttons/links min-height 44px, min-width 44px
+- Images/iframes max-width 100%
+- Tables horizontal scroll with -webkit-overflow-scrolling
+- Module cards, quiz options, sidebar nav all touch-optimised
+- overflow-x hidden on body
 
-Commits: 58fc6dd (clarity), d5e5a40 + ce4884d (portfolio)
-Skipped: nothing — advisor top 5 complete
-Next for Aaron: Enable GitHub Pages (6 min). Post LinkedIn Post 1 on April 7. Send B2B emails with pitch deck. Call Mike K.
+Task 3 — Lighthouse Prep:
+- Created lighthouse-results/ directory with README.md
+- Instructions for running audits from Chrome DevTools
+- 7 product URLs listed with naming convention
+- Target scores: Performance 90+, Accessibility 95+, Best Practices 90+, SEO 90+
+- When to run: before client demos, after sprints, monthly
 
-Last updated: 2026-04-03 at 22:25 EST (Toronto)
+Commits: 0c45812, 8bafc5a, a80624e pushed to digital-confidence (main)
+Next: Aaron runs Lighthouse audits before sending pitch deck to libraries.
+
+Last updated: 2026-04-04 at 01:04 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

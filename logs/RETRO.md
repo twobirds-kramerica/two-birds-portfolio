@@ -1,33 +1,27 @@
 # Retro
 Date: April 4, 2026
-Session: Security audit, mobile UX fix, Lighthouse prep
+Session: Full security audit — all 10 repos
 
-Task 1 — Security Audit:
-- Searched all HTML/JS for hardcoded API keys, tokens, credentials
-- Patterns checked: AIza (Google), sk-ant (Anthropic), key/token/secret/password assignments
-- Findings: 0 CRITICAL, 0 HIGH, 1 MEDIUM (Web3Forms key — public by design), 4 LOW
-- Web3Forms key at js/feedback-github.js:647 is intentionally client-side — no action needed
-- Formspree ID, GA ID, Clarity placeholder — all public/placeholder, no action needed
-- Added .env/.env.local/.env.production to .gitignore preventively
+Findings:
+- 0 CRITICAL, 0 HIGH, 2 MEDIUM, 5 LOW
+- No Anthropic API keys in any repo (Career Coach + Clarity correctly use localStorage)
+- Google Maps Embed key in kevins-apartment-search (MEDIUM — needs referrer restriction in Google Cloud Console)
+- Web3Forms key in DCC (MEDIUM — public by design, working as intended)
+- Formspree IDs, GA ID, Clarity placeholder, GitHub token placeholder — all LOW
 
-Task 2 — Mobile UX Fix:
-- Added 375px viewport media query to css/mobile.css (77 new lines)
-- body font-size forced to 16px minimum on small phones
-- All buttons/links min-height 44px, min-width 44px
-- Images/iframes max-width 100%
-- Tables horizontal scroll with -webkit-overflow-scrolling
-- Module cards, quiz options, sidebar nav all touch-optimised
-- overflow-x hidden on body
+Actions taken:
+- .gitignore updated in all 10 repos (added .env, .env.local, .env.production)
+- .env template created at C:\twobirds\.env (empty structure, not tracked)
+- research/security-audit-results.md created with full findings (127 lines)
+- All 10 repos committed and pushed
 
-Task 3 — Lighthouse Prep:
-- Created lighthouse-results/ directory with README.md
-- Instructions for running audits from Chrome DevTools
-- 7 product URLs listed with naming convention
-- Target scores: Performance 90+, Accessibility 95+, Best Practices 90+, SEO 90+
-- When to run: before client demos, after sprints, monthly
+Human action needed:
+- P1: Restrict Google Maps API key to *.github.io referrers in Google Cloud Console (5 min)
 
-Commits: 0c45812, 8bafc5a, a80624e pushed to digital-confidence (main)
-Next: Aaron runs Lighthouse audits before sending pitch deck to libraries.
+Commits across repos:
+- 0c45812 (DCC: gitignore from earlier session)
+- 4bc2b79 career-coach, 2de323c clarity, 743cfe3 kevins, 70ffdab tbi, ec2c673 aaron-p
+- 920eb91 cmd-centre, 26f5195 quality, faf69b6 elite-karate, 6bc73aa + e95e6e5 portfolio
 
-Last updated: 2026-04-04 at 01:04 EST (Toronto)
+Last updated: 2026-04-04 at 01:33 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

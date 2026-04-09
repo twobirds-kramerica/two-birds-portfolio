@@ -1,6 +1,35 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 5, 2026 (Session 10 — Mega Architecture Sprint)
+**Last Session:** April 9, 2026 (Session 11 — Form Hardening Sprint)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 11 — Form Hardening Sprint (Brenda Fix) ✅
+
+### Trigger
+Real user (Brenda, early tester) submitted onboarding form April 3 with almost every field blank. Investigation revealed 6 forms sharing one Formspree endpoint with inconsistent validation.
+
+### Files Modified (digital-confidence repo)
+1. `js/setup-wizard.js` — Removed Formspree POST from onboarding captureEmail(). Email now saved to localStorage only. Onboarding is a welcome flow, not feedback capture.
+2. `js/feedback-github.js` — Added `form_type: "site_feedback"` differentiator. Required validation on message (min 10 chars) and feedback_type. Replaced alert() with inline error messages (role="alert", calm tone). Submit button disabled until valid, re-enabled on input.
+3. `beta/beta-survey.html` — Removed `novalidate` bug from form tag. Added `required` to Q1 (confidence), Q2 (most helpful module), Q4 (felt respected), Q5 (would recommend), Q7 (testimonial permission). Q3/Q6/Q8/Q9 left optional by design.
+
+### Commit
+`c986fbb` — pushed to main on digital-confidence
+
+### Explicitly Deferred
+- `js/email-capture.js` — works as designed, has form_type, not in scope
+- `beta/beta-landing.html` — already has required attrs, working
+- `b2b/index.html` — high-value B2B form, needs its own deliberate session
+- Forensic hidden fields (page_url, referrer, user_agent, viewport) — backlogged
+- Success/error state improvements — existing states are fine
+- Accessibility audit via axe-core — added role="alert" to inline errors statically; full browser QA deferred to next session
+
+### Security Finding
+Web3Forms key `5e0ecf7e-...` in `js/feedback-github.js` line 647 is client-side. Investigated and confirmed: Web3Forms access keys are public form identifiers (like Formspree endpoint IDs), not secret API keys. **Not a P0 Gate violation.** No action needed.
+
+### Next Recommended Action
+Aaron should submit one test entry on the hardened feedback modal to confirm inline validation works. No site-wide regression testing needed — only three files were touched.
 
 ---
 
@@ -48,5 +77,5 @@
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-05 at 02:38 EST (Toronto)
+Last updated: 2026-04-09 at 13:57 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

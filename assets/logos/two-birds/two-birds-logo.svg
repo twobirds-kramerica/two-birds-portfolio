@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#0066CC"/>
+
+  <!-- Top chevron ">" — fuchsia, pointing east, upper-left area -->
+  <polyline
+    points="280,250 580,370 280,490"
+    fill="none"
+    stroke="#E91E63"
+    stroke-width="48"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Identity dot at east tip -->
+  <circle cx="580" cy="370" r="28" fill="#E91E63"/>
+
+  <!-- Bottom chevron "<" — light pink, pointing west, lower-right area -->
+  <polyline
+    points="744,534 444,654 744,774"
+    fill="none"
+    stroke="#FF88D8"
+    stroke-width="48"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Identity dot at west tip -->
+  <circle cx="444" cy="654" r="28" fill="#FF88D8"/>
+</svg>

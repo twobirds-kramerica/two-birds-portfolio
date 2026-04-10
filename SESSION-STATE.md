@@ -1,6 +1,69 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 10, 2026 (Session 11c — Logo v1.1)
+**Last Session:** April 10, 2026 (Session 12 — Overnight HAL Sprint)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 12 — Overnight HAL Sprint ✅
+
+### Date/Time
+Started: 2026-04-10 ~02:00 EST | Finished: ~02:15 EST
+Machine: EZbook (EZJumper, Windows 11, Celeron 5205U, 12GB RAM)
+
+### What Shipped (7 phases, 29 files)
+
+**Phase 0 — Sovereignty Framework** (`63e29fa`)
+- `hal-stack/architecture/sovereignty-principles.md` — four-layer model (L1-L4)
+- `hal-stack/architecture/decapitation-checklist.md` — template + Claude Code example
+- `hal-stack/architecture/layer-tags.md` — controlled vocabulary
+
+**Phase 1 — HAL Scaffolding** (`276d995`)
+- `hal-stack/architecture/overview.md` — system map, data flow
+- `hal-stack/architecture/principles.md` — 8 design principles
+- `hal-stack/architecture/decisions/0001-folder-structure.md` — ADR
+- `hal-stack/architecture/decisions/0002-sovereignty-four-layer-model.md` — ADR
+- `hal-stack/sessions/2026-04-09-overnight-sprint.md` — sprint plan
+- `hal-stack/README.md` — updated with new structure
+
+**Phase 2 — Context Bridge** (`5ab0f27`)
+- `hal-stack/context-system/README.md` — how it works at each layer
+- `hal-stack/context-system/context-export-template.md` — session export template
+- `hal-stack/context-system/context-index.md` — master index, seeded with S10-S12
+- `hal-stack/context-system/context-loader-prompt.md` — universal LLM handoff prompt
+- `hal-stack/context-system/retroactive-catchup-plan.md` — Claude.ai recovery plan
+
+**Phase 4 — Machine Profile** (`ee89429`)
+- `hal-stack/machine-profile/machines.json` — 4 machines (EZbook auto-detected)
+- `hal-stack/machine-profile/register-machine.ps1` — self-registration script
+- `hal-stack/machine-profile/claude-code-identifier.md` — session-start ID
+- `hal-stack/machine-profile/README.md`
+
+**Phase 3 — Voice Layer Audit** (`26c06f5`)
+- `hal-stack/voice-layer/README.md` — what the voice layer must do
+- `hal-stack/voice-layer/component-breakdown.md` — STT/intent/router/TTS interfaces
+- `hal-stack/voice-layer/four-layer-options.md` — L1-L4 candidates with costs
+- `hal-stack/voice-layer/aaron-signup-checklist.md` — one signup needed (OpenAI)
+- `hal-stack/voice-layer/build-sprint-plan.md` — 4 sub-sprints, ~2.5 hours
+- `hal-stack/voice-layer/sovereignty-notes.md` — what's hard to make L4
+
+**Phase 5 — Backlog** (`d51bab2`)
+- `hal-stack/backlog/epics.md` — 9 epics, all layer-tagged
+- `hal-stack/backlog/stories.md` — tactical stories per epic
+- `hal-stack/backlog/evaluation-candidates.md` — 6 tools assessed
+
+**Phase 6 — Session Wrap** (this commit)
+- `hal-stack/sessions/2026-04-09-overnight-sprint-RESULTS.md`
+- `SESSION-STATE.md` updated
+
+### Items Explicitly Deferred
+- No code was built for voice layer (research only, per spec)
+- No Python scripts (markdown only for context system, per spec)
+- Logo v1.1 flagged NEEDS REWORK — do not upload to LinkedIn
+
+### Aaron's TOP 3 Morning Actions
+1. **Create OpenAI Platform account** (10 min, CA$5) — unlocks voice layer
+2. **Review logo v1.1** against spec — decide rework or ship
+3. **Skim sovereignty-principles.md** (15 min) — validate the foundation
 
 ---
 
@@ -126,5 +189,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-10 at 00:38 EST (Toronto)
+Last updated: 2026-04-10 at 02:15 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

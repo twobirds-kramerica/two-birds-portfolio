@@ -1,6 +1,31 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 9, 2026 (Session 11b — Branding Foundation)
+**Last Session:** April 10, 2026 (Session 11c — Logo v1.1)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 11c — Logo v1.1 ✅
+
+### Changes from v1.0
+- Both chevrons changed to white (#FFFFFF) — unified brand, cleaner read
+- Added open-end circles (one per chevron): top chevron upper-left, bottom chevron lower-right — fraternal twins
+- Added subtle cosmos/universe texture (~60 semi-transparent white dots at 8-15% opacity)
+- Recentred composition with 140px minimum padding (was 120px)
+- Composition bounding box now symmetrically centred at canvas midpoint (512, 512)
+
+### Files Updated
+- `assets/logos/two-birds/two-birds-logo.svg` — master vector
+- `assets/logos/two-birds/two-birds-1024.png` — 1024px
+- `assets/logos/two-birds/two-birds-512.png` — 512px
+- `assets/logos/two-birds/two-birds-256.png` — 256px
+- `assets/logos/two-birds/two-birds-favicon.ico` — 16/32/48px
+- `assets/logos/two-birds/README.md` — updated spec + v1.0 history
+
+### Commit
+`680a1dd` — pushed to master on two-birds-portfolio
+
+### Next Action
+Aaron to verify logo and upload `two-birds-1024.png` to LinkedIn company page.
 
 ---
 
@@ -101,5 +126,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-09 at 22:12 EST (Toronto)
+Last updated: 2026-04-10 at 00:38 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

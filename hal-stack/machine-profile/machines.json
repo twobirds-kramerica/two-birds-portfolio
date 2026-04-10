@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-04-10T02:15:00-04:00",
+  "machines": [
+    {
+      "id": "ezbook-001",
+      "hostname": "EZJumper",
+      "nickname": "EZbook",
+      "os": "Windows 11 Home",
+      "os_version": "10.0.26200",
+      "specs": {
+        "cpu": "Intel Celeron 5205U @ 1.90GHz",
+        "cores": 2,
+        "ram_gb": 12,
+        "storage": [
+          { "model": "JUMPER 512G", "size_gb": 512, "type": "SSD" },
+          { "model": "Generic TWSC", "size_gb": 125, "type": "secondary" }
+        ]
+      },
+      "role": "primary",
+      "status": "active",
+      "claude_code_installed": true,
+      "claude_code_version": "unknown — check with `claude --version`",
+      "node_version": "v24.14.1",
+      "git_version": "unknown — check with `git --version`",
+      "last_session": "2026-04-10",
+      "local_paths": {
+        "repo_root": "C:\\twobirds\\",
+        "scratch": null
+      },
+      "layer": "L1",
+      "notes": "Arrived from Phil Butler / Employment Services Elgin. Daily driver as of April 2026. Replaced i5 Lenovo as primary."
+    },
+    {
+      "id": "i5-lenovo-001",
+      "hostname": "unknown",
+      "nickname": "i5 Lenovo",
+      "os": "Windows 10 Pro",
+      "os_version": "22H2",
+      "specs": {
+        "cpu": "Intel Core i5-6200U @ 2.30GHz",
+        "cores": 2,
+        "ram_gb": 8,
+        "storage": [
+          { "model": "Intel SSD", "size_gb": 238, "type": "SSD" }
+        ]
+      },
+      "role": "secondary",
+      "status": "active",
+      "claude_code_installed": true,
+      "claude_code_version": "v2.1.88",
+      "node_version": "v24.14.1",
+      "git_version": "2.53.0",
+      "last_session": "2026-04-05",
+      "local_paths": {
+        "repo_root": "C:\\twobirds\\",
+        "scratch": null
+      },
+      "layer": "L1",
+      "notes": "Previous primary. Now secondary / overnight scheduler via Windows Task Scheduler."
+    },
+    {
+      "id": "pentium-silver-001",
+      "hostname": "unknown",
+      "nickname": "Pentium Silver",
+      "os": "Windows (version unknown)",
+      "os_version": "unknown",
+      "specs": {
+        "cpu": "Intel Pentium Silver (generation unknown)",
+        "cores": null,
+        "ram_gb": null,
+        "storage": []
+      },
+      "role": "legacy",
+      "status": "active",
+      "claude_code_installed": true,
+      "claude_code_version": "unknown",
+      "node_version": "unknown",
+      "git_version": "unknown",
+      "last_session": "unknown",
+      "local_paths": {
+        "repo_root": "C:\\twobirds\\",
+        "scratch": null
+      },
+      "layer": "L1",
+      "notes": "Stationary remote fallback. Slow for browser use. Claude Code operational."
+    },
+    {
+      "id": "desktop-001",
+      "hostname": null,
+      "nickname": "Home Desktop",
+      "os": null,
+      "os_version": null,
+      "specs": {
+        "cpu": null,
+        "cores": null,
+        "ram_gb": null,
+        "storage": []
+      },
+      "role": "planned",
+      "status": "planned",
+      "claude_code_installed": false,
+      "claude_code_version": null,
+      "node_version": null,
+      "git_version": null,
+      "last_session": null,
+      "local_paths": {
+        "repo_root": null,
+        "scratch": null
+      },
+      "layer": "L4",
+      "notes": "Future permanent HAL Stack server. Will run n8n, LightRAG, OpenCode, always-on. Specs TBD."
+    }
+  ]
+}

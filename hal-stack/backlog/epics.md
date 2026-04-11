@@ -96,7 +96,35 @@ All epics layer-tagged per sovereignty model.
 ## E11: GitHub L4 Fallback — Local Git Backup
 **Layer:** L4
 **Priority:** P3
-**Status:** NOT STARTED
-**What:** Pentium Silver (or similar) as dumb local git backup. All repos cloned, pulled nightly, never pushed. Pure L4 redundancy.
-**Next:** Create story for nightly pull script. Identify which machine runs it.
-**Blockers:** None — can start anytime
+**Status:** ARCHITECTURE DESIGNED (Session 15, April 11 2026)
+**What:** Pentium Silver as dumb local git mirror. Auto-syncs from GitHub every 4 hours. Never pushes.
+**Deliverables:** `architecture/local-backup.md` — setup script, sync strategy, failover procedure
+**Next:** Aaron sets up Pentium Silver with script. One-time 30-minute setup.
+**Blockers:** Physical access to Pentium Silver
+
+## E12: Persona & Swarm Framework
+**Layer:** L1-L4
+**Priority:** P1
+**Status:** v0.1 DOCUMENTED (Session 15, April 11 2026)
+**What:** 6 departments, 22 personas, weighting system, profiles, model routing, culture spec
+**Deliverables:** Full persona system in `hal-stack/personas/`
+**Next:** Aaron reviews department compositions. Test one profile in a real sprint.
+**Blockers:** Aaron — persona review and first test run
+
+## E13: Skill Library
+**Layer:** L1-L4
+**Priority:** P2
+**Status:** FOUNDATION (Session 15, April 11 2026)
+**What:** Reusable instruction sets any persona can reference
+**Deliverables:** Schema + 3 starter skills (brand review, sovereignty audit, sprint prompt writing)
+**Next:** Create skills as needs emerge. Don't pre-build — let practice drive the library.
+**Blockers:** None
+
+## E14: Full Decapitation Audit
+**Layer:** L1-L4
+**Priority:** P2
+**Status:** COMPLETE (Session 15, April 11 2026)
+**What:** Every component assessed for sovereignty across all four layers
+**Deliverables:** 12-component audit in `architecture/decapitation-checklist.md`, sovereignty dashboard in `sovereignty-principles.md`
+**Next:** Action items: test Aider as L2, confirm Cloudflare Pages as live L2, document DNS records, build local backup script
+**Blockers:** None

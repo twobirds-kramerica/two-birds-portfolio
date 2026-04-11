@@ -1,6 +1,53 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 11, 2026 (Session 14 — Logo Variations + HAL Architecture)
+**Last Session:** April 11, 2026 (Session 15 — Persona Framework + Sovereignty Hardening)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 15 — Persona Framework + Sovereignty Hardening ✅
+
+### Date/Time
+2026-04-11 ~01:57-02:10 EST (Toronto)
+Machine: EZbook
+
+### Part A — Persona & Swarm Framework
+
+**Phase 1: Persona Architecture** (`0e83a0b`)
+- `personas/README.md` — swarm model, weighting, model routing overview
+- `personas/persona-schema.md` — standard template for any persona
+- `personas/culture-spec.md` — protect work > customer > Aaron. Essentialism, loveability, "why why why"
+
+**Phase 2: 6 Departments** (`a299227`)
+- Engineering: Naveen (VP), Sam (Sr Dev), Jordan (DevOps), Priya (QA)
+- Marketing: Ava (CMO), Theo (Brand), Maya (Content), Kai (Social)
+- Strategy: Claire (CSO), Ethan (Research), Rosa (Innovation), Leo (BizModel)
+- Legal-Risk: Helen (GC), Anil (Privacy), Nora (IP), Dani (Risk)
+- Finance: Raj (CFO), Fatima (Cost), Marcus (Revenue), Lin (Bookkeeper)
+- Operations: Val (CoS/EA), Drew (PM), Casey (Knowledge), Riley (Parking Lot)
+
+**Phase 3: Weighting + Profiles** (`ec531c8`)
+- Weight 0-3 dial system, 6 pre-built profiles (Quick Decision, Brand & Launch, Architecture Decision, Full Boardroom, Solo Founder, Sovereignty Review)
+- Model routing: Executives→Opus, Specialists→Sonnet, Front-line→Haiku/local
+
+### Part B — Sovereignty Hardening
+
+**Phase 5: Full Decapitation Audit** (`9557ae4`)
+- 12 components audited L1-L4: Claude Code, Claude.ai, GitHub, Pages, Formspree, Cloudflare, Whisper, context bridge, personas, Node, PowerShell, Windows
+- Result: GOOD overall. No HIGH risk. DNS is least sovereign. Formspree best-insured.
+
+**Phase 6: Local Backup Architecture** (`9980098`)
+- `architecture/local-backup.md` — Pentium Silver as dumb git mirror, auto-sync script, failover procedure
+
+**Phase 7: Sovereignty Dashboard** (`1f746e7`)
+- Red/yellow/green status table added to sovereignty-principles.md
+
+**Phase 4: Skill Library** (`eb1ea00`)
+- Schema + 3 starter skills: brand-identity-review, sovereignty-audit, sprint-prompt-writing
+
+### Next Actions
+1. Aaron reviews persona departments — are the names and compositions right?
+2. Aaron picks a logo variation (from Session 14)
+3. Aaron requests Claude.ai data export (if not already done)
 
 ---
 
@@ -267,5 +314,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-11 at 01:32 EST (Toronto)
+Last updated: 2026-04-11 at 02:10 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

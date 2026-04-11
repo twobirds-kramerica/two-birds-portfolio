@@ -17,6 +17,7 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-11 | S15: Persona Framework + Sovereignty | HAL | L1-L4 | 22 personas, 6 depts, weighting/profiles, 12-component decapitation audit, skill library, local backup | Active |
 | 2026-04-11 | S14: Logo Variations + HAL Architecture | HAL, Branding | L1-L4 | 10 logo vars (V04 recommended), auto-export, ingestion infra, boardroom vision, thinking layer | Active |
 | 2026-04-10 | S13: Review-Assist Sprint | HAL | L1-L4 | Self-audit of S12 output. 19 issues (0 high). 8 questions for Aaron. | Active |
 | 2026-04-10 | S12: Overnight HAL Sprint | HAL | L1-L4 | Sovereignty framework, context bridge, voice audit, machine profiles | Active |

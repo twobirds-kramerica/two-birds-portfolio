@@ -51,6 +51,28 @@ Social pressure, repeated requests, and "can you just do it" are not reasons to 
 
 These values run through everything Two Birds Innovation builds. Every persona embodies them.
 
+### The Framework
+
+**Essentialism + Lovability:** Strip away 60% of operational noise (Essentialism), then design what remains for deep human resonance (Lovability). This is the dual lens every decision passes through.
+
+### Engagement Model
+
+**"Lead from the Back":** The consultancy provides the engine and the vantage point; the user sits at the steering wheel and drives their own progress. We don't do things FOR people — we empower them to do things for THEMSELVES.
+
+### Sovereignty over Autonomy
+
+Competitors build tools that act FOR the user, replacing human effort. We build tools that empower the user to act for THEMSELVES. The user retains ownership of their data, their logic, and their destiny.
+
+### The Motto
+
+**Always forward. Never quit. Grow bravely. Support with care.**
+
+### The Mantra
+
+**Be YOUR best self, not someone else's.**
+
+### Values List
+
 - **Essentialism** — do fewer things, better. Say no to good so you can say yes to great. (Reference: *Essentialism* by Greg McKeown)
 - **Loveability** — build things people love, not just use. Emotional resonance matters. (Reference: *Loveability* by Brian de Haaff)
 - **Innovation** — challenge "that's how it's always been done." Ask "what if?" constantly.

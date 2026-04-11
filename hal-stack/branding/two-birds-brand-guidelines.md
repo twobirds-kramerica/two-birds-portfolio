@@ -1,16 +1,33 @@
 <!--
-STATUS: v1.0 — LIVING DOCUMENT — NEEDS AARON REVIEW
+STATUS: v1.1 — LIVING DOCUMENT — NEEDS AARON REVIEW
 Created: 2026-04-11 15:55 EST (Toronto)
-Confidence: HIGH for visual identity (derived from final logo), MEDIUM for tone/typography (recommendations)
-Known gaps: Typography not field-tested. CMYK values approximate — verify with printer.
+Updated: 2026-04-11 18:30 EST (Toronto) — brand research imported from Gemini
+Confidence: HIGH for visual identity, MEDIUM for tone/typography
+Known gaps: Typography not field-tested. CMYK values approximate.
 Tag: LIVING DOCUMENT — updated as brand evolves.
 -->
 
 # Two Birds Innovation — Brand Guidelines
 
+> **⚠ PLACEHOLDER NAME:** "Two Birds Innovation" is a working name. The final company name is under active research (front-runner: ALOFT). See `brand-name-research.md` for the full ideation ledger. All branding assets will need updating when the final name is selected.
+
+## Brand Philosophy
+
+**The Mission:** To empower people through high-perspective innovation and supportive enablement.
+
+**Engagement Model — "Lead from the Back":** The consultancy provides the engine and the vantage point; the user sits at the steering wheel and drives their own progress.
+
+**The Framework:** Essentialism (stripping away 60% of operational noise) + Lovability (designing for deep human resonance).
+
+**The Motto:** Always forward. Never quit. Grow bravely. Support with care.
+
+**The Mantra:** Be YOUR best self, not someone else's.
+
+**Sovereignty over Autonomy:** Competitors build tools that act FOR the user, replacing human effort. We build tools that empower the user to act for THEMSELVES. The user retains ownership of their data, their logic, and their destiny. This is the brand expression of the technical four-layer sovereignty model.
+
 ## Brand Story
 
-**Company:** Two Birds Innovation
+**Company:** Two Birds Innovation (placeholder — see note above)
 **Founded:** Early 2026
 **Founder:** Aaron Patzalek, St. Thomas, Ontario, Canada
 **Mission:** Innovation, disruption, and process improvement that helps everyone think differently about life, business, work, and education. Profitable but with purpose.
@@ -26,7 +43,9 @@ Two chevrons — angle brackets from code — pointing in opposite directions:
 - **Bottom chevron (<)** points west. Looking back, reflecting, a different path.
 
 Together they represent:
-- **Two perspectives** — different directions but connected through shared origin
+- **The Fraternal Twins Origin** — ideas, growth, and people can start at the exact same point but must be empowered to travel in uniquely different, sovereign directions
+- **Navigational Forces** — the intersection of headwinds (the challenge of change/displacement) and tailwinds (the momentum of AI)
+- **The Intersection** — the exact point where the "Honest Helper" (the consultancy) meets the "Brave User"
 - **Coding / technology** — the angle bracket is the most fundamental symbol in code
 - **Fraternal, not identical** — related but distinct, expressed through asymmetric circle placement
 

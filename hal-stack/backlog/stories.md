@@ -60,6 +60,8 @@ Tactical work items derived from epics. Each layer-tagged.
 | S5.6 | Replace DCC favicon on .io site with selected DCC logo | L1 | P2 | Pending | S5.5 |
 | S5.7 | Update DCC site CSS to match DCC brand guidelines | L1 | P3 | Pending | S5.6 |
 | S5.8 | CIPO trademark registration research for "Two Birds Innovation" | L1 | P3 | Pending | — |
+| S5.9 | Final company name decision — evaluate ALOFT and active backlog candidates | L1 | P3 | Pending | Aaron (parked by choice) |
+| S5.10 | Update all branding assets if company name changes from Two Birds | L1 | P3 | Pending | S5.9 |
 
 ## Content Freshness (E6)
 

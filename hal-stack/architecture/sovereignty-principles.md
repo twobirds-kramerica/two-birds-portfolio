@@ -14,6 +14,16 @@ Aaron runs a solo consultancy with twin six-year-olds. He is the sole income ear
 
 This is not paranoia. This is architecture.
 
+## The Brand Definition of Sovereignty
+
+Sovereignty has a technical definition (the four layers below) and a brand definition:
+
+> **Sovereignty = building tools that empower the user to act for themselves. The user retains ownership of their data, their logic, and their destiny.**
+
+Competitors build **autonomy** — tools that act FOR the user, replacing human effort. We build **sovereignty** — tools that empower the user to act for THEMSELVES. This distinction is the philosophical foundation of both the four-layer model and the brand itself.
+
+(Source: Master Brand Ideation Ledger, originally from Gemini research Q1 2026. See `branding/brand-name-research.md`.)
+
 ## The Four Layers
 
 | Layer | Name | Description | Cost Profile | Example |

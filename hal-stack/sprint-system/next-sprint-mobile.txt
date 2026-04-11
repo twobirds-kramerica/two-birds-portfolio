@@ -1,0 +1,1 @@
+Read C:\twobirds\two-birds-portfolio\hal-stack\sprint-system\sprint-queue.md — find the first sprint with status READY. Execute its prompt exactly as written. When done, change its status to DONE, add today's date, update SESSION-STATE.md with the results, auto-generate context export, commit, and push to master.

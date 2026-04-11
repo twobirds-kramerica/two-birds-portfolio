@@ -1,6 +1,34 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 10, 2026 (Session 12 — Overnight HAL Sprint)
+**Last Session:** April 10, 2026 (Session 13 — Review-Assist Sprint)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 13 — Review-Assist Sprint ✅
+
+### Date/Time
+2026-04-10 ~20:49-21:00 EST (Toronto)
+Machine: EZbook
+
+### Phase
+Review-assist sprint — auditing the overnight HAL sprint output (Session 12)
+
+### Files Created
+- `hal-stack/sessions/overnight-review-guide.md` — plain-English summaries (`c137a48`)
+- `hal-stack/sessions/overnight-self-audit.md` — file-by-file consistency check (`c2473e2`)
+- `hal-stack/sessions/overnight-decisions.md` — 14 autonomous judgment calls (`e0a3c15`)
+- `hal-stack/sessions/questions-for-aaron.md` — 8 questions blocking next sprint (`92d2e47`)
+- `hal-stack/sessions/2026-04-10-review-sprint-RESULTS.md` — session results (this commit)
+
+### Key Findings
+- 19 issues found (0 high, 7 medium, 12 low)
+- "Shipped" terminology misleading (should be "documented")
+- Voice layer pricing unverified — don't budget from those numbers
+- Logo v1.1 status contradicts across files
+- Whisper cost estimate is optimistic (~600 min, not 800)
+
+### Next Action
+Aaron reads `overnight-review-guide.md` first (5 min, phone-friendly), then `questions-for-aaron.md` (5 min), then decides next sprint scope.
 
 ---
 
@@ -189,5 +217,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-10 at 02:15 EST (Toronto)
+Last updated: 2026-04-10 at 20:56 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

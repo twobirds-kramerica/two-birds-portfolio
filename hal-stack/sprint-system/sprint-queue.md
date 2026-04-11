@@ -72,14 +72,14 @@ export, push to master.
 
 ---
 
-## S-002: DCC Logo Finalization (after Aaron picks)
+## S-002: DCC Logo Finalization ✅
 
 **Priority:** P2
 **Duration:** 30 min
-**Status:** BLOCKED
-**Blocked by:** Aaron selects DCC logo variation (S5.4)
+**Status:** DONE (2026-04-11, Session 20)
 **Layer:** L1
 **Story refs:** S5.5, S5.6
+**Completed:** V07 heart-bulb selected, all formats generated, README updated.
 
 ### Prompt
 
@@ -352,8 +352,8 @@ Commit. Update SESSION-STATE.md, push to master.
 
 **Priority:** P3
 **Duration:** 1 hour
-**Status:** BLOCKED
-**Blocked by:** S-002 (DCC logo must be finalized first)
+**Status:** READY
+**Blocked by:** — (S-002 completed)
 **Layer:** L1
 **Story refs:** S5.7
 
@@ -391,13 +391,12 @@ Commit per phase. Push to main.
 
 ## BLOCKED SPRINTS (waiting on Aaron)
 
-These sprints have ready prompts but can't run until Aaron does something.
-
 | Sprint | Blocked By | Aaron Action | Time |
 |--------|-----------|-------------|------|
-| S-002 | Aaron picks DCC logo | Review 8 variations, tell Claude Code which one | 5 min |
 | S-006 | Physical access to Pentium Silver | Be at the Pentium Silver machine | — |
 
 ## DONE
 
-_(Completed sprints moved here with date)_
+| Sprint | Title | Completed |
+|--------|-------|-----------|
+| S-002 | DCC Logo Finalization | 2026-04-11 (Session 20) |

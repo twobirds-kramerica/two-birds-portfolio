@@ -32,7 +32,13 @@ Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md,
 
 - [ ] **Upload Two Birds logo to LinkedIn** — open `assets/logos/two-birds/two-birds-1024.png`, upload as LinkedIn company page profile image. **2 min.** (Source: S17. Flagged 4 times across sessions.)
 
-- [ ] **Pick DCC logo variation** — open `assets/logos/dcc/variations/`, view all 8, read `DESIGNER-RECOMMENDATION.md`. Tell Claude Code which one (V07 heart-bulb recommended for brand mark, V01 shield for favicon). **5 min.** (Source: S17. Unblocks sprint S-002.)
+- [x] ~~**Pick DCC logo variation**~~ — V07 (heart-bulb) selected, finalized in S20 ✅
+
+**NEW items from Session 20:**
+
+- [ ] **Buy domains twobirdsinnovation.com and .ca** — secure before someone else does. Check availability. **10 min.** (Source: S20)
+
+- [ ] **Create LinkedIn company page** — if not already done. Upload `two-birds-1024.png` as profile image. **10 min.** (Source: S20)
 
 ---
 
@@ -121,6 +127,7 @@ _(Both items are in CRITICAL section above)_
 - [x] **Logo v1.1 review** — superseded by v1.2 variations, V05 selected ✅
 - [x] **Logo v1.2 variations created** — 10 variations delivered in S14, selection made in S17 ✅
 - [x] **Q8: Check Claude.ai for data export** — resolved, export processed in S16 ✅
+- [x] **Pick DCC logo variation** — V07 (heart-bulb) selected, finalized in S20 ✅
 
 ---
 

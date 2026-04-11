@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#0066CC"/>
+  <!-- V08: Asymmetric angles. Top=tight 200px spread, Bottom=wide 360px spread. Fraternal via shape. -->
+  <polyline points="250,180 580,280 250,380" fill="none" stroke="#FFFFFF" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="580" cy="280" r="28" fill="#FFFFFF"/>
+  <polyline points="774,484 444,664 774,844" fill="none" stroke="#FFFFFF" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="444" cy="664" r="28" fill="#FFFFFF"/>
+</svg>

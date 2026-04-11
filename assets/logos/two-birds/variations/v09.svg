@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#0066CC"/>
+  <!-- V09: Overlapping zone — chevrons share vertical space, arms weave through each other. -->
+  <polyline points="190,175 600,415 190,655" fill="none" stroke="#FFFFFF" stroke-width="48" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <circle cx="600" cy="415" r="28" fill="#FFFFFF" opacity="0.85"/>
+  <polyline points="834,369 424,609 834,849" fill="none" stroke="#FFFFFF" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="424" cy="609" r="28" fill="#FFFFFF"/>
+</svg>

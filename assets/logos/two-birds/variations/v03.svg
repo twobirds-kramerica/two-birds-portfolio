@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#0066CC"/>
+  <!-- V03: Symmetric centered, elegant. Fraternal: different circle sizes. -->
+  <polyline points="260,175 590,315 260,455" fill="none" stroke="#FFFFFF" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="590" cy="315" r="28" fill="#FFFFFF"/>
+  <polyline points="764,569 434,709 764,849" fill="none" stroke="#FFFFFF" stroke-width="50" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="434" cy="709" r="22" fill="#FFFFFF"/>
+</svg>

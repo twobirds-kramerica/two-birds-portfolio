@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="g7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0052A3"/><stop offset="100%" stop-color="#003366"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="180" ry="180" fill="url(#g7)"/>
+  <!-- V07: Gradient bg. Fraternal via circle sizes (36 vs 20). -->
+  <polyline points="210,180 560,325 210,470" fill="none" stroke="#FFFFFF" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="560" cy="325" r="36" fill="#FFFFFF"/>
+  <polyline points="814,554 464,699 814,844" fill="none" stroke="#FFFFFF" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="464" cy="699" r="20" fill="#FFFFFF"/>
+</svg>

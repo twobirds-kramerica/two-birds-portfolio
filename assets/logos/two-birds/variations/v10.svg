@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#0066CC"/>
+  <!-- V10: Big + small. Fraternal via scale. Protective/sheltering relationship. -->
+  <polyline points="175,185 645,435 175,685" fill="none" stroke="#FFFFFF" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="645" cy="435" r="34" fill="#FFFFFF"/>
+  <polyline points="849,599 639,719 849,839" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="639" cy="719" r="22" fill="#FFFFFF"/>
+</svg>

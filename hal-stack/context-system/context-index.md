@@ -17,6 +17,7 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-11 | S16: Cross-Context Ingestion | HAL | L1-L4 | 115 convos scanned, 9 deep extractions, discovery report, faceless brand resolved | Active |
 | 2026-04-11 | S15: Persona Framework + Sovereignty | HAL | L1-L4 | 22 personas, 6 depts, weighting/profiles, 12-component decapitation audit, skill library, local backup | Active |
 | 2026-04-11 | S14: Logo Variations + HAL Architecture | HAL, Branding | L1-L4 | 10 logo vars (V04 recommended), auto-export, ingestion infra, boardroom vision, thinking layer | Active |
 | 2026-04-10 | S13: Review-Assist Sprint | HAL | L1-L4 | Self-audit of S12 output. 19 issues (0 high). 8 questions for Aaron. | Active |
@@ -27,23 +28,34 @@ Master index of all exported session contexts. One line per session. Newest firs
 | 2026-04-05 | S10: Mega Architecture | Portfolio | L1 | QA framework, design system, executive dashboard, sales assets | Shipped |
 | 2026-04-02 | S9: Easter Sprint | DCC/Portfolio | L1 | 5 phases, 3 new modules, mobile UX, LinkedIn, Mike K research | Shipped |
 
-## Older Contexts (pre-April 2026)
+## Older Contexts (pre-April 2026) — Now Recovered via Ingestion
 
-| Date | Session | Project | Summary |
-|------|---------|---------|---------|
-| 2026-03-31 | HAL Phase 1 Complete | HAL | Foundation: Claude Code, scripts, folder structure, machine specs |
-| 2026-03-30 | Security Audit | All | 10 repos scanned, .gitignore updated, no critical findings |
-| 2026-03-29 | Float-Free Architecture | Portfolio | Vendor audit, 3 backup layers, escape plans, sovereignty dashboard |
-| 2026-03-08 | Content Freshness | DCC | Concept documented, not built. Needs implementation sprint. |
+| Date | Source | Project | Summary | Extracted? |
+|------|--------|---------|---------|-----------|
+| 2026-03-31 | HAL Phase 1 Complete | HAL | Foundation: Claude Code, scripts, folder structure, machine specs | No — in SESSION-STATE |
+| 2026-03-30 | Security Audit | All | 10 repos scanned, .gitignore updated, no critical findings | No — in SESSION-STATE |
+| 2026-03-29 | Float-Free Architecture | Portfolio | Vendor audit, 3 backup layers, escape plans, sovereignty dashboard | No — in SESSION-STATE |
+| 2026-03-26 | Claude.ai #83 | TBI | Product backlog scoring, Idea Vault deep scoring | [Extracted](ingestion/extracted/2026-03-26-product-backlog-scoring.md) |
+| 2026-03-14 | Claude.ai #66 | HAL, TBI | **Workflow integration.** Claude Web + Code workflow designed. Essentialism cited. | [Extracted](ingestion/extracted/2026-03-14-workflow-integration.md) |
+| 2026-03-08 | Content Freshness | DCC | Concept documented, not built. Origin: HAL Day 1 (Mar 6). | No |
+| 2026-03-07 | Claude.ai #64 | TBI, DCC | **Business plan review.** Revenue strategy, B2C/B2B model, CA$10K target. | [Extracted](ingestion/extracted/2026-03-07-business-plan-review.md) |
+| 2026-03-06 | Claude.ai #60 | HAL | **HAL Stack origin.** Voice-first vision, free-tier-bait awareness, content freshness req. | [Extracted](ingestion/extracted/2026-03-06-hal-stack-origin.md) |
+| 2026-02-16 | Claude.ai #49 | DCC | **DCC origin build.** 511-message creation of the digital literacy manual. Brenda persona. | Not extracted (too large) |
+| 2026-02-12 | Claude.ai #47 | HAL | **Swarm agents first discussed.** Multi-agent coordination concept. | [Extracted](ingestion/extracted/2026-02-12-swarm-agents-early.md) |
+| 2026-01-13 | Claude.ai #5 | TBI | **Professional DNA.** Career pattern analysis, consulting identity born, faceless brand first mention. | [Extracted](ingestion/extracted/2026-01-13-professional-dna.md) |
 
-## Unrecovered Contexts
+## Recovery Status
 
-These sessions happened in Claude Web and have not been exported yet. Context exists only in Aaron's Claude.ai chat history.
+**Claude.ai export processed:** April 11, 2026 (Session 16). 115 conversations scanned, 9 deep extractions created.
 
-- Early DCC module builds (Sessions 1-8)
-- Revenue strategy discussions
-- Mike K / Paperwork Labs research
-- Faceless brand / influencer planning
-- Government grant research (New Horizons, CRTC)
+**Previously unrecovered items — status:**
+- Early DCC module builds → Found in Conversation #49 (511 msgs, Feb 16). Too large for full extraction. Classified as MEDIUM.
+- Revenue strategy → Found in Conversations #64, #83, #98. Extracted.
+- Mike K / Paperwork Labs → Found in multiple conversations. Context captured.
+- Faceless brand → **NO standalone plan exists.** It's a values thread across conversations. See [Discovery Report](ingestion/DISCOVERY-REPORT.md).
+- Government grant research → Referenced in conversations but no dedicated session found in export.
 
-**Recovery plan:** See `retroactive-catchup-plan.md`
+**Still unrecovered:**
+- ChatGPT history (209-idea Idea Vault — Aaron has this in a separate Claude.ai project)
+- Gemini history (personas and DCC ground truth document)
+- Loveability book references (not found in Claude.ai — may be in ChatGPT/Gemini)

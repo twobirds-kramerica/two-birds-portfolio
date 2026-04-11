@@ -1,7 +1,8 @@
 <!--
-STATUS: v0.1 — DRAFT — NEEDS AARON REVIEW
+STATUS: v0.2 — DRAFT — NEEDS AARON REVIEW
 Created: 2026-04-10 02:03 EST (Toronto)
-Confidence: HIGH — derived from Aaron's stated principles across multiple sessions
+Updated: 2026-04-11 02:30 EST (Toronto)
+Confidence: HIGH — derived from Aaron's stated principles, validated by full decapitation audit
 Known gaps: L4 local LLM performance benchmarks not tested on Aaron's hardware
 -->
 
@@ -66,4 +67,33 @@ When choosing a component:
 
 ## Relationship to Float-Free Architecture
 
-The Float-Free framework (documented in `sovereignty/`) is the predecessor to this model. Float-Free focused on vendor-specific escape plans. The four-layer model generalises that into a design principle applied to every new component from day one.
+The Float-Free framework (documented in `../../sovereignty/` at the portfolio repo root) is the predecessor to this model. Float-Free focused on vendor-specific escape plans. The four-layer model generalises that into a design principle applied to every new component from day one.
+
+## Sovereignty Status Dashboard
+
+Current state of every component as of April 11, 2026. See `decapitation-checklist.md` for full details per component.
+
+| Component | Current Layer | L2 Ready? | L4 Ready? | Risk | Action Needed |
+|-----------|:------------:|:---------:|:---------:|:----:|--------------|
+| Claude Code CLI | L1 | Yes | Documented | LOW | Test Aider as L2 |
+| Claude.ai (web) | L1 | Yes | Documented | LOW | Process data export |
+| GitHub (repos) | L1 | Yes | Documented | LOW | Build local backup script |
+| GitHub Pages | L1 | Yes | Documented | LOW | Confirm Cloudflare Pages as live L2 |
+| Formspree | L1 | **Active** | No | LOW | None — L2 already operational |
+| Cloudflare DNS | L1 | Yes | No | MED | Document DNS records in repo |
+| OpenAI Whisper | Planned | Yes | Documented | LOW | Not adopted yet |
+| Context bridge | L4-native | N/A | N/A | NONE | — |
+| Persona system | L1-L4 | N/A | N/A | NONE | — |
+| Node.js / npm | L4-native | N/A | N/A | NONE | — |
+| PowerShell | L4 | Yes (Bash) | N/A | LOW | Only if OS changes |
+| Windows OS | L4 | Yes (Linux) | N/A | LOW | — |
+
+**Overall sovereignty health: GOOD.** No component has HIGH risk. The two "Soon" items (local git backup, Cloudflare Pages confirmation) are insurance, not urgent. The biggest real dependency is Claude Pro for daily work, but it has documented L2/L4 paths.
+
+## What the Audit Revealed
+
+1. **DNS is the least sovereign component.** Cloudflare DNS has no L4 equivalent — DNS requires internet by definition. Mitigation: document all records in the repo.
+2. **Formspree is the best-insured component.** Web3Forms L2 backup is already live and tested.
+3. **The context bridge and persona system are sovereignty-native.** Plain markdown files. No vendor can take them away.
+4. **L4 quality on Aaron's hardware is limited.** Local LLMs need 48GB+ RAM for Opus-equivalent quality. Current machines top out at 12GB. The future desktop is the L4 enabler.
+5. **Static HTML/CSS/JS products are inherently sovereign.** The "no Node frameworks" rule pays dividends — static files can be hosted anywhere.

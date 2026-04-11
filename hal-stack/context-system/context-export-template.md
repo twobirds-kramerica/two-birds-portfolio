@@ -1,56 +1,66 @@
 <!--
-STATUS: v0.1 — DRAFT — NEEDS AARON REVIEW
+STATUS: v0.2 — DRAFT — NEEDS AARON REVIEW
 Created: 2026-04-10 02:10 EST (Toronto)
-Confidence: HIGH — template, no unknowns
+Updated: 2026-04-11 01:30 EST (Toronto)
+Confidence: HIGH
 Known gaps: None
 -->
 
 # Context Export Template
 
-Copy this file after each significant session. Fill in the fields. Save as `exports/YYYY-MM-DD-session-title.md`.
+## For AI Auto-Generation (preferred)
 
----
+Paste this prompt into any LLM at the end of a session. It generates the export. Works with Claude, GPT, Gemini, Llama, anything.
+
+### "Archive This Session" Prompt
+
+```
+Review our entire conversation and generate a context export in this exact format. Be thorough but concise. Only include decisions that matter for future sessions — skip routine implementation details.
 
 ## Session Metadata
 
 | Field | Value |
 |-------|-------|
-| **Date** | YYYY-MM-DD |
-| **Title** | [one-line session description] |
+| **Date** | [today's date] |
+| **Title** | [one-line description of what this session accomplished] |
 | **Project** | [project tag: DCC, Career Coach, Clarity, TBI, HAL, Portfolio, etc.] |
-| **Layer** | [L1/L2/L3/L4 — what layer was this session operating at?] |
+| **Layer** | [L1/L2/L3/L4 — what sovereignty layer was this session operating at?] |
 | **Tool** | [Claude Code / Claude Web / GPT / Gemini / Manual / etc.] |
-| **Machine** | [EZbook / i5 Lenovo / Pentium / other] |
+| **Machine** | [if known] |
 | **Duration** | [approximate] |
 
 ## Decisions Made
 
 | Decision | Confidence | Reversible? | Notes |
 |----------|-----------|-------------|-------|
-| [what was decided] | [HIGH/MED/LOW] | [yes/no] | [why, what influenced it] |
+[List every judgment call. Include WHY, not just WHAT.]
 
 ## Open Questions
 
-- [ ] [question that wasn't resolved]
-- [ ] [thing that needs Aaron's input]
+- [ ] [questions that weren't resolved — things Aaron needs to decide]
 
 ## Next Actions
 
-1. [first thing to do next session]
-2. [second thing]
-3. [third thing]
+1. [most important next step]
+2. [second]
+3. [third]
 
 ## Artifacts Created
 
 | File | Repo | Description |
 |------|------|-------------|
-| [path/to/file] | [repo name] | [what it is] |
+[List files created or modified with paths]
 
-## Related Contexts
+## Key Context for Future Sessions
 
-- [link to related export, if any]
-- [link to related SESSION-STATE.md entry]
+[2-3 sentences capturing the most important thing a future session needs to know about this one. What changed? What's the new state of the world?]
+```
 
-## Raw Notes
+## For Manual Use (L4 fallback)
 
-[Anything else worth preserving — errors hit, workarounds discovered, things that surprised you]
+If no AI is available, copy the template above and fill it in yourself. Takes about 5 minutes. Only do this for significant sessions — new architecture, major decisions, research findings. Skip it for routine bug fixes.
+
+## Where to Save
+
+Save as: `hal-stack/context-system/exports/YYYY-MM-DD-session-title.md`
+Then add one-line entry to `context-index.md`.

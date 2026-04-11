@@ -2,3 +2,7 @@
 .env
 .env.local
 .env.production
+
+# Claude.ai data export — private conversation data, never push
+hal-stack/context-system/ingestion/claude-export.zip
+hal-stack/context-system/ingestion/raw/

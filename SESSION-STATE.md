@@ -1,6 +1,33 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 11, 2026 (Session 16 — Cross-Context Ingestion)
+**Last Session:** April 11, 2026 (Session 17 — Branding Finalization + DCC Logo)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 17 — Branding Finalization + DCC Logo ✅
+
+### Date/Time
+2026-04-11 ~15:50-16:00 EST (Toronto)
+Machine: EZbook
+
+### Two Birds Logo FINALIZED
+- V05 selected as official logo
+- 12 format files generated: 1024/512/256/128/64 PNG, favicon ICO (16/32/48/64), OG image (1200x630), white-on-transparent SVG, dark-on-transparent SVG, monochrome black SVG, monochrome white SVG
+- `assets/logos/two-birds/README.md` updated to v1.2-final
+
+### Brand Guidelines Created
+- `hal-stack/branding/two-birds-brand-guidelines.md` — brand story (twin daughters, chevrons), visual identity (colours, typography), tone of voice, print/screen specs, trademark guidance (TM now, CIPO later)
+- `hal-stack/branding/dcc-brand-guidelines.md` — DCC as child brand, warm teal palette, senior-friendly accessibility, "kitchen table" tone
+
+### DCC Logo Variations
+- 8 variations created: shield+checkmark, sunrise, book+glow, arrow-in-circle, bridge, two-hands, heart+lightbulb, open-door
+- Designer recommends: V07 (heart-bulb) for brand mark, V01 (shield) for favicon
+- Aaron to select
+
+### Next Actions
+1. **Upload `two-birds-1024.png` to LinkedIn** — ready now
+2. **Select DCC logo** — review 8 variations in `assets/logos/dcc/variations/`
+3. **Read brand guidelines** — flag corrections
 
 ---
 
@@ -354,5 +381,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-11 at 15:35 EST (Toronto)
+Last updated: 2026-04-11 at 16:00 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

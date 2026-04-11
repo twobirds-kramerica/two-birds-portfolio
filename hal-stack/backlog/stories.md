@@ -1,6 +1,7 @@
 <!--
-STATUS: v0.1 — DRAFT — NEEDS AARON REVIEW
+STATUS: v0.2 — DRAFT — NEEDS AARON REVIEW
 Created: 2026-04-10 02:30 EST (Toronto)
+Updated: 2026-04-11 16:00 EST (Toronto)
 Confidence: MEDIUM — stories derived from epics, sizing is approximate
 Known gaps: Some stories may be missing from unrecovered Claude.ai sessions
 -->
@@ -51,9 +52,14 @@ Tactical work items derived from epics. Each layer-tagged.
 
 | ID | Story | Layer | Priority | Status | Blocked By |
 |----|-------|-------|----------|--------|------------|
-| S5.1 | Aaron reviews logo v1.1 against original spec | L1 | P2 | Pending | Aaron |
-| S5.2 | Logo v1.2 rework based on Aaron's feedback | L1 | P2 | Pending | S5.1 |
-| S5.3 | Upload final logo to LinkedIn company page | L1 | P2 | Pending | S5.2 |
+| S5.1 | ~~Aaron reviews logo v1.1~~ | L1 | — | **DONE** (S17) | — |
+| S5.2 | ~~Logo v1.2 variations~~ | L1 | — | **DONE** (S14+S17) | — |
+| S5.3 | Upload two-birds-1024.png (V05) to LinkedIn company page | L1 | P1 | Pending | Aaron |
+| S5.4 | Aaron reviews DCC logo variations and selects one | L1 | P2 | Pending | Aaron |
+| S5.5 | Generate DCC final logo formats (after selection) | L1 | P2 | Pending | S5.4 |
+| S5.6 | Replace DCC favicon on .io site with selected DCC logo | L1 | P2 | Pending | S5.5 |
+| S5.7 | Update DCC site CSS to match DCC brand guidelines | L1 | P3 | Pending | S5.6 |
+| S5.8 | CIPO trademark registration research for "Two Birds Innovation" | L1 | P3 | Pending | — |
 
 ## Content Freshness (E6)
 

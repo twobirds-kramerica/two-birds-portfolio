@@ -1,6 +1,7 @@
 <!--
-STATUS: v0.1 — DRAFT — NEEDS AARON REVIEW
+STATUS: v0.2 — DRAFT — NEEDS AARON REVIEW
 Created: 2026-04-10 02:30 EST (Toronto)
+Updated: 2026-04-11 01:45 EST (Toronto)
 Confidence: HIGH for shipped items, MEDIUM for planned items
 Known gaps: Faceless brand/influencer plan location unknown — needs recovery from Claude.ai history
 -->
@@ -44,11 +45,10 @@ All epics layer-tagged per sovereignty model.
 ## E5: Branding Foundation
 **Layer:** L1
 **Priority:** P2
-**Status:** NEEDS REWORK
-**Deliverables:** Logo v1.0 (April 9), Logo v1.1 (April 9)
-**Issue:** Aaron flagged v1.1 is not quite what was specced. Needs review against original chat spec before LinkedIn upload.
-**Next:** Aaron reviews v1.1 render, provides specific feedback. Logo v1.2 rework sprint.
-**Blockers:** Aaron — design review
+**Status:** v1.2 VARIATIONS DELIVERED (Session 14, April 11 2026)
+**Deliverables:** Logo v1.0, v1.1, v1.2 (10 variations with designer notes + recommendation)
+**Next:** Aaron reviews 10 variations, picks one, final export at all sizes.
+**Blockers:** Aaron — variation selection
 
 ## E6: Content Freshness Layer
 **Layer:** L1 initial, L3 target
@@ -78,7 +78,25 @@ All epics layer-tagged per sovereignty model.
 ## E9: Claude.ai Data Export + Retroactive Ingestion
 **Layer:** L1 dependency
 **Priority:** P2
-**Status:** PLAN DOCUMENTED (retroactive-catchup-plan.md)
+**Status:** INFRASTRUCTURE READY (Session 14, April 11 2026)
 **What:** Export past Claude.ai sessions, ingest into context bridge
-**Next:** Aaron checks claude.ai settings for data export option
-**Blockers:** Aaron — requires manual action, L1-dependent feature
+**Deliverables:** Ingestion sprint prompt, expected discoveries list, raw/ folder ready
+**Next:** Aaron requests data export from claude.ai tomorrow. When it arrives, paste ingestion-sprint-prompt.md into Claude Code.
+**Blockers:** Aaron — request export, then drop file in raw/
+
+## E10: HAL Boardroom — Multi-Agent Workspace
+**Layer:** L1-L4
+**Priority:** P2
+**Status:** VISION DOCUMENTED (Session 14, April 11 2026)
+**What:** Multiple machines with dedicated AI personas, shared context, voice-orchestrated. Aaron as founder/friction-generator.
+**Deliverables:** boardroom-vision.md (architecture, culture spec, persona roles, hardware reqs)
+**Next:** Aaron decides timeline (2026 or 2027). Minimum viable = 2 machines (already owned).
+**Blockers:** Aaron — timeline decision, persona names
+
+## E11: GitHub L4 Fallback — Local Git Backup
+**Layer:** L4
+**Priority:** P3
+**Status:** NOT STARTED
+**What:** Pentium Silver (or similar) as dumb local git backup. All repos cloned, pulled nightly, never pushed. Pure L4 redundancy.
+**Next:** Create story for nightly pull script. Identify which machine runs it.
+**Blockers:** None — can start anytime

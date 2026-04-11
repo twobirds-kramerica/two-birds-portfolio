@@ -147,12 +147,51 @@ DCC materials may be printed by:
 
 ## Favicon Replacement Instructions
 
-When Aaron selects a DCC logo:
+DCC logo V07 (heart-bulb) has been selected and finalized. All formats are in `assets/logos/dcc/`.
 
-1. Generate favicon.ico from the selected logo (16/32/48px)
-2. In the `digital-confidence` repo, replace the existing favicon reference in all HTML files
-3. Update `<link rel="icon">` tags to point to the new DCC favicon
-4. The current favicon (Two Birds chevrons) should be removed from DCC and replaced with the DCC-specific logo
+To replace the current favicon:
+1. Copy `dcc-favicon.ico` to `digital-confidence/` repo root
+2. Copy `dcc-256.png` to `digital-confidence/assets/`
+3. Update `<link rel="icon">` tags in all HTML files
+4. Commit and push
+
+Sprint S-002 in `hal-stack/sprint-system/sprint-queue.md` automates this.
+
+---
+
+## Trademark & Copyright
+
+### Trademark
+
+**Digital Confidence Centre™**
+
+The ™ symbol can be used immediately without formal registration. It signals intent to claim trademark rights in Canada.
+
+**Display guidance:**
+- Use ™ on first mention in formal documents, pitch decks, partnership proposals
+- Not required on the website or in casual communications
+- One ™ per document is sufficient — first mention only
+
+**Formal registration (CIPO):**
+Canadian trademark registration through CIPO provides stronger legal protection. This is a future backlog item (S5.8). Estimated cost: CA$330–$800.
+
+### Copyright
+
+**© 2026 Two Birds Innovation**
+
+Display on:
+- Website footer (already present)
+- Printed materials
+- Partnership documents
+
+**Note:** Parent company name may change from "Two Birds Innovation" (placeholder). Copyright notice updates when final name is selected. See `brand-name-research.md`.
+
+### Usage Restrictions
+
+- The DCC logo may be used by Two Birds Innovation and authorised partners (libraries, credit unions, community centres)
+- Partners may display the DCC logo in contexts where they offer the programme
+- No modification of the logo without approval
+- Attribution: "Digital Confidence Centre is a programme of Two Birds Innovation"
 
 ---
 
@@ -161,3 +200,4 @@ When Aaron selects a DCC logo:
 | Version | Date | Changes |
 |---------|------|---------|
 | v1.0 | Apr 11, 2026 | Initial DCC brand guidelines. 8 logo variations created. |
+| v1.1 | Apr 11, 2026 | V07 (heart-bulb) selected. Trademark/copyright added. Favicon instructions updated. |

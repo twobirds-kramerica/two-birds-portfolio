@@ -1,0 +1,159 @@
+<!--
+STATUS: v1.0 — LIVING DOCUMENT — NEEDS AARON REVIEW
+Created: 2026-04-11 15:55 EST (Toronto)
+Confidence: HIGH for visual identity (derived from final logo), MEDIUM for tone/typography (recommendations)
+Known gaps: Typography not field-tested. CMYK values approximate — verify with printer.
+Tag: LIVING DOCUMENT — updated as brand evolves.
+-->
+
+# Two Birds Innovation — Brand Guidelines
+
+## Brand Story
+
+**Company:** Two Birds Innovation
+**Founded:** Early 2026
+**Founder:** Aaron Patzalek, St. Thomas, Ontario, Canada
+**Mission:** Innovation, disruption, and process improvement that helps everyone think differently about life, business, work, and education. Profitable but with purpose.
+
+### Why "Two Birds"
+
+The name comes from Aaron's twin daughters — fraternal twins, both girls. In British and Canadian slang, "birds" historically referred to girls. The name is personal and deliberate: everything Aaron builds is, at its core, for them.
+
+### The Logo
+
+Two chevrons — angle brackets from code — pointing in opposite directions:
+- **Top chevron (>)** points east. Forward motion, progress, the next thing.
+- **Bottom chevron (<)** points west. Looking back, reflecting, a different path.
+
+Together they represent:
+- **Two perspectives** — different directions but connected through shared origin
+- **Coding / technology** — the angle bracket is the most fundamental symbol in code
+- **Fraternal, not identical** — related but distinct, expressed through asymmetric circle placement
+
+**Identity circles** (34px radius) sit at four points: both tips and both open-end arms, asymmetrically placed (upper arm on top chevron, lower arm on bottom). These are identity markers — one for each daughter at each chevron.
+
+**Cosmos texture** — subtle semi-transparent white dots scattered across the blue background. This represents interconnectedness and the family's place in the universe. It's a texture you notice on second look, not a starfield.
+
+### Faceless Brand
+
+Two Birds Innovation builds brand recognition through product quality and content, not through Aaron's personal image. The brand is the work, not the founder. This is a values choice, not a limitation.
+
+---
+
+## Visual Identity
+
+### Primary Colours
+
+| Swatch | Name | HEX | RGB | CMYK (approx) | Use |
+|--------|------|-----|-----|---------------|-----|
+| ■ | Two Birds Blue | #0066CC | 0, 102, 204 | 100, 50, 0, 20 | Primary background, headers, links |
+| □ | White | #FFFFFF | 255, 255, 255 | 0, 0, 0, 0 | Chevrons, text on blue, cosmos dots |
+
+### Secondary Colours (recommended)
+
+| Swatch | Name | HEX | RGB | CMYK (approx) | Use |
+|--------|------|-----|-----|---------------|-----|
+| ■ | Deep Navy | #0D1B2A | 13, 27, 42 | 95, 75, 45, 70 | Dark backgrounds, text on white |
+| ■ | Warm Grey | #F5F5F5 | 245, 245, 245 | 0, 0, 0, 4 | Page backgrounds, cards |
+| ■ | Accent Teal | #00897B | 0, 137, 123 | 80, 10, 45, 10 | Success states, positive highlights |
+| ■ | Alert Amber | #FF8F00 | 255, 143, 0 | 0, 44, 100, 0 | Warnings, attention items |
+
+### Typography (recommended)
+
+| Use | Primary | Fallback |
+|-----|---------|----------|
+| **Headings** | Inter (Google Fonts, free) | -apple-system, Segoe UI, sans-serif |
+| **Body text** | Inter | -apple-system, Segoe UI, sans-serif |
+| **Code / monospace** | JetBrains Mono (free) | Consolas, monospace |
+
+Inter is recommended because it's free, highly readable at all sizes, has excellent weight range, and is designed for screens. It also prints well. Available at no cost via Google Fonts.
+
+### Logo Usage
+
+**Minimum clear space:** 25% of logo width on all sides.
+
+**Minimum digital size:** 32px (below this, chevrons lose legibility).
+
+**Minimum print size:** 12mm.
+
+**Do:**
+- Use the SVG for any scalable context
+- Use the blue-background version as the default
+- Use white-on-transparent for dark backgrounds
+- Use dark-on-transparent for light backgrounds
+- Use monochrome versions for single-colour print contexts
+
+**Don't:**
+- Stretch or distort the aspect ratio
+- Change the chevron or background colours
+- Remove or reposition identity circles
+- Add drop shadows, gradients, or outlines beyond the cosmos texture
+- Rotate the logo
+- Place on busy backgrounds that make the cosmos texture illegible
+
+---
+
+## Tone of Voice
+
+### How Two Birds Sounds
+
+- **Direct.** Say what you mean. Skip the filler.
+- **Specific.** Numbers, names, dates — not vague claims.
+- **Short.** If you can say it in one sentence, don't use three.
+- **Honest.** Don't promise what you can't deliver. Flag uncertainty.
+- **Challenging.** Question assumptions. Ask "why" before "how."
+- **Accessible.** No jargon walls. A library director should understand everything.
+- **Canadian.** Canadian English spelling. Canadian references. Ontario context.
+
+### How Two Birds Does NOT Sound
+
+- No corporate buzzwords ("synergy," "leverage," "disrupt" as filler)
+- No false urgency ("act now," "don't miss out")
+- No flattery ("great question!")
+- No walls of prose — use structure (headers, bullets, lists)
+- No Silicon Valley cosplay — this is St. Thomas, Ontario
+
+---
+
+## Print Considerations
+
+- Use **CMYK values** from the colour table above for any offset printing
+- The cosmos texture (semi-transparent dots) will not reproduce well in basic CMYK offset — use the solid blue background version for print
+- Use **two-birds-monochrome-black.svg** for single-colour print (fax, embossing, stamps)
+- **Minimum print size:** 12mm across the full logo
+- **Recommended formats for print:** SVG (scalable), PNG at 300 DPI, or PDF export
+
+## Screen Considerations
+
+- Use **HEX values** from the colour table for all screen applications
+- **Favicon:** Use `two-birds-favicon.ico` (contains 16/32/48/64px sizes)
+- **Open Graph:** Use `two-birds-og.png` (1200×630) for social sharing cards
+- **LinkedIn:** Use `two-birds-1024.png` for company page logo
+- **Dark mode:** Use `two-birds-white-on-transparent.svg` for dark backgrounds
+
+## Trademark & Usage
+
+**Two Birds Innovation™**
+
+The ™ symbol can be used immediately without formal registration. It signals intent to claim trademark rights.
+
+**Display guidance:**
+- Use ™ on first mention of "Two Birds Innovation" in formal documents, pitch decks, and legal contexts
+- Not required on every mention — first use per document is sufficient
+- Not required on the website or casual communications
+
+**Formal registration (CIPO):**
+A Canadian trademark registration through CIPO (Canadian Intellectual Property Office) provides stronger legal protection. This is a future backlog item — not urgent but recommended before significant B2B contracts. Estimated cost: CA$330–$800 depending on DIY vs. agent.
+
+**Usage restrictions:**
+- The Two Birds Innovation logo may only be used by Aaron Patzalek and authorised Two Birds Innovation representatives
+- Third parties may reference the logo in editorial contexts with attribution
+- No modification of the logo is permitted without Aaron's approval
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| v1.0 | Apr 11, 2026 | Initial brand guidelines document. Logo V05 selected as official. |

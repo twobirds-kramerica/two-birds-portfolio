@@ -17,6 +17,7 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-11 | S18: Sprint Automation System | HAL | L1-L4 | Sprint queue (8 sprints), next-sprint trigger, retro system, human backlog (11 items) | Active |
 | 2026-04-11 | S17: Branding Finalization + DCC Logo | Branding, DCC | L1 | Two Birds V05 finalised, brand guidelines v1.0, 8 DCC logo variations, DCC guidelines | Active |
 | 2026-04-11 | S16: Cross-Context Ingestion | HAL | L1-L4 | 115 convos scanned, 9 deep extractions, discovery report, faceless brand resolved | Active |
 | 2026-04-11 | S15: Persona Framework + Sovereignty | HAL | L1-L4 | 22 personas, 6 depts, weighting/profiles, 12-component decapitation audit, skill library, local backup | Active |

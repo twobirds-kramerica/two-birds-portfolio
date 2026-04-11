@@ -15,22 +15,30 @@ The voice layer lets Aaron speak commands and hear responses instead of typing. 
 ## What It Must Do
 
 1. **STT (Speech-to-Text):** Hear Aaron speak → produce text
-2. **Intent Parsing:** Understand what Aaron wants ("next sprint," "retro," "check DCC")
-3. **Command Routing:** Map the intent to the right action (run a command, read a file, etc.)
-4. **TTS (Text-to-Speech):** Speak the response back to Aaron
+2. **Thinking Layer (NEW):** Conversational LLM that refines raw speech into clear intent. Can ask clarifying questions, refuse scope creep, suggest alternatives.
+3. **Intent Parser:** Fallback keyword matcher for simple commands (L4-native)
+4. **Command Routing:** Map the intent to the right action
+5. **TTS (Text-to-Speech):** Speak the response back to Aaron
 
 ## Sovereignty Constraint
 
-Each component must be independently swappable. The STT engine doesn't care what does the intent parsing. The command router doesn't care what produced the text. Interfaces between components are plain text strings.
+Each component must be independently swappable. Interfaces are plain text strings.
 
 ```
-[Microphone] → STT → "run next sprint" (plain text)
+[Microphone] → STT → raw text ("I'm thinking maybe we should fix the DCC thing...")
                          ↓
-                    Intent Parser → { action: "sprint", args: ["next"] }
+                    Thinking Layer ←→ Aaron (conversational, via TTS)
+                         ↓
+                    Clarified Intent → { action: "sprint", args: {...} }
                          ↓
                     Command Router → executes action
                          ↓
                     TTS → [Speaker] "Sprint complete. Three items shipped."
+```
+
+**L4 fallback** (no Thinking Layer LLM available):
+```
+[Microphone] → STT → "next sprint" → Intent Parser (keyword match) → Command Router → TTS
 ```
 
 ## Files

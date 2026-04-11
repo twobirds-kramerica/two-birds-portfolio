@@ -17,6 +17,7 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-11 | S20: DCC V07 + Brand Research | Branding, DCC, HAL | L1 | DCC heart-bulb finalized, brand research imported, sovereignty philosophy bridges brand+architecture, TBI is placeholder name | Active |
 | 2026-04-11 | S19: Human Backlog Consolidation | HAL, Employment | L1-L4 | Master backlog (25 items), employment recovery (56 convos mapped) | Active |
 | 2026-04-11 | S18: Sprint Automation System | HAL | L1-L4 | Sprint queue (8 sprints), next-sprint trigger, retro system, human backlog (11 items) | Active |
 | 2026-04-11 | S17: Branding Finalization + DCC Logo | Branding, DCC | L1 | Two Birds V05 finalised, brand guidelines v1.0, 8 DCC logo variations, DCC guidelines | Active |

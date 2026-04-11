@@ -17,8 +17,10 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-11 | S14: Logo Variations + HAL Architecture | HAL, Branding | L1-L4 | 10 logo vars (V04 recommended), auto-export, ingestion infra, boardroom vision, thinking layer | Active |
+| 2026-04-10 | S13: Review-Assist Sprint | HAL | L1-L4 | Self-audit of S12 output. 19 issues (0 high). 8 questions for Aaron. | Active |
 | 2026-04-10 | S12: Overnight HAL Sprint | HAL | L1-L4 | Sovereignty framework, context bridge, voice audit, machine profiles | Active |
-| 2026-04-09 | S11c: Logo v1.1 | Branding | L1 | White chevrons, cosmos texture, open-end circles — needs rework per Aaron | Review needed |
+| 2026-04-09 | S11c: Logo v1.1 | Branding | L1 | White chevrons, cosmos texture — superseded by v1.2 variations | Superseded |
 | 2026-04-09 | S11b: Logo v1.0 | Branding | L1 | Initial logo generation, fuchsia/pink chevrons | Superseded by v1.1 |
 | 2026-04-09 | S11: Form Hardening | DCC | L1 | Removed Formspree from onboarding wizard, hardened feedback modal validation, fixed novalidate bug | Shipped |
 | 2026-04-05 | S10: Mega Architecture | Portfolio | L1 | QA framework, design system, executive dashboard, sales assets | Shipped |

@@ -58,6 +58,7 @@ These values run through everything Two Birds Innovation builds. Every persona e
 - **Local support** — Ontario, Canadian, community-first. Not Silicon Valley cosplay.
 - **Purpose-driven profit** — make money AND make a difference. These are not in tension.
 - **Helping everyone think differently** — about life, business, work, education. This is the mission beneath the revenue.
+- **Faceless brand** — build recognition through product quality and content, not through Aaron's personal image or face on camera. The brand is the work, not the founder. (Discovered across multiple Claude.ai conversations, Jan–Apr 2026. Not a strategy document — a values choice.)
 
 ## What Personas Are NOT
 

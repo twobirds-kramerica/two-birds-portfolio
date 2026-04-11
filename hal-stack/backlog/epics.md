@@ -54,7 +54,7 @@ All epics layer-tagged per sovereignty model.
 **Layer:** L1 initial, L3 target
 **Priority:** P3
 **Status:** NOT STARTED
-**Origin:** March 8, 2026 session — concept documented, not built
+**Origin:** March 6, 2026 — HAL Stack Day 1 requirement (confirmed via Claude.ai export ingestion, Session 16). Originally backlogged as March 8.
 **What:** Automated check of DCC module lastmod dates. Alert when content is stale.
 **Next:** Design freshness rules (how old is "stale"?). Build as n8n workflow or simple script.
 **Blockers:** n8n not installed yet
@@ -67,13 +67,13 @@ All epics layer-tagged per sovereignty model.
 **Next:** Monitor usage over next 2 weeks, document patterns
 **Blockers:** None — observation only
 
-## E8: Faceless Brand / Influencer Plan
-**Layer:** L1
+## E8: Faceless Brand Principle
+**Layer:** L1-L4
 **Priority:** P3
-**Status:** NEEDS RECOVERY
-**What:** Content strategy for faceless brand approach — documented somewhere in Claude.ai history
-**Next:** Recover context during retroactive catchup sprint (E2 dependency)
-**Blockers:** Claude.ai data export / manual recovery
+**Status:** RESOLVED — NOT A STANDALONE PLAN (Session 16 discovery)
+**What:** "Faceless brand" is a VALUES CHOICE, not a strategy document. Build recognition through product quality and content, not personal image. Thread across conversations Jan–Apr 2026. Now captured in `personas/culture-spec.md`.
+**Next:** No further action needed unless Aaron wants to formalise it as a full strategy doc.
+**Blockers:** None
 
 ## E9: Claude.ai Data Export + Retroactive Ingestion
 **Layer:** L1 dependency

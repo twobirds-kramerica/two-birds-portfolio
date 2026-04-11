@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#00897B"/>
+  <!-- DCC-V08: Open Door with Warm Light — "welcome, safe entry, 'come in'" -->
+  <!-- Door frame -->
+  <rect x="300" y="200" width="424" height="624" rx="20" fill="none" stroke="#FFFFFF" stroke-width="40"/>
+  <!-- Door (slightly open, perspective) -->
+  <path d="M520 220 L680 280 L680 780 L520 804" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linejoin="round"/>
+  <!-- Warm light rays from door opening -->
+  <line x1="540" y1="400" x2="820" y2="300" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+  <line x1="540" y1="500" x2="840" y2="460" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+  <line x1="540" y1="600" x2="830" y2="620" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.3"/>
+  <!-- Door handle -->
+  <circle cx="480" cy="520" r="18" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#00897B"/>
+  <!-- DCC-V05: Bridge — "connecting analog to digital, crossing over" -->
+  <!-- Bridge arch -->
+  <path d="M200 620 Q512 200 824 620" fill="none" stroke="#FFFFFF" stroke-width="48" stroke-linecap="round"/>
+  <!-- Bridge surface -->
+  <line x1="180" y1="620" x2="844" y2="620" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round"/>
+  <!-- Support pillars -->
+  <line x1="280" y1="620" x2="280" y2="780" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+  <line x1="744" y1="620" x2="744" y2="780" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+</svg>

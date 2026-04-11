@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#00897B"/>
+  <!-- DCC-V01: Shield + Checkmark — "safe, verified, protected" -->
+  <path d="M512 160 C680 160 760 280 760 420 C760 620 640 760 512 840 C384 760 264 620 264 420 C264 280 344 160 512 160Z" fill="none" stroke="#FFFFFF" stroke-width="44" stroke-linejoin="round"/>
+  <polyline points="370,470 470,570 660,380" fill="none" stroke="#FFFFFF" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

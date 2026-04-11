@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <rect width="1024" height="1024" rx="180" ry="180" fill="#00897B"/>
+  <!-- DCC-V04: Upward Arrow in Circle — "direction, confidence, forward" -->
+  <circle cx="512" cy="512" r="280" fill="none" stroke="#FFFFFF" stroke-width="44"/>
+  <!-- Upward arrow -->
+  <line x1="512" y1="340" x2="512" y2="700" stroke="#FFFFFF" stroke-width="48" stroke-linecap="round"/>
+  <polyline points="380,480 512,340 644,480" fill="none" stroke="#FFFFFF" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

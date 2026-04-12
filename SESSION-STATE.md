@@ -1,6 +1,14 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (NB Layer Foundation)
+**Last Session:** April 12, 2026 (Return-to-Work Plan)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Return-to-Work Action Plan ✅
+
+**Date:** 2026-04-12 ~17:26 EST
+**File:** `hal-stack/sessions/2026-04-12-return-to-work-plan.md`
+Ranked action plan. Three paths based on urgency. Four quick wins. Eight deferred items. Five honest flags. Start with: answer the urgency question, then follow the matching path.
 
 ---
 
@@ -619,5 +627,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 17:14 EST (Toronto)
+Last updated: 2026-04-12 at 17:28 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

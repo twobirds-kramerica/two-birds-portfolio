@@ -100,6 +100,11 @@
 
   <!-- Results -->
   <div id="results" style="display:none;"></div>
+
+  <!-- Print Button -->
+  <div id="printSection" style="display:none;text-align:center;margin:20px 0;">
+    <button class="btn" onclick="window.print()" style="max-width:300px;margin:0 auto;">Save as PDF / Print This Assessment</button>
+  </div>
 </div>
 
 <script>
@@ -125,7 +130,7 @@ async function assess() {
   document.getElementById('results').style.display = 'none';
   document.getElementById('assessBtn').disabled = true;
 
-  var systemPrompt = `You are a career assessment tool for Aaron Patzalek. Evaluate job opportunities against his profile.
+  var systemPrompt = `You are a brutally honest career and revenue advisor for Aaron Patzalek. Your job is to assess any job opportunity against his specific situation and give a direct verdict. Do not encourage unless the data supports it. Flag risks unprompted. Score honestly — the match score should reflect real fit, not optimism.
 
 AARON'S PROFILE:
 - 20+ years Senior Product Manager (Telus, Start.ca, Staples Canada, Goodwill Canada)
@@ -134,17 +139,20 @@ AARON'S PROFILE:
 - Revenue target: CA$10,000/month by August 2026 (currently $0 MRR from Two Birds Innovation)
 - Sole income earner, twin 6-year-old daughters, St. Thomas Ontario
 - Time is the scarcest resource
-- Open to: fractional, advisory, senior consultant, innovation roles, AI product evaluation
-- Not ideal: pure sales, junior roles, full-time that kills Two Birds Innovation
-- Preference: roles paying CA$6,000+/month AND allowing Two Birds to continue in parallel
+- Located: St. Thomas, Ontario — prefers local or remote
+- Open to: fractional, advisory, senior consultant, innovation roles, municipal government roles, AI product evaluation
+- Not ideal: pure sales, junior roles, anything below $50/hour equivalent, full-time that kills Two Birds
+- Non-negotiable: must allow Two Birds Innovation to continue operating alongside any engagement
+- Minimum viable: CA$6,000/month cash to justify the time
 - Unique angle: "AI product evaluator / critical user" — evaluates AI tools from a non-developer PM perspective
+- Unfair advantage: trust-first design instinct, built for anxious users, local community roots, prompt engineering, multi-agent orchestration, WCAG accessibility, LLM portability layer
 
 RESPOND WITH EXACTLY THIS JSON STRUCTURE (no markdown, just raw JSON):
 {
   "matchScore": [0-100],
   "verdict": "GREEN" or "AMBER" or "RED",
   "verdictText": "[one sentence explanation]",
-  "roleType": "[Gig/hourly | Contract | Fractional/advisory | Full-time | Hybrid]",
+  "roleType": "[Gig/hourly | Contract | Fractional/advisory | Full-time | Municipal/Government | Hybrid]",
   "strengths": ["strength 1", "strength 2", "strength 3"],
   "gaps": ["gap 1", "gap 2", "gap 3"],
   "salaryEstimate": "[CA$ range estimate]",
@@ -247,6 +255,7 @@ function renderResults(r) {
 
   document.getElementById('results').innerHTML = html;
   document.getElementById('results').style.display = 'block';
+  document.getElementById('printSection').style.display = 'block';
   document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
 }
 </script>

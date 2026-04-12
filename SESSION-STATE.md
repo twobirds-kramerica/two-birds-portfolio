@@ -1,6 +1,14 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 11, 2026 (Session 21 — Capture System)
+**Last Session:** April 11, 2026 (Session 21 — Capture System + Verification)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Phase 0 Verification Run ✅
+
+**Date/Time:** 2026-04-11 ~23:20 EST (Toronto)
+**Result:** SUCCESS. 1 item found in pending-capture.md, routed to backlog/stories.md as SC-001 (P3 story), queue cleared, committed as `c31b1dc`, pushed to master.
+**Issues found:** None. The full capture→merge loop works end-to-end.
 
 ---
 

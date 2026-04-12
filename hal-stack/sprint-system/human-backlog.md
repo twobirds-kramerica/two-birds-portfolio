@@ -54,7 +54,7 @@ _(Both items are in CRITICAL section above)_
 
 - [ ] **Fix "Claude too reactive" pattern** — Update culture-spec.md with "proactive, not reactive" rule. Review persona definitions for passivity. Add "proactive flags" section to sprint template. This is a PATTERN FIX. **20 min.** (Source: capture Apr 12, P1)
 
-- [ ] **Clarify NB layer concept** — Aaron discussed an "NB layer" in Claude.ai chat. Add description so it can be evaluated. **2 min.** (Source: capture Apr 12)
+- [x] ~~**Clarify NB layer concept**~~ — Resolved 2026-04-12. NB layer created at `journey/nb-layer/README.md` with first entry. ✅
 
 - [ ] **Clarify employability project scope** — Active job search, career positioning, or insurance? Defines E15 epic scope. **2 min.** (Source: capture Apr 12)
 

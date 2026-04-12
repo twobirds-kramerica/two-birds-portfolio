@@ -176,14 +176,14 @@ Commit per phase. Update SESSION-STATE.md, push to master.
 
 ---
 
-## S-004: Context Export to CLAUDE.md Workflow
+## S-004: Context Export to CLAUDE.md Workflow ✅
 
 **Priority:** P2
 **Duration:** 20 min
-**Status:** READY
-**Blocked by:** —
+**Status:** DONE (2026-04-12)
 **Layer:** L1-L4
 **Story refs:** S2.1
+**Completed:** CLAUDE.md updated — context export rule, pending-capture check, "next sprint" trigger now points at sprint-queue.md.
 
 ### Prompt
 
@@ -404,3 +404,4 @@ Commit per phase. Push to main.
 | S-001 | Voice Keyword Command Map | 2026-04-12 (next sprint auto-run) |
 | S-002 | DCC Logo Finalization | 2026-04-11 (Session 20) |
 | S-003 | Content Freshness Rules + Script | 2026-04-12 (next sprint auto-run) |
+| S-004 | Context Export to CLAUDE.md | 2026-04-12 (next sprint auto-run) |

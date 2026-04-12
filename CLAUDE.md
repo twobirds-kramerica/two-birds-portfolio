@@ -1,6 +1,6 @@
 # Two Birds Innovation — Master Context
 Auto-loaded by Claude Code at every session.
-Last updated: April 1, 2026
+Last updated: April 12, 2026
 
 ## WHO AARON IS
 Aaron Patzalek. St. Thomas, Ontario. Solo parent of 6-year-old twin daughters.
@@ -16,6 +16,8 @@ Sole income earner. Time is the most constrained asset.
 - Run as Administrator to avoid permission blocks.
 - Read SESSION-STATE.md before starting any work session.
 - After every session: overwrite logs/RETRO.md and push.
+- After every significant session: auto-generate a context export to hal-stack/context-system/exports/[date]-[title].md and add a one-line entry to hal-stack/context-system/context-index.md. Use the template in hal-stack/context-system/context-export-template.md.
+- Before every sprint: check hal-stack/sprint-system/pending-capture.md for items to merge.
 - Never rebuild something already built — check git log first.
 - TIMESTAMP RULE: Every RETRO.md, SESSION-STATE.md, and automated-run-log.md must end with these exact two lines as the final lines of the file — nothing after them:
   Last updated: [YYYY-MM-DD] at [HH:MM] EST (Toronto)
@@ -51,7 +53,7 @@ Journey archive: C:\twobirds\two-birds-portfolio\journey\
 
 ## TRIGGER COMMANDS
 When the user types any of these, execute the corresponding action:
-"next sprint" — read backlog, execute top 3 Claude Code executable items
+"next sprint" — read hal-stack/sprint-system/sprint-queue.md, check pending-capture.md first (Phase 0), then execute the top non-blocked READY sprint
 "retro" — read and report logs/RETRO.md contents
 "state" — read SESSION-STATE.md, orient fully, report top 3 next actions
 "dashboard" — read WIP-DASHBOARD.md, report full portfolio status

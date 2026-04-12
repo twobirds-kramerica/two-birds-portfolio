@@ -4,6 +4,14 @@
 
 ---
 
+## "next sprint" auto-run — S-004 ✅
+
+**Date:** 2026-04-12
+**Sprint S-004:** CLAUDE.md updated — added context export rule, pending-capture check rule, "next sprint" trigger now reads sprint-queue.md instead of old backlog.
+**Next READY sprint:** S-005 (Test Aider as L2 Fallback)
+
+---
+
 ## "next sprint" auto-run — Phase 0 + S-003 ✅
 
 **Date:** 2026-04-12

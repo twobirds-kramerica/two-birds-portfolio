@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Fit Assessment — Private Tool</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1B3A4B;
+      --teal: #2EC4B6;
+      --teal-dark: #239e93;
+      --amber: #FF9F1C;
+      --bg: #F8F9FA;
+      --text: #1A1A2E;
+      --muted: #4A5568;
+      --card: #FFFFFF;
+      --border: #E2E8F0;
+      --green: #27AE60;
+      --yellow: #F39C12;
+      --red: #E74C3C;
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 20px; font-size: 16px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { color: var(--navy); font-size: 1.8rem; margin-bottom: 4px; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 24px; }
+    .private-badge { display: inline-block; background: var(--navy); color: white; font-size: 0.75rem; padding: 3px 10px; border-radius: 12px; margin-left: 10px; vertical-align: middle; }
+
+    /* Cards */
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+    .card h2 { color: var(--navy); font-size: 1.2rem; margin-bottom: 12px; }
+
+    /* Form */
+    textarea { width: 100%; min-height: 200px; padding: 14px; border: 2px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical; }
+    textarea:focus { border-color: var(--teal); outline: none; }
+    .btn { display: block; width: 100%; padding: 14px; background: var(--teal); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; min-height: 48px; }
+    .btn:hover { background: var(--teal-dark); }
+    .btn:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
+    .btn-secondary { background: var(--navy); margin-top: 8px; }
+
+    /* API Key */
+    .api-setup { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .api-setup input { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.9rem; margin-top: 6px; }
+
+    /* Results */
+    .verdict { text-align: center; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+    .verdict-green { background: #E8F5E9; border: 2px solid var(--green); }
+    .verdict-amber { background: #FFF8E1; border: 2px solid var(--yellow); }
+    .verdict-red { background: #FFEBEE; border: 2px solid var(--red); }
+    .verdict h3 { font-size: 1.4rem; margin-bottom: 6px; }
+    .score-circle { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; font-size: 1.8rem; font-weight: 700; margin: 12px 0; }
+    .green .score-circle { background: var(--green); color: white; }
+    .amber .score-circle { background: var(--yellow); color: white; }
+    .red .score-circle { background: var(--red); color: white; }
+
+    .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    @media (max-width: 600px) { .section-grid { grid-template-columns: 1fr; } }
+
+    .pill { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; margin: 3px; }
+    .pill-green { background: #E8F5E9; color: #2E7D32; }
+    .pill-red { background: #FFEBEE; color: #C62828; }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+
+    .loading { text-align: center; padding: 40px; color: var(--muted); }
+    .loading .spinner { display: inline-block; width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--teal); border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .timestamp { text-align: right; font-size: 0.8rem; color: var(--muted); margin-top: 16px; }
+
+    @media print { body { padding: 0; } .btn, .api-setup { display: none; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Job Fit Assessment <span class="private-badge">PRIVATE</span></h1>
+  <p class="subtitle">Evaluate any opportunity against Aaron's profile, revenue target, and Two Birds compatibility.</p>
+
+  <!-- API Key -->
+  <div class="card api-setup" id="apiSetup">
+    <label><strong>Anthropic API Key</strong> (stored in browser only)
+      <input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off">
+    </label>
+    <button class="btn btn-secondary" onclick="saveKey()" style="width:auto;display:inline-block;padding:8px 20px;margin-top:8px;font-size:0.9rem;">Save Key</button>
+    <span id="keyStatus" style="margin-left:10px;font-size:0.85rem;"></span>
+  </div>
+
+  <!-- Input -->
+  <div class="card" id="inputCard">
+    <h2>Paste the Job Description or Opportunity</h2>
+    <textarea id="jobInput" placeholder="Paste the full job posting, gig description, or opportunity details here..."></textarea>
+    <button class="btn" id="assessBtn" onclick="assess()" style="margin-top:12px;">Assess This Opportunity</button>
+  </div>
+
+  <!-- Loading -->
+  <div class="card loading" id="loadingCard" style="display:none;">
+    <div class="spinner"></div>
+    <p style="margin-top:12px;">Analysing opportunity...</p>
+  </div>
+
+  <!-- Results -->
+  <div id="results" style="display:none;"></div>
+</div>
+
+<script>
+// --- API Key ---
+function saveKey() {
+  var key = document.getElementById('apiKey').value.trim();
+  if (key) { localStorage.setItem('jfa-api-key', key); document.getElementById('keyStatus').textContent = 'Saved'; }
+}
+window.addEventListener('DOMContentLoaded', function() {
+  var saved = localStorage.getItem('jfa-api-key');
+  if (saved) { document.getElementById('apiKey').value = saved; document.getElementById('keyStatus').textContent = 'Loaded from storage'; }
+});
+
+// --- Assessment ---
+async function assess() {
+  var key = document.getElementById('apiKey').value.trim() || localStorage.getItem('jfa-api-key');
+  if (!key) { alert('Please enter your Anthropic API key first.'); return; }
+
+  var jobText = document.getElementById('jobInput').value.trim();
+  if (!jobText || jobText.length < 20) { alert('Please paste a job description (at least a few sentences).'); return; }
+
+  document.getElementById('loadingCard').style.display = 'block';
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('assessBtn').disabled = true;
+
+  var systemPrompt = `You are a career assessment tool for Aaron Patzalek. Evaluate job opportunities against his profile.
+
+AARON'S PROFILE:
+- 20+ years Senior Product Manager (Telus, Start.ca, Staples Canada, Goodwill Canada)
+- Skills: innovation, operations, market expansion, process improvement, digital transformation
+- AI fluency: built 7 live products in 90 days using AI tools, no prior coding background
+- Revenue target: CA$10,000/month by August 2026 (currently $0 MRR from Two Birds Innovation)
+- Sole income earner, twin 6-year-old daughters, St. Thomas Ontario
+- Time is the scarcest resource
+- Open to: fractional, advisory, senior consultant, innovation roles, AI product evaluation
+- Not ideal: pure sales, junior roles, full-time that kills Two Birds Innovation
+- Preference: roles paying CA$6,000+/month AND allowing Two Birds to continue in parallel
+- Unique angle: "AI product evaluator / critical user" — evaluates AI tools from a non-developer PM perspective
+
+RESPOND WITH EXACTLY THIS JSON STRUCTURE (no markdown, just raw JSON):
+{
+  "matchScore": [0-100],
+  "verdict": "GREEN" or "AMBER" or "RED",
+  "verdictText": "[one sentence explanation]",
+  "roleType": "[Gig/hourly | Contract | Fractional/advisory | Full-time | Hybrid]",
+  "strengths": ["strength 1", "strength 2", "strength 3"],
+  "gaps": ["gap 1", "gap 2", "gap 3"],
+  "salaryEstimate": "[CA$ range estimate]",
+  "timeToFirstDollar": "[estimate]",
+  "conflictCheck": "[assessment of Two Birds compatibility]",
+  "roleTypeAnalysis": {
+    "gains": "[what Aaron gains]",
+    "givesUp": "[what Aaron gives up]",
+    "revenueContribution": "[monthly $ toward 10K target]",
+    "twobirdsCompatible": true or false
+  },
+  "vettingQuestions": ["q1", "q2", "q3", "q4", "q5"],
+  "summary": "[2-3 sentence overall assessment]"
+}`;
+
+  try {
+    var response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 1500,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: 'Evaluate this opportunity:\n\n' + jobText }]
+      })
+    });
+
+    var data = await response.json();
+    if (!response.ok) throw new Error(data.error?.message || 'API error');
+
+    var text = data.content[0].text;
+    // Extract JSON from response (handle potential markdown wrapping)
+    var jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) throw new Error('Could not parse response');
+    var result = JSON.parse(jsonMatch[0]);
+    renderResults(result);
+  } catch (err) {
+    document.getElementById('results').innerHTML = '<div class="card"><h2>Error</h2><p>' + err.message + '</p></div>';
+    document.getElementById('results').style.display = 'block';
+  } finally {
+    document.getElementById('loadingCard').style.display = 'none';
+    document.getElementById('assessBtn').disabled = false;
+  }
+}
+
+function renderResults(r) {
+  var vClass = r.verdict === 'GREEN' ? 'green verdict-green' : r.verdict === 'AMBER' ? 'amber verdict-amber' : 'red verdict-red';
+  var emoji = r.verdict === 'GREEN' ? '✅' : r.verdict === 'AMBER' ? '⚠️' : '🚫';
+
+  var html = '';
+
+  // Verdict
+  html += '<div class="verdict ' + vClass + '">';
+  html += '<h3>' + emoji + ' ' + r.verdict + '</h3>';
+  html += '<div class="score-circle">' + r.matchScore + '</div>';
+  html += '<p>' + r.verdictText + '</p>';
+  html += '</div>';
+
+  // Role Type + Summary
+  html += '<div class="card"><h2>Role Type: ' + r.roleType + '</h2>';
+  html += '<p>' + r.summary + '</p>';
+  html += '<div class="section-grid">';
+  html += '<div><strong>Salary Estimate:</strong> ' + r.salaryEstimate + '</div>';
+  html += '<div><strong>Time to First Dollar:</strong> ' + r.timeToFirstDollar + '</div>';
+  html += '</div></div>';
+
+  // Strengths & Gaps
+  html += '<div class="card"><h2>Profile Match</h2><div class="section-grid">';
+  html += '<div><strong>Strengths</strong><br>';
+  r.strengths.forEach(function(s) { html += '<span class="pill pill-green">' + s + '</span>'; });
+  html += '</div><div><strong>Gaps / Risks</strong><br>';
+  r.gaps.forEach(function(g) { html += '<span class="pill pill-red">' + g + '</span>'; });
+  html += '</div></div></div>';
+
+  // Two Birds Compatibility
+  html += '<div class="card"><h2>Two Birds Compatibility</h2>';
+  html += '<p><strong>Conflict Check:</strong> ' + r.conflictCheck + '</p>';
+  if (r.roleTypeAnalysis) {
+    html += '<div class="section-grid">';
+    html += '<div><strong>You Gain:</strong> ' + r.roleTypeAnalysis.gains + '</div>';
+    html += '<div><strong>You Give Up:</strong> ' + r.roleTypeAnalysis.givesUp + '</div>';
+    html += '<div><strong>Revenue Contribution:</strong> ' + r.roleTypeAnalysis.revenueContribution + '</div>';
+    html += '<div><strong>Two Birds Compatible:</strong> ' + (r.roleTypeAnalysis.twobirdsCompatible ? '✅ Yes' : '❌ No') + '</div>';
+    html += '</div>';
+  }
+  html += '</div>';
+
+  // Vetting Questions
+  html += '<div class="card"><h2>5 Questions to Ask</h2><ol>';
+  r.vettingQuestions.forEach(function(q) { html += '<li>' + q + '</li>'; });
+  html += '</ol></div>';
+
+  // Timestamp
+  html += '<p class="timestamp">Assessment run: ' + new Date().toLocaleString('en-CA', { timeZone: 'America/Toronto' }) + ' EST</p>';
+
+  document.getElementById('results').innerHTML = html;
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

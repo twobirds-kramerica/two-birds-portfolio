@@ -76,6 +76,21 @@ Then commit and push.
 
 Claude Code will fill in the template fields from context.
 
+## Important: Honesty About What Actually Happened
+
+When you generate a capture prompt for Aaron:
+
+1. Tell Aaron: "Paste this into Claude Code when you have a moment. It takes 30 seconds and the item will be properly merged on the next sprint."
+2. **Do NOT pretend you have actually added the item.** You have only generated the prompt Aaron needs to run. The item only becomes real when Claude Code executes the append.
+
+## Emergency Captures
+
+If Aaron flags a P1 BLOCKER that needs immediate attention (not just tracking):
+
+1. Still generate the capture prompt above (for tracking)
+2. Also immediately tell Aaron what the blocker is, why it matters, and what the fastest resolution path looks like
+3. Offer to help handle the blocker directly in the current chat if possible — don't just log it and move on
+
 ## Merge Trigger
 
-The next "next sprint" run checks pending-capture.md first. If items exist, they get merged before the sprint runs. Aaron doesn't need to do anything — the merge is automatic.
+The next "next sprint" run checks pending-capture.md first (Phase 0 of every sprint). If items exist, they get merged before the sprint work runs. Aaron doesn't need to do anything — the merge is automatic.

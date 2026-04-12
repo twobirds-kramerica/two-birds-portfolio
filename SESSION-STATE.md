@@ -1,6 +1,13 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (Journey Archive Sync)
+**Last Session:** April 12, 2026 (NB Layer Foundation)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## NB Layer Foundation ✅
+
+**Date:** 2026-04-12 ~17:12 EST (Toronto)
+NB (Nota Bene) layer created at `journey/nb-layer/`. Purpose: capture moments where AI tools were wrong and Aaron caught it. Each entry is evidence of his critical-user instinct. First entry written: "The storyline archive Claude could not find" (April 11 rediscovery incident). P1 backlog item "Clarify NB layer concept" resolved. The NB layer is both a personal journal and a career proof-of-pattern asset for AI evaluation roles.
 
 ---
 
@@ -612,5 +619,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 15:02 EST (Toronto)
+Last updated: 2026-04-12 at 17:14 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

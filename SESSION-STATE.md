@@ -1,6 +1,15 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 11, 2026 (Session 21 — Capture System + Verification)
+**Last Session:** April 12, 2026 (S-001 auto-run via "next sprint")
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## S-001: Voice Keyword Command Map ✅ (auto-run)
+
+**Date:** 2026-04-12 | **Trigger:** "next sprint"
+**Built:** `command-map.json` (12 commands), `command-matcher.js` (fuzzy matcher, 10/10 tests pass), `README.md` (wiring docs)
+**Layer:** L4-native — pure JS, no dependencies
+**Next READY sprint:** S-003 (Content Freshness System)
 
 ---
 

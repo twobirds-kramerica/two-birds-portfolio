@@ -14,14 +14,14 @@ Sorted by priority. Top non-blocked sprint runs next.
 
 ---
 
-## S-001: Voice Layer — Keyword Command Map (L4)
+## S-001: Voice Layer — Keyword Command Map (L4) ✅
 
 **Priority:** P1
 **Duration:** 45 min
-**Status:** READY
-**Blocked by:** —
+**Status:** DONE (2026-04-12)
 **Layer:** L4-native
 **Story refs:** S3.3
+**Completed:** command-map.json (12 commands) + command-matcher.js (10/10 tests pass) + README.md
 
 ### Prompt
 
@@ -401,4 +401,5 @@ Commit per phase. Push to main.
 
 | Sprint | Title | Completed |
 |--------|-------|-----------|
+| S-001 | Voice Keyword Command Map | 2026-04-12 (next sprint auto-run) |
 | S-002 | DCC Logo Finalization | 2026-04-11 (Session 20) |

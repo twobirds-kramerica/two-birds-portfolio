@@ -1,6 +1,43 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (S-001 auto-run via "next sprint")
+**Last Session:** April 12, 2026 (Overnight Max-Use Sprint)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Overnight Max-Use Sprint ✅
+
+**Date:** 2026-04-12 ~02:11-02:22 EST (Toronto)
+**Machine:** EZbook
+
+### Phase 1: Lighthouse Automation (`8357661`)
+- Lighthouse CLI v13.1.0 installed globally
+- `run-overnight-build.bat` created — pulls all repos, pushes to GitHub+Codeberg, runs Lighthouse on 5 product URLs, writes results to `quality/lighthouse-results/YYYY-MM-DD.md`
+- `quality/LIGHTHOUSE-MANUAL.md` — Chrome DevTools fallback guide
+
+### Phase 2: Career Coach UX Overhaul (`26fc8c6` on career-coach)
+- Design system palette applied (navy #1B3A4B, teal #2EC4B6, amber #FF9F1C)
+- Hero updated: "Land the job. Know your worth. Own your story."
+- Trust signals: privacy-first, Canadian-built, free to use
+- B2B section: "For career centres and employment agencies" with contact CTA
+- System font stack fallback added
+
+### Phase 3: Codeberg Mirror (`c878078`)
+- Sovereignty docs updated — overnight build auto-pushes to Codeberg when remotes exist
+- Aaron needs to create Codeberg account + add remotes (30 min one-time setup)
+
+### Phase 4: LinkedIn Scheduler (`d335b1d`)
+- 3-week posting calendar (Mon/Wed/Fri, 10 posts)
+- Post 1 ready to copy-paste in `content/linkedin-post-1-ready.md`
+
+### Phase 5: Job Fit Assessment Tool (`aef6224`)
+- `tools/job-fit-assessment.html` — private, local-only tool
+- Paste any job description → AI analysis with match score, role classification, Two Birds compatibility, salary estimate, vetting questions
+- Uses Claude Haiku 4.5 via Anthropic API
+
+### Next Actions
+1. Post LinkedIn Post 1 Monday morning (2 min)
+2. Call Mike K
+3. Try job-fit-assessment.html on any role you're considering
 
 ---
 
@@ -504,5 +541,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-11 at 23:00 EST (Toronto)
+Last updated: 2026-04-12 at 02:22 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -10,6 +10,8 @@ Sorted by priority. Top non-blocked sprint runs next.
 
 **Status key:** READY = run anytime | BLOCKED = waiting on something | DONE = completed
 
+> **MANDATORY:** Every sprint must run Phase 0 (process pending captures) before doing anything else. Check `pending-capture.md` first. See `sprint-template.md` for the Phase 0 instructions.
+
 ---
 
 ## S-001: Voice Layer — Keyword Command Map (L4)

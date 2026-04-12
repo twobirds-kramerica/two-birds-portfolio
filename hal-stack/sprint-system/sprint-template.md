@@ -1,6 +1,7 @@
 <!--
-STATUS: v0.1 — TEMPLATE
+STATUS: v0.2 — TEMPLATE
 Created: 2026-04-11 16:10 EST (Toronto)
+Updated: 2026-04-11 22:58 EST (Toronto)
 -->
 
 # Sprint Template
@@ -25,7 +26,22 @@ AUTONOMOUS SPRINT — [TITLE]
 Repo: C:\twobirds\two-birds-portfolio\
 Read SESSION-STATE.md before starting. Commit after each phase.
 
-[Complete sprint prompt here — ready to paste into Claude Code as-is]
+PHASE 0 — PROCESS PENDING CAPTURES (mandatory)
+
+Read hal-stack/sprint-system/pending-capture.md.
+If the "Current Queue" section contains any items:
+1. For each item, route to destination based on TYPE:
+   - human-backlog → append to sprint-system/human-backlog.md
+   - story → append to backlog/stories.md
+   - epic → append to backlog/epics.md
+   - blocker → flag at top of session results as highest priority
+   - issue → append to backlog/stories.md as P1 bug
+2. Preserve priority, category, context, and action
+3. Clear merged items from pending-capture.md (keep header, empty queue)
+4. Commit: "chore(hal): merged [N] captured items from pending queue"
+If pending-capture is empty, skip to Phase 1.
+
+[PHASE 1+ — Sprint-specific work here]
 
 FINAL STEP: Update SESSION-STATE.md, auto-generate context export,
 commit, push to master.
@@ -39,11 +55,12 @@ commit, push to master.
 
 ## Rules Every Sprint Prompt Must Include
 
-1. `Read SESSION-STATE.md before starting`
-2. `Commit after each phase`
-3. `Update SESSION-STATE.md` at the end
-4. `Auto-generate context export` at the end
-5. `Push to master` at the end
-6. Quality over completeness
-7. No scope creep — improvements go to backlog
-8. Plain language, timestamps on all files
+1. **PHASE 0 — Process pending captures.** NON-NEGOTIABLE. Every sprint checks `pending-capture.md` first so nothing Aaron logged gets lost.
+2. `Read SESSION-STATE.md before starting`
+3. `Commit after each phase`
+4. `Update SESSION-STATE.md` at the end
+5. `Auto-generate context export` at the end
+6. `Push to master` at the end
+7. Quality over completeness
+8. No scope creep — improvements go to backlog
+9. Plain language, timestamps on all files

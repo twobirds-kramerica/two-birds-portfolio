@@ -1,0 +1,16 @@
+{
+  "commands": [
+    { "trigger": "next sprint", "action": "sprint", "target": "next", "description": "Execute the top non-blocked sprint from sprint-queue.md" },
+    { "trigger": "retro", "action": "retro", "description": "Read and report logs/RETRO.md contents" },
+    { "trigger": "state", "action": "state", "description": "Read SESSION-STATE.md, orient, report top 3 next actions" },
+    { "trigger": "dashboard", "action": "dashboard", "description": "Read WIP-DASHBOARD.md, report full portfolio status" },
+    { "trigger": "hal", "action": "hal", "description": "Read HAL-BACKLOG.md, report next infrastructure item" },
+    { "trigger": "journey", "action": "journey", "description": "Read latest journey archive entry, summarise progress" },
+    { "trigger": "stop", "action": "stop", "description": "Stop current work, commit progress, push" },
+    { "trigger": "status", "action": "status", "description": "Git status across all repos" },
+    { "trigger": "commit", "action": "commit", "description": "Stage and commit current changes" },
+    { "trigger": "push", "action": "push", "description": "Push current branch to origin" },
+    { "trigger": "backlog", "action": "backlog", "description": "Read human-backlog.md, report open items" },
+    { "trigger": "capture", "action": "capture", "description": "Append item to pending-capture.md" }
+  ]
+}

@@ -48,6 +48,18 @@ Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md,
 
 _(Both items are in CRITICAL section above)_
 
+### NOW (from pending-capture merge)
+
+- [ ] **⚠ P1 BLOCKER: Morning urgency question** — Aaron flagged a P1 item in tonight's Claude.ai chat. The content was not captured — only the priority. **Aaron: add the actual question here.** Blocks sprint planning until answered. (Source: capture Apr 12)
+
+- [ ] **Fix "Claude too reactive" pattern** — Update culture-spec.md with "proactive, not reactive" rule. Review persona definitions for passivity. Add "proactive flags" section to sprint template. This is a PATTERN FIX. **20 min.** (Source: capture Apr 12, P1)
+
+- [ ] **Clarify NB layer concept** — Aaron discussed an "NB layer" in Claude.ai chat. Add description so it can be evaluated. **2 min.** (Source: capture Apr 12)
+
+- [ ] **Clarify employability project scope** — Active job search, career positioning, or insurance? Defines E15 epic scope. **2 min.** (Source: capture Apr 12)
+
+- [ ] **Paste or summarise Sprint 22-25 plans** — Plans discussed in Claude.ai chat but not captured. Need to convert to sprint-queue.md entries. **10 min.** (Source: capture Apr 12)
+
 ### SOON
 
 - [ ] **Read Discovery Report** — `hal-stack/context-system/ingestion/DISCOVERY-REPORT.md`. Top discovery: "faceless brand" was never a standalone plan — it's a values thread (now captured). **5 min.** (Source: S16)

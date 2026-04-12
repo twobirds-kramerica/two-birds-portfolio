@@ -76,3 +76,7 @@ Tactical work items derived from epics. Each layer-tagged.
 | ID | Story | Layer | Priority | Status | Blocked By |
 |----|-------|-------|----------|--------|------------|
 | SC-001 | Verify capture command loop works end-to-end | L1-L4 | P3 | **DONE** (verified this run) | — |
+| SC-002 | Journey archive update — write chapters 4+ for April 2-12 (10-day gap) | L1-L4 | P2 | Pending | — |
+| SC-003 | NB (Notebook) layer idea — Aaron to clarify concept, then evaluate for HAL Stack | L1-L4 | P2 | Pending | Aaron [VERIFY: what is the NB layer?] |
+| SC-004 | Career frame "AI product evaluator / critical user" — capture in brand guidelines, evaluate positioning impact | L1-L4 | P1 | Pending | — |
+| SC-005 | Sprint 22-25 draft plans — convert to sprint-queue.md entries | L1-L4 | P2 | Pending | Aaron [VERIFY: paste or summarise plans] |

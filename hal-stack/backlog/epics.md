@@ -120,6 +120,14 @@ All epics layer-tagged per sovereignty model.
 **Next:** Create skills as needs emerge. Don't pre-build — let practice drive the library.
 **Blockers:** None
 
+## E15: Employability Project
+**Layer:** L1-L4
+**Priority:** P2
+**Status:** CAPTURED (pending-capture merge, April 12 2026)
+**What:** Formalise employability as a tracked workstream. Connects to 56 career conversations in Claude.ai export and employment-recovery.md.
+**Next:** Aaron to clarify intent — active job search, career positioning, or employability insurance? [VERIFY]
+**Blockers:** Aaron — scope clarification
+
 ## E14: Full Decapitation Audit
 **Layer:** L1-L4
 **Priority:** P2

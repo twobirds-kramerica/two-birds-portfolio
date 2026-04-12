@@ -118,14 +118,14 @@ Commit per phase per repo. Update SESSION-STATE.md, push both repos.
 
 ---
 
-## S-003: DCC Content Freshness Rules + Script
+## S-003: DCC Content Freshness Rules + Script ✅
 
 **Priority:** P2
 **Duration:** 1 hour
-**Status:** READY
-**Blocked by:** —
+**Status:** DONE (2026-04-12)
 **Layer:** L4-native
 **Story refs:** S6.1, S6.2
+**Completed:** Rules defined, script built (252 DCC files scanned, all fresh), README written.
 
 ### Prompt
 
@@ -403,3 +403,4 @@ Commit per phase. Push to main.
 |--------|-------|-----------|
 | S-001 | Voice Keyword Command Map | 2026-04-12 (next sprint auto-run) |
 | S-002 | DCC Logo Finalization | 2026-04-11 (Session 20) |
+| S-003 | Content Freshness Rules + Script | 2026-04-12 (next sprint auto-run) |

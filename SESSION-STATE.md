@@ -4,6 +4,15 @@
 
 ---
 
+## "next sprint" auto-run — Phase 0 + S-003 ✅
+
+**Date:** 2026-04-12
+**Phase 0:** 7 pending captures merged (4 stories → stories.md, 1 epic → E15 Employability, 2 items → human-backlog including P1 "Claude too reactive" feedback and P1 blocker needing Aaron's input)
+**Sprint S-003:** Content freshness system built — staleness rules, check-freshness.js (252 DCC files scanned, all fresh), README
+**Next READY sprint:** S-004 (Context Export to CLAUDE.md)
+
+---
+
 ## Overnight Max-Use Sprint ✅
 
 **Date:** 2026-04-12 ~02:11-02:22 EST (Toronto)

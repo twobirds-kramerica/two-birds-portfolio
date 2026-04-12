@@ -17,6 +17,7 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-12 | S23: Employability Dossier | Career | L1 | Skills inventory (9 skills), gap analysis, 7 gig platforms, 5 full-time role types, 29 CV questions | Active |
 | 2026-04-11 | S21: Capture System (full) | HAL | L1-L4 | Pending capture, prompt generator, mandatory Phase 0, userPreferences setup. Full run→retro→capture→merge loop. | Active |
 | 2026-04-11 | S20: DCC V07 + Brand Research | Branding, DCC, HAL | L1 | DCC heart-bulb finalized, brand research imported, sovereignty philosophy bridges brand+architecture, TBI is placeholder name | Active |
 | 2026-04-11 | S19: Human Backlog Consolidation | HAL, Employment | L1-L4 | Master backlog (25 items), employment recovery (56 convos mapped) | Active |

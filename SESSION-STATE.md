@@ -1,6 +1,30 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (Overnight Max-Use Sprint)
+**Last Session:** April 12, 2026 (Session 23 -- Employability Dossier)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 23 -- Employability Dossier Foundation ✅
+
+**Date:** 2026-04-12 ~14:43-14:52 EST (Toronto)
+**Machine:** EZbook
+
+### What Was Built
+Evidence base for CV and job applications. Does NOT contain a CV. Contains the raw material.
+
+**Files created in `career/employability-dossier/`:**
+- `skills-inventory.md` -- 9 skills with evidence from 180+ commits and 21 sessions
+- `gap-analysis.md` -- honest gaps (2 high-severity: no paid AI eval, CA$0 MRR) with closers
+- `short-term-gig-research.md` -- 7 platforms researched. Top 3: Outlier, Surge, Scale
+- `full-time-target-roles.md` -- 5 role types with real postings. Top fit: Product Ops (70%)
+- `cv-interview-questions.md` -- 29 questions for Aaron (mostly multiple choice)
+- `README.md` -- how to use the dossier
+
+### Key Finding
+Anthropic actively hires for Product Operations and Safeguards roles that don't require CS/ML. "About half our technical staff had no prior ML experience." Cohere (Toronto) is the most Canada-friendly AI company but their job board was down during research.
+
+### Next Action
+**Aaron answers the 29 CV interview questions (15-20 min).** The CV gets built from the answers.
 
 ---
 
@@ -578,5 +602,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 12:56 EST (Toronto)
+Last updated: 2026-04-12 at 14:52 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

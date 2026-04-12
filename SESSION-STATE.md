@@ -1,6 +1,16 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (Session 23 -- Employability Dossier)
+**Last Session:** April 12, 2026 (Journey Archive Sync)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Journey Archive Sync -- Chapter 6 ✅
+
+**Date:** 2026-04-12 ~15:00 EST (Toronto)
+**File:** `journey/narrative/chapter-06-the-night-the-loop-closed.md` (87 lines)
+**Content:** Raw entry covering April 11-12. The capture system build, LinkedIn launch, brand research import, DCC logo finalisation, the retro system failure Aaron caught, the journey archive rediscovery, and the first fully autonomous "next sprint" runs. Central theme: Aaron's instinct to push back on confident-but-wrong AI output is the differentiator, and it cannot be automated.
+
+Note: Chapters 4 and 5 are referenced in the Claude.ai export (Session 16) but were created inside Claude.ai chats, not in Claude Code. They exist as named moments ("The Human System Problem," "Float With Freedom 100%") in the DCC MegaBuild conversation but were never committed as separate chapter files. Chapter 6 picks up the narrative thread directly.
 
 ---
 
@@ -602,5 +612,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 14:52 EST (Toronto)
+Last updated: 2026-04-12 at 15:02 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

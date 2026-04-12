@@ -4,29 +4,32 @@
 
 ---
 
-## Session 21 — Capture System for Human Backlog ✅
+## Session 21 — Capture System (Full Build) ✅
 
 ### Date/Time
-2026-04-11 ~22:41-22:45 EST (Toronto)
+2026-04-11 ~22:41-23:00 EST (Toronto)
 Machine: EZbook
 
 ### What Was Built
-The capture side of the retro+capture loop. Any Claude instance (Claude.ai, GPT, Gemini) can now generate a formatted backlog item that Aaron pastes into Claude Code. Items queue in `pending-capture.md` and auto-merge on the next sprint.
+Complete capture system: pending queue, prompt generator (with honesty rules + emergency P1 handling), mandatory Phase 0 in all sprints (auto-merge captured items), and Claude.ai userPreferences addition for one-time setup.
 
-### Files Created
-- `hal-stack/sprint-system/pending-capture.md` — the queue file with format template
-- `hal-stack/sprint-system/capture-prompt.md` — instructions for any Claude instance
+### Files Created/Updated
+- `hal-stack/sprint-system/pending-capture.md` — capture queue
+- `hal-stack/sprint-system/capture-prompt.md` — instructions for any Claude instance (honesty rules, emergency P1)
+- `hal-stack/sprint-system/sprint-template.md` — updated with mandatory Phase 0
+- `hal-stack/sprint-system/sprint-queue.md` — Phase 0 reminder added
+- `hal-stack/sprint-system/user-preferences-addition.md` — one-time Claude.ai setup
 
 ### The Complete Loop
-1. **Run:** Aaron types "next sprint" → Claude Code executes
-2. **Review:** Aaron pastes retro prompt into Claude.ai → gets status report
-3. **Capture:** Aaron says "capture: X" in any chat → Claude generates paste-ready prompt
-4. **Merge:** Next "next sprint" run checks pending-capture.md and merges items automatically
+1. **Run:** "next sprint" → Claude Code executes (Phase 0 merges pending captures first)
+2. **Retro:** retro prompt in Claude.ai → status report
+3. **Capture:** "capture: X" in any Claude chat → generates paste-ready prompt
+4. **Merge:** Aaron pastes into Claude Code → item queued → next sprint auto-merges
 
 ### Next Actions
-1. Upload Two Birds logo to LinkedIn (still pending)
-2. Buy domains twobirdsinnovation.com / .ca
-3. Try the full loop: run a sprint, retro it, capture something
+1. Add userPreferences text to Claude.ai settings (2 min, one-time)
+2. Test capture: type "capture: test item" in fresh Claude.ai chat
+3. Upload Two Birds logo to LinkedIn (still pending)
 
 ---
 
@@ -484,5 +487,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-11 at 22:45 EST (Toronto)
+Last updated: 2026-04-11 at 23:00 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

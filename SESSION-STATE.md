@@ -1,6 +1,17 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (Return-to-Work Plan)
+**Last Session:** April 12, 2026 (DCC National Canada Expansion)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## DCC National Canada Expansion ✅
+
+**Date:** 2026-04-12 ~19:35-19:45 EST (Toronto)
+**Repo:** digital-confidence (`c159c4d`)
+
+DCC is now Canada-wide. Created 14 JSON files covering all 13 provinces/territories plus a federal fallback, each with telehealth, consumer protection, anti-fraud, library, scam alerts, and 211 services. Built `location.js` with province picker (13 buttons, WCAG AA, bilingual EN/FR), localStorage persistence, and Nominatim geocoding (no API key needed). Homepage updated with location bar and national meta tags. Quebec auto-switches to French. All resource data sourced from government websites.
+
+**Next:** Aaron tests province picker on phone, verifies Quebec language switch, updates B2B pitch to say "Canada-wide."
 
 ---
 
@@ -627,5 +638,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 17:28 EST (Toronto)
+Last updated: 2026-04-12 at 19:45 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

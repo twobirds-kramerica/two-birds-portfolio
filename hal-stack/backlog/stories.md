@@ -70,3 +70,9 @@ Tactical work items derived from epics. Each layer-tagged.
 | S6.1 | Define "stale" rules per content type | L4 | P3 | Pending | — |
 | S6.2 | Build freshness check script (PowerShell or Node) | L4 | P3 | Pending | S6.1 |
 | S6.3 | Wire to n8n cron (when n8n installed) | L3 | P3 | Pending | n8n |
+
+## Captured Items (merged from pending-capture.md)
+
+| ID | Story | Layer | Priority | Status | Blocked By |
+|----|-------|-------|----------|--------|------------|
+| SC-001 | Verify capture command loop works end-to-end | L1-L4 | P3 | **DONE** (verified this run) | — |

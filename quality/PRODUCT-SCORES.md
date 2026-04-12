@@ -1,6 +1,6 @@
 # Product Scores — Two Birds Innovation
 
-**Last updated:** April 5, 2026
+**Last updated:** April 12, 2026
 **Rule:** Lowest scoring product gets next sprint priority.
 
 ---
@@ -66,13 +66,13 @@
 ### Career Coach
 | Dimension | Score | Notes |
 |-----------|-------|-------|
-| Mobile UX | 5/10 | Has some responsive rules but never fully audited at 375px. |
-| Accessibility | 4/10 | Never audited with axe. Voice input exists (good). |
-| Trust | 7/10 | Privacy-first, data in browser, API key user-entered. |
-| Clarity of value | 7/10 | Onboarding flow is clear. Purpose obvious after 30 seconds. |
-| Revenue readiness | 3/10 | No B2B pricing, no sales path, no pilot offer. Monetisation deferred. |
-| Differentiation | 5/10 | Crowded market. LLM portability + privacy-first are differentiators but not marketed. |
-| **Total** | **31/60** | **← LOWEST — next sprint priority** |
+| Mobile UX | 7/10 | Design system typography applied. 375px breakpoints active. Full-width CTAs on mobile. Heading scale responsive. |
+| Accessibility | 6/10 | axe-core QA panel active (?qa=true). 44px tap targets enforced. 16px min font. |
+| Trust | 8/10 | Privacy-first badges added. Canadian-built badge. "Free to use" badge. Privacy messaging clear. |
+| Clarity of value | 8/10 | Hero: "Land the job. Know your worth. Own your story." Immediate clarity. |
+| Revenue readiness | 6/10 | B2B licensing section added with CTA. Employment agencies, Ontario Works, colleges targeted. |
+| Differentiation | 6/10 | LLM portability + privacy-first + Canadian positioning now visible in trust signals. |
+| **Total** | **41/60** | **Updated Apr 12 — up from 31** |
 
 **P0 Gate:** Security ✅ | Lighthouse ⏳ | UX Review ⏳
 
@@ -106,7 +106,7 @@
 
 ## Priority Order (by score, revenue products only)
 
-1. **Career Coach** — 31/60 (lowest revenue product)
+1. **Aaron Patzalek** — 34/60 (lowest revenue product)
 2. **Aaron Patzalek** — 34/60
 3. **Two Birds Innovation** — 38/60
 4. **Clarity** — 38/60
@@ -119,3 +119,4 @@
 | Date | DCC | Clarity | TBI | Career Coach | Aaron P |
 |------|-----|---------|-----|-------------|---------|
 | Apr 5, 2026 | 43 | 38 | 38 | 31 | 34 |
+| Apr 12, 2026 | 43 | 38 | 38 | **41** | 34 |

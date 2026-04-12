@@ -1,7 +1,9 @@
 # Codeberg Mirror Status
 
-**Date:** April 4, 2026
+**Date:** April 12, 2026 (updated)
 **Audit result:** No Codeberg mirrors configured on any repository.
+**Overnight build:** `run-overnight-build.bat` now auto-pushes to Codeberg for any repo with the remote configured. Aaron just needs to do the one-time setup below.
+**Float Free points when complete:** +5 points
 
 ---
 

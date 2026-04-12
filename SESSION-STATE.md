@@ -1,6 +1,32 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 11, 2026 (Session 20 — DCC V07 Finalized + Brand Research)
+**Last Session:** April 11, 2026 (Session 21 — Capture System)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Session 21 — Capture System for Human Backlog ✅
+
+### Date/Time
+2026-04-11 ~22:41-22:45 EST (Toronto)
+Machine: EZbook
+
+### What Was Built
+The capture side of the retro+capture loop. Any Claude instance (Claude.ai, GPT, Gemini) can now generate a formatted backlog item that Aaron pastes into Claude Code. Items queue in `pending-capture.md` and auto-merge on the next sprint.
+
+### Files Created
+- `hal-stack/sprint-system/pending-capture.md` — the queue file with format template
+- `hal-stack/sprint-system/capture-prompt.md` — instructions for any Claude instance
+
+### The Complete Loop
+1. **Run:** Aaron types "next sprint" → Claude Code executes
+2. **Review:** Aaron pastes retro prompt into Claude.ai → gets status report
+3. **Capture:** Aaron says "capture: X" in any chat → Claude generates paste-ready prompt
+4. **Merge:** Next "next sprint" run checks pending-capture.md and merges items automatically
+
+### Next Actions
+1. Upload Two Birds logo to LinkedIn (still pending)
+2. Buy domains twobirdsinnovation.com / .ca
+3. Try the full loop: run a sprint, retro it, capture something
 
 ---
 
@@ -458,5 +484,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-11 at 18:35 EST (Toronto)
+Last updated: 2026-04-11 at 22:45 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

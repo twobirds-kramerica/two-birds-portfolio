@@ -4,6 +4,26 @@
 
 ---
 
+## Trimmed Sprint — Career Coach UX, Job Fit, Lighthouse ✅
+
+**Date:** 2026-04-12 ~12:50-12:56 EST (Toronto)
+**Machine:** EZbook
+
+### Phase 1: Career Coach UX Overhaul (`0159a5b` on career-coach)
+- Typography scale: h1 40/28, h2 32/24, h3 24/20 (desktop/mobile)
+- Full-width CTAs on mobile, 44px tap targets enforced
+- B2B section updated: employment agencies, Ontario Works, college career centres
+- Score: 31 → **41/60** (+10 points)
+
+### Phase 2: Job Fit Tool Update (`12258a9`)
+- "Brutally honest" system prompt, municipal/government role type, print button
+- Profile enhanced with unfair advantages and $50/hour minimum
+
+### Phase 3: Lighthouse Directory (`bc38e1f`)
+- README + HOW-TO-RUN guide in `quality/lighthouse-results/`
+
+---
+
 ## "next sprint" auto-run — S-004 ✅
 
 **Date:** 2026-04-12
@@ -558,5 +578,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 02:22 EST (Toronto)
+Last updated: 2026-04-12 at 12:56 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

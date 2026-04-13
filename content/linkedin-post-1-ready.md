@@ -1,11 +1,17 @@
-Three thousand new workers are about to move to St. Thomas.
+A few weeks ago the Digital Confidence Centre only helped seniors in Southwestern Ontario.
 
-That's what happens when a $7 billion battery plant starts hiring. But most businesses in Elgin County are still running on paper forms, manual invoicing, and spreadsheets held together with hope.
+Today it helps seniors anywhere in Canada.
 
-The AI gap in Southwestern Ontario isn't about technology. It's about awareness. The owner of a 20-person manufacturing shop doesn't know that the invoice entry taking her staff 10 hours a week could take one hour. Nobody has shown her.
+Every province. Every territory. Bilingual. Free.
 
-That's what I do now. I spent 20 years building digital products at Telus. Now I build AI tools for the businesses on my street — and I show them what's possible before the wave hits.
+When you select your province, the platform automatically shows you local resources -- your provincial telehealth line, your regional consumer protection agency, your nearest library tech help programme.
 
-If you're a business owner in Elgin County and you're curious about AI but don't know where to start, I built a free 60-second diagnostic that tells you exactly where to focus. Link in comments.
+Select Quebec? The whole site switches to French.
 
-#AI #SmallBusiness #ElginCounty #StThomas #DigitalTransformation
+Built in one sprint. Zero API keys. No vendor dependency. Just a location.js file, 14 JSON files, and OpenStreetMap.
+
+If you run a library, a community centre, or a municipal service -- and you're tired of seniors being left behind online -- this is free to use and free to license.
+
+DCC: twobirds-kramerica.github.io/digital-confidence
+
+#DigitalInclusion #Seniors #Canada #PublicLibraries #GovTech

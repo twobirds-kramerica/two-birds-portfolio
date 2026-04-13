@@ -1,6 +1,21 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 13, 2026 (Notion Bridge -- Job Search Workbench)
+**Last Session:** April 13, 2026 (P2 Voice-Check Protocol)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## P2 Voice-Check Protocol for Claude Compliance ✅
+
+**Date:** 2026-04-13 ~18:56 EST (Toronto)
+**Commit:** `a5565b4`
+
+**What was added:** `hal-stack/sprint-system/backlog/P2-voice-check-protocol.md` with full problem statement, resolution mechanism, exact user preferences text, escalation path, and acceptance criteria. Sprint S-009 added to sprint-queue.md as READY (human task, not Claude Code sprint).
+
+**Why:** Claude slipped on the em dash rule during the Job Search Workbench build session despite the rule being in user preferences. The voice-check tag mechanism forces Claude to output a compliance line on every written draft, making silent slips visible without Aaron having to manually re-read every output.
+
+**Skipped:** `hal-stack/protocols/voice-check.md` reference doc from the acceptance criteria is not yet written. Tracked as a sub-task on the backlog item itself. Will be created when Aaron confirms the protocol works after adding it to user preferences.
+
+**Next recommended action:** Aaron adds the voice-check protocol text to Claude.ai user preferences (Settings -> Profile -> User Preferences), then tests in a fresh chat by requesting a short email draft and verifying the compliance tag appears.
 
 ---
 

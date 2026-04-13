@@ -1,21 +1,29 @@
 # Retro
-Date: April 12, 2026
-Session: DCC Canada-wide messaging update
+Date: April 12-13, 2026
+Session: DCC definitive bug fix sprint
 
-Tasks completed:
-1. DCC pitch deck -- both versions updated from Ontario to Canada-wide, Quebec callout added
-2. Library sales one-pager -- Canada-wide positioning, 13 provinces stat added
-3. Two Birds Innovation site -- DCC product card updated to coast to coast, 29 modules, Quebec ready
-4. Product scores -- DCC differentiation 9 to 10/10, total 43 to 46/60
-5. LinkedIn Post 1 -- replaced with DCC national launch story, ready to paste Monday
+Fixed (169 files changed across 6 groups):
+A: Critical -- "Reviewed by Aaron" removed from all 60+ module pages and homepage, admin stamps removed, footer tagline updated to "all Canadians" site-wide, dark mode contrast boosted (--text-muted #9E9E9E to #BDBDBD, --text-secondary #B0B0B0 to #D0D0D0), dark mode callout/badge/card text forced to #F7FAFC
+D: Listen button -- complete rewrite. Scattered per-section buttons replaced with ONE "Read this page aloud" button per page. Global stop button (fixed, bottom-right). Speed controls preserved.
+E: Content -- "seniors" softened in footer tagline (kept in SEO meta), dyslexia font toggle removed from all pages, sort/filter buttons removed, newsletter section removed (no email infrastructure)
+F: Logic -- progress section hidden on completely fresh visits (no localStorage), sort toggle disabled in module-grid.js
 
-DCC is now positioned as a national product in all materials.
-The LinkedIn post for Monday tells the national launch story.
+Automated QA rules documented in quality/AUTOMATED-QA-RULES.md.
+Standing rule: Aaron is never the QA department.
+
+Remaining items for a follow-up sprint:
+- B group (header/nav rebuild) -- needs careful mobile testing
+- C group (search simplification) -- needs search.js rewrite
+- B3 (back button history) -- needs testing across browsers
+- B4 (help button relocation) -- needs layout adjustment
+- F2 (complete badge fix) -- needs module-grid.js update
+- F3 (speed controls compact) -- partially addressed in new read-aloud button
 
 Next for Aaron:
-- Post LinkedIn Post 1 Monday morning (2 minutes)
-- Test DCC province picker on phone
-- Call Mike K -- still the most important human task
+- Open DCC on Samsung S24 Android Chrome dark mode
+- Verify: "Reviewed by Aaron" is gone from all module pages
+- Verify: "Read this page aloud" button reads text, never navigates
+- Verify: progress section is hidden on fresh visit (try incognito)
 
-Last updated: 2026-04-12 at 21:56 EST (Toronto)
+Last updated: 2026-04-12 at 23:36 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

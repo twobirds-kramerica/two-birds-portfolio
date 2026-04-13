@@ -1,6 +1,31 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (DCC Canada-Wide Messaging)
+**Last Session:** April 12, 2026 (DCC Definitive Bug Fix Sprint)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## DCC Definitive Bug Fix Sprint ✅
+
+**Date:** 2026-04-12 ~23:24-23:36 EST (Toronto)
+**Repo:** digital-confidence (`3c2466c` -- 169 files changed, 219 insertions, 518 deletions)
+
+**Fixes applied:**
+- A1/A2: "Reviewed by Aaron" removed from all 60+ module pages, homepage, FAQ. Zero remaining.
+- A4: Dark mode contrast fixed -- text-muted boosted to #BDBDBD, text-secondary to #D0D0D0, callout/badge/card text forced to #F7FAFC in dark mode
+- D1: Listen button rewritten -- one "Read this page aloud" per page (replaces scattered per-section buttons), global stop button, speed controls preserved
+- E1: Footer tagline updated to "A free digital learning programme for all Canadians" (169 files)
+- E2: Dyslexia font toggle removed from all user pages
+- E3: Sort/filter buttons disabled (buildSortToggle returns immediately)
+- F1: Progress section hidden on fresh visits (no userName + no dc-setup-complete = hidden)
+- Newsletter section removed from homepage (no email infrastructure)
+
+**Not yet addressed (follow-up sprint):**
+- B group (header/nav rebuild at 360px)
+- C group (search simplification)
+- B3 (back button history pushState)
+- B4 (help button relocation)
+
+**QA rules documented:** `quality/AUTOMATED-QA-RULES.md`
 
 ---
 
@@ -652,5 +677,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 21:56 EST (Toronto)
+Last updated: 2026-04-12 at 23:36 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

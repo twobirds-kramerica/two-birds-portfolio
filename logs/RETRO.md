@@ -1,22 +1,22 @@
 # Retro
 Date: April 13, 2026
-Session: DCC B/C group structural UI fixes
+Session: DCC rework -- module page dark mode fixes
 
-Fixed:
-B1: Header rebuilt -- hamburger stripped of border/background/box-shadow, white icon in dark mode. Site title responsive (full name >360px, "DCC" at 360px). Title is now a link to homepage.
-B2: Nav panel rebuilt -- close button changed from invisible "X" to "Close X" with contrast in dark mode. Site name single line. Gamepad icon replaced with target icon. Interactive Tools links to existing interactive/ directory.
-B3: Back button -- history.pushState intercept keeps users in DCC. Visible "Home" link on every module page (teal, 44px tap target).
-B4: Help button -- 52x52px circle, fixed bottom-right. Bottom sheet with "refresh or tap Home" message. Dark mode styled. No overlap with content (120px padding-bottom already exists).
-C1: Search simplified -- microphone removed. Magnifying glass replaced with clickable search submit button.
-A3: Link scan -- zero real 404s found on homepage.
+Root cause: previous fixes applied to index.html or JS functions that only ran on homepage. Module pages were not covered. This sprint fixed the root by putting all changes in shared CSS (main.css) and shared JS (app.js, search.js, accessibility.js, speech-config.js).
 
-Verification: 8-item checklist in quality/lighthouse-results/2026-04-13-bc-group-fix.md
+Fixed (141 files, 6 issues):
+1. Search icon + Home link: removed from header site-wide. buildMobileSearch() disabled in search.js. initTopBarHome() disabled in accessibility.js. Header is now hamburger + title + lang only on ALL pages.
+2. Read Aloud button: compact single-line styling in main.css. 14px font, max-width 220px, inline-flex. Speed controls nowrap.
+3. Help button overlap: padding-bottom 80px on all content areas via main.css.
+4. Speed control: no longer hidden behind help button (covered by padding fix).
+5. Resume banner: dark mode contrast override in main.css. White text on dark teal background.
+6. Accordion/summary: dark mode contrast override in main.css. White text, teal border.
 
-Aaron's next verification on Samsung S24:
-1. Open DCC in dark mode -- hamburger: no gray box, white icon
-2. Open nav panel -- "Close X" visible in dark mode
-3. Tap browser back -- stays on DCC, goes to homepage
-4. Help button -- bottom-right circle, bottom sheet appears
+Sidebar close button: updated from bare X to "Close X" on all 155 pages with bilingual data attrs.
 
-Last updated: 2026-04-13 at 02:00 EST (Toronto)
+Standing rule enforced: all CSS/JS fixes go in shared files only. Never patch individual HTML pages.
+
+Aaron verifies on S24: open digital-literacy-101.html in dark mode. All 6 items should be clean.
+
+Last updated: 2026-04-13 at 02:22 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

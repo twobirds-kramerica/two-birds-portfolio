@@ -1,6 +1,27 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 13, 2026 (DCC B/C Group Structural UI)
+**Last Session:** April 13, 2026 (DCC Rework -- Module Page Dark Mode)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## DCC Rework -- Module Page Dark Mode ✅
+
+**Date:** 2026-04-13 ~02:17-02:22 EST (Toronto)
+**Repo:** digital-confidence (`3825ca4` -- 141 files changed)
+
+**Root cause:** Previous fixes only applied to homepage or JS functions that only ran on index.html. Module pages (digital-literacy-101.html, module-1.html through module-27.html, all answers/, resources/, tips/ pages) were not covered.
+
+**Fix approach:** All changes in shared files (main.css, app.js, search.js, accessibility.js, speech-config.js). No individual HTML patches.
+
+**6 fixes applied globally:**
+1. Search icon + Home link removed from header (buildMobileSearch and initTopBarHome disabled)
+2. Read Aloud button: compact single-line (14px, max 220px, inline-flex)
+3. Help button: 80px padding-bottom on all content areas
+4. Speed controls: no longer hidden behind help button
+5. Resume banner: dark mode contrast (white on dark teal)
+6. Accordion/summary: dark mode contrast (white text, teal border)
+
+**Sidebar close button updated on all 155 pages** from bare X to "Close X" with bilingual data attributes.
 
 ---
 
@@ -693,5 +714,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-13 at 02:00 EST (Toronto)
+Last updated: 2026-04-13 at 02:22 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -1,6 +1,17 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 13, 2026 (RETRO Health System + Manual Sync)
+**Last Session:** April 13, 2026 (Notion Bridge -- Job Search Workbench)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Notion Bridge -- Job Search Workbench Pointer ✅
+
+**Date:** 2026-04-13 ~14:34 EST (Toronto)
+**Commit:** `7451c09`
+
+Added `hal-stack/notion-bridge/job-search-workbench.md` -- pointer file connecting the HAL Stack to Aaron's live Notion-based job search system. Contains direct Notion links, the scoring framework reference (Capability 35 / Title 15 / Values 20 / Survivability 15 / Comp 15), database schema, backup plan, and the open GitHub MCP issue.
+
+**Next recommended action:** Resolve GitHub MCP connector issue in Claude.ai settings so commits can flow directly from Claude.ai chat sessions without routing through Claude Code as a two-step.
 
 ---
 

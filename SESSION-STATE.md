@@ -1,6 +1,22 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (DCC Definitive Bug Fix Sprint)
+**Last Session:** April 13, 2026 (DCC B/C Group Structural UI)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## DCC B/C Group Structural UI Fixes ✅
+
+**Date:** 2026-04-13 ~01:51-02:00 EST (Toronto)
+**Repo:** digital-confidence (`e850e91` -- 4 files changed)
+
+**B1:** Header rebuilt -- hamburger has no border/background/box-shadow (gray box removed). Dark mode: white icon. Site title responsive (full name or "DCC", never truncated). Title links to homepage.
+**B2:** Nav panel close button changed from invisible "X" to "Close X" with dark mode contrast. Site name one line. Gamepad icon replaced with target.
+**B3:** Back button intercept -- history.pushState keeps seniors in DCC. Visible "Home" link on all module pages.
+**B4:** Help button -- 52px circle, fixed bottom-right. Bottom sheet with "refresh or Home" message. Dark mode styled.
+**C1:** Search -- microphone removed. Magnifying glass now a clickable search trigger.
+**A3:** Link check -- zero real 404s on homepage.
+
+**Verification:** 8/8 items pass (code-level). Aaron to verify on Samsung S24 dark mode.
 
 ---
 
@@ -677,5 +693,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 23:36 EST (Toronto)
+Last updated: 2026-04-13 at 02:00 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -1,29 +1,22 @@
 # Retro
-Date: April 12-13, 2026
-Session: DCC definitive bug fix sprint
+Date: April 13, 2026
+Session: DCC B/C group structural UI fixes
 
-Fixed (169 files changed across 6 groups):
-A: Critical -- "Reviewed by Aaron" removed from all 60+ module pages and homepage, admin stamps removed, footer tagline updated to "all Canadians" site-wide, dark mode contrast boosted (--text-muted #9E9E9E to #BDBDBD, --text-secondary #B0B0B0 to #D0D0D0), dark mode callout/badge/card text forced to #F7FAFC
-D: Listen button -- complete rewrite. Scattered per-section buttons replaced with ONE "Read this page aloud" button per page. Global stop button (fixed, bottom-right). Speed controls preserved.
-E: Content -- "seniors" softened in footer tagline (kept in SEO meta), dyslexia font toggle removed from all pages, sort/filter buttons removed, newsletter section removed (no email infrastructure)
-F: Logic -- progress section hidden on completely fresh visits (no localStorage), sort toggle disabled in module-grid.js
+Fixed:
+B1: Header rebuilt -- hamburger stripped of border/background/box-shadow, white icon in dark mode. Site title responsive (full name >360px, "DCC" at 360px). Title is now a link to homepage.
+B2: Nav panel rebuilt -- close button changed from invisible "X" to "Close X" with contrast in dark mode. Site name single line. Gamepad icon replaced with target icon. Interactive Tools links to existing interactive/ directory.
+B3: Back button -- history.pushState intercept keeps users in DCC. Visible "Home" link on every module page (teal, 44px tap target).
+B4: Help button -- 52x52px circle, fixed bottom-right. Bottom sheet with "refresh or tap Home" message. Dark mode styled. No overlap with content (120px padding-bottom already exists).
+C1: Search simplified -- microphone removed. Magnifying glass replaced with clickable search submit button.
+A3: Link scan -- zero real 404s found on homepage.
 
-Automated QA rules documented in quality/AUTOMATED-QA-RULES.md.
-Standing rule: Aaron is never the QA department.
+Verification: 8-item checklist in quality/lighthouse-results/2026-04-13-bc-group-fix.md
 
-Remaining items for a follow-up sprint:
-- B group (header/nav rebuild) -- needs careful mobile testing
-- C group (search simplification) -- needs search.js rewrite
-- B3 (back button history) -- needs testing across browsers
-- B4 (help button relocation) -- needs layout adjustment
-- F2 (complete badge fix) -- needs module-grid.js update
-- F3 (speed controls compact) -- partially addressed in new read-aloud button
+Aaron's next verification on Samsung S24:
+1. Open DCC in dark mode -- hamburger: no gray box, white icon
+2. Open nav panel -- "Close X" visible in dark mode
+3. Tap browser back -- stays on DCC, goes to homepage
+4. Help button -- bottom-right circle, bottom sheet appears
 
-Next for Aaron:
-- Open DCC on Samsung S24 Android Chrome dark mode
-- Verify: "Reviewed by Aaron" is gone from all module pages
-- Verify: "Read this page aloud" button reads text, never navigates
-- Verify: progress section is hidden on fresh visit (try incognito)
-
-Last updated: 2026-04-12 at 23:36 EST (Toronto)
+Last updated: 2026-04-13 at 02:00 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

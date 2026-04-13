@@ -391,6 +391,37 @@ Commit per phase. Push to main.
 
 ---
 
+## S-009: Voice-Check Protocol for Claude Compliance
+
+**Priority:** P2
+**Duration:** 15 min (Aaron manual task)
+**Status:** READY
+**Blocked by:** --
+**Layer:** L1
+**Story refs:** P2-voice-check-protocol.md
+
+### Prompt
+
+```
+HUMAN TASK -- NOT A CLAUDE CODE SPRINT
+
+Aaron adds the voice-check protocol text to Claude.ai user
+preferences (Settings -> Profile -> User Preferences).
+
+The exact text is in:
+hal-stack/sprint-system/backlog/P2-voice-check-protocol.md
+
+Then test in a fresh Claude.ai chat by asking Claude to draft
+a short email. Verify the voice-check tag appears at the bottom.
+Test with a deliberate em dash to confirm the tag catches it.
+```
+
+### Expected Outputs
+- Voice-check protocol in Claude.ai user preferences
+- Verified tag emission in a fresh chat
+
+---
+
 ## BLOCKED SPRINTS (waiting on Aaron)
 
 | Sprint | Blocked By | Aaron Action | Time |

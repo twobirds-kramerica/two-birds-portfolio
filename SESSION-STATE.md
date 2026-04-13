@@ -1,6 +1,20 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 12, 2026 (DCC National Canada Expansion)
+**Last Session:** April 12, 2026 (DCC Canada-Wide Messaging)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## DCC Canada-Wide Messaging Update ✅
+
+**Date:** 2026-04-12 ~21:46-21:56 EST (Toronto)
+**Repos updated:** digital-confidence (`922d4c5`), two-birds-portfolio (`e39bf03`), two-birds-innovation (`ecec64b`)
+
+All DCC and sales materials updated from Ontario to Canada-wide:
+- Pitch decks (both versions): Ontario references replaced, Quebec callout added, national grant references
+- Library one-pager: Canada-wide positioning, 13 provinces stat
+- Two Birds Innovation site: DCC product card updated
+- Product scores: DCC 43 to 46/60 (differentiation now 10/10)
+- LinkedIn Post 1 replaced with DCC national launch story, ready for Monday
 
 ---
 
@@ -638,5 +652,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-12 at 19:45 EST (Toronto)
+Last updated: 2026-04-12 at 21:56 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

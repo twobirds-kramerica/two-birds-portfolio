@@ -1,22 +1,33 @@
 # Retro
-Date: April 13, 2026
-Session: DCC rework -- module page dark mode fixes
+Date: April 13, 2026 -- 2:45 AM EST
+Session: Overnight DCC sprint session (April 12-13)
 
-Root cause: previous fixes applied to index.html or JS functions that only ran on homepage. Module pages were not covered. This sprint fixed the root by putting all changes in shared CSS (main.css) and shared JS (app.js, search.js, accessibility.js, speech-config.js).
+## Sprints completed
+1. DCC National Expansion -- commit c159c4d (digital-confidence)
+2. Canada-wide messaging update -- pitch deck, library one-pager,
+   Two Birds Innovation site, LinkedIn Post 1 national
+3. DCC 27-bug fix A/D/E/F -- commit 3c2466c (169 files changed)
+4. DCC B/C group structural UI -- commit e850e91
+5. DCC rework module dark mode -- search removed site-wide,
+   read aloud compact, help overlap, accordion contrast
 
-Fixed (141 files, 6 issues):
-1. Search icon + Home link: removed from header site-wide. buildMobileSearch() disabled in search.js. initTopBarHome() disabled in accessibility.js. Header is now hamburger + title + lang only on ALL pages.
-2. Read Aloud button: compact single-line styling in main.css. 14px font, max-width 220px, inline-flex. Speed controls nowrap.
-3. Help button overlap: padding-bottom 80px on all content areas via main.css.
-4. Speed control: no longer hidden behind help button (covered by padding fix).
-5. Resume banner: dark mode contrast override in main.css. White text on dark teal background.
-6. Accordion/summary: dark mode contrast override in main.css. White text, teal border.
+## System incident
+API Error 500 from Anthropic during RETRO sync sprint.
+Request ID: req_011Ca222F5kVGyfVgtV43mPq
+RETRO was not updated. Manually synced now.
+CTO/CRO personas not yet automated -- Aaron detected failure.
 
-Sidebar close button: updated from bare X to "Close X" on all 155 pages with bilingual data attrs.
+## Human actions morning
+P0: Verify DCC on S24 dark mode -- digital-literacy-101.html
+P1: Post LinkedIn Post 1
+P1: Call Mike K
+P2: B2B email to 1 library
 
-Standing rule enforced: all CSS/JS fixes go in shared files only. Never patch individual HTML pages.
+## Standing rules
+- CRO: Aaron is never QA department
+- All DCC fixes in shared CSS/JS only
+- RETRO.md always in two-birds-portfolio
+- FINAL STEP must always cd to two-birds-portfolio explicitly
 
-Aaron verifies on S24: open digital-literacy-101.html in dark mode. All 6 items should be clean.
-
-Last updated: 2026-04-13 at 02:22 EST (Toronto)
+Last updated: 2026-04-13 at 02:45 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

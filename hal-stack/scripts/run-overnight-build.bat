@@ -72,3 +72,7 @@ git commit -m "chore: overnight build complete — Lighthouse scores updated"
 git push origin master
 
 echo [%date% %time%] Overnight build complete. >> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+
+REM --- RETRO Health Check ---
+echo Running RETRO health check...
+call C:\twobirds\two-birds-portfolio\tools\retro-health-check.bat

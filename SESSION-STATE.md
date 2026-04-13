@@ -1,6 +1,32 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 13, 2026 (DCC Rework -- Module Page Dark Mode)
+**Last Session:** April 13, 2026 (RETRO Health System + Manual Sync)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## RETRO Health System + Manual Sync ✅
+
+**Date:** 2026-04-13 ~02:45 EST (Toronto)
+
+**Incident:** API Error 500 during previous RETRO sync attempt. RETRO.md was not updated after the overnight DCC sprints. Aaron detected the failure (CRO persona in action). Manually recovered.
+
+**Tonight's full sprint summary (5 DCC sprints):**
+1. National expansion -- province picker, 14 JSON files, Nominatim geocoding (`c159c4d`)
+2. Canada-wide messaging -- pitch deck, library pitch, TBI site, LinkedIn, product scores
+3. 27-bug fix A/D/E/F -- 169 files: review stamps, contrast, listen button, seniors, dyslexia toggle (`3c2466c`)
+4. B/C group structural UI -- header, nav panel, back button, help button, search (`e850e91`)
+5. Rework: module page dark mode -- search icon removed site-wide, read aloud compact, accordion contrast (`3825ca4`)
+
+**New infrastructure built:**
+- `logs/RETRO-LAST-RUN.md` -- staleness detection file
+- `logs/ERRORS.md` -- error log for API failures
+- `tools/retro-health-check.bat` -- runs after every sprint
+- `logs/FINAL-STEP-TEMPLATE.md` -- copy-paste template for all future prompts
+
+**Standing rules added:**
+- FINAL STEP must always cd to two-birds-portfolio
+- Error log appended on any command failure
+- Health check runs at end of every overnight build
 
 ---
 

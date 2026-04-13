@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postmortem Dashboard -- Two Birds Innovation</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #F8F9FA; color: #1B3A4B; padding: 20px; line-height: 1.6; }
+    .container { max-width: 700px; margin: 0 auto; }
+    h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    .subtitle { color: #4A5568; font-size: 0.9rem; margin-bottom: 24px; }
+    .card { background: #fff; border: 1px solid #E2E8F0; border-radius: 10px; padding: 20px; margin-bottom: 14px; }
+    .card h3 { font-size: 1.1rem; color: #1B3A4B; margin-bottom: 4px; }
+    .card .date { font-size: 0.82rem; color: #4A5568; }
+    .card .type { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-left: 8px; }
+    .type-weekly { background: #E6FAF8; color: #00897B; }
+    .type-incident { background: #FFEBEE; color: #C62828; }
+    .type-monthly { background: #E3F2FD; color: #1565C0; }
+    .metrics { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+    .metric { font-size: 0.85rem; color: #4A5568; }
+    .metric strong { color: #1B3A4B; }
+    a { color: #2EC4B6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media print { body { padding: 0; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Postmortem Dashboard</h1>
+  <p class="subtitle">Two Birds Innovation -- weekly and incident retrospectives</p>
+
+  <div class="card">
+    <h3>April 7-13, 2026 <span class="type type-weekly">Weekly</span></h3>
+    <p class="date">Filed: April 13, 2026</p>
+    <div class="metrics">
+      <div class="metric"><strong>11</strong> items shipped</div>
+      <div class="metric"><strong>4</strong> items broke</div>
+      <div class="metric"><strong>~40%</strong> rework rate</div>
+    </div>
+    <p style="margin-top:8px;font-size:0.88rem;">Key: DCC national expansion, 27-bug fix, Career Coach UX. Root cause of rework: fixes applied per-page not in shared files.</p>
+    <p style="margin-top:6px;"><a href="../postmortems/2026-04-13-weekly.md">View full postmortem</a></p>
+  </div>
+
+  <div class="card">
+    <h3>API Error 500 Incident <span class="type type-incident">Incident</span></h3>
+    <p class="date">April 13, 2026 02:41 AM EST</p>
+    <div class="metrics">
+      <div class="metric"><strong>1</strong> sprint halted</div>
+      <div class="metric"><strong>Manual</strong> recovery</div>
+    </div>
+    <p style="margin-top:8px;font-size:0.88rem;">Anthropic API Error 500 during RETRO sync. Aaron detected failure. RETRO health system built in response.</p>
+    <p style="margin-top:6px;"><a href="../logs/ERRORS.md">View error log</a></p>
+  </div>
+
+  <p style="margin-top:20px;font-size:0.82rem;color:#4A5568;">Template: <a href="../postmortems/TEMPLATE-weekly.md">TEMPLATE-weekly.md</a></p>
+</div>
+</body>
+</html>

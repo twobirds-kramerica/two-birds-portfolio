@@ -21,15 +21,16 @@
 ### DCC — Digital Confidence Centre
 | Dimension | Score | Notes |
 |-----------|-------|-------|
-| Mobile UX | 6/10 | 768px + 375px CSS added Easter sprint. Needs axe audit verification. |
-| Accessibility | 8/10 | WCAG AA targeted. 4-level font, dark mode, skip links. axe audit needed. |
-| Trust | 9/10 | Trust-first design, free model, warm tone, confidence checks. |
-| Clarity of value | 6/10 | Homepage hero is generic. Needs stronger "what this is" statement. |
-| Revenue readiness | 5/10 | Pitch deck exists but not linked from homepage. Pilot CTA buried. |
-| Differentiation | 9/10 | Bilingual + WCAG + senior-specific + 29 modules = unique in Canada. |
-| **Total** | **43/60** | |
+| Mobile UX | 6/10 | 768px + 375px CSS added Easter sprint. Province picker at 375px. |
+| Accessibility | 8/10 | WCAG AA targeted. Province picker keyboard navigable, aria-modal. |
+| Trust | 9/10 | Trust-first design, free model, warm tone, province-specific resources. |
+| Clarity of value | 7/10 | Location bar shows province. National reach communicated. |
+| Revenue readiness | 6/10 | Pitch deck updated to Canada-wide. Library pitch updated. National B2B story. |
+| Differentiation | 10/10 | Only free, bilingual, WCAG AA, province-specific senior digital literacy platform in Canada. |
+| **Total** | **46/60** | **Updated Apr 12 — national expansion (+3 from 43)** |
 
 **P0 Gate:** Security ✅ | Lighthouse ⏳ | UX Review ⏳
+**April 12, 2026:** National expansion complete. Province data layer covering all 13 provinces/territories. Auto-localizes resources. Quebec auto-switches to French. Market addressable: 2,100+ library branches, 3,700+ municipalities across Canada.
 
 ---
 
@@ -119,4 +120,5 @@
 | Date | DCC | Clarity | TBI | Career Coach | Aaron P |
 |------|-----|---------|-----|-------------|---------|
 | Apr 5, 2026 | 43 | 38 | 38 | 31 | 34 |
-| Apr 12, 2026 | 43 | 38 | 38 | **41** | 34 |
+| Apr 12 (AM) | 43 | 38 | 38 | **41** | 34 |
+| Apr 12 (PM) | **46** | 38 | 38 | 41 | 34 |

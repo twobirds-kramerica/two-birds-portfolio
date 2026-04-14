@@ -1,6 +1,27 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 13, 2026 (P2 Voice-Check Protocol)
+**Last Session:** April 14, 2026 (DCC S24 Mobile Layout Fix)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## DCC S24 Mobile Layout Fix ✅
+
+**Date:** 2026-04-14 ~00:27 EST (Toronto)
+**Repo:** digital-confidence (`3f8a777`)
+
+**Problem:** DCC rendering with left-orientation skew on Samsung Galaxy S24 in portrait mode. Content cropped on edges.
+
+**Root cause:** The `.sidebar` element was `position: fixed; left: 0; width: 280px` with no CSS to hide it off-screen on mobile. It overlaid the top-left content, creating apparent left skew. No dedicated 360-430px breakpoint existed for structural layout.
+
+**Fix:** Added `@media (max-width: 430px)` block:
+- Sidebar hidden off-screen by default (`transform: translateX(-100%)`), visible only when `.open`
+- All containers capped at `100vw` with `box-sizing: border-box`
+- Main content padding reduced from 24px to 16px per side
+- Tables, pre/code blocks get horizontal scroll instead of viewport breakout
+
+**Verification doc:** `quality/lighthouse-results/2026-04-14-s24-mobile-fix.md`
+
+**Next action:** Aaron opens DCC on S24 in portrait mode and confirms: no left skew, sidebar slides in/out on hamburger tap, no horizontal scroll possible.
 
 ---
 

@@ -46,6 +46,10 @@ L4: Aider + Ollama + DeepSeek-Coder (fully local)
 
 Risk: LOW — all work product lives in git, not in Claude.
 Priority: Later — working well, no urgency to build fallback.
+L2 Evaluation (April 14, 2026): Aider assessed as viable L2 fallback.
+  Installation blocked on EZbook (no Python). Estimated swap time: 22 min
+  on clean machine, 7 min if Python installed. See aider-evaluation.md.
+  Status: DOCUMENTED BUT UNVERIFIED — needs Python install to test.
 ```
 
 ## 2. Claude.ai (Web Chat)

@@ -216,12 +216,11 @@ Commit. Update SESSION-STATE.md, push to master.
 
 ---
 
-## S-005: Test Aider as L2 Claude Code Fallback
+## S-005: Test Aider as L2 Claude Code Fallback ✅ (partial)
 
 **Priority:** P2
 **Duration:** 1 hour
-**Status:** READY
-**Blocked by:** —
+**Status:** DONE (2026-04-14, partial -- install blocked, research completed)
 **Layer:** L2
 **Story refs:** Decapitation audit action item
 
@@ -436,3 +435,4 @@ Test with a deliberate em dash to confirm the tag catches it.
 | S-002 | DCC Logo Finalization | 2026-04-11 (Session 20) |
 | S-003 | Content Freshness Rules + Script | 2026-04-12 (next sprint auto-run) |
 | S-004 | Context Export to CLAUDE.md | 2026-04-12 (next sprint auto-run) |
+| S-005 | Aider L2 Evaluation (partial) | 2026-04-14 -- install blocked (no Python), research done |

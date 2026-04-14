@@ -4,6 +4,15 @@
 
 ---
 
+## S-005: Aider L2 Evaluation ✅ (partial)
+
+**Date:** 2026-04-14
+**Result:** Installation BLOCKED (no Python/pip on EZbook). Research completed. Aider assessed as viable L2 fallback based on public information. Documented in `hal-stack/architecture/aider-evaluation.md`. Decapitation checklist updated.
+**Blocker:** EZbook has Windows Store Python stubs, not real Python. Install from python.org to unblock (15 min).
+**Next READY sprint:** S-007 (CIPO Trademark Research, P3)
+
+---
+
 ## Founding Board Sprint -- DEFERRED (P4 priority check failed)
 
 **Date:** 2026-04-14 ~00:55 EST (Toronto)

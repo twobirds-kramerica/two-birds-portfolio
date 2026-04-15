@@ -53,6 +53,28 @@ commit, push to master.
 
 ---
 
+## Mandatory Standards Checklist
+
+Every sprint that produces code or user-facing changes must verify these before marking DONE:
+
+```
+### Standards Compliance (check before DONE)
+
+- [ ] HTML: semantic elements, heading hierarchy, alt text, linked labels
+- [ ] CSS: tokens.css variables used (no hardcoded colours), mobile-first
+- [ ] Accessibility: WCAG AA contrast, 44px tap targets, focus indicators, keyboard nav
+- [ ] Performance: page weight < 500KB, no render-blocking JS, images lazy-loaded
+- [ ] SEO: unique title + meta description, canonical, OG tags
+- [ ] Security: no secrets in repo, CDN libs pinned with SRI, CSP present
+- [ ] Dependencies: zero npm, CDN fallbacks documented, decapitation-safe
+- [ ] Testing: axe-core 0 critical/serious, links work, mobile viewport OK
+- [ ] CHANGELOG.md updated (if user-facing changes)
+```
+
+Sprints that are documentation-only or internal tooling may skip this checklist but must note "Standards checklist: N/A (no code changes)" in the commit.
+
+---
+
 ## Rules Every Sprint Prompt Must Include
 
 1. **PHASE 0 — Process pending captures.** NON-NEGOTIABLE. Every sprint checks `pending-capture.md` first so nothing Aaron logged gets lost.
@@ -64,3 +86,4 @@ commit, push to master.
 7. Quality over completeness
 8. No scope creep — improvements go to backlog
 9. Plain language, timestamps on all files
+10. **Standards compliance checklist** verified before DONE (see above)

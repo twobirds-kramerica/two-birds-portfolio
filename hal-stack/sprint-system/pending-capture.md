@@ -37,4 +37,13 @@ Every Claude Code sprint starts by checking this file. If items exist:
 
 ## Current Queue
 
-_(empty — 7 items merged 2026-04-12. Routed: 4 stories, 1 epic, 2 human-backlog items)_
+---
+TIMESTAMP: 2026-04-11 23:15 EST (Toronto)
+SOURCE: Claude.ai chat
+PRIORITY: P3
+TYPE: story
+CATEGORY: HAL Stack
+ITEM: Verify capture command loop works end-to-end
+CONTEXT: Added capture-prompt.md to GitHub and new Claude.ai userPreferences that reference it. Testing the full flow: Claude.ai generates prompt → Aaron pastes into Claude Code → pending-capture.md gets updated → next sprint merges it.
+ACTION: Paste the prompt below into Claude Code. Verify pending-capture.md shows the new entry. Confirm the commit message appears in git log. Report back in Claude.ai what worked.
+---

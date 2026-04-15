@@ -305,14 +305,14 @@ Push from EZbook (not from Pentium — it's pull-only).
 
 ---
 
-## S-007: CIPO Trademark Research
+## S-007: CIPO Trademark Research ✅
 
 **Priority:** P3
 **Duration:** 30 min
-**Status:** READY
-**Blocked by:** —
+**Status:** DONE (2026-04-15)
 **Layer:** L1
 **Story refs:** S5.8
+**Completed:** Research doc with process, costs, risk assessment, recommendation (register later, after revenue + name finalized). Aaron action: manual CIPO database search.
 
 ### Prompt
 
@@ -436,3 +436,4 @@ Test with a deliberate em dash to confirm the tag catches it.
 | S-003 | Content Freshness Rules + Script | 2026-04-12 (next sprint auto-run) |
 | S-004 | Context Export to CLAUDE.md | 2026-04-12 (next sprint auto-run) |
 | S-005 | Aider L2 Evaluation (partial) | 2026-04-14 -- install blocked (no Python), research done |
+| S-007 | CIPO Trademark Research | 2026-04-15 (next sprint auto-run) |

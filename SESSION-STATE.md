@@ -1,6 +1,16 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 14, 2026 (Founding Board -- DEFERRED)
+**Last Session:** April 15, 2026 (S-007 CIPO Trademark Research)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## S-007: CIPO Trademark Research ✅
+
+**Date:** 2026-04-15
+**Result:** Full research document completed at `hal-stack/branding/cipo-trademark-research.md`. Covers registration process, 2026 fees ($491/class), timeline (12-18 months), DIY vs agent analysis, Nice class mapping (35+42 primary), risk assessment (moderate — "Two Birds Inc." has Toronto presence).
+**Recommendation:** Register LATER — after (1) company name finalized (S5.9 resolved), (2) revenue above $2K/month, (3) manual CIPO search confirms no conflicts.
+**Aaron action:** Search CIPO database manually at https://ised-isde.canada.ca/cipo/trademark-search/srch for "two birds" — results inform both trademark timing and the S5.9 name decision.
+**Next READY sprint:** S-008 (DCC CSS Brand Alignment, P3) or S-009 (Voice-Check Protocol, P2 human task)
 
 ---
 

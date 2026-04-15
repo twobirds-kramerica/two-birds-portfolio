@@ -1,45 +1,57 @@
 # Retro
 Date: April 15, 2026
-Session: S-007 CIPO Trademark Research + S-008 DCC CSS Brand Alignment
+Session: S-007 + S-008 + Founding Board Persona Build (Path C)
 
 ## Completed
 
-- **Phase 0:** Cleared pending-capture.md (1 duplicate item — SC-001 already DONE)
-- **S-007:** CIPO trademark research — full doc with process, fees, timeline, risk, recommendation (register later)
-- **S-008 Phase 1:** Audited main.css vs DCC brand guidelines — 4 FAIL, 2 DEVIATION, 7 PASS
-- **S-008 Phase 2:** Fixed CSS: Inter font, DCC Teal variable + applied, text/bg colours aligned to spec
-- **S-008 Phase 3:** WCAG contrast verified — all 7 new combinations pass AAA
-- **Sprint-queue:** S-007 + S-008 marked DONE
-- **SESSION-STATE:** Updated with both sprint results
+- **S-007:** CIPO trademark research — full doc with process, fees, timeline, risk, recommendation
+- **S-008:** DCC CSS brand alignment — Inter font, DCC Teal, colours aligned, WCAG AAA verified
+- **Founding Board:** Persona system completed:
+  - Inner Circle built (The Hand synthesizer + Love Balance Advisor)
+  - Scrappy Pack advisory layer (5 sub-personas: Mack, Tess, Grit, Patch, Sage)
+  - Master index (31 personas total)
+  - USAGE.md with 4 invocation patterns
+  - Verification doc — all schema fields complete, culture-spec embedded
 
-## Output Files
+## Key Decision: S-001/S-003/S-004 Already Built
 
-- `hal-stack/branding/cipo-trademark-research.md` (new — S-007)
-- `digital-confidence/css/main.css` (modified — S-008)
-- `quality/lighthouse-results/2026-04-15-css-brand-alignment.md` (new — S-008 QA)
+Aaron's prompt included a block for S-001, S-003, S-004 which were already DONE (2026-04-12). Standing rule "Never rebuild something already built" applied. Files verified present, sprints skipped correctly.
 
-## S-008 CSS Changes Summary
+## Persona Count Correction
 
-| Change | Before | After |
-|--------|--------|-------|
-| Font | System fonts only | Inter (Google Fonts) + system fallback |
-| Brand teal | Missing | `--brand-teal: #00897B` — splash CTA, sidebar header, footer border |
-| Text colour | #2C3E50 (blue-grey) | #333333 (neutral dark) |
-| Background | #FAFAF8 (warm) | #F5F5F5 (Gentle Grey) |
-| Warm Sand | Missing | `--bg-warm: #FFF8E1` variable |
-| Splash colours | Hardcoded | CSS variables |
+Original prompt referenced "22 personas." Actual count:
+- 24 department personas (4 per department x 6 departments)
+- 2 Inner Circle (The Hand, Love Balance Advisor)
+- 5 Scrappy Pack (Mack, Tess, Grit, Patch, Sage)
+- **31 total**
+
+## Output Files This Session
+
+| File | Type |
+|------|------|
+| `hal-stack/branding/cipo-trademark-research.md` | S-007 |
+| `digital-confidence/css/main.css` | S-008 (modified) |
+| `quality/lighthouse-results/2026-04-15-css-brand-alignment.md` | S-008 QA |
+| `hal-stack/personas/inner-circle.md` | Founding Board |
+| `hal-stack/personas/advisory/scrappy-pack.md` | Founding Board |
+| `hal-stack/personas/master-index.md` | Founding Board |
+| `hal-stack/personas/USAGE.md` | Founding Board |
+| `hal-stack/personas/2026-04-15-persona-build-RESULTS.md` | Founding Board |
 
 ## Aaron Actions
 
-1. Open DCC in browser — verify teal splash button, sidebar, footer
-2. Run `?qa=true` on index.html for full axe-core audit
-3. Search CIPO database for "two birds" (from S-007)
-4. Add voice-check protocol to Claude.ai preferences (S-009)
+1. Read `hal-stack/personas/USAGE.md` and `master-index.md`
+2. Test personas: try `@Quick Decision` or `@Scrappy Pack` on a real question
+3. Open DCC in browser — verify teal splash button, sidebar, footer
+4. Run `?qa=true` on DCC index.html for axe-core audit
+5. Search CIPO database for "two birds" (from S-007)
+6. Add voice-check protocol to Claude.ai preferences (S-009)
 
 ## Sprint Queue Status
 
-- All non-blocked READY Claude Code sprints complete
-- Remaining: S-006 (BLOCKED — Pentium Silver), S-009 (human task)
+All non-blocked READY Claude Code sprints complete. Remaining:
+- S-006: BLOCKED (Pentium Silver)
+- S-009: READY (human task for Aaron)
 - Queue needs new items
 
 ## Commits This Session
@@ -48,6 +60,9 @@ Session: S-007 CIPO Trademark Research + S-008 DCC CSS Brand Alignment
 - `6cfb645` — feat(branding): S-007 CIPO trademark research
 - `ca0e177` — log: S-007 complete
 - `2abdb54` — fix(css): DCC CSS brand alignment (digital-confidence repo)
+- `043da17` — log: S-008 complete
+- `cc435c0` — feat(personas): Inner Circle + Scrappy Pack
+- `9ebe5ee` — feat(personas): master index + usage guide
 
-Last updated: 2026-04-15 at 01:01 EST (Toronto)
+Last updated: 2026-04-15 at 02:25 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

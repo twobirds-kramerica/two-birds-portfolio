@@ -17,6 +17,7 @@ Master index of all exported session contexts. One line per session. Newest firs
 
 | Date | Session | Project | Layer | Key Decisions | Status |
 |------|---------|---------|-------|--------------|--------|
+| 2026-04-15 | S-007/S-008 + Founding Board Persona Build | HAL, DCC, Branding | L1 | 31 personas complete (24 dept + 2 Inner Circle + 5 Scrappy Pack), CIPO trademark research (defer), DCC CSS brand alignment (Inter + Teal + WCAG AAA) | Active |
 | 2026-04-12 | S23: Employability Dossier | Career | L1 | Skills inventory (9 skills), gap analysis, 7 gig platforms, 5 full-time role types, 29 CV questions | Active |
 | 2026-04-11 | S21: Capture System (full) | HAL | L1-L4 | Pending capture, prompt generator, mandatory Phase 0, userPreferences setup. Full run→retro→capture→merge loop. | Active |
 | 2026-04-11 | S20: DCC V07 + Brand Research | Branding, DCC, HAL | L1 | DCC heart-bulb finalized, brand research imported, sovereignty philosophy bridges brand+architecture, TBI is placeholder name | Active |

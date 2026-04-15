@@ -1,6 +1,17 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 15, 2026 (S-007 + S-008)
+**Last Session:** April 15, 2026 (S-007 + S-008 + Founding Board Persona Build)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Founding Board — Deep Persona Build (Path C Completion) ✅
+
+**Date:** 2026-04-15 ~02:25 EST (Toronto)
+**Result:** Persona system completed. 24 department personas already existed (built 2026-04-11). This session added: Inner Circle (The Hand synthesizer + Love Balance Advisor), Scrappy Pack advisory layer (5 founder-archetype sub-personas: Mack, Tess, Grit, Patch, Sage), master index (31 personas), and USAGE.md with invocation patterns.
+**Files created:** `inner-circle.md`, `advisory/scrappy-pack.md`, `master-index.md`, `USAGE.md`, `2026-04-15-persona-build-RESULTS.md`
+**Verification:** All 31 personas follow schema. Culture-spec values embedded. Response format templates defined for The Hand, Love Balance Advisor, and Scrappy Pack group.
+**Note:** Original prompt referenced "22 personas" — actual count is 24 department + 2 Inner Circle + 5 Scrappy Pack = 31 total.
+**Next action:** Aaron reads `USAGE.md` + `master-index.md`, then uses `@Quick Decision` or `@Full Boardroom` in future sprints. Personas are ready for use.
 
 ---
 

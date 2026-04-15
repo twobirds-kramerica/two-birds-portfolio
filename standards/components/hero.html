@@ -1,0 +1,58 @@
+<!--
+  Component: Hero
+  Tokens: tokens.css required
+  Reference: agamivia-phi.vercel.app hero pattern
+  Tailwind equiv: py-20 px-6 text-center max-w-3xl mx-auto
+-->
+
+<style>
+.tb-hero {
+  padding: var(--space-20, 80px) var(--space-6, 24px);
+  text-align: center;
+  max-width: var(--max-width-content, 900px);
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+.tb-hero-headline {
+  font-size: var(--text-4xl, 2.5rem);
+  font-weight: var(--font-bold, 700);
+  color: var(--text-primary, #333333);
+  line-height: var(--leading-tight, 1.25);
+  margin: 0 0 var(--space-4, 16px);
+}
+
+.tb-hero-sub {
+  font-size: var(--text-xl, 1.25rem);
+  color: var(--text-secondary, #5D6D7E);
+  line-height: var(--leading-relaxed, 1.6);
+  max-width: var(--max-width-prose, 680px);
+  margin: 0 auto var(--space-8, 32px);
+}
+
+.tb-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4, 16px);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .tb-hero-headline { font-size: var(--text-3xl, 2rem); }
+  .tb-hero-sub { font-size: var(--text-lg, 1.125rem); }
+  .tb-hero-actions { flex-direction: column; align-items: center; }
+}
+</style>
+
+<section class="tb-hero">
+  <h1 class="tb-hero-headline">Your headline goes here.</h1>
+  <p class="tb-hero-sub">
+    A clear, compelling subtitle that explains the value proposition
+    in one or two sentences. No jargon.
+  </p>
+  <div class="tb-hero-actions">
+    <!-- Use button.html primary variant -->
+    <a href="/app" class="tb-btn tb-btn-primary">Get Started &rarr;</a>
+    <a href="#how-it-works" class="tb-btn tb-btn-ghost">See how it works &darr;</a>
+  </div>
+</section>

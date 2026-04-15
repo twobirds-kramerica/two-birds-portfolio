@@ -1,0 +1,116 @@
+<!--
+  Component: Button
+  Tokens: tokens.css required
+  Variants: primary | secondary | ghost | danger
+  Sizes: default | sm | lg
+  Tailwind equiv: px-5 py-3 rounded-lg font-semibold text-base
+-->
+
+<style>
+/* Base button */
+.tb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2, 8px);
+  padding: var(--space-3, 12px) var(--space-6, 24px);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md, 8px);
+  font-family: var(--font-sans);
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-semibold, 600);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: var(--tap-target, 44px);
+  transition: all var(--duration-fast, 150ms) var(--ease-default);
+  line-height: 1;
+}
+
+.tb-btn:focus-visible {
+  outline: 3px solid var(--border-focus, #0066CC);
+  outline-offset: 2px;
+}
+
+/* Primary — brand colour bg */
+.tb-btn-primary {
+  background: var(--btn-brand, var(--tbi-blue, #0066CC));
+  color: var(--text-inverse, #FFFFFF);
+  border-color: var(--btn-brand, var(--tbi-blue, #0066CC));
+}
+
+.tb-btn-primary:hover {
+  background: var(--btn-brand-hover, var(--tbi-blue-hover, #0052A3));
+  border-color: var(--btn-brand-hover, var(--tbi-blue-hover, #0052A3));
+}
+
+/* Secondary — outlined */
+.tb-btn-secondary {
+  background: transparent;
+  color: var(--btn-brand, var(--tbi-blue, #0066CC));
+  border-color: var(--btn-brand, var(--tbi-blue, #0066CC));
+}
+
+.tb-btn-secondary:hover {
+  background: var(--btn-brand, var(--tbi-blue, #0066CC));
+  color: var(--text-inverse, #FFFFFF);
+}
+
+/* Ghost — text only */
+.tb-btn-ghost {
+  background: transparent;
+  color: var(--text-secondary, #5D6D7E);
+  border-color: transparent;
+  padding: var(--space-3, 12px) var(--space-4, 16px);
+}
+
+.tb-btn-ghost:hover {
+  color: var(--text-primary, #333333);
+  background: var(--bg-page, #F5F5F5);
+}
+
+/* Danger */
+.tb-btn-danger {
+  background: var(--color-danger, #E74C3C);
+  color: var(--text-inverse, #FFFFFF);
+  border-color: var(--color-danger, #E74C3C);
+}
+
+.tb-btn-danger:hover {
+  background: #C0392B;
+  border-color: #C0392B;
+}
+
+/* Sizes */
+.tb-btn-sm {
+  padding: var(--space-2, 8px) var(--space-4, 16px);
+  font-size: var(--text-sm, 0.875rem);
+  min-height: 36px;
+}
+
+.tb-btn-lg {
+  padding: var(--space-4, 16px) var(--space-8, 32px);
+  font-size: var(--text-lg, 1.125rem);
+  min-height: var(--tap-target-lg, 48px);
+}
+
+/* Full width */
+.tb-btn-full { width: 100%; }
+</style>
+
+<!-- Primary -->
+<a href="#" class="tb-btn tb-btn-primary">Get Started &rarr;</a>
+
+<!-- Secondary -->
+<a href="#" class="tb-btn tb-btn-secondary">Learn More</a>
+
+<!-- Ghost -->
+<a href="#" class="tb-btn tb-btn-ghost">Skip for now</a>
+
+<!-- Danger -->
+<button class="tb-btn tb-btn-danger">Delete</button>
+
+<!-- Small -->
+<button class="tb-btn tb-btn-primary tb-btn-sm">Small</button>
+
+<!-- Large -->
+<button class="tb-btn tb-btn-primary tb-btn-lg">Large Button &rarr;</button>

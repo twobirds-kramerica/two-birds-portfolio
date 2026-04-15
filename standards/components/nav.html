@@ -1,0 +1,116 @@
+<!--
+  Component: Nav
+  Tokens: tokens.css required
+  Variants: TBI (blue) | DCC (teal) — set --nav-brand via parent
+  Tailwind equiv: bg-white border-b shadow-sm px-6 h-16 flex items-center justify-between
+-->
+
+<style>
+.tb-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height, 64px);
+  padding: 0 var(--space-6, 24px);
+  background: var(--bg-card, #FFFFFF);
+  border-bottom: 1px solid var(--border-light, #EAEDED);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-sans);
+}
+
+.tb-nav-logo {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: var(--font-bold, 700);
+  color: var(--nav-brand, var(--tbi-blue, #0066CC));
+  text-decoration: none;
+}
+
+.tb-nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6, 24px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tb-nav-links a {
+  color: var(--text-secondary, #5D6D7E);
+  text-decoration: none;
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-medium, 500);
+  transition: color var(--duration-fast, 150ms) var(--ease-default);
+}
+
+.tb-nav-links a:hover {
+  color: var(--text-primary, #333333);
+}
+
+.tb-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2, 8px);
+  padding: var(--space-2, 8px) var(--space-5, 20px);
+  background: var(--nav-brand, var(--tbi-blue, #0066CC));
+  color: var(--text-inverse, #FFFFFF);
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-semibold, 600);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: var(--tap-target, 44px);
+  transition: background var(--duration-fast) var(--ease-default);
+}
+
+.tb-nav-cta:hover {
+  background: var(--nav-brand-hover, var(--tbi-blue-hover, #0052A3));
+}
+
+/* Mobile: hamburger toggle */
+.tb-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  min-width: var(--tap-target, 44px);
+  min-height: var(--tap-target, 44px);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .tb-nav-links { display: none; }
+  .tb-nav-toggle { display: flex; align-items: center; justify-content: center; }
+  .tb-nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height, 64px);
+    left: 0;
+    right: 0;
+    background: var(--bg-card, #FFFFFF);
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--space-4, 16px);
+    box-shadow: var(--shadow-md);
+  }
+}
+</style>
+
+<nav class="tb-nav" aria-label="Main navigation">
+  <a href="/" class="tb-nav-logo">Two Birds Innovation</a>
+
+  <button class="tb-nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    &#9776;
+  </button>
+
+  <ul class="tb-nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/app" class="tb-nav-cta">Get Started &rarr;</a></li>
+  </ul>
+</nav>

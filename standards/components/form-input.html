@@ -1,0 +1,95 @@
+<!--
+  Component: Form Input
+  Tokens: tokens.css required
+  Variants: text | email | textarea | select
+  Accessibility: label linked via for/id, help text via aria-describedby
+  Tailwind equiv: block w-full px-4 py-3 border rounded-lg text-base
+-->
+
+<style>
+.tb-field {
+  margin-bottom: var(--space-5, 20px);
+  font-family: var(--font-sans);
+}
+
+.tb-field-label {
+  display: block;
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-semibold, 600);
+  color: var(--text-primary, #333333);
+  margin-bottom: var(--space-2, 8px);
+}
+
+.tb-field-input {
+  display: block;
+  width: 100%;
+  padding: var(--space-3, 12px) var(--space-4, 16px);
+  border: 2px solid var(--border-default, #D5DBDB);
+  border-radius: var(--radius-md, 8px);
+  font-family: var(--font-sans);
+  font-size: var(--text-base, 1rem);
+  color: var(--text-primary, #333333);
+  background: var(--bg-card, #FFFFFF);
+  min-height: var(--tap-target, 44px);
+  transition: border-color var(--duration-fast) var(--ease-default);
+}
+
+.tb-field-input:focus {
+  outline: none;
+  border-color: var(--border-focus, #0066CC);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+
+.tb-field-input::placeholder {
+  color: var(--text-muted, #5A6B78);
+}
+
+.tb-field-help {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-muted, #5A6B78);
+  margin-top: var(--space-1, 4px);
+}
+
+.tb-field-error .tb-field-input {
+  border-color: var(--color-danger, #E74C3C);
+}
+
+.tb-field-error .tb-field-help {
+  color: var(--color-danger, #E74C3C);
+}
+
+textarea.tb-field-input {
+  min-height: 120px;
+  resize: vertical;
+}
+</style>
+
+<!-- Text input -->
+<div class="tb-field">
+  <label for="name" class="tb-field-label">Full name</label>
+  <input type="text" id="name" name="name" class="tb-field-input"
+         placeholder="Aaron Patzalek" aria-describedby="name-help">
+  <p id="name-help" class="tb-field-help">As it appears on your ID.</p>
+</div>
+
+<!-- Email input -->
+<div class="tb-field">
+  <label for="email" class="tb-field-label">Email address</label>
+  <input type="email" id="email" name="email" class="tb-field-input"
+         placeholder="you@example.com">
+</div>
+
+<!-- Textarea -->
+<div class="tb-field">
+  <label for="message" class="tb-field-label">Message</label>
+  <textarea id="message" name="message" class="tb-field-input"
+            placeholder="Tell us what you need..."></textarea>
+</div>
+
+<!-- Error state -->
+<div class="tb-field tb-field-error">
+  <label for="phone" class="tb-field-label">Phone number</label>
+  <input type="tel" id="phone" name="phone" class="tb-field-input"
+         value="not-a-number" aria-describedby="phone-error" aria-invalid="true">
+  <p id="phone-error" class="tb-field-help" role="alert">Please enter a valid phone number.</p>
+</div>

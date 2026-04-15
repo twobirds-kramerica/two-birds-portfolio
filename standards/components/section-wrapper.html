@@ -1,0 +1,95 @@
+<!--
+  Component: Section Wrapper
+  Tokens: tokens.css required
+  Variants: default (white) | grey | warm | dark
+  Tailwind equiv: py-16 px-6 max-w-5xl mx-auto
+-->
+
+<style>
+.tb-section {
+  padding: var(--space-16, 64px) var(--space-6, 24px);
+  font-family: var(--font-sans);
+}
+
+.tb-section--grey { background: var(--bg-page, #F5F5F5); }
+.tb-section--warm { background: var(--bg-warm, #FFF8E1); }
+.tb-section--dark {
+  background: var(--tbi-navy, #0D1B2A);
+  color: var(--text-inverse, #FFFFFF);
+}
+
+.tb-section-inner {
+  max-width: var(--max-width-content, 900px);
+  margin: 0 auto;
+}
+
+.tb-section-inner--wide {
+  max-width: var(--max-width-wide, 1200px);
+}
+
+.tb-section-header {
+  text-align: center;
+  margin-bottom: var(--space-10, 40px);
+}
+
+.tb-section-title {
+  font-size: var(--text-3xl, 2rem);
+  font-weight: var(--font-bold, 700);
+  color: var(--text-primary, #333333);
+  margin: 0 0 var(--space-3, 12px);
+}
+
+.tb-section--dark .tb-section-title {
+  color: var(--text-inverse, #FFFFFF);
+}
+
+.tb-section-subtitle {
+  font-size: var(--text-lg, 1.125rem);
+  color: var(--text-secondary, #5D6D7E);
+  max-width: var(--max-width-prose, 680px);
+  margin: 0 auto;
+  line-height: var(--leading-relaxed, 1.6);
+}
+
+.tb-section--dark .tb-section-subtitle {
+  color: #BDBDBD;
+}
+
+@media (max-width: 480px) {
+  .tb-section { padding: var(--space-10, 40px) var(--space-4, 16px); }
+  .tb-section-title { font-size: var(--text-2xl, 1.5rem); }
+}
+</style>
+
+<!-- Default (white bg) -->
+<section class="tb-section">
+  <div class="tb-section-inner">
+    <div class="tb-section-header">
+      <h2 class="tb-section-title">Section Title</h2>
+      <p class="tb-section-subtitle">
+        A brief explanation of what this section covers.
+      </p>
+    </div>
+    <!-- Content goes here -->
+  </div>
+</section>
+
+<!-- Grey variant -->
+<section class="tb-section tb-section--grey">
+  <div class="tb-section-inner">
+    <div class="tb-section-header">
+      <h2 class="tb-section-title">Grey Section</h2>
+      <p class="tb-section-subtitle">Alternating background for visual rhythm.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Dark variant -->
+<section class="tb-section tb-section--dark">
+  <div class="tb-section-inner">
+    <div class="tb-section-header">
+      <h2 class="tb-section-title">Dark Section</h2>
+      <p class="tb-section-subtitle">For CTAs, testimonials, or feature highlights.</p>
+    </div>
+  </div>
+</section>

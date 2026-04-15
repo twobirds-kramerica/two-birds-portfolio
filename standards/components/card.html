@@ -1,0 +1,86 @@
+<!--
+  Component: Card
+  Tokens: tokens.css required
+  Variants: default | warm (--bg-warm) | outlined
+  Tailwind equiv: bg-white rounded-xl shadow-md p-6
+-->
+
+<style>
+.tb-card {
+  background: var(--bg-card, #FFFFFF);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-6, 24px);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-sans);
+  transition: box-shadow var(--duration-normal, 250ms) var(--ease-default);
+}
+
+.tb-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.tb-card--warm {
+  background: var(--bg-warm, #FFF8E1);
+  box-shadow: var(--shadow-sm);
+}
+
+.tb-card--outlined {
+  background: var(--bg-card, #FFFFFF);
+  box-shadow: none;
+  border: 1px solid var(--border-default, #D5DBDB);
+}
+
+.tb-card-icon {
+  font-size: var(--text-3xl, 2rem);
+  margin-bottom: var(--space-3, 12px);
+  line-height: 1;
+}
+
+.tb-card-title {
+  font-size: var(--text-xl, 1.25rem);
+  font-weight: var(--font-semibold, 600);
+  color: var(--text-primary, #333333);
+  margin: 0 0 var(--space-2, 8px);
+}
+
+.tb-card-desc {
+  font-size: var(--text-base, 1rem);
+  color: var(--text-secondary, #5D6D7E);
+  line-height: var(--leading-relaxed, 1.6);
+  margin: 0;
+}
+
+/* Grid layout for card collections */
+.tb-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6, 24px);
+}
+</style>
+
+<!-- Default Card -->
+<div class="tb-card">
+  <div class="tb-card-icon" aria-hidden="true">&#9733;</div>
+  <h3 class="tb-card-title">Card Title</h3>
+  <p class="tb-card-desc">
+    Brief description of this card's content. Keep it to 2-3 lines maximum.
+  </p>
+</div>
+
+<!-- Warm Card variant -->
+<div class="tb-card tb-card--warm">
+  <div class="tb-card-icon" aria-hidden="true">&#128161;</div>
+  <h3 class="tb-card-title">Warm Card</h3>
+  <p class="tb-card-desc">
+    Used for tips, stories, and encouraging content. Sand background.
+  </p>
+</div>
+
+<!-- Outlined Card variant -->
+<div class="tb-card tb-card--outlined">
+  <div class="tb-card-icon" aria-hidden="true">&#128196;</div>
+  <h3 class="tb-card-title">Outlined Card</h3>
+  <p class="tb-card-desc">
+    Lighter visual weight. Good for lists and secondary content.
+  </p>
+</div>

@@ -349,14 +349,14 @@ Commit. Update SESSION-STATE.md, push to master.
 
 ---
 
-## S-008: DCC Site CSS Update to Brand Guidelines
+## S-008: DCC Site CSS Update to Brand Guidelines ✅
 
 **Priority:** P3
 **Duration:** 1 hour
-**Status:** READY
-**Blocked by:** — (S-002 completed)
+**Status:** DONE (2026-04-15)
 **Layer:** L1
 **Story refs:** S5.7
+**Completed:** Inter font added, DCC Teal introduced, text/bg colours aligned, all 7 combos pass WCAG AAA. QA doc in quality/lighthouse-results/.
 
 ### Prompt
 
@@ -437,3 +437,4 @@ Test with a deliberate em dash to confirm the tag catches it.
 | S-004 | Context Export to CLAUDE.md | 2026-04-12 (next sprint auto-run) |
 | S-005 | Aider L2 Evaluation (partial) | 2026-04-14 -- install blocked (no Python), research done |
 | S-007 | CIPO Trademark Research | 2026-04-15 (next sprint auto-run) |
+| S-008 | DCC CSS Brand Alignment | 2026-04-15 (next sprint auto-run) |

@@ -14,24 +14,14 @@ Sorted by priority. Top non-blocked sprint runs next.
 
 ---
 
-## S-016: Engineering Standards + Style Guide Foundation
+## S-016: Engineering Standards + Style Guide Foundation ✅
 
 **Priority:** P0 (blocks all other UI work)
 **Duration:** 45 min
-**Status:** READY
-**Blocked by:** —
+**Status:** DONE (2026-04-15)
 **Layer:** L1-L4
 **Story refs:** —
-
-### Prompt
-
-```
-[PENDING — Aaron to paste full sprint prompt from Claude.ai conversation April 15, 2026]
-```
-
-### Expected Outputs
-- Engineering standards document
-- Style guide foundation
+**Completed:** Engineering standards (8 sections), design tokens (CSS custom properties for 2 brands), 7-component library (nav, hero, card, button, footer, form-input, section-wrapper), CHANGELOG.md, change management process, sprint template standards checklist.
 
 ---
 
@@ -39,8 +29,8 @@ Sorted by priority. Top non-blocked sprint runs next.
 
 **Priority:** P1
 **Duration:** 90 min
-**Status:** BLOCKED
-**Blocked by:** S-016
+**Status:** READY
+**Blocked by:** — (S-016 complete)
 **Layer:** L1
 **Story refs:** —
 
@@ -60,8 +50,8 @@ Sorted by priority. Top non-blocked sprint runs next.
 
 **Priority:** P1
 **Duration:** 60 min
-**Status:** BLOCKED
-**Blocked by:** S-016
+**Status:** READY
+**Blocked by:** — (S-016 complete)
 **Layer:** L1
 **Story refs:** —
 
@@ -81,7 +71,7 @@ Sorted by priority. Top non-blocked sprint runs next.
 **Priority:** P2
 **Duration:** 30 min
 **Status:** BLOCKED
-**Blocked by:** S-016, also needs Aaron to create Vercel + Supabase accounts
+**Blocked by:** Needs Aaron to create Vercel + Supabase accounts
 **Layer:** L1-L4
 **Story refs:** —
 
@@ -521,3 +511,4 @@ Test with a deliberate em dash to confirm the tag catches it.
 | S-005 | Aider L2 Evaluation (partial) | 2026-04-14 -- install blocked (no Python), research done |
 | S-007 | CIPO Trademark Research | 2026-04-15 (next sprint auto-run) |
 | S-008 | DCC CSS Brand Alignment | 2026-04-15 (next sprint auto-run) |
+| S-016 | Engineering Standards + Style Guide Foundation | 2026-04-15 (next sprint auto-run) |

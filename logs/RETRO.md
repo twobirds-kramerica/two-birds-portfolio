@@ -1,68 +1,48 @@
 # Retro
 Date: April 15, 2026
-Session: S-007 + S-008 + Founding Board Persona Build (Path C)
+Session: S-016 Engineering Standards + Style Guide Foundation
 
 ## Completed
 
-- **S-007:** CIPO trademark research — full doc with process, fees, timeline, risk, recommendation
-- **S-008:** DCC CSS brand alignment — Inter font, DCC Teal, colours aligned, WCAG AAA verified
-- **Founding Board:** Persona system completed:
-  - Inner Circle built (The Hand synthesizer + Love Balance Advisor)
-  - Scrappy Pack advisory layer (5 sub-personas: Mack, Tess, Grit, Patch, Sage)
-  - Master index (31 personas total)
-  - USAGE.md with 4 invocation patterns
-  - Verification doc — all schema fields complete, culture-spec embedded
+- **Phase 1:** Engineering standards doc (8 sections — code style, a11y, perf, SEO, security, git, testing, sovereignty)
+- **Phase 2:** Design system CSS tokens (2 brand palettes, semantic tokens, typography, spacing, dark mode, reduced motion)
+- **Phase 3:** 7-component shared library (nav, hero, card, button, footer, form-input, section-wrapper)
+- **Phase 4:** CHANGELOG.md + change management process + sprint template standards checklist
+- **Sprint-queue:** S-016 DONE, S-017/S-018 unblocked to READY
 
-## Key Decision: S-001/S-003/S-004 Already Built
+## Output Files
 
-Aaron's prompt included a block for S-001, S-003, S-004 which were already DONE (2026-04-12). Standing rule "Never rebuild something already built" applied. Files verified present, sprints skipped correctly.
-
-## Persona Count Correction
-
-Original prompt referenced "22 personas." Actual count:
-- 24 department personas (4 per department x 6 departments)
-- 2 Inner Circle (The Hand, Love Balance Advisor)
-- 5 Scrappy Pack (Mack, Tess, Grit, Patch, Sage)
-- **31 total**
-
-## Output Files This Session
-
-| File | Type |
-|------|------|
-| `hal-stack/branding/cipo-trademark-research.md` | S-007 |
-| `digital-confidence/css/main.css` | S-008 (modified) |
-| `quality/lighthouse-results/2026-04-15-css-brand-alignment.md` | S-008 QA |
-| `hal-stack/personas/inner-circle.md` | Founding Board |
-| `hal-stack/personas/advisory/scrappy-pack.md` | Founding Board |
-| `hal-stack/personas/master-index.md` | Founding Board |
-| `hal-stack/personas/USAGE.md` | Founding Board |
-| `hal-stack/personas/2026-04-15-persona-build-RESULTS.md` | Founding Board |
-
-## Aaron Actions
-
-1. Read `hal-stack/personas/USAGE.md` and `master-index.md`
-2. Test personas: try `@Quick Decision` or `@Scrappy Pack` on a real question
-3. Open DCC in browser — verify teal splash button, sidebar, footer
-4. Run `?qa=true` on DCC index.html for axe-core audit
-5. Search CIPO database for "two birds" (from S-007)
-6. Add voice-check protocol to Claude.ai preferences (S-009)
+| File | Description |
+|------|-------------|
+| `standards/ENGINEERING-STANDARDS.md` | 8-section engineering standards |
+| `standards/tokens.css` | CSS custom properties — colours, type, spacing, layout, dark mode |
+| `standards/components/nav.html` | Sticky nav with mobile hamburger |
+| `standards/components/hero.html` | Landing hero with dual CTAs |
+| `standards/components/card.html` | 3 variants: default, warm, outlined |
+| `standards/components/button.html` | 4 variants (primary, secondary, ghost, danger) + 3 sizes |
+| `standards/components/footer.html` | Brand-coloured top border footer |
+| `standards/components/form-input.html` | Accessible inputs with error state |
+| `standards/components/section-wrapper.html` | 4 background variants |
+| `standards/components/README.md` | Component usage guide |
+| `standards/CHANGE-MANAGEMENT.md` | When and how to update changelog |
+| `CHANGELOG.md` | Keep a Changelog format, seeded with recent history |
 
 ## Sprint Queue Status
 
-All non-blocked READY Claude Code sprints complete. Remaining:
-- S-006: BLOCKED (Pentium Silver)
-- S-009: READY (human task for Aaron)
-- Queue needs new items
+| Sprint | Priority | Status |
+|--------|----------|--------|
+| S-017 | P1 | **READY** — DCC Audit Against Standards |
+| S-018 | P1 | **READY** — Aaron Patzalek Portfolio |
+| S-019 | P2 | BLOCKED — needs Vercel + Supabase accounts |
+| S-006 | P2 | BLOCKED — needs Pentium Silver |
+| S-009 | P2 | READY — human task (voice-check protocol) |
 
 ## Commits This Session
 
-- `3bdefa8` — chore(hal): Phase 0 — cleared duplicate pending capture
-- `6cfb645` — feat(branding): S-007 CIPO trademark research
-- `ca0e177` — log: S-007 complete
-- `2abdb54` — fix(css): DCC CSS brand alignment (digital-confidence repo)
-- `043da17` — log: S-008 complete
-- `cc435c0` — feat(personas): Inner Circle + Scrappy Pack
-- `9ebe5ee` — feat(personas): master index + usage guide
+- `61b7736` — feat(standards): Phase 1 engineering standards
+- `d4c71d4` — feat(standards): Phase 2 design system tokens
+- `1006f18` — feat(standards): Phase 3 component library
+- `7fdec6b` — feat(standards): Phase 4 CHANGELOG + change management
 
-Last updated: 2026-04-15 at 02:25 EST (Toronto)
+Last updated: 2026-04-15 at 14:34 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

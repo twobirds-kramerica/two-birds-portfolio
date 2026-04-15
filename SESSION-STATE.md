@@ -1,6 +1,17 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 15, 2026 (S-016 + S-017)
+**Last Session:** April 15, 2026 (S-016 + S-017 + S-018)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## S-018: Aaron Patzalek Portfolio / Solopreneur Site ✅
+
+**Date:** 2026-04-15 ~16:40 EST (Toronto)
+**Repo:** aaron-patzalek (commit `cc865eb`)
+**Result:** Single-page portfolio site built from scratch. 3 files (index.html, css/main.css, css/tokens.css). 6 sections: hero with value prop, about with stats grid, products (DCC live, Clarity + Career Coach coming soon), approach (4 principles with CSS counter), dark CTA section, contact form (Formspree). Standards-compliant: CSP meta, JSON-LD Person schema, OG tags, skip link, ARIA labels, keyboard nav, mobile hamburger, reduced motion, Inter font via Google Fonts.
+**GitHub:** twobirds-kramerica/aaron-patzalek — pushed to master
+**Aaron action:** Enable GitHub Pages (Settings → Pages → Source: master) to make site live. Review content — especially bio, stats numbers, and contact form endpoint.
+**Next READY sprint:** S-019 (Vercel + Supabase, P2) — BLOCKED, needs account creation
 
 ---
 

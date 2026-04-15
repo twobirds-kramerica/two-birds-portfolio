@@ -1,51 +1,39 @@
 # Retro
 Date: April 15, 2026
-Session: S-016 Engineering Standards + S-017 DCC Audit
+Session: S-016 + S-017 + S-018 (marathon session)
 
 ## Completed
 
-- **S-016:** Full engineering standards foundation (4 phases, 12 files)
-- **S-017:** DCC standards audit (7 categories scored) + 4 remediations shipped
+- **S-016:** Engineering standards foundation (12 files — standards doc, tokens, 7 components, changelog, change management, sprint template)
+- **S-017:** DCC standards audit (7 categories) + 4 remediations (email label, og:image x20, CSP x2, GSC placeholder)
+- **S-018:** Aaron Patzalek portfolio site built from scratch (3 files, 6 sections, fully standards-compliant)
 
-## S-017 Audit Results
+## S-018 Site Structure
 
-| Category | Score | Remediated? |
-|----------|-------|-------------|
-| HTML semantics | 70/100 | YES — email label fixed |
-| CSS tokens | 44/100 | NO — too large for this sprint (914 items) |
-| Accessibility | 85/100 | YES — label fix |
-| Performance | 80/100 | N/A — already good |
-| SEO/AEO | 55→75 | YES — og:image on 20 geo-content pages |
-| Security | 15→25 | YES — CSP on index + about |
-| Dependencies | 90/100 | N/A — already good |
-
-## DCC Files Changed
-
-- `index.html` — email label, GSC placeholder, CSP meta
-- `about.html` — CSP meta
-- `geo-content/*.html` (20 files) — og:image added
+| Section | Content |
+|---------|---------|
+| Hero | "I build tools that empower people to think differently" + stats meta |
+| About | Bio + 4-stat grid (20+ years, 241 DCC pages, 9 repos, 29 modules) |
+| Products | DCC (live link), Clarity (coming soon), Career Coach (coming soon) |
+| Approach | Essentialism, Sovereignty, Lead from Back, Ship and Iterate |
+| CTA | Dark section with LinkedIn link |
+| Contact | Form (Formspree) + email + LinkedIn + location |
 
 ## Sprint Queue Status
 
 | Sprint | Priority | Status |
 |--------|----------|--------|
-| S-018 | P1 | READY (prompt PENDING) |
-| S-019 | P2 | BLOCKED (accounts needed) |
+| S-019 | P2 | BLOCKED (Vercel + Supabase accounts needed) |
 | S-006 | P2 | BLOCKED (Pentium Silver) |
-| S-009 | P2 | READY (human task) |
+| S-009 | P2 | READY (human task — voice-check protocol) |
+| **All others** | — | **DONE** |
 
-## Commits This Session
+## Aaron Actions
 
-Portfolio repo:
-- `61b7736` — engineering standards doc
-- `d4c71d4` — design system tokens
-- `1006f18` — component library
-- `7fdec6b` — CHANGELOG + change management
-- `bfd3f99` — S-016 session state
+1. Enable GitHub Pages on aaron-patzalek repo (Settings → Pages → Source: master)
+2. Review portfolio content — bio, stats, contact form endpoint
+3. Open DCC in browser — verify teal changes from S-008
+4. Create Vercel + Supabase accounts to unblock S-019
 
-DCC repo:
-- `8c445fa` — email label + GSC placeholder
-- `46cb7ee` — og:image x20 + CSP x2
-
-Last updated: 2026-04-15 at 15:44 EST (Toronto)
+Last updated: 2026-04-15 at 16:40 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

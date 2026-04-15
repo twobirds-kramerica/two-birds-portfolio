@@ -12,6 +12,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Dates in YYYY-MM
 
 ---
 
+## [2026-04-15] — Aaron Patzalek Portfolio Site (S-018)
+
+### Added
+- Single-page portfolio site at `aaron-patzalek` repo
+- 6 sections: hero, about, products, approach, CTA, contact
+- Uses shared design tokens from `standards/tokens.css`
+- JSON-LD Person schema, CSP, OG tags, full accessibility
+
+---
+
 ## [2026-04-15] — DCC Standards Audit + Remediation (S-017)
 
 ### Fixed

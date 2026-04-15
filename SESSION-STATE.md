@@ -1,6 +1,19 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 15, 2026 (S-007 + S-008 + Founding Board Persona Build)
+**Last Session:** April 15, 2026 (Housekeeping — queue update)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Housekeeping Sprint — Queue Update + State Sync ✅
+
+**Date:** 2026-04-15 ~02:40 EST (Toronto)
+**Result:** Added S-016 through S-019 to sprint-queue.md as placeholders. Prompts marked `[PENDING]` — Aaron will paste full sprint prompts from Claude.ai in a separate session.
+**New sprints added:**
+- S-016: Engineering Standards + Style Guide Foundation (P0, READY — **blocks S-017, S-018, S-019**)
+- S-017: DCC Audit + Remediation Against Standards (P1, BLOCKED by S-016)
+- S-018: Aaron Patzalek Portfolio / Solopreneur Site (P1, BLOCKED by S-016)
+- S-019: Vercel + Supabase Infrastructure Setup (P2, BLOCKED by S-016 + account creation)
+**Next action:** Aaron pastes the 4 sprint prompts into sprint-queue.md, then runs `next sprint` to execute S-016.
 
 ---
 

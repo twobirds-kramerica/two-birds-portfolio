@@ -1,7 +1,7 @@
 <!--
 STATUS: LIVE — THIS IS THE ACTIVE SPRINT QUEUE
 Created: 2026-04-11 16:15 EST (Toronto)
-Updated: 2026-04-11 16:15 EST (Toronto)
+Updated: 2026-04-15 02:40 EST (Toronto)
 -->
 
 # Sprint Queue
@@ -11,6 +11,89 @@ Sorted by priority. Top non-blocked sprint runs next.
 **Status key:** READY = run anytime | BLOCKED = waiting on something | DONE = completed
 
 > **MANDATORY:** Every sprint must run Phase 0 (process pending captures) before doing anything else. Check `pending-capture.md` first. See `sprint-template.md` for the Phase 0 instructions.
+
+---
+
+## S-016: Engineering Standards + Style Guide Foundation
+
+**Priority:** P0 (blocks all other UI work)
+**Duration:** 45 min
+**Status:** READY
+**Blocked by:** —
+**Layer:** L1-L4
+**Story refs:** —
+
+### Prompt
+
+```
+[PENDING — Aaron to paste full sprint prompt from Claude.ai conversation April 15, 2026]
+```
+
+### Expected Outputs
+- Engineering standards document
+- Style guide foundation
+
+---
+
+## S-017: DCC Audit + Remediation Against Standards
+
+**Priority:** P1
+**Duration:** 90 min
+**Status:** BLOCKED
+**Blocked by:** S-016
+**Layer:** L1
+**Story refs:** —
+
+### Prompt
+
+```
+[PENDING — Aaron to paste full sprint prompt from Claude.ai conversation April 15, 2026]
+```
+
+### Expected Outputs
+- DCC audit results against engineering standards
+- Remediation changes
+
+---
+
+## S-018: Aaron Patzalek Portfolio / Solopreneur Site
+
+**Priority:** P1
+**Duration:** 60 min
+**Status:** BLOCKED
+**Blocked by:** S-016
+**Layer:** L1
+**Story refs:** —
+
+### Prompt
+
+```
+[PENDING — Aaron to paste full sprint prompt from Claude.ai conversation April 15, 2026]
+```
+
+### Expected Outputs
+- Aaron Patzalek portfolio/solopreneur site
+
+---
+
+## S-019: Vercel + Supabase Infrastructure Setup
+
+**Priority:** P2
+**Duration:** 30 min
+**Status:** BLOCKED
+**Blocked by:** S-016, also needs Aaron to create Vercel + Supabase accounts
+**Layer:** L1-L4
+**Story refs:** —
+
+### Prompt
+
+```
+[PENDING — Aaron to paste full sprint prompt from Claude.ai conversation April 15, 2026]
+```
+
+### Expected Outputs
+- Vercel deployment configuration
+- Supabase infrastructure setup
 
 ---
 

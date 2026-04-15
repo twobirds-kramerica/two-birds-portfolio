@@ -1,6 +1,18 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 15, 2026 (S-016 Engineering Standards)
+**Last Session:** April 15, 2026 (S-016 + S-017)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## S-017: DCC Audit + Remediation Against Standards ✅
+
+**Date:** 2026-04-15 ~15:44 EST (Toronto)
+**Repo:** digital-confidence (commits `8c445fa`, `46cb7ee`)
+**Result:** Full standards audit across 7 categories. Scores: HTML 70, CSS 44, A11y 85, Perf 80, SEO 55→75, Security 15→25, Dependencies 90.
+**Remediations shipped:** (1) Email input linked label on index.html, (2) og:image added to 20 geo-content pages, (3) CSP meta on index + about, (4) GSC placeholder commented out.
+**Not remediated (documented):** CSP on remaining ~240 pages, SRI attributes, CSS token migration (914 hardcoded hex), 103 non-a11y !important, duplicate OG tags in tips.
+**Audit report:** `quality/lighthouse-results/2026-04-15-s017-dcc-standards-audit.md`
+**Next READY sprint:** S-018 (Aaron Patzalek Portfolio, P1) — prompt still `[PENDING]`
 
 ---
 

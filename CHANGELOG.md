@@ -8,6 +8,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Dates in YYYY-MM
 
 ## [Unreleased]
 
+(empty)
+
+---
+
+## [2026-04-15] — DCC Standards Audit + Remediation (S-017)
+
+### Fixed
+- Email capture input on index.html now has linked `<label>` for screen readers
+- Placeholder Google Search Console verification tag commented out (was `REPLACE_WITH_REAL_CODE`)
+- 20 geo-content pages now have `og:image` for social sharing previews
+- Content Security Policy meta tag added to index.html and about.html
+
+---
+
+## [2026-04-15] — Engineering Standards Foundation (S-016)
+
 ### Added
 - Engineering standards document (`standards/ENGINEERING-STANDARDS.md`)
 - Design system CSS tokens (`standards/tokens.css`)

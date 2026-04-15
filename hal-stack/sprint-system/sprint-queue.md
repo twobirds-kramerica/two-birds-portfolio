@@ -25,12 +25,13 @@ Sorted by priority. Top non-blocked sprint runs next.
 
 ---
 
-## S-017: DCC Audit + Remediation Against Standards
+## S-017: DCC Audit + Remediation Against Standards ✅
 
 **Priority:** P1
 **Duration:** 90 min
-**Status:** READY
-**Blocked by:** — (S-016 complete)
+**Status:** DONE (2026-04-15)
+**Layer:** L1
+**Completed:** Full audit (7 categories scored), 4 remediations shipped (email label, og:image x20 geo-content, CSP on index+about, GSC placeholder). Audit report in quality/lighthouse-results/.
 **Layer:** L1
 **Story refs:** —
 
@@ -512,3 +513,4 @@ Test with a deliberate em dash to confirm the tag catches it.
 | S-007 | CIPO Trademark Research | 2026-04-15 (next sprint auto-run) |
 | S-008 | DCC CSS Brand Alignment | 2026-04-15 (next sprint auto-run) |
 | S-016 | Engineering Standards + Style Guide Foundation | 2026-04-15 (next sprint auto-run) |
+| S-017 | DCC Audit + Remediation Against Standards | 2026-04-15 (next sprint auto-run) |

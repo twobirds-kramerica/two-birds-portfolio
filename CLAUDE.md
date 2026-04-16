@@ -24,6 +24,7 @@ Sole income earner. Time is the most constrained asset.
   CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
   Use PowerShell to get time: $ts = (Get-Date).ToString("yyyy-MM-dd HH:mm") + " EST (Toronto)"
 - PATTERN COUNTER RULE: If Aaron asks the same question 3+ times in a session, stop troubleshooting instances. Declare the pattern broken. Propose systemic fix. Log to RELIABILITY-ISSUES.md. Never say "yes it works" unless confirmed 3 times in a row.
+- SPRINT COMPLETION RULE: Every sprint MUST end with SESSION-STATE.md update and git push. No exceptions. If a sprint cannot complete the FINAL STEP, it is NOT DONE and must log the blocker in sprint-queue.md with status BLOCKED.
 
 ## RELIABLE WORKFLOW (as of April 2, 2026)
 - Retro PRIMARY: PowerShell `cat logs/RETRO.md` — always accurate

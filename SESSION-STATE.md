@@ -4,6 +4,23 @@
 
 ---
 
+## GitHub Projects Setup ✅
+
+**Date:** 2026-04-16 ~02:58 EST (Toronto)
+**Project URL:** https://github.com/users/twobirds-kramerica/projects/1
+**Result:** Full GitHub Projects V2 setup completed.
+**Phase 1:** Project created — "Two Birds Innovation Backlog" (private, user-level).
+**Phase 2:** 14 custom fields added — Product, Priority, Type, Risk, Layer (single-select); Sprint, Owner (text); Effort, Impact, Reach, Confidence, RICE Score (number); Due Date (date).
+**Phase 3:** 8 views documented for manual creation (Board/Table/Roadmap — view creation not available via API for user projects).
+**Phase 4:** 15 GitHub Issues created for S-001 through S-021 (skipping S-010 to S-015 which don't exist). 12 closed as completed. 3 open (S-006 blocked, S-009 ready, S-019 blocked). All added to project.
+**Phase 5:** 4 issue templates created — bug, feature, sprint, task (`.github/ISSUE_TEMPLATE/`).
+**Phase 6:** Guide doc at `hal-stack/sprint-system/github-projects-guide.md` — views, RICE scoring, gh CLI reference, Jira migration path.
+**Phase 7:** Sprint template updated — new sprints should create GitHub Issue first, reference issue number, close when DONE.
+**gh CLI:** Installed at `/c/Program Files/GitHub CLI/gh.exe`. Auth: twobirds-kramerica, scopes: gist, read:org, repo, read:project, project.
+**Aaron action:** Open project URL, create the 8 views manually per guide, review the board.
+
+---
+
 ## S-021: Portfolio Deep Rebuild ✅
 
 **Date:** 2026-04-16 ~01:02 EST (Toronto)

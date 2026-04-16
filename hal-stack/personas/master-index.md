@@ -71,7 +71,7 @@ Complete roster of all personas in the Two Birds Innovation boardroom.
 | # | Name | Title | Role Level | Model Tier | File |
 |---|------|-------|------------|------------|------|
 | 21 | Val | Chief of Staff / EA | Executive | Opus | `departments/operations-ea.md` |
-| 22 | Drew | Project Manager | Specialist | Sonnet | `departments/operations-ea.md` |
+| 22 | Drew | Program Director | Executive | Opus | `departments/operations-ea.md` |
 | 23 | Casey | Knowledge Manager | Specialist | Sonnet | `departments/operations-ea.md` |
 | 24 | Riley | Parking Lot Manager | Front-line | Haiku | `departments/operations-ea.md` |
 

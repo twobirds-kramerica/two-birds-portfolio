@@ -1,39 +1,46 @@
 # Retro
-Date: April 15, 2026
-Session: S-016 + S-017 + S-018 (marathon session)
+Date: April 16, 2026
+Session: S-020 Program Director + Agent Framework + Review Gates
 
 ## Completed
 
-- **S-016:** Engineering standards foundation (12 files — standards doc, tokens, 7 components, changelog, change management, sprint template)
-- **S-017:** DCC standards audit (7 categories) + 4 remediations (email label, og:image x20, CSP x2, GSC placeholder)
-- **S-018:** Aaron Patzalek portfolio site built from scratch (3 files, 6 sections, fully standards-compliant)
+- **Phase 1:** Drew promoted to Program Director (Executive/Opus, reports to Val)
+- **Phase 2:** 5 maturity stages (Prototype → Scale) with reviewer maps and ship criteria
+- **Phase 3:** 7-question intake interview + quick intake shortcut
+- **Phase 4:** Definition of Done — baseline + 5 stage-specific additions
+- **Phase 5:** Review panel lookup for 8 sprint types
+- **Phase 6:** Review log structure with APPROVED/REWORK/ABSTAIN template
+- **Phase 7:** Sprint template updated — Phase 0.5 (Drew intake) + Phase N-1 (panel review)
+- **Phase 8:** CLAUDE.md sprint completion enforcement rule
+- **Phase 9:** Agent wrapper docs — prompts today, real agents after 30-day validation
 
-## S-018 Site Structure
+## Files Created/Modified
 
-| Section | Content |
-|---------|---------|
-| Hero | "I build tools that empower people to think differently" + stats meta |
-| About | Bio + 4-stat grid (20+ years, 241 DCC pages, 9 repos, 29 modules) |
-| Products | DCC (live link), Clarity (coming soon), Career Coach (coming soon) |
-| Approach | Essentialism, Sovereignty, Lead from Back, Ship and Iterate |
-| CTA | Dark section with LinkedIn link |
-| Contact | Form (Formspree) + email + LinkedIn + location |
+| File | Action |
+|------|--------|
+| `personas/departments/operations-ea.md` | Modified — Drew promoted |
+| `personas/maturity-stages.md` | Created — 5 stages + product stage map |
+| `personas/intake-interview.md` | Created — 7 questions + quick intake |
+| `personas/definition-of-done.md` | Created — baseline + per-stage DoD |
+| `personas/review-panels.md` | Created — 8 sprint type panels |
+| `personas/review-log/README.md` | Created — log format + template |
+| `personas/agent-wrappers.md` | Created — current model + upgrade path |
+| `personas/master-index.md` | Modified — Drew title/tier updated |
+| `sprint-system/sprint-template.md` | Modified — intake + review gates |
+| `CLAUDE.md` | Modified — sprint completion rule |
 
-## Sprint Queue Status
+## Commits
 
-| Sprint | Priority | Status |
-|--------|----------|--------|
-| S-019 | P2 | BLOCKED (Vercel + Supabase accounts needed) |
-| S-006 | P2 | BLOCKED (Pentium Silver) |
-| S-009 | P2 | READY (human task — voice-check protocol) |
-| **All others** | — | **DONE** |
+- `d21f347` — Phase 1: Drew promoted
+- `70a59ed` — Phases 2-5: maturity stages, intake, DoD, review panels
+- `9ae1709` — Phases 6-7: review log + sprint template
+- `f329977` — Phases 8-9: CLAUDE.md rule + agent wrappers
 
-## Aaron Actions
+## Next Actions
 
-1. Enable GitHub Pages on aaron-patzalek repo (Settings → Pages → Source: master)
-2. Review portfolio content — bio, stats, contact form endpoint
-3. Open DCC in browser — verify teal changes from S-008
-4. Create Vercel + Supabase accounts to unblock S-019
+1. Test Drew intake on next Stage 3+ sprint (DCC work)
+2. Previous backlog from GitHub Projects sprint (gh CLI needed — install first)
+3. S-019 still BLOCKED (Vercel + Supabase accounts)
 
-Last updated: 2026-04-15 at 16:40 EST (Toronto)
+Last updated: 2026-04-16 at 00:47 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

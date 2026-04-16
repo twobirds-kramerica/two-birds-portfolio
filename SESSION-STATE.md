@@ -1,6 +1,24 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 15, 2026 (S-016 + S-017 + S-018)
+**Last Session:** April 16, 2026 (S-020 Program Director + Review Gates)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## S-020: Program Director + Agent Framework + Review Gates ✅
+
+**Date:** 2026-04-16 ~00:47 EST (Toronto)
+**Result:** Complete review gate system built. 9 phases, 8 new files.
+**Phase 1:** Drew promoted from Project Manager (Specialist/Sonnet) to Program Director (Executive/Opus). New responsibilities: intake interviews, panel selection, DoD enforcement, REWORK authority, weekly retro summaries.
+**Phase 2:** 5 maturity stages defined (Prototype → Scale) with required/optional reviewers, weight per area, and ship criteria per stage. Current product stages mapped (DCC=Stage 3, Career Coach=Stage 1, etc.).
+**Phase 3:** 7-question intake interview template. Quick intake shortcut ("standard intake") for Stage 1 prototype work.
+**Phase 4:** Definition of Done with baseline (every sprint) + per-stage additions (Stage 2: Lighthouse 80+, Stage 3: axe-core + 90+, Stage 4: CSP/JSON-LD/brand, Stage 5: full boardroom).
+**Phase 5:** Review panel lookup by 8 sprint types (Frontend, Backend, Infra, Content, Customer-facing, Financial, Legal, Research). Scrappy Pack always reviews.
+**Phase 6:** Review log structure with template (APPROVED/REWORK/ABSTAIN per reviewer, Drew synthesis, Aaron final call).
+**Phase 7:** Sprint template updated with Phase 0.5 (Drew intake) and Phase N-1 (panel review) gates.
+**Phase 8:** CLAUDE.md sprint completion rule added — every sprint MUST end with SESSION-STATE update + push, or log blocker.
+**Phase 9:** Agent wrapper documentation — personas are prompts today (~500 tokens each, ~6-10K per panel review), upgrade path to real agents documented for Phase 2 (post-30-day validation). Candidates: Priya, Theo, Drew, Casey, Riley.
+**Files created:** `maturity-stages.md`, `intake-interview.md`, `definition-of-done.md`, `review-panels.md`, `review-log/README.md`, `agent-wrappers.md`. Files modified: `operations-ea.md` (Drew), `sprint-template.md`, `CLAUDE.md`, `master-index.md`.
+**Next action:** Aaron runs a sprint with Drew intake on the next Stage 3+ work. Test the review panel on the next DCC sprint.
 
 ---
 

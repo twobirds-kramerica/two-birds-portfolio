@@ -156,6 +156,14 @@ Added `hal-stack/notion-bridge/job-search-workbench.md` -- pointer file connecti
 
 ---
 
+## Postmortem System + Rework Log ✅
+
+**Date:** 2026-04-13
+**Commit:** `b0e9be2`
+**Result:** Built weekly postmortem system and rework tracking. Created `postmortems/README.md` (process doc), `postmortems/TEMPLATE-weekly.md` (reusable template), `postmortems/2026-04-13-weekly.md` (first weekly postmortem covering April 7-13), `quality/REWORK-LOG.md` (tracks rework incidents and root causes), `tools/postmortem-dashboard.html` (visual dashboard). Also moved SESSION-STATE.md to repo root from `logs/` (now at `SESSION-STATE.md` rather than `logs/SESSION-STATE.md`).
+
+---
+
 ## RETRO Health System + Manual Sync ✅
 
 **Date:** 2026-04-13 ~02:45 EST (Toronto)

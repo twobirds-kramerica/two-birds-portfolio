@@ -4,6 +4,22 @@
 
 ---
 
+## S-021: Portfolio Deep Rebuild ✅
+
+**Date:** 2026-04-16 ~01:02 EST (Toronto)
+**Repo:** aaron-patzalek (commits `0a24465`, `67ac313`, `9b548d5`)
+**Data access:** Google Drive, LinkedIn, Gmail all BLOCKED (require auth). Built from local data: employability dossier (9 skills), context exports, culture spec, brand guidelines.
+**Phase 1:** Identity synthesis — career history (6 industries), skills inventory (9 areas), values/philosophy, testimonial sources (10 suggested). Assessment data (PI, YouScience, STRONG, Generalist) flagged as TODO for Aaron to paste.
+**Phase 2:** Positioning statements — 1-line headline, 1-paragraph about, 1-page full bio. All avoid banned words, show output not claims.
+**Phase 3:** Full site rebuild — hero with real career data, featured DCC project with stats (29 modules, 241 pages, bilingual, WCAG AA), 3 current products, 3 historical projects (Staples web-to-print, Koodo Internet, Goodwill eCommerce), career timeline (2005-2026), education/credentials, 4x2 skills grid, approach section, testimonials placeholder, dark CTA, contact form.
+**Phase 4:** Headshot TODO doc with AI gen options + local photographer research.
+**Phase 5:** First real panel review (Drew + Theo + Maya + Priya + Kai + Scrappy Pack). **Verdict: APPROVED with conditions.** Kai flagged missing og:image as REWORK. Drew approved with 4 pre-production conditions.
+**Phase 6:** Deployment checklist — Aaron must add og:image, review content, test form before enabling GitHub Pages.
+**Review log:** `hal-stack/personas/review-log/2026-04-16-S-021-review.md`
+**Aaron actions:** (1) Add og:image to index.html, (2) paste assessment data from Drive, (3) decide on testimonials section, (4) enable GitHub Pages when ready.
+
+---
+
 ## S-020: Program Director + Agent Framework + Review Gates ✅
 
 **Date:** 2026-04-16 ~00:47 EST (Toronto)

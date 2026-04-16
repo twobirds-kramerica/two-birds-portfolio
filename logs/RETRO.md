@@ -1,46 +1,52 @@
 # Retro
 Date: April 16, 2026
-Session: S-020 Program Director + Agent Framework + Review Gates
+Session: S-020 + S-021 (Program Director + Portfolio Deep Rebuild)
 
 ## Completed
 
-- **Phase 1:** Drew promoted to Program Director (Executive/Opus, reports to Val)
-- **Phase 2:** 5 maturity stages (Prototype → Scale) with reviewer maps and ship criteria
-- **Phase 3:** 7-question intake interview + quick intake shortcut
-- **Phase 4:** Definition of Done — baseline + 5 stage-specific additions
-- **Phase 5:** Review panel lookup for 8 sprint types
-- **Phase 6:** Review log structure with APPROVED/REWORK/ABSTAIN template
-- **Phase 7:** Sprint template updated — Phase 0.5 (Drew intake) + Phase N-1 (panel review)
-- **Phase 8:** CLAUDE.md sprint completion enforcement rule
-- **Phase 9:** Agent wrapper docs — prompts today, real agents after 30-day validation
+### S-020: Program Director + Agent Framework + Review Gates
+- Drew promoted to Program Director (Executive/Opus)
+- 5 maturity stages, intake interview, DoD, review panels, review log
+- Sprint template updated with intake + review gates
+- CLAUDE.md sprint completion enforcement rule
+- Agent wrapper docs (prompts today, real agents post-30-day)
 
-## Files Created/Modified
+### S-021: Portfolio Deep Rebuild
+- Identity synthesis from local data (Drive BLOCKED — TODO for Aaron)
+- 3 positioning statements (headline, paragraph, full bio)
+- Full site rebuild: hero, featured DCC, 3 current + 3 historical projects, career timeline, skills grid, approach, contact
+- Headshot TODO with AI gen + photographer options
+- **First panel review executed** — APPROVED with conditions (og:image missing)
+- Deployment checklist created
 
-| File | Action |
-|------|--------|
-| `personas/departments/operations-ea.md` | Modified — Drew promoted |
-| `personas/maturity-stages.md` | Created — 5 stages + product stage map |
-| `personas/intake-interview.md` | Created — 7 questions + quick intake |
-| `personas/definition-of-done.md` | Created — baseline + per-stage DoD |
-| `personas/review-panels.md` | Created — 8 sprint type panels |
-| `personas/review-log/README.md` | Created — log format + template |
-| `personas/agent-wrappers.md` | Created — current model + upgrade path |
-| `personas/master-index.md` | Modified — Drew title/tier updated |
-| `sprint-system/sprint-template.md` | Modified — intake + review gates |
-| `CLAUDE.md` | Modified — sprint completion rule |
+## Panel Review Results (First Real Use of S-020 System)
+
+| Reviewer | Verdict | Key Feedback |
+|----------|---------|-------------|
+| Theo | APPROVED | Testimonials section signals incompleteness |
+| Maya | APPROVED | Bio in positioning.md is stronger than site copy |
+| Priya | APPROVED | All a11y checks pass, no og:image noted |
+| Kai | **REWORK** | og:image missing — critical for LinkedIn sharing |
+| Drew | APPROVED with conditions | 4 items before production |
+| Scrappy Pack | 4 APPROVED, 1 REWORK (Tess: og:image) | Ship and move to revenue |
+
+## Aaron Actions
+
+1. Add `og:image` meta tag to aaron-patzalek/index.html (BLOCKING)
+2. Paste assessment data from Google Drive into identity-synthesis.md
+3. Decide: keep or remove testimonials section
+4. Enable GitHub Pages when deployment checklist complete
+5. Test Formspree endpoint (may want separate from DCC)
 
 ## Commits
 
-- `d21f347` — Phase 1: Drew promoted
-- `70a59ed` — Phases 2-5: maturity stages, intake, DoD, review panels
-- `9ae1709` — Phases 6-7: review log + sprint template
-- `f329977` — Phases 8-9: CLAUDE.md rule + agent wrappers
+Portfolio repo:
+- `d21f347` through `6765af0` — S-020 (4 commits)
 
-## Next Actions
+Aaron-patzalek repo:
+- `0a24465` — identity synthesis + positioning
+- `67ac313` — deep site rebuild
+- `9b548d5` — headshot TODO + deployment checklist
 
-1. Test Drew intake on next Stage 3+ sprint (DCC work)
-2. Previous backlog from GitHub Projects sprint (gh CLI needed — install first)
-3. S-019 still BLOCKED (Vercel + Supabase accounts)
-
-Last updated: 2026-04-16 at 00:47 EST (Toronto)
+Last updated: 2026-04-16 at 01:02 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

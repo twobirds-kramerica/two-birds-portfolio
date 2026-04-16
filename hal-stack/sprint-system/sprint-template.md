@@ -41,7 +41,25 @@ If the "Current Queue" section contains any items:
 4. Commit: "chore(hal): merged [N] captured items from pending queue"
 If pending-capture is empty, skip to Phase 1.
 
+PHASE 0.5 — DREW INTAKE (recommended for Stage 2+)
+
+Drew (Program Director) reviews sprint scope:
+- Confirms maturity stage (see personas/maturity-stages.md)
+- Selects review panel (see personas/review-panels.md)
+- Flags concerns before work begins
+For Stage 1 prototype work, Aaron can say "standard intake" to skip.
+
 [PHASE 1+ — Sprint-specific work here]
+
+PHASE N-1 — PANEL REVIEW (required for Stage 3+)
+
+Each panel member reviews sprint output against DoD:
+- Reviews logged to hal-stack/personas/review-log/
+- Drew synthesizes verdict: APPROVED or REWORK
+- If REWORK: sprint status → BLOCKED, fix list documented
+- If APPROVED: sprint status → READY TO SHIP
+- Aaron makes final call (SHIP / ACCEPT REWORK / OVERRIDE)
+For Stage 1-2, panel review is optional (Drew decides).
 
 FINAL STEP: Update SESSION-STATE.md, auto-generate context export,
 commit, push to master.

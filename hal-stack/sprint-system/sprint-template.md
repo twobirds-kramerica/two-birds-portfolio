@@ -105,3 +105,4 @@ Sprints that are documentation-only or internal tooling may skip this checklist 
 8. No scope creep — improvements go to backlog
 9. Plain language, timestamps on all files
 10. **Standards compliance checklist** verified before DONE (see above)
+11. **GitHub Projects:** New sprints should create a GitHub Issue first (use sprint template), then reference the issue number in the sprint prompt. Close the issue when the sprint is DONE. The project board at https://github.com/users/twobirds-kramerica/projects/1 is the visibility layer; sprint-queue.md remains the execution queue.

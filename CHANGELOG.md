@@ -12,6 +12,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/). Dates in YYYY-MM
 
 ---
 
+## [2026-04-16] — DCC Deep UI/UX Overhaul (S-022)
+
+### Changed
+- Module grid now responsive: 1 column mobile, 2 columns tablet (640px+), 3 columns desktop (1024px+)
+- Sidebar header uses unified brand teal-to-blue gradient (was 3 competing definitions)
+- Video section buttons use `--accent-primary` brand blue (was off-brand Material Blue #2196F3)
+- Welcome hero, splash overlay, story blocks all use CSS variable tokens instead of hardcoded hex
+- h2 divider rule scoped to `.main-content h2` only (no more stacked borders outside content)
+- Footer border standardised to 2px, brand name font hierarchy improved, dark mode colours tokenised
+- Splash text colours upgraded for better contrast (was #666, now --text-muted #5A6B78)
+- 12 instances of hardcoded secondary text (#546E7A) replaced with `var(--text-secondary)`
+- Added new CSS tokens: `--accent-warm` (#E8B84B) and `--bg-cool` (#EAF4FF)
+
+---
+
 ## [2026-04-15] — Aaron Patzalek Portfolio Site (S-018)
 
 ### Added

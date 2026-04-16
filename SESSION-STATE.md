@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 16, 2026 (S-020 Program Director + Review Gates)
+**Last Session:** April 16, 2026 (S-020 + S-021 + GitHub Projects Setup)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
 
 ---

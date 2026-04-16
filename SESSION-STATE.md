@@ -1,6 +1,17 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 16, 2026 (S-022 DCC UI/UX Overhaul)
+**Last Session:** April 16, 2026 (S-022 + Backlog Migration to GitHub Projects)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Backlog Migration to GitHub Projects ✅
+
+**Date:** 2026-04-16 ~15:48 EST (Toronto)
+**Result:** Full migration of human backlog + SESSION-STATE action items + sprint history to GitHub Issues + Project.
+**Created:** 33 new issues (#16-48). 1 sprint backfill (S-022). 19 human backlog items. 8 SESSION-STATE action items. 5 new labels (human-action, task, branding, hal-stack, career, dcc, feature, research).
+**Project:** https://github.com/users/twobirds-kramerica/projects/1 — now has **48 items** (35 open, 13 closed).
+**Breakdown:** 16 sprint issues (S-001 through S-022), 32 task/action items from human backlog + SESSION-STATE.
+**Aaron action:** Open project URL. Create the 8 views manually. Triage the 35 open items — close any that are no longer relevant.
 
 ---
 

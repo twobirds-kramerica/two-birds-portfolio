@@ -1,6 +1,28 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 16, 2026 (research-mode + job search foundation)
+**Last Session:** April 17, 2026 (autonomous backlog burn-down)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Autonomous Backlog Burn-Down ✅
+
+**Date:** 2026-04-17 ~01:14 EST (Toronto)
+**Trigger:** Aaron asked to run all autonomous items from backlog to use capacity.
+**Phase 0:** 2 pending captures merged (P1 blocker → human-backlog, P2 epic E16 → epics.md).
+
+**Run 1 — E16: GitHub-Native Change Management** ✅
+Created `.github/release.yml` (label-based release note categorisation), `.github/workflows/changelog.yml` (auto-generates CHANGELOG.md on release), `hal-stack/guides/release-process.md` (4-layer process doc), sprint template updated with issue-linked commit rule. **First release created: v0.1.0** at https://github.com/twobirds-kramerica/two-birds-portfolio/releases/tag/v0.1.0
+
+**Run 2 — SC-004: AI Product Evaluator Career Frame** ✅
+Added "Founder Positioning — AI Product Evaluator / Critical User" section to `two-birds-brand-guidelines.md`. Covers: differentiator (non-developer perspective), evidence (6+ tools evaluated, DCC Brenda testing, NB layer), honest claims vs gaps.
+
+**Run 3 — S1.1-S1.4: Decapitation Checklists** ✅
+4 detailed checklists in `hal-stack/architecture/decapitation-details/`: GitHub (10 repos mapped, Codeberg/Gitea/L4 plans, quarterly drill checklist), Formspree (L2 Web3Forms already active, endpoint audit), Cloudflare (DNS export procedure, registrar fallback), Gmail (Google Takeout backup plan, Proton Mail L2, emergency procedure).
+
+**Run 4 — Housekeeping: stories.md sync** ✅
+10 items marked DONE in stories.md: S1.1-S1.4, S2.1, S3.3, S5.7, S5.8, S6.1-S6.2, SC-004. Backlog now accurately reflects completed work.
+
+**Commits:** `1286607` (Phase 0), `1d1ea51` (E16), `d4a7853` (SC-004), `28b14b8` (S1.1-S1.4), `9a31b69` (stories sync).
 
 ---
 

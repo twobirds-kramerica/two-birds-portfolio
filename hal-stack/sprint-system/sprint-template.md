@@ -106,3 +106,4 @@ Sprints that are documentation-only or internal tooling may skip this checklist 
 9. Plain language, timestamps on all files
 10. **Standards compliance checklist** verified before DONE (see above)
 11. **GitHub Projects:** New sprints should create a GitHub Issue first (use sprint template), then reference the issue number in the sprint prompt. Close the issue when the sprint is DONE. The project board at https://github.com/users/twobirds-kramerica/projects/1 is the visibility layer; sprint-queue.md remains the execution queue.
+12. **Issue-linked commits:** When a commit completes a sprint or fixes a bug, use `closes #N` or `fixes #N` in the commit message to auto-close the GitHub Issue. See `hal-stack/guides/release-process.md`.

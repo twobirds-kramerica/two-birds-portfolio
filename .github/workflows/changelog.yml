@@ -1,0 +1,43 @@
+# Auto-generate CHANGELOG.md when a release is published
+# Triggers on: GitHub Release created via gh release create
+# Uses: GitHub API to fetch all releases and build changelog
+
+name: Auto-generate CHANGELOG
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Generate CHANGELOG from releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "# Changelog" > CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "Auto-generated from [GitHub Releases](https://github.com/${{ github.repository }}/releases)." >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "---" >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+
+          gh release list --limit 50 --json tagName,name,publishedAt,body \
+            --jq '.[] | "## [\(.tagName)] — \(.name)\n\n**Date:** \(.publishedAt[:10])\n\n\(.body)\n\n---\n"' \
+            >> CHANGELOG.md
+
+      - name: Commit and push CHANGELOG
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add CHANGELOG.md
+          git diff --cached --quiet || git commit -m "chore: auto-generate CHANGELOG from releases"
+          git push

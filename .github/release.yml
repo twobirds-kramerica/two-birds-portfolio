@@ -1,0 +1,37 @@
+# Release categorisation — auto-generates release notes grouped by label
+# Used by: gh release create --generate-notes
+
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+    authors:
+      - dependabot
+  categories:
+    - title: "Features & Sprints"
+      labels:
+        - sprint
+        - feature
+    - title: "Bug Fixes"
+      labels:
+        - bug
+    - title: "Infrastructure & HAL Stack"
+      labels:
+        - hal-stack
+    - title: "Branding & Design"
+      labels:
+        - branding
+        - dcc
+    - title: "Career & Job Search"
+      labels:
+        - career
+    - title: "Documentation"
+      labels:
+        - documentation
+        - task
+    - title: "Human Actions"
+      labels:
+        - human-action
+    - title: "Other"
+      labels:
+        - "*"

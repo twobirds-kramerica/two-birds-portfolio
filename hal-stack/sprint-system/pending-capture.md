@@ -37,24 +37,4 @@ Every Claude Code sprint starts by checking this file. If items exist:
 
 ## Current Queue
 
----
-TIMESTAMP: 2026-04-16 22:55 EST
-SOURCE: Claude.ai chat
-PRIORITY: P1
-TYPE: blocker
-CATEGORY: Personal
-ITEM: Windows voice dictation not working on new laptop — blocks all voice-first workflows
-CONTEXT: Aaron's primary input method is voice dictation. The new laptop (provided by Phil/Employment Services) was preloaded and may not have Windows properly activated. Voice dictation (Win+H) requires Windows activation. This blocks Claude.ai input, Claude Code input, and general productivity. Aaron believes it comes with one year of Office but is unsure about Windows activation status.
-ACTION: Check Windows activation status (Settings > System > Activation). If not activated, find the product key (often on a sticker on the bottom of the laptop, or in Settings > System > About). If Windows is activated and dictation still doesn't work, check Settings > Privacy > Speech and ensure Online Speech Recognition is turned on. Also check Settings > Time & Language > Speech.
----
-
----
-TIMESTAMP: 2026-04-16 23:10 EST
-SOURCE: Claude.ai chat (CTO recommendation)
-PRIORITY: P2
-TYPE: epic
-CATEGORY: HAL Stack
-ITEM: Implement GitHub-native change management (4 layers)
-CONTEXT: No change management exists between Claude Code sprints, GitHub issues, and the backlog. Work gets done but issues stay open, no release history exists, and no changelog is maintained. This is a basic engineering governance gap. The CTO recommends a 4-layer approach using only GitHub-native tools: (1) issue-linked commits with closes/fixes syntax, (2) GitHub Releases with auto-generated notes via gh CLI, (3) GitHub Action to auto-generate CHANGELOG.md on release, (4) .github/release.yml for label-based categorization. No external tools needed.
-ACTION: Sprint should deliver: (a) update sprint prompt template to require issue numbers in commit messages, (b) create .github/release.yml with label categories, (c) create GitHub Action workflow for auto-changelog on release, (d) document the release process in hal-stack/guides/release-process.md, (e) run first gh release create to establish v0.1.0 baseline.
----
+_(empty — 2 items merged 2026-04-17. Routed: 1 blocker → human-backlog CRITICAL, 1 epic → E16 in epics.md)_

@@ -136,3 +136,13 @@ All epics layer-tagged per sovereignty model.
 **Deliverables:** 12-component audit in `architecture/decapitation-checklist.md`, sovereignty dashboard in `sovereignty-principles.md`
 **Next:** Action items: test Aider as L2, confirm Cloudflare Pages as live L2, document DNS records, build local backup script
 **Blockers:** None
+
+## E16: GitHub-Native Change Management (4 Layers)
+**Layer:** L1-L4
+**Priority:** P2
+**Status:** PENDING
+**What:** Implement change management between Claude Code sprints, GitHub issues, and the backlog using only GitHub-native tools. 4-layer approach: (1) issue-linked commits with closes/fixes syntax, (2) GitHub Releases with auto-generated notes via gh CLI, (3) GitHub Action to auto-generate CHANGELOG.md on release, (4) .github/release.yml for label-based categorisation.
+**Deliverables:** Updated sprint template with issue number requirement, .github/release.yml, GitHub Action workflow for auto-changelog, release process guide at hal-stack/guides/release-process.md, first release v0.1.0
+**Next:** Create sprint for this epic
+**Blockers:** None
+**Source:** CTO recommendation, captured 2026-04-16

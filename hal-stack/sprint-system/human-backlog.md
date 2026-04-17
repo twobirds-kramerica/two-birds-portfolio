@@ -30,6 +30,8 @@ Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md,
 
 ## CRITICAL — Do Today
 
+- [ ] **⚠ P1 BLOCKER: Windows voice dictation not working on new laptop** — Blocks all voice-first workflows. Check Settings > System > Activation (Win+H requires activation). If activated, check Settings > Privacy > Speech > Online Speech Recognition. Also Settings > Time & Language > Speech. Laptop from Phil/Employment Services may not have Windows properly activated. **10 min.** (Source: capture 2026-04-16)
+
 - [ ] **Follow up with iA Financial on Process Innovation role** — Check status. Email or phone. **5 min.** (Source: warm-network.md, April 2026)
 
 - [ ] **Send Davie Lee LinkedIn outreach message** — Draft already in Gmail drafts. **2 min.** (Source: warm-network.md)

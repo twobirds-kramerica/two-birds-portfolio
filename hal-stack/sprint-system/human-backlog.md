@@ -30,11 +30,17 @@ Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md,
 
 ## CRITICAL — Do Today
 
-- [ ] **Upload Two Birds logo to LinkedIn** — open `assets/logos/two-birds/two-birds-1024.png`, upload as LinkedIn company page profile image. **2 min.** (Source: S17. Flagged 4 times across sessions.)
+- [ ] **Follow up with iA Financial on Process Innovation role** — Check status. Email or phone. **5 min.** (Source: warm-network.md, April 2026)
+
+- [ ] **Send Davie Lee LinkedIn outreach message** — Draft already in Gmail drafts. **2 min.** (Source: warm-network.md)
+
+- [ ] **Check Tech Alliance for upcoming events or job leads** — Explore as support pathway after AI/GEO session. **10 min.** (Source: warm-network.md)
+
+- [ ] **Update LinkedIn profile with Two Birds Innovation work** — Add founder role, DCC project, sovereignty framework. **15 min.** (Source: job search foundation)
+
+- [ ] **Upload Two Birds logo to LinkedIn** — open `assets/logos/two-birds/two-birds-1024.png`, upload as LinkedIn company page profile image. **2 min.** (Source: S17. Flagged 4+ times.)
 
 - [x] ~~**Pick DCC logo variation**~~ — V07 (heart-bulb) selected, finalized in S20 ✅
-
-**NEW items from Session 20:**
 
 - [ ] **Buy domains twobirdsinnovation.com and .ca** — secure before someone else does. Check availability. **10 min.** (Source: S20)
 

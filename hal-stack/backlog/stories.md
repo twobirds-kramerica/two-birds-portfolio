@@ -14,17 +14,17 @@ Tactical work items derived from epics. Each layer-tagged.
 
 | ID | Story | Layer | Priority | Status | Blocked By |
 |----|-------|-------|----------|--------|------------|
-| S1.1 | Fill decapitation checklist for GitHub (repos + Pages) | L1-L4 | P2 | Pending | — |
-| S1.2 | Fill decapitation checklist for Formspree | L1-L4 | P2 | Pending | — |
-| S1.3 | Fill decapitation checklist for Cloudflare | L1-L4 | P2 | Pending | — |
-| S1.4 | Fill decapitation checklist for Gmail pipeline | L1-L4 | P2 | Pending | — |
+| S1.1 | Fill decapitation checklist for GitHub (repos + Pages) | L1-L4 | P2 | **DONE** (2026-04-17) | — |
+| S1.2 | Fill decapitation checklist for Formspree | L1-L4 | P2 | **DONE** (2026-04-17) | — |
+| S1.3 | Fill decapitation checklist for Cloudflare | L1-L4 | P2 | **DONE** (2026-04-17) | — |
+| S1.4 | Fill decapitation checklist for Gmail pipeline | L1-L4 | P2 | **DONE** (2026-04-17) | — |
 | S1.5 | Schedule first quarterly decapitation drill | L1-L4 | P3 | Pending | S1.1-S1.4 |
 
 ## Cross-Context System (E2)
 
 | ID | Story | Layer | Priority | Status | Blocked By |
 |----|-------|-------|----------|--------|------------|
-| S2.1 | Add context export step to CLAUDE.md workflow | L1-L4 | P2 | Pending | Aaron review |
+| S2.1 | Add context export step to CLAUDE.md workflow | L1-L4 | P2 | **DONE** (S-004, 2026-04-12) | — |
 | S2.2 | Retroactive recovery: 10 most important Claude.ai sessions | L1 | P2 | Pending | Aaron |
 | S2.3 | Create exports/ directory with first real export | L1-L4 | P2 | Pending | S2.2 |
 | S2.4 | Test context-loader-prompt with GPT (L2 validation) | L2 | P3 | Pending | — |
@@ -35,7 +35,7 @@ Tactical work items derived from epics. Each layer-tagged.
 |----|-------|-------|----------|--------|------------|
 | S3.1 | Create OpenAI Platform account + API key | L1 | P1 | Pending | Aaron |
 | S3.2 | Build Sub-Sprint 1: Working STT loop | L1 | P1 | Pending | S3.1 |
-| S3.3 | Build Sub-Sprint 2: Keyword command map | L4 | P1 | Pending | — |
+| S3.3 | Build Sub-Sprint 2: Keyword command map | L4 | P1 | **DONE** (S-001, 2026-04-12) | — |
 | S3.4 | Build Sub-Sprint 3: Command router + TTS response | L4 | P1 | Pending | S3.2, S3.3 |
 | S3.5 | Build Sub-Sprint 4: Continuous listen loop | L1-L4 | P2 | Pending | S3.4 |
 | S3.6 | Test Whisper.cpp on i5 Lenovo (L4 STT benchmark) | L4 | P3 | Pending | — |
@@ -58,8 +58,8 @@ Tactical work items derived from epics. Each layer-tagged.
 | S5.4 | Aaron reviews DCC logo variations and selects one | L1 | P2 | Pending | Aaron |
 | S5.5 | Generate DCC final logo formats (after selection) | L1 | P2 | Pending | S5.4 |
 | S5.6 | Replace DCC favicon on .io site with selected DCC logo | L1 | P2 | Pending | S5.5 |
-| S5.7 | Update DCC site CSS to match DCC brand guidelines | L1 | P3 | Pending | S5.6 |
-| S5.8 | CIPO trademark registration research for "Two Birds Innovation" | L1 | P3 | Pending | — |
+| S5.7 | Update DCC site CSS to match DCC brand guidelines | L1 | P3 | **DONE** (S-008, 2026-04-15) | — |
+| S5.8 | CIPO trademark registration research for "Two Birds Innovation" | L1 | P3 | **DONE** (S-007, 2026-04-15) | — |
 | S5.9 | Final company name decision — evaluate ALOFT and active backlog candidates | L1 | P3 | Pending | Aaron (parked by choice) |
 | S5.10 | Update all branding assets if company name changes from Two Birds | L1 | P3 | Pending | S5.9 |
 
@@ -67,8 +67,8 @@ Tactical work items derived from epics. Each layer-tagged.
 
 | ID | Story | Layer | Priority | Status | Blocked By |
 |----|-------|-------|----------|--------|------------|
-| S6.1 | Define "stale" rules per content type | L4 | P3 | Pending | — |
-| S6.2 | Build freshness check script (PowerShell or Node) | L4 | P3 | Pending | S6.1 |
+| S6.1 | Define "stale" rules per content type | L4 | P3 | **DONE** (S-003, 2026-04-12) | — |
+| S6.2 | Build freshness check script (PowerShell or Node) | L4 | P3 | **DONE** (S-003, 2026-04-12) | — |
 | S6.3 | Wire to n8n cron (when n8n installed) | L3 | P3 | Pending | n8n |
 
 ## Captured Items (merged from pending-capture.md)
@@ -78,5 +78,5 @@ Tactical work items derived from epics. Each layer-tagged.
 | SC-001 | Verify capture command loop works end-to-end | L1-L4 | P3 | **DONE** (verified this run) | — |
 | SC-002 | Journey archive update — write chapters 4+ for April 2-12 (10-day gap) | L1-L4 | P2 | Pending | — |
 | SC-003 | NB (Notebook) layer idea — Aaron to clarify concept, then evaluate for HAL Stack | L1-L4 | P2 | Pending | Aaron [VERIFY: what is the NB layer?] |
-| SC-004 | Career frame "AI product evaluator / critical user" — capture in brand guidelines, evaluate positioning impact | L1-L4 | P1 | Pending | — |
+| SC-004 | Career frame "AI product evaluator / critical user" — capture in brand guidelines, evaluate positioning impact | L1-L4 | P1 | **DONE** (2026-04-17) | — |
 | SC-005 | Sprint 22-25 draft plans — convert to sprint-queue.md entries | L1-L4 | P2 | Pending | Aaron [VERIFY: paste or summarise plans] |

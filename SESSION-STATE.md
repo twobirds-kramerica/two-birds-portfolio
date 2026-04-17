@@ -1,6 +1,21 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 16, 2026 (research-mode install + backlog)
+**Last Session:** April 16, 2026 (research-mode + job search foundation)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Research-Mode Auto-Activation + Job Search Foundation ✅
+
+**Date:** 2026-04-16 ~21:53 EST (Toronto)
+**Phase 1:** CLAUDE.md updated with research-mode auto-activation rules. Triggers on: tool evaluation, market research, factual claims, accuracy-critical tasks. Does NOT trigger on: code execution, file creation, sprint work.
+**Phase 2:** Job search foundation built (4 files in `hal-stack/job-search/`):
+- `README.md` — system overview, target roles/geography/industries/compensation
+- `search-profile.md` — 10 skills with levels, search keywords (include/exclude), 10 companies of interest, job boards to monitor. IKIGAI data flagged as TODO (Google Drive auth required).
+- `warm-network.md` — 5 contacts in 3 tiers: Tier 1 (Phil Butler, Mike Kerkvliet, iA Financial), Tier 2 (Davie Lee, Tech Alliance), Tier 3 (former colleagues). Follow-up cadence defined.
+- `daily-search.md` — template for daily search output: postings, network actions, applications, responses.
+**Phase 3:** 4 NOW items added to human-backlog.md: iA Financial follow-up, Davie Lee outreach, Tech Alliance events, LinkedIn profile update.
+**Commits:** `79959b2` (CLAUDE.md), `efee6cf` (job search files), `afd41d8` (backlog).
+**Next action:** Aaron reviews warm-network.md and sends the 5 follow-up messages. That's the highest-ROI activity today.
 
 ---
 

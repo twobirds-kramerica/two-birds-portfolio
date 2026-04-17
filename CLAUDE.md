@@ -52,6 +52,19 @@ Last run: C:\twobirds\two-birds-portfolio\logs\RETRO.md
 HAL backlog: C:\twobirds\two-birds-portfolio\hal-stack\HAL-BACKLOG.md
 Journey archive: C:\twobirds\two-birds-portfolio\journey\
 
+## RESEARCH MODE AUTO-ACTIVATION
+When the current task involves any of the following, activate research mode automatically (no manual toggle needed):
+- Evaluating external tools, platforms, or services
+- Competitive analysis or market research
+- Making factual claims about companies, people, products, or pricing
+- Answering questions where accuracy matters more than citations
+- Any task where Aaron or the Scrappy Pack would expect citations
+
+When the task is building, writing code, creating files, or executing sprints — do NOT activate research mode. Speed matters more than citations in execution mode.
+
+To activate: follow the rules in ~/.claude/skills/research-mode/SKILL.md
+To deactivate: resume normal operation when the task shifts back to execution.
+
 ## TRIGGER COMMANDS
 When the user types any of these, execute the corresponding action:
 "next sprint" — read hal-stack/sprint-system/sprint-queue.md, check pending-capture.md first (Phase 0), then execute the top non-blocked READY sprint

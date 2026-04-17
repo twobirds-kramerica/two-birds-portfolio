@@ -72,6 +72,10 @@ _(Both items are in CRITICAL section above)_
 
 - [ ] **Create OpenAI Platform account** — platform.openai.com, add CA$5 credits, generate API key, save to `.env`. Unblocks voice layer build (S3.1, S3.2). **10 min.** (Source: S12)
 
+- [ ] **Deep-dive kipi-system as rip-the-pattern candidate** — Read `assafkip/kipi-system` on GitHub. Identify which patterns solve problems HAL Stack already has (morning brief, context loss, reporter flow). Write comparison doc at `hal-stack/founding-board/kipi-comparison.md`. Also review `assafkip/founder-skills` for neurodivergent-founder and founder-debrief skills. Do NOT install or fork yet — rip before build. **30 min.** (Source: TikTok vetting chat April 14, Robtheops video comments)
+
+- [ ] **Send Davie Lee (interVal, St. Thomas) LinkedIn outreach message** — Draft already exists in Gmail drafts. **5 min.** (Source: networking, April 2026)
+
 ### LATER
 
 - [ ] **Read sovereignty principles** — `hal-stack/architecture/sovereignty-principles.md`. Foundation document. **15 min.** (Source: S12)

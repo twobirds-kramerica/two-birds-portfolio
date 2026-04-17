@@ -1,6 +1,16 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 16, 2026 (Portfolio Deep Rework)
+**Last Session:** April 16, 2026 (research-mode install + backlog)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Research-Mode Plugin + Backlog Update ✅
+
+**Date:** 2026-04-16 ~21:33 EST (Toronto)
+**Phase 1:** research-mode plugin install. `claude plugin install` failed (not in marketplace). Manual install: cloned `assafkip/research-mode` from GitHub, copied `SKILL.md` + `commands/research.md` to `~/.claude/skills/research-mode/`. Files in place. **Requires Claude Code restart (`/reload-plugins` or restart session) to activate.**
+**Phase 2:** Two items added to human-backlog.md SOON section: (1) kipi-system deep-dive as rip-the-pattern candidate for HAL Stack morning briefs/context/debriefs — read before forking, compare against existing HAL patterns; (2) Davie Lee (interVal, St. Thomas) LinkedIn outreach — draft in Gmail.
+**Phase 3:** Committed `3d4377b`.
+**Next action:** Aaron restarts Claude Code, then tests by saying "enter research mode" or `/research` and runs a test query.
 
 ---
 

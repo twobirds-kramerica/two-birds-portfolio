@@ -1,6 +1,19 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 16, 2026 (S-022 + Backlog Migration to GitHub Projects)
+**Last Session:** April 16, 2026 (Portfolio Deep Rework)
 **Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+
+---
+
+## Portfolio Site Deep Rework ✅
+
+**Date:** 2026-04-16 ~21:01 EST (Toronto)
+**Repo:** aaron-patzalek (commits `759488b`, `4767232`)
+**Stage:** 2 (Alpha) | **Review:** APPROVED unanimously (Theo, Maya, Priya, Ava + Scrappy Pack)
+**Content rewrite:** Brand story from brand-name-research.md: chevrons (headwinds/tailwinds/intersection), sovereignty over autonomy, Essentialism + Lovability, motto/mantra in philosophy banner. Career: complete from restaurant (1998) through Two Birds (2026), Staples consolidated, PNI partnership noted, correct titles. Products: DCC as "Beta — launching soon" (no external link), Clarity + Career Coach as "In development", HAL Stack as "Architecture". Removed "7 products shipped" claim.
+**Visual additions:** Philosophy banner (dark section with motto/mantra), company logo row (TELUS/Start.ca/Staples/Goodwill/Peavey), timeline detail lines, card vision statements, status badges (Beta/In Development/Architecture), headshot TODO marker, og:image meta tag (image file TODO).
+**Review log:** `hal-stack/personas/review-log/2026-04-16-S-portfolio-rework.md`
+**Sage quote:** "The restaurant origin story is the most human thing on this page."
+**Aaron actions:** (1) Create og-card.png, (2) provide headshot, (3) test Formspree, (4) review and decide SHIP/HOLD.
 
 ---
 

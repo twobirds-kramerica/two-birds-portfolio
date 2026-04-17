@@ -4,6 +4,19 @@
 
 ---
 
+## Career-Ops Job Search Pipeline Installed ✅
+
+**Date:** 2026-04-16 ~22:10 EST (Toronto)
+**Repo:** `C:\twobirds\career-ops\` (cloned from santifer/career-ops)
+**Phase 1 (Install):** Cloned, `npm install` (4 packages), `npx playwright install chromium`. All clean.
+**Phase 2 (Configure):** Created `config/profile.yml` (Aaron's profile — 6 archetypes, compensation, location), `cv.md` (full CV from local data), `portals.yml` (8 companies + 5 Indeed queries, Canadian targets), `modes/_profile.md` (narrative, proof points, archetype table).
+**Phase 3 (Test):** `node doctor.mjs` — **all checks passed** (Node, deps, Playwright, cv, profile, portals, fonts, data/output/reports dirs).
+**Phase 4 (Link):** `hal-stack/job-search/career-ops-link.md` created with commands, config map, and guardrails.
+**Configured portals:** iA Financial, TELUS, Start.ca, Ontario Public Service, City of St. Thomas, City of London ON, Cohere, Shopify + 5 Indeed Canada search queries.
+**Next action:** Aaron opens career-ops in Claude Code (`cd C:\twobirds\career-ops && claude`), pastes a job URL, and verifies the evaluation output. Do NOT auto-apply.
+
+---
+
 ## Research-Mode Auto-Activation + Job Search Foundation ✅
 
 **Date:** 2026-04-16 ~21:53 EST (Toronto)

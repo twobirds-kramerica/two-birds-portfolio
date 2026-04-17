@@ -134,6 +134,33 @@ Inter is recommended because it's free, highly readable at all sizes, has excell
 
 ---
 
+## Founder Positioning — AI Product Evaluator / Critical User
+
+Aaron's career positioning for external audiences (LinkedIn, job applications, consulting proposals, speaking):
+
+**Frame:** Aaron is a product leader who evaluates AI tools the way a real user would — not the way an engineer would. His value is the non-developer perspective combined with 20+ years of product judgment.
+
+**The differentiator:** Most AI evaluation is done by engineers optimising for technical metrics. Aaron evaluates for human outcomes: Does this help the user? Does it respect their sovereignty? Does it actually work for someone who isn't a developer? Companies need both perspectives. Most have too many engineers and not enough critical users.
+
+**Evidence that supports this frame:**
+- Evaluated 6+ AI tools against a structured sovereignty framework (documented in HAL Stack)
+- Built a 26-module digital literacy platform testing every feature against Brenda (74-year-old non-technical user persona)
+- Cross-platform evaluation: uses Claude, GPT, and Gemini daily across the same projects
+- Identified that a "faceless brand plan" document didn't exist through systematic search of 115 Claude.ai conversations — investigative product evaluation
+- Built the NB (Nota Bene) layer specifically to track moments where AI tools were wrong and Aaron caught it
+
+**What Aaron can honestly claim:**
+- "Evaluated 6+ AI tools against a structured sovereignty framework. Built evaluation criteria, documented trade-offs, made go/no-go recommendations with reasoning."
+- "Built a 26-module digital literacy programme tested against a real non-technical user persona. Every interface decision evaluated for accessibility and human comprehension."
+
+**What Aaron cannot yet claim:**
+- Paid AI evaluation work for a client (gap closer: one gig on Scale AI / Outlier)
+- Published evaluation methodology (gap closer: one LinkedIn article)
+
+**Source:** SC-004 (P1 story), employability dossier skills inventory, Session 16 discovery report.
+
+---
+
 ## Print Considerations
 
 - Use **CMYK values** from the colour table above for any offset printing

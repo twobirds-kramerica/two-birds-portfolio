@@ -37,4 +37,13 @@ Every Claude Code sprint starts by checking this file. If items exist:
 
 ## Current Queue
 
-_(empty — 1 duplicate item skipped 2026-04-15. SC-001 already exists in stories.md as DONE.)_
+---
+TIMESTAMP: 2026-04-16 22:55 EST
+SOURCE: Claude.ai chat
+PRIORITY: P1
+TYPE: blocker
+CATEGORY: Personal
+ITEM: Windows voice dictation not working on new laptop — blocks all voice-first workflows
+CONTEXT: Aaron's primary input method is voice dictation. The new laptop (provided by Phil/Employment Services) was preloaded and may not have Windows properly activated. Voice dictation (Win+H) requires Windows activation. This blocks Claude.ai input, Claude Code input, and general productivity. Aaron believes it comes with one year of Office but is unsure about Windows activation status.
+ACTION: Check Windows activation status (Settings > System > Activation). If not activated, find the product key (often on a sticker on the bottom of the laptop, or in Settings > System > About). If Windows is activated and dictation still doesn't work, check Settings > Privacy > Speech and ensure Online Speech Recognition is turned on. Also check Settings > Time & Language > Speech.
+---

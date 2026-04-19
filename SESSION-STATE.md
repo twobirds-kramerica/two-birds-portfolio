@@ -2,7 +2,29 @@
 **Last Session:** April 19, 2026 (S-024 Notion-GitHub bidirectional sync — all 5 phases)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
-**Notion Sync Status:** NOT YET CONFIGURED — NOTION_API_KEY env var not set; see hal-stack/notion-sync/SETUP.md. Once configured, this line should read: `Notion Sync Status: LAST SYNC [YYYY-MM-DD HH:MM] — N sprint(s) open, M conflict(s). See hal-stack/notion-sync/SYNC-LOG.md.`
+**Notion Sync Status:** SCRIPTS VERIFIED on EZbook (2026-04-19 12:21 EST), awaiting NOTION_API_KEY. Python 3.12.10 + requests 2.33.1 installed; `python hal-stack/notion-sync/notion-client.py --test` runs cleanly and fails at the documented auth check (exit 2). Aaron needs SETUP.md Steps 1-3 (create integration, share Command Center, set env var) before real sync. Once set, this line should read: `Notion Sync Status: LAST SYNC [YYYY-MM-DD HH:MM] — N sprint(s) open, M conflict(s). See hal-stack/notion-sync/SYNC-LOG.md.`
+
+---
+
+## S-024 Follow-up — Python Prereq Verified on EZbook ✅
+
+**Date:** 2026-04-19 ~12:21 EST (Toronto)
+
+**What happened:**
+- Ran `winget install Python.Python.3.12 --accept-source-agreements --accept-package-agreements` on EZbook.
+- winget reported Python 3.12.10 was already installed at `C:\Users\getkr\AppData\Local\Programs\Python\Python312\`. User PATH already contained the Python bin + Scripts directories, but Git Bash session had inherited a stale pre-install PATH.
+- Prepended Python to the current shell PATH, ran `python --version` → 3.12.10 ✓, ran `pip install requests` → requests 2.33.1 + deps installed ✓.
+- Ran `python hal-stack/notion-sync/notion-client.py --test` → exit 2 with the documented message `FAIL: NOTION_API_KEY environment variable is not set. See hal-stack/notion-sync/SETUP.md.` Confirms the script loads config, imports requests, and fails at the auth check exactly as designed.
+
+**Gap found and fixed (same session):**
+- Python install was missing from `NEW-MACHINE-SETUP.md`. Added as **Step 4.5** with winget command + explicit PATH-refresh note ("close and reopen the terminal after install — Windows does not propagate PATH to already-open shells").
+- `hal-stack/notion-sync/SETUP.md` Step 4 previously assumed Python was present. Rewrote to include the winget install command, PATH-refresh note, and troubleshooting for the Microsoft Store stub case.
+
+**Commit:** `1f83fa4` — docs(notion-sync): add Python 3.12 install + PATH-refresh gotcha
+
+**What's still needed (Aaron manual):** Steps 1-3 of `hal-stack/notion-sync/SETUP.md` — create Notion integration, share Command Center with it, set `NOTION_API_KEY` as a persistent User env var, reopen the terminal.
+
+**Next recommended action:** Aaron runs SETUP.md Steps 1-3 (total ~5 minutes), then types "next sprint" again. The Notion-first flow will then run end-to-end and return a locked sprint from the Product Backlog.
 
 ---
 
@@ -1177,5 +1199,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-19 at 01:29 EST (Toronto)
+Last updated: 2026-04-19 at 12:21 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

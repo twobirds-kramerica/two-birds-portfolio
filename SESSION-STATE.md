@@ -1,6 +1,8 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 18, 2026 (next sprint — SC-006 Amplitude docs)
+**Last Session:** April 18, 2026 (S-024 Notion-GitHub sync build)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
+
+**Notion Sync Status:** NOT YET CONFIGURED — NOTION_API_KEY env var not set; see hal-stack/notion-sync/SETUP.md. Once configured, this line should read: `Notion Sync Status: LAST SYNC [YYYY-MM-DD HH:MM] — N sprint(s) open, M conflict(s). See hal-stack/notion-sync/SYNC-LOG.md.`
 
 ---
 

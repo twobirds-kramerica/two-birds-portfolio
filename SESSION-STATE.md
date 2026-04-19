@@ -2,7 +2,10 @@
 **Last Session:** April 19, 2026 (S-024 Notion-GitHub bidirectional sync — all 5 phases)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
-**Notion Sync Status:** SCRIPTS VERIFIED on EZbook (2026-04-19 12:21 EST), awaiting NOTION_API_KEY. Python 3.12.10 + requests 2.33.1 installed; `python hal-stack/notion-sync/notion-client.py --test` runs cleanly and fails at the documented auth check (exit 2). Aaron needs SETUP.md Steps 1-3 (create integration, share Command Center, set env var) before real sync. Once set, this line should read: `Notion Sync Status: LAST SYNC [YYYY-MM-DD HH:MM] — N sprint(s) open, M conflict(s). See hal-stack/notion-sync/SYNC-LOG.md.`
+## Notion Sync Status
+✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
+Scripts verified on EZbook. Environment variable set.
+Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
@@ -1192,12 +1195,34 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 | Two Birds Innovation | 38/60 | |
 | DCC | 43/60 | Highest |
 
-## Next Actions
-1. Post LinkedIn Post 1 — Monday April 7
-2. Call Mike K about Paperwork Labs
-3. Send B2B emails with pitch deck + library one-pager
-4. Run axe-core audits (?qa=true) on all 4 products
-5. Connect Cloudflare Pages to DCC
+## Session 21 — Notion Sync Infrastructure LIVE ✅
 
-Last updated: 2026-04-19 at 12:21 EST (Toronto)
+### Date/Time
+2026-04-19 EST (Toronto)
+Machine: EZbook
+
+### What Was Done
+- Python 3.12 verified installed on EZbook (was already in PATH)
+- pip install requests verified
+- notion-client.py script verified end-to-end
+- Notion integration "Two Birds — Claude Code Sync" created
+- Command Center page connected to integration
+- NOTION_API_KEY environment variable set
+- next-sprint.py executed successfully: pulled S-025 from Notion
+
+### Key Discovery
+Notion database contains newer sprints (S-025+) not yet in sprint-queue.md.
+Sync is fully functional and pulling live data.
+
+### Files Updated
+- NEW-MACHINE-SETUP.md — Step 4.5 added (Python install)
+- hal-stack/notion-sync/SETUP.md — Step 4 rewritten with winget
+- SESSION-STATE.md — this entry
+
+### Next Actions
+1. Run S-025 sprint (DCC senior-friendly UI benchmark research)
+2. Sync sprint-queue.md with latest Notion data
+3. Monitor Notion sync performance
+
+Last updated: 2026-04-19 at 16:11 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

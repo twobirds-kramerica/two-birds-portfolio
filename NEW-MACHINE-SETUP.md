@@ -59,6 +59,29 @@ git --version
 
 ---
 
+## Step 4.5 — Install Python 3.10+ (for HAL sync scripts)
+
+Needed for `hal-stack/notion-sync/` (Notion ↔ GitHub sync) and any future Python tooling. Not optional on new machines.
+
+```
+winget install Python.Python.3.12 --accept-source-agreements --accept-package-agreements
+```
+
+**Close Windows Terminal and open a new one** after install — Windows PATH updates do not propagate to already-open shells.
+
+Confirm:
+```
+python --version
+```
+Must print 3.10 or higher. If you see a Microsoft Store message instead, close the terminal and open a new one.
+
+Install the one pip dependency used by the sync scripts:
+```
+pip install requests
+```
+
+---
+
 ## Step 5 — Install Claude Code
 
 ```

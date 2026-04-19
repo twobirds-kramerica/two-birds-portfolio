@@ -68,17 +68,28 @@ echo "$NOTION_API_KEY"
 
 The same token works everywhere. No need to generate a separate token per machine.
 
-## Step 4 — Install the one Python dependency
+## Step 4 — Install Python 3.10+ and the one dependency
 
-Once per machine:
+Once per machine. Python is **not** installed by `NEW-MACHINE-SETUP.md`, so this step is required on every fresh machine before the sync scripts will run.
+
+### Install Python (if not already present)
+```
+winget install Python.Python.3.12 --accept-source-agreements --accept-package-agreements
+```
+
+### Refresh PATH after install
+Windows adds Python to the User PATH automatically, but **already-open terminals will not see it**. Close and reopen your terminal (Windows Terminal, Git Bash, or PowerShell) so the new PATH takes effect.
+
+### Install the requests library
 ```
 pip install requests
 ```
 
-Verify Python version is 3.10+:
+### Verify
 ```
 python --version
 ```
+Must show 3.10 or higher. If the command still prints the Microsoft Store stub message, the terminal did not pick up the new PATH — close it and open a new one.
 
 ## Step 5 — Test the connection
 

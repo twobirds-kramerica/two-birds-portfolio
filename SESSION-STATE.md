@@ -1,8 +1,73 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 18, 2026 (S-024 Notion-GitHub sync build)
+**Last Session:** April 19, 2026 (S-024 Notion-GitHub bidirectional sync — all 5 phases)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 **Notion Sync Status:** NOT YET CONFIGURED — NOTION_API_KEY env var not set; see hal-stack/notion-sync/SETUP.md. Once configured, this line should read: `Notion Sync Status: LAST SYNC [YYYY-MM-DD HH:MM] — N sprint(s) open, M conflict(s). See hal-stack/notion-sync/SYNC-LOG.md.`
+
+---
+
+## S-024 — Notion-GitHub Bidirectional Sync ✅ (build done; awaiting Aaron's API key)
+
+**Date:** 2026-04-19 ~01:29 EST (Toronto)
+**Priority:** P1 (CTO mandate)
+
+**All 5 phases built and committed. Cannot end-to-end-test until Aaron creates the Notion integration and sets NOTION_API_KEY.**
+
+### Files created (all under `hal-stack/notion-sync/`)
+| File | Purpose |
+|------|---------|
+| `config.json` | Command Center ID, Product Backlog + Job Pipeline data source IDs, Notion-Version (2025-09-03), status mapping, property names, priority order |
+| `README.md` | Architecture diagram, file map, invariants, source-of-truth rules |
+| `notion-client.py` | NotionClient wrapper — data source query with pagination, page GET/PATCH, select setter, rich_text appender, property extractors, `--test` self-test. All API calls wrapped in try/except → `NotionError`. |
+| `sync-queue.py` | Pulls open Claude Code sprints, writes `hal-stack/sprint-system/sprint-queue-from-notion.md`. Detects + logs conflicts (duplicates, missing priority/status). Never touches `sprint-queue.md`. |
+| `next-sprint.py` | Picks highest-priority Ready item, marks In Progress, appends lock timestamp to Notes, prints sprint details as JSON. Exit codes: 0 locked / 1 API unreachable / 2 auth-config error / 3 no Ready item found. |
+| `complete-sprint.py` | `<name-or-page-id> [commit-hash]` → sets Status=Done, appends timestamped DONE + commit-hash line to Notes. Handles UUID arg or case-insensitive name match; refuses ambiguous multi-match. |
+| `SETUP.md` | 6-step setup walkthrough: create integration → share Command Center → set NOTION_API_KEY per machine (Windows/macOS/Linux) → pip install requests → test connection → optional full-flow test. Includes 401/404/network troubleshooting + key rotation. |
+
+### Files updated
+- `CLAUDE.md` — new NOTION SYNC WORKFLOW section; "next sprint" trigger command now runs `next-sprint.py` first with documented fallback rules (exit 1 or 3 → local `sprint-queue.md`).
+- `SESSION-STATE.md` — added Notion Sync Status indicator line near top (documents populated format).
+- `.env.example` (new file at repo root) — template with NOTION_API_KEY placeholder. Real `.env` already gitignored.
+
+### Commits (5 phases + this session-state log)
+1. `5f3c5b2` — Phase 1: client + config
+2. `a2e42e3` — Phase 2: sync-queue + next-sprint
+3. `ddf727f` — Phase 3: complete-sprint + SESSION-STATE template
+4. `e191cfd` — Phase 4: CLAUDE.md integration
+5. `2c0cb1b` — Phase 5: SETUP.md + .env.example
+
+### Guardrails enforced
+- `NOTION_API_KEY` read from env var only. `.env` is gitignored. No secret ever reaches a tracked file.
+- Every Notion API call is wrapped in try/except. Failures are logged to `SYNC-LOG.md` (append-only, created on first run) and surfaced as `NotionError` for callers to catch.
+- `sync-queue.py` never deletes from `sprint-queue.md`. It writes to a separate `sprint-queue-from-notion.md` mirror. Local-only items are preserved by construction.
+- Python 3.10+ only; single pip dependency (`requests`); stdlib for everything else.
+- Works on Windows (`pathlib`, no shell dependencies; scripts import `notion-client.py` via `importlib` since the filename has a hyphen).
+- One commit per phase per spec.
+
+### What was skipped and why
+- **End-to-end testing against live Notion** — blocked on Aaron creating the integration and setting `NOTION_API_KEY`. Self-test command (`python hal-stack/notion-sync/notion-client.py --test`) is wired and ready; Aaron runs it as the last step of SETUP.md.
+- **Backlog-capture write to Notion from `notion-client.py`** — the wrapper exposes the primitives (`update_page_properties`, `set_select`) but no standalone `capture.py` was built, because the user's Phase 1-5 spec listed only the read/update sprint flow and the CLAUDE.md rule change. Adding a capture script is a follow-up item if Aaron wants one.
+
+---
+
+## SETUP INSTRUCTIONS FOR AARON (do these before running "next sprint")
+
+1. **Create the Notion integration** at https://www.notion.so/my-integrations → New integration → "Two Birds — Claude Code Sync", Internal, enable Read + Update + Insert. Copy the token.
+2. **Share the Command Center** page with the integration: open page `347a09cf-876a-81fb-9a5c-eca696fb585b` → `⋯` menu → Connect to → select the integration. Sharing cascades to Product Backlog and Job Pipeline.
+3. **Set `NOTION_API_KEY` on EZbook** (PowerShell, as Aaron user):
+   ```powershell
+   [Environment]::SetEnvironmentVariable("NOTION_API_KEY", "paste-token-here", "User")
+   ```
+   Close and reopen Windows Terminal. Verify: `echo $env:NOTION_API_KEY`.
+4. **Install the one dependency:** `pip install requests`.
+5. **Test the connection:** `python hal-stack/notion-sync/notion-client.py --test` — should print `OK: found N open Claude Code sprint(s)` and list them.
+6. **Repeat steps 3-5 on ThinkPad and Pentium Silver** when those machines come online.
+
+---
+
+## Next recommended action
+
+Aaron runs the 6 setup steps above, then types `next sprint` in Claude Code terminal. That command will call `next-sprint.py`, which pulls from Notion, locks the top-priority Ready item, and hands it back for execution. If Notion is unreachable at runtime, the flow falls back to `sprint-queue.md` automatically.
 
 ---
 
@@ -1112,5 +1177,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-18 at 23:38 EST (Toronto)
+Last updated: 2026-04-19 at 01:29 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

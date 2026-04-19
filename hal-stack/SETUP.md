@@ -100,7 +100,31 @@ Open Task Scheduler → Create Basic Task
 
 This ensures Claude Code starts automatically when the machine boots.
 
-## Troubleshooting
+## Step 13 — Optional: Amplitude Analytics (Claude Code)
+
+Two parallel Amplitude surfaces support this project. Set up both if the target machine will query Amplitude in chat or run external scripts that push events.
+
+### 13a. Amplitude MCP (query from claude.ai)
+Configured once in claude.ai, not per-machine. Nothing to install locally.
+- Enable the Amplitude connector in claude.ai Settings → Connectors.
+- First call to an Amplitude MCP tool in a new chat triggers the OAuth flow.
+- No per-machine setup needed. Works on every machine that signs into the same claude.ai account.
+
+### 13b. Credential file (external scripts that push data)
+Plaintext JSON key in `~/.claude/credentials/amplitude.json`, locked down with OS-level ACLs. Used by server-side event-ingestion scripts.
+
+**Cross-machine sync (when onboarding ThinkPad, Pentium Silver, or any new machine):**
+1. Copy the file: from EZbook `~/.claude/credentials/amplitude.json` to the same path on the target machine.
+2. Re-apply ACLs on the target machine:
+   - Windows: `icacls "%USERPROFILE%\.claude\credentials\amplitude.json" /inheritance:r /grant:r "%USERNAME%:F"`
+   - macOS/Linux: `chmod 600 ~/.claude/credentials/amplitude.json`
+3. Copy `~/.claude/AMPLITUDE.md` from EZbook to the target machine (masked reference doc — key preview, workspace, region, machine list).
+4. Append the new machine's name to the "Machine" list in AMPLITUDE.md.
+
+### Rotation
+If the key is ever exposed, rotate in the Amplitude dashboard, then update `amplitude.json` on every machine listed in AMPLITUDE.md.
+
+
 
 ### Git push rejected
 ```

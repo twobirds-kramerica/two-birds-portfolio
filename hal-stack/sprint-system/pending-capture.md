@@ -37,4 +37,4 @@ Every Claude Code sprint starts by checking this file. If items exist:
 
 ## Current Queue
 
-_(empty — 2 items merged 2026-04-17. Routed: 1 blocker → human-backlog CRITICAL, 1 epic → E16 in epics.md)_
+(empty — last merge 2026-04-18: 1 item → SC-006 in stories.md, executed same sprint)

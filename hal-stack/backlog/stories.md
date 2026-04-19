@@ -80,3 +80,4 @@ Tactical work items derived from epics. Each layer-tagged.
 | SC-003 | NB (Notebook) layer idea — Aaron to clarify concept, then evaluate for HAL Stack | L1-L4 | P2 | Pending | Aaron [VERIFY: what is the NB layer?] |
 | SC-004 | Career frame "AI product evaluator / critical user" — capture in brand guidelines, evaluate positioning impact | L1-L4 | P1 | **DONE** (2026-04-17) | — |
 | SC-005 | Sprint 22-25 draft plans — convert to sprint-queue.md entries | L1-L4 | P2 | Pending | Aaron [VERIFY: paste or summarise plans] |
+| SC-006 | Document Claude Code Amplitude MCP + credential-storage pattern for ThinkPad/Pentium Silver onboarding | L1-L4 | P2 | **DONE** (2026-04-18, SETUP.md Step 13) | — |

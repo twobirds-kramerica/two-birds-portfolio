@@ -65,9 +65,19 @@ When the task is building, writing code, creating files, or executing sprints �
 To activate: follow the rules in ~/.claude/skills/research-mode/SKILL.md
 To deactivate: resume normal operation when the task shifts back to execution.
 
+## NOTION SYNC WORKFLOW (S-024)
+Notion Command Center → Product Backlog is the source of truth for sprint state. Scripts live in `hal-stack/notion-sync/`. See `hal-stack/notion-sync/README.md` for architecture, `hal-stack/notion-sync/SETUP.md` for first-time setup.
+
+Rules:
+- On "next sprint": first run `python hal-stack/notion-sync/next-sprint.py`. If exit code 0, use the printed sprint details. If exit code 1 (Notion unreachable) or 3 (no Ready item), fall back to `hal-stack/sprint-system/sprint-queue.md`. Always run Phase 0 (pending-capture.md) before the sprint itself.
+- On sprint completion: run `python hal-stack/notion-sync/complete-sprint.py <sprint-name-or-notion-id> <commit-hash>` before the final push. Logs to SYNC-LOG.md.
+- On any backlog capture: write to Notion via `notion-client.py` helpers when possible. Always also append to `hal-stack/sprint-system/pending-capture.md` so local-only captures are never lost.
+- Fallback: if Notion is unreachable for any call, proceed using local files and log the skipped sync in `hal-stack/notion-sync/SYNC-LOG.md`. Flag at top of SESSION-STATE.md so Aaron can reconcile manually.
+- NOTION_API_KEY is an environment variable only. Never commit.
+
 ## TRIGGER COMMANDS
 When the user types any of these, execute the corresponding action:
-"next sprint" — read hal-stack/sprint-system/sprint-queue.md, check pending-capture.md first (Phase 0), then execute the top non-blocked READY sprint
+"next sprint" — run `python hal-stack/notion-sync/next-sprint.py` first (source of truth is Notion). On exit 1 or 3, fall back to `hal-stack/sprint-system/sprint-queue.md`. Always check `pending-capture.md` first (Phase 0), then execute the locked/top READY sprint.
 "retro" — read and report logs/RETRO.md contents
 "state" — read SESSION-STATE.md, orient fully, report top 3 next actions
 "dashboard" — read WIP-DASHBOARD.md, report full portfolio status

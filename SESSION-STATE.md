@@ -9,6 +9,115 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Session 22 — DCC Warm Hearth Design System + Component Library ✅
+
+### Date/Time
+2026-04-19 ~17:52 EST (Toronto) — Machine: EZbook
+
+### Phases run (all 8)
+1. Design tokens — 4 CSS files (default, dark, high-contrast, alt template)
+2. Font assets — 8 WOFF2 files downloaded + fonts.css + SIL OFL licence
+3. Component library — comprehensive components.css + showcase HTML
+4. Living style guide — styleguide/index.html with theme swap, lang preview, scroll-spy ToC
+5. Motion spec — styleguide/motion.html
+6. Competitive audit — 5 platforms reviewed live (4 direct, 1 via general knowledge — GCF is a JS SPA)
+7. Maintenance &amp; governance — styleguide/MAINTENANCE.md
+8. Link everything — README, DESIGN-SYSTEM, dcc-brand-guidelines updated; DCC V07 favicon + logos copied into digital-confidence repo for self-containment
+
+### Files created (19 new + 3 updated)
+**digital-confidence (main repo):**
+- `css/tokens.css` (default Warm Hearth skin)
+- `css/tokens-dark.css`
+- `css/tokens-high-contrast.css`
+- `css/tokens-alt.css` (white-label template)
+- `css/fonts.css`
+- `css/components.css`
+- `fonts/LICENSE-OFL.txt`
+- `fonts/merriweather/{400,400i,700,700i}.woff2` — 4 files
+- `fonts/source-sans-3/{400,400i,600,700}.woff2` — 4 files
+- `components/warm-hearth/README.md`
+- `components/warm-hearth/SHOWCASE.html`
+- `styleguide/index.html`
+- `styleguide/motion.html`
+- `styleguide/COMPETITIVE-AUDIT.md`
+- `styleguide/MAINTENANCE.md`
+- `assets/logos/dcc/` — favicon + 5 logo files (copied from two-birds-portfolio for self-containment)
+- `QUESTIONS-FOR-AARON.md` (at repo root, documents scope tradeoffs)
+- Updated: `README.md`, `DESIGN-SYSTEM.md`
+
+**two-birds-portfolio (this repo):**
+- Updated: `hal-stack/branding/dcc-brand-guidelines.md` (v1.1 — Warm Hearth adopted)
+
+### Commits (digital-confidence = main branch; 8 phase commits + 1 final Phase 8)
+1. `c7ff1e4` — Phase 1 design tokens
+2. `0317915` — Phase 2 self-hosted fonts
+3. `45e5099` — Phase 3 component library
+4. `f67a40d` — Phase 4 living style guide
+5. `9031cf3` — Phase 5 motion spec
+6. `d56ff81` — Phase 6 competitive audit
+7. `ab49ab4` — Phase 7 maintenance &amp; governance
+8. `8b449fe` — Phase 8 link everything + self-contain assets
+
+**two-birds-portfolio (this repo):**
+- `6142116` — docs(branding): DCC brand guidelines v1.1 — Warm Hearth adopted
+
+Both repos pushed to their respective remotes.
+
+### Font files downloaded and verified
+- 4 Merriweather WOFF2 (400/400i/700/700i) — ~50 KB each, latin subset, SIL OFL
+- 4 Source Sans 3 WOFF2 (400/400i/600/700) — ~16 KB each, latin subset, SIL OFL
+- Sourced from @fontsource via jsdelivr. Magic bytes verified as `774f4632` (WOFF2 signature).
+- latin subset covers all French (é è ê ë à â ç ô ù û ü ÿ î ï œ æ) and Spanish (á é í ó ú ñ ü ¿ ¡) characters.
+
+### Accessibility checks performed
+- WCAG AA contrast ratios targeted for every colour token pair (warm charcoal on cream text = AA, teal/orange primary buttons = AA).
+- All tap targets default to 56px (44px floor); verified in components.css.
+- Focus ring standardised as 3px var(--color-accent) with 2px offset; applied via :focus-visible.
+- Skip-to-content link as first focusable element on every Warm Hearth page.
+- role=&quot;progressbar&quot; + aria-valuenow on all progress bars.
+- role=&quot;alert&quot; on error messages, aria-live=&quot;polite&quot; on toasts.
+- fieldset / legend on quiz radiogroups.
+- ul / li semantic wrapping on module-list.
+- prefers-reduced-motion honoured at :root token level (zero-duration override).
+- prefers-contrast: more auto-applies high-contrast tokens.
+- prefers-color-scheme: dark auto-applies dark tokens.
+- Text-size toggle (A-/A/A+) swaps --font-size-base between 16/20/24px, persisted to localStorage.
+
+**Not yet verified (requires human + browser):** visual render check of French/Spanish accented characters, NVDA/VoiceOver pass, axe-core automated scan on the styleguide. Checklist lives in MAINTENANCE.md.
+
+### Competitive audit summary (one line per platform)
+- **GCF Global (learnfree.org):** radical simplicity, free, no login; weakness: textbook tone; JS SPA blocked live-fetch — notes rely on general knowledge.
+- **Be Internet Awesome (Google):** pillar-and-icon mnemonic framework + gamified Interland; audience mismatch (K-8) but pedagogical model is strong.
+- **Get Safe Online (UK):** standout &quot;is this a scam?&quot; instant-verification tools; article-library UX without learner progression.
+- **Age UK Digital:** closest tone match (warm, kitchen-table); visible helpline number + video testimonials; weak on interactive pedagogy.
+- **AARP Personal Technology:** closest audience match but member-gated; AI Quiz + Rewards gamification worth noting; commercial overlay to avoid.
+
+**TL;DR:** DCC's sweet spot is Age UK's tone + GCF's openness + pedagogical structure neither has. Warm Hearth nails the tone; next content move is to cluster 29 modules into 5–6 pillars and add one instant-verification tool.
+
+### What was deferred and why
+- **40 per-component HTML files → consolidated SHOWCASE.html.** Scope tradeoff documented in QUESTIONS-FOR-AARON.md. One showcase is easier to maintain; split is reversible.
+- **Visual render verification of French/Spanish characters.** Can't do autonomously — requires browser. Listed as Aaron's first post-sprint check in MAINTENANCE.md and QUESTIONS-FOR-AARON.md.
+- **latin-ext subset fonts.** Not needed for EN/FR/ES; documented as a follow-up if Indigenous language content enters the roadmap.
+- **Individual per-component exemplar files.** Documented deferral in QUESTIONS-FOR-AARON.md.
+
+### Guardrails respected
+- Existing DCC module HTML pages untouched.
+- Existing `css/main.css` and blue-theme components untouched.
+- All fonts self-hosted; no Google CDN.
+- Both fonts SIL OFL v1.1 (free commercial use).
+- Canadian English in all visible text.
+- One commit per phase.
+- Ambiguities captured in QUESTIONS-FOR-AARON.md rather than guessed.
+
+### Next recommended action
+**Open the style guide and review.** In a browser on EZbook:
+- `file:///C:/twobirds/digital-confidence/styleguide/index.html` — full style guide. Try the theme swap (Default / Dark / High contrast), the language preview (EN / FR / ES), and the text size toggle (A-/A/A+).
+- Also open it on the S24 phone. Verify the mobile nav drawer, responsive grid, and touch targets all feel right.
+- Scan `QUESTIONS-FOR-AARON.md` (at the digital-confidence repo root) for the scope tradeoffs and judgment calls that deserve your review.
+- When you've flagged any adjustments, the **DCC makeover sprint** will apply Warm Hearth to the 29 production module pages.
+
+---
+
 ## S-024 Follow-up — Python Prereq Verified on EZbook ✅
 
 **Date:** 2026-04-19 ~12:21 EST (Toronto)
@@ -1224,5 +1333,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-19 at 16:11 EST (Toronto)
+Last updated: 2026-04-19 at 17:52 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

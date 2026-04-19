@@ -1,6 +1,40 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 17, 2026 (autonomous backlog burn-down)
-**Model:** Claude Opus 4.6 (1M context) via Claude Code CLI
+**Last Session:** April 18, 2026 (P2 voice-check protocol backlog refresh + caveman install)
+**Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
+
+---
+
+## P2 Voice-Check Protocol — Backlog Item Refreshed ✅
+
+**Date:** 2026-04-18 ~22:41 EST (Toronto)
+**What was added/updated:**
+- `hal-stack/sprint-system/backlog/P2-voice-check-protocol.md` — overwritten with Aaron's exact provided content. Prior version had double-hyphens and was missing the ✓ checkmark in the compliance tag format; both now corrected to match the spec.
+- `hal-stack/sprint-system/sprint-queue.md` — `Updated:` header refreshed. Existing sprint **S-009 "Voice-Check Protocol for Claude Compliance"** (Priority P2, Status READY) already covers this item under the READY section, pointing at the backlog file. No new sprint entry appended (would have been duplicate).
+
+**Why:** Claude slipped on the em dash rule during the Job Search Workbench build session on April 13, 2026 despite user preferences and project memory already containing the writing-style rules. The voice-check tag mechanism is proposed as the most hands-off compliance fix available given Claude cannot be fine-tuned from the chat interface. Every slip costs credibility with real recipients; manual review across months of job search activity is not sustainable.
+
+**What was skipped and why:**
+- `hal-stack/protocols/voice-check.md` reference doc (listed in the backlog item's acceptance criteria) is **not yet written** — tracked as an open sub-task on the backlog item itself. It gets written after Aaron confirms the protocol works in a fresh Claude.ai chat (no point documenting a mechanism that hasn't been validated).
+
+**Next recommended action:**
+1. Aaron opens Claude.ai → Settings → Profile → User Preferences
+2. Pastes the voice-check protocol text (full text in `hal-stack/sprint-system/backlog/P2-voice-check-protocol.md` under "Exact text to add to user preferences")
+3. Opens a fresh Claude.ai chat and asks Claude to draft a short email
+4. Verifies the `✓ voice check:` tag appears at the bottom
+5. Tests with a deliberately-inserted em dash to confirm the tag catches it
+
+**Commits:** (pending — feat(backlog): add P2 voice-check protocol for Claude compliance)
+
+---
+
+## Caveman Skill Installed + Calibrated ✅
+
+**Date:** 2026-04-18 ~22:38 EST (Toronto)
+**Installed:** `npx skills add JuliusBrussee/caveman` — 6 skills dropped into `~/.agents/skills/` and symlinked to Claude Code: caveman, caveman-compress, caveman-commit, caveman-help, caveman-review, compress.
+**Primary file:** `~/.claude/skills/caveman/SKILL.md` (symlink target confirmed).
+**Calibration applied:** Appended calibration block at end of SKILL.md — tuned for non-technical founder (Aaron). Rules: strip fluff/pleasantries/hedging, keep step-by-step + file paths + commands, WHY-then-HOW pattern, code blocks untouched. Target tone: "friendly technician explaining to business owner," not "caveman grunt."
+**Test result:** Direct `/caveman` invocation returned "Unknown skill" — fresh install not registered this session. Calibrated sample output demonstrated manually ("explain what git push does" → 1-sentence WHY + 3 numbered HOW steps + branch-tracking note). Full registration expected on next Claude Code session restart.
+**Next action:** Restart Claude Code session, then run `/caveman` to verify the skill registers and emits calibrated output.
 
 ---
 
@@ -1051,5 +1085,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-13 at 02:22 EST (Toronto)
+Last updated: 2026-04-18 at 22:41 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -1,7 +1,7 @@
 <!--
 STATUS: LIVE — THIS IS THE ACTIVE SPRINT QUEUE
 Created: 2026-04-11 16:15 EST (Toronto)
-Updated: 2026-04-15 02:40 EST (Toronto)
+Updated: 2026-04-18 22:45 EST (Toronto) — P2-voice-check-protocol.md content refreshed (S-009 already READY)
 -->
 
 # Sprint Queue

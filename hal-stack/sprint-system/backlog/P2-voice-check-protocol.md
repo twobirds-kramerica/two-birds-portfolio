@@ -7,7 +7,7 @@ category: infrastructure
 owner: Aaron
 ---
 
-# P2 -- Voice-check protocol for Claude compliance
+# P2 — Voice-check protocol for Claude compliance
 
 ## Problem
 
@@ -23,7 +23,7 @@ Add a voice-check protocol to Claude.ai user preferences. Mechanism: force Claud
 
 ### Exact text to add to user preferences
 
-> Voice-check protocol. Before delivering any written content (email, message, CV bullet, cover letter, note, any draft I will send or use externally), scan the output for: em dashes, banned words (spearheaded, leveraged, fostered, passionate, dynamic, results-driven, delve, tapestry, additionally at sentence start, align with, boasts, bolstered, crucial, emphasizing, enduring, enhance, fostering, garner, highlight as verb, interplay, intricate, intricacies, key as filler adjective, landscape as metaphor, meticulous, pivotal, showcase, testament, underscore as verb, valuable, vibrant, nestled, groundbreaking, renowned, diverse array, rich heritage, natural beauty, commitment to), participial sentence openers, "serves as", "stands as", "marks a", "represents a" where "is" works, the rule of three used for rhythm, "not just X but Y" unless contrast is the point. Rewrite if any are found. End the response with a single-line compliance tag in this format: voice check: [scanned items] | [count caught] | [count fixed]. If the tag is missing on any written draft, the draft is considered incomplete. This applies to every chat.
+> Voice-check protocol. Before delivering any written content (email, message, CV bullet, cover letter, note, any draft I will send or use externally), scan the output for: em dashes, banned words (spearheaded, leveraged, fostered, passionate, dynamic, results-driven, delve, tapestry, additionally at sentence start, align with, boasts, bolstered, crucial, emphasizing, enduring, enhance, fostering, garner, highlight as verb, interplay, intricate, intricacies, key as filler adjective, landscape as metaphor, meticulous, pivotal, showcase, testament, underscore as verb, valuable, vibrant, nestled, groundbreaking, renowned, diverse array, rich heritage, natural beauty, commitment to), participial sentence openers, "serves as", "stands as", "marks a", "represents a" where "is" works, the rule of three used for rhythm, "not just X but Y" unless contrast is the point. Rewrite if any are found. End the response with a single-line compliance tag in this format: ✓ voice check: [scanned items] | [count caught] | [count fixed]. If the tag is missing on any written draft, the draft is considered incomplete. This applies to every chat.
 
 ## Why this is the most hands-off mechanism available
 
@@ -38,7 +38,7 @@ If Claude starts skipping the tag or faking it, flag it in the moment, ask Claud
 ## Related items
 
 - P1: GitHub MCP connector not installed in Claude.ai (blocking direct commits from chat sessions)
-- Logged in Notion: Two Birds Innovation hub, sub-page "P2 -- Voice-check protocol (Claude compliance)"
+- Logged in Notion: Two Birds Innovation hub, sub-page "P2 — Voice-check protocol (Claude compliance)"
 - Source session: Job Search Workbench build, April 13, 2026
 
 ## Acceptance criteria

@@ -1,12 +1,36 @@
 <!--
-STATUS: v1.0 — LIVING DOCUMENT — NEEDS AARON REVIEW
+STATUS: v1.1 — LIVING DOCUMENT — NEEDS AARON REVIEW
 Created: 2026-04-11 16:05 EST (Toronto)
-Confidence: HIGH for tone and values, MEDIUM for visual spec (pending logo selection)
-Known gaps: Final logo not yet selected. Typography not field-tested with senior audience.
+Updated: 2026-04-19 — Warm Hearth design system adopted (Option A, 65.5% vote). Fonts selected. Style guide shipped.
+Confidence: HIGH for tone, values, and visual direction.
+Known gaps: Typography not field-tested with senior audience yet (pending DCC makeover sprint).
 Tag: LIVING DOCUMENT — updated as brand evolves.
 -->
 
 # Digital Confidence Centre — Brand Guidelines
+
+## Design System — Warm Hearth (adopted 2026-04-19)
+
+**Direction (65.5% org vote, Option A):** kitchen-table warmth, trusted neighbour tone, zero intimidation.
+
+**Palette.** Warm cream background `#FFF8F0`. Warm teal primary `#2A7B6F`. Burnt orange accent `#E8842C` for CTAs and active states. Warm charcoal text `#3D3229`. Warm-toned shadows (teal rgba, never pure black).
+
+**Typography.** Body serif Merriweather (SIL OFL, 72 languages, full French + Spanish). Heading sans-serif Source Sans 3 (SIL OFL, 76 languages, full French + Spanish). Both **self-hosted** in the DCC repo at `fonts/merriweather/` and `fonts/source-sans-3/` — no Google CDN (sovereignty requirement). Full licence at `fonts/LICENSE-OFL.txt`.
+
+**Senior-friendly baseline:** 18px body minimum (16/20/24 via the A-/A/A+ toggle). 56px default tap target (44px floor). 3px accent focus ring with 2px offset. `prefers-reduced-motion` and `prefers-contrast: more` honoured at the token level — no per-component guards needed.
+
+**Canonical references (in the digital-confidence repo):**
+
+- `css/tokens.css` — all design tokens as CSS custom properties
+- `css/tokens-dark.css`, `css/tokens-high-contrast.css`, `css/tokens-alt.css` — theme variants + white-label template
+- `css/fonts.css` — @font-face declarations with font-display: swap
+- `css/components.css` — component styles ("bones")
+- `styleguide/index.html` — **living style guide, browsable**
+- `styleguide/motion.html` — interaction / animation spec
+- `styleguide/COMPETITIVE-AUDIT.md` — benchmark vs. GCF / Be Internet Awesome / Get Safe Online / Age UK / AARP
+- `styleguide/MAINTENANCE.md` — governance, partner white-label procedure, accessibility checklist
+
+
 
 ## Brand Story
 

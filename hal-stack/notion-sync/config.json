@@ -1,0 +1,39 @@
+{
+  "command_center_page": "347a09cf-876a-81fb-9a5c-eca696fb585b",
+  "product_backlog_data_source": "dee08637-7122-46cd-bc29-7775ce3ab8f6",
+  "job_pipeline_data_source": "92415698-9009-4d74-b86b-ad23f5afe475",
+  "base_url": "https://api.notion.com/v1/",
+  "notion_version": "2025-09-03",
+  "request_timeout_seconds": 15,
+  "status_mapping": {
+    "notion_to_local": {
+      "Backlog": "backlog",
+      "Ready": "READY",
+      "In Progress": "IN_PROGRESS",
+      "Blocked": "BLOCKED",
+      "Review": "REVIEW",
+      "Done": "DONE"
+    },
+    "local_to_notion": {
+      "READY": "Ready",
+      "IN_PROGRESS": "In Progress",
+      "BLOCKED": "Blocked",
+      "REVIEW": "Review",
+      "DONE": "Done"
+    }
+  },
+  "properties": {
+    "title": "Item",
+    "product": "Product",
+    "status": "Status",
+    "priority": "Priority",
+    "type": "Type",
+    "owner": "Owner",
+    "notes": "Notes"
+  },
+  "filter_defaults": {
+    "type_sprint": "Sprint",
+    "owner_claude_code": "Claude Code"
+  },
+  "priority_order": ["P0", "P1", "P2", "P3"]
+}

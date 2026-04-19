@@ -1,6 +1,31 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 18, 2026 (P2 voice-check protocol backlog refresh + caveman install)
+**Last Session:** April 18, 2026 (next sprint — SC-006 Amplitude docs)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
+
+---
+
+## Next Sprint — SC-006 Amplitude MCP + Credential Docs ✅
+
+**Date:** 2026-04-18 ~23:38 EST (Toronto)
+
+**Phase 0 — merged pending captures:**
+- 1 item routed from `pending-capture.md` to `stories.md` as **SC-006** (P2 story, HAL Stack category): "Document Claude Code Amplitude MCP + credential-storage pattern for ThinkPad/Pentium Silver onboarding."
+- `pending-capture.md` queue cleared.
+
+**Phase 1 — executed the capture's action (no Claude-executable sprint remained in sprint-queue.md; S-009 is a human-only task, S-006 and S-019 are BLOCKED, everything else is DONE):**
+- Added **Step 13** to `hal-stack/SETUP.md`: Optional Amplitude Analytics section covering (a) the claude.ai-side Amplitude MCP (configured per-account, not per-machine — OAuth on first call) and (b) the credential file pattern at `~/.claude/credentials/amplitude.json` with icacls/chmod lockdown. Cross-machine sync procedure documented: copy credential file, re-apply ACLs, copy `~/.claude/AMPLITUDE.md`, append new machine to the list. Key rotation procedure noted.
+- SC-006 marked DONE in stories.md same sprint.
+
+**Commits:** `3578ee7` (SC-006 docs + stories + pending-capture clear).
+
+**Pushed:** pending push at end of this update.
+
+**Nothing skipped this sprint.**
+
+**Next recommended action:**
+1. When Aaron is physically at the ThinkPad, run through SETUP.md steps 1-12, then execute Step 13b (copy `~/.claude/credentials/amplitude.json` from EZbook, apply icacls, copy `~/.claude/AMPLITUDE.md`, add "ThinkPad" to the machine list).
+2. Same procedure when Pentium Silver becomes accessible (also unblocks S-006 local Git backup).
+3. Review remaining open items in stories.md — SC-003 (NB layer concept clarification) and SC-005 (Sprint 22-25 draft plans to queue) are both blocked on Aaron for VERIFY questions.
 
 ---
 
@@ -1085,5 +1110,5 @@ Aaron should submit one test entry on the hardened feedback modal to confirm inl
 4. Run axe-core audits (?qa=true) on all 4 products
 5. Connect Cloudflare Pages to DCC
 
-Last updated: 2026-04-18 at 22:41 EST (Toronto)
+Last updated: 2026-04-18 at 23:38 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

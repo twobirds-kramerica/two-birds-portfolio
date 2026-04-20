@@ -9,6 +9,51 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Visual regression skeleton ✅ (baselines pending your 1-click bootstrap)
+
+**Date:** 2026-04-20 ~18:53 EST (Toronto)
+**Notion item:** `348a09cf-876a-81e6-bf07-d78a179a2983` — "DCC Playwright visual regression baselines + diff thresholds" (P2, In Progress).
+
+### Why this ran
+Fourth "next sprint" with empty Ready queue. Per my commitment one message ago ("if you press 'next sprint' again I'll ship option 1"), executed. Scope was bounded and extends existing infrastructure — no design ambiguity, no dependencies on your review.
+
+### What shipped (commit `0e57742` on digital-confidence/main, 4 files, +220 lines)
+- `tests/playwright/visual.spec.js` — 6 pages × `toHaveScreenshot({ fullPage: true, maxDiffPixelRatio: 0.02, animations: 'disabled' })`. CSS injected pre-screenshot to strip animations / transitions / caret blink for determinism.
+- `.github/workflows/visual-regression.yml` — **workflow_dispatch only** (for now). Input `update_snapshots: boolean`. When true: runs with `--update-snapshots` and auto-commits new PNGs back to main via `GITHUB_TOKEN`. When false: compares against committed baselines, fails on diffs, uploads artifact with expected/actual/diff images.
+- `tests/playwright/VISUAL-REGRESSION.md` — operator manual: bootstrap flow, threshold rationale, failure triage, scope decisions.
+- `.github/workflows/playwright.yml` — restricted to `smoke.spec.js` only, so `visual.spec.js` doesn't fail the always-green smoke CI before baselines exist.
+
+### Scope decisions (explicit)
+- **Chromium desktop-1280 only.** Cross-engine (Firefox/WebKit) produces real font-rendering diffs that are expected, not meaningful regressions — those are already covered functionally by smoke.spec.js.
+- **2% maxDiffPixelRatio** tolerates anti-aliasing + sub-pixel positioning while still catching layout / colour / element changes.
+- **Workflow_dispatch only, for now.** Push-trigger needs baselines on main first; avoids breaking the per-push CI gate.
+
+### Bootstrap flow (your 1-click action to make this live)
+**Option A (gh CLI, 10s):**
+```
+gh workflow run visual-regression.yml -f update_snapshots=true --repo twobirds-kramerica/digital-confidence
+```
+**Option B (GitHub UI, ~45s):** Actions tab → "Visual regression (Playwright)" → Run workflow → toggle `update_snapshots` → Run.
+
+Either path creates 6 baseline PNGs, commits them back to main as `chore(visual): regenerate baselines via visual-regression.yml`. After that commit lands, I can extend `visual-regression.yml` to trigger on every push too.
+
+### Notion state
+Item flipped **Backlog → In Progress** (not Done — the skeleton is half; baseline generation is the user action that finishes it). Notes field updated with the bootstrap command + status.
+
+### Commit
+- `0e57742` — `feat(ci): Playwright visual regression skeleton + baseline-bootstrap workflow`
+
+### Next recommended action
+One of:
+- **Trigger the bootstrap workflow** (option A or B above). ~2 min end-to-end. That completes this sprint.
+- **Review the Kids DB pilot** (5 rows still awaiting your eyes — highest-value pending item in the session).
+- **Claude.ai data export** (unblocks S-026).
+
+### Confidence
+85%. High on the skeleton shipping cleanly — YAML validated, playwright config unchanged for smoke path. 15% uncertainty on the `GITHUB_TOKEN` auto-commit working first-try — if the bot-commit push fails on permissions, fallback is: download the `__screenshots__/` folder from the workflow artifact, commit manually. Flagged in VISUAL-REGRESSION.md.
+
+---
+
 ## Cross-browser coverage — Firefox + WebKit added to Playwright CI ✅
 
 **Date:** 2026-04-20 ~16:32 EST (Toronto)
@@ -1855,5 +1900,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 16:33 EST (Toronto)
+Last updated: 2026-04-20 at 18:53 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

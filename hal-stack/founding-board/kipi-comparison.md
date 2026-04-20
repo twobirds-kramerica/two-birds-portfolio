@@ -170,8 +170,8 @@ Sorted by ROI-to-effort ratio:
 
 | # | Item | Source | Licence-safe | Effort | Immediate value |
 |---|------|--------|--------------|--------|-----------------|
-| 1 | `founder-debrief` skill | founder-skills (MIT) | ✅ | 10 min clone-and-copy | Extract Aaron's next 10 actions from every investor/partner call |
-| 2 | `neurodivergent-founder` skill | founder-skills (MIT) | ✅ | 10 min clone-and-copy | Energy-tagged tasks, positive-frame outreach language |
+| 1 | `founder-debrief` skill ✅ **INSTALLED 2026-04-20** on EZbook | founder-skills (MIT) | ✅ | 10 min clone-and-copy | Extract Aaron's next 10 actions from every investor/partner call |
+| 2 | `neurodivergent-founder` skill ✅ **INSTALLED 2026-04-20** on EZbook | founder-skills (MIT) | ✅ | 10 min clone-and-copy | Energy-tagged tasks, positive-frame outreach language |
 | 3 | Token guard (`token-guard.py`) | claude-cortex (MIT) | ✅ | 1 afternoon | Halts runaway token spend; blocks `.env` reads |
 | 4 | Loop tracker | claude-cortex (MIT) | ✅ | 1-2 days | Auto-escalation on stalled outbound (Davie Lee, iA Financial, etc.) |
 | 5 | ADHD output language rules | kipi README | ✅ (rip the pattern, write the words ourselves) | 1 day | "Carried forward" over "overdue" — immediate tone upgrade |

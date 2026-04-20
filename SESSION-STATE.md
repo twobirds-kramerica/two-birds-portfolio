@@ -9,6 +9,63 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Install founder-skills (MIT) on EZbook ✅ + honest scope-miscall retrospective
+
+**Date:** 2026-04-20 ~10:04 EST (Toronto)
+**Context:** Called `next sprint`. Notion returned 0 Ready Claude Code items (exit 3). Local fallback queue also has nothing Claude-executable (S-006/S-019 BLOCKED, S-009 human-only). Provided Aaron with a planning briefing (top 5 human actions that unblock Claude Code), then picked a sprint autonomously.
+
+### What I picked first (and abandoned)
+**"Fix DCC axe-core color-contrast violations"** — premised on my previous sprint's summary that "8 of 10 serious violations are one shared color pair." **That premise was wrong.**
+
+### The scope miscall
+On re-analysis of the axe-reports artifact:
+- **53 color-contrast failing nodes**, not 10 (I had counted rules, not nodes).
+- **18 on index.html alone** — `#888888` on white, muted date labels.
+- **22 on module-1.html** — entirely different color pairs.
+- **7 white-on-#E8842C (Warm Hearth burnt orange) failures at ratio 2.7** — the Warm Hearth accent itself has a problem with white body text.
+- **Brand-colour failures** (Spotify green, YouTube red) with genuine design tradeoffs.
+
+A proper fix is a design sprint with Aaron-in-the-loop, not a 30-min autonomous cleanup. Sparring-partner rule says to own the miscall, not plough ahead.
+
+### What I picked instead
+**Install `founder-skills` (MIT)** — rip items #1 + #2 from the S-027 kipi-comparison shortlist.
+
+- Cloned `assafkip/founder-skills` (MIT)
+- Copied `skills/founder-debrief/` and `skills/neurodivergent-founder/` (each with SKILL.md + 3 reference files) into `~/.claude/skills/`
+- **Both skills registered in the running Claude Code session immediately** — system-reminder confirmed `founder-debrief` and `neurodivergent-founder` are available now, no reload required.
+- Updated `hal-stack/founding-board/kipi-comparison.md` shortlist to mark items 1 + 2 as INSTALLED 2026-04-20.
+
+### Commit
+- `d937796` — `chore(skills): install founder-skills (MIT) from assafkip on EZbook` (audit-trail only; skills live per-machine in `~/.claude/skills/`, not in the repo).
+
+### ThinkPad + Pentium Silver install (follow-up)
+```
+git clone --depth 1 https://github.com/assafkip/founder-skills.git /tmp/fs
+cp -r /tmp/fs/skills/* ~/.claude/skills/
+```
+Run on each machine when it comes online. Verification: the skills appear in the system-reminder skills list on next session.
+
+### Surfaces for Aaron's Claude.ai planning session
+Human actions that unblock Claude Code sprints, highest-leverage first:
+1. **Fresh Claude.ai data export** (~10 min) → unblocks S-026 Full Context Re-Audit.
+2. **Create OpenAI Platform account + API key** (~10 min, CA$5) → unblocks S3.1/S3.2/S3.4 voice layer.
+3. **Paste/summarise Sprint 22-25 plans** (~10 min) → converts parked ideas to Notion queue items.
+4. **Review `digital-confidence/QUESTIONS-FOR-AARON.md`** (~15 min) → unblocks DCC makeover sprint.
+5. **Create Vercel + Supabase accounts** (~30 min) → unblocks S-019 infrastructure.
+6. **Licensing decision on `~/.claude/skills/research-mode/`** (~5 min) → email Assaf for retroactive permission, OR swap to MIT claude-cortex equivalent.
+
+### Real next sprint candidate
+Queue **"DCC accessibility cleanup — color-contrast pass"** as a proper sprint (NOT autonomous — Aaron-in-the-loop for design decisions). Scope:
+- Design decision 1: new gray token value to replace `#888888` (proposal: `#595959` or `#6B7280`).
+- Design decision 2: Warm Hearth white-on-`#E8842C` — bump button text to 18px/bold minimum to qualify for WCAG "large text" 3:1 threshold, OR darken `#E8842C` to `#C96320` (approx 4.5:1 on white text), OR change button text to be dark on light accent background instead of white on dark. Affects the whole Warm Hearth system.
+- Design decision 3: brand colours (Spotify green, YouTube red). Options: accept non-compliance for external brand logos, or add a dark overlay.
+- Then: Claude Code executes the mechanical replacements + re-runs CI to confirm delta.
+
+### Confidence
+85%. High on what was shipped (skills are installed and live). Lower on the scope-miscall retrospective — I'm being rigorous about the correction precisely because I was loose about the original count, and that requires future sessions to sanity-check my node-vs-rule arithmetic on axe reports.
+
+---
+
 ## Wire axe-core + link checker into GitHub Actions for DCC ✅
 
 **Date:** 2026-04-20 ~08:05 EST (Toronto)
@@ -1535,5 +1592,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 08:05 EST (Toronto)
+Last updated: 2026-04-20 at 10:04 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

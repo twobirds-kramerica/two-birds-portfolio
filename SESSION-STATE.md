@@ -9,6 +9,37 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## S-026 — CLAUDE.md mirrored from Notion Glossary ✅
+
+**Date:** 2026-04-19 ~23:54 EST (Toronto)
+**Notion item:** `348a09cf-876a-813b-b0bf-df7a858741fc` — "Create CLAUDE.md at repo root from Notion Glossary" (P2, HAL Stack)
+
+### What was done
+- Fetched Notion Glossary page `348a09cf-876a-815a-802c-c9c182167749` via Notion API (115 blocks paginated, converted to local markdown for comparison).
+- Audited existing `CLAUDE.md` to identify gaps vs. Glossary content and the sprint's explicit section list.
+- **Added sections** to `CLAUDE.md` (additive only — no existing content rewritten): Sovereignty L1–L4 model, Machines roster, Backlog routing (writes→Notion, reads→GitHub raw), Rules of Engagement (sparring partner / confidence-level % / N.B. rule / voice-check protocol with ✓ tag format / SESSION-STATE final-step / Claude Code session output rule), Scrappy Pack persona + output rule (1-line bullet + LOE), Backlog item format template, Key References.
+
+### Explicitly NOT included (per sprint spec)
+- Founding Board 22-persona detail — stays in `hal-stack/personas/`.
+- Glossary acronym table — stays in Notion.
+- Feedback flags + session archiving triggers — Claude.ai chat territory, not Claude Code.
+
+### Commits
+- `3550c69` — `feat(claude-md): S-026 — mirror Notion Glossary system rules into CLAUDE.md` (+106 lines to CLAUDE.md, pushed to master).
+- Notion status flipped to **Done** with commit hash `3550c69` recorded in Notes.
+
+### Housekeeping flagged (NOT in sprint scope)
+Two untracked items surfaced during the sprint, both from earlier Notion sync runs:
+- `hal-stack/notion-sync/__pycache__/` — Python bytecode cache; should be added to `.gitignore`.
+- `hal-stack/notion-sync/SYNC-LOG.md` — append-only sync audit log. Decision needed: commit for audit trail, or gitignore for noise-reduction.
+
+Aaron flag if either of these deserves a micro-sprint.
+
+### Next recommended action
+Review the new sections in CLAUDE.md (particularly Rules of Engagement and Scrappy Pack output rule) and flag any wording adjustments. These are active rules that will shape every subsequent Claude Code session on this repo.
+
+---
+
 ## S-025 — DCC senior-friendly UI benchmark research ✅
 
 **Date:** 2026-04-19 ~22:29 EST (Toronto)
@@ -1422,5 +1453,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-19 at 22:29 EST (Toronto)
+Last updated: 2026-04-19 at 23:54 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

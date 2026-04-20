@@ -1,7 +1,7 @@
 <!--
 STATUS: LIVE — MASTER HUMAN BACKLOG
 Created: 2026-04-11 16:25 EST (Toronto)
-Updated: 2026-04-11 16:35 EST (Toronto)
+Updated: 2026-04-20 14:00 EST (Toronto) — housekeeping pass: checked items moved to DONE, Davie Lee duplicate resolved, summary counts refreshed
 Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md, 
          brand guidelines, persona docs, Claude.ai export (115 conversations)
 -->
@@ -10,21 +10,7 @@ Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md,
 
 ## Summary
 
-| Metric | Count |
-|--------|-------|
-| **Total items** | 25 |
-| **NOW** | 2 (est. 7 min total) |
-| **SOON** | 9 (est. 60 min total) |
-| **LATER** | 9 (est. 60 min total) |
-| **DONE** | 5 |
-
-| Project | Open Items |
-|---------|-----------|
-| Branding | 4 |
-| HAL Stack | 10 |
-| Employment / Career | 3 |
-| DCC | 1 |
-| Personal | 2 |
+Counts are approximate — re-count on the next housekeeping pass.
 
 ---
 
@@ -34,15 +20,13 @@ Sources: Sessions 11-18, questions-for-aaron.md, sprint-queue.md, stories.md,
 
 - [ ] **Follow up with iA Financial on Process Innovation role** — Check status. Email or phone. **5 min.** (Source: warm-network.md, April 2026)
 
-- [ ] **Send Davie Lee LinkedIn outreach message** — Draft already in Gmail drafts. **2 min.** (Source: warm-network.md)
+- [ ] **Send Davie Lee LinkedIn outreach message** — Draft already in Gmail drafts. **2 min.** (Source: warm-network.md; also was listed in HAL Stack / SOON — consolidated here 2026-04-20.)
 
 - [ ] **Check Tech Alliance for upcoming events or job leads** — Explore as support pathway after AI/GEO session. **10 min.** (Source: warm-network.md)
 
 - [ ] **Update LinkedIn profile with Two Birds Innovation work** — Add founder role, DCC project, sovereignty framework. **15 min.** (Source: job search foundation)
 
 - [ ] **Upload Two Birds logo to LinkedIn** — open `assets/logos/two-birds/two-birds-1024.png`, upload as LinkedIn company page profile image. **2 min.** (Source: S17. Flagged 4+ times.)
-
-- [x] ~~**Pick DCC logo variation**~~ — V07 (heart-bulb) selected, finalized in S20 ✅
 
 - [ ] **Buy domains twobirdsinnovation.com and .ca** — secure before someone else does. Check availability. **10 min.** (Source: S20)
 
@@ -62,8 +46,6 @@ _(Both items are in CRITICAL section above)_
 
 - [ ] **Fix "Claude too reactive" pattern** — Update culture-spec.md with "proactive, not reactive" rule. Review persona definitions for passivity. Add "proactive flags" section to sprint template. This is a PATTERN FIX. **20 min.** (Source: capture Apr 12, P1)
 
-- [x] ~~**Clarify NB layer concept**~~ — Resolved 2026-04-12. NB layer created at `journey/nb-layer/README.md` with first entry. ✅
-
 - [ ] **Clarify employability project scope** — Active job search, career positioning, or insurance? Defines E15 epic scope. **2 min.** (Source: capture Apr 12)
 
 - [ ] **Paste or summarise Sprint 22-25 plans** — Plans discussed in Claude.ai chat but not captured. Need to convert to sprint-queue.md entries. **10 min.** (Source: capture Apr 12)
@@ -81,8 +63,6 @@ _(Both items are in CRITICAL section above)_
 - [ ] **Create OpenAI Platform account** — platform.openai.com, add CA$5 credits, generate API key, save to `.env`. Unblocks voice layer build (S3.1, S3.2). **10 min.** (Source: S12)
 
 - [ ] **Deep-dive kipi-system as rip-the-pattern candidate** — Read `assafkip/kipi-system` on GitHub. Identify which patterns solve problems HAL Stack already has (morning brief, context loss, reporter flow). Write comparison doc at `hal-stack/founding-board/kipi-comparison.md`. Also review `assafkip/founder-skills` for neurodivergent-founder and founder-debrief skills. Do NOT install or fork yet — rip before build. **30 min.** (Source: TikTok vetting chat April 14, Robtheops video comments)
-
-- [ ] **Send Davie Lee (interVal, St. Thomas) LinkedIn outreach message** — Draft already exists in Gmail drafts. **5 min.** (Source: networking, April 2026)
 
 ### LATER
 
@@ -152,6 +132,8 @@ _(Both items are in CRITICAL section above)_
 - [x] **Logo v1.2 variations created** — 10 variations delivered in S14, selection made in S17 ✅
 - [x] **Q8: Check Claude.ai for data export** — resolved, export processed in S16 ✅
 - [x] **Pick DCC logo variation** — V07 (heart-bulb) selected, finalized in S20 ✅
+- [x] **Clarify NB layer concept** — resolved 2026-04-12. NB layer created at `journey/nb-layer/README.md` with first entry ✅
+- [x] **Voice-check protocol added to Claude.ai user preferences** — confirmed 2026-04-18 (S-009) ✅
 
 ---
 

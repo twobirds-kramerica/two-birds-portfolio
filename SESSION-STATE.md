@@ -9,6 +9,60 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## S-029 — Playwright viewport smoke tests ✅ (CI caught 1 real overflow bug, fixed)
+
+**Date:** 2026-04-20 ~15:26 EST (Toronto)
+**Notion item closed:** `347a09cf-876a-81eb-989f-e53893fa0657` — "Execute 7-LLM consensus: GitHub Actions QA pipeline for DCC" (P1, DCC). All 3 CI legs now shipped:
+- axe-core (S-026, commit `2a21ab0`) ✅
+- lychee (pre-existing `link-checker.yml`) ✅
+- Playwright (S-029 this sprint, commit `0c77657`) ✅
+
+### What shipped
+**Test harness** — 4 new files + 1 update in `digital-confidence`:
+- `.github/workflows/playwright.yml` — runs on push/PR to main (HTML/CSS/JS paths)
+- `tests/playwright/package.json` — `@playwright/test@^1.49`
+- `tests/playwright/playwright.config.js` — 3 viewport projects (mobile 360×800, tablet 768×1024, desktop 1280×900), Chromium only
+- `tests/playwright/smoke.spec.js` — 3 assertions per page (horizontal overflow ≤ 0, body text > 80 chars, ≥1 `<h1>`)
+- `.gitignore` — ignore `node_modules/`, `test-results/`, `playwright-report/`, etc.
+
+**Pages covered:** index, module-1, final-quiz, accessibility, faq, styleguide/index. **18 test cases per run** (6 × 3).
+
+### What CI caught on first run (and I fixed)
+Real regression discovered: `styleguide/index.html` had **76px horizontal overflow at 360px viewport**.
+- Root cause (found via diagnostic output I added to the test): `.tooltip__text` with `white-space: nowrap` rendering 47 chars of demo text at ~405px.
+- Even with `opacity: 0; pointer-events: none`, the absolute-positioned element contributed to `document.scrollWidth`.
+
+Three commits to fix, each revealing the next:
+1. `32fe490` — `.sg-swatch` flex-wrap + overflow-wrap on swatch meta strings. Didn't help (not the culprit).
+2. `38ce085` — **components.css `.tooltip__text` fix**: `max-width: min(85vw, 320px)`, `width: max-content`, `white-space: normal`. Reduced overflow 76 → 26px. Legitimate component improvement.
+3. `0c77657` — shorten styleguide demo tooltip text 47 → 18 chars ("Accessible tooltip"). Final overflow 0. CI green.
+
+### Known P2 issue filed
+Tooltip absolute-center-on-trigger (`transform: translateX(-50%)`) still overflows if the trigger is near the right edge of a narrow viewport, regardless of tooltip width cap. Proper fix needs JS boundary detection (CSS-only can't flip alignment at render time). Document the limitation in `digital-confidence/styleguide/MAINTENANCE.md` and queue P2 component work: **"Tooltip boundary-aware positioning (narrow viewport)."**
+
+### Commits (all on digital-confidence/main)
+- `b734bf7` — initial Playwright harness (5 files, 206 lines)
+- `32fe490` — sg-swatch fix attempt (didn't fix, still useful wrap behaviour)
+- `06e3962` — diagnostic output added to the overflow test (keeps in future runs for fast debug)
+- `38ce085` — **components.css tooltip improvement** (legitimate fix, affects all tooltips site-wide)
+- `0c77657` — styleguide demo text shortening (final CI-greening change)
+- Notion status flipped to Done with `0c77657` recorded
+
+### Axe CI — still green
+The palette-swap's `-11 nodes vs baseline` delta is preserved. New commits were CSS-scoped and didn't affect contrast.
+
+### Final verification state
+- Playwright CI: ✅ 18 tests passing across 6 pages × 3 viewports (run 24685868134, 59s)
+- axe CI: ✅ 0 critical (run preserved from S-028)
+- Link checker: ✅ (pre-existing, weekly schedule)
+
+### Next recommended action
+**Open `digital-confidence/styleguide/index.html` on your phone** and confirm the visual experience matches what the CI proves: no horizontal scrolling, everything reads at mobile. If anything looks visually broken post-tooltip-edit, flag it. Otherwise the 7-LLM consensus triangle is fully closed and CI is now catching real regressions per-push.
+
+Confidence: 95%. Playwright confirmed working end-to-end, caught a real bug, fix verified by re-run.
+
+---
+
 ## DCC Makeover — Warm Hearth palette swap across all 29 modules ✅ (with mid-sprint regression caught + fixed)
 
 **Date:** 2026-04-20 ~14:25 EST (Toronto)
@@ -1701,5 +1755,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 14:25 EST (Toronto)
+Last updated: 2026-04-20 at 15:26 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

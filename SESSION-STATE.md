@@ -9,6 +9,51 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Wire axe-core + link checker into GitHub Actions for DCC ✅
+
+**Date:** 2026-04-20 ~08:05 EST (Toronto)
+**Notion item:** `348a09cf-876a-8131-980c-eab460213c61` (P2, DCC)
+
+### What was done
+1. **Audited existing `.github/workflows/` in digital-confidence** — 17 workflows already exist. Two relevant to this sprint: `link-checker.yml` (lychee, runs on every HTML push + weekly) and `broken-external-link-check.yml` (curated external URLs, weekly). **Link checking already covered** — did NOT add another.
+2. **Identified the actual gap:** `accessibility-reminder.yml` only creates a quarterly human review issue. There was no automated axe-core run on push. That's the sprint's real deliverable.
+3. **Created `.github/workflows/axe-core.yml`** — spins up http-server on :8080, runs `@axe-core/cli@4.10.0` against 8 representative pages (index, about, accessibility, module-1, final-quiz, faq, styleguide/index, 404), tags `wcag2a,wcag2aa,wcag21a,wcag21aa`. Per-impact rollup in GitHub job summary + per-page critical/serious breakdown. Full JSON reports uploaded as `axe-reports` artifact (30-day retention). Fails build on any critical violation; serious/moderate/minor reported non-blockingly.
+4. **Verified YAML syntax** via PyYAML locally.
+5. **First run fired on push and completed in 42 seconds** — workflow run `24665423009`, status `success`.
+
+### Baseline accessibility signal (first run)
+Pulled the artifact locally and aggregated:
+
+| Impact | Count |
+|--------|-------|
+| 🔴 Critical | **0** (build passes) |
+| 🟠 Serious | 10 |
+| 🟡 Moderate | 0 |
+| 🟢 Minor | 0 |
+
+### Violations by rule (8 pages scanned)
+- **8× `color-contrast`** — same rule hit on 7 of 8 pages; likely a shared text/background pair that fails WCAG AA. Single-pair fix would probably clear most. **`styleguide/index.html` is one of the 7** — my Warm Hearth AA claims need one more pass.
+- **1× `aria-progressbar-name`** on index.html — a `<progress>` / role="progressbar" without accessible name.
+- **1× `aria-prohibited-attr`** on index.html — ARIA attribute on an element that doesn't permit it.
+
+### Commit
+- `2a21ab0` — `feat(ci): automated axe-core accessibility scan on every push` (+177 lines, digital-confidence main).
+- Notion status flipped to Done with commit hash `2a21ab0` recorded in Notes.
+
+### Scope-safe decisions
+- Did NOT touch existing link-checker.yml or broken-external-link-check.yml (already working).
+- Did NOT add lychee or markdown-link-check as the Notion note suggested — that's duplicate work.
+- Did NOT fix the 10 serious violations surfaced by the first run — that's a separate follow-up sprint (and outside the "CI setup" sprint scope).
+
+### Next recommended action
+Queue a follow-up sprint **"DCC axe-core serious violations — first pass"** to fix the 10 surfaced issues. Biggest win: identify the single shared colour pair failing `color-contrast` — one token tweak in `digital-confidence/css/main.css` or `tokens.css` could clear 8 of 10 violations.
+
+You can see the full artifact at https://github.com/twobirds-kramerica/digital-confidence/actions/runs/24665423009 → Artifacts → `axe-reports`.
+
+Confidence: 95%. Workflow is live, passing, and producing real signal on the first run. 5% reserved for edge-case failures on future runs (puppeteer Chromium download flake, rate-limited lychee, etc.) — known GitHub-Actions-runner quirks, not issues with the design.
+
+---
+
 ## S-027 — kipi-system deep-dive comparison ✅
 
 **Date:** 2026-04-20 ~01:18 EST (Toronto)
@@ -1490,5 +1535,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 01:18 EST (Toronto)
+Last updated: 2026-04-20 at 08:05 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

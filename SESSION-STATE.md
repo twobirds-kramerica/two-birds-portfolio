@@ -9,6 +9,53 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Diagnostic — human-backlog.md 404 root cause ✅
+
+**Date:** 2026-04-19 ~21:18 EST (Toronto)
+**Trigger:** `backlog` command in user preferences was returning 404 on its fetch URL.
+
+### What was found
+- **The file exists and is healthy.** Location: `hal-stack/sprint-system/human-backlog.md` (163 lines, 25 items, header intact: `STATUS: LIVE — MASTER HUMAN BACKLOG`, matches the Session 19 summary).
+- **No duplicate, no rename, no deletion.** Glob across the whole repo returned exactly one match. Grep found 16 files that *reference* the path — every single reference points at `hal-stack/sprint-system/human-backlog.md`. Nothing in the repo references `hal-stack/backlog/human-backlog.md`.
+- **Git log:** the file was created at `hal-stack/sprint-system/human-backlog.md` in commit `b95baf1` ("feat(hal): human backlog — all Aaron actions consolidated") and consolidated in `9629c43`. It has never lived anywhere else. No rename, no move.
+- Other backlog files **do** live at `hal-stack/backlog/` (`epics.md`, `stories.md`). That's the asymmetry that probably caused the 404 — someone (likely me, or an earlier session) assumed `human-backlog.md` would sit with its siblings and wrote the URL that way.
+
+### Root cause
+**The URL in your user preferences is wrong.** It points at `hal-stack/backlog/human-backlog.md` — a path that does not exist and has never existed. The actual file path has always been `hal-stack/sprint-system/human-backlog.md`.
+
+### What was restored or changed
+**Nothing.** The file is fine. No restoration commit. No code change. This is a preferences fix, which is your side of the fence per the sprint spec ("do NOT modify preferences yourself, that is Aaron's job").
+
+### Recommended preferences URL change
+
+Replace in your `backlog` command preference:
+
+```
+https://raw.githubusercontent.com/twobirds-kramerica/two-birds-portfolio/master/hal-stack/backlog/human-backlog.md
+```
+
+with:
+
+```
+https://raw.githubusercontent.com/twobirds-kramerica/two-birds-portfolio/master/hal-stack/sprint-system/human-backlog.md
+```
+
+### Does the URL resolve now?
+
+- **Old URL** (`hal-stack/backlog/human-backlog.md`): still 404 — the file is not there and we did not move it.
+- **Correct URL** (`hal-stack/sprint-system/human-backlog.md`): resolves, file is healthy.
+
+### Optional structural cleanup (your call, not done)
+
+Having `human-backlog.md` in `sprint-system/` while `epics.md` and `stories.md` sit in `backlog/` is genuinely confusing — it's what caused this 404 in the first place. Two options:
+
+1. **Move** `hal-stack/sprint-system/human-backlog.md` → `hal-stack/backlog/human-backlog.md` so all backlog files co-locate. Requires updating the 16 files that reference the old path. Fixes the URL automatically. Breaks no product code.
+2. **Leave as-is** and just update the preferences URL. Zero repo churn.
+
+I have not made this change — it's a structural decision that deserves your sign-off. Flag it if you want me to do the move in a follow-up sprint.
+
+---
+
 ## Session 22 — DCC Warm Hearth Design System + Component Library ✅
 
 ### Date/Time
@@ -1333,5 +1380,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-19 at 17:52 EST (Toronto)
+Last updated: 2026-04-19 at 21:18 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

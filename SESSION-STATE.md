@@ -9,6 +9,73 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## DCC Makeover — Warm Hearth palette swap across all 29 modules ✅ (with mid-sprint regression caught + fixed)
+
+**Date:** 2026-04-20 ~14:25 EST (Toronto)
+**Notion item:** `348a09cf-876a-818d-82bf-f5bf4143aace` — "DCC Makeover Sprint — scope locked (5 tradeoffs decided)" (P1, DCC)
+
+### Decisions you had locked (found in Notion page body, not Notes field)
+1. All 29 modules reskinned (not just key 5)
+2. Colour-contrast quick fix first (`#888 → #595959`), defer full audit to P2
+3. Restyle only — no new components
+4. Desktop + iPad portrait priority (Brenda persona); tablet queued P2
+5. Axe-core WCAG AA as the testing gate; visual regression + cross-browser queued P2
+
+### Architectural insight that made Phase 1 trivial
+All 29 modules share `css/main.css` (confirmed by grep). main.css is already tokenised with its own `:root` (20+ CSS custom properties from S-022). **Changing the variable values propagates across the whole site.** No module-HTML edits needed.
+
+### What shipped
+**Commit `9f423f6`** — palette swap (133 replacements, case-insensitive):
+| Old | New | Count | Role |
+|-----|-----|-------|------|
+| `#1565C0` | `#2A7B6F` | 83 | DCC Blue → Warm Hearth teal |
+| `#0D47A1` | `#226659` | 20 | Blue hover → teal hover |
+| `#00897B` | `#2A7B6F` | 2 | Existing DCC teal → Warm Hearth teal |
+| `#00796B` | `#226659` | 1 | DCC teal hover unified |
+| `#F5F5F5` | `#FFF8F0` | 8 | Gentle Grey → Warm cream (bg-primary) |
+| `#FFF8E1` | `#FFF0E0` | 3 | Warm Sand → Warm Hearth surface-alt |
+| `#333333` | `#3D3229` | 6 | Text Dark → Warm charcoal |
+| `#5A6B78` | `#7A6E62` | 1 | Muted text → Warm Hearth text-light |
+| `#888` | `#595959` | 9 | Muted gray → AA-compliant (Decision #2) |
+
+**Mid-sprint regression detected by CI** — serious node count went 53 → 56 after the swap. Cause: 14 new failures from `.badge-new` rule using `#2A7B6F` (new teal) on `#dce8f8` (unchanged cool-blue bg, ratio 4.07:1). I'd swapped the foreground colour site-wide but missed one background pair.
+
+**Commit `d4bf2a8`** — one-line fix: `.badge-new` bg changed from `#dce8f8` to Warm Hearth `#E8F5F0` primary-tinted surface. Kills 14 regressions.
+
+### Final delta (axe CI-verified)
+| | Nodes | Delta |
+|--|-------|-------|
+| Baseline pre-sprint | 53 | — |
+| After palette swap alone (`9f423f6`) | 56 | +3 (regression) |
+| After badge fix (`d4bf2a8`, final) | **42** | **−11 vs baseline** |
+
+- 🔴 Critical: 0 (unchanged — CI gates on this)
+- 🟠 Serious: 42 color-contrast + 2 aria = 44 total rule-hits
+- Biggest improvement: index.html 18 → 9 (−9 from #888 date-label fix)
+- Remaining: `module-1.html` has 20 nodes (different unrelated pairs, not touched this sprint)
+
+### Axe CI runs
+- `24683095982` — palette swap (37s, pass, +3 regression)
+- `24683213798` — badge fix (49s, pass, net improvement confirmed)
+
+### Deferred in this sprint (honestly flagged)
+- **Fonts** — Merriweather body + Source Sans 3 headings NOT applied. Existing Inter stays. Swapping body to a serif font is a bigger visual call than a colour swap; deserves your eyeballs before shipping. Queue as **"DCC fonts to Warm Hearth (Merriweather + Source Sans 3)"**.
+- **Phase 3 responsive test** — requires browser / Playwright. Queued P2 per decisions.
+- **Phase 5 screenshots of all 29 modules** — human verification task.
+- **Remaining colour-contrast pairs** — 42 serious nodes still failing. Top offenders: `#ffffff on #e8842c` (Warm Hearth CTA colour, 7 nodes) needs design call; Spotify/YouTube brand-colour combinations (6 nodes); `#2ec4b6 on #fafaf8` (6 nodes); `#e65100 on #ffffff` (4 nodes). Queue as **"DCC accessibility cleanup pass 2 — remaining colour-contrast"**.
+
+### Commits
+- `9f423f6` — palette swap (+129/-129 lines, 2 files)
+- `d4bf2a8` — badge-new bg fix (+1/-1 line)
+- Notion status flipped to Done with commit hash `d4bf2a8` recorded
+
+### Next recommended action
+**You look at the DCC site in a browser.** Open `index.html`, a module page, `accessibility.html`, and confirm the new teal/cream/warm-charcoal palette looks right to you. If anything looks broken or wrong (a specific element too-dim, a contrast that got worse visually, etc.), flag it and I'll queue a targeted fix. Otherwise the font swap is the next natural step.
+
+Confidence: 88%. High on the numbers (CI-verified). 12% uncertainty is: I cannot confirm visually what the new palette looks like end-to-end — that needs your browser review.
+
+---
+
 ## Housekeeping pass — gitignore + human-backlog hygiene ✅ + queue-empty pattern flag
 
 **Date:** 2026-04-20 ~14:00 EST (Toronto)
@@ -1634,5 +1701,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 14:00 EST (Toronto)
+Last updated: 2026-04-20 at 14:25 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

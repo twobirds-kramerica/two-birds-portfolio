@@ -9,6 +9,48 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## S-025 — DCC senior-friendly UI benchmark research ✅
+
+**Date:** 2026-04-19 ~22:29 EST (Toronto)
+**Feeds:** S-023 (DCC skin redesign)
+
+### What was done
+Live-fetched 6 of 8 target sources, documented what could not be fetched, synthesised findings into `hal-stack/research/dcc-ui-benchmarks.md` (341 lines). Research mode active — every claim is source-tagged.
+
+### Sources (fetched 2026-04-19)
+- ✅ Apple accessibility overview (`developer.apple.com/accessibility/`) — VoiceOver, Dynamic Type, Reduce Motion, Smart Invert, AssistiveTouch. 44pt tap-target standard confirmed.
+- ⚠ Apple HIG Accessibility page — JS-rendered, returned header only; general principles noted from fetched overview.
+- ✅ Be Connected Australia — A/A/A toggle, modular courses, plain language, multi-dimensional filtering.
+- ✅ AbilityNet UK — persona-first nav, equal phone/digital weight, "friendly volunteers" tone.
+- ✅ Digital Unite UK — humour as trust signal, persona nav by industry, progressive disclosure.
+- ✅ NHS.uk — card-grouped action dashboards, plain language verbs, prominent emergency pathway.
+- ❌ Canva — 403 blocked; patterns noted from public Canva brand documentation only.
+- ✅ NN/g "UX for Seniors" — 30-year longitudinal study of 123 older adults, 87 guidelines, readability + target size + error-forgiveness patterns.
+
+Not live-fetched (login/proprietary): MyChart, Kaiser. Patterns documented from widely-published healthcare-UX literature with clear sourcing caveats.
+
+### Deliverable
+- `hal-stack/research/dcc-ui-benchmarks.md`
+- 10 sections: sources index; Apple methodology; medical portals (MyChart, Kaiser, NHS); international digital-literacy platforms; personal/wellness apps; Canva; cross-cutting patterns table (12 rows); typography recommendations; 3 theme specs (A Minimal, B Warm/Accessible = Warm Hearth, C Bold/Modern); S-023 recommendations; what was not verifiable live.
+
+### Key cross-cutting findings
+- **12 patterns recurred across 3+ platforms.** Of those, 6 are already shipped in Warm Hearth (A-/A/A+ toggle, plain-language CTAs, modular lessons, warm palette, dark + high-contrast themes, spacing). 6 are opportunities for S-023 (card-grouped dashboard, visible phone helpline, multi-dim filtering, testimonial strip, read-aloud, persona switch).
+- **Warm Hearth ≈ Theme B** in this research's three-theme framing. Theme A (Minimal) and Theme C (Bold/Modern) are reference points for future B2B partner skins, not DCC-primary directions.
+
+### Recommendations to S-023
+Listed in Part 9 of the doc — seven structural IA moves that need zero CSS change. Top three:
+1. Cluster 29 modules into 3–5 home-page card groups (NHS pattern).
+2. Visible phone helpline in footer (AbilityNet / NHS / Age UK pattern).
+3. Multi-dim filtering on the module index (Be Connected pattern).
+
+### Commit
+- `14c3be2` — `S-025: DCC senior-friendly UI benchmark research complete` (pushed to master).
+
+### Next recommended action
+Aaron skims `hal-stack/research/dcc-ui-benchmarks.md`, flags which of the 7 S-023 recommendations go in scope, and queues S-023 in the Notion Command Center backlog.
+
+---
+
 ## Diagnostic — human-backlog.md 404 root cause ✅
 
 **Date:** 2026-04-19 ~21:18 EST (Toronto)
@@ -1380,5 +1422,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-19 at 21:18 EST (Toronto)
+Last updated: 2026-04-19 at 22:29 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -6,3 +6,11 @@
 # Claude.ai data export — private conversation data, never push
 hal-stack/context-system/ingestion/claude-export.zip
 hal-stack/context-system/ingestion/raw/
+
+# Python bytecode cache from hal-stack/notion-sync/ scripts
+__pycache__/
+*.pyc
+*.pyo
+
+# Local artifact scratch (e.g. axe-core report downloads for inspection)
+.axe-tmp/

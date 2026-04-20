@@ -9,6 +9,60 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## S-R01-PHASE-1a — DCC Kids Research Database pilot ✅ (5 of 20+ skills; full run in Phase 1b)
+
+**Date:** 2026-04-20 ~15:58 EST (Toronto)
+**Notion item:** `348a09cf-876a-8169-85a6-ca7e005d89b9` — "S-R01-PHASE-1: Gather sources + populate research database" (P0, DCC, Claude Code).
+**Notion item status:** In Progress (NOT Done — scope is partial).
+
+### Scope reality call
+Spec asked for 20+ skills × 22 columns × 2 languages × research-mode citations. Honest estimate: 20-40 hrs of quality work, not the 8-10 in the brief. Pilot approach: ship 5 skills fully populated across all 22 columns with real citations; validate the pattern and schema; scale to 20+ in Phase 1b (next session(s)) after Aaron reviews.
+
+### What was posted to the Notion Research Database (data source `e184382b-b59a-41e7-9152-d90fbee1abe6`)
+
+| # | Category | Skill | Ages | en-CA content |
+|---|----------|-------|------|---------------|
+| 1 | Tech-Safety | Creating a strong password I can remember | 7-9, 10-12 | 692 chars |
+| 2 | Learning | Asking good questions when I search or ask AI | 7-9, 10-12, 13-15 | 739 chars |
+| 3 | Emotional-Safety | Spotting a "please don't tell your parent" message | 10-12, 13-15 | 848 chars |
+| 4 | Critical-Thinking | Is this an ad, or did they really mean it? | 7-9, 10-12, 13-15 | 946 chars |
+| 5 | Creative-Making | Making a story with AI as my helper, not my author | 10-12, 13-15 | 866 chars |
+
+Each row fully populated across all 22 columns: Description, Threat-Addressed, Psychology-Framework (Piaget / Vygotsky / Self-Determination Theory / Attachment / Kohlberg / Flow), Example-Activity, Screen-Time-Guidance, Parental-Controls-Component, Creator-Luring-Awareness, Media-Quality-Rubric, Gamification-Element, AR-Description, Demonstration-Method, Age-Ranges, Learning-Profile (Standard + ADHD / Dyslexia / Special-Needs variants), Priority, Status, Category, Language-Version, en-CA-Content (full), fr-QC-Content (stubbed), Research-Source.
+
+### Research sources cited (live-fetched / WebSearch'd 2026-04-20)
+- **Passwords:** Common Sense Media (educators/lesson/strong-passwords-3-5; articles/teaching-kids-to-protect-their-data-and-privacy-online); MediaSmarts (tipsheet/internet-safety-tips-age-8-10).
+- **Asking good questions:** News Literacy Project (newslit.org/ai); Edutopia "5 Ways to Build Critical Literacy in the Age of AI"; Harvard GSE "The Impact of AI on Children's Development".
+- **"Don't tell" luring:** Internet Safety 101 (NCMEC-aligned); US DHS Know2Protect; Victoria.gov.au online grooming; Brightcanary signs of grooming.
+- **Ad vs recommendation:** FTC "Protecting Kids from Stealth Advertising in Digital Media" Sept 2023 staff perspective; FTC press release 2023; PMC6901676 influencer marketing review (De Jans et al.).
+- **AI as helper not author:** Edutopia "Guiding Students to Creative AI Use"; Edutopia "Teaching Authentic Writing in the Age of AI"; Nature Scientific Reports 2025 (s41598-025-92937-2); Harvard GSE AI and child development.
+
+### Scope-honesty: fr-QC stubbed
+All 5 rows have `fr-QC-Content` = `[fr-QC translation pending — Phase 1c bilingual pass. See en-CA column for master copy.]`. Proper bilingual translation is its own sprint (translator + QC + reviewer, not a Claude-alone pass).
+
+### Research-mode invariants honoured
+- Every claim in the data traces to a named source.
+- No invented research. No fabricated authors / page titles.
+- "I don't know" applied: AR-Showcase = None for all 5 pilot skills (I flagged AR as premature for pilot; that's a Phase 2+ design call).
+- Sources live-verified via WebSearch + (where accessible) WebFetch, 2026-04-20.
+
+### Commits
+None. This sprint was Notion-database writes, not code. Temp population script (`populate-kids-db.py`) executed and deleted; it was a one-off Python wrapping the Notion API and not worth committing.
+
+Notion sprint item Notes field updated with progress note pointing at the 5-row pilot and the Phase 1b hand-off.
+
+### Next recommended action (Aaron)
+**Review the 5 rows in the Notion database.** Specifically:
+1. Does the *depth* per row match what you want across 20+? (If you want LESS per row, that halves the remaining work.)
+2. Are the psychology frameworks you'd teach from — or do you want different ones?
+3. Are the 5 Categories covered adequately — or should some (e.g., Creative-Making) get multiple pilot skills and others (e.g., Critical-Thinking) get fewer?
+4. Green-light the remaining ~15-20 skills for Phase 1b (my estimate: 3-4 more sessions of this size to cover them with equivalent quality).
+
+### Confidence
+80%. High on: rows posted, schema honoured, citations real. Lower on: whether the depth / voice / angle matches your vision — hence the explicit "review first" call. Scope honesty was the biggest risk and I spent it; next call is yours.
+
+---
+
 ## S-029 — Playwright viewport smoke tests ✅ (CI caught 1 real overflow bug, fixed)
 
 **Date:** 2026-04-20 ~15:26 EST (Toronto)
@@ -1755,5 +1809,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 15:26 EST (Toronto)
+Last updated: 2026-04-20 at 15:58 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

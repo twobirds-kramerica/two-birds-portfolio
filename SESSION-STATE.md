@@ -9,6 +9,52 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Cross-browser coverage — Firefox + WebKit added to Playwright CI ✅
+
+**Date:** 2026-04-20 ~16:32 EST (Toronto)
+**Notion item:** `348a09cf-876a-8158-a1d2-ee9d094ab3d5` — "DCC visual regression + cross-browser testing sprint" (P2, DCC). Cross-browser portion shipped; visual regression split into new follow-up item.
+**Follow-up Notion item created:** `348a09cf-876a-81e6-bf07-d78a179a2983` — "DCC Playwright visual regression baselines + diff thresholds (split from item 8)" (P2, Backlog, Claude Code).
+
+### Scope rationale
+The parent item's scope was cross-browser AND visual regression. Cross-browser is a 20-line config change. Visual regression is 2-3 hours (baseline generation + diff thresholds + design decisions on per-page tolerance). Splitting ships half of it tonight cleanly.
+
+### Pick justification (3rd "next sprint" with empty Ready queue)
+Two "next sprint" calls earlier and one immediately before this one, all with Ready queue empty of Claude-Code-owned items. Interpretation: hold-for-review principle I set for the Kids DB pilot was mine, not Aaron's; he wants forward motion. Item #8's cross-browser portion is zero-design-decision, bounded, extends S-029's harness — the safest autonomous pick available.
+
+### What shipped
+**Commit `2d751bc`** on digital-confidence/main:
+- `tests/playwright/playwright.config.js` — renamed 3 Chromium projects (now `chromium-mobile-360`, `chromium-tablet-768`, `chromium-desktop-1280`). Added two new projects: `firefox-desktop-1280` (Desktop Firefox device) and `webkit-desktop-1280` (Desktop Safari device).
+- `.github/workflows/playwright.yml` — installs chromium + firefox + webkit via `playwright install --with-deps`. Job timeout bumped 15 → 20 min to accommodate the extra browser installs. Header comments updated.
+
+### Test matrix delta
+| Engine | Viewports | Tests | Purpose |
+|--------|-----------|-------|---------|
+| Chromium | 3 (360/768/1280) | 18 | Layout regressions |
+| Firefox | 1 (1280) | 6 | Engine differences |
+| WebKit | 1 (1280) | 6 | Safari engine (iPad senior demographic) |
+| **Total** | | **30** | |
+
+**Design call (explicit):** Firefox + WebKit at desktop-only rather than 3 viewports each. Viewport bugs are already caught by Chromium's 3-viewport matrix. Running those same viewports × 2 more engines would triple CI time without meaningful catches. Trading combinatorial completeness for runtime.
+
+### CI verification
+Run `24688772111`: **30/30 tests pass in 1m54s.** (Up from 59s for Chromium-only; expected due to browser downloads.)
+
+### What was deferred (in its own Notion item)
+Visual regression baselines via `toHaveScreenshot()`. Needs: baseline generation for 6 pages × 3 viewports = 18 baselines committed to `tests/playwright/__screenshots__/`, `maxDiffPixels` threshold tuning per page, baseline-update workflow docs, CI caching for baselines. Estimated 2-3 hours including threshold tuning.
+
+### Commit
+- `2d751bc` — `feat(ci): cross-engine coverage — Firefox + WebKit at desktop` (+39/-18 lines)
+- Notion item 8 flipped to Done with commit hash `2d751bc` recorded.
+- Notion new item `348a09cf-876a-81e6-bf07-d78a179a2983` created in Backlog for visual regression.
+
+### Next recommended action
+You flip the new visual-regression item to Ready if you want it executed this session — or leave it Backlog and I'll wait. Or review the Kids DB pilot (still the highest-value pending review item this session).
+
+### Confidence
+95%. CI passed first try with all 30 tests green — no engine-specific bugs surfaced in the current DCC pages, which is a useful baseline ("DCC renders cleanly in Firefox + Safari at desktop as of 2026-04-20").
+
+---
+
 ## S-R01-PHASE-1a — DCC Kids Research Database pilot ✅ (5 of 20+ skills; full run in Phase 1b)
 
 **Date:** 2026-04-20 ~15:58 EST (Toronto)
@@ -1809,5 +1855,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 15:58 EST (Toronto)
+Last updated: 2026-04-20 at 16:33 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

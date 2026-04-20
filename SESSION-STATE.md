@@ -9,6 +9,43 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## S-027 — kipi-system deep-dive comparison ✅
+
+**Date:** 2026-04-20 ~01:18 EST (Toronto)
+**Notion item:** `347a09cf-876a-8181-9bb0-d872b09e473f` — "S-027: kipi-system deep-dive comparison to HAL Stack" (P2, HAL Stack, overnight sprint)
+
+### What was done
+- Research mode active.
+- `gh` CLI fetched metadata, README, and file tree for 4 repos: `assafkip/kipi-system`, `assafkip/claude-cortex`, `assafkip/founder-skills`, `assafkip/research-mode`.
+- Fetched concrete implementation: first 80 lines of `loop-tracker.py`, first 60 lines of `token-guard.py`.
+- Mapped all 5 explicit evaluation criteria (morning brief, loop tracker, session handoff, ADHD philosophy, token guard) to HAL Stack equivalents or gaps with rip/skip/adapt recommendations.
+- Added 6 bonus patterns beyond the 5 required (Echo of Prompt, verification gate, structured deliverables, no self-authorized skipping, path-scoped rule files, voice enforcement).
+
+### Critical licensing flag surfaced
+- `kipi-system`: **no licence** (all rights reserved) — cannot rip verbatim.
+- `research-mode`: **no licence** — and already cloned into `~/.claude/skills/research-mode/` 2026-04-16.
+- `claude-cortex`: MIT — same code as kipi, safe to rip.
+- `founder-skills`: MIT — safe.
+- **Action required:** swap HAL's research-mode clone for the MIT cortex version, or email Assaf for permission. Listed as recommended follow-up.
+
+### Top 3 rip candidates (by ROI/effort)
+1. `founder-debrief` + `neurodivergent-founder` skills — MIT, 10-min install each.
+2. `token-guard.py` — MIT via claude-cortex, one afternoon. Highest immediate ROI.
+3. Loop tracker — MIT via claude-cortex, 1-2 days. Highest single-pattern value; solves HAL's stalled-outreach failure mode (Davie Lee, iA Financial, etc.).
+
+### Deliverable
+- `hal-stack/founding-board/kipi-comparison.md` (237 lines).
+- Note: `hal-stack/founding-board/` directory created this sprint. CLAUDE.md's Glossary-sourced rules reference `hal-stack/personas/` for persona content; this file lives under a sibling `founding-board/` directory per the human-backlog reference path. Flag if consolidation under `personas/` is preferred.
+
+### Commits
+- `345df12` — `feat(research): S-027 — kipi-system deep-dive comparison to HAL Stack` (+237 lines, pushed to master).
+- Notion status flipped to Done with commit hash `345df12` recorded in Notes.
+
+### Next recommended action
+Skim the comparison doc's "Recommended follow-up sprints" list (6 items, sorted by effort). The 10-minute `founder-skills` install (items #1 and #2) is the obvious first move — zero code risk, immediate productivity.
+
+---
+
 ## S-026 — CLAUDE.md mirrored from Notion Glossary ✅
 
 **Date:** 2026-04-19 ~23:54 EST (Toronto)
@@ -1453,5 +1490,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-19 at 23:54 EST (Toronto)
+Last updated: 2026-04-20 at 01:18 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

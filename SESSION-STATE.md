@@ -9,6 +9,48 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Housekeeping pass — gitignore + human-backlog hygiene ✅ + queue-empty pattern flag
+
+**Date:** 2026-04-20 ~14:00 EST (Toronto)
+**Context:** 3rd `next sprint` call since the queue was last primed. Notion still returns exit 3 (no Ready Claude Code items). Local fallback also empty. Declaring the pattern and doing small defensible housekeeping only.
+
+### Pattern flag (per CLAUDE.md "Pattern Counter Rule")
+Three `next sprint` calls in a row with no new Ready items in Notion. The pattern is: **Aaron needs to reprime the queue from his Claude.ai planning session before the next productive Claude Code sprint.** Inventing more autonomous work keeps Claude Code busy but doesn't advance the real agenda.
+
+**Systemic fix proposal:** add a `queue-status` sub-command to `next-sprint.py` that, when exit 3 fires, also prints:
+1. Count of Backlog items by priority (so Aaron can spot-flip one to Ready from his phone)
+2. Count of Blocked items and their blockers
+3. Top 3 recommended human actions from this SESSION-STATE's briefing section
+
+Not doing that now — it's itself a sprint. Flagging for the next planning session.
+
+### What was done this pass
+Two small unambiguous housekeeping commits:
+
+1. **`5006390` — `chore: gitignore Python bytecode + local axe scratch dirs`**
+   - `__pycache__/`, `*.pyc`, `*.pyo` (flagged two sprints ago after Notion sync scripts created them)
+   - `.axe-tmp/` (local artifact scratch from axe-core report inspection)
+   - `SYNC-LOG.md` deliberately NOT gitignored — your decision (audit trail vs noise)
+
+2. **`cc3b269` — `chore(backlog): human-backlog hygiene pass`**
+   - Moved 2 checked items to DONE (Pick DCC logo V07, Clarify NB layer)
+   - Added 2 more recently-done items to DONE (voice-check protocol, NB layer concept)
+   - Consolidated duplicate Davie Lee LinkedIn entry (was in both CRITICAL + HAL Stack/SOON)
+   - Replaced stale summary counts table with "re-count on next housekeeping pass" note — counts had drifted
+   - Bumped `Updated:` header 2026-04-11 → 2026-04-20
+
+### Still outstanding for your decision (unchanged)
+- `hal-stack/notion-sync/SYNC-LOG.md` — commit for audit trail or gitignore for noise? I flagged this two sprints ago and am waiting on your call.
+- Directory consolidation: `hal-stack/founding-board/` vs `hal-stack/personas/` — same concept, different names, flagged last sprint.
+- `hal-stack/sprint-system/human-backlog.md` → move to `hal-stack/backlog/` sibling of epics/stories (affects ~16 files that reference the old path). Flagged 2 sessions back.
+
+### Next action
+**Your move.** Do one of the 6 human actions in the planning briefing from the previous sprint and come back with `next sprint` — that'll have a real Ready item. If nothing in that list fits tonight, reply "queue status" and I'll pull the full Notion backlog so you can pick one to flip to Ready from here.
+
+Confidence: 95%. Low-risk housekeeping, no design decisions made.
+
+---
+
 ## Install founder-skills (MIT) on EZbook ✅ + honest scope-miscall retrospective
 
 **Date:** 2026-04-20 ~10:04 EST (Toronto)
@@ -1592,5 +1634,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 10:04 EST (Toronto)
+Last updated: 2026-04-20 at 14:00 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

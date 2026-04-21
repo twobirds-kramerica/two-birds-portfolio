@@ -9,6 +9,51 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## 🚀 MAX MODE primed for 2026-04-21 (pre-laptop-restart setup)
+
+**Date:** 2026-04-21 ~00:02 EST (Toronto)
+**Aaron's instruction (verbatim):** *"big nasty beefy builds back to back to back. bigger and autonomous 100% human free to flow — no checks or confirmations or access needed. go big and fat. last full day of max x5!!!"*
+
+### What's set up BEFORE Aaron's restart
+1. **`hal-stack/governance/max-mode.md`** — new file. Defines the max-mode execution posture: skip governance pauses, flip Backlog→Ready autonomously, build-don't-propose, make design calls with rationale in commit messages. ACTIVE UNTIL 2026-04-21 23:59 EST. Lists what stays non-negotiable (commit-per-phase, research-mode citations, SESSION-STATE final step, fails-soft hooks, Canadian English, no destructive git).
+
+2. **`CLAUDE.md`** — added a MAX MODE section pointing at the file. Any Claude Code session that loads CLAUDE.md reads the max-mode trigger during orientation. Normal triggers ("next sprint") now explicitly check max-mode state and auto-flip Backlog→Ready on exit 3 when active.
+
+3. **3 Notion Backlog items flipped Ready** for immediate pickup by `next-sprint.py` tomorrow:
+   - **DCC new accessibility components sprint** (P2 Ready) — max-mode instruction: build **ALL 4** candidates (Read-Aloud + Progress Dots + Still-With-Us Banner + Keyboard Helper) back-to-back, not a subset.
+   - **S-KEVIN: Kevin's Apartment audit + refresh (HAL Stack rigor)** (P2 Ready) — full HAL Stack quality pass for `kevins-apartment-search` repo.
+   - **S-CLARITY: Clarity product audit + HAL Stack rigor** (P2 Ready) — same for `clarity` repo.
+   All three have a `[2026-04-21 PRE-PRIME]` note appended to their Notion Notes field.
+
+4. **Two In Progress items ready to continue** in max mode:
+   - S-R01-PHASE-1 DCC Kids Research DB (8 of 20+ rows; Phase 1c takes it to 20+).
+   - DCC Playwright visual regression baselines (skeleton shipped; bootstrap + push trigger remaining).
+
+### Session-start flow for Aaron tomorrow
+Type `next sprint`. `next-sprint.py` locks the highest-priority Ready item. I execute end-to-end.
+Or type `state` first to orient → top 3 next actions reflects the primed queue.
+Or paste any spec directly — same pattern as S-029.
+
+**If queue empties mid-day** (max-mode override kicks in): I auto-flip the next Backlog item and keep going. No "waiting for your approval" pauses.
+
+### What's intentionally NOT pre-flipped
+- S-R01-PHASE-3 (P0, Opus 4.6-tagged) — model-specific, not my item.
+- S-026 (P1, Blocked on Claude.ai data export) — genuinely blocked.
+
+### Commit + push pending
+This SESSION-STATE entry ships with `max-mode.md` + `CLAUDE.md` edit in one commit. Pushes to master; the hook fires on restart (watcher picks up `.claude/settings.json` at session start) — first commit tomorrow demonstrates auto-logging to both SESSION-STATE (Live) and (if prefix is `decide(...):`) Decision Log.
+
+### Confidence
+95% on the setup being effective. 5% reserved for: the max-mode posture may need a tiny tune-up on its first real run (e.g., the "scope-honest on true blockers" clause may get tested). Self-correcting — revise max-mode.md mid-day if needed.
+
+### One-liner to keep things flowing tomorrow
+```
+next sprint
+```
+Just that. Everything else is primed.
+
+---
+
 ## Layer 3 of decision-capture fix — SHIPPED ✅ (auto-Decision-Log on decide(...) commits)
 
 **Date:** 2026-04-20 ~23:53 EST (Toronto)
@@ -2126,5 +2171,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 23:53 EST (Toronto)
+Last updated: 2026-04-21 at 00:02 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -9,6 +9,54 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## S-FORENSICS — decision archaeology + governance gap fix ✅
+
+**Date:** 2026-04-20 ~22:59 EST (Toronto)
+**Notion item:** `348a09cf-876a-81a6-984d-f96adc8035e9` — "S-FORENSICS: Decision archaeology + governance gap analysis (REWORK)" (P0, Done).
+
+### Three reconstructed decisions → Notion Decision Log (data source `03198a8f-849e-41ee-ba85-b22019841ce7`)
+
+| # | Decision | Status | Where-Logged verdict |
+|---|----------|--------|----------------------|
+| 1 | DCC palette — Warm Hearth adopted (Option A, 65.5% weighted vote) | **Missing-From-Backlog** | Outcome in 5 places; original vote artefact NOT in repo or Notion — lives only in Aaron's Claude.ai chat history |
+| 2 | DCC fonts — self-hosted SIL OFL (Merriweather + Source Sans 3) | **Actioned** | Outcome well-documented (LICENSE-OFL.txt, MAINTENANCE.md, fonts.css); origin "font issues flagged" discussion lost to chat |
+| 3 | Legal (Helen) + CTO (Naveen) veto power | **Logged** | Rule codified in Notion Glossary + CLAUDE.md + persona docs — least-lost of the three |
+
+### Evidence method
+- Git log grep + `git log --grep=` across all decisions
+- Repo-wide grep for key terms (Warm Hearth / 65.5 / veto / Helen / Naveen / font license)
+- Read persona docs (`hal-stack/personas/maturity-stages.md`, `scrappy-pack.md`, `inner-circle.md`)
+- Notion search for Decision Log DB + related pages
+- NO Claude.ai export available (S-026 still blocked on your export) — flagged as the recovery path for the 2 lost-origin-discussion items
+
+### Loss pattern (single finding across all 3)
+Decisions made in Claude.ai chats: **outcomes propagate** (shipped via Claude Code sprint, doc edit, Notion item), but **origin discussions disappear**. Claude.ai side has no write tool into Notion mid-chat, so rationale lives only in chat scrollback. Future queries like "why Merriweather over X?" require reconstruction.
+
+### Three-layer governance fix proposal (new file `hal-stack/governance/decision-capture-proposal.md`)
+- **Layer 1 (highest leverage, 5 min):** Claude.ai user-preference rule — proactive decision-capture offer before closing a topic containing a DECISION. Writes to Decision Log via Notion MCP.
+- **Layer 2 (glue, 15 min):** Extend `capture-prompt.md` routing table — TYPE=decision → Decision Log.
+- **Layer 3 (smallest, 30 min):** Extend the post-commit hook (shipped earlier today) to detect `decide(...):` conventional-commit prefix, auto-append Decision Log stub.
+
+Recommended order: Layer 3 → Layer 1 → Layer 2. Total effort ~50 min across all three.
+
+### Commits
+- `25b3584` — `feat(governance): S-FORENSICS — decision-capture 3-layer fix proposal` (+95 lines, new file `hal-stack/governance/decision-capture-proposal.md`).
+- Notion items: 3 rows created in Decision Log DB; S-FORENSICS sprint flipped to Done with `25b3584` recorded.
+
+### What I couldn't do
+- **Back-populate Decision Log from Claude.ai export** — the export isn't available. Flagged as the recovery path for the 2 Missing / Actioned-but-origin-lost rows. Unblocks when you do the export (S-026 umbrella sprint).
+- **Verify Layer 1 viability** — I don't know for sure what Notion MCP write tools are loaded in your Claude.ai today. If they're not there, Layer 2 becomes the primary path. Confidence on Layer 1 estimate accordingly dropped to 85%.
+
+### Next recommended action
+1. Review the 3 Decision Log rows in Notion (~5 min).
+2. If reconstruction is roughly accurate → **flip Layer 3 to Ready** and I ship the hook extension as the next sprint (~30 min).
+3. Do your Claude.ai export when you can — unblocks both S-026 AND back-population of the Decision Log with full origin discussions.
+
+### Confidence
+85%. High on the loss pattern (consistent across 3 decisions). Medium on the fix effort (Layer 1 depends on MCP tool availability on your Claude.ai side). Low-ish on the Warm Hearth vote Date field (I used 2026-04-18 as a plausible placeholder — you'll know the actual date).
+
+---
+
 ## Kids DB Phase 1b micro-pilot — age-4-6 gap closed ✅ (8 rows total)
 
 **Date:** 2026-04-20 ~21:08 EST (Toronto)
@@ -2032,5 +2080,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 21:08 EST (Toronto)
+Last updated: 2026-04-20 at 22:59 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

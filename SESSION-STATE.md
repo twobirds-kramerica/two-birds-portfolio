@@ -1,11 +1,25 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x19: S-R01-PHASE-RETRO — 14 Done + 2 Backlog entries paper-trailed in Notion)
+**Last Session:** April 21, 2026 (max-mode x20: skill-graph index doc — 351-line onboarding artefact for the 20-row Research DB)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 📖 S-R01-SKILL-GRAPH — Onboarding index for the 20-row Research DB — SHIPPED ✅
+
+**Date:** 2026-04-21 ~18:01 EST · Max mode sprint #20
+**Repo:** portfolio master @ `421d842`
+**File:** `hal-stack/research/dcc-kids-skill-graph.md` (351 lines)
+
+Bird's-eye view of the DCC Kids Research Database so reviewers (Aaron, Brenda, pilot teachers, advisors, Phase-2 developers) can see the whole curriculum without opening 20 Notion pages. Complements the per-skill Notion depth with cross-skill structure.
+
+Seven sections: coverage matrix (visual grid), three age-spanning ladders (Tech-Safety / Emotional-Safety / AI-literacy each 4-6 → 13-15), prerequisite + reinforcement graph between rows, research-citation roll-up by category, how-to-use-this-doc per audience, known follow-ups, session provenance.
+
+**Complements** the Phase-1 artefacts: Notion rows are per-skill depth; this doc is cross-skill structure. Both needed for Phase-2 build.
 
 ---
 
@@ -2893,5 +2907,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 17:43 EST (Toronto)
+Last updated: 2026-04-21 at 18:01 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

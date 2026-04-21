@@ -21,8 +21,8 @@ when he switches to review mode. No inline pauses during dev.
 
 ## P1 — Content review for S-R01 rows (advance Status Research → Spec)
 
-- [ ] **Review 7 rows shipped today in DCC Kids Research DB** (60 min total)
-  Grid now complete (20/20 age×category cells) plus 2 second-row entries:
+- [ ] **Review 8 rows shipped today in DCC Kids Research DB** (70 min total)
+  Grid now complete (20/20 age×category cells) plus 3 second-row entries:
   - `349a09cf-876a-8118...` 4-6 Critical-Thinking: "True things and story things" (1c)
   - `349a09cf-876a-81c0...` 7-9 Emotional-Safety: "Telling a grown-up..." (1c)
   - `349a09cf-876a-8136...` 4-6 Creative-Making: "Making my own thing first..." (1d)
@@ -30,6 +30,7 @@ when he switches to review mode. No inline pauses during dev.
   - `349a09cf-876a-8192...` 7-9 Creative-Making: "Making something useful..." (1e)
   - `349a09cf-876a-816a...` 13-15 Emotional-Safety: "Sextortion resistance" ← already P0 above (1f)
   - `349a09cf-876a-811d...` 10-12 Tech-Safety: "Using a password manager..." (1g, prerequisite for 1d 2FA row)
+  - `349a09cf-876a-8163...` 13-15 Critical-Thinking: "Lateral reading + AI check" (1h, builds on 4-6 Learning + 13-15 CT-1)
   If depth/voice meets your bar, batch-advance them to Status=Spec.
 
 - [ ] **Add Cybertip.ca reference to sextortion row** (5 min)

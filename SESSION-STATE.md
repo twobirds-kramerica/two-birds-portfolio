@@ -1,11 +1,26 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x13: S-R01-PHASE-1g — 10-12 password manager prerequisite for 2FA; DB 14→15)
+**Last Session:** April 21, 2026 (max-mode x14: S-R01-PHASE-1h — 13-15 lateral-reading + AI check; DB 15→16)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1h — 13-15 lateral reading + AI check — SHIPPED ✅
+
+**Date:** 2026-04-21 ~15:38 EST (Toronto) · Max mode sprint #14
+**Repo:** portfolio master @ `a2509cc`
+
+**Row**: [Reading around something before I believe it (lateral reading + AI check)](https://www.notion.so/Reading-around-something-before-I-believe-it-lateral-reading-AI-check-349a09cf876a81638d69ebbca1da0b2a) — 13-15 × Critical-Thinking, P0-Core
+
+**Content**: Stanford SHEG's lateral-reading technique with a 2026 AI-overlay. Four-move routine: notice the engineered reaction / leave the page / search the claim (not the source) / add the AI check (reverse-image-search, hands-text-audio tells). Weekly low-pressure practice via News Literacy Project's RumorGuard newsletter. Grounded in SHEG 2019 empirical finding that 6×50-min lessons doubled high-schoolers' spotting accuracy.
+
+**Citations** (primary research + authoritative educators): Stanford SHEG × 3, News Literacy Project Teaching About AI + Checkology + RumorGuard, UNESCO deepfakes crisis-of-knowing, Huang & Hu 2025 (SAGE) intervention study, MediaSmarts Canada. Verified via WebSearch.
+
+**DB status**: 16 rows. Grid 20/20. 4 more to the 20+ target. Skill graph now explicitly connects this row to 3 prior rows (4-6 Learning, 13-15 Critical-Thinking #1, 13-15 Emotional-Safety 1f) — same info environment, different threat vectors.
 
 ---
 
@@ -2752,5 +2767,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 15:23 EST (Toronto)
+Last updated: 2026-04-21 at 15:38 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

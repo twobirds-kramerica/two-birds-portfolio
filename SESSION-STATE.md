@@ -1,11 +1,58 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x17: S-R01-PHASE-1k — 7-9 app permissions pause-and-show; DB 18→19)
+**Last Session:** April 21, 2026 (max-mode x18: S-R01-PHASE-1l — 13-15 AI-tutor-vs-shortcut; DB 19→20, **Phase-1 target MET**)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🏁 S-R01-PHASE-1l — Phase-1 TARGET MET at 20 rows — SHIPPED ✅
+
+**Date:** 2026-04-21 ~17:28 EST · Max mode sprint #18
+**Repo:** portfolio master @ `7dca6d2`
+
+**Row**: [Using AI as a tutor that grows me, not a shortcut that hollows me out](https://www.notion.so/Using-AI-as-a-tutor-that-grows-me-not-a-shortcut-that-hollows-me-out-349a09cf876a819e88b5d4ed38ef43cf) — 13-15 × Learning, P0-Core
+
+**Defining 2026 teen learning skill.** Four moves that flip AI from shortcut to tutor:
+1. Answer first, ask AI second (generation effect, Slamecka & Graf 1978)
+2. Ask AI to critique YOUR reasoning, not provide the answer (Socratic scaffolding)
+3. "Explain like I'm in grade 8" for unfamiliar concepts (cognitive load)
+4. Protégé test — close AI, wait 10 min, teach back out loud (protégé effect, Fiorella & Mayer 2013+, plus retrieval practice, Roediger & Karpicke 2006)
+
+Addresses the compounding gap: AI-outsourced foundations in grade 10 → grade 11 feels impossibly hard → more outsourcing → grade in class doesn't match actual capability → exposed at university/workplace entry.
+
+**Citations** (2024-2025 primary research, zero fabrication):
+- [Dartmouth (Nov 2025)](https://home.dartmouth.edu/news/2025/11/ai-can-deliver-personalized-learning-scale-study-shows) — "illusion of mastery" cognitive-outsourcing effect named explicitly
+- [Nature Scientific Reports 2025 RCT](https://www.nature.com/articles/s41598-025-97652-6) — AI tutoring outperforms in-class active learning when designed right
+- [Khan Academy Khanmigo efficacy (Nov 2024)](https://blog.khanacademy.org/khan-academy-efficacy-results-november-2024/) — 68K → 700K students in one year
+- [Frontiers in Education 2025 cognitive-mirror framework](https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1697554/full)
+- Classical learning science: generation effect, retrieval practice, protégé effect
+
+---
+
+## 🎯 DCC Kids Research Database — Phase 1 status snapshot (end of 2026-04-21 session)
+
+**20 rows live, all Status=Research, awaiting Aaron review & advance to Spec.**
+
+**Coverage grid 20/20 complete** (1e). Second-row depth now in:
+- 10-12 Tech-Safety (1g — password manager, prereq for 2FA)
+- 13-15 Tech-Safety (1d — 2FA)
+- 13-15 Emotional-Safety (1f — sextortion resistance)
+- 13-15 Critical-Thinking (1h — lateral reading + AI check)
+- 10-12 Creative-Making (1i — credit when remixing)
+- 10-12 Emotional-Safety (1j — stepping out of a pile-on)
+- 7-9 Tech-Safety (1k — pause-and-show on app permissions)
+- 13-15 Learning (1l — AI tutor vs shortcut) ← hits target
+
+**Three ladders complete across all 4 age brackets**:
+1. **Tech-Safety ladder**: 4-6 secret/share → 7-9 pause-and-show → 10-12 password manager → 13-15 2FA
+2. **Emotional-Safety ladder**: 4-6 safe grown-up → 7-9 tell a grown-up → 10-12 pile-on exit + grooming awareness → 13-15 sextortion resistance
+3. **AI-literacy spine**: 4-6 real/pretend/maybe-made-up pictures → 7-9 tell a grown-up when weird → 10-12 ad-literacy → 13-15 lateral reading + AI-tutor discipline
+
+All rows citation-backed via primary government / academic / established-educator sources, verified via WebSearch at composition time. Skill-graph connections explicit in each row's Creator-Luring-Awareness and Example-Activity fields.
 
 ---
 
@@ -2826,5 +2873,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 17:14 EST (Toronto)
+Last updated: 2026-04-21 at 17:28 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

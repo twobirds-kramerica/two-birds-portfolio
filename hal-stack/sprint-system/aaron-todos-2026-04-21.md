@@ -34,6 +34,7 @@ when he switches to review mode. No inline pauses during dev.
   - `349a09cf-876a-8124...` 10-12 Creative-Making: "When I remix, I name who made the original" (1i, positive creator-citizenship)
   - `349a09cf-876a-8122...` 10-12 Emotional-Safety: "Stepping out of a pile-on" (1j, 3 rehearsed moves, Kids Help Phone escalation)
   - `349a09cf-876a-816f...` 7-9 Tech-Safety: "Pause and show on app permissions" (1k, completes Tech-Safety ladder 4-6→7-9→10-12→13-15)
+  - `349a09cf-876a-819e...` 13-15 Learning: "AI tutor vs shortcut" (1l, **hits Phase-1 target at 20 rows**, 4-move protocol grounded in Dartmouth 2025 + Nature 2025 RCT + Khan Academy)
   If depth/voice meets your bar, batch-advance them to Status=Spec.
 
 - [ ] **Add Cybertip.ca reference to sextortion row** (5 min)

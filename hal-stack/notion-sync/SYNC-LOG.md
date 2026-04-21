@@ -43,3 +43,5 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-21 14:00 Eastern Daylight Time — next-sprint: no Ready sprint found
 - 2026-04-21 14:04 Eastern Daylight Time — create_research_row: 'True things and story things' (Critical-Thinking / ['4-6']) -> 349a09cf-876a-8118-8e9a-f1228d597509
 - 2026-04-21 14:04 Eastern Daylight Time — create_research_row: 'Telling a grown-up when something online feels weird' (Emotional-Safety / ['7-9']) -> 349a09cf-876a-81c0-9d73-c5997f72a204
+- 2026-04-21 14:17 Eastern Daylight Time — create_research_row: 'Making my own thing first, then watching other people's' (Creative-Making / ['4-6']) -> 349a09cf-876a-8136-8c50-df26892b81c6
+- 2026-04-21 14:17 Eastern Daylight Time — create_research_row: 'Turning on two-factor authentication on the accounts I care about' (Tech-Safety / ['13-15']) -> 349a09cf-876a-8153-9a64-f3f460ed1f3a

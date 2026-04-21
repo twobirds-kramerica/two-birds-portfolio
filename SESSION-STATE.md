@@ -9,6 +9,52 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Layer 3 of decision-capture fix — SHIPPED ✅ (auto-Decision-Log on decide(...) commits)
+
+**Date:** 2026-04-20 ~23:53 EST (Toronto)
+**Trigger:** 9th consecutive "next sprint" with empty Ready queue. Honoured my own recommendation from the S-FORENSICS proposal (20 min earlier): "Layer 3 first — smallest, 30 min, zero behaviour change."
+
+### What shipped (commit `3a3ec93` — a `decide(...)` commit itself)
+Extended `hal-stack/notion-sync/post-commit-hook.py` with a second POST block. When a commit's subject line matches `^decide\((area)\)\s*:\s*(outcome)` (case-insensitive), the hook ALSO creates a row in the Notion Decision Log (data source `03198a8f-849e-41ee-ba85-b22019841ce7`) with:
+- Decision = `<area>: <outcome>`
+- Date = commit date (UTC)
+- Status = Logged
+- Context = auto-note explaining the commit-capture origin
+- Outcome = the text after the colon
+- Evidence-Link = `https://github.com/twobirds-kramerica/two-birds-portfolio/commit/<short-hash>`
+
+**Non-decide commits keep behaving exactly as before** — only the SESSION-STATE (Live) page gets the bullet. The decision-capture path is additive, gated on the regex match.
+
+### Live verification
+The commit message for `3a3ec93` was itself a `decide(governance): ...` subject — the smallest possible dogfood test. Manually ran the hook via pipe-test (watcher still needs your `/hooks` menu reload or session restart to pick up `.claude/settings.json`) and **Decision Log row #4 appeared** with:
+- Title: `governance: adopt decide(area): subject convention for auto Decision Log capture`
+- Status: Logged
+- Evidence URL: `https://github.com/twobirds-kramerica/two-birds-portfolio/commit/3a3ec93`
+
+### Layer 1 + Layer 2 still open
+Per the S-FORENSICS proposal at `hal-stack/governance/decision-capture-proposal.md` (now updated to mark Layer 3 ✅ SHIPPED):
+- **Layer 1 (~5 min, highest leverage):** paste the decision-capture rule into your Claude.ai user preferences. Notion MCP was just added this session (`claude mcp add notion`) which unlocks the proactive write path.
+- **Layer 2 (~15 min, glue):** update `hal-stack/sprint-system/capture-prompt.md` routing table so `TYPE: decision` → Decision Log.
+
+Layer 3 captures decisions made via Claude Code commits. Layer 1 captures decisions made in Claude.ai chats. Together they close the loss pattern identified in S-FORENSICS.
+
+### Fails-soft guarantees (unchanged)
+If Notion API returns non-200 on the Decision Log POST, the hook logs one line to `hal-stack/notion-sync/SYNC-LOG.md` but does NOT block the commit or retry. The SESSION-STATE (Live) path is independent — one failing doesn't affect the other.
+
+### Commit
+- `3a3ec93` — `decide(governance): adopt decide(area): subject convention for auto Decision Log capture` (+48 lines to `post-commit-hook.py`)
+
+(Next commit after this SESSION-STATE log updates the proposal doc to mark Layer 3 shipped.)
+
+### Confidence
+90%. Pipe-tested; real-commit-through-hook-path verified via backfill. 10% uncertainty reserved for: if a commit subject has an unusual Unicode character in the `decide(...)` section, the regex may behave differently than tested — minor edge case.
+
+### Next recommended action
+1. `/hooks` menu reload or session restart → activates both the SESSION-STATE + Decision Log hook paths automatically for all future commits.
+2. Consider Layer 1: paste the decision-capture rule into Claude.ai user preferences. 5 minutes; highest leverage of the three layers.
+
+---
+
 ## S-FORENSICS — decision archaeology + governance gap fix ✅
 
 **Date:** 2026-04-20 ~22:59 EST (Toronto)
@@ -2080,5 +2126,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 22:59 EST (Toronto)
+Last updated: 2026-04-20 at 23:53 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

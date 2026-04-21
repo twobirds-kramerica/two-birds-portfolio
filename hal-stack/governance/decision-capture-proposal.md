@@ -64,7 +64,7 @@ This makes the commit itself the capture surface for decisions made during Claud
 
 ## Recommended adoption order
 
-1. **Layer 3 first** (smallest change): extend the post-commit hook to detect `decide(...)` conventional-commit prefix. ~30 min of work — edit `hal-stack/notion-sync/post-commit-hook.py`, test with one test-commit, ship. Benefits: zero user-side behaviour change, captures any future Claude Code decision automatically.
+1. **Layer 3 first** ✅ **SHIPPED 2026-04-20** (commit `3a3ec93`) — extend the post-commit hook to detect `decide(...)` conventional-commit prefix. Verified: commit `3a3ec93` used the `decide(governance): ...` subject and produced Decision Log row #4 with Status=Logged + evidence URL back to the commit. Zero user-side behaviour change going forward — any future commit whose subject starts with `decide(<area>): <outcome>` auto-captures.
 
 2. **Layer 1 next** (highest leverage but requires behaviour change): Aaron pastes the decision-capture rule into Claude.ai user preferences. ~5 min. Benefits: every future chat that surfaces a decision offers capture. Failure mode: if Claude.ai side doesn't have Notion MCP write tool loaded, the fallback is the `capture:` command (Layer 2).
 

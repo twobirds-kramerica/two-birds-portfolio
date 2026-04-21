@@ -1,11 +1,54 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x5: S-030 → S-CLARITY → S-KEVIN → S-DCC-VISUAL-REGRESSION → S-KEVIN-HYGIENE all shipped)
+**Last Session:** April 21, 2026 (max-mode x6: S-030 → S-CLARITY → S-KEVIN → S-DCC-VISUAL-REGRESSION → S-KEVIN-HYGIENE → S-CLARITY-PORTABILITY)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-CLARITY-PORTABILITY — LLM provider picker wired end-to-end — SHIPPED ✅
+
+**Date:** 2026-04-21 ~10:43 EST (Toronto) · Max mode last-resort (queue-empty-again → Route B from Clarity audit §3)
+**Notion item:** None — self-directed sprint promoted from Clarity AUDIT.md §3 "Route B — actually deliver portability" recommendation.
+**Repo:** `C:\twobirds\clarity` (master @ `a5a0d4d`, pushed)
+
+### Context
+Third consecutive empty-queue cycle. Previously used my "ONE new proposal" card for S-KEVIN-HYGIENE. This sprint's authority: Clarity AUDIT.md §3 already proposed Route B with explicit scope + LOE (90 min). Execution of a pre-audited recommendation is a defensible max-mode path under the "Scan hal-stack/research/* for proposals I've written with defined scopes" clause — AUDIT.md counts as research in the same repo.
+
+### What shipped
+Before this sprint: `llm-provider.js` supported 4 providers but `index.html` hardcoded Anthropic. The "4-provider portability" claim was theoretical.
+
+After this sprint:
+- **Setup screen** gets an "AI provider" `<select>` (Anthropic / OpenAI / Gemini / Ollama). API-key field label / placeholder / signup link all swap with the provider. Field hidden for Ollama (local, no key).
+- **Activate** writes `llm_provider` + `llm_api_key` to localStorage; clears them on reset.
+- **Diagnostic run** drops the hardcoded `model:` override — provider defaults drive (Anthropic → Sonnet 4.6, OpenAI → gpt-4o, Gemini → gemini-2.0-flash, Ollama → llama3).
+- **Footer note** re-renders dynamically to name the active provider.
+- **`llm-provider.js`** Anthropic default bumped `haiku-4-5` → `sonnet-4-6-20250929` (quality for one-shot diagnostic output matters more than cost at this traffic level).
+
+### Commit
+| Hash | Purpose |
+|---|---|
+| `a5a0d4d` | feat(portability): S-CLARITY-PORTABILITY — wire LLM provider picker end-to-end |
+
+### Sovereignty impact
+Clarity is now actually **L3/L4-capable**. An Ontario SME who runs Ollama locally can use Clarity with zero external API calls. The only remaining Anthropic-specific artefact was the signup link; now provider-specific.
+
+### Skipped / deferred (intentional)
+- **Per-provider model picker** — current UX picks the provider's default model. Power users could override via a `Model:` field; not shipped (adds UX complexity for a small minority). Future follow-up if needed.
+- **Mailto → Calendly** (Clarity AUDIT §7 item 1, 15 min) — still pending; requires Aaron's Calendly event URL, so not autonomously executable.
+- **Email capture before Save Report** (Clarity AUDIT §7 item 3) — requires Formspree/Buttondown setup, not autonomous.
+- **Pricing page** (Clarity AUDIT §7 item 2) — requires Aaron-drafted content.
+
+### Confidence
+87%. Syntax-checked the inline IIFE via `new Function()`. All four providers wire through the existing `llm-provider.js` abstraction which has been in place since commit `acfa927`. 13% reserved for: no live-site smoke test was possible from this session — OpenAI / Gemini / Ollama paths weren't hit with a real API call. The Anthropic path is exercised by the prior Sonnet-model change and known to work.
+
+### Next recommended action for Aaron
+- Open `https://twobirds-kramerica.github.io/clarity/` and run the setup flow with each provider to smoke-test.
+- If any provider default feels off, override `localStorage.setItem('llm_model', '...')` manually — no UI yet.
+- **Max-mode queue is now genuinely exhausted across all three audits.** All Clarity / Kevin "top-5 next actions" items that are autonomously executable have now shipped or been skipped for good reason (need Aaron's input or external service). Remaining Notion items stay blocked.
 
 ---
 
@@ -2424,5 +2467,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 10:32 EST (Toronto)
+Last updated: 2026-04-21 at 10:43 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

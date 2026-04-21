@@ -32,6 +32,7 @@ when he switches to review mode. No inline pauses during dev.
   - `349a09cf-876a-811d...` 10-12 Tech-Safety: "Using a password manager..." (1g, prerequisite for 1d 2FA row)
   - `349a09cf-876a-8163...` 13-15 Critical-Thinking: "Lateral reading + AI check" (1h, builds on 4-6 Learning + 13-15 CT-1)
   - `349a09cf-876a-8124...` 10-12 Creative-Making: "When I remix, I name who made the original" (1i, positive creator-citizenship)
+  - `349a09cf-876a-8122...` 10-12 Emotional-Safety: "Stepping out of a pile-on" (1j, 3 rehearsed moves, Kids Help Phone escalation)
   If depth/voice meets your bar, batch-advance them to Status=Spec.
 
 - [ ] **Add Cybertip.ca reference to sextortion row** (5 min)

@@ -1,11 +1,30 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x15: S-R01-PHASE-1i — 10-12 credit-when-remixing; DB 16→17)
+**Last Session:** April 21, 2026 (max-mode x16: S-R01-PHASE-1j — 10-12 stepping out of pile-on; DB 17→18)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1j — 10-12 stepping out of a pile-on — SHIPPED ✅
+
+**Date:** 2026-04-21 ~16:33 EST · Max mode sprint #16
+**Repo:** portfolio master @ `e428d29`
+
+**Row**: [Stepping out of a group pile-on (without becoming the next target)](https://www.notion.so/Stepping-out-of-a-group-pile-on-without-becoming-the-next-target-349a09cf876a81229afbc334a458b2eb) — 10-12 × Emotional-Safety, P0-Core
+
+**Framing**: agency-based (three rehearsed moves), not heroic. Works WITH Kohlberg's conventional-morality stage (affiliation peak) rather than against it — reframes exit as protecting the friend group, not individual rebellion. Three moves in order of difficulty: don't forward / private DM to target / change the subject.
+
+**Evidence anchor**: Peer intervention stops bullying within ~10 seconds in most cases (Olweus + PREVNet + Common Sense Ed synthesis). Kid doesn't need to be brave, just needs to be a single friction point.
+
+**Citations** (Canadian research + foundational empirical): PREVNet, Public Safety Canada × 2, Olweus (1993+), Salmivalli (Finnish defender-vs-reinforcer), Journal of Youth and Adolescence 2025, PMC9015685, Common Sense Ed, Cyberbullying Research Center. Kids Help Phone named as Canadian escalation (1-800-668-6868, text 686868).
+
+**DB status**: 18 rows. Grid 20/20. 2 more to 20+ target.
+
+**Skill graph**: pairs with existing 10-12 grooming row as the peer-peer threat counterpart; connects to 13-15 sextortion (1f), 13-15 lateral reading (1h), and 7-9 "tell a grown-up" (1c) as a full threat-response stack.
 
 ---
 
@@ -2784,5 +2803,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 15:51 EST (Toronto)
+Last updated: 2026-04-21 at 16:33 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

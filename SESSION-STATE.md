@@ -1,11 +1,58 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (S-030 DCC Option B bundle + S-CLARITY HAL Stack rigor audit — both shipped)
+**Last Session:** April 21, 2026 (S-030 + S-CLARITY + S-KEVIN — all three max-mode sprints shipped back-to-back)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-KEVIN — Kevin's Apartment Search audit + refresh — SHIPPED ✅
+
+**Date:** 2026-04-21 ~08:38 EST (Toronto) · Max mode autonomous run
+**Notion item:** `348a09cf-876a-815d-8fec-d435fee312df` — marked Done via complete-sprint.py
+**Repo:** `C:\twobirds\kevins-apartment-search` (main @ `9755404`, pushed after rebase onto overnight bot commits)
+
+### Phases run
+- **Phase 0** — Read CLAUDE.md trigger, next-sprint.py locked S-KEVIN, pending-capture empty.
+- **Phase 1** — A11y fixes in `index.html`:
+  - 4× clickable `<div onclick=>` → `<button>` (Budget / Commute / Laundry / Unit criteria rows)
+  - Parking row (non-editable) gets `role="group"` + `aria-label`
+  - Emoji icons + chevrons marked `aria-hidden="true"`
+  - `aria-expanded` / `aria-controls` wired; `toggleCriteriaEdit` now syncs expanded state
+  - Delegated click listener replaces removed inline onclick on the 4 editable rows
+- **Phase 2** — New `.github/workflows/axe-core.yml` (every-push axe-core CI, mirrors DCC + Clarity).
+- **Phase 3** — Wrote `AUDIT.md` (~300 lines) covering 10 sections. Section 3 ("Content delivery — source of truth & refresh") is the expanded answer to the sprint brief's refresh-mechanism question:
+  - **Recommendation:** keep `data/listings.json` as source of truth. Add one new workflow: **listing-availability probe** (weekly HEAD requests to each `listing_url`, opens issue on 404/410/5xx). Replaces the weak "`date_added` > 14 days" stale heuristic with actual evidence.
+  - **Explicitly NOT recommended:** CMS (Strapi/Notion/Sanity), scraping (Realtor.ca/Zillow), backend. All scope-creep for a 16-listing private tool.
+- **Phase 4** — Rebased onto remote bot's daily-refresh commit (`d088d8e`) before push (daily-refresh workflow bumped timestamp overnight). Commit `9755404` pushed clean.
+- **Phase 5** — Notion Done + SESSION-STATE update (this entry).
+
+### Headline audit findings
+- **Biggest real bug was the criteria panel keyboard a11y** — 4 divs with onclick but no tabindex, no role, no aria. Fixed.
+- **`--grey` (#888) fails WCAG AA** (3.74:1 on cream). Token needs `#686868` (~4.6:1). Flagged for S-KEVIN-HYGIENE follow-up.
+- **Sovereignty is good** — tool is L1 today, trivially L2/L3 on any day (static = portable).
+- **Top 3 next actions by impact/LOE**: self-host Leaflet + Inter (25 min) > listing-availability probe (45 min) > fix `--grey` contrast (5 min).
+
+### Commits
+| Hash | Purpose |
+|---|---|
+| `9755404` | fix(a11y)+docs(audit): S-KEVIN HAL Stack rigor pass |
+
+### Skipped / deferred (intentional)
+- **Scraping for automated listing discovery** — documented as explicitly out of scope; ToS + maintenance-cost reasoning in AUDIT.md §3.
+- **Extract inline `<script>` + `<style>` to external files** — named as `S-KEVIN-CSP-READY` follow-up; 11 inline onclick handlers still remain on Save/Cancel/Reset/Print buttons (left because they're on actual `<button>` elements, not divs — lower a11y impact).
+- **Lighthouse CI + Playwright smoke** — low value at current 16-listing scale.
+- **Google Forms → mailto/Formspree swap** — cosmetic, no current issue.
+
+### Confidence
+85% — the inline fix pair (criteria a11y + axe CI) addresses the biggest regression surfaces. The content-refresh recommendation is opinionated but grounded in Two Birds' sovereignty posture. 15% reserved for: founder judgment can overrule the no-scraping recommendation if Kevin's hunt drags on.
+
+### Next recommended action for Aaron
+- Read `kevins-apartment-search/AUDIT.md` §9 — pick 1-3 items for next sprint. "S-KEVIN-HYGIENE" bundle (self-host Leaflet + Inter + `--grey` contrast + broken-link check = ~50 min) is the highest-leverage follow-up.
+- **Max-mode queue is now empty for the 3 pre-primed items.** S-030 + S-CLARITY + S-KEVIN all Done. Next `next sprint` call triggers max-mode's "empty-queue auto-flip" protocol — I'll query all open Claude-Code-owned Backlog items, pick highest-priority with executable scope, and run it.
 
 ---
 
@@ -2282,5 +2329,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 00:43 EST (Toronto)
+Last updated: 2026-04-21 at 08:38 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

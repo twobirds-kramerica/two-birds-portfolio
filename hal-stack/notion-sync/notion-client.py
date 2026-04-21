@@ -322,6 +322,138 @@ def create_backlog_item(
     return page
 
 
+# --- High-level: create a DCC Kids Research Database row --------------------
+# Schema captured 2026-04-21 from the live data source
+# `kids_research_data_source` (e184382b-b59a-41e7-9152-d90fbee1abe6).
+# 22 columns. Rich-text fields accept a single prose block; callers pass
+# plain strings and the helper wraps them into Notion's rich_text shape.
+
+RESEARCH_CATEGORIES   = {"Tech-Safety", "Learning", "Emotional-Safety",
+                         "Critical-Thinking", "Creative-Making"}
+RESEARCH_AGE_RANGES   = {"4-6", "7-9", "10-12", "13-15", "Flexible-Range"}
+RESEARCH_PRIORITIES   = {"P0-Core", "P1-Important", "P2-Nice"}
+RESEARCH_STATUSES     = {"Research", "Spec", "Ready-to-Build", "Built"}
+RESEARCH_DEMO_METHODS = {"Drawing", "Play-Acting", "Song-or-Music",
+                         "Art-Creation", "Show-and-Tell", "Multi-Modal"}
+RESEARCH_LEARNING     = {"Standard", "ADHD", "Dyslexia", "Special-Needs"}
+RESEARCH_LANGUAGES    = {"en-CA", "fr-QC"}
+RESEARCH_AR_SHOWCASES = {"None", "Toy-to-Life", "Cup-Animation",
+                         "Stuffed-Animal-Action"}
+
+
+def _rich_text(content: str | None):
+    if content is None or content == "":
+        return []
+    return [{"text": {"content": content}}]
+
+
+def build_research_row_properties(
+    *,
+    skill: str,
+    category: str,
+    age_ranges: list[str],
+    priority: str = "P1-Important",
+    status: str = "Research",
+    description: str = "",
+    research_source: str = "",
+    threat_addressed: str = "",
+    psychology_framework: str = "",
+    creator_luring_awareness: str = "",
+    example_activity: str = "",
+    demonstration_method: str = "Multi-Modal",
+    gamification_element: str = "",
+    learning_profile: list[str] | None = None,
+    screen_time_guidance: str = "",
+    parental_controls_component: str = "",
+    media_quality_rubric: str = "",
+    language_version: list[str] | None = None,
+    en_ca_content: str = "",
+    fr_qc_content: str = "",
+    ar_showcase: str = "None",
+    ar_description: str = "",
+) -> dict:
+    """Build the Notion `properties` dict for one row of the DCC Kids
+    Research Database.
+
+    Values are passed as plain strings / list[str]; the helper wraps them
+    into the Notion rich_text / select / multi_select shape. Enums are
+    validated against the captured schema; invalid values raise ValueError
+    with the list of valid options.
+
+    Mandatory kwargs: `skill`, `category`, `age_ranges`.
+    """
+    if category not in RESEARCH_CATEGORIES:
+        raise ValueError(f"category must be one of {RESEARCH_CATEGORIES}")
+    if not age_ranges or any(a not in RESEARCH_AGE_RANGES for a in age_ranges):
+        raise ValueError(f"age_ranges must be subset of {RESEARCH_AGE_RANGES}")
+    if priority not in RESEARCH_PRIORITIES:
+        raise ValueError(f"priority must be one of {RESEARCH_PRIORITIES}")
+    if status not in RESEARCH_STATUSES:
+        raise ValueError(f"status must be one of {RESEARCH_STATUSES}")
+    if demonstration_method not in RESEARCH_DEMO_METHODS:
+        raise ValueError(
+            f"demonstration_method must be one of {RESEARCH_DEMO_METHODS}"
+        )
+    if ar_showcase not in RESEARCH_AR_SHOWCASES:
+        raise ValueError(f"ar_showcase must be one of {RESEARCH_AR_SHOWCASES}")
+
+    lp = learning_profile or ["Standard"]
+    if any(p not in RESEARCH_LEARNING for p in lp):
+        raise ValueError(f"learning_profile entries must be subset of {RESEARCH_LEARNING}")
+
+    lv = language_version or ["en-CA"]
+    if any(l not in RESEARCH_LANGUAGES for l in lv):
+        raise ValueError(f"language_version entries must be subset of {RESEARCH_LANGUAGES}")
+
+    return {
+        "Skill / Feature":              {"title":        [{"text": {"content": skill}}]},
+        "Category":                     {"select":       {"name": category}},
+        "Age-Ranges":                   {"multi_select": [{"name": a} for a in age_ranges]},
+        "Priority":                     {"select":       {"name": priority}},
+        "Status":                       {"select":       {"name": status}},
+        "Description":                  {"rich_text":    _rich_text(description)},
+        "Research-Source":              {"rich_text":    _rich_text(research_source)},
+        "Threat-Addressed":             {"rich_text":    _rich_text(threat_addressed)},
+        "Psychology-Framework":         {"rich_text":    _rich_text(psychology_framework)},
+        "Creator-Luring-Awareness":     {"rich_text":    _rich_text(creator_luring_awareness)},
+        "Example-Activity":             {"rich_text":    _rich_text(example_activity)},
+        "Demonstration-Method":         {"select":       {"name": demonstration_method}},
+        "Gamification-Element":         {"rich_text":    _rich_text(gamification_element)},
+        "Learning-Profile":             {"multi_select": [{"name": p} for p in lp]},
+        "Screen-Time-Guidance":         {"rich_text":    _rich_text(screen_time_guidance)},
+        "Parental-Controls-Component":  {"rich_text":    _rich_text(parental_controls_component)},
+        "Media-Quality-Rubric":         {"rich_text":    _rich_text(media_quality_rubric)},
+        "Language-Version":             {"multi_select": [{"name": l} for l in lv]},
+        "en-CA-Content":                {"rich_text":    _rich_text(en_ca_content)},
+        "fr-QC-Content":                {"rich_text":    _rich_text(fr_qc_content)},
+        "AR-Showcase":                  {"select":       {"name": ar_showcase}},
+        "AR-Description":               {"rich_text":    _rich_text(ar_description)},
+    }
+
+
+def create_research_row(client: NotionClient, **kwargs) -> dict:
+    """Create a row in the DCC Kids Research Database.
+
+    Accepts the same keyword args as `build_research_row_properties`.
+    Returns the created Notion page object. Logs to SYNC-LOG.md.
+    """
+    cfg = client.config
+    ds_id = cfg.get("kids_research_data_source")
+    if not ds_id:
+        raise NotionError(
+            "config.json is missing 'kids_research_data_source' — "
+            "cannot create a research row."
+        )
+    properties = build_research_row_properties(**kwargs)
+    page = client.create_page(ds_id, properties)
+    log_sync_event(
+        f"create_research_row: '{kwargs.get('skill', '?')}' "
+        f"({kwargs.get('category','?')} / {kwargs.get('age_ranges','?')}) "
+        f"-> {page.get('id', '?')}"
+    )
+    return page
+
+
 # --- Self-test -------------------------------------------------------------
 
 def _self_test() -> int:
@@ -352,18 +484,21 @@ def _self_test() -> int:
 
 
 def _dry_run_create() -> int:
-    """Offline verification: construct the create_page request body for a
-    sample Product Backlog row and print it as JSON. Does NOT hit the API.
-    Used to verify the create_page / build_backlog_properties helpers wire
-    up cleanly before any live call."""
+    """Offline verification: print two sample create_page request bodies —
+    one for a Product Backlog row, one for a DCC Kids Research Database row.
+    Does NOT hit the API. Used to verify the create_page helpers wire up
+    cleanly before any live call.
+    """
     try:
         cfg = load_config()
     except Exception as e:
         print(f"FAIL: could not load config.json: {e}")
         return 2
 
-    ds_id = cfg.get("product_backlog_data_source", "<missing>")
-    properties = build_backlog_properties(
+    backlog_ds = cfg.get("product_backlog_data_source", "<missing>")
+    research_ds = cfg.get("kids_research_data_source", "<missing>")
+
+    backlog_props = build_backlog_properties(
         item="SMOKE: notion-client.py create_page dry-run",
         priority="P3",
         status="Backlog",
@@ -372,19 +507,38 @@ def _dry_run_create() -> int:
         product="HAL Stack",
         notes="Generated by `notion-client.py --dry-run-create`. Not posted.",
     )
-    # Use build_page_body so we don't need NOTION_API_KEY for an offline check
+
+    research_props = build_research_row_properties(
+        skill="SMOKE: dry-run sample skill row",
+        category="Learning",
+        age_ranges=["7-9", "10-12"],
+        priority="P2-Nice",
+        status="Research",
+        description="Sample row emitted by --dry-run-create.",
+        research_source="N/A — smoke test.",
+        psychology_framework="N/A — smoke test.",
+        demonstration_method="Show-and-Tell",
+        learning_profile=["Standard", "ADHD"],
+        language_version=["en-CA"],
+        ar_showcase="None",
+    )
+
     try:
         client = NotionClient(config=cfg)
+        build = client.build_page_body
     except RuntimeError:
-        # No API key: build the body without instantiating a network client
-        body = {
-            "parent": {"type": "data_source_id", "data_source_id": ds_id},
-            "properties": properties,
-        }
-    else:
-        body = client.build_page_body(ds_id, properties)
+        # No API key: inline the body shape
+        def build(ds, props):
+            return {
+                "parent": {"type": "data_source_id", "data_source_id": ds},
+                "properties": props,
+            }
 
-    print(json.dumps(body, indent=2, ensure_ascii=False))
+    out = {
+        "product_backlog_example": build(backlog_ds, backlog_props),
+        "kids_research_example":   build(research_ds, research_props),
+    }
+    print(json.dumps(out, indent=2, ensure_ascii=False))
     return 0
 
 

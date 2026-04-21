@@ -2,6 +2,7 @@
   "command_center_page": "347a09cf-876a-81fb-9a5c-eca696fb585b",
   "product_backlog_data_source": "dee08637-7122-46cd-bc29-7775ce3ab8f6",
   "job_pipeline_data_source": "92415698-9009-4d74-b86b-ad23f5afe475",
+  "kids_research_data_source": "e184382b-b59a-41e7-9152-d90fbee1abe6",
   "base_url": "https://api.notion.com/v1/",
   "notion_version": "2025-09-03",
   "request_timeout_seconds": 15,

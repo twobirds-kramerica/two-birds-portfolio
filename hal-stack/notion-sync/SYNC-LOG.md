@@ -48,3 +48,4 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-21 14:36 Eastern Daylight Time — create_research_row: 'Making something useful for someone else' (Creative-Making / ['7-9']) -> 349a09cf-876a-8192-af6c-d7ec8f7e578b
 - 2026-04-21 15:11 Eastern Daylight Time — API 400 on POST pages: {"object":"error","status":400,"code":"validation_error","message":"body failed validation: body.properties.en-CA-Content.rich_text[0].text.content.length should be ≤ `2000`, instead was `3160`.","request_id":"0c72ea33-ee5f-4896-a85b-a661e5f614c2"}
 - 2026-04-21 15:12 Eastern Daylight Time — create_research_row: 'What to do if someone pressures me to send a picture (sextortion)' (Emotional-Safety / ['13-15']) -> 349a09cf-876a-816a-a0b2-d5b4bc4aa532
+- 2026-04-21 15:23 Eastern Daylight Time — create_research_row: 'Using a password manager so every account gets its own password' (Tech-Safety / ['10-12']) -> 349a09cf-876a-811d-b763-c94c8fdef76e

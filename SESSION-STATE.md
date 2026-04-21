@@ -1,11 +1,58 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x7: add S-NOTION-CREATE-PAGE to the six shipped earlier — unblocks S-R01-PHASE-1)
+**Last Session:** April 21, 2026 (max-mode x8: add S-R01-INFRA — Kids Research DB schema captured + create_research_row helper)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-INFRA — Kids Research DB schema + create_research_row helper — SHIPPED ✅
+
+**Date:** 2026-04-21 ~12:49 EST (Toronto) · Max mode (infrastructure unblock, phase 2)
+**Notion item:** None — meta-work. Builds on S-NOTION-CREATE-PAGE (`a3c8f53`).
+**Repo:** `C:\twobirds\two-birds-portfolio` (master @ `f549242`, pushed)
+
+### Why this sprint
+After S-NOTION-CREATE-PAGE the generic `create_page` helper was live, but S-R01-PHASE-1 still needed: the specific Kids Research DB's data source ID (not in config), its 22-column schema (enums + property names), and a row-builder tailored to that schema. This sprint captures all three so a future dedicated research session can focus purely on content, not plumbing.
+
+### Scope-honesty call (carried from S-R01-PHASE-1's own notes)
+S-R01-PHASE-1's Notion page explicitly reads: *"full 20+ is 20-40 hrs of quality work, not 8-10"*. Attempting the remaining 12+ skills in one max-mode tail would either produce shallow, citation-light output or blow past credit budget. Honest partial: ship the infrastructure now; leave content for a dedicated session.
+
+### Discovery (Notion search via integration)
+- **Data source:** DCC Kids Version — Research Database
+- **ID:** `e184382b-b59a-41e7-9152-d90fbee1abe6`
+- **Rows:** 8 / 20+ target (per S-R01-PHASE-1 notes)
+- **Schema:** 22 properties — 1 title, 6 selects, 3 multi-selects, 12 rich_text. Enums captured.
+
+### What shipped
+- **config.json** — new `kids_research_data_source` entry.
+- **notion-client.py** — 7 enum sets exposed as module constants (`RESEARCH_CATEGORIES`, `RESEARCH_AGE_RANGES`, `RESEARCH_PRIORITIES`, `RESEARCH_STATUSES`, `RESEARCH_DEMO_METHODS`, `RESEARCH_LEARNING`, `RESEARCH_AR_SHOWCASES`).
+- **`build_research_row_properties(**kwargs)`** — keyword-only; validates every select/multi-select against captured enums; raises `ValueError` with valid options on mismatch. Defaults mirror existing rows.
+- **`create_research_row(client, **kwargs)`** — one-call row creation; auto-logs to SYNC-LOG.md.
+- **`--dry-run-create`** CLI now emits BOTH a Product Backlog sample and a Kids Research sample for offline inspection.
+- **Enum validation smoke-tested**: invalid category + invalid age range both raise ValueError with valid options listed.
+
+### Commit
+| Hash | Purpose |
+|---|---|
+| `f549242` | feat(hal): S-R01-INFRA — Kids Research DB schema + create_research_row helper |
+
+### Skipped / deferred (intentional)
+- **Actual research content**. 12+ skills × proper citations + bilingual stubs = 12-24 hours of heavy research work. Belongs in a dedicated session where research mode can be engaged without the credit/context pressure of a max-mode tail.
+- **Live smoke test** — holding the first real `create_research_row` call for S-R01-PHASE-1's next session.
+
+### Confidence
+90%. Dry-run bodies match the live schema (verified by direct comparison). Validation tests pass. 10% reserved for: the first live call may reveal a Notion API quirk around how the page-level data_source_id parent shape interacts with hidden schema constraints; any failure gets logged by `_request()` with full response snippet.
+
+### What this unlocks
+- S-R01-PHASE-1's remaining work is now **"write content for skill N" × 12**, with zero schema / plumbing per iteration. Each new skill becomes: research → call `create_research_row(client, skill=..., category=..., ...)`.
+
+### Next recommended action for Aaron
+- Dedicated session for S-R01-PHASE-1 content: block ~2 hours, prioritise research-mode citations, target 3-5 new rows per session (not 12 in one go).
+- When you return to max-mode, 3 Notion-resident sprints still exist: S-R01-PHASE-1 (P0 In Progress, unblocked for content), S-R01-PHASE-3 (P0 Backlog, Opus 4.6 only), S-026 (P1 Blocked, data export).
 
 ---
 
@@ -2502,5 +2549,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 12:04 EST (Toronto)
+Last updated: 2026-04-21 at 12:49 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

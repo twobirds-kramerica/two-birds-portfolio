@@ -1,11 +1,30 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x20: skill-graph index doc — 351-line onboarding artefact for the 20-row Research DB)
+**Last Session:** April 21, 2026 (max-mode x21: S-R01-PHASE-1f-CYBERTIP-PATCH — Canadian reporting channel paired into sextortion row)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🍁 S-R01-PHASE-1f-CYBERTIP-PATCH — Canadian reporting paired in sextortion row — SHIPPED ✅
+
+**Date:** 2026-04-21 ~18:21 EST · Max mode sprint #21
+**Repo:** portfolio master @ `9e4be54`
+
+Closes the P1 Canadian-specific follow-up flagged in my own 1f audit. Sextortion row originally cited only US-hosted channels (Take It Down + US CyberTipline + tips.fbi.gov). This patch appends Canadian parallels to `en-CA-Content` (+669 chars) and `Research-Source` (+858 chars):
+
+- **Cybertip.ca** — Canadian Centre for Child Protection's national tipline since 2002
+- 2025 scale: 11,000+ sextortion incidents, 5,800+ intimate images, 19,700+ luring/grooming reports; 2,200+/month throughput; ~6 sextortion reports/day average
+- **Project Arachnid** (C3P's automated web crawler) + Government of Canada March 2025 investment announcement
+
+Uses `notion-client.append_to_rich_text` (existing helper before today; first use on shipped content). Post-patch row state verified: en-CA-Content = 3 blocks / 3828 chars, Research-Source = 2 blocks / 2240 chars.
+
+**TODO closures**: P1 "Add Cybertip.ca reference" closed; skill-graph-index §6 updated.
+
+**Implicit helper TODO filed**: `append_to_rich_text` single-block assumption fine for short appends but should adopt the `_rich_text` chunking logic for future long appends. Small future sprint.
 
 ---
 
@@ -2907,5 +2926,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 18:01 EST (Toronto)
+Last updated: 2026-04-21 at 18:21 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

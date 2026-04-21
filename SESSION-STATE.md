@@ -1,11 +1,67 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x8: add S-R01-INFRA — Kids Research DB schema captured + create_research_row helper)
+**Last Session:** April 21, 2026 (max-mode x9: S-R01-PHASE-1c — 2 new Kids Research rows live, DB 8→10)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1c — First real research rows via the new helper — SHIPPED ✅
+
+**Date:** 2026-04-21 ~14:05 EST (Toronto) · Max mode (content sprint after 2 meta-tooling sprints)
+**Notion item:** S-R01-PHASE-1 stays In Progress (still 10/20+). This is partial-delivery Phase 1c.
+**Repo:** `C:\twobirds\two-birds-portfolio` (master @ `152c2a5`, pushed)
+
+### Why this sprint
+Nineth max-mode sprint today. With S-NOTION-CREATE-PAGE (`a3c8f53`) + S-R01-INFRA (`f549242`) in place, the unit cost of a new research row dropped to "research + one function call." This sprint validates the full pipeline end-to-end by shipping 2 actual rows with verified citations, rather than waiting for a dedicated research session to discover the helpers don't work.
+
+### What shipped
+Two new rows in the DCC Kids Version — Research Database (data source `e184382b-b59a-41e7-9152-d90fbee1abe6`):
+
+1. **"True things and story things"** (4-6 × Critical-Thinking, P0-Core)
+   Notion: `349a09cf-876a-8118-8e9a-f1228d597509`
+   Foundation skill for distinguishing real claims from made-up claims. Caregiver-led, off-screen, 6-card sorting game where I'M NOT SURE is the gamified win. Grounded in Piaget preoperational stage (ages 2-7, intuitive thought sub-stage 4-7) + Sharon & Woolley fantasy/reality distinction research (PMC3689871) + Common Sense Media age-rating pages.
+
+2. **"Telling a grown-up when something online feels weird"** (7-9 × Emotional-Safety, P0-Core)
+   Notion: `349a09cf-876a-81c0-9d73-c5997f72a204`
+   Weekly "weird list" ritual — caregiver shares first, zero evaluation, praise for telling even when it turns out to be nothing. Uses a shared "weird jar" gamification so telling is a family activity, not a confession. Grounded in Piaget concrete-operational stage (7-11) + MediaSmarts Media Safety Tips for Middle Childhood + Dan Siegel "name it to tame it" + MediaSmarts 2022 survey stat (1 in 5 kids 6-9 sent something uncomfortable online; 71% tell a parent — 3 in 10 gap this skill targets).
+
+Each row populated across all 22 columns. fr-QC stubbed per Phase 1c bilingual deferral. Both Status=Research awaiting Aaron review before Spec.
+
+### End-to-end pipeline validation
+- `create_research_row(client, **kwargs)` executed twice against live Notion API — no errors.
+- Property shapes accepted (title, 2 selects × row, 2 multi-selects × row, 12 rich_texts × row).
+- Enum validation caught nothing wrong (inputs were valid).
+- Both rows visible in DB; row count verified at 10.
+
+### Citations — all verified via WebSearch, none fabricated
+- Common Sense Media — How We Rate and Review by Age: 2-4, 5-7 ([commonsensemedia.org](https://www.commonsensemedia.org/about-us/our-mission/about-our-ratings/2-4))
+- Sharon, T. & Woolley, J.D. — Revisiting Fantasy-Reality Distinction ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3689871/))
+- MediaSmarts — Media Safety Tips: Middle Childhood (6-9 years) ([mediasmarts.ca](https://mediasmarts.ca/teacher-resources/media-safety-tips-middle-childhood-6-9-years-old))
+- MediaSmarts — Communicating Safely Online Tip Sheet
+- MediaSmarts — A Guide for Trusted Adults + Sexual Exploitation Safety Tips
+- Piaget cognitive development stage framework (textbook-standard)
+
+### Commit
+| Hash | Purpose |
+|---|---|
+| `152c2a5` | feat(dcc-kids): S-R01-PHASE-1c — 2 new research rows (DB 8 → 10) |
+
+### Skipped / deferred (intentional)
+- **Remaining ~10 rows** to hit the 20+ target. Each is ~45 min of focused research+write. Dedicated session with research-mode discipline is the right frame.
+- **fr-QC translations** — deferred to Phase 1c bilingual pass.
+- **AR components** — deliberately "None" for both rows; AR would dilute the core caregiver-child verbal nature of both skills.
+
+### Confidence
+92%. Full live-API round-trip verified for both rows. Row content quality matches the existing template depth (verified by reading 'Real, pretend, and maybe-made-up pictures' row as a reference). Citations all verified; no fabrication. 8% reserved for: the Piaget framework citation is a paraphrase of textbook content, not a direct URL; if Aaron wants primary-source anchoring he may want to add a specific Piaget publication cite.
+
+### Next recommended action for Aaron
+- Open the 2 new Notion rows and review the content depth / voice. If tone is off, adjust the template and I can regenerate.
+- If the quality bar is met, advance rows from Status=Research to Status=Spec so Phase 2 (build) can ingest them.
+- Remaining DB gap: ~10 more skills. Highest-value next picks (based on coverage): 4-6 × Creative-Making; 7-9 × Creative-Making; 13-15 × Tech-Safety.
 
 ---
 
@@ -2549,5 +2605,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 12:49 EST (Toronto)
+Last updated: 2026-04-21 at 14:05 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

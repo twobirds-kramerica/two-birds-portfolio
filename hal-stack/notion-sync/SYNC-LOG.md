@@ -51,3 +51,4 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-21 15:23 Eastern Daylight Time — create_research_row: 'Using a password manager so every account gets its own password' (Tech-Safety / ['10-12']) -> 349a09cf-876a-811d-b763-c94c8fdef76e
 - 2026-04-21 15:38 Eastern Daylight Time — create_research_row: 'Reading around something before I believe it (lateral reading + AI check)' (Critical-Thinking / ['13-15']) -> 349a09cf-876a-8163-8d69-ebbca1da0b2a
 - 2026-04-21 15:51 Eastern Daylight Time — create_research_row: 'When I remix something, I name who made the original' (Creative-Making / ['10-12']) -> 349a09cf-876a-8124-a6ff-cdda22772fd9
+- 2026-04-21 16:32 Eastern Daylight Time — create_research_row: 'Stepping out of a group pile-on (without becoming the next target)' (Emotional-Safety / ['10-12']) -> 349a09cf-876a-8122-9afb-c334a458b2eb

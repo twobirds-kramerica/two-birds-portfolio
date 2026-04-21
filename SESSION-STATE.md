@@ -1,11 +1,63 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 19, 2026 (S-024 Notion-GitHub bidirectional sync — all 5 phases)
+**Last Session:** April 21, 2026 (S-030 DCC accessibility components — Option B bundle, all 4 shipped)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
-Last fetch: S-025 (DCC senior-friendly UI benchmark research)
+Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-030 — DCC new accessibility components (Option B bundle) — SHIPPED ✅
+
+**Date:** 2026-04-21 ~00:33 EST (Toronto) · Max mode autonomous run
+**Notion item:** `348a09cf-876a-8156-b212-ef6e9e84efb8` — marked Done via complete-sprint.py
+**Repo:** `C:\twobirds\digital-confidence` (master @ `bc06753`, pushed)
+**Source spec:** `hal-stack/research/dcc-accessibility-components-proposal.md` (all 4 candidates)
+
+### Phases run
+- **Phase 0** — Read max-mode.md + pending-capture.md (empty) + proposal spec.
+- **Phase 1** — Built 4 component JS files + added CSS block to `components.css` — commit `dd3c220`:
+  - `js/read-aloud.js` — page-level Read-Aloud button, reuses speech-config.js voice engine via `VOICE_CONFIG`; toggles Listen/Stop; detached virtual holder so highlight rewrites don't touch live DOM.
+  - `js/keyboard-helper.js` — `?` opens focus-trapped modal; Esc closes; Tab wraps; lists 10 shortcuts.
+  - `js/module-progress.js` — auto-generates dot strip from `<h2>` headings; IntersectionObserver fills dots at 55% from top; `localStorage` keyed by page slug; sr-only live-region counter.
+  - `js/check-in.js` — triggers at 8-min idle OR 50% scroll (first wins); 3 actions (Keep going / Come back later / Don't show again); resumes scroll on return.
+  - `css/components.css` — new S-030 section, all tokens, WCAG AA, honours `prefers-reduced-motion` via existing duration tokens.
+- **Phase 2** — Wrote `_build/inject-s030-scripts.py` (idempotent) and injected all 4 scripts into 29 module pages; relocated pre-existing `read-aloud.js` below `speech-config.js` where it had been loading too early on 14 modules (broke VOICE_CONFIG reuse). Also added styleguide Section 14 with live demos and TOC entry — commit `bc06753`.
+- **Phase 3** — Notion status → Done (Aaron's standing workflow rule); git push to `twobirds-kramerica/digital-confidence`; SESSION-STATE update (this entry).
+
+### Artefacts shipped
+| File | Kind | Purpose |
+|---|---|---|
+| `js/read-aloud.js` | New JS | Page-level TTS button |
+| `js/keyboard-helper.js` | New JS | `?` shortcut modal |
+| `js/module-progress.js` | New JS | Per-section progress dots |
+| `js/check-in.js` | New JS | Idle/midpoint check-in banner |
+| `css/components.css` | Modified | +~250 lines of tokens-only CSS |
+| 29× `module-*.html` | Modified | Script tags injected, idempotent |
+| `styleguide/index.html` | Modified | Section 14 with live demos |
+| `_build/inject-s030-scripts.py` | New tool | Re-runnable injector |
+
+### Commits
+| Hash | Purpose |
+|---|---|
+| `dd3c220` | feat(dcc): S-030 Phase 1 — Read-Aloud + Keyboard Helper + Progress Dots + Check-In components |
+| `bc06753` | feat(dcc): S-030 Phase 2 — inject components into 29 module pages + styleguide demo |
+
+### Skipped / deferred (intentional)
+- **Per-language voice variant toggle** (e.g., force EN-CA vs FR-CA voice) — existing `speech-config.js` auto-picks a Canadian voice if present, falls back GB→US; adding a user-facing picker is a separate UX call.
+- **Telemetry on component usage** (`analytics-events.js` instrumentation) — ship feature first, instrument once there's real traffic.
+- **FR translation of UI copy** ("Read this page aloud", banner text, shortcut labels) — noted in Aaron's Canadian English rule, but the existing localize.js pipeline handles this; file a follow-up if missing-translation gaps appear.
+
+### Confidence
+90%. High on: all 4 components isolate cleanly (no cross-dependencies except read-aloud→speech-config), tokens-only CSS, idempotent injector, JS syntax-checked via `node --check`. 10% reserved for: first real user-facing hover with seniors may reveal the check-in banner timing needs tuning (8-min idle may fire too often on short modules; 50% scroll may fire too early on modules with long tails).
+
+### Next recommended action for Aaron
+- Visit `/styleguide/#s030` locally or on twobirds-kramerica.github.io to demo all 4 components. Press `?` anywhere to preview the shortcut modal.
+- Open any module page (e.g., `/module-1.html`) to see all 4 components active in context.
+- If the check-in banner is too aggressive, the single tuning knob is `IDLE_MS` (top of `js/check-in.js`). Swap 8 × 60 × 1000 → 12 × 60 × 1000 for 12-minute idle.
+- Next sprint candidates still Ready after S-030: **S-KEVIN** (Kevin's Apartment audit) and **S-CLARITY** (Clarity product audit). Both primed for max-mode.
 
 ---
 
@@ -2171,5 +2223,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 00:02 EST (Toronto)
+Last updated: 2026-04-21 at 00:33 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

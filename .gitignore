@@ -14,3 +14,6 @@ __pycache__/
 
 # Local artifact scratch (e.g. axe-core report downloads for inspection)
 .axe-tmp/
+
+# Claude Code local-only settings (per-machine permission toggles)
+.claude/settings.local.json

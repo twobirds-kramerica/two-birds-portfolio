@@ -1,11 +1,28 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x14: S-R01-PHASE-1h — 13-15 lateral-reading + AI check; DB 15→16)
+**Last Session:** April 21, 2026 (max-mode x15: S-R01-PHASE-1i — 10-12 credit-when-remixing; DB 16→17)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1i — 10-12 credit-when-remixing — SHIPPED ✅
+
+**Date:** 2026-04-21 ~15:51 EST · Max mode sprint #15
+**Repo:** portfolio master @ `31ec2a0`
+
+**Row**: [When I remix something, I name who made the original](https://www.notion.so/When-I-remix-something-I-name-who-made-the-original-349a09cf876a8124a6ffcdda22772fd9) — 10-12 × Creative-Making, P1-Important
+
+**Content**: Lifetime creator-citizenship habit for the age when kids actively remix (fan art, meme edits, Roblox/Minecraft mods, TikTok remixes, fanfic). Every published remix names its sources in caption/description/credits; complementary side introduces Creative Commons as how creators positively say "yes, remix me". Framing explicitly positive — avoids fear-framing that kills the creator impulse.
+
+**Citations** (Creative Commons + academic + educator resources): Common Sense Education Copyright/CC/Fair Use, Creative Commons official documentation, Copyright & Creativity Elementary curriculum K-6, Lessig *Remix* (2008), Edublogger + OER Commons.
+
+**DB status**: 17 rows. Grid 20/20. 3 more to the 20+ target.
+
+**Skill graph**: connects to the 4-6 "Real, pretend, maybe-made-up pictures" row (foundational attribution-of-origin concept), the 10-12 Critical-Thinking ads row (reputational framing), and the 13-15 Creative-Making AI-story-helper row (remix continues at higher ages).
 
 ---
 
@@ -2767,5 +2784,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 15:38 EST (Toronto)
+Last updated: 2026-04-21 at 15:51 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

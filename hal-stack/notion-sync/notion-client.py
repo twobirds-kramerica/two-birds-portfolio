@@ -148,6 +148,66 @@ class NotionClient:
             page_id, {property_name: {"rich_text": blocks}}
         )
 
+    def create_page(
+        self,
+        data_source_id: str,
+        properties: dict,
+        children: list | None = None,
+    ) -> dict:
+        """Create a new page (row) in a data source.
+
+        Args:
+            data_source_id: the Notion data source UUID.
+            properties: dict of property name -> Notion property value shape.
+                Example for the Product Backlog:
+                    {
+                        "Item":     {"title":     [{"text": {"content": "My sprint"}}]},
+                        "Status":   {"select":    {"name": "Ready"}},
+                        "Priority": {"select":    {"name": "P2"}},
+                        "Owner":    {"select":    {"name": "Claude Code"}},
+                        "Type":     {"select":    {"name": "Sprint"}},
+                        "Notes":    {"rich_text": [{"text": {"content": "..."}}]},
+                    }
+            children: optional list of Notion block objects for the page body.
+
+        Returns the created page object (including `id` and `url`).
+
+        Raises NotionError on network or API failures.
+        """
+        body: dict[str, Any] = {
+            "parent": {
+                "type": "data_source_id",
+                "data_source_id": data_source_id,
+            },
+            "properties": properties,
+        }
+        if children:
+            body["children"] = children
+        return self._request("POST", "pages", body)
+
+    def build_page_body(
+        self,
+        data_source_id: str,
+        properties: dict,
+        children: list | None = None,
+    ) -> dict:
+        """Return the exact request body `create_page` would POST.
+
+        Useful for dry-run / offline verification: callers can inspect the
+        body before sending, log it into SYNC-LOG, or validate against a
+        fixture. Never hits the network.
+        """
+        body: dict[str, Any] = {
+            "parent": {
+                "type": "data_source_id",
+                "data_source_id": data_source_id,
+            },
+            "properties": properties,
+        }
+        if children:
+            body["children"] = children
+        return body
+
 
 # --- Property extractors for Product Backlog rows --------------------------
 
@@ -203,6 +263,65 @@ def list_claude_code_sprints(
     return [normalize_page(p) for p in pages]
 
 
+# --- High-level: create a Product Backlog row ------------------------------
+
+def build_backlog_properties(
+    item: str,
+    priority: str = "P3",
+    status: str = "Backlog",
+    owner: str = "Claude Code",
+    type_: str = "Sprint",
+    product: str | None = None,
+    notes: str | None = None,
+) -> dict:
+    """Construct a Notion `properties` dict for a Product Backlog row.
+
+    Saves callers from having to remember the exact title/select/rich_text
+    shape for each property. Unknown/empty values are omitted so the row
+    uses the database's default for that property.
+    """
+    properties: dict[str, Any] = {
+        "Item": {"title": [{"text": {"content": item}}]},
+        "Status": {"select": {"name": status}},
+        "Priority": {"select": {"name": priority}},
+        "Owner": {"select": {"name": owner}},
+        "Type": {"select": {"name": type_}},
+    }
+    if product:
+        properties["Product"] = {"select": {"name": product}}
+    if notes:
+        properties["Notes"] = {"rich_text": [{"text": {"content": notes}}]}
+    return properties
+
+
+def create_backlog_item(
+    client: NotionClient,
+    item: str,
+    priority: str = "P3",
+    status: str = "Backlog",
+    owner: str = "Claude Code",
+    type_: str = "Sprint",
+    product: str | None = None,
+    notes: str | None = None,
+) -> dict:
+    """Create a new row in the Product Backlog data source.
+
+    Returns the created page object. Logs success to SYNC-LOG.md.
+    """
+    cfg = client.config
+    data_source_id = cfg["product_backlog_data_source"]
+    properties = build_backlog_properties(
+        item=item, priority=priority, status=status, owner=owner,
+        type_=type_, product=product, notes=notes,
+    )
+    page = client.create_page(data_source_id, properties)
+    log_sync_event(
+        f"create_backlog_item: '{item}' "
+        f"({priority} {type_} / {status} / {owner}) -> {page.get('id', '?')}"
+    )
+    return page
+
+
 # --- Self-test -------------------------------------------------------------
 
 def _self_test() -> int:
@@ -232,8 +351,50 @@ def _self_test() -> int:
     return 0
 
 
+def _dry_run_create() -> int:
+    """Offline verification: construct the create_page request body for a
+    sample Product Backlog row and print it as JSON. Does NOT hit the API.
+    Used to verify the create_page / build_backlog_properties helpers wire
+    up cleanly before any live call."""
+    try:
+        cfg = load_config()
+    except Exception as e:
+        print(f"FAIL: could not load config.json: {e}")
+        return 2
+
+    ds_id = cfg.get("product_backlog_data_source", "<missing>")
+    properties = build_backlog_properties(
+        item="SMOKE: notion-client.py create_page dry-run",
+        priority="P3",
+        status="Backlog",
+        owner="Claude Code",
+        type_="Sprint",
+        product="HAL Stack",
+        notes="Generated by `notion-client.py --dry-run-create`. Not posted.",
+    )
+    # Use build_page_body so we don't need NOTION_API_KEY for an offline check
+    try:
+        client = NotionClient(config=cfg)
+    except RuntimeError:
+        # No API key: build the body without instantiating a network client
+        body = {
+            "parent": {"type": "data_source_id", "data_source_id": ds_id},
+            "properties": properties,
+        }
+    else:
+        body = client.build_page_body(ds_id, properties)
+
+    print(json.dumps(body, indent=2, ensure_ascii=False))
+    return 0
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--test":
         sys.exit(_self_test())
-    print("Usage: python notion-client.py --test", file=sys.stderr)
+    if len(sys.argv) > 1 and sys.argv[1] == "--dry-run-create":
+        sys.exit(_dry_run_create())
+    print(
+        "Usage: python notion-client.py [--test | --dry-run-create]",
+        file=sys.stderr,
+    )
     sys.exit(64)

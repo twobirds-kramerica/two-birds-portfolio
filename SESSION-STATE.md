@@ -9,6 +9,62 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Kids DB Phase 1b micro-pilot — age-4-6 gap closed ✅ (8 rows total)
+
+**Date:** 2026-04-20 ~21:08 EST (Toronto)
+**Trigger:** 7th consecutive "next sprint" call with empty Ready queue. My prior "last narrowest thing" commitment was spent on the accessibility-components proposal doc; this 7th call got the Phase 1b micro-pilot instead.
+**Notion item:** `S-R01-PHASE-1: Gather sources + populate research database` (P0, In Progress). Notes field updated with progress note pointing at the 3 new rows.
+
+### What shipped
+3 new rows in the DCC Kids Research Database (data source `e184382b-b59a-41e7-9152-d90fbee1abe6`):
+
+| # | Category | Skill | Age |
+|---|----------|-------|-----|
+| 6 | Emotional-Safety | **Who is my safe grown-up?** | 4-6 |
+| 7 | Tech-Safety | **Secret stuff and share stuff** | 4-6 |
+| 8 | Learning | **Real, pretend, and maybe-made-up pictures** | 4-6 |
+
+Each fully populated across all 22 schema columns with real research citations — NCMEC deprecation of stranger-danger, Illinois Early Learning Project, Johns Hopkins Medicine, Common Sense Media, MediaSmarts, Britannica Education, NC State (2025 AI-in-children's-books study), Piaget preoperational-stage framework, Bowlby attachment theory, Erikson initiative-vs-guilt stage.
+
+### Why these three skills specifically
+The Phase 1a pilot covered ages 7-15 across 5 categories. **Age 4-6 was entirely missing.** These 3 skills anchor the pre-literacy foundation for ALL later skills:
+- "Safe grown-up" → foundation for luring-awareness skill later (age 10-15).
+- "Secret / share" → foundation for passwords + AI-privacy skills later.
+- "Real / pretend / maybe-made-up" → foundation for AI-literacy, deepfake detection, ad literacy.
+
+Not random picks — each 4-6 skill is the cognitive precursor to an existing 7-15 skill in the DB.
+
+### Rolling DB summary
+| Category | Rows | Age coverage |
+|----------|------|--------------|
+| Emotional-Safety | 2 | 4-6, 10-15 |
+| Tech-Safety | 2 | 4-6, 7-12 |
+| Learning | 2 | 4-6, 7-15 |
+| Critical-Thinking | 1 | 7-15 |
+| Creative-Making | 1 | 10-15 |
+| **Total** | **8** | **4-15** |
+
+Gaps remaining to reach "20+" target:
+- No Flexible-Range skills yet
+- Creative-Making under-represented (1 row)
+- Critical-Thinking under-represented (1 row)
+- No Review / Spec / Ready-to-Build status rows yet (all 8 in Research)
+- Plus your review pass on the whole set
+
+### Commits
+None. This sprint was Notion-database writes only (same pattern as Phase 1a). Temp script executed + deleted.
+
+### Confidence
+80%. High on the 3 rows posted (real research, age-appropriate framings, all 22 columns populated, 0 fabricated citations). Lower on whether you want the remaining ~12 skills in this same depth or less/more — waiting on the review pass.
+
+### Next recommended action
+**Open the Notion DB and eyeball one row per age bracket** (4-6, 7-9, 10-12, 13-15). ~10 min. Then either:
+- Approve the pattern → I continue Phase 1b+ to reach 20+
+- Flag what to change → I revise ≤8 existing rows before adding more
+- Pick a different priority → flip a different item to Ready in Notion
+
+---
+
 ## Accessibility-components proposal doc ✅ (governance, not code)
 
 **Date:** 2026-04-20 ~20:32 EST (Toronto)
@@ -1976,5 +2032,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 20:32 EST (Toronto)
+Last updated: 2026-04-20 at 21:08 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

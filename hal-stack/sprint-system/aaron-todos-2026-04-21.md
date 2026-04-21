@@ -56,13 +56,10 @@ when he switches to review mode. No inline pauses during dev.
 
 ---
 
-## P1 — Notion backlog hygiene
+## P1 — Notion backlog hygiene ✅ CLOSED
 
-- [ ] **File `S-DCC-VIS-STYLEGUIDE-STABLE` in Notion** (5 min)
-  Currently only named in commit history. Build styleguide-specific visual regression with viewport clip + region masking. LOE: 1-2 h.
-
-- [ ] **File `S-KEVIN-CSP-READY` in Notion** (5 min)
-  Extract inline `<script>` / `<style>` from `kevins-apartment-search/index.html` into external files; replace 11 remaining inline onclick handlers. LOE: 1-2 h. Low value today; valuable the moment Kevin's repo migrates to any header-capable host.
+- [x] **File `S-DCC-VIS-STYLEGUIDE-STABLE` in Notion** — done 2026-04-21 via S-R01-PHASE-RETRO, Notion `349a09cf-876a-817a-8cbf-d292b8544e28`
+- [x] **File `S-KEVIN-CSP-READY` in Notion** — done 2026-04-21 via S-R01-PHASE-RETRO, Notion `349a09cf-876a-8183-ac2f-e4fcc9931db4`
 
 ---
 
@@ -114,10 +111,11 @@ when he switches to review mode. No inline pauses during dev.
 
 ## P3 — Long-horizon items that came up
 
-- [ ] **Notion: file `S-R01-INFRA`, `S-NOTION-CREATE-PAGE`, `S-R01-PHASE-1c/1d/1e/1f` as retro-backlog entries** (20 min)
-  None of the meta-tooling or content-batch sprints shipped today have formal Notion rows. They were promoted under max-mode's "last resort" clause. Worth creating Done rows for the paper trail if you want clean Notion history.
+- [x] **Notion: retro-file today's sprints as Done/Backlog entries** ✅ done 2026-04-21 via S-R01-PHASE-RETRO (commit deabcae). 14 Done entries + 2 Backlog follow-ups filed via create_backlog_item helper. Zero failures on 16 consecutive API calls. Entries include: S-KEVIN-HYGIENE, S-CLARITY-PORTABILITY, S-NOTION-CREATE-PAGE, S-R01-INFRA, S-R01-PHASE-1c through 1l, plus S-DCC-VIS-STYLEGUIDE-STABLE and S-KEVIN-CSP-READY as Backlog.
 
-- [ ] **S-R01-PHASE-1 remaining: 6 more rows to hit 20+ target** (6 × 45 min)
+- [x] **S-R01-PHASE-1 remaining: 6 more rows to hit 20+ target** ✅ done 2026-04-21 — DB hit 20 rows at S-R01-PHASE-1l (commit 7dca6d2). Coverage grid 20/20; 8 cells have 2nd-row depth; three ladders complete (Tech-Safety, Emotional-Safety, AI-literacy) spanning all 4 age brackets.
+
+- [ ] **S-R01-PHASE-1 remaining: 6 more rows beyond 20+ target (stretch — optional)** (6 × 45 min)
   Grid is complete; next rows deepen cells. High-value candidates: 2nd 10-12 Tech-Safety (password manager), 2nd 13-15 Critical-Thinking (AI/deepfake literacy), 2nd 10-12 Creative-Making (fair-use / credit when remixing). Can be done autonomously in future sessions.
 
 - [ ] **Opus 4.6-specific sprints waiting on model**: S-R01-PHASE-3 — age-bracket psychology refinement. Tagged for Opus 4.6 per original sprint notes.

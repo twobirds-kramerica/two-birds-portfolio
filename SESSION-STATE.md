@@ -1,11 +1,37 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x21: S-R01-PHASE-1f-CYBERTIP-PATCH — Canadian reporting channel paired into sextortion row)
+**Last Session:** April 21, 2026 (max-mode x22: S-AARON-HYGIENE — personal brand site audit + self-host Inter + axe CI)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 👤 S-AARON-HYGIENE — Personal brand site HAL Stack rigor — SHIPPED ✅
+
+**Date:** 2026-04-21 ~19:29 EST · Max mode sprint #22
+**Repo:** `aaron-patzalek` master @ `8908c85`
+
+Parallel rigor pass to S-CLARITY and S-KEVIN earlier today, applied to Aaron's personal brand site. Shipped:
+
+- **Self-host Inter** (SIL OFL 1.1) copied from Kevin's `fonts/inter/`; `<link rel="preload">` added for FOUC-free first paint
+- **CSP tightened**: removed `fonts.googleapis.com` + `fonts.gstatic.com` sources; now `default-src 'self'` + `formspree.io` only
+- **Deleted 2 orphan files**: `css/style.css` (619 lines, unreferenced dead code from pre-`main.css` era) and `js/main.js` (20 lines, targeted `.main-nav` which doesn't exist — real mobile-nav is inline at `index.html:452`)
+- **New `.github/workflows/axe-core.yml`** — every-push a11y CI
+- **AUDIT.md** (9 sections) with top-5 next actions (all human-input; filed to todos)
+
+**Sovereignty**: L1 → L3. Only remaining external dep is Formspree (contact form backend) which is reasonable to keep.
+
+**Top-5 follow-ups from audit** (all need human input or design time):
+1. Add OG card + headshot (1-2h)
+2. Link to Clarity's CA$2,500 offer from What-I'm-Building (10m)
+3. One-sentence offer above contact form (5m copy)
+4. Add one testimonial (30m once quote exists)
+5. Move inline nav JS to external file (15m, tightens CSP further)
+
+Commit `8908c85` (aaron-patzalek repo). Will be retro-filed to Notion in the next admin sweep.
 
 ---
 
@@ -2926,5 +2952,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 18:21 EST (Toronto)
+Last updated: 2026-04-21 at 19:29 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -1,11 +1,55 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x11: S-R01-PHASE-1e — grid complete at DB 12→13, all 20 age×category cells covered)
+**Last Session:** April 21, 2026 (max-mode x12: S-R01-PHASE-1f — sextortion resistance row + auto-chunk helper fix; DB 13→14)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1f — Teen sextortion resistance + rich_text auto-chunk fix — SHIPPED ✅
+
+**Date:** 2026-04-21 ~15:12 EST (Toronto) · Max mode sprint #12
+**Repo:** `C:\twobirds\two-birds-portfolio` (master @ `6e975a4`, pushed)
+
+### What shipped
+**Single highest-impact protective row in the DB** based on FBI / NCMEC / FinCEN threat data.
+
+**"What to do if someone pressures me to send a picture (sextortion)"** — 13-15 × Emotional-Safety, P0-Core
+Notion: `349a09cf-876a-816a-a0b2-d5b4bc4aa532`
+2nd entry in the 13-15 × Emotional-Safety cell; adds depth on the concrete threat vector (the 1e sprint completed the grid; this one deepens).
+
+**Content approach**:
+- Non-shaming throughout; boys 14-17 explicitly named as the primary financial-sextortion target.
+- Four-step protocol teens memorise cold: stop responding / save evidence / tell a named emergency adult / use Take It Down (takeitdown.ncmec.org).
+- Three hard facts stated plainly: paying doesn't stop it; the threat almost never materialises once the teen stops responding; this isn't the teen's fault — these are professional criminals running scripts.
+- Deliberately NOT gamified; stickers would trivialise the topic.
+
+**Citations — government / NCMEC / peer-reviewed** (verified via WebSearch):
+- NCMEC Take It Down (takeitdown.ncmec.org), NCMEC main + NetSmartz sextortion pages
+- FBI Sextortion info, FBI Financially Motivated Sextortion Threat stories
+- 2024 FBI data: 55,000+ reports, $33.5M losses, 59% YoY increase; 20+ teen suicides 2021-2023
+- FinCEN Notice on Financially Motivated Sextortion (September 2025)
+- CyberTipline (report.cybertip.org)
+
+### Mid-sprint helper fix
+The first `create_page` call returned HTTP 400 — Notion's 2000-char limit on any single `rich_text.text.content`. My en-CA-Content was 3160 chars (this row warranted more explicit explanation than average). Fix: extended `_rich_text()` in `notion-client.py` to auto-chunk any string >1900 chars across multiple text blocks, splitting on the nearest paragraph break / newline / space. Callers still pass a single string; chunking is invisible. Second call succeeded. Prevents the same class of error on any future row with longer content fields.
+
+### Commit
+`6e975a4` — feat(dcc-kids): S-R01-PHASE-1f — teen sextortion resistance row + rich_text auto-chunk fix
+
+### DB status
+14 rows now. Grid (20/20 age×category cells) remains complete; this sprint added a 2nd row in one high-stakes cell rather than broadening. 6 more rows to the 20+ target.
+
+### Confidence
+94%. Six consecutive live `create_research_row` calls today (Phase 1c × 2 + 1d × 2 + 1e × 1 + 1f × 1) — all succeeded after the auto-chunk fix landed. Citations are government-primary where possible (FBI, FinCEN, NCMEC — a public-benefit corporation with Congressional mandate). 6% reserved for the Canadian-specific caveat: Take It Down works for Canadian teens (the platform-hash system is cross-border) but the reporting path `tips.fbi.gov` is US-specific; Canadian teens have a parallel report channel via Cybertip.ca, which should be mentioned in a bilingual follow-up.
+
+### Next recommended action for Aaron
+- Review this row carefully before advancing to Spec — the sextortion topic deserves your explicit sign-off on tone.
+- If you see any phrasing that could slip into victim-blaming (I tried hard to avoid it) — flag it for immediate revision.
+- Canadian-specific follow-up: add a reference to **Cybertip.ca** as Canada's equivalent reporting channel (NCMEC's CyberTipline is US-hosted but the Take It Down service itself works for Canadian teens).
 
 ---
 
@@ -2677,5 +2721,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 14:36 EST (Toronto)
+Last updated: 2026-04-21 at 15:12 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

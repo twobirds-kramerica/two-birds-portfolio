@@ -9,6 +9,54 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Post-commit → Notion hook ✅ (1-click activation pending)
+
+**Date:** 2026-04-20 ~20:03 EST (Toronto)
+**Trigger:** Your request "after git commit → notion_update SESSION-STATE page with [list of fields]".
+**Settings scope you picked:** project-level `.claude/settings.json` (committed, shared across all 3 machines).
+**Semantic split you picked:** hook captures mechanical data only (hash/subject/files/timestamp); Claude writes the "Next Action: [blocker analysis]" field at sprint-completion time via SESSION-STATE.md.
+
+### What shipped
+**Commit `8748048`** on two-birds-portfolio/master:
+- `hal-stack/notion-sync/post-commit-hook.py` (174 lines) — Python 3 stdlib-only hook script. Reads Claude Code hook JSON from stdin, reads HEAD via git subprocess, PATCHes a bulleted-list-item block to Notion page `348a09cf-876a-815c-a9ed-cd8a4ab2767e` (SESSION-STATE (Live)).
+- `.claude/settings.json` — PostToolUse hook, matcher `Bash`, `if: "Bash(git commit*)"` (only fires on git commits), `async: true` (doesn't block Claude between commits), `timeout: 15`.
+
+### Block format on the Notion page
+Each commit appends one bulleted-list-item:
+```
+<ISO-UTC-timestamp>  <short-hash>  <commit-subject>  —  <author> on <repo>/<branch>  [file1, file2, ...]
+```
+Short hash rendered as code. Files list italic+gray.
+
+### Verified via pipe-test + backfill
+1. Pipe-test: piped a synthetic hook-stdin JSON into the script offline → exit 0 → Notion block appeared (bd8366c block on the page from earlier test).
+2. Backfill: ran the hook manually against the commit that installed it (8748048) → block 55 appeared on the page with the expected fields.
+
+### Why didn't the hook fire automatically on commit 8748048?
+Known caveat per the Claude Code settings watcher: it only watches `.claude/` directories that had a settings file at session start. The session that creates `.claude/settings.json` for the first time doesn't pick it up until the watcher is reloaded.
+
+### Your 1-time activation step
+Open the `/hooks` menu once in Claude Code (reloads the settings watcher). OR restart this Claude Code session. After that, every subsequent `git commit` in this repo auto-appends to Notion — no manual backfill needed.
+
+### Fails-soft guarantees (hook never blocks a commit)
+- Missing `NOTION_API_KEY` → exit 0.
+- Not a git repo / HEAD invalid → exit 0.
+- Python subprocess error → exit 0.
+- Notion API non-200 → exit 0, one line logged to `hal-stack/notion-sync/SYNC-LOG.md` for audit.
+- Network timeout (10s cap) → exit 0.
+
+### Cross-machine deployment
+Hook ships to ThinkPad + Pentium Silver via git. Each machine needs `NOTION_API_KEY` set as a User env var (already documented in `hal-stack/notion-sync/SETUP.md` step 3). `python` must be on PATH (also documented, step 4). No additional per-machine setup.
+
+### Next recommended action
+1. Open `/hooks` once (or restart) to activate the watcher.
+2. Make any small commit and watch Notion page 348a09cf-876a-815c-a9ed-cd8a4ab2767e for a new block — that's the acceptance test.
+3. If the hook misbehaves in real use, check `hal-stack/notion-sync/SYNC-LOG.md` for audit entries.
+
+Confidence: 92%. Script is pipe-tested, settings.json validated, real commits landed on the page via backfill. 8% reserved for: the `/hooks` reload may reveal edge cases (e.g., `python` not on PATH in a fresh session) — the fails-soft design means the worst outcome is "hook silently does nothing," never a broken commit.
+
+---
+
 ## Visual regression skeleton ✅ (baselines pending your 1-click bootstrap)
 
 **Date:** 2026-04-20 ~18:53 EST (Toronto)
@@ -1900,5 +1948,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 18:53 EST (Toronto)
+Last updated: 2026-04-20 at 20:03 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

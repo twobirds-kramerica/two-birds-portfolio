@@ -1,11 +1,35 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x22: S-AARON-HYGIENE — personal brand site audit + self-host Inter + axe CI)
+**Last Session:** April 21, 2026 (max-mode x23: S-TBI-HYGIENE — company brand site audit + skip-link + OG meta + axe CI)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🏢 S-TBI-HYGIENE — Company brand site HAL Stack rigor — SHIPPED ✅
+
+**Date:** 2026-04-21 ~19:34 EST · Max mode sprint #23
+**Repo:** `two-birds-innovation` master @ `2bb65d9`
+
+Fourth audit pattern of the day (after S-CLARITY, S-KEVIN, S-AARON-HYGIENE). Company brand site is revenue-adjacent — it drives SME prospects to the CA$2,500 AI Workflow Audit + CA$4,000/mo Fractional AI Leadership.
+
+**A11y fixes (WCAG 2.4.1 + 4.1.2)**: Skip-link + `<main>` landmark + `aria-label` on nav + `aria-expanded` sync on nav-toggle. All were missing.
+
+**SEO/social fixes**: `robots`, `canonical`, full OG meta (title / description / type / url / locale). Was critical for a revenue-adjacent site — link previews on LinkedIn / Slack / email were rendering with no framing.
+
+**CI**: New `.github/workflows/axe-core.yml`.
+
+**Sovereignty**: Already near L3/L4 — no external runtime deps on happy path (system fonts, mailto/tel only, qa-audit.js gated).
+
+**Top-5 follow-ups filed in AUDIT.md** (all human-input):
+1. Mailto → Calendly (15 min, needs Calendly URL)
+2. Add LinkedIn link to contact section (3 min)
+3. OG card design (1-2 h)
+4. First case study (1-2 h, blocked on a pilot)
+5. Extract inline `<style>` block to style.css (15 min)
 
 ---
 
@@ -2952,5 +2976,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 19:29 EST (Toronto)
+Last updated: 2026-04-21 at 19:34 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

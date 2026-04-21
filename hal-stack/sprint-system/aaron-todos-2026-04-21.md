@@ -41,11 +41,22 @@ when he switches to review mode. No inline pauses during dev.
 
 ---
 
-## P1 — Clarity monetisation (biggest revenue-adjacent leverage)
+## P1 — Consulting funnel monetisation (biggest revenue-adjacent leverage)
 
-- [ ] **Mailto → Calendly on Clarity CTA** (15 min)
+- [ ] **Mailto → Calendly on Clarity + Two Birds Innovation CTAs** (15 min each)
   Requires: your Calendly event URL (or Cal.com / TidyCal).
-  Replace `mailto:aaron.patzalek@gmail.com` on Clarity's "Book a Free 30-Minute Call" button with the Calendly link. Biggest UX/conversion win-per-minute identified in Clarity AUDIT §7.
+  (a) Clarity's "Book a Free 30-Minute Call" button (AUDIT §7).
+  (b) Two Birds Innovation contact section (AUDIT §8 item 1).
+  One URL, two sites, 30 min total. Biggest single revenue-adjacent change — mailto loses qualified leads at this demographic.
+
+- [ ] **Add LinkedIn link to Two Birds Innovation contact section** (3 min)
+  Currently missing from the consulting brand site — prospects WILL check LinkedIn before emailing; absence loses warm touches. TBI AUDIT §7.
+
+- [ ] **Add OG card images across brand sites** (design work, 1-2 h each)
+  Missing on aaron-patzalek AND two-birds-innovation. Every LinkedIn / Slack / email link preview currently renders blank. Covered in both AUDITs. Single image can serve both with minor variant.
+
+- [ ] **First case study / pilot walkthrough for Two Birds Innovation** (1-2 h, blocked on a pilot)
+  TBI AUDIT §7. Biggest conversion lift for the CA$2,500 audit offer.
 
 - [ ] **Live-site smoke test Clarity provider picker** (5 min)
   Run `https://twobirds-kramerica.github.io/clarity/` with each provider option (Anthropic / OpenAI / Gemini / Ollama) in sequence. Confirm each key flow works end-to-end. Gemini + OpenAI + Ollama paths weren't exercised live in the autonomous session.

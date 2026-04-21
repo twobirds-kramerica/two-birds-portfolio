@@ -324,8 +324,12 @@ was verified via WebSearch at composition time. URLs are public.
   Crisis*) to the Research-Source fields.
 - **fr-QC bilingual pass** — all 20 rows have fr-QC-Content stubbed
   per Phase 1c+ deferral. Full translation is a dedicated sprint.
-- **Cybertip.ca reference in the sextortion row** — pair with the
-  US-hosted Take It Down + FBI tips.fbi.gov with Canadian parallel.
+- ~~**Cybertip.ca reference in the sextortion row**~~ ✅ done 2026-04-21
+  via S-R01-PHASE-1f-CYBERTIP-PATCH. Appended Canadian parallel to
+  en-CA-Content + Research-Source via `append_to_rich_text`.
+  Cybertip.ca (Canadian Centre for Child Protection, since 2002;
+  2,200+ reports/month as of 2025) now named alongside Take It Down
+  and the US CyberTipline.
 - **Status advance Research → Spec** — human review required; 8
   rows reviewed as of 2026-04-21 would be the natural batch.
 

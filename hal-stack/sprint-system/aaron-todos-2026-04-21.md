@@ -37,8 +37,7 @@ when he switches to review mode. No inline pauses during dev.
   - `349a09cf-876a-819e...` 13-15 Learning: "AI tutor vs shortcut" (1l, **hits Phase-1 target at 20 rows**, 4-move protocol grounded in Dartmouth 2025 + Nature 2025 RCT + Khan Academy)
   If depth/voice meets your bar, batch-advance them to Status=Spec.
 
-- [ ] **Add Cybertip.ca reference to sextortion row** (5 min)
-  Canadian-specific follow-up: Take It Down works cross-border but US reporting paths (tips.fbi.gov, etc.) should be paired with Cybertip.ca for Canadian teens. Small edit to the existing row.
+- [x] **Add Cybertip.ca reference to sextortion row** ✅ done 2026-04-21 via S-R01-PHASE-1f-CYBERTIP-PATCH. Appended Canadian parallel to en-CA-Content (669 chars) + Research-Source (858 chars) via `append_to_rich_text`. Row verified: en-CA-Content now 3 blocks / 3828 chars; Research-Source 2 blocks / 2240 chars. Cybertip.ca + Canadian Centre for Child Protection + Government of Canada March 2025 investment announcement all cited.
 
 ---
 

@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -27,8 +28,11 @@ from urllib import error as urlerror
 from urllib import request as urlrequest
 
 NOTION_PAGE_ID = "348a09cf-876a-815c-a9ed-cd8a4ab2767e"
+DECISION_LOG_DS = "03198a8f-849e-41ee-ba85-b22019841ce7"  # Decision Log & Archaeology
+REPO_HTTP_BASE = "https://github.com/twobirds-kramerica/two-birds-portfolio/commit"
 NOTION_VERSION = "2025-09-03"
 TIMEOUT = 10
+DECIDE_PREFIX = re.compile(r"^decide\(([^)]*)\)\s*:\s*(.+)$", re.IGNORECASE)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 SYNC_LOG = REPO_ROOT / "hal-stack" / "notion-sync" / "SYNC-LOG.md"
@@ -159,6 +163,50 @@ def main() -> int:
 
     if http not in ("200", "201"):
         _log_failure(ts, http, short, subject)
+
+    # --- Layer 3: decision capture ------------------------------------------
+    # If the commit subject matches `decide(area): outcome text`, also append
+    # a row to the Decision Log database. Stub row — Aaron fills Where-Logged,
+    # Participants, Veto-Power via Notion UI. Status defaults to Logged.
+    m = DECIDE_PREFIX.match(subject or "")
+    if m:
+        area, outcome_text = m.group(1).strip(), m.group(2).strip()
+        decision_title = f"{area}: {outcome_text}" if area else outcome_text
+        commit_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        decision_body = {
+            "parent": {"data_source_id": DECISION_LOG_DS},
+            "properties": {
+                "Decision": {"title": [{"type": "text", "text": {"content": decision_title[:2000]}}]},
+                "Date": {"date": {"start": commit_date}},
+                "Status": {"select": {"name": "Logged"}},
+                "Context": {"rich_text": [{"type": "text", "text": {"content":
+                    f"Auto-captured by post-commit hook from commit {short} on {repo}/{branch}. "
+                    f"Commit subject used the decide(area) convention. "
+                    f"Aaron: fill Where-Logged, Participants, Veto-Power via Notion UI."}}]},
+                "Outcome": {"rich_text": [{"type": "text", "text": {"content": outcome_text[:2000]}}]},
+                "Evidence-Link": {"url": f"{REPO_HTTP_BASE}/{short}"},
+            },
+        }
+        req2 = urlrequest.Request(
+            url="https://api.notion.com/v1/pages",
+            data=json.dumps(decision_body).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Notion-Version": NOTION_VERSION,
+                "Content-Type": "application/json",
+            },
+            method="POST",
+        )
+        http2 = "000"
+        try:
+            with urlrequest.urlopen(req2, timeout=TIMEOUT) as resp:
+                http2 = str(resp.status)
+        except urlerror.HTTPError as e:
+            http2 = str(e.code)
+        except (urlerror.URLError, OSError, TimeoutError):
+            http2 = "000"
+        if http2 not in ("200", "201"):
+            _log_failure(ts, http2, short, f"decide-capture: {subject}")
 
     return 0
 

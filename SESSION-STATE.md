@@ -1,11 +1,48 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x9: S-R01-PHASE-1c — 2 new Kids Research rows live, DB 8→10)
+**Last Session:** April 21, 2026 (max-mode x10: S-R01-PHASE-1d — 2 more Kids Research rows, DB 10→12)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1d — 2 more research rows (DB 10→12) — SHIPPED ✅
+
+**Date:** 2026-04-21 ~14:17 EST (Toronto) · Max mode (second content batch)
+**Notion:** S-R01-PHASE-1 stays In Progress (12/20+). Phase 1d delivered.
+**Repo:** `C:\twobirds\two-birds-portfolio` (master @ `228d77f`, pushed)
+
+### Shipped rows
+1. **"Making my own thing first, then watching other people's"** — 4-6 × Creative-Making, P0-Core
+   Notion `349a09cf-876a-8136-8c50-df26892b81c6`
+   Weekly make-first ritual with open-ended materials + photographed "maker wall". Frames child as maker, screen as reference. Grounded in Scholastic, NAEYC, Bright Horizons early-childhood creativity research + PMC9590021 twenty-year Game Program evidence base.
+
+2. **"Turning on two-factor authentication on the accounts I care about"** — 13-15 × Tech-Safety, P0-Core
+   Notion `349a09cf-876a-8153-9a64-f3f460ed1f3a`
+   Teen-owned skill: pick 3-7 "ones I care about", authenticator app over SMS (NIST SP 800-63B deprecates SMS for high-assurance), backup codes on paper, quarterly family audit. Grounded in CISA + NIST + Common Sense Education.
+
+### Commit
+`228d77f` — feat(dcc-kids): S-R01-PHASE-1d — 2 more research rows (DB 10 → 12)
+
+### DB status
+| Age × Category | Tech-Safety | Learning | Emotional-Safety | Critical-Thinking | Creative-Making |
+|---|---|---|---|---|---|
+| 4-6 | ✓ | ✓ | ✓ | ✓ (1c) | ✓ (1d) |
+| 7-9 | ✓ | ✓ | ✓ (1c) | ✓ | — |
+| 10-12 | ✓ | ✓ | ✓ | ✓ | ✓ |
+| 13-15 | ✓ (1d) | ✓ | ✓ | ✓ | ✓ |
+
+**Remaining gap**: 7-9 × Creative-Making (only hole in the grid). Everything else past 12 is "additional rows within filled cells" to hit the 20+ target — lower priority than filling the grid.
+
+### Confidence
+92%. 4 consecutive live-API creates today (Phase 1c + 1d) all succeeded. Enum validation in `build_research_row_properties` caught nothing wrong. Citations verified via WebSearch. 8% reserved: same Piaget paraphrase caveat as before; Aaron may want primary-source anchoring.
+
+### Next recommended action for Aaron
+- Review the 4 new rows (2 from 1c, 2 from 1d). If content depth / voice work, advance Status=Research → Spec.
+- Next natural sprint: fill 7-9 × Creative-Making (last grid hole) — then start adding 2nd rows within already-filled cells for 20+ target.
 
 ---
 
@@ -2605,5 +2642,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 14:05 EST (Toronto)
+Last updated: 2026-04-21 at 14:17 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

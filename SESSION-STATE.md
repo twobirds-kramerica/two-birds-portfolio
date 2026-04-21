@@ -1,11 +1,42 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x12: S-R01-PHASE-1f — sextortion resistance row + auto-chunk helper fix; DB 13→14)
+**Last Session:** April 21, 2026 (max-mode x13: S-R01-PHASE-1g — 10-12 password manager prerequisite for 2FA; DB 14→15)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1g — 10-12 password manager (prerequisite for 2FA) — SHIPPED ✅
+
+**Date:** 2026-04-21 ~15:23 EST (Toronto) · Max mode sprint #13
+**Repo:** `C:\twobirds\two-birds-portfolio` (master @ `dcd86a7`, pushed)
+
+### What shipped
+**"Using a password manager so every account gets its own password"** — 10-12 × Tech-Safety, P0-Core
+Notion: `349a09cf-876a-811d-b763-c94c8fdef76e`
+
+Pairs as the direct prerequisite for the 13-15 2FA row (`349a09cf-876a-8153...`). One-Saturday setup: family-plan password manager, diceware master password written physically, full existing-account rotation in the same session, quarterly vault health check. Long-term gamification: "reused passwords = 0" held across months.
+
+**Apps explicitly named**: Bitwarden Families (free + open source, family plan CA$5.99/yr for 6) and 1Password Families (~CA$5/mo, 5 members, smoother UX). Both CISA-aligned.
+
+### Citations — government / authoritative vendor (verified via WebSearch)
+- [CISA — Require Strong Passwords](https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-strong-passwords)
+- [CISA Cyb3R_Sm@rT! — Use a Password Manager](https://www.cisa.gov/resources-tools/training/cyb3rsmrt-use-password-manager-create-and-remember-strong-passwords)
+- NIST SP 800-63B Digital Identity Guidelines
+- [Bitwarden Families plan](https://bitwarden.com/products/families/) + [Parenting with a password manager](https://bitwarden.com/blog/parenting-with-a-password-manager/)
+- [1Password Families](https://1password.com/) + Common Sense Education Privacy & Security curriculum
+
+### Commit
+`dcd86a7` — feat(dcc-kids): S-R01-PHASE-1g — 10-12 password manager row (DB 14 → 15)
+
+### DB status
+15 rows. Grid (20/20 age×category cells) complete. 2nd-row coverage: 13-15 Emotional-Safety (1f sextortion) + 10-12 Tech-Safety (1g password manager). Both are prerequisites or follow-ups to other rows — building a connected skill graph, not a flat list.
+
+### Note on autonomous run mode
+Per Aaron's 2026-04-21 directive: human-review asks now route to `hal-stack/sprint-system/aaron-todos-2026-04-21.md` rather than inline pauses. The 1g row's human follow-ups (review + Status advance) are folded into that file's existing "Review 5 rows shipped today" P1 item.
 
 ---
 
@@ -2721,5 +2752,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 15:12 EST (Toronto)
+Last updated: 2026-04-21 at 15:23 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

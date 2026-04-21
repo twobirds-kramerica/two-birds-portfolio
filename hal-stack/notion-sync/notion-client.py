@@ -341,10 +341,41 @@ RESEARCH_AR_SHOWCASES = {"None", "Toy-to-Life", "Cup-Animation",
                          "Stuffed-Animal-Action"}
 
 
+_NOTION_RICH_TEXT_CHUNK = 1900  # Notion limit is 2000; leave headroom.
+
+
 def _rich_text(content: str | None):
+    """Wrap plain text into the Notion rich_text block array.
+
+    Notion enforces a 2000-char limit per text.content; longer strings
+    are split across multiple blocks on the nearest newline/space to
+    avoid cutting words. Callers still pass plain strings — chunking
+    happens here.
+    """
     if content is None or content == "":
         return []
-    return [{"text": {"content": content}}]
+    if len(content) <= _NOTION_RICH_TEXT_CHUNK:
+        return [{"text": {"content": content}}]
+
+    blocks: list[dict] = []
+    remaining = content
+    while remaining:
+        if len(remaining) <= _NOTION_RICH_TEXT_CHUNK:
+            blocks.append({"text": {"content": remaining}})
+            break
+        # Prefer to split on a newline; fall back to a space; last resort
+        # a hard cut at the chunk boundary.
+        window = remaining[:_NOTION_RICH_TEXT_CHUNK]
+        split_at = window.rfind("\n\n")
+        if split_at < _NOTION_RICH_TEXT_CHUNK // 2:
+            split_at = window.rfind("\n")
+        if split_at < _NOTION_RICH_TEXT_CHUNK // 2:
+            split_at = window.rfind(" ")
+        if split_at < _NOTION_RICH_TEXT_CHUNK // 2:
+            split_at = _NOTION_RICH_TEXT_CHUNK
+        blocks.append({"text": {"content": remaining[:split_at]}})
+        remaining = remaining[split_at:].lstrip("\n ")
+    return blocks
 
 
 def build_research_row_properties(

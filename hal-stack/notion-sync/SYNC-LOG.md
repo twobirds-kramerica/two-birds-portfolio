@@ -53,3 +53,4 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-21 15:51 Eastern Daylight Time — create_research_row: 'When I remix something, I name who made the original' (Creative-Making / ['10-12']) -> 349a09cf-876a-8124-a6ff-cdda22772fd9
 - 2026-04-21 16:32 Eastern Daylight Time — create_research_row: 'Stepping out of a group pile-on (without becoming the next target)' (Emotional-Safety / ['10-12']) -> 349a09cf-876a-8122-9afb-c334a458b2eb
 - 2026-04-21 17:14 Eastern Daylight Time — create_research_row: 'Pause and show a grown-up whenever an app asks for something' (Tech-Safety / ['7-9']) -> 349a09cf-876a-816f-b441-c4bfce802a0b
+- 2026-04-21 17:28 Eastern Daylight Time — create_research_row: 'Using AI as a tutor that grows me, not a shortcut that hollows me out' (Learning / ['13-15']) -> 349a09cf-876a-819e-88b5-d4ed38ef43cf

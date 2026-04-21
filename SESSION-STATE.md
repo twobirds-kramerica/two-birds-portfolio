@@ -9,6 +9,34 @@ Last fetch: S-025 (DCC senior-friendly UI benchmark research)
 
 ---
 
+## Accessibility-components proposal doc ✅ (governance, not code)
+
+**Date:** 2026-04-20 ~20:32 EST (Toronto)
+**Trigger:** 6th consecutive "next sprint" with empty Ready queue. Honoured my explicit prior commitment: "if you press 'next sprint' again, I'll ship the accessibility-components scope proposal doc."
+**Notion item this feeds:** `DCC new accessibility components sprint` (#7 in the backlog, P2 Backlog, Claude Code owner).
+
+### What shipped
+**Commit `620c94c`** — `hal-stack/research/dcc-accessibility-components-proposal.md` (97 lines). No code. Review material only.
+
+Four candidate components proposed, each with user need, implementation sketch, files touched, LOE, ship-reason, skip-reason:
+1. **Read-Aloud button** (page-level Web Speech API) — 2-3 hrs — highest user payoff
+2. **Top-of-page progress dots** (module-level IntersectionObserver) — 2-3 hrs — spatial-progress for ADHD
+3. **"Still with us?" gentle check-in** (idle-triggered banner) — 3-4 hrs — signature kitchen-table feature
+4. **Keyboard-shortcut helper** (? modal) — 2 hrs — cheapest, WCAG-plus signal
+
+Explicitly NOT proposed (to stay out of scope creep): dark-mode manual UI toggle, captions/transcripts for video, high-contrast manual toggle. All three are either OS-driven already or premature.
+
+### Your action
+Open the doc. Flip 0-N of the candidates to Ready in Notion. Or paste an entirely different component spec. Either way, I execute whatever lands Ready next.
+
+### Hook auto-fire status
+Commit `620c94c` did NOT auto-fire the post-commit-to-Notion hook (watcher still hasn't picked up the new `.claude/settings.json` — still waiting on your `/hooks` menu or session restart from the prior sprint). This is the second commit in a row that missed the auto-log. After activation, all commits going forward log automatically.
+
+### Confidence
+85%. High on the proposal content (grounded in S-025 research + Warm Hearth governance + kipi/GCF/Age UK/AARP patterns). 15% on sequencing — you may know something about Brenda-persona priorities that flips the order.
+
+---
+
 ## Post-commit → Notion hook ✅ (1-click activation pending)
 
 **Date:** 2026-04-20 ~20:03 EST (Toronto)
@@ -1948,5 +1976,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-20 at 20:03 EST (Toronto)
+Last updated: 2026-04-20 at 20:32 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

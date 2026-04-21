@@ -1,11 +1,34 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x16: S-R01-PHASE-1j — 10-12 stepping out of pile-on; DB 17→18)
+**Last Session:** April 21, 2026 (max-mode x17: S-R01-PHASE-1k — 7-9 app permissions pause-and-show; DB 18→19)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-R01-PHASE-1k — 7-9 app permissions pause-and-show — SHIPPED ✅
+
+**Date:** 2026-04-21 ~17:14 EST · Max mode sprint #17
+**Repo:** portfolio master @ `96b9364`
+
+**Row**: [Pause and show a grown-up whenever an app asks for something](https://www.notion.so/Pause-and-show-a-grown-up-whenever-an-app-asks-for-something-349a09cf876a816fb441c4bfce802a0b) — 7-9 × Tech-Safety, P0-Core
+
+**Completes the Tech-Safety ladder** across ages:
+| Age | Row | Skill |
+|---|---|---|
+| 4-6 | existing | Secret stuff / share stuff (foundational) |
+| 7-9 | **1k** | Pause and show on app permissions |
+| 10-12 | 1g | Password manager |
+| 13-15 | 1d | Two-factor authentication |
+
+**Key framing**: one rule, memorised cold. When ANY app asks for camera/mic/location/contacts/photos/notifications — pause and show before tapping. Child is not expected to know what's safe; they're expected to know permissions are a class that always gets an adult eye. Over months they internalise reasoning and exit scaffolding around 9-10. Zero punishment for tap-throughs (revoke together instead); stickers for noticing, not for saying no.
+
+**Citations** (government + industry + Canadian context): FTC COPPA Rule + FAQ + 2024 update, Common Sense Ed × 2, Apple Kids Category, Google Play Families, MediaSmarts Canada Middle Childhood 6-9, PIPEDA / Office of Privacy Commissioner of Canada.
+
+**DB status**: 19 rows. Grid 20/20. **1 more row to the 20+ target.**
 
 ---
 
@@ -2803,5 +2826,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 16:33 EST (Toronto)
+Last updated: 2026-04-21 at 17:14 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

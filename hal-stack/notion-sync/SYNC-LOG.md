@@ -40,3 +40,6 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-21 12:03 Eastern Daylight Time — self-test OK — 3 open sprint(s)
 - 2026-04-21 12:44 Eastern Daylight Time — next-sprint: no Ready sprint found
 - 2026-04-21 12:48 Eastern Daylight Time — self-test OK — 3 open sprint(s)
+- 2026-04-21 14:00 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-04-21 14:04 Eastern Daylight Time — create_research_row: 'True things and story things' (Critical-Thinking / ['4-6']) -> 349a09cf-876a-8118-8e9a-f1228d597509
+- 2026-04-21 14:04 Eastern Daylight Time — create_research_row: 'Telling a grown-up when something online feels weird' (Emotional-Safety / ['7-9']) -> 349a09cf-876a-81c0-9d73-c5997f72a204

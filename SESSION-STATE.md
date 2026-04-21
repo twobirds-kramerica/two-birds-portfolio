@@ -1,11 +1,70 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (S-030 DCC accessibility components — Option B bundle, all 4 shipped)
+**Last Session:** April 21, 2026 (S-030 DCC Option B bundle + S-CLARITY HAL Stack rigor audit — both shipped)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🛠️ S-CLARITY — Clarity product audit + HAL Stack rigor — SHIPPED ✅
+
+**Date:** 2026-04-21 ~00:43 EST (Toronto) · Max mode autonomous run
+**Notion item:** `348a09cf-876a-8193-896b-f10b6c7c44f9` — marked Done via complete-sprint.py
+**Repo:** `C:\twobirds\clarity` (master @ `2d28926`, pushed)
+**Starting state:** Repo wasn't cloned locally (it's on GitHub as `twobirds-kramerica/clarity`); cloned as Phase 0.
+
+### Phases run
+- **Phase 0** — Clone missing repo (`git clone`), set git identity, read every file end-to-end.
+- **Phase 1** — Inline quick-win fixes in commit `7b0c725`:
+  - `<fieldset>/<legend>` for checkbox group (WCAG 1.3.1)
+  - Reset API Key `<a href="#">` → `<button>` (a11y + semantics)
+  - Focus shift to results on reveal (WCAG 4.1.3)
+  - `--error` colour `#B44D4D` → `#962C2C` (WCAG 1.4.3 AA pass)
+  - Stale `claude-sonnet-4-20250514` → `claude-sonnet-4-6-20250929` (correctness)
+  - New `.github/workflows/axe-core.yml` — every-push axe-core CI adapted from DCC's workflow
+- **Phase 2** — Wrote `AUDIT.md` (234 lines) in commit `2d28926` covering 10 sections: a11y, performance, LLM portability gap, security, responsive/cross-browser, CI/CD, monetization, B2B positioning, content refresh, top-5 prioritised next actions.
+- **Phase 3** — Notion Done + push + SESSION-STATE update (this entry).
+
+### Key findings in the audit (headlines)
+
+- **Portability layer is theoretical, not wired.** `llm-provider.js` supports Anthropic / OpenAI / Gemini / Ollama, but `index.html` hardcodes the Anthropic model. Proposed Route A (delete abstraction) or Route B (wire it end-to-end — 90 min).
+- **Funnel leakage.** No email capture before diagnostic, no fallback if user doesn't click the mailto CTA. Recommended top-5 next actions: mailto→Calendly (15 min), pricing page (2-3 h), email capture (2 h), portability Route B (90 min), testimonial block (30 min).
+- **No PII persistence risk.** API key in localStorage with accurate disclosure. XSS-safe render. `.env` gitignored.
+- **Canadian English copy** is genuinely well-targeted; research-grade wording in the challenge list.
+- **Vertical specialization opportunity.** Currently targets every Canadian SME; specializing post-5-pilots recommended.
+
+### Artefacts shipped
+| File | Kind | Purpose |
+|---|---|---|
+| `index.html` | Modified | Fieldset/legend, button, focus mgmt, AA error, current Sonnet model |
+| `.github/workflows/axe-core.yml` | New | Every-push a11y CI; fails build on critical violations |
+| `AUDIT.md` | New | 10-section audit report (234 lines) — deliverable per sprint brief |
+
+### Commits
+| Hash | Purpose |
+|---|---|
+| `7b0c725` | fix(a11y+model): S-CLARITY quick-wins — fieldset/legend, AA error colour, focus on results, current model |
+| `2d28926` | docs(audit): S-CLARITY HAL Stack rigor audit report |
+
+### Skipped / deferred (intentional)
+- **Playwright E2E** — needs mock LLM endpoint; worth it once diagnostic traffic is real.
+- **Lighthouse CI** — nice-to-have; not a regression surface at current scale.
+- **Prompt caching refactor** — named as backlog; meaningful once daily traffic is double-digits.
+- **Inline-script-to-file refactor** — pairs with future CSP adoption; not urgent on GitHub Pages (can't set headers anyway).
+- **Real-device cross-browser test** — can't run from this session; flagged for `S-CLARITY-CROSS-BROWSER` follow-up.
+- **User testing with 3-5 real SME owners** — requires humans, not automation.
+
+### Confidence
+88%. A11y foundation and CI are solid; audit recommendations are opinion-ated but grounded. 12% reserved for: founder judgment can reasonably overrule monetization recs (1-5); the portability-layer Route B is my call on what "HAL-aligned" means and you may disagree.
+
+### Next recommended action for Aaron
+1. Read `AUDIT.md` section 9 — top 5 prioritised next actions. Pick 1-3 to file as Notion items.
+2. Mailto→Calendly is the 15-minute win. Do it this week.
+3. Run a diagnostic end-to-end on the live site to sanity-check the Sonnet 4.6 output quality change.
+4. Remaining max-mode queue: **S-KEVIN** (Kevin's Apartment audit + refresh) is still Ready and pre-primed.
 
 ---
 
@@ -2223,5 +2282,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 00:33 EST (Toronto)
+Last updated: 2026-04-21 at 00:43 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -123,8 +123,7 @@ when he switches to review mode. No inline pauses during dev.
 
 ## P2 — Research DB primary-source upgrades (optional polish)
 
-- [ ] **Upgrade Piaget/Erikson paraphrase citations to primary sources** (45 min total)
-  Five of the new DCC Kids Research rows use textbook-paraphrased Piaget / Erikson references. If you want primary-source anchoring, add direct publication cites (e.g., Piaget 1952, Erikson 1963) as a follow-up pass.
+- [x] **Upgrade Piaget/Erikson paraphrase citations to primary sources** ✅ done 2026-04-21 as S-PRIMARY-SOURCE (commit `fb94e66`). Standardized appendix with 5 primary publications (Piaget 1952, Erikson 1950/1963, Erikson 1968, Vygotsky 1978, Kohlberg 1969) appended to Research-Source of all 12 affected rows. Scope was larger than originally estimated (12 rows not 5) because many rows cite multiple frameworks.
 
 ---
 

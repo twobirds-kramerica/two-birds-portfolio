@@ -1,11 +1,34 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x31: append_to_rich_text auto-chunking upgrade; Tier-1 #2 done)
+**Last Session:** April 21, 2026 (max-mode x32: S-PRIMARY-SOURCE — Piaget/Erikson/Vygotsky/Kohlberg appendix on 12 rows; **Tier 1 complete**)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 📚 S-PRIMARY-SOURCE — Developmental-framework primary cites on 12 rows — SHIPPED ✅
+
+**Date:** 2026-04-21 ~22:44 EST · Max mode sprint #32 · 🏁 **Tier 1 complete**
+**Repo:** portfolio master @ `fb94e66`
+
+Closes the P2 "Upgrade Piaget/Erikson paraphrase citations to primary sources" TODO. Verified publications via WebSearch, then appended a standardized primary-source appendix to the Research-Source field of all 12 DCC Kids Research DB rows shipped today that cite developmental frameworks at textbook-paraphrase level.
+
+**Appendix (~650 chars)** lists 5 primary publications:
+- Piaget (1952) *The Origins of Intelligence in Children* — International Universities Press
+- Erikson (1950/1963) *Childhood and Society* — W. W. Norton
+- Erikson (1968) *Identity: Youth and Crisis* — W. W. Norton
+- Vygotsky (1978) *Mind in Society* — Harvard University Press
+- Kohlberg (1969) *Stage and sequence* — in Goslin (Ed.) *Handbook of Socialization Theory and Research*
+
+**12/12 rows updated** using the newly chunking-aware `append_to_rich_text` (sprint 31) — real-world end-to-end validation of that upgrade.
+
+**Tier-1 scorecard** (3/3 done):
+- ✅ #1 S-TBC-HYGIENE — 10-page command-centre audit
+- ✅ #2 `append_to_rich_text` chunking upgrade
+- ✅ #3 S-PRIMARY-SOURCE — framework primary cites
 
 ---
 
@@ -3137,5 +3160,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 22:39 EST (Toronto)
+Last updated: 2026-04-21 at 22:44 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

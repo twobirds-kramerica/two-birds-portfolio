@@ -3457,8 +3457,19 @@ Per sprint step 5: "If Vercel login required: output the login URL for Aaron to 
 ### Note on model override in sprint prompt
 Sprint specified `Model: claude-sonnet-4-20250514`. That can't be changed mid-session in Claude Code CLI — this executor is Claude Opus 4.7 (1M context). Flagged so Aaron knows the request as-written wasn't honoured; all work is otherwise complete to the OAuth gate.
 
-### Retry at 02:07 EST — still blocked
+### Retry at 02:07 EST — still blocked (at the time)
 Aaron typed "next sprint". `next-sprint.py` returned S-DCC-DEPLOY as the locked item. `vercel whoami` again returned "No existing credentials found" — fresh device code issued: **XZLP-NXWK** (previous HKPM-MRZH expired). aaron-todos-2026-04-21.md updated with the live code so Aaron has the current URL the next time he's at a browser. No other autonomous progress possible on this sprint until OAuth is complete.
+
+### 🚨 02:25 EST — S-DCC-DEPLOY RESOLVED — sprint brief was based on a false premise
+Aaron shared mobile screenshots showing he'd logged into Vercel on his phone, ended up with an empty `project-db81z` shell + an 8-day Pro trial. Asked for workarounds. Instead I sanity-checked the premise: **curl'd https://twobirds-kramerica.github.io/digital-confidence/ and got HTTP 200, 69KB, correct title** — **DCC has been live on GitHub Pages the entire time**. Has been since the 2026-03-22 AEO Foundation sprint (sitemap.xml + robots.txt + JSON-LD). Every brand site in the portfolio (aaron-patzalek, TBI, Clarity, Career Coach, quality-dashboard's own data/projects.json) already cross-links that working URL. `dcc-dyslexia.vercel.app` 404 is real but on a subdomain nobody pointed at. The entire S-DCC-DEPLOY P0 sprint was a phantom problem.
+
+**Resolution actions taken:**
+- Closed both Notion entries (`34aa09cf-876a-8165-8c5e-e2ebb8873d2b`, `34aa09cf-876a-819e-b4c3-ca6b7b8fd9eb`) as Done with append resolution note
+- Marked aaron-todos P0 as RESOLVED-FALSE-PREMISE
+- `vercel.json` kept in digital-confidence repo as harmless tech debt (GH Pages ignores it; reversible if Vercel ever wanted for server-side features)
+- Aaron's next 2-min browser action: delete the `project-db81z` empty project + cancel the Vercel Pro trial. Harmless if he skips both.
+
+**Lesson learned (added to patterns v2 worth considering):** When a sprint brief makes a strong factual claim ("X has never been Y"), spend 30 seconds verifying the claim before investing in the fix. Would have saved ~2 hours tonight. Logged as candidate pattern #19 for the next pattern-library update.
 
 ---
 

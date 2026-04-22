@@ -3509,6 +3509,33 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 ---
 
+## Session 22 — Queue-empty exit (sprints 73-75) ✅
+
+### Date/Time
+2026-04-22 03:10 EST (Toronto)
+
+### Trigger
+Aaron: "next sprint, then next after that. run autonomously all night from backlog"
+
+### Triage
+Notion `next-sprint.py` returned exit 3 (no Ready items). Local `sprint-queue.md` S-009 flagged as "HUMAN TASK — NOT A CLAUDE CODE SPRINT". Remaining Backlog items all either prereq-blocked (S-LOOP-ECOSYSTEM needs board review + rejected watcher), tagged wrong model (S-R01-PHASE-3 Opus 4.6), documented-won't-work (S-DCC-VIS-STYLEGUIDE-STABLE), or too-big-scope (EPIC Rental Search needs decomposition). Honest state: no autonomous-safe Ready work remains tonight.
+
+### What Shipped (Tier-3 paper-trail polish before stopping)
+- **Sprint 73**: Pattern library v2 → v2.1. Added pattern #19 ("verify factual premises before building") distilled from the S-DCC-DEPLOY false-premise catch.
+- **Sprint 74**: Context-system export `2026-04-22-max-mode-late-night-sprints-67-75.md` + context-index.md update + RETRO.md final overwrite reflecting the full ~75-sprint / ~95-commit / ~27-hour session.
+- **Sprint 75**: `QUEUE-EMPTY.md` written via trigger-writer — formal marker that the autonomous loop has exhausted Ready items. Deletes NEXT-SPRINT-TRIGGER.md. Any scheduled agent pointing at this repo should see QUEUE-EMPTY.md and stop rather than polling.
+
+### Deferred until Aaron approves (paid-token concern)
+Setting up `schedule` skill for recurring overnight runs (e.g. cron `next sprint` every 4 hours). Would burn Max-plan tokens at intervals for as long as the schedule is active. Not started tonight. Offered twice; waiting on explicit approval.
+
+### Session total
+~75 sprints / ~95 commits / 10 repos / ~27 hours / 0 new human-review items added tonight beyond what was already open.
+
+Last updated: 2026-04-22 at 03:10 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
 ## Note on S-LOOP-ARCHITECT (raised 02:05 EST, not built)
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".

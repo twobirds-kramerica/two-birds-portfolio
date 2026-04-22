@@ -461,7 +461,23 @@ Don't add speculative patterns — only patterns with 2+ proofs of use.
 Delete patterns that prove flaky (this file is pruned, not append-
 only).
 
-**Current count: 18 patterns** (v1 shipped 13 on 2026-04-21; v2 added 5 in the 2026-04-22 continuation: self-review regression catch, idempotent mass-fix, paper-trail redundancy, verified-already-done skip, three-batch retrofile).
+**Current count: 19 patterns** (v1 shipped 13 on 2026-04-21; v2 added 5 in the 2026-04-22 continuation; v2.1 added #19 after the S-DCC-DEPLOY false-premise catch).
+
+---
+
+## 19. Verify factual premises in sprint briefs before building
+
+**Proofs:**
+- S-DCC-DEPLOY 2026-04-22 01:30 EST — sprint brief claimed "DCC has never been live-deployed". Spent ~90 min investigating Vercel deploy paths. At 02:25 EST a 30-second `curl https://twobirds-kramerica.github.io/digital-confidence/` returned HTTP 200, 69KB, correct title. DCC had been live for a month. The P0 sprint was phantom.
+- Also previously: sprint briefs with "X is broken" that turned out to be stale assumptions about the repo (e.g., S-KEVIN-CSP-READY Notion entry being Backlog when it had actually shipped).
+
+**Mechanism:** When a sprint brief makes a strong factual claim ("X does not exist", "Y has never been Z", "Q is broken") — spend 30 seconds to verify the claim before investing in the fix. For live URLs: `curl -s -o /dev/null -w "%{http_code}\n" <url>`. For file existence: `ls <path>` or `test -f <path>`. For status: grep for the feature in the actual code.
+
+**Why it works:** Sprint briefs are written by humans (or by Claude in a prior session) based on belief, not on current observation. Beliefs drift; code moves. The cost of verifying is ~30 seconds. The cost of NOT verifying is the entire sprint, plus the downstream work building on a phantom problem.
+
+**When to use:** Always, as step 0 of any sprint whose brief contains a factual claim you haven't independently observed in the current session. Especially important for "X is missing / broken / incomplete" claims.
+
+---
 
 ---
 

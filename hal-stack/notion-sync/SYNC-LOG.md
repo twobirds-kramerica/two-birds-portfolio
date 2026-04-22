@@ -116,3 +116,5 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-22 02:32 Eastern Daylight Time — API 400 on POST data_sources/dee08637-7122-46cd-bc29-7775ce3ab8f6/query: {"object":"error","status":400,"code":"validation_error","message":"body failed validation. Fix one:\nbody.filter.or should be defined, instead was `undefined`.\nbody.filter.and should be defined, instead was `undefined`.\nbody.filter.title should be defined, instead was `undefined`.\nbody.filter.ri
 - 2026-04-22 02:35 Eastern Daylight Time — create_backlog_item: '[TODO] Aaron needs to confirm the new endpoint URL for Stripe.' (P2 Human Action / Backlog / Aaron) -> 34aa09cf-876a-81f9-898b-d17264324e3a
 - 2026-04-22 02:35 Eastern Daylight Time — create_backlog_item: '[BLOCKED] waiting for CEO sign-off before deploying to prod.' (P2 Human Action / Blocked / Aaron) -> 34aa09cf-876a-8124-8928-def19c949297
+- 2026-04-22 02:45 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-04-22 02:46 Eastern Daylight Time — next-sprint: no Ready sprint found

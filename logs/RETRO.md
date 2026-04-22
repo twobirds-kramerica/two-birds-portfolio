@@ -1,10 +1,10 @@
 # Retro
-Date: April 21, 2026 (continued to April 22 ~01:20 EST)
-Session: Max-mode autonomous — **59 sprints** across **10 repos** (42 initial + 17 post-context-break)
+Date: April 21, 2026 (continued to April 22 ~03:10 EST)
+Session: Max-mode autonomous — **~75 sprints** across **10 repos** (42 initial + 17 post-context-break + 16 late-night including 2 resolved near-disasters)
 
 ## What shipped
 
-**59 sprints / ~83 commits / 10 repos touched**
+**~75 sprints / ~95 commits / 10 repos touched / ~27 hours**
 
 ### Audits + a11y baseline (Tier-1 coverage sweep)
 - S-CLARITY, S-KEVIN, S-AARON-HYGIENE, S-TBI-HYGIENE, S-CC-HYGIENE, S-QD-HYGIENE, S-TBC-HYGIENE (multi-page)
@@ -94,13 +94,24 @@ Full list in `hal-stack/sprint-system/aaron-todos-2026-04-21.md`. No new items a
 2. Open `hal-stack/sprint-system/aaron-todos-2026-04-21.md` — batch-review P0/P1 items
 3. For any new repo work, clone from `two-birds-project-template` — it now starts compliant (a11y + SEO + link-check baselines)
 
+## Late-night addendum (sprints 66-75, 01:20 → 03:10 EST)
+
+Two near-disasters caught and resolved in-session:
+
+- **S-DCC-DEPLOY false premise** — P0 sprint brief claimed DCC had never been live-deployed. ~90 min investigating Vercel deploy paths (install CLI, vercel.json, OAuth × 2, mobile screenshot debugging). Caught at 02:25 EST via 30-second `curl https://twobirds-kramerica.github.io/digital-confidence/` → HTTP 200, 69KB, correct title. DCC had been live for a month on GitHub Pages. All Vercel work parked as harmless tech debt. Logged as new pattern #19: "verify factual premises before building".
+- **S-LOOP-ARCHITECT watcher-daemon design flaw** — Aaron asked for a 4-component autonomous loop. I pushed back on component 1 (watcher-as-daemon cannot spawn authenticated Claude Code sessions). Shipped 3 of 4 components as HAL-aligned Python helpers (`failure-router.py`, `human-task-capture.py`, `trigger-writer.py`). Component 1 deferred until Aaron picks a real mechanism (`schedule` skill recommended).
+
+Notion housekeeping batch: S-KEVIN-CSP-READY closed (was stale Backlog, shipped 2026-04-21), S-R01-PHASE-1 annotated, EPIC Rental Search demoted In Progress → Backlog (13-week scope + violates no-npm standing rule).
+
+Pattern library v2 → v2.1 (19 patterns total).
+
 ## Session provenance
 
-- Invocation: Aaron typed `next sprint` ~48 times; `max-mode.md` governance active until 23:59 EST 2026-04-21
-- Final directive: "just run max all the way until the pro plan is done"
+- Invocation: Aaron typed `next sprint` ~55 times; `max-mode.md` governance active until 23:59 EST 2026-04-21; verbally extended past midnight by Aaron's "just run max all the way until the pro plan is done" directive
+- Later extended again by "run autonomously all night from backlog" at 03:00 EST — but Notion queue was genuinely empty of autonomous-safe items after tonight's work; loop exited clean with `QUEUE-EMPTY.md`
 - Model: Claude Opus 4.7 (1M context) via Claude Code CLI
-- Duration: ~25 hours (00:02 EST 2026-04-21 → 01:20+ EST 2026-04-22)
-- Tools: create_page, create_backlog_item, create_research_row, append_to_rich_text, WebSearch (citation verification), gh CLI (workflow triggers), Python ajv-style validators
+- Duration: **~27 hours** (00:02 EST 2026-04-21 → 03:10 EST 2026-04-22)
+- Tools: create_page, create_backlog_item, create_research_row, append_to_rich_text, WebSearch, gh CLI, Python (ajv-style validators + batch retro-file scripts + 3 new FINAL-STEP helpers)
 
-Last updated: 2026-04-22 at 01:20 EST (Toronto)
+Last updated: 2026-04-22 at 03:10 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

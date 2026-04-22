@@ -1,11 +1,48 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x37: S-QD-EXTRACT+INDICATOR — inline script to js/dashboard.js + per-card fetch indicator)
+**Last Session:** April 21, 2026 (max-mode x38: S-KEVIN-CSP-READY — inline CSS+JS+onclicks extracted; **Tier 2 complete**)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🧹 S-KEVIN-CSP-READY — Inline CSS+JS+onclicks extracted — SHIPPED ✅
+
+**Date:** 2026-04-21 ~23:51 EST · Max mode sprint #38 · 🏁 **Tier 2 complete (6/6)**
+**Repo:** `kevins-apartment-search` main @ `815f9fd`
+
+Closes the final Tier-2 item. Kevin's Apartment Search is now fully CSP-ready on the main page.
+
+**Three extractions in one sprint:**
+- **CSS**: 1027-line inline `<style>` block → `css/kevin.css`. Added `<link rel="stylesheet" href="css/kevin.css">` after leaflet.css.
+- **JS**: 1417-line inline `<script>` block → `js/kevin.js`. Loaded with `defer`. Byte-for-byte preserved including the string-literal `<style>/<script>/onclick=` inside generated print-report HTML (those build a separate document, unaffected by main-page CSP).
+- **9 onclicks → data-action attrs**:
+  - `saveCriteria('X')` × 4 → `data-action="save-criteria" data-crit="X"`
+  - `cancelCriteriaEdit('X')` × 4 → `data-action="cancel-criteria" data-crit="X"`
+  - `resetAllCriteria()` × 1 → `data-action="reset-criteria"`
+  - Extended the existing delegated click listener to dispatch on `[data-action]`.
+
+**index.html: 2803 → 359 lines.** Zero onclick= attributes remain on the main page. Syntax-verified via `node --check`.
+
+**Future CSP**: when/if Kevin's moves off GitHub Pages to a header-capable host, `script-src 'self'` can drop `'unsafe-inline'` without breaking anything.
+
+---
+
+## 🏁 Tier 2 scorecard — DONE (6/6)
+
+| # | Sprint | Repo |
+|---|---|---|
+| 1 | S-TBI-STYLE-EXTRACT | two-birds-innovation |
+| 2 | S-AARON-NAV-EXTRACT | aaron-patzalek |
+| 3 | S-QD-FOCUS | quality-dashboard |
+| 4 | S-QD-CACHE | quality-dashboard |
+| 5 | S-QD-EXTRACT+INDICATOR | quality-dashboard |
+| 6 | S-KEVIN-CSP-READY | kevins-apartment-search |
+
+Both Tiers 1 + 2 now complete. All named autonomous follow-ups from today's 8 audits are shipped.
 
 ---
 
@@ -3215,5 +3252,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:46 EST (Toronto)
+Last updated: 2026-04-21 at 23:51 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

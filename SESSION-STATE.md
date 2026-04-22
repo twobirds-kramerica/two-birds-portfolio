@@ -1,11 +1,26 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x28: S-CROSS-PROMO — Clarity ↔ Career Coach mutual cross-links)
+**Last Session:** April 21, 2026 (max-mode x29: S-QD-HYGIENE — Build Quality Dashboard audit + a11y baseline + axe CI)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 📊 S-QD-HYGIENE — Build Quality Dashboard audit — SHIPPED ✅
+
+**Date:** 2026-04-21 ~21:56 EST · Max mode sprint #29
+**Repo:** `quality-dashboard` main @ `1cc4709`
+
+Sixth audit-pattern pass of the day. Tighter scope since dashboard is `noindex` + PIN-gated + internal-only.
+
+**Shipped**: `lang="en"`→`"en-CA"`, description meta, skip-link + CSS, `<main id="main">` wrapping post-PIN content, axe-core CI, 9-section AUDIT.md. Top-5 follow-ups are small a11y/polish items (explicit `:focus-visible` for dark theme, sessionStorage cache for API responses, inline JS extraction, last-updated indicators).
+
+**Portfolio coverage status**: All Two Birds active repos now have axe-core CI + AUDIT.md **except**:
+- `elite-karate-site` (pending client feedback per CLAUDE.md rule — explicitly do-not-touch)
+- `two-birds-command-centre` (multi-page, reserved for dedicated sprint)
 
 ---
 
@@ -3083,5 +3098,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 21:51 EST (Toronto)
+Last updated: 2026-04-21 at 21:56 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

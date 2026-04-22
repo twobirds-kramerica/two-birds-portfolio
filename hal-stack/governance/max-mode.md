@@ -2,7 +2,7 @@
 
 **Activates when:** Aaron's message contains one of "max mode", "max day", "max x5", "beefy builds", "100% max", "go big and fat", OR the session starts while this file's `ACTIVE UNTIL` timestamp has not yet passed.
 
-**Current activation:** ACTIVE UNTIL 2026-04-21 23:59 EST (Toronto). Pre-primed 2026-04-20 ~23:53 EST at Aaron's explicit instruction: *"big nasty beefy builds back to back to back. bigger and autonomous 100% human free to flow — no checks or confirmations or access needed. go big and fat. last full day of max x5!!!"*
+**Current activation:** ACTIVE UNTIL 2026-04-22 23:59 EST (Toronto). Activated 2026-04-22 17:08 EST at Aaron's explicit "max mode" message after RI-006 circuit-breaker held across 7 empty-queue "next sprint" triggers. Prior window: ACTIVE UNTIL 2026-04-21 23:59 EST (Toronto), pre-primed 2026-04-20 ~23:53 EST at *"big nasty beefy builds back to back to back. bigger and autonomous 100% human free to flow — no checks or confirmations or access needed. go big and fat. last full day of max x5!!!"*
 
 ---
 

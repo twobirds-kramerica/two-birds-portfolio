@@ -1,11 +1,26 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x36: S-QD-CACHE — 60s sessionStorage cache on quality-dashboard API helpers)
+**Last Session:** April 21, 2026 (max-mode x37: S-QD-EXTRACT+INDICATOR — inline script to js/dashboard.js + per-card fetch indicator)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🗂️ S-QD-EXTRACT+INDICATOR — Inline script to js/dashboard.js + per-card "Data fetched" indicator — SHIPPED ✅
+
+**Date:** 2026-04-21 ~23:46 EST · Max mode sprint #37 · Tier-2 #5
+**Repo:** `quality-dashboard` main @ `7bce8ef`
+
+Closes two QD AUDIT §8 items in one sprint (item 4 inline-script extraction + item 5 last-updated indicator).
+
+**Script extraction**: ~754-line inline `<script>` block moved to `js/dashboard.js`. `index.html` drops 1928→1173 lines. CSP-readier (one step closer to dropping `'unsafe-inline'` from `script-src` if this site ever moves to a headered host). Zero behaviour change.
+
+**Per-card indicator**: New `cacheTimestamp(key)` helper reads the sessionStorage `ts` field that S-QD-CACHE started storing. `renderCard()` pipes it through the existing `relativeTime()` helper. Every repo card now shows **"Data fetched: Just now / 2m ago / 8h ago"** in the card-meta block. Zero network cost — reuses cache timestamp.
+
+**Tier-2 progress**: 5/6 done. Only S-KEVIN-CSP-READY remains (1-2h).
 
 ---
 
@@ -3200,5 +3215,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:29 EST (Toronto)
+Last updated: 2026-04-21 at 23:46 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

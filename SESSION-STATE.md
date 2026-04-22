@@ -1,11 +1,27 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x25: S-TEMPLATE-HYGIENE — today's 24 sprints' learnings codified into project template)
+**Last Session:** April 21, 2026 (max-mode x26: S-CC-PORTABILITY — Career Coach provider picker wired end-to-end)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🔌 S-CC-PORTABILITY — Career Coach provider picker wired end-to-end — SHIPPED ✅
+
+**Date:** 2026-04-21 ~21:34 EST · Max mode sprint #26
+**Repo:** `career-coach` main @ `9d7e44e`
+
+Closes the #1 autonomous-doable item from the S-CC-HYGIENE audit shipped earlier. Applies the proven S-CLARITY-PORTABILITY Route-B pattern (commit `clarity/a5a0d4d`) verbatim to Career Coach.
+
+**Before**: `llm-provider.js` supported 4 providers but all UI + code assumed Anthropic.
+**After**: Career Coach is actually L3/L4-capable (Ollama path = zero external API calls).
+
+Settings UI gets a provider `<select>` with conditional API-key field (hidden for Ollama). `saveApiKey()` writes `llm_provider` + `llm_api_key` (canonical) and mirrors to legacy `cc_api_key` for backwards compat. All 4 `llmChat` call sites (CV-chat, strengthen-CV, cover-letter, salary-negotiation) now pass `provider:` explicitly; redundant hardcoded `model: 'claude-haiku-4-5-20251001'` override dropped from the salary-negotiation call. Syntax-checked via `new Function()`.
+
+**TODO closure**: P1 "Apply S-CLARITY-PORTABILITY pattern to Career Coach" done.
 
 ---
 
@@ -3023,5 +3039,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 20:54 EST (Toronto)
+Last updated: 2026-04-21 at 21:34 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

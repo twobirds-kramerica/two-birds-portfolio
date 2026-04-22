@@ -58,8 +58,7 @@ when he switches to review mode. No inline pauses during dev.
 - [ ] **First case study / pilot walkthrough for Two Birds Innovation** (1-2 h, blocked on a pilot)
   TBI AUDIT §7. Biggest conversion lift for the CA$2,500 audit offer.
 
-- [ ] **Apply S-CLARITY-PORTABILITY pattern to Career Coach** (~60 min, autonomous-doable in a future session)
-  Career Coach's `llm-provider.js` is identical to Clarity's but the UI doesn't wire the provider picker. Same Route-B wiring (provider `<select>` in settings, drop redundant `model:` override at line 2594, update privacy note dynamically). See CC AUDIT §3. Mirror of commit `a5a0d4d` on clarity.
+- [x] **Apply S-CLARITY-PORTABILITY pattern to Career Coach** ✅ done 2026-04-21 as S-CC-PORTABILITY (commit `9d7e44e` on career-coach main). Provider `<select>` wired in settings with conditional key field; 4 llmChat call sites updated; redundant model override dropped from salary-negotiation call. Career Coach L1 → L3/L4.
 
 - [ ] **Self-host DM Sans + DM Serif Display for Career Coach** (30 min, autonomous-doable)
   Parallel to Kevin + aaron-patzalek Inter self-host pattern. Both fonts are SIL OFL 1.1. Drop Google Fonts links, add `<link rel="preload">` for the two woff2 files. CC AUDIT §2.

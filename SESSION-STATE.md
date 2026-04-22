@@ -3457,5 +3457,14 @@ Per sprint step 5: "If Vercel login required: output the login URL for Aaron to 
 ### Note on model override in sprint prompt
 Sprint specified `Model: claude-sonnet-4-20250514`. That can't be changed mid-session in Claude Code CLI — this executor is Claude Opus 4.7 (1M context). Flagged so Aaron knows the request as-written wasn't honoured; all work is otherwise complete to the OAuth gate.
 
-Last updated: 2026-04-22 at 02:03 EST (Toronto)
+### Retry at 02:07 EST — still blocked
+Aaron typed "next sprint". `next-sprint.py` returned S-DCC-DEPLOY as the locked item. `vercel whoami` again returned "No existing credentials found" — fresh device code issued: **XZLP-NXWK** (previous HKPM-MRZH expired). aaron-todos-2026-04-21.md updated with the live code so Aaron has the current URL the next time he's at a browser. No other autonomous progress possible on this sprint until OAuth is complete.
+
+---
+
+## Note on S-LOOP-ARCHITECT (raised 02:05 EST, not built)
+
+Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
+
+Last updated: 2026-04-22 at 02:08 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

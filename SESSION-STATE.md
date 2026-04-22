@@ -1,11 +1,33 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x23: S-TBI-HYGIENE — company brand site audit + skip-link + OG meta + axe CI)
+**Last Session:** April 21, 2026 (max-mode x24: S-CC-HYGIENE — Career Coach audit + skip-link + en-CA + OG meta + axe CI)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 💼 S-CC-HYGIENE — Career Coach HAL Stack rigor — SHIPPED ✅
+
+**Date:** 2026-04-21 ~20:35 EST · Max mode sprint #24
+**Repo:** `career-coach` main @ `4f37d4f`
+
+Fifth audit pattern of the day. Career Coach = largest single-file product in the portfolio (~2780 lines), AI-workflow companion to Clarity, same LLM portability layer.
+
+**A11y + SEO**: `lang="en"` → `"en-CA"`, skip-link + CSS, `<main id="main">` landmark, full OG meta block, robots, canonical. All were missing.
+
+**CI**: New `.github/workflows/axe-core.yml`.
+
+**Key audit finding**: Career Coach is structurally identical to pre-portability Clarity. The S-CLARITY-PORTABILITY pattern (commit `a5a0d4d`) applies verbatim — wire the provider picker in settings, drop the redundant model override at line 2594, update the privacy note dynamically. ~60 min. Highest-leverage follow-up.
+
+**Top-5 follow-ups** filed in AUDIT.md:
+1. Apply S-CLARITY-PORTABILITY Route-B pattern (60 min)
+2. Self-host DM Sans + DM Serif Display (30 min)
+3. Complete pricing.html (blocked on Pro definition)
+4. Clarity + Career Coach cross-promotion (5 min/site)
+5. Pro-launch email capture (30 min + service setup)
 
 ---
 
@@ -2976,5 +2998,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 19:34 EST (Toronto)
+Last updated: 2026-04-21 at 20:35 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

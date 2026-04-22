@@ -58,6 +58,18 @@ when he switches to review mode. No inline pauses during dev.
 - [ ] **First case study / pilot walkthrough for Two Birds Innovation** (1-2 h, blocked on a pilot)
   TBI AUDIT §7. Biggest conversion lift for the CA$2,500 audit offer.
 
+- [ ] **Apply S-CLARITY-PORTABILITY pattern to Career Coach** (~60 min, autonomous-doable in a future session)
+  Career Coach's `llm-provider.js` is identical to Clarity's but the UI doesn't wire the provider picker. Same Route-B wiring (provider `<select>` in settings, drop redundant `model:` override at line 2594, update privacy note dynamically). See CC AUDIT §3. Mirror of commit `a5a0d4d` on clarity.
+
+- [ ] **Self-host DM Sans + DM Serif Display for Career Coach** (30 min, autonomous-doable)
+  Parallel to Kevin + aaron-patzalek Inter self-host pattern. Both fonts are SIL OFL 1.1. Drop Google Fonts links, add `<link rel="preload">` for the two woff2 files. CC AUDIT §2.
+
+- [ ] **Complete Career Coach `pricing.html`** (1-2 h, blocked on deciding what Pro is)
+  Currently a 23-line "Coming Soon" stub. Pre-req for any Pro conversion. CC AUDIT §7.
+
+- [ ] **Cross-promote Clarity + Career Coach** (5 min per site)
+  Each free AI-workflow product should link to the other. Top-of-funnel overlap is maximum; current setup leaves conversion on the floor. CC AUDIT §7.
+
 - [ ] **Live-site smoke test Clarity provider picker** (5 min)
   Run `https://twobirds-kramerica.github.io/clarity/` with each provider option (Anthropic / OpenAI / Gemini / Ollama) in sequence. Confirm each key flow works end-to-end. Gemini + OpenAI + Ollama paths weren't exercised live in the autonomous session.
 

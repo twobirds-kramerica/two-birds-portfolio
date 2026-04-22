@@ -54,6 +54,22 @@ Last run: C:\twobirds\two-birds-portfolio\logs\RETRO.md
 HAL backlog: C:\twobirds\two-birds-portfolio\hal-stack\HAL-BACKLOG.md
 Journey archive: C:\twobirds\two-birds-portfolio\journey\
 
+### Durable artefacts from the 2026-04-21 max-mode run (read when orienting)
+- **Session context export**: `hal-stack/context-system/exports/2026-04-21-max-mode-39-sprints.md` — headline numbers, per-repo status table, full sprint index, how-to-resume. Start here when re-entering the portfolio cold.
+- **Autonomous-dev pattern library**: `hal-stack/research/autonomous-dev-patterns-v1.md` — 13 reusable patterns distilled from that session (AUDIT.md structure, idempotent injector, audit→codify→close loop, meta-tooling-first, etc.). Reference by name in future sprints.
+- **DCC Kids Research DB skill-graph**: `hal-stack/research/dcc-kids-skill-graph.md` — bird's-eye view of the 20-row Phase-1 Research Database with coverage matrix, three age-spanning ladders, prerequisite arrows, citation roll-up.
+- **Per-repo audits**: `AUDIT.md` in each of: `clarity`, `kevins-apartment-search`, `aaron-patzalek`, `two-birds-innovation`, `career-coach`, `quality-dashboard`, `two-birds-command-centre`. Each has a top-5 next-actions ranked by impact × 1/LOE.
+- **Human-review backlog**: `hal-stack/sprint-system/aaron-todos-YYYY-MM-DD.md` — accumulates P0/P1/P2/P3 items that need Aaron's input. Current file: `aaron-todos-2026-04-21.md`.
+
+### Notion-sync helpers (all proven end-to-end via the 2026-04-21 run)
+- `hal-stack/notion-sync/notion-client.py`
+  - `NotionClient.query_data_source`, `.get_page`, `.update_page_properties`, `.set_select`
+  - `NotionClient.create_page(data_source_id, properties, children=None)`
+  - `NotionClient.append_to_rich_text(page_id, property_name, text)` — auto-chunks >2000-char appends
+  - `build_backlog_properties(...)` + `create_backlog_item(client, ...)` — Product Backlog one-call row creation
+  - `build_research_row_properties(...)` + `create_research_row(client, ...)` — DCC Kids Research DB one-call creation with enum validation
+  - CLI: `--test`, `--dry-run-create` (prints body for both Backlog + Research samples, no API call)
+
 ## RESEARCH MODE AUTO-ACTIVATION
 When the current task involves any of the following, activate research mode automatically (no manual toggle needed):
 - Evaluating external tools, platforms, or services

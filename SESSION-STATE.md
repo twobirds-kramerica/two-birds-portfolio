@@ -1,11 +1,22 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 → 22, 2026 (max-mode x40: end-of-session context export filed)
+**Last Session:** April 21, 2026 → 22, 2026 (max-mode x42: portfolio CLAUDE.md updated with pointers to today's 3 durable artefacts)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🧭 CLAUDE.md pointers added (sprints 41 + 42) — SHIPPED ✅
+
+**Date:** 2026-04-22 ~00:20 EST · Max mode sprints #41 + #42
+**Repo:** portfolio master @ `20484dc` (sprint 41) and pending sprint 42 commit
+
+**Sprint 41 — Pattern library** (`20484dc`): `hal-stack/research/autonomous-dev-patterns-v1.md` (410 lines). 13 reusable patterns distilled from today's 39 sprints, each with a concrete shipped-example: AUDIT.md 9-section structure, idempotent HTML injector, audit→codify→close loop, meta-tooling before content, scope-honest partial delivery, retro-file Notion paper trail, honest negative result logged, data-action + delegated listener, sessionStorage cache, SIL-OFL font vendor, primary-source appendix, cross-promotion, three-tier TODO sorting. Pattern-extension rules at the end.
+
+**Sprint 42 — CLAUDE.md pointers** (pending commit): portfolio root CLAUDE.md now lists today's 3 durable artefacts (session export + pattern library + skill-graph index) + the full Notion-sync helper surface. Because CLAUDE.md auto-loads every session, tomorrow's Claude Code instance will see today's outputs without being told. High-leverage single-file change.
 
 ---
 
@@ -3283,5 +3294,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:59 EST (Toronto)
+Last updated: 2026-04-22 at 00:20 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

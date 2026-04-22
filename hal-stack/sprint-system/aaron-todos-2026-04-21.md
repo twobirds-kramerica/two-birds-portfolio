@@ -60,8 +60,7 @@ when he switches to review mode. No inline pauses during dev.
 
 - [x] **Apply S-CLARITY-PORTABILITY pattern to Career Coach** ✅ done 2026-04-21 as S-CC-PORTABILITY (commit `9d7e44e` on career-coach main). Provider `<select>` wired in settings with conditional key field; 4 llmChat call sites updated; redundant model override dropped from salary-negotiation call. Career Coach L1 → L3/L4.
 
-- [ ] **Self-host DM Sans + DM Serif Display for Career Coach** (30 min, autonomous-doable)
-  Parallel to Kevin + aaron-patzalek Inter self-host pattern. Both fonts are SIL OFL 1.1. Drop Google Fonts links, add `<link rel="preload">` for the two woff2 files. CC AUDIT §2.
+- [x] **Self-host DM Sans + DM Serif Display for Career Coach** ✅ done 2026-04-21 as S-CC-FONTS (commit `45d3ddd` on career-coach main). ~145 KB vendored across 5 woff2 files + 2 OFL licences + 2 @font-face shims. Career Coach L1 → L3 on fonts; combined with S-CC-PORTABILITY, fully L3/L4-capable.
 
 - [ ] **Complete Career Coach `pricing.html`** (1-2 h, blocked on deciding what Pro is)
   Currently a 23-line "Coming Soon" stub. Pre-req for any Pro conversion. CC AUDIT §7.

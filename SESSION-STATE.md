@@ -1,11 +1,28 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x26: S-CC-PORTABILITY — Career Coach provider picker wired end-to-end)
+**Last Session:** April 21, 2026 (max-mode x27: S-CC-FONTS — Career Coach self-hosts DM Sans + DM Serif Display; Google Fonts dropped)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🔤 S-CC-FONTS — Career Coach self-hosts DM Sans + DM Serif Display — SHIPPED ✅
+
+**Date:** 2026-04-21 ~21:40 EST · Max mode sprint #27
+**Repo:** `career-coach` main @ `45d3ddd`
+
+Closes the #2 autonomous-doable follow-up from S-CC-HYGIENE. Same pattern as S-KEVIN-HYGIENE / S-AARON-HYGIENE.
+
+**Vendored from `googlefonts/dm-fonts`** (SIL OFL 1.1): DM Sans × 4 weights (400/500/600/700 woff2, ~30 KB each) + DM Serif Display Regular (24 KB via Fontsource CDN — the GitHub repo only publishes TTF for Serif) + OFL licence files + per-family CSS shims. Total ~145 KB committed.
+
+**`index.html`**: dropped Google Fonts preconnects + `<link href="https://fonts.googleapis.com/...">`; added `<link rel="preload">` for DM Sans Regular + Bold + local stylesheet links.
+
+**Combined with S-CC-PORTABILITY** (sprint #26, earlier today): Career Coach is now **fully L3/L4-capable** — zero external runtime deps on the Ollama provider path; no Google Fonts phone-home.
+
+**TODO closure**: P1 "Self-host DM Sans + DM Serif Display for Career Coach" ✅
 
 ---
 
@@ -3039,5 +3056,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 21:34 EST (Toronto)
+Last updated: 2026-04-21 at 21:40 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

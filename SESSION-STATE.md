@@ -1,11 +1,28 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x39: S-DCC-VIS-STYLEGUIDE-STABLE attempted; 4th try failed; reverted with lessons)
+**Last Session:** April 21, 2026 → 22, 2026 (max-mode x40: end-of-session context export filed)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 📦 End-of-session context export — SHIPPED ✅
+
+**Date:** 2026-04-22 ~00:11 EST · Max mode sprint #40
+**Repo:** portfolio master @ `72a880b`
+
+Per CLAUDE.md rule ("After every significant session: auto-generate a context export to `hal-stack/context-system/exports/[date]-[title].md` and add a one-line entry to `hal-stack/context-system/context-index.md`").
+
+New file: `hal-stack/context-system/exports/2026-04-21-max-mode-39-sprints.md` (153 lines).
+
+Consolidates the 39-sprint session into one durable artefact — session metadata, headline numbers, full sprint-by-sprint index, per-repo status table across 10 repos, key artefacts + where to find them, aaron-todos P0-P3 grouping, how-to-resume-tomorrow steps, negative-result logged.
+
+`context-index.md` gets a one-line entry at the top linking to the export.
+
+Pairs with `SESSION-STATE.md` (per-sprint detail) and `aaron-todos-2026-04-21.md` (human-input-required backlog) as the three durable artefacts from the session.
 
 ---
 

@@ -1,6 +1,12 @@
 # DCC — Candidate New Accessibility Components (Scope Proposal)
 
-**Status:** PROPOSAL — for Aaron review. No code.
+**Status:** ✅ SHIPPED 2026-04-21 — all 4 candidates built + injected.
+- Phase 1 (JS + CSS components): `digital-confidence` commit `dd3c220`
+- Phase 2 (inject into 29 module pages + styleguide demo): `digital-confidence` commit `bc06753`
+
+Kept for reference only. Do NOT treat as a pending backlog item — grep git log for S-030 before proposing further work on these components.
+
+**Original status:** PROPOSAL — for Aaron review. No code.
 **Source context:** S-025 benchmark research + Warm Hearth design system (shipped) + competitive-audit findings (`hal-stack/research/dcc-ui-benchmarks.md`) + the Notion Backlog item "DCC new accessibility components sprint" (P2, Backlog, Claude Code).
 
 Propose 4 candidate components, each with: user need, implementation sketch, LOE, and a defensible reason to ship (or skip) it.

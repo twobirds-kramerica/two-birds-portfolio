@@ -70,3 +70,25 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-21 17:42 Eastern Daylight Time — create_backlog_item: 'S-R01-PHASE-1l: 13-15 AI tutor vs shortcut -- Phase-1 target MET (DB 19 -> 20)' (P0 Sprint / Done / Claude Code) -> 349a09cf-876a-81f3-a8c1-d361693a11ef
 - 2026-04-21 17:42 Eastern Daylight Time — create_backlog_item: 'S-DCC-VIS-STYLEGUIDE-STABLE: make styleguide visual regression work' (P3 Sprint / Backlog / Claude Code) -> 349a09cf-876a-817a-8cbf-d292b8544e28
 - 2026-04-21 17:42 Eastern Daylight Time — create_backlog_item: 'S-KEVIN-CSP-READY: extract inline scripts + styles from Kevin's index.html' (P2 Sprint / Backlog / Claude Code) -> 349a09cf-876a-8183-ac2f-e4fcc9931db4
+- 2026-04-22 00:49 Eastern Daylight Time — create_backlog_item: 'S-R01-SKILL-GRAPH: 351-line onboarding index for 20-row DCC Kids Research DB' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8109-a127-c325e281ee09
+- 2026-04-22 00:49 Eastern Daylight Time — create_backlog_item: 'S-R01-PHASE-1f-CYBERTIP-PATCH: Cybertip.ca added to sextortion row' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81ae-a44f-dc43dd3164ac
+- 2026-04-22 00:49 Eastern Daylight Time — create_backlog_item: 'S-AARON-HYGIENE: personal brand site HAL Stack rigor pass' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8130-8ad7-c94bb1338789
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-TBI-HYGIENE: company brand site audit + a11y baseline + OG meta' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81a3-ba3f-c7848bef6b51
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-CC-HYGIENE: Career Coach audit + a11y + SEO + axe CI' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-810b-ac40-f929ba6d40b4
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-TEMPLATE-HYGIENE: project template codifies today's learnings' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81f9-b4b3-fc4aee0612b6
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-CC-PORTABILITY: Career Coach LLM provider picker wired end-to-end' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81fd-83bf-d14ff4f0b790
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-CC-FONTS: Career Coach self-hosts DM Sans + DM Serif Display' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-814a-bd0e-c2e689f3966d
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-CROSS-PROMO: Clarity + Career Coach mutual cross-links' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8141-bc5c-e4065b679594
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-QD-HYGIENE: Build Quality Dashboard audit + a11y baseline' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8162-a287-fbaedfd3e9fe
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-TBC-HYGIENE: two-birds-command-centre multi-page audit (10 pages)' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81b6-81c0-ef4cc512c967
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'HAL: append_to_rich_text auto-chunking upgrade' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81e2-a18e-cb246394b322
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-PRIMARY-SOURCE: Piaget/Erikson/Vygotsky/Kohlberg appendix on 12 rows' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8183-b086-e305d186d129
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-TBI-STYLE-EXTRACT: move Phase-3 inline CSS to style.css' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8183-bc04-d3a3f63255cc
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-AARON-NAV-EXTRACT: move inline nav JS to js/main.js' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8161-8b55-f76d748cdcd6
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-QD-FOCUS: quality-dashboard :focus-visible for dark theme' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-812f-91e8-ec1ae6402f2e
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-QD-CACHE: 60s sessionStorage cache on quality-dashboard GitHub API' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-815f-b19b-da5a74eb0e7d
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-QD-EXTRACT+INDICATOR: inline script -> js/dashboard.js + per-card fetch indicator' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8151-8074-d3ebde34214e
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-KEVIN-CSP-READY: inline CSS+JS+9 onclicks extracted' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-816c-9323-ef7c30dc4c45
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'S-DCC-VIS-STYLEGUIDE-STABLE: 4th attempt failed; reverted with lessons' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8137-86a4-f8155a389401
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'HAL: end-of-session context export + patterns library + CLAUDE.md pointers' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-81dd-9bb9-c07eb129997f
+- 2026-04-22 00:50 Eastern Daylight Time — create_backlog_item: 'HAL: session close — RETRO.md overwrite' (P0 Sprint / Done / Claude Code) -> 34aa09cf-876a-8123-b964-e9458293667d

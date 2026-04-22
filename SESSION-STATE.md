@@ -1,11 +1,22 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x35: S-QD-FOCUS — explicit :focus-visible for quality-dashboard dark theme)
+**Last Session:** April 21, 2026 (max-mode x36: S-QD-CACHE — 60s sessionStorage cache on quality-dashboard API helpers)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## ⚡ S-QD-CACHE — sessionStorage cache on quality-dashboard API — SHIPPED ✅
+
+**Date:** 2026-04-21 ~23:29 EST · Max mode sprint #36 · Tier-2 #4
+**Repo:** `quality-dashboard` main @ `75da12a`
+
+Closes QD AUDIT §2 / §8 item 2. Wraps all 4 GitHub API helpers (`fetchJSON`, `fileExists`, `pagesEnabled`, `fetchIndexHead`) in a 60s sessionStorage cache keyed by URL. Reduces the ~30+ API calls per page load to ~1 real fetch per URL within a 60-second window, smoothing out refresh-mashing and staying well under GitHub's 60/hour unauthenticated rate limit.
+
+Namespace: `qd-cache:`. Quota errors / private-mode silently skip (never breaks the page). Syntax-verified via `new Function()`.
 
 ---
 
@@ -3189,5 +3200,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:24 EST (Toronto)
+Last updated: 2026-04-21 at 23:29 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -1,11 +1,20 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x33: S-TBI-STYLE-EXTRACT — move Phase-3 inline CSS to style.css)
+**Last Session:** April 21, 2026 (max-mode x34: S-AARON-NAV-EXTRACT — move inline nav JS to js/main.js)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🔨 S-AARON-NAV-EXTRACT — Move inline nav JS to js/main.js — SHIPPED ✅
+
+**Date:** 2026-04-21 ~23:09 EST · Max mode sprint #34 · Tier-2 #2
+**Repo:** `aaron-patzalek` master @ `e6d3148`
+
+Closes S-AARON-HYGIENE audit §8 item 5. 13-line inline `<script>` block extracted to `js/main.js` (loaded with `defer`). Behaviour identical, one minor improvement: `aria-expanded` now takes explicit `'true'/'false'` strings instead of coercing a boolean. Note: `js/` was deleted during S-AARON-HYGIENE earlier today as orphan dead code; new `main.js` replaces it with working code that targets the actual `.nav-toggle` / `.nav-links` selectors.
 
 ---
 
@@ -3169,5 +3178,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:05 EST (Toronto)
+Last updated: 2026-04-21 at 23:09 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

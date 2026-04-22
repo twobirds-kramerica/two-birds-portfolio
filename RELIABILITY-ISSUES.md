@@ -46,3 +46,15 @@ Created: April 2, 2026
 **Root cause:** Claude optimises for speed and reports completion at the earliest reasonable point rather than triple-checking.
 **Systemic fix:** Pattern counter rule: "Never say 'yes it works' unless confirmed 3 times in a row." For critical outputs (RETRO.md, module HTML files), verify: file exists, line count reasonable, bilingual content present, git push confirmed, no errors in output.
 **Status:** DOCUMENTED ✅ — pattern counter rule added to CLAUDE.md
+
+---
+
+## RI-006 — Normal-Mode "Next Sprint" Loop on Empty Queue
+**Date:** 2026-04-22
+**Symptom:** Aaron types "next sprint" 3+ times in the same normal-mode session. Each call: Notion exit 3, pending-capture empty, sprint-queue.md has only human-task items. Each Claude response lists the same 3-4 candidate sprints and asks Aaron to pick. No forward motion. Today: triggered at ~04:30 EST after a ~75-sprint max-mode run ending ~01:00 EST; queue legitimately drained.
+**Root cause:** Normal-mode governance explicitly forbids auto-flipping Backlog→Ready. Max-mode governance explicitly allows it. There is no middle-ground trigger: no single phrase Aaron can type meaning *"just pick the best one and execute — one sprint, not a max-mode chain."* Result: if Aaron expects forward motion and the queue is empty, every "next sprint" returns the same menu and the loop stalls.
+**Systemic fix options (pick one — all require Aaron's call):**
+  1. **Add trigger phrase** to CLAUDE.md: "**just go**" or "**best-pick sprint**" = authorise Claude to flip the highest-LOE-ranked Backlog or research-proposal item to Ready and execute it once. Single sprint, no chaining, no max-mode persistence. Cheapest fix.
+  2. **Pre-fill the queue**: nightly job that promotes 1-2 research-proposal sprints to Ready status if the Claude-Code-owned Ready count drops to zero. Removes the governance choice by not letting the queue empty.
+  3. **Hard-stop rule** after 2 consecutive empty-queue "next sprint" calls: Claude refuses to list options a third time and instead declares the pattern + asks the binary (execute X yes/no).
+**Status:** LOGGED — awaiting Aaron's pick.

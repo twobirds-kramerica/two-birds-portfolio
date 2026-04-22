@@ -58,3 +58,17 @@ Created: April 2, 2026
   2. **Pre-fill the queue**: nightly job that promotes 1-2 research-proposal sprints to Ready status if the Claude-Code-owned Ready count drops to zero. Removes the governance choice by not letting the queue empty.
   3. **Hard-stop rule** after 2 consecutive empty-queue "next sprint" calls: Claude refuses to list options a third time and instead declares the pattern + asks the binary (execute X yes/no).
 **Status:** FIXED 2026-04-22 via Fix #1 — "just go" trigger phrase added to CLAUDE.md (single-sprint authorization in normal mode; does not chain; does not persist; git-log-grep required pre-pick). Aaron activated max mode after 7 empty-queue triggers this session; "just go" will close the gap for future normal-mode sessions. Fires #2 and #3 of systemic-fix options remain as future-enhancement candidates but Fix #1 is the cheapest and sufficient baseline.
+
+---
+
+## RI-007 — Google Drive MCP Under-Scoped / Large-File MCP Upload Infeasible
+**Date:** 2026-04-22
+**Symptom:** Aaron requests "upload file X to Google Drive folder Y via Drive MCP." Both `search_files` and `create_file` (folder creation, zero content) return `"Request had insufficient authentication scopes."` even though the MCP is connected.
+**Root cause (two stacked issues):**
+  1. The Drive MCP OAuth grant is under-scoped — likely has `drive.readonly` or narrower; missing `drive.file` / `drive` / `drive.metadata` for search + create. Aaron needs to re-authorise the MCP with upload + metadata scopes via Claude's MCP settings UI.
+  2. Even if scope were granted, the `create_file` tool takes content as a single base64 argument. For files >~5-10 MB this is impractical — a typical Claude conversation export of ~82 MB gzips to ~17 MB, encodes to ~22 MB JSON string, which is at or over most MCP tool argument size limits.
+**Systemic fix:**
+  1. Re-authorise the Google Drive MCP with write scopes (drive.file at minimum) via Claude.ai MCP settings. Verify with a zero-content folder-creation round-trip.
+  2. For large files (>5 MB compressed), use Google Drive desktop sync (drop file into the synced folder on disk, Drive uploads in background) or the browser at drive.google.com. The MCP is not suited to large-payload uploads regardless of scope.
+  3. For structured Claude-conversation archives specifically, consider writing a small helper at `hal-stack/notion-sync/` or similar that splits conversations.json into per-conversation files + uploads each individually via the MCP (post-scope-fix). Splits a 82 MB blob into manageable per-file arguments, and gives per-conversation findability in Drive.
+**Status:** LOGGED — awaiting Aaron's MCP re-authorisation. Workaround: upload via Drive desktop sync or browser.

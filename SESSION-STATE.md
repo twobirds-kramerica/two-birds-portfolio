@@ -1,11 +1,28 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x30: S-TBC-HYGIENE — Command Centre multi-page audit; 8/9 repos covered)
+**Last Session:** April 21, 2026 (max-mode x31: append_to_rich_text auto-chunking upgrade; Tier-1 #2 done)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🔧 append_to_rich_text auto-chunking upgrade — SHIPPED ✅
+
+**Date:** 2026-04-21 ~22:39 EST · Max mode sprint #31 · Tier-1 #2 done
+**Repo:** portfolio master @ `544ba26`
+
+Small meta-helper fix. Closes the implicit TODO filed in the S-R01-PHASE-1f-CYBERTIP-PATCH commit message.
+
+Before: `append_to_rich_text` wrapped the new text in a single `{'type': 'text', 'text': {'content': ...}}` block. If the text was >2000 chars, Notion rejected the PATCH.
+
+After: `append_to_rich_text` uses the `_rich_text` chunker (landed in 1f) to split the incoming text on paragraph/newline/space boundaries into ≤1900-char blocks, then extends the existing blocks list. Callers still pass a single string; chunking is invisible.
+
+Verified offline: short input → 1 block (unchanged path); ~2800-char input → 2 blocks, all ≤2000 chars; source references `_rich_text` at runtime; module loads + validation tests pass.
+
+**Tier-1 progress**: #1 S-TBC-HYGIENE ✅ and #2 append_to_rich_text ✅ both done. Tier-1 #3 remaining: Piaget/Erikson primary-source upgrade (45 min, pure WebSearch + append).
 
 ---
 
@@ -3120,5 +3137,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 22:17 EST (Toronto)
+Last updated: 2026-04-21 at 22:39 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

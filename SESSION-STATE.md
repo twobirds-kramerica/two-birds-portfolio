@@ -1,11 +1,22 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 → 22, 2026 (max-mode x42: portfolio CLAUDE.md updated with pointers to today's 3 durable artefacts)
+**Last Session:** April 21→22, 2026 (max-mode x43: logs/RETRO.md overwritten per CLAUDE.md mandatory session-close rule)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 📓 logs/RETRO.md overwritten — SHIPPED ✅
+
+**Date:** 2026-04-22 ~00:20 EST · Max mode sprint #43
+**Repo:** portfolio master (pending commit)
+
+Per CLAUDE.md standing rule: *"After every session: overwrite `logs/RETRO.md` and push."* Previous content (April 16 S-020/S-021 panel-review session) was stale; overwritten with the 42-sprint 2026-04-21 retro.
+
+New RETRO.md covers: what shipped (audits, DCC Kids DB 8→20, meta-tooling, sovereignty hardening, forward-compat), what did NOT work (S-DCC-VIS-STYLEGUIDE-STABLE), what needs Aaron (P0/P1/P2 grouping), coverage (8/9 repos), how-to-resume, session provenance. Ends with the mandatory TIMESTAMP RULE lines.
 
 ---
 

@@ -157,6 +157,16 @@ when he switches to review mode. No inline pauses during dev.
 
 ---
 
+- [ ] **Pick a daisy-chain mechanism for overnight sprint loops** (≤ 10 min decision, 15 min follow-up sprint)
+  S-LOOP-ARCHITECT shipped 3 of 4 components as Python helpers (failure-router, human-task-capture, trigger-writer). The 4th (watcher daemon) was rejected on design grounds — a Python daemon can't spawn authenticated Claude Code sessions. Options for overnight continuous chaining:
+  (a) Adopt Claude Code's `schedule` skill for cron-scheduled sprint runs (15 min wire-up)
+  (b) Accept manual `next sprint` invocation (current behaviour; you type it when convenient)
+  (c) Some other mechanism you already had in mind
+  Parked as P2 pending your call. All 3 shipped helpers are usable regardless of your choice.
+
+- [x] **Vercel cleanup (2 min, optional)** ✅ backlogged 2026-04-22 02:30 EST — Notion `34aa09cf-876a-81bb-8f21-caba8735c6d7` (P3). Delete `project-db81z`, optionally cancel Pro trial. Zero consequence if skipped.
+
 **Generated:** 2026-04-21 during autonomous session (sprints 1-12+)
 **Updated:** 2026-04-22 00:45 EST — reflecting sprints 48-53 closures (Career Coach inline-script extraction, aaron-patzalek Clarity CTA + contact subtitle, two-birds-command-centre :focus-visible + JSON schema workflow, Clarity portfolio-evidence, TBI portfolio-evidence)
+**Updated:** 2026-04-22 02:45 EST — S-DCC-DEPLOY resolved as false-premise; S-LOOP-ARCHITECT shipped 3/4 components; daisy-chain mechanism decision parked as P2; Vercel cleanup parked as P3
 **Format:** P0 = review-before-anything-else; P1 = revenue/safety adjacent; P2 = useful polish; P3 = long-horizon. Time estimates are "focused work" minutes, not calendar time.

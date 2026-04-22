@@ -1,11 +1,36 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x24: S-CC-HYGIENE — Career Coach audit + skip-link + en-CA + OG meta + axe CI)
+**Last Session:** April 21, 2026 (max-mode x25: S-TEMPLATE-HYGIENE — today's 24 sprints' learnings codified into project template)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🧬 S-TEMPLATE-HYGIENE — Learnings codified into the project template — SHIPPED ✅
+
+**Date:** 2026-04-21 ~20:54 EST · Max mode sprint #25 · **Highest-leverage change of the day**
+**Repo:** `two-birds-project-template` main @ `f38869b`
+
+Every future Two Birds project started from this template now inherits the accumulated HAL Stack rigor defaults. No per-project ramp cost; zero duplication of today's 24 audits' worth of patterns.
+
+**Baseline files added** (10 new files, 663 lines):
+- `index.html` — `lang="en-CA"` + skip-link + `<main id="main">` + full OG/robots/canonical block + Inter preload
+- `css/tokens.css` — colour, typography, spacing, radius, focus-ring, tap-target tokens + global `prefers-reduced-motion`
+- `css/main.css` — skip-link styling, `:focus-visible` defaults, `.sr-only`, layout primitives
+- `fonts/inter/` — Inter variable font + SIL OFL license + inter.css (self-hosted, sovereignty default)
+- `.github/workflows/axe-core.yml` — every-push a11y CI (proven pattern from 6 repos today)
+- `AUDIT.md.template` — the 9-section structure used across S-CLARITY / S-KEVIN / S-AARON / S-TBI / S-CC
+- `CLAUDE.md` expanded with:
+  - **Autonomous Dev Cycles Rule** — captures Aaron's 2026-04-21 directive (human-review asks go to a prioritised backlog file, not inline pauses)
+  - **Standard Defaults This Template Ships** — explains each baseline file
+  - **Commit Message Convention** — `decide() / feat() / fix() / docs() / chore() / log:` paired with the Decision Log auto-capture pattern
+  - Expanded Portfolio Backlog Reference with notion-sync, research/, governance/ pointers
+- `todo.md` — expanded with Human-Review Backlog section (P0/P1/P2/P3 priority buckets)
+
+**Net effect**: when Aaron creates a new project from this template tomorrow, it starts with axe-core CI, WCAG 2.4.1 + 1.3.1 + 4.1.2 compliance on first render, self-hosted Inter (no Google Fonts phone-home), design tokens, the audit framework for the first rigor pass, and the autonomous-cycle operating model. All the accumulated work from today compounds automatically.
 
 ---
 
@@ -2998,5 +3023,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 20:35 EST (Toronto)
+Last updated: 2026-04-21 at 20:54 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -65,8 +65,7 @@ when he switches to review mode. No inline pauses during dev.
 - [ ] **Complete Career Coach `pricing.html`** (1-2 h, blocked on deciding what Pro is)
   Currently a 23-line "Coming Soon" stub. Pre-req for any Pro conversion. CC AUDIT §7.
 
-- [ ] **Cross-promote Clarity + Career Coach** (5 min per site)
-  Each free AI-workflow product should link to the other. Top-of-funnel overlap is maximum; current setup leaves conversion on the floor. CC AUDIT §7.
+- [x] **Cross-promote Clarity + Career Coach** ✅ done 2026-04-21 as S-CROSS-PROMO. Clarity shows "Other free tools" block (Career Coach + DCC) in results; Career Coach footer adds cross-links (Clarity + DCC) with bilingual data-en/fr. Both commits: `clarity/c5b7fe0`, `career-coach/da62d75`.
 
 - [ ] **Live-site smoke test Clarity provider picker** (5 min)
   Run `https://twobirds-kramerica.github.io/clarity/` with each provider option (Anthropic / OpenAI / Gemini / Ollama) in sequence. Confirm each key flow works end-to-end. Gemini + OpenAI + Ollama paths weren't exercised live in the autonomous session.

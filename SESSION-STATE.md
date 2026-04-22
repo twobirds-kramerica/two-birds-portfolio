@@ -1,11 +1,38 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x27: S-CC-FONTS — Career Coach self-hosts DM Sans + DM Serif Display; Google Fonts dropped)
+**Last Session:** April 21, 2026 (max-mode x28: S-CROSS-PROMO — Clarity ↔ Career Coach mutual cross-links)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🔗 S-CROSS-PROMO — Clarity ↔ Career Coach mutual cross-links — SHIPPED ✅
+
+**Date:** 2026-04-21 ~21:51 EST · Max mode sprint #28 · Two repos in one sprint
+**Repos:** `clarity` master @ `c5b7fe0` + `career-coach` main @ `da62d75`
+
+Closes the cross-promotion follow-up from both `CC AUDIT §7` and `TBI AUDIT §8`. Each product now becomes top-of-funnel for the other, closing the "missing cross-promotion" gap identified in the audits earlier today.
+
+**Clarity side** (`c5b7fe0`):
+- After a diagnostic completes, new **"Other free tools from Two Birds Innovation"** block appears below the consultation CTA card and before the print/save/run-again actions.
+- Links to Career Coach and Digital Confidence Centre.
+- Framing aligned with Clarity's voice: *"Built in the same private-by-design spirit — your data stays in your browser."*
+- Styling reuses Clarity's existing tokens (no new CSS additions).
+
+**Career Coach side** (`da62d75`):
+- `app-footer` adds a second line: *"More free tools from Two Birds: Clarity — AI business diagnostic · Digital Confidence Centre"*.
+- Bilingual `data-en` / `data-fr` attrs consistent with the rest of the app's EN/FR localization.
+- No new CSS — existing `.app-footer` token-driven styles.
+
+**Bonus**: both sites also link to the Digital Confidence Centre, making DCC a third corner of the discovery graph.
+
+**TODO closures**:
+- P1 "Link to Clarity's CA$2,500 offer from What-I'm-Building" — partial (TBI still needs its own link-to-Clarity edit, filed as remaining item)
+- P1 "Clarity + Career Coach cross-promotion" ✅
+- P1 "Clarity + Career Coach cross-promotion (mirror on TBI side)" — reframed as TBI→all-three-products
 
 ---
 
@@ -3056,5 +3083,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 21:40 EST (Toronto)
+Last updated: 2026-04-21 at 21:51 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

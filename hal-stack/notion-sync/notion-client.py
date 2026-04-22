@@ -137,13 +137,25 @@ class NotionClient:
     def append_to_rich_text(
         self, page_id: str, property_name: str, text: str
     ) -> dict:
-        """Fetch current rich_text, append `text` as a new block, PATCH back."""
+        """Fetch current rich_text, append `text` as one or more new blocks,
+        PATCH back.
+
+        Long appends (>1900 chars) are auto-chunked via `_rich_text` so the
+        Notion 2000-char-per-block limit is never hit. Callers pass a single
+        string; chunking is invisible.
+
+        A single leading newline is prepended to separate the new content
+        from any existing content — the chunker preserves it.
+        """
+        if text is None or text == "":
+            return {}  # nothing to append
         page = self.get_page(page_id)
         current = page.get("properties", {}).get(property_name, {})
         existing = current.get("rich_text", []) or []
         blocks = list(existing)
         prefix = "\n" if existing else ""
-        blocks.append({"type": "text", "text": {"content": prefix + text}})
+        new_blocks = _rich_text(prefix + text)
+        blocks.extend(new_blocks)
         return self.update_page_properties(
             page_id, {property_name: {"rich_text": blocks}}
         )

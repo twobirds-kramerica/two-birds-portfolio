@@ -368,6 +368,86 @@ hours. Tiers should be concrete (named sprints, not "misc").
 
 ---
 
+## 14. Self-review regression catch (in-session)
+
+**Proofs:**
+- Sprint 62 / commit `2275a00` on kevins-apartment-search — caught sprint 59's mis-applied public robots.txt on a repo that has `<meta name=robots content=noindex, nofollow>`; reverted same session.
+- Also previously: sprint 39's styleguide revert after 4 Playwright attempts failed (2026-04-21).
+
+**Mechanism:** After a mass-fix sprint that spans multiple repos, do a short read-only verification pass — open each touched file's head block, cross-check against each repo's existing intent signals (meta tags, CLAUDE.md notes, AUDIT.md). If a conflict surfaces, fix it in the same session before Aaron sees it. The fix must be (a) obvious, (b) reversible, and (c) smaller than the original sprint; otherwise defer to Aaron.
+
+**Why it works:** The autonomous loop otherwise drifts because Aaron's review queue accumulates own-goals faster than he can work through them. Catching the regression inside the same session keeps the review queue clean and demonstrates that the self-review layer of the loop is functioning.
+
+**When to use:** Any sprint that mass-applies a pattern across 3+ repos. Always read-verify one repo per target and cross-check with its intent markers.
+
+---
+
+## 15. Idempotent mass-fix via Python one-shot
+
+**Proofs:**
+- Sprint 59 / 6 repos — Python script applied sitemap.xml + robots.txt to all 6 repos in one run, writing bespoke content per repo (AI-bot list is constant; URL is per-repo; noindex vs public is decided per-repo by a small config block).
+- Also: S-VOICE-CHECK-SWEEP-2026-03 applied banned-word sweep to 4 repos in one Python call.
+
+**Mechanism:** For patterns that are 90% identical across N repos with small config deltas, write a single Python script with a config list at the top. Run once, verify all N outputs, then commit each repo with its own message. No shell loop; one process, one diff per repo.
+
+**Why it works:** Shell loops lose file-path context on Windows and mishandle multi-line strings. Python keeps state in memory + writes precisely. Also: a single Python script is a debuggable artefact you can re-run or tweak, unlike a throwaway shell pipeline.
+
+**When to use:** Any mass-fix touching ≥3 repos with identical structure (robots.txt, workflow YAML template, a11y CSS insert, banned-word replacement).
+
+---
+
+## 16. Paper-trail redundancy (4-surface coverage)
+
+**Proofs:**
+- Every sprint in the 2026-04-21 + 2026-04-22 max-mode run appears in:
+  1. Git history (commit message + hash)
+  2. SESSION-STATE.md (per-sprint running log)
+  3. logs/RETRO.md (session-level summary, overwritten at session end)
+  4. Notion Product Backlog (retro-filed as Done with commit hash in Notes)
+
+**Mechanism:** Each of the 4 surfaces has a distinct audience + access pattern — git for developers, SESSION-STATE for the next Claude Code session, RETRO for Aaron's weekly review, Notion for cross-tool workflows (Claude.ai chats, MCP clients, dashboards). Never rely on one surface alone.
+
+**Why it works:** When a surface is stale, unreachable, or not yet synced (e.g., Notion API down), the other 3 still carry the information. In this session's two-batch Notion retrofile, the second batch succeeded 16/16 because the first batch's failures (none in this case) would still have been recoverable from the other surfaces.
+
+**When to use:** Any durable work. Skip for scratch/experimental commits that will be squashed.
+
+---
+
+## 17. Verified-already-done skip
+
+**Proofs:**
+- Sprints 50, 53 prep, 56 prep, 67-verify (verification-only sprints): confirmed Kevin `--grey` already `#686868`, TBI has no inline `<style>`, Career Coach AUDIT items 1/2/4 already closed, Clarity AUDIT §9 item 4 done, Quality Dashboard items 1/2/4/5 already shipped.
+- ~8 verified-already-done checks across the continuation run (documented in SESSION-STATE "Skipped / verified as already done" sections).
+
+**Mechanism:** Before opening a sprint based on an AUDIT.md top-5 item, spend 30 seconds: grep for the feature, read the relevant file's head, check git log for prior closure. If already shipped, mark the AUDIT item as done in the SESSION-STATE log and move on — don't redo.
+
+**Why it works:** Stale AUDIT documents drift from the running code faster than you think. A 30-second verify prevents 30-minute redundant sprints and prevents accidental regressions (re-applying an already-applied fix can undo manual tweaks).
+
+**When to use:** Always, before any sprint triggered by a markdown artefact (AUDIT.md, todos, pattern library). Read the current code first.
+
+---
+
+## 18. Three-batch retrofile pattern
+
+**Proofs:**
+- 2026-04-21 batch 1: 14 Done + 2 Backlog via `create_backlog_item` helpers, script not saved.
+- 2026-04-21 batch 2 (retro-file-part2): 22 more entries, script-driven.
+- 2026-04-22 batch 3 (`_retrofile_sprints_48_63.py`): 16 Done, 100% success.
+
+**Mechanism:** When filing ≥5 Notion entries in one go, commit the script as a repo artefact (`hal-stack/notion-sync/_retrofile_...py`) with:
+1. Config list of tuples at top (item, priority, product, notes)
+2. One main() loop that calls the helper once per entry
+3. Exit code 0 on all-success, 1 on any failure
+4. Per-entry print of `[PRIORITY] Title` + Notion page ID
+
+The script becomes a permanent artefact for the audit trail. Future batches copy + modify.
+
+**Why it works:** Notion API can rate-limit or 5xx intermittently. Having the exact input payload in a script means re-running is one command, not an ad-hoc reconstruction. Also: the script itself is the audit trail — you can point Aaron at the file to prove what was filed.
+
+**When to use:** Any time ≥5 Notion entries are filed. For single-entry fixes, inline Python is fine.
+
+---
+
 ## How to extend this library
 
 When a new pattern is proven ≥2× in a session, add it here with:
@@ -381,12 +461,16 @@ Don't add speculative patterns — only patterns with 2+ proofs of use.
 Delete patterns that prove flaky (this file is pruned, not append-
 only).
 
+**Current count: 18 patterns** (v1 shipped 13 on 2026-04-21; v2 added 5 in the 2026-04-22 continuation: self-review regression catch, idempotent mass-fix, paper-trail redundancy, verified-already-done skip, three-batch retrofile).
+
 ---
 
 ## References
 
-- Session export: `hal-stack/context-system/exports/2026-04-21-max-mode-39-sprints.md`
+- Session export (part 1): `hal-stack/context-system/exports/2026-04-21-max-mode-39-sprints.md`
+- Session export (part 2): `hal-stack/context-system/exports/2026-04-22-max-mode-continuation-sprints-48-65.md`
 - Running log: `SESSION-STATE.md`
 - Human-review backlog: `hal-stack/sprint-system/aaron-todos-2026-04-21.md`
 - Skill-graph onboarding doc: `hal-stack/research/dcc-kids-skill-graph.md`
 - Max-mode governance: `hal-stack/governance/max-mode.md`
+- Batch retrofile scripts: `hal-stack/notion-sync/_retrofile_sprints_48_63.py` (example)

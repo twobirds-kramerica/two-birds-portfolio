@@ -1,11 +1,22 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x34: S-AARON-NAV-EXTRACT — move inline nav JS to js/main.js)
+**Last Session:** April 21, 2026 (max-mode x35: S-QD-FOCUS — explicit :focus-visible for quality-dashboard dark theme)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 👁️ S-QD-FOCUS — Quality Dashboard :focus-visible styling — SHIPPED ✅
+
+**Date:** 2026-04-21 ~23:24 EST · Max mode sprint #35 · Tier-2 #3
+**Repo:** `quality-dashboard` main @ `90ad085`
+
+Closes QD AUDIT §1 backlog ("Explicit `:focus-visible` styling — dark themes lose default browser focus rings"). Added consolidated `:focus-visible` rules covering every interactive element (`a`, `button`, `input`, `select`, `textarea`, `[tabindex]`) with 3px teal outline on 2px offset. Explicitly suppresses `:focus:not(:focus-visible)` on buttons + links so the ring only appears on keyboard focus, not mouse click. Teal-on-navy meets WCAG AA on every surface.
+
+Zero visual change for mouse users; explicit ring for keyboard users.
 
 ---
 
@@ -3178,5 +3189,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:09 EST (Toronto)
+Last updated: 2026-04-21 at 23:24 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

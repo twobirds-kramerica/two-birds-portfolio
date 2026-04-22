@@ -17,6 +17,18 @@ when he switches to review mode. No inline pauses during dev.
   Row: `349a09cf-876a-816a-a0b2-d5b4bc4aa532`.
   Specifically check for any accidental victim-blaming phrasing; confirm the non-shaming + "boys 14-17 primary target" framing reads right for a parent audience. This is the single highest-stakes row in the DB. Flag any wording you want changed.
 
+- [ ] **Complete Vercel OAuth to unblock S-DCC-DEPLOY** (3-5 min total)
+  **Why P0:** dcc-dyslexia.vercel.app returns 404 DEPLOYMENT_NOT_FOUND — DCC has never been live-deployed. Notion backlog entry: `34aa09cf-876a-819e-b4c3-ca6b7b8fd9eb`.
+  **Done already this session:**
+  - `vercel.json` committed to digital-confidence main at `630344b` (cleanUrls + security headers)
+  - Vercel CLI 52.0.0 installed globally via npm
+  **What you need to do:**
+  1. Visit https://vercel.com/oauth/device?user_code=HKPM-MRZH — sign in to Vercel, approve the device. (If the code has expired — more than ~15 min since 01:35 EST 2026-04-22 — run `cd C:/twobirds/digital-confidence && vercel login` and follow the fresh device code.)
+  2. `cd C:/twobirds/digital-confidence && vercel --prod`
+  3. First-deploy prompts: "Set up and deploy?" (Y), scope (your personal), "Link to existing project?" (N), "Project name?" (`dcc-dyslexia`), "Directory?" (`./` default), "Override settings?" (N).
+  4. Confirm https://dcc-dyslexia.vercel.app loads.
+  **Then Claude Code can take over** the axe-core on the live URL + SESSION-STATE log in a follow-up sprint.
+
 ---
 
 ## P1 — Content review for S-R01 rows (advance Status Research → Spec)

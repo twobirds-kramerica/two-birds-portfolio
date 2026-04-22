@@ -3422,5 +3422,40 @@ All tonight's autonomous sprints (48-63) are closed. Aaron-todos has not grown.
 Primary human-review surfaces (P0 sextortion row, P1 Calendly URL, etc.)
 remain unchanged.
 
-Last updated: 2026-04-22 at 01:17 EST (Toronto)
+---
+
+## Session 22 — S-DCC-DEPLOY (P0 BLOCKER — partial; blocked on Aaron)
+
+### Date/Time
+2026-04-22 02:03 EST (Toronto)
+
+### Trigger
+Aaron: "P0 BLOCKER SPRINT — S-DCC-DEPLOY. dcc-dyslexia.vercel.app returns 404 DEPLOYMENT_NOT_FOUND. DCC has never been live-deployed. Fix this."
+
+### What Shipped (autonomous portion)
+- Confirmed DCC repo state at `C:/twobirds/digital-confidence` — static site, Warm Hearth tokens present in `css/components.css`, `css/main.css`, and `DESIGN-SYSTEM.md`.
+- Verified no existing `vercel.json`.
+- Created `vercel.json` with `cleanUrls: true`, `trailingSlash: false`, and 3 security headers (X-Content-Type-Options, X-Frame-Options, Referrer-Policy). Committed to `digital-confidence` main at `630344b`.
+- Installed Vercel CLI 52.0.0 globally via `npm install -g vercel`.
+- Attempted `vercel whoami` → `No existing credentials found. Starting login flow...` → device-code OAuth URL issued: https://vercel.com/oauth/device?user_code=HKPM-MRZH
+
+### Blocked on Aaron
+Per sprint step 5: "If Vercel login required: output the login URL for Aaron to authorize — then pause and flag as human blocker in Notion backlog." Done.
+
+- **Notion entry filed:** `34aa09cf-876a-819e-b4c3-ca6b7b8fd9eb` (P0 Blocked, Owner=Aaron, Type=Human Action, Product=DCC).
+- **aaron-todos-2026-04-21.md updated** with P0 entry containing the OAuth URL + full resume steps.
+
+### What remains once Aaron completes OAuth
+1. `cd C:/twobirds/digital-confidence && vercel --prod` (first-deploy prompts noted in Notion + aaron-todos).
+2. Verify https://dcc-dyslexia.vercel.app loads.
+3. Run axe-core on live URL (Claude Code can do this autonomously once URL is live).
+4. Commit any production config changes to GitHub.
+
+### Commits this sub-sprint
+- `630344b` on digital-confidence main — `feat(deploy): add vercel.json for DCC static deployment`
+
+### Note on model override in sprint prompt
+Sprint specified `Model: claude-sonnet-4-20250514`. That can't be changed mid-session in Claude Code CLI — this executor is Claude Opus 4.7 (1M context). Flagged so Aaron knows the request as-written wasn't honoured; all work is otherwise complete to the OAuth gate.
+
+Last updated: 2026-04-22 at 02:03 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

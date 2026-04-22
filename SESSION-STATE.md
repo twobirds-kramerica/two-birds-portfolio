@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** 2026-04-22 17:08-17:15 EST max-mode triple-ship: S-032 wizard POC + S-033 "just go" trigger + S-034 theme-color; plus RI-006 escalation + governance hardening across the preceding 7-trigger empty-queue loop
+**Last Session:** 2026-04-22 17:08→19:49 EST max-mode 5-sprint chain: S-032 wizard POC + S-033 "just go" trigger + S-034 theme-color + S-035 Notion retro-file + S-036 preconnect cleanup. Plus RI-006 escalation + RI-007 (Drive MCP blocker) + governance hardening.
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
@@ -69,8 +69,76 @@ Post-replace: 0 stale `#1565C0` remaining; 203 pages with new `#2A7B6F` (200 fix
 3. If coexist/approved: **Playwright tests for the wizard variant** is the natural next sprint (S-035).
 4. **P0/P1 human-review backlog** in `hal-stack/sprint-system/aaron-todos-2026-04-21.md` is still waiting — sextortion row tone, Calendly URL, LinkedIn link, 12 DCC Research DB rows.
 
-### Max-mode status
-ACTIVE UNTIL 2026-04-22 23:59 EST. Queue is empty again after this triple-ship. Per max-mode step-3, I can either: keep going on proposal-doc items (Playwright tests would be my next pick), or wait for Aaron input on the wizard eval before continuing to avoid shipping more potentially-reversible work while the philosophy is unresolved. Choosing PAUSE: max mode remains active but I'm holding on the wizard-evaluation gate rather than shipping S-035 blind.
+### Max-mode status (after triple-ship at 17:15)
+ACTIVE UNTIL 2026-04-22 23:59 EST. Queue empty again after triple-ship. Held on wizard-evaluation gate to avoid shipping Playwright tests (S-035 originally-proposed) against an unevaluated POC.
+
+---
+
+## 🔌 2026-04-22 ~19:15 EST — Drive MCP blocker (RI-007)
+
+Aaron requested: "Copy `C:\Users\getkr\Downloads\...\conversations.json` (82 MB) to a new Drive folder 'Claude Archive — Two Birds' via Drive MCP." TRUE blocker hit per max-mode scope-honesty rule:
+
+1. **OAuth scope insufficient** — both `search_files` and zero-content `create_file` returned `Request had insufficient authentication scopes`. Drive MCP is connected but grant is read-only-ish. Aaron needs to re-authorise with `drive.file` minimum.
+2. **Payload too large** — 82 MB raw, ~17 MB gzipped (`conversations.json.gz` left alongside original for manual use), ~22 MB base64-encoded. `create_file` takes content as single base64 arg with no chunking — at or over MCP tool-argument size limit.
+
+Logged as **RI-007** in `RELIABILITY-ISSUES.md` (portfolio commit `c3cd602`). Workaround: Drive desktop sync or drive.google.com browser upload. Structured fix: re-auth + build `hal-stack/helpers/drive-upload-split.py` (split conversations.json by conversation-id into per-file uploads) — LOE ~30-45 min after scope fix.
+
+---
+
+## ⚡ 2026-04-22 19:15→19:49 EST — Max-mode 2-sprint continuation (S-035 / S-036)
+
+After the Drive MCP blocker, picked two wizard-neutral autonomous-safe scopes to keep the max-mode window productive without shipping against the unresolved wizard eval.
+
+### Sprint 4 — S-035 Notion retro-file (paper trail for today's ships)
+**Commit:** portfolio master @ `ef2bdb5` (+132 lines, 1 new helper + SYNC-LOG append)
+
+`hal-stack/notion-sync/_retrofile_2026_04_22_max_mode.py` — batch-files **4 entries** to Product Backlog (data source `dee08637-...`) using `create_backlog_item`:
+- S-032 DCC wizard POC → Done (P2 / DCC / Sprint)
+- S-033 "just go" trigger → Done (P1 / HAL Stack / Sprint)
+- S-034 DCC theme-color fix → Done (P3 / DCC / Sprint)
+- RI-007 follow-up (Drive MCP re-auth + upload splitter) → Backlog (P2 / HAL Stack / Task)
+
+All 4/4 created successfully. Pattern mirrors `_retrofile_sprints_48_63.py` from the 2026-04-21 run.
+
+### Sprint 5 — S-036 DCC stale preconnect/dns-prefetch cleanup (sovereignty polish)
+**Commit:** digital-confidence main @ `b59d6dc` (43 files, 0 insertions, 161 deletions)
+
+Removed 4 dead preconnect/dns-prefetch hints from all DCC HTMLs:
+- `dns-prefetch` → `fonts.googleapis.com`
+- `dns-prefetch` → `cdnjs.cloudflare.com`
+- `preconnect` → `fonts.googleapis.com`
+- `preconnect` → `fonts.gstatic.com` (crossorigin)
+
+These were added in older perf sprints (`841c26e`, `9fad906`) when fonts came from Google CDN. After the Merriweather + Source Sans 3 self-hosting (`css/fonts.css`), they just leak a visit-signal to Google's servers (DNS + TLS handshake) without serving any actual request. Same for cdnjs: no active script/link/img loads from cdnjs remain.
+
+PRESERVED: `preconnect` → `www.googletagmanager.com` (still 43 files, still used by consent-gated GA4 + Microsoft Clarity loaders). Only the font-CDN + cdnjs hints are dead.
+
+Post-cleanup: 0 occurrences of any of the 4 stale patterns; googletagmanager preconnect count unchanged at 43.
+
+### Cumulative ships this max-mode window (5 sprints, ~940 insertions + 361 deletions across both repos)
+
+| Sprint | Commit | Repo | Scope |
+|---|---|---|---|
+| S-032 wizard POC | `36e3763` | digital-confidence | +735 / 4 new files |
+| S-033 "just go" trigger | `d0aa1ff` | portfolio | +2 / -1 (CLAUDE.md + RI-006) |
+| S-034 theme-color fix | `e017ea9` | digital-confidence | 200 files, +200/-200 |
+| S-035 Notion retro-file | `ef2bdb5` | portfolio | +132, 4 Notion entries created |
+| S-036 preconnect cleanup | `b59d6dc` | digital-confidence | 43 files, -161 |
+| RI-007 Drive MCP logged | `c3cd602` | portfolio | +14 (reliability log only) |
+
+Plus pre-chain governance: `a055045`, `b4e1e02`, `9202b8d`, `63b68b1` (portfolio).
+
+### Deliberate stopping point at S-036
+Next obvious candidates:
+- **Portfolio README create** (~30-45 min) — verified-unshipped, moderate value
+- **Module count truth-up** (~15 min) — CLAUDE.md says 21 modules, filesystem has 29; doc fix only
+- **Kevin AUDIT §3-§6 drill-down** — unknown scope, needs investigation
+- **Playwright wizard tests (S-037)** — still held pending wizard evaluation
+
+Chose to stop the chain at 5 sprints rather than grind into lower-value autonomous polish. The wizard evaluation is the single highest-leverage next input (unlocks per-module rollout sprint OR clean revert). README + module-count truth-up can wait for next session. Max mode remains ACTIVE UNTIL 2026-04-22 23:59 EST — if Aaron returns with a specific ask or "keep going," I'll execute; if 23:59 passes first, normal-mode governance resumes automatically per max-mode.md timestamp rule.
+
+### S-036 Notion retro-file
+**DEFERRED** to next batch. Paper trail is captured in git log + commit message + SESSION-STATE. Notion can lag by a few hours without loss.
 
 ---
 
@@ -3605,5 +3673,5 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
 
-Last updated: 2026-04-22 at 17:15 EST (Toronto)
+Last updated: 2026-04-22 at 19:49 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

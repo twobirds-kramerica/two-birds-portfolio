@@ -3384,5 +3384,43 @@ Unchanged from Session 22 above — all P0/P1 human-review items still open.
 Tonight's sprints (55-60) all closed autonomous-safe SEO + monitoring gaps without
 touching human-review surfaces.
 
-Last updated: 2026-04-22 at 01:15 EST (Toronto)
+---
+
+## Session 22 — sprints 61-63 (template sync + self-review regression fix)
+
+### Date/Time
+2026-04-22 01:17 EST (Toronto)
+
+### What Shipped
+
+- **Sprint 61** (commit `67bbc33` on two-birds-project-template) — `feat(forward-compat): template inherits today's SEO + link-check baseline`. robots.txt + sitemap.xml + broken-external-link-check workflow now ship with the template. Every future project starts compliant.
+- **Sprint 62** (commit `2275a00` on kevins-apartment-search) — `fix(seo): align robots.txt with existing noindex posture`. Self-review caught that sprint 59's public-crawlable robots.txt contradicted Kevin's `<meta name=robots content=noindex, nofollow>`. Reverted to `Disallow: /` + removed sitemap.
+- **Sprint 63** (this update) — SESSION-STATE.md final reconciliation.
+
+### Self-review catch
+Sprint 59 mass-applied public robots.txt to 5 brand sites + Kevin + quality-dashboard. Kevin should have been batched with quality-dashboard (both noindex intents), not with the 4 truly-public brand sites. Caught by reading the Kevin index.html head block in sprint 62. Fixed in the same session before Aaron reviews — this is the "flag to user OR fix it" rule working as intended, with a bias toward self-fix when the fix is obvious and reversible.
+
+### Commits since last session-state
+- `1f594fe` — clarity link checker
+- `05f439d` — career-coach link checker
+- `afe12a4` — aaron-patzalek link checker
+- `18c2194` — two-birds-innovation link checker
+- `6b4d772` — quality-dashboard link checker
+- `91ec39b` — aaron-patzalek SEO
+- `69b979f` — two-birds-innovation SEO
+- `5108bc8` — clarity SEO
+- `d8cafc3` — career-coach SEO
+- `e0e1e62` — kevins-apartment-search SEO (reverted by `2275a00`)
+- `05c519d` — quality-dashboard robots.txt
+- `4ee5617` — SESSION-STATE sprints 55-60
+- `67bbc33` — project-template baseline sync
+- `2275a00` — Kevin SEO fix (self-review regression)
+- (this commit) — SESSION-STATE sprints 61-63
+
+### Next recommended action for Aaron
+All tonight's autonomous sprints (48-63) are closed. Aaron-todos has not grown.
+Primary human-review surfaces (P0 sextortion row, P1 Calendly URL, etc.)
+remain unchanged.
+
+Last updated: 2026-04-22 at 01:17 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

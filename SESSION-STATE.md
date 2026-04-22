@@ -1,11 +1,33 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x29: S-QD-HYGIENE — Build Quality Dashboard audit + a11y baseline + axe CI)
+**Last Session:** April 21, 2026 (max-mode x30: S-TBC-HYGIENE — Command Centre multi-page audit; 8/9 repos covered)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🎛️ S-TBC-HYGIENE — Command Centre multi-page audit — SHIPPED ✅
+
+**Date:** 2026-04-21 ~22:17 EST · Max mode sprint #30 · 🏁 **Tier-1 #1 done**
+**Repo:** `two-birds-command-centre` main @ `20a166d`
+**Scope:** 10 HTML pages, 3786 LoC, shared header/nav + css/main.css
+
+Seventh audit-pattern pass. Last substantial untouched repo in the Two Birds portfolio. Multi-page so distinct audit shape.
+
+**Multi-page a11y baseline** via idempotent Python injector (`_build/apply-a11y-baseline.py`):
+- Skip-link + `<main id="main">` added to all 10 pages
+- `.skip-link` CSS added once to shared `css/main.css`
+- Re-running the injector is safe (prints `already-ok` for patched pages) — future pages get covered by one re-run
+- Pattern reused from DCC's S-030 script (`_build/inject-s030-scripts.py`)
+
+**New axe-core CI** scans all 10 pages per push (longer timeout 12 min). Fails on critical; uploads JSON artefact per page.
+
+**9-section AUDIT.md**, top-5 follow-ups all small: `:focus-visible` styling, self-host Fuse.js (last external CDN), JSON schema check for `data/*.json`, per-page meta descriptions, act on first axe-core run.
+
+**Portfolio coverage**: 8 of 9 touchable repos now have axe-core CI + AUDIT.md. Only `elite-karate-site` remains uncovered (explicitly do-not-touch per CLAUDE.md until client feedback).
 
 ---
 
@@ -3098,5 +3120,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 21:56 EST (Toronto)
+Last updated: 2026-04-21 at 22:17 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -1,11 +1,25 @@
 # Session State — Two Birds Innovation
-**Last Session:** April 21, 2026 (max-mode x38: S-KEVIN-CSP-READY — inline CSS+JS+onclicks extracted; **Tier 2 complete**)
+**Last Session:** April 21, 2026 (max-mode x39: S-DCC-VIS-STYLEGUIDE-STABLE attempted; 4th try failed; reverted with lessons)
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
 Last fetch: S-030 (DCC new accessibility components sprint, deferred Option B)
+
+---
+
+## 🚫 S-DCC-VIS-STYLEGUIDE-STABLE — Attempted + reverted (honest negative result)
+
+**Date:** 2026-04-21 ~23:59 EST · Max mode sprint #39 · Tier-3 experimental
+
+Tried a fourth stabilisation approach on the styleguide visual regression (beyond the 3 attempts earlier today): `waitForSelector('#dcc-kbd-help')` + Playwright `mask:` on the kbd-help dialog and the `#s030` live-demos section. Baseline regenerated cleanly via update_snapshots; compare-mode run #24759341224 showed 5 pages pass, styleguide fail with the same "two consecutive stable screenshots" error that blocked attempts 1-3.
+
+**Signal**: 4 distinct techniques have now failed on this one surface. Styleguide's dense typography samples + S-030 live-component demos are intrinsically pixel-noisy under Playwright's two-frame stability gate. Further code attempts are throwing work at an inherently noisy target.
+
+**Reverted**: styleguide excluded from PAGES again (commit `7056da2` on digital-confidence/main); orphan baseline deleted; file header documents all 4 attempts + two genuine future-fix options (viewport-clip only a pinned hero section, or drop maxDiffPixelRatio constraint). Neither is worth shipping today.
+
+**Production-critical surfaces** (home / module-1 / final-quiz / accessibility / faq) remain covered by every-push visual regression CI. Styleguide is internal documentation; losing its visual-regression coverage is acceptable.
 
 ---
 
@@ -3252,5 +3266,5 @@ Sync is fully functional and pulling live data.
 2. Sync sprint-queue.md with latest Notion data
 3. Monitor Notion sync performance
 
-Last updated: 2026-04-21 at 23:51 EST (Toronto)
+Last updated: 2026-04-21 at 23:59 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

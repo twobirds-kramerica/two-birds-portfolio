@@ -87,8 +87,9 @@ when he switches to review mode. No inline pauses during dev.
 - [ ] **Pricing page for Clarity** (2-3 h)
   Content needed: what the CA$2,500 AI Workflow Audit includes (duration, deliverables, timeline, guarantee). Pre-qualifies leads, raises close rate. From Clarity AUDIT §7 item 2.
 
-- [ ] **Testimonial/portfolio-evidence block for Clarity** (30 min)
-  Even one pseudonymous quote ("— Manufacturing owner, Kitchener") adds disproportionate trust. Alternative: "Who I've worked with" paragraph pointing at DCC / Kevin / Career Coach repos.
+- [x] **Portfolio-evidence line on Clarity CTA card** ✅ done 2026-04-21 autonomous sprint 52 (commit `e4e79b7`). Added one-line portfolio evidence (DCC, Kevin, Career Coach) under byline. Testimonial variant still open.
+- [ ] **Testimonial block for Clarity** (30 min)
+  Needs pseudonymous quote ("— Manufacturing owner, Kitchener") from a friendly pilot. Pure content; blocked on a willing quote provider.
 
 - [ ] **"Why I built this" section for Clarity** (30 min)
   Solo parent / St. Thomas origin is trust-building for the target demographic. Lean in.
@@ -154,4 +155,5 @@ when he switches to review mode. No inline pauses during dev.
 ---
 
 **Generated:** 2026-04-21 during autonomous session (sprints 1-12+)
+**Updated:** 2026-04-22 00:45 EST — reflecting sprints 48-53 closures (Career Coach inline-script extraction, aaron-patzalek Clarity CTA + contact subtitle, two-birds-command-centre :focus-visible + JSON schema workflow, Clarity portfolio-evidence, TBI portfolio-evidence)
 **Format:** P0 = review-before-anything-else; P1 = revenue/safety adjacent; P2 = useful polish; P3 = long-horizon. Time estimates are "focused work" minutes, not calendar time.

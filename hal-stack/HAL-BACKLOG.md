@@ -1,6 +1,6 @@
 # HAL Stack — Backlog
 **Owner:** Aaron Kramer | Two Birds Innovation
-**Last Updated:** March 31, 2026
+**Last Updated:** April 22, 2026
 
 > Backlog items for the HAL Stack. Each item has a unique ID (HAL-NNN).
 
@@ -8,35 +8,58 @@
 
 ## HAL-007 — Portfolio as Live PMO Layer
 **Date logged:** March 31, 2026
-**Priority:** High
+**Status:** SUPERSEDED (2026-04-19) — see Resolution below
+**Priority:** (was High)
 **Phase:** HAL Phase 2
 
-### Problem
+### Problem (as originally stated)
 
 Claude Web sessions have no live access to the Two Birds Portfolio backlog,
 SESSION-STATE.md, or any local files. Every new chat starts blind.
 The portfolio is passive storage, not an active PMO system.
 
-### Vision
+### Resolution
 
-The two-birds-portfolio repo becomes the single source of truth for all
-Two Birds Innovation work — backlog, sprint state, decisions, architecture,
-product roadmap. Any Claude session (Web or Code) can query and write to it.
+Superseded 2026-04-19 by **S-024 Notion Sync** (see `hal-stack/notion-sync/`).
+Notion Command Center + Product Backlog are now the bidirectional source of
+truth; Claude.ai sessions reach it via the Notion MCP, Claude Code reaches it
+via `notion-client.py` helpers. Full round-trip proven end-to-end over
+2026-04-19 → 2026-04-22, including two 16-entry retro-file batches with
+100% success rate and zero n8n dependency.
 
-### Proposed Architecture
+The original n8n / MCP-webhook architecture was never built because the Notion
+path turned out to be strictly simpler and solved the same problem. HAL-001
+(n8n install) and HAL-002 (MCP config for n8n) are also marked superseded.
 
-- n8n webhook exposes portfolio files as readable JSON endpoints
-- Claude Web MCP connects to n8n endpoints
-- Claude Code reads/writes directly to local files
-- SESSION-STATE.md is the handoff file between all sessions
-- NEXT-SPRINT-QUEUE.md is the authoritative backlog for all projects
-
-### Immediate Workaround (active now)
+### Immediate Workaround (was — no longer needed)
 
 Every Claude Code prompt begins with reading SESSION-STATE.md and
-NEXT-SPRINT-QUEUE.md before executing any work.
+NEXT-SPRINT-QUEUE.md before executing any work. This is still the Claude-Code
+start-of-session posture for local state, but the authoritative backlog
+source now lives in Notion.
 
 ### Effort & Dependencies
 
-- **Effort estimate:** HAL Phase 2 — medium
-- **Blocked on:** n8n install (HAL-001), MCP config (HAL-002)
+Zero remaining work on this item. Artefact preserved for historical context.
+
+---
+
+## Next up for HAL
+
+All HAL-007 children closed via S-024. Next HAL-scope work candidates
+(not yet filed as HAL-NNN):
+
+- **Voice transcription workflow** — Ito + KDE Connect integration (deferred
+  in the 2026-04-22 projects.json refresh). Would unlock hands-free sprint
+  invocation.
+- **UI Preview Layer** — Lovable or equivalent for quick visual iteration
+  on Clarity / Career Coach. Deferred.
+- **Credit Intelligence Dashboard** — credit-usage analytics across Claude
+  Code + Claude.ai + API. Deferred.
+- **Component library + vibe_rules.md** — design-system extraction across
+  the 6 shipped products. Deferred until 2 more products ship to avoid
+  premature abstraction.
+
+None of these are currently open sprints; all remain deferred until Aaron
+prioritises. This file's next update should either formalise one of these
+as HAL-008 or confirm the backlog genuinely stays closed.

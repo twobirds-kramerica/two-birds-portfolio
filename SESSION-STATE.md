@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** 2026-04-22 17:08→23:03 EST max-mode 17-sprint chain — S-032 through S-047 plus **S-DCC-V2 Phase 1-6 (wizard-first rebuild POC)**. S-DCC-V2 was pulled from a new Notion data source (`a297b04c-7887-42d1-b73b-21af94d57cd8`) Aaron pointed at mid-session; P0 Ready Claude-Code sprint with "Run immediately. Budget is live." auto-promote rule. Shipped full /v2/ scaffold: CSS (3 files), data JSON (index + module-1 EN/FR), wizard shell + controller (600+ lines), module menu, certificate. Stopped at Phase 6 per sprint spec — Phases 7-8 (all 29 modules + Playwright tests) gated on Aaron eval of live /v2/. S-042 was audit-the-audits — added PROGRESS UPDATE headers to 6 more AUDIT.md files across 6 repos (clarity, career-coach, aaron-patzalek, two-birds-innovation, quality-dashboard, two-birds-command-centre), mapping each Top-5 item to its closure commit or flagging it still-open. Combined with S-040 (Kevin AUDIT) and b4e1e02 (S-030 proposal), ALL major proposal/audit docs now have SHIPPED-awareness headers. Plus RI-006 escalation + fix + RI-007 + governance hardening.
+**Last Session:** 2026-04-22 17:08→23:22 EST max-mode 18-sprint chain — S-032 through S-047 plus S-DCC-V2 (wizard-first rebuild POC) plus **S-MCP-RELIABILITY-001 (MCP reliability layer)**. S-MCP-RELIABILITY pulled from data source `a297b04c-...`; closed the silent-failure class of bugs seen twice today (S-041 cp1252 crash, S-030 verified-too-late). Ships `notion-write-safe.py` + `heartbeat-check.py` + `session-state-verify.py` + 2 new CLAUDE.md standing rules + sprint-template MCP-write-safety block. S-042 was audit-the-audits — added PROGRESS UPDATE headers to 6 more AUDIT.md files across 6 repos (clarity, career-coach, aaron-patzalek, two-birds-innovation, quality-dashboard, two-birds-command-centre), mapping each Top-5 item to its closure commit or flagging it still-open. Combined with S-040 (Kevin AUDIT) and b4e1e02 (S-030 proposal), ALL major proposal/audit docs now have SHIPPED-awareness headers. Plus RI-006 escalation + fix + RI-007 + governance hardening.
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
@@ -331,6 +331,7 @@ If `next sprint` comes again I'll pick the highest-leverage remaining. Not calli
 | 15 | S-046 Extend feedback memory with topic-keyword grep lesson | (memory file, not versioned) | portfolio (user-scope memory) |
 | 16 | S-047 Notion retro-file part 3 (S-042-S-046, 5 entries) | `b795acb` | portfolio |
 | 17 | S-DCC-V2 Phase 1-6 (wizard-first rebuild POC) | 4 commits on digital-confidence main | digital-confidence |
+| 18 | S-MCP-RELIABILITY-001 (safe-write wrapper + heartbeat + state-verify + 2 rule updates) | `b99a461` + 3 file commit | portfolio |
 
 ### Cumulative 2026-04-22 max-mode window (11 sprints, 6 repos, ~1320 insertions, ~370 deletions)
 
@@ -422,6 +423,55 @@ Combined: **~8-13 hours** total for Phases 7 + 8. Natural breakpoint per module;
 - Max mode window closed at 23:59 EST; this sprint ended at 23:03 EST, 56 minutes before expiry. Paper trail updated per Aaron's "update SESSION-STATE after each sprint" instruction.
 - Model lock `claude-sonnet-4-6` in the sprint spec was not executable (I'm running Opus 4.7, can't hot-swap mid-session). All shipped files are tokens-only / vanilla JS; model choice didn't affect output quality at this scope.
 - No integration with S-032's existing `module-1-wizard.html` at the DCC root. They coexist as two parallel variants for evaluation.
+
+---
+
+## 🛡️ 2026-04-22 23:03→23:22 EST — S-MCP-RELIABILITY-001: MCP reliability layer — SHIPPED ✅
+
+**Notion sprint:** `34aa09cf-876a-81f8-97c2-f1fe9e2a890b` in data source `a297b04c-...`
+**Priority:** P1 · **Status:** Ready → In Progress → Done · **LOE-Hours:** 1.5
+
+Closes the silent-failure class of bugs observed twice today (S-041 cp1252 crash that succeeded POST before stdout crashed; S-030 near-miss where verification came too late to prevent authorisation). Pulled from the same `a297b04c` data source as S-DCC-V2.
+
+### Shipped — 5 deliverables (3 scripts + 2 rule updates)
+
+1. **`hal-stack/mcp-reliability/notion-write-safe.py`** (~230 lines) — `safe_notion_write(operation_fn, operation_name, ...)` wraps any write with exponential-backoff retry + response verification + optional server-side read-back. Helpers: `verify_page_exists_fn(client)`, `verify_select_value_fn(client, pid, prop, expected)`. Every attempt logs to `logs/mcp-write-log.txt`; exhausted writes land in `logs/mcp-write-fallback.json` (JSONL, safe to tail).
+
+2. **`hal-stack/mcp-reliability/heartbeat-check.py`** (~170 lines) — `Heartbeat(client, every_n_calls=10)` class with `tick()` (increments, auto-pings on threshold) and `ping(force, raise_on_disconnect)`. Returns `{state: OK|SLOW|DISCONNECTED|MISCONFIGURED, latency_s, ts}`. Auto-discovers probe data source from `client.config['product_backlog_data_source']`.
+
+3. **`hal-stack/mcp-reliability/session-state-verify.py`** (~220 lines) — pre-sprint preflight runnable as CLI. 4 checks: local_state (branch + dirty files), session_state (mtime freshness), notion_heartbeat, next_sprint_aligned. Exits 0/1/2 for READY/WARNING/BLOCKED. Structured dict report for programmatic callers.
+
+4. **`CLAUDE.md` STANDING RULES — two new rules added:**
+   - SESSION LENGTH RULE: cap single session at ~3h continuous or ~40 same-data-source tool calls; break and resume fresh after that. Grounded in the 2026-04-22 session's empirical evidence of declining decision quality past that threshold.
+   - MCP WRITE SAFETY RULE: all programmatic Notion writes should use `safe_notion_write()`; points at heartbeat + state-verify as companions.
+
+5. **`hal-stack/sprint-system/sprint-template.md`** — new "MCP WRITE SAFETY" block inside every sprint's Prompt with inline usage example. Future sprints that touch Notion programmatically see this reminder inline.
+
+### Commits
+
+- Portfolio master — script bundle (notion-write-safe + heartbeat-check + session-state-verify)
+- Portfolio master `b99a461` — CLAUDE.md session-length + MCP-write-safety rules + sprint-template update
+
+### Smoke tests passed
+
+- `notion-write-safe.py` — log-write smoke OK; file written at `logs/mcp-write-log.txt`
+- `heartbeat-check.py` — SLOW 4.58s against live Notion (legitimate slowness detected in current session; not a bug in the probe)
+- `session-state-verify.py` — BLOCKED verdict correctly reflecting mid-sprint dirty files + current Notion slowness. Module works; the BLOCKED result is accurate, not a false positive.
+
+### 2 remaining Ready Claude-Code sprints in queue — NOT executed tonight
+
+Per Aaron's instruction to "execute all Ready sprints in priority order," but both remaining sprints explicitly say in their own bodies that they're not for tonight:
+
+- **S-ARCHAEOLOGY-001** (P0, 4h) — `hal-stack` sprint body: *"Run this FIRST thing tomorrow with a fresh Claude Code session and full budget."* Sprint-author's timing note dominates the generic directive. Read-only archaeology sprint best done with rested judgement.
+- **S-NEXT-SESSION** (P1, 1.5h) — sprint title literally contains the timing note. Intended as the opener for the next session, not a close-of-window filler.
+
+Not skipping these out of fatigue — they're explicitly scoped for different runtime windows. Respecting the sprint-author's intent.
+
+### Max mode window closing
+
+Current time 23:22 EST. Max mode auto-expires 23:59 EST (37 min away). Clean stop here; 18 sprints shipped total across 2026-04-22 17:08→23:22 EST (~6h15m window). Both remaining Ready sprints are queued for future sessions per their own specs.
+
+---
 
 ### Next action for Aaron (do this before triggering Phase 7-8)
 
@@ -3969,5 +4019,5 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
 
-Last updated: 2026-04-22 at 23:03 EST (Toronto)
+Last updated: 2026-04-22 at 23:22 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -135,3 +135,8 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-22 22:24 Eastern Daylight Time — dedupe S-036-038: archived duplicate S-036: page 34ba09cf-876a-819f-8bde-e19696eb994e ('S-036: DCC stale Google Fonts + cdnjs preconnect c')
 - 2026-04-22 22:24 Eastern Daylight Time — dedupe S-036-038: archived duplicate S-037: page 34ba09cf-876a-81fe-a928-d2143cdc9b44 ('S-037: Cross-repo preconnect sweep (aaron-patzalek')
 - 2026-04-22 22:24 Eastern Daylight Time — dedupe S-036-038: archived duplicate S-038: page 34ba09cf-876a-81b8-a15b-db1d54ffce8f ('S-038: CLAUDE.md module count truth-up (21 to 27 m')
+- 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-042: Audit-the-audits — PROGRESS UPDATE headers on 6 AUDIT.md files' (P2 Sprint / Done / Claude Code) -> 34ba09cf-876a-815a-899f-eb5adb554723
+- 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-043: TBCC AUDIT header correction — item #5 already shipped in fe605d8' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-8144-8600-ec9200fec013
+- 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-044: Notion dedupe — archived 3 S-036/037/038 duplicates from S-041 crash' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-81aa-81c6-d25b76bd4636
+- 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-045: drive-upload-split.py skeleton — RI-007 structural fix' (P2 Sprint / Done / Claude Code) -> 34ba09cf-876a-811f-ae77-cc8b18d9f289
+- 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-046: Extend feedback memory with topic-keyword-grep lesson' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-81d5-aa8b-dde91be0745d

@@ -36,7 +36,7 @@ Sole income earner. Time is the most constrained asset.
 - Overnight: Windows Task Scheduler on i5 — reliable
 
 ## ALL REPOS (located at C:\twobirds\)
-- digital-confidence: DCC, 241 pages, 21 modules, bilingual EN/FR
+- digital-confidence: DCC, 27 main modules (module-1 through module-27) + 2 supplementary (module-2-5 half-step, module-visual-ai bonus), bilingual EN/FR, deployed on GitHub Pages
 - career-coach: AI job application tool
 - clarity: AI business diagnostic for SMEs
 - aaron-patzalek: personal brand site

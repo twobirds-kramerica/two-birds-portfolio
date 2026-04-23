@@ -217,16 +217,55 @@ Primary Warm Hearth tokens in `digital-confidence/css/tokens.css`:
 
 ## 11. Open Questions (UNKNOWN flags — Aaron review required)
 
-1. **UNKNOWN — FR locale precision.** Spec §8 says "fr-QC"; code uses `fr-CA`. Which is authoritative? (Matters: typography fallbacks, character sets, locale-specific content references.) | Where to look: a 2026-02 chat message OR Notion "Transcript Archive Apr 21" page.
-2. **UNKNOWN — Margaret vs Brenda.** Module-1 opens with "Margaret, 74". Is Margaret a renamed Brenda for narrative reasons, or a separate composite persona? | Where to look: chat 2026-02-16 "Digital literacy training manual" around msg 20-50.
-3. **UNKNOWN — Merriweather + Source Sans 3 rationale.** `fonts.css` header says self-hosted but doesn't explain *why* this specific pairing over alternatives (Inter, Open Sans, Atkinson Hyperlegible). | Where to look: 2026-04-18 "Exploring DCC UI style options" (10 msgs) or 2026-04-01 "MegaBuild relocation project" (720 msgs, largest).
-4. **UNKNOWN — Target B2B buyer personas + sales motion.** Industry targets are inferred, not confirmed. | Where to look: 2026-04-15 "Autonomous sprint prompt generator for Two Birds Innovation" (216 msgs) + `digital-confidence/_b2b/pitch-deck.html`.
-5. **UNKNOWN — CA$15k-$30k/year pricing confirmation.** Spec authored it, but no primary source confirmation in this archaeology pass. | Where to look: chat 2026-04-02 "$1M in a year?" (6 msgs) + pitch deck + Notion Command Center.
-6. **UNKNOWN — Kids version device strategy.** Kids Research DB lives in HAL Stack Phase 1 (20 rows); actual product shape/platform/target age range not mapped here. | Where to look: S-R01 rows + chat references to "kids".
-7. **UNKNOWN — Decision to keep vs sunset the long-scroll modules** after the wizard POC evaluation. Pending Aaron's evaluation. | Where to look: user decision.
-8. **UNKNOWN — Why Windows Start menu was included as "Escape Hatch #3"** given Brenda is iPad+iPhone-only. Is the course expanding beyond Brenda's profile? Or is Brenda a representative of a broader audience? | Where to look: module-1 content history + 2026-02-16 chat.
-9. **UNKNOWN — Completion-data sharing with B2B buyers.** The certificate.js generates learner-local PDFs; is there a back-channel data flow to show buyers "N learners completed"? Not found in this pass. | Where to look: pitch-deck + `admin/` pages + `_analytics/`.
-10. **UNKNOWN — Warm Hearth vote mechanics** (65.5% of whom? Aaron + friends? Scrappy Pack vote? Beta users?). | Where to look: 2026-04-18 or 2026-04-19 chat.
+**Status update 2026-04-23 via S-ARCHAEOLOGY-001 continuation:** projects.json + memories.json (10008-char DCC project_memory) read; many UNKNOWNs closed. Remaining genuine unknowns below.
+
+### ANSWERED via project_memory (no longer UNKNOWN)
+
+- ~~Margaret vs Brenda~~ **ANSWERED**: Brenda is REAL — Aaron's step-mother (full name Brenda Bender, per DCC project_memory). Trish Patzalek is the second DCC beta tester. Margaret in module-1 is a narrative composite/privacy-renamed persona derived from Brenda's psychology. [Source: `memories.json` project_memories[019c67c5]]
+- ~~Brenda iPad+iPhone-only vs Android/Windows modules~~ **ANSWERED**: "Primary testing device: Samsung S24 Android Chrome" per DCC project_memory. Brenda's profile was the founding inspiration, but the actual audience broadened and the product is tested on Aaron's Android. Android + Windows escape-hatches included for parity.
+- ~~Warm Hearth vote mechanics~~ **ANSWERED**: "Warm Hearth won org vote (65.5%). Font licensing audit completed (Georgia and Segoe UI rejected)." [Source: HAL Stack project_memory 019cc3d2] — it was an **org vote** (Founding Board personas, not beta users).
+- ~~Merriweather + Source Sans 3 rationale~~ **PARTIAL ANSWER**: Georgia + Segoe UI were rejected during font audit; Merriweather + Source Sans 3 chosen. Specific trade-off criteria still not cited verbatim. [Source: HAL Stack project_memory]
+
+### Still UNKNOWN (Aaron review required)
+
+1. **FR locale precision** — code uses `fr-CA`; spec §8 said "fr-QC". Which is authoritative? (Matters for locale-specific fallbacks + content references.)
+2. **Target B2B buyer industries** — inferred (libraries, municipalities, healthcare, credit unions); not confirmed.
+3. **CA$15k-$30k/year pricing confirmation** — not in DCC project_memory. Likely in `_b2b/pitch-deck.html` or chat Apr 2 "$1M in a year?".
+4. **Kids version device strategy** — S-R01 Kids Research DB exists; actual product shape still undefined.
+5. **Long-scroll vs wizard decision** — pending Aaron's evaluation of POC URLs (both S-032 at root + S-DCC-V2 at /v2/).
+6. **Completion-data sharing with B2B buyers** — certificate.js is learner-local PDF; whether there's a back-channel N-learners-completed flow for buyers is unverified. Would live in `admin/` or `_analytics/` if it exists.
+7. **DCC v2 status per HAL Stack memory** — "DCC v2 is parked until a clearer brief is defined" (HAL Stack project_memory 019cc3d2, updated 2026-03-06). Yet today (2026-04-22) Aaron scoped + approved S-DCC-V2 with "Run immediately. Budget is live. Aaron approved April 22, 2026" note. Interpretation: the "parked" status was superseded by Aaron's April 22 direction. Confirm explicitly.
+8. **Machine primacy mismatch** — HAL Stack memory says "Lenovo Pentium Silver: original dev machine". Two Birds Command memory says "i5 Lenovo (primary), EZbook Pentium Silver Lenovo (secondary)". Different machine labelled primary across the two memories. Confirm current primary.
+
+## 11a. NEW CONFIRMED — authoritative voice spec (from DCC prompt_template)
+
+The DCC project has a prompt_template (Aaron's canonical voice spec for any Claude instance working in DCC). Direct quotes:
+
+**Persona & Tone:**
+> "You are a Senior Instructional Designer for older adults. Your 'voice' is calm, patient, and non-judgmental."
+
+**Prohibited Phrasing:**
+> "Never use words like 'simply,' 'obviously,' 'just,' or technical acronyms (API, UI, UX, MFA) without defining them as a 'Security Tool' first."
+
+**Encouragement Loops:**
+> "Every 500 words, include a 'Confidence Check' that reminds Brenda: 'You are doing great, and your device is safe.'"
+
+**Visual-First Descriptions:**
+> "Since this is a text-based guide that will be printed, you must use spatial descriptions. Instead of saying 'Open Settings,' say 'Look for the grey icon that looks like mechanical gears on your home screen.'"
+
+**The "3-Second Rule":**
+> "Integrate the '3-Second Rule' (Stop, Breathe, Verify) into every security-related chapter."
+
+**Canadian Localisation:**
+> "Always default to Canadian spelling (e.g., 'Centre,' 'Labour') and reference Ontario-specific resources provided in the Brenda_Interview_Context file."
+
+**Exercise Design:**
+> "Every practical exercise must be 'Low Stakes.' Never ask her to do something that could lead to a charge or a data change until Week 5 (Safe Transactions). Include a 'Success State' for every exercise so she knows exactly what the screen should look like when she finishes."
+
+**No Summaries rule:**
+> "If asked to generate a module, provide the full, printable text. Do not outline what would be in it."
+
+These eight rules are the authoritative voice spec. Anywhere `tokens.css` / `CLAUDE.md` references "voice-check protocol" it should resolve to these.
 
 ## 12. Decision Log (chronological, partial)
 

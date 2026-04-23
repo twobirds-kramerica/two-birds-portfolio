@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** 2026-04-22 17:08→19:49 EST max-mode 5-sprint chain: S-032 wizard POC + S-033 "just go" trigger + S-034 theme-color + S-035 Notion retro-file + S-036 preconnect cleanup. Plus RI-006 escalation + RI-007 (Drive MCP blocker) + governance hardening.
+**Last Session:** 2026-04-22 17:08→21:01 EST max-mode 8-sprint chain (S-032 through S-039). Three additional sprints after the first wrap: S-037 cross-repo preconnect sweep, S-038 module count truth-up, S-039 portfolio root README + voice-check compliance. Plus RI-006 escalation + fix + RI-007 (Drive MCP blocker) + governance hardening.
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
@@ -128,17 +128,66 @@ Post-cleanup: 0 occurrences of any of the 4 stale patterns; googletagmanager pre
 
 Plus pre-chain governance: `a055045`, `b4e1e02`, `9202b8d`, `63b68b1` (portfolio).
 
-### Deliberate stopping point at S-036
-Next obvious candidates:
-- **Portfolio README create** (~30-45 min) — verified-unshipped, moderate value
-- **Module count truth-up** (~15 min) — CLAUDE.md says 21 modules, filesystem has 29; doc fix only
-- **Kevin AUDIT §3-§6 drill-down** — unknown scope, needs investigation
-- **Playwright wizard tests (S-037)** — still held pending wizard evaluation
+### Stopping point at S-036 (first wrap at 19:49 EST)
+Candidates identified but not shipped at that point:
+- Portfolio README create (~30-45 min) — verified-unshipped, moderate value
+- Module count truth-up (~15 min) — CLAUDE.md said 21 modules, reality was 27 + 2 supplementary
+- Kevin AUDIT §3-§6 drill-down — unknown scope
+- Playwright wizard tests — still held pending wizard evaluation
 
-Chose to stop the chain at 5 sprints rather than grind into lower-value autonomous polish. The wizard evaluation is the single highest-leverage next input (unlocks per-module rollout sprint OR clean revert). README + module-count truth-up can wait for next session. Max mode remains ACTIVE UNTIL 2026-04-22 23:59 EST — if Aaron returns with a specific ask or "keep going," I'll execute; if 23:59 passes first, normal-mode governance resumes automatically per max-mode.md timestamp rule.
+Aaron typed `next sprint` again, so the chain continued with three more sprints before the second wrap at 21:01 EST.
 
 ### S-036 Notion retro-file
 **DEFERRED** to next batch. Paper trail is captured in git log + commit message + SESSION-STATE. Notion can lag by a few hours without loss.
+
+---
+
+## ⚡ 2026-04-22 19:49→21:01 EST — Max-mode 3-sprint continuation (S-037 / S-038 / S-039)
+
+After the first wrap, Aaron typed `next sprint`. Max mode still ACTIVE, so chain continued with three more wizard-neutral autonomous-safe sprints.
+
+### Sprint 6 — S-037 Cross-repo stale preconnect sweep (sovereignty polish)
+**Commits:** aaron-patzalek master @ `8dadf5d` + career-coach main @ `80ee1e1`
+
+Extended S-036's sovereignty-polish pattern across the sibling repos that got self-hosted fonts in the 2026-04-21 max-mode run. Scanned 7 sibling repos (clarity / kevins-apartment-search / aaron-patzalek / two-birds-innovation / career-coach / two-birds-command-centre / quality-dashboard); 2 repos had leftovers:
+
+- **aaron-patzalek**: 4 stale preconnects in 2 files (`patches/career-coach-index.html`, `patches/kevins-apartment-index.html`). Inter self-hosted; hints were dead weight.
+- **career-coach**: 2 stale preconnects in 1 file (`beta/index.html`). DM Sans + DM Serif Display self-hosted per S-CC-FONTS (commit `45d3ddd`).
+
+Other 5 repos clean. Total: 3 files, -6 lines, 2 repos pushed.
+
+### Sprint 7 — S-038 Module count truth-up (CLAUDE.md doc fix)
+**Commit:** portfolio master @ `37ba935` (1 file, +1/-1)
+
+CLAUDE.md line 39 claimed "DCC, 241 pages, 21 modules" — outdated. Reality: 27 numbered main modules (module-1 through module-27-*), plus `module-2-5.html` (half-step) and `module-visual-ai.html` (bonus), totalling 29 module-*.html files. Updated to reflect current state; dropped the "241 pages" claim (almost certainly stale after ~200-page theme-color S-034 sprint; auditing the true total would be a separate sprint).
+
+### Sprint 8 — S-039 Portfolio root README + voice-check
+**Commits:** portfolio master @ `c56b087` (+108 lines new README) + portfolio master @ `2120457` (voice-check compliance, -27/+27 replacing 18 em dashes)
+
+No README.md existed in portfolio root before today. Anyone landing on github.com/twobirds-kramerica/two-birds-portfolio saw the flat file list with no orientation. Shipped a 108-line master-index README covering: orient-in-60-seconds path, sibling repos, sprint loop, trigger commands table (includes `just go`), governance references, HAL Stack + Notion sync pointers, key-files reference table, session-start checklist, Aaron/Scrappy Pack/Founding Board context.
+
+Follow-up voice-check pass caught 18 em dashes (README is external-facing content per CLAUDE.md voice-check protocol). Replaced with colons, periods, parentheses, semicolons per context. Zero em dashes remaining; zero banned words.
+
+### Cumulative ships this max-mode window (8 sprints, ~1100 insertions + ~370 deletions across 4 repos)
+
+| # | Sprint | Commit(s) | Repo |
+|---|---|---|---|
+| 1 | S-032 wizard POC | `36e3763` | digital-confidence |
+| 2 | S-033 "just go" trigger | `d0aa1ff` | portfolio |
+| 3 | S-034 theme-color fix | `e017ea9` | digital-confidence |
+| 4 | S-035 Notion retro-file | `ef2bdb5` | portfolio |
+| 5 | S-036 preconnect cleanup | `b59d6dc` | digital-confidence |
+| 6 | S-037 cross-repo preconnect sweep | `8dadf5d` + `80ee1e1` | aaron-patzalek + career-coach |
+| 7 | S-038 module count truth-up | `37ba935` | portfolio |
+| 8 | S-039 portfolio README + voice-check | `c56b087` + `2120457` | portfolio |
+
+Plus reliability + governance commits: `a055045`, `b4e1e02`, `9202b8d`, `63b68b1`, `c3cd602`, `7c3afa3`, `63bfc3c`.
+
+### Stopping point at S-039 (second wrap at 21:01 EST)
+Remaining autonomous-safe candidates before continuing would drop into genuine low-value territory (Kevin AUDIT drill-down with unknown scope; Playwright wizard tests still held). Natural stop at 8 sprints. Max mode still technically ACTIVE UNTIL 23:59 EST but the queue is drained for scope that doesn't need Aaron input first.
+
+### S-037 / S-038 / S-039 Notion retro-file
+**DEFERRED** to next batch. Same reason as S-036 at first wrap: git + SESSION-STATE + commit messages are the authoritative trail; Notion is downstream.
 
 ---
 
@@ -3673,5 +3722,5 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
 
-Last updated: 2026-04-22 at 19:49 EST (Toronto)
+Last updated: 2026-04-22 at 21:01 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

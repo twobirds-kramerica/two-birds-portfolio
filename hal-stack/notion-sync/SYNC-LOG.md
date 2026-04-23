@@ -132,3 +132,6 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-038: CLAUDE.md module count truth-up (21 to 27 main modules)' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-81b8-a15b-db1d54ffce8f
 - 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-039: Portfolio root README.md + voice-check compliance' (P2 Sprint / Done / Claude Code) -> 34ba09cf-876a-8112-876d-d97a8f87b40a
 - 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-040: Kevin AUDIT.md SHIPPED-header — all 5 Top-5 actions closed' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-815e-9f40-daeca258b9f5
+- 2026-04-22 22:24 Eastern Daylight Time — dedupe S-036-038: archived duplicate S-036: page 34ba09cf-876a-819f-8bde-e19696eb994e ('S-036: DCC stale Google Fonts + cdnjs preconnect c')
+- 2026-04-22 22:24 Eastern Daylight Time — dedupe S-036-038: archived duplicate S-037: page 34ba09cf-876a-81fe-a928-d2143cdc9b44 ('S-037: Cross-repo preconnect sweep (aaron-patzalek')
+- 2026-04-22 22:24 Eastern Daylight Time — dedupe S-036-038: archived duplicate S-038: page 34ba09cf-876a-81b8-a15b-db1d54ffce8f ('S-038: CLAUDE.md module count truth-up (21 to 27 m')

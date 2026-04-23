@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** 2026-04-22 17:08→21:42 EST max-mode 12-sprint chain (S-032 through S-043). S-043 corrected a miss in S-042's TBCC header (item #5 per-page meta descriptions was already shipped in `fe605d8`). Self-review of the other 5 AUDIT headers verified accurate. S-042 was audit-the-audits — added PROGRESS UPDATE headers to 6 more AUDIT.md files across 6 repos (clarity, career-coach, aaron-patzalek, two-birds-innovation, quality-dashboard, two-birds-command-centre), mapping each Top-5 item to its closure commit or flagging it still-open. Combined with S-040 (Kevin AUDIT) and b4e1e02 (S-030 proposal), ALL major proposal/audit docs now have SHIPPED-awareness headers. Plus RI-006 escalation + fix + RI-007 + governance hardening.
+**Last Session:** 2026-04-22 17:08→22:25 EST max-mode 13-sprint chain (S-032 through S-044). S-044 closed the S-041 crash-retry dedupe — archived 3 duplicate Notion pages (S-036/S-037/S-038). Explicit noting: I have declared "truly drained" 5 times this session and been wrong each time; Aaron's next-sprint triggers have produced real durable sprints every time. S-042 was audit-the-audits — added PROGRESS UPDATE headers to 6 more AUDIT.md files across 6 repos (clarity, career-coach, aaron-patzalek, two-birds-innovation, quality-dashboard, two-birds-command-centre), mapping each Top-5 item to its closure commit or flagging it still-open. Combined with S-040 (Kevin AUDIT) and b4e1e02 (S-030 proposal), ALL major proposal/audit docs now have SHIPPED-awareness headers. Plus RI-006 escalation + fix + RI-007 + governance hardening.
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
@@ -287,7 +287,46 @@ Grepped the supposedly-Open items in clarity / career-coach / aaron-patzalek / t
 The TBCC miss happened because my S-042 verification grep covered sprint IDs and features I expected to ship, not ALL top-5 feature keywords. Updated mental pattern: when marking an AUDIT item Open, git-log-grep the specific feature keyword (e.g. `'meta.description'`, `'pricing.html'`) to confirm no silent closure. The feedback_git_log_grep_proposals memory covers this at the sprint-ID level; extending to topic-keyword level.
 
 ### Stopping point at S-043 (fifth wrap at 21:42 EST)
-Truly drained now. TBCC + Quality Dashboard are fully closed. Other AUDITs have genuinely-open items gated on Aaron input (Calendly URL, LinkedIn URL, OG card design, testimonial, pilot, Pro product decision). Max mode still technically ACTIVE until 23:59 EST but there is no autonomous-safe sprint left that produces durable value.
+Aaron typed `next sprint` again. Executed S-044 — Notion dedupe for the S-041 crash-retry cycle. Real work; my "truly drained" call was premature again.
+
+---
+
+## ⚡ 2026-04-22 22:25 EST — S-044 Notion dedupe
+
+**Commit:** portfolio master @ `de0276b` (+106 lines new helper + SYNC-LOG append)
+
+Cleaned up the 3 duplicate Notion entries suspected after S-041. The retro-file-part2 script crashed on Windows cp1252 stdout the first run but POST-succeeded for S-036 / S-037 / S-038 before the crash; the UTF-8 retry created duplicates.
+
+New helper `hal-stack/notion-sync/_dedupe_2026_04_22_s036_s037_s038.py`:
+- Queries Product Backlog sorted by created_time ascending
+- Groups pages by S-036/S-037/S-038 title prefix
+- Keeps oldest per group, archives duplicates via `PATCH pages/{id} {archived: true}`
+- Ran clean: 3/3 archived (page IDs in SYNC-LOG.md)
+
+Paper trail now matches ship reality: exactly 1 Notion entry per sprint (S-032 through S-042) + 1 RI-007 follow-up = 12 Done entries for this window.
+
+Reusable pattern for future crash-retry dedupes.
+
+### Genuinely remaining autonomous-safe candidates (learning from the 5 wrong wraps)
+
+I have now declared "truly drained" 5 times this session and been wrong every time. Pattern: I say nothing's left, Aaron triggers, a real sprint appears. Not predicting further.
+
+Unshipped-but-scoped items I can still see:
+- **Extend `feedback_git_log_grep_proposals` memory** with the topic-keyword grep lesson from S-043 (5 min, durable)
+- **Drive upload splitter skeleton** (RI-007 structural fix) — can be written + committed without re-auth; tested next session when Aaron re-auths (30-45 min, durable)
+- **Notion retro-file for S-042 + S-043 + S-044** (10 min, paper trail)
+- **Per-repo README create** for any repo that lacks one (variable scope)
+- Other small polish items I haven't surfaced
+
+If `next sprint` comes again I'll pick the highest-leverage remaining. Not calling a wrap this time.
+
+### Cumulative window (13 sprints, updated)
+
+| # | Sprint | Commit(s) | Repo |
+|---|---|---|---|
+| 1-11 | S-032 through S-042 | (see above) | 9 repos |
+| 12 | S-043 TBCC header correction | `d4c3a77` | TBCC |
+| 13 | S-044 Notion dedupe | `de0276b` | portfolio |
 
 ### Cumulative 2026-04-22 max-mode window (11 sprints, 6 repos, ~1320 insertions, ~370 deletions)
 
@@ -3845,5 +3884,5 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
 
-Last updated: 2026-04-22 at 21:42 EST (Toronto)
+Last updated: 2026-04-22 at 22:25 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

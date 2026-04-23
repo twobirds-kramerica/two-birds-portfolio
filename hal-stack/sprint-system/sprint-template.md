@@ -64,6 +64,32 @@ For Stage 1-2, panel review is optional (Drew decides).
 FINAL STEP: Update SESSION-STATE.md, auto-generate context export,
 commit, push to master.
 
+MCP WRITE SAFETY (2026-04-22, S-MCP-RELIABILITY-001):
+If this sprint makes Notion writes programmatically, wrap every write in
+`safe_notion_write()` from `hal-stack/mcp-reliability/notion-write-safe.py`.
+Prevents silent-failure bugs like the S-041 cp1252 crash where POST
+succeeded but client-side code crashed before logging success.
+
+Example:
+  from pathlib import Path
+  import importlib.util
+  spec = importlib.util.spec_from_file_location(
+      'sw', Path('hal-stack/mcp-reliability/notion-write-safe.py'),
+  )
+  sw = importlib.util.module_from_spec(spec); spec.loader.exec_module(sw)
+
+  result = sw.safe_notion_write(
+      operation_fn=lambda: client.create_page(ds_id, props),
+      operation_name='create_page:ProductBacklog:S-XXX',
+      verify_read_fn=sw.verify_page_exists_fn(client),
+  )
+  if result is None:
+      # All retries failed — see logs/mcp-write-fallback.json
+      pass
+
+Exhausted writes are recorded to logs/mcp-write-fallback.json for manual
+recovery; every attempt logs to logs/mcp-write-log.txt.
+
 ### Expected Outputs
 - [file or commit expected]
 - [file or commit expected]

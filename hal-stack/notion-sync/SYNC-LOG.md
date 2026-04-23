@@ -124,3 +124,11 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-22 19:39 Eastern Daylight Time — create_backlog_item: 'S-033: 'just go' trigger phrase — RI-006 Fix #1' (P1 Sprint / Done / Claude Code) -> 34aa09cf-876a-81ad-bf41-cf17451817af
 - 2026-04-22 19:39 Eastern Daylight Time — create_backlog_item: 'S-034: DCC theme-color meta tag Warm Hearth alignment (200 pages)' (P3 Sprint / Done / Claude Code) -> 34aa09cf-876a-8134-8a1a-e4f4bd4af685
 - 2026-04-22 19:39 Eastern Daylight Time — create_backlog_item: 'RI-007 follow-up: Drive MCP re-auth (drive.file scope) + large-file upload splitter helper' (P2 Task / Backlog / Claude Code) -> 34aa09cf-876a-8109-af94-eea57d9de8c5
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-036: DCC stale Google Fonts + cdnjs preconnect cleanup (sovereignty polish)' (P3 Sprint / Done / Claude Code) -> 34ba09cf-876a-810a-af38-ccd484eae190
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-037: Cross-repo preconnect sweep (aaron-patzalek + career-coach)' (P3 Sprint / Done / Claude Code) -> 34ba09cf-876a-815b-b9ae-d643ee3f519b
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-038: CLAUDE.md module count truth-up — 21 → 27 main modules' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-8123-ad94-ff6d60504528
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-036: DCC stale Google Fonts + cdnjs preconnect cleanup (sovereignty polish)' (P3 Sprint / Done / Claude Code) -> 34ba09cf-876a-819f-8bde-e19696eb994e
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-037: Cross-repo preconnect sweep (aaron-patzalek + career-coach)' (P3 Sprint / Done / Claude Code) -> 34ba09cf-876a-81fe-a928-d2143cdc9b44
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-038: CLAUDE.md module count truth-up (21 to 27 main modules)' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-81b8-a15b-db1d54ffce8f
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-039: Portfolio root README.md + voice-check compliance' (P2 Sprint / Done / Claude Code) -> 34ba09cf-876a-8112-876d-d97a8f87b40a
+- 2026-04-22 21:27 Eastern Daylight Time — create_backlog_item: 'S-040: Kevin AUDIT.md SHIPPED-header — all 5 Top-5 actions closed' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-815e-9f40-daeca258b9f5

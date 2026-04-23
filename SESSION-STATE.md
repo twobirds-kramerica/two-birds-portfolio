@@ -1,5 +1,5 @@
 # Session State — Two Birds Innovation
-**Last Session:** 2026-04-22 17:08→23:22 EST max-mode 18-sprint chain — S-032 through S-047 plus S-DCC-V2 (wizard-first rebuild POC) plus **S-MCP-RELIABILITY-001 (MCP reliability layer)**. S-MCP-RELIABILITY pulled from data source `a297b04c-...`; closed the silent-failure class of bugs seen twice today (S-041 cp1252 crash, S-030 verified-too-late). Ships `notion-write-safe.py` + `heartbeat-check.py` + `session-state-verify.py` + 2 new CLAUDE.md standing rules + sprint-template MCP-write-safety block. S-042 was audit-the-audits — added PROGRESS UPDATE headers to 6 more AUDIT.md files across 6 repos (clarity, career-coach, aaron-patzalek, two-birds-innovation, quality-dashboard, two-birds-command-centre), mapping each Top-5 item to its closure commit or flagging it still-open. Combined with S-040 (Kevin AUDIT) and b4e1e02 (S-030 proposal), ALL major proposal/audit docs now have SHIPPED-awareness headers. Plus RI-006 escalation + fix + RI-007 + governance hardening.
+**Last Session:** 2026-04-22 17:08→2026-04-23 00:01 EST max-mode 20-sprint chain — S-032 through S-047 plus S-DCC-V2 + S-MCP-RELIABILITY-001 + **S-ARCHAEOLOGY-001 (PARTIAL, DCC Product Wiki v0.1)** + **S-NEXT-SESSION (4 repo READMEs)**. ~7h session; Aaron authorised "run until credits run out" twice. Queue in data source `a297b04c-...` is now empty of Ready Claude-Code sprints. S-042 was audit-the-audits — added PROGRESS UPDATE headers to 6 more AUDIT.md files across 6 repos (clarity, career-coach, aaron-patzalek, two-birds-innovation, quality-dashboard, two-birds-command-centre), mapping each Top-5 item to its closure commit or flagging it still-open. Combined with S-040 (Kevin AUDIT) and b4e1e02 (S-030 proposal), ALL major proposal/audit docs now have SHIPPED-awareness headers. Plus RI-006 escalation + fix + RI-007 + governance hardening.
 **Model:** Claude Opus 4.7 (1M context) via Claude Code CLI
 
 ## Notion Sync Status
@@ -332,6 +332,8 @@ If `next sprint` comes again I'll pick the highest-leverage remaining. Not calli
 | 16 | S-047 Notion retro-file part 3 (S-042-S-046, 5 entries) | `b795acb` | portfolio |
 | 17 | S-DCC-V2 Phase 1-6 (wizard-first rebuild POC) | 4 commits on digital-confidence main | digital-confidence |
 | 18 | S-MCP-RELIABILITY-001 (safe-write wrapper + heartbeat + state-verify + 2 rule updates) | `b99a461` + 3 file commit | portfolio |
+| 19 | S-ARCHAEOLOGY-001 PARTIAL (DCC Product Wiki v0.1, Phases 1+2+4 only; 3+5 deferred) | `0050a63` | portfolio |
+| 20 | S-NEXT-SESSION (4 repo READMEs; tasks 2+3 already shipped prior sessions) | `cb24d08` + `9b193d3` + `c362c30` + `4c6e25a` | aaron-patzalek + clarity + two-birds-innovation + two-birds-project-template |
 
 ### Cumulative 2026-04-22 max-mode window (11 sprints, 6 repos, ~1320 insertions, ~370 deletions)
 
@@ -470,6 +472,82 @@ Not skipping these out of fatigue — they're explicitly scoped for different ru
 ### Max mode window closing
 
 Current time 23:22 EST. Max mode auto-expires 23:59 EST (37 min away). Clean stop here; 18 sprints shipped total across 2026-04-22 17:08→23:22 EST (~6h15m window). Both remaining Ready sprints are queued for future sessions per their own specs.
+
+---
+
+## 🏛️ 2026-04-22 23:23→23:58 EST — S-ARCHAEOLOGY-001 (PARTIAL)
+
+**Notion sprint:** `34aa09cf-876a-81e1-a37f-cd1125b2c1ec` · P0 · Ready → In Progress → **Review** (honest partial status)
+**Commit:** portfolio master @ `0050a63` (+263 lines — `DCC-PRODUCT-WIKI.md`)
+
+Aaron authorised re-execution of the remaining Ready Claude-Code sprints ("run until queue is empty or credits run out"), overriding the earlier sprint-spec timing note that said "run tomorrow with full fresh budget."
+
+Read-only archaeology — no code touched, no DCC production files modified. Single new file: `DCC-PRODUCT-WIKI.md` at portfolio root.
+
+### What shipped (Phases 1, 2, 4 — partial)
+
+- **Phase 1:** 150 conversations in the 82 MB `conversations.json` export inventoried; 24 identified as DCC-specific via narrowed keyword filter (dropped the over-broad "senior" match that was hitting career-resume context). Sampled 3 key chats: founding (2026-02-16, 511 msgs), style-options (2026-04-18, 10 msgs), reskin-unlock (2026-04-22, 16 msgs).
+- **Phase 2:** Repo signals from `tokens.css`, `fonts.css`, `module-1.html`, and the portfolio-side CLAUDE.md / RETRO / RELIABILITY-ISSUES.md files. Not re-read: `DESIGN-SYSTEM.md`, `ACCESSIBILITY-REPORT.md` (exist; referenced in wiki but not cited verbatim).
+- **Phase 4:** `DCC-PRODUCT-WIKI.md` with all 12 sections from spec. Every claim tagged `[CONFIRMED: source]` or `[UNKNOWN: why not confirmed]`. 10 UNKNOWN flags enumerated in §11 for Aaron's review; Decision Log §12 captures the chronology with chat-date citations.
+
+### What deferred (Phases 3, 5 — marked PARTIAL in doc header)
+
+- **Phase 3:** 10-page Notion scan (10 specific page IDs listed in spec; each a fetch + extract operation). Defer to a proper fresh-session S-ARCHAEOLOGY-002.
+- **Phase 5:** 2 new Notion pages (wiki + open-questions checklist under Command Center). Defer to same follow-on session.
+- Deep read of the Apr 1 MegaBuild (720 msgs) + Mar 25 Mega Build Night (464 msgs) — these almost certainly close some UNKNOWN flags; skipped for time.
+
+### Why Review rather than Done
+
+PARTIAL status is explicit. Marking Done would misrepresent the paper trail. Review flags it for Aaron's attention + next-session pickup.
+
+---
+
+## 📝 2026-04-23 00:01 EST — S-NEXT-SESSION (DONE; tasks 2+3 already shipped)
+
+**Notion sprint:** `34ba09cf-876a-81fb-b3e6-e9bd5da87c36` · P1 · Ready → In Progress → **Done**
+
+**Pre-execution verification** found that 2 of the 3 sprint tasks were already shipped in prior work this session:
+- Task 1: "Audit all repos for missing root READMEs; generate minimal ones" — **UNSHIPPED** (executed now)
+- Task 2: "axe-core + broken-link-check workflow on digital-confidence" — **already shipped** (`.github/workflows/axe-core.yml` + `broken-external-link-check.yml` confirmed via `ls`)
+- Task 3: "MCP Reliability start" — **already shipped as S-MCP-RELIABILITY-001** (this session, 23:03→23:22 EST)
+
+### Task 1 execution
+
+Audited 11 Two Birds portfolio repos; 4 were missing root READMEs:
+
+| Repo | Commit | Branch |
+|---|---|---|
+| aaron-patzalek | `cb24d08` | master |
+| clarity | `9b193d3` | master |
+| two-birds-innovation | `c362c30` | master |
+| two-birds-project-template | `4c6e25a` | main |
+
+Each README covers: one-paragraph product description, how to run (static, no npm), stack + related repos, model lock note (calls out current `claude-sonnet-4-6` / `claude-opus-4-7` IDs vs retired variants), AUDIT.md pointer where relevant.
+
+Repos that already had a root README (no action needed): `career-coach`, `career-ops`, `digital-confidence`, `kevins-apartment-search`, `quality-dashboard`, `two-birds-command-centre`, `two-birds-portfolio`.
+
+### Final window state — queue empty
+
+Data source `a297b04c-...` now has **zero Ready Claude-Code sprints**. Full window total: **20 sprints**.
+
+Remaining non-Ready items in that data source (Backlog or other statuses) are not in scope for this session.
+
+---
+
+## 🏁 Session wrap (2026-04-23 00:01 EST)
+
+**Sprints shipped:** 20 (S-032 through S-047 + S-DCC-V2 + S-MCP-RELIABILITY-001 + S-ARCHAEOLOGY-001 PARTIAL + S-NEXT-SESSION)
+**Repos touched:** 9 (digital-confidence, portfolio, aaron-patzalek, career-coach, kevins-apartment-search, clarity, two-birds-innovation, quality-dashboard, two-birds-command-centre, two-birds-project-template)
+**Insertions ~ 2900 / deletions ~ 400 across the window**
+**Notion queue at close:** empty of Ready Claude-Code items in data source `a297b04c-...`; Product Backlog paper-trailed via 3 retro-file batches (9 entries across the window); S-ARCHAEOLOGY-001 left in Review for Aaron eval.
+
+**Max mode** auto-expired at 23:59 EST per governance doc; last 2 sprints (S-ARCHAEOLOGY-001 finish + S-NEXT-SESSION) ran slightly past under Aaron's explicit "run until credits run out" authorisation.
+
+**Next session pickup:**
+1. Open `DCC-PRODUCT-WIKI.md` — review the 10 UNKNOWN flags in §11, answer or correct
+2. Phase 3 + Phase 5 of S-ARCHAEOLOGY-001 (Notion page scan + wiki publication to Command Center) — scheduled as S-ARCHAEOLOGY-002 next fresh session
+3. Wizard POC evaluation at live `/v2/` (S-DCC-V2) and S-032 parallel URL — decide coexist / replace / revert
+4. P0/P1 human-review backlog from `hal-stack/sprint-system/aaron-todos-2026-04-21.md` still waiting: sextortion row tone, Calendly URL, LinkedIn link for TBI, 12 DCC Kids Research DB rows
 
 ---
 
@@ -4019,5 +4097,5 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
 
-Last updated: 2026-04-22 at 23:22 EST (Toronto)
+Last updated: 2026-04-23 at 00:01 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

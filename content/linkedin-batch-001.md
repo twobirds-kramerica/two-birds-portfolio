@@ -1,4 +1,4 @@
-# LinkedIn Batch 001 — Blunder-First Reveal
+# LinkedIn Batch 001: Blunder-First Reveal
 
 **Generated:** 2026-04-23 ~00:45 EST by S-ARCHAEOLOGY / LinkedIn-batch chain (Claude Opus 4.7, running under the claude-sonnet-4-6 model-lock instruction as documentation-only)
 **Source:** Chronicle Entry #001 ("The Sprint That Refused to Run") + Chronicle Entry #002 ("What Aaron Has Been Doing Since November") from Notion
@@ -9,7 +9,7 @@ Voice-check scanned: no em dashes, no banned words (spearheaded, leveraged, fost
 
 ---
 
-## Post 1 — The sprint that refused to run
+## Post 1: The sprint that refused to run
 
 I ran 75 AI sprints in 27 hours.
 
@@ -33,7 +33,7 @@ Built because an AI said no.
 
 ---
 
-## Post 2 — Three of 75 sprints rebuilt things that already existed
+## Post 2: Three of 75 sprints rebuilt things that already existed
 
 The AI ran 75 development sessions in 27 hours.
 
@@ -51,7 +51,7 @@ The sprint that rebuilt was not the AI's fault. It was the scaffolding's fault. 
 
 ---
 
-## Post 3 — The 82MB file I never read
+## Post 3: The 82MB file I never read
 
 I have 80 megabytes of conversation history with Claude.
 
@@ -69,7 +69,7 @@ Nothing is mine if the AI cannot read it. Either write it down or let it go.
 
 ---
 
-## Post 4 — Laid off in November. Seven products by April.
+## Post 4: Laid off in November. Seven products by April.
 
 I got laid off in November.
 
@@ -93,7 +93,7 @@ Building is the practice. Selling is the performance. I am mid-practice.
 
 ---
 
-## Post 5 — I accidentally bought the maximum subscription
+## Post 5: I accidentally bought the maximum subscription
 
 I accidentally bought the maximum subscription tier for a whole month.
 
@@ -115,7 +115,7 @@ I am now in month two with the wrong goal behind me. This month's goal is ink on
 
 ---
 
-## Post 6 — An AI that pushed back saved me
+## Post 6: An AI that pushed back saved me
 
 My AI pushed back on me eleven times yesterday.
 
@@ -133,7 +133,7 @@ I set the AI up with a sparring-partner rule specifically to push back on me. It
 
 ---
 
-## Post 7 — Voice dictation and no coding background
+## Post 7: Voice dictation and no coding background
 
 I have never written code.
 
@@ -153,7 +153,7 @@ If you have never coded, start. Your management experience is an asset, not a ha
 
 ---
 
-## Post 8 — My step-mother is real; Margaret in module one is not
+## Post 8: My step-mother is real; Margaret in module one is not
 
 The digital literacy platform I have been building has a persona named Brenda.
 
@@ -163,7 +163,7 @@ She is the reason the platform exists.
 
 In the module content, the first story is about Margaret, 74, panicking at a fake virus warning. Margaret is not Brenda. Margaret is a composite built from Brenda's real psychology so that Brenda could read the module without feeling singled out.
 
-The design decision took five minutes to make and three months to realise I had forgotten I made it. Every new AI session I opened would reload the product and ask "who is Brenda?" — and the answer that lived in my head was not in any file the AI could read.
+The design decision took five minutes to make and three months to realise I had forgotten I made it. Every new AI session I opened would reload the product and ask "who is Brenda?". The answer that lived in my head was not in any file the AI could read.
 
 It is now, in the Product Wiki. Every AI I open from this day forward will know Brenda is my step-mother, and Margaret is the composite the platform uses to protect her.
 
@@ -171,7 +171,7 @@ Writing it down is the unpaid labour. The product exists because of it.
 
 ---
 
-## Post 9 — The Float Free Index is 48 out of 100
+## Post 9: The Float Free Index is 48 out of 100
 
 I track something called the Float Free Index.
 
@@ -191,7 +191,7 @@ Sovereignty is not paranoia. It is discipline.
 
 ---
 
-## Post 10 — The first Chronicle entry is about the Chronicle system not running
+## Post 10: The first Chronicle entry is about the Chronicle system not running
 
 I have a running document of everything that has gone wrong this year.
 

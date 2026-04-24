@@ -341,6 +341,7 @@ If `next sprint` comes again I'll pick the highest-leverage remaining. Not calli
 | 25 | S-ARCHAEOLOGY-005 Portfolio Wiki (MVP, Two Birds Command-anchored) | part of `6efce66` | portfolio |
 | 26 | S-DCC-V2 Phase 7 PARTIAL (modules 2 + 3 EN JSONs; FR deferred) | `317c054` | digital-confidence |
 | 27 | LinkedIn batch 001 (10 Blunder-First Reveal posts from Chronicle #001+#002) | `9e4938b` + `f7ee274` (voice-check fix) | portfolio |
+| 28 | Repo inspection — credential + Cloudflare-bypass scan across 13 public repos | pending commit | portfolio |
 
 ### Cumulative 2026-04-22 max-mode window (11 sprints, 6 repos, ~1320 insertions, ~370 deletions)
 
@@ -582,6 +583,46 @@ Voice-check initial commit had 11 em dashes in post bodies + 12 in scaffold; fix
 - DCC v2 Phase 7 modules 4-27 + 2-5 + visual-ai (26 modules × EN + potential FR): not done
 - FR JSONs for modules 2 + 3: deferred per spec "FR nulls acceptable"
 - S-ARCHAEOLOGY-002/003/004/005 Notion queue entries: these sprint IDs don't exist as Notion rows in `a297b04c-...`; Aaron created them on-the-fly in the chain directive. Retro-file as Done entries optional; skipped for time.
+
+---
+
+## 🔒 2026-04-23 ~00:45 EST — Repo Inspection Sprint (credential + bypass-library scan)
+
+Different sprint shape from the wiki chain: security inspection, not code shipping.
+
+**Output:** `hal-stack/sprint-system/repo-inspection-output.md` (pasteable-to-Claude.ai summary per sprint spec).
+
+### Tooling
+
+- `gh` CLI v2.89.0 — available, used
+- `gitleaks` — NOT installed. Grep-based pattern scan used as fallback + flagged as recommended Priority-3 install. Noted in output per sprint spec.
+
+### Key findings
+
+1. **13 public repos under twobirds-kramerica org** (zero private). New-to-me: `aaron-kramer` + `TBK` (legacy? — flagged for Aaron review).
+2. **kevins-apartment-search is PUBLIC** despite being described as "private tool for Kevin Burnett" in its own AUDIT.md. Site is noindex; repo source is not. Anyone can see Kevin's actual shortlisted addresses, criteria, and notes.
+3. **Google Maps Embed API key `AIzaSyD-9tSrke72PluDDL6lhVQcj5PJnO6pWQA`** exposed in Kevin's `index.html:273` (and in the snapshot-copy at `aaron-patzalek/patches/kevins-apartment-index.html:1291`). MEDIUM severity, already flagged in the April 4 2026 audit (`research/security-audit-results.md`). Action: referrer-restrict in Google Cloud Console. Claude Code cannot fix this — Aaron must do it from his Google account.
+4. **NO Cloudflare-bypass libraries** anywhere. Kevin uses standard Puppeteer 24.40.0 for OG-image scraping (`scripts/fetch-images.js`, manual invocation only). No cloudscraper / undetected-chromedriver / playwright-stealth / selenium-stealth.
+5. **conversations.json is correctly gitignored** (`two-birds-portfolio/.gitignore:8` covers `hal-stack/context-system/ingestion/raw/`). The 80MB export exists on disk but is NOT tracked in git.
+6. All other credential-pattern hits (Web3Forms, Formspree, GA, Clarity placeholder, GitHub token placeholder, LLM provider URLs) verified as false positives / working-as-designed per the April 4 audit.
+
+### Recommended actions (enumerated in output)
+
+**Priority 1 (Aaron, immediate):**
+- Make `kevins-apartment-search` private OR scrub personal details from `data/listings.json`
+- Referrer-restrict the Google Maps API key in Google Cloud Console
+
+**Priority 2 (Aaron, quick review):**
+- Investigate unfamiliar `aaron-kramer` and `TBK` public repos
+- Decide if `aaron-patzalek/patches/` staging should be gitignored
+
+**Priority 3 (Claude Code, next-queue):**
+- Install gitleaks for full secret-scanning coverage
+- Add gitleaks / GitHub Advanced Security CI workflow
+
+### Skipped step
+
+Sprint final step asked for "update Notion SESSION-STATE page via MCP." There's no single Notion page that acts as SESSION-STATE — the portfolio's `SESSION-STATE.md` file IS the session state (authoritative). Two Birds Command project workspace references a separate Notion SESSION-STATE but the specific page ID isn't captured in the sprint spec. Updating the portfolio file + logging here.
 
 ---
 

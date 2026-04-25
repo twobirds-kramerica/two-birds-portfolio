@@ -341,7 +341,8 @@ If `next sprint` comes again I'll pick the highest-leverage remaining. Not calli
 | 25 | S-ARCHAEOLOGY-005 Portfolio Wiki (MVP, Two Birds Command-anchored) | part of `6efce66` | portfolio |
 | 26 | S-DCC-V2 Phase 7 PARTIAL (modules 2 + 3 EN JSONs; FR deferred) | `317c054` | digital-confidence |
 | 27 | LinkedIn batch 001 (10 Blunder-First Reveal posts from Chronicle #001+#002) | `9e4938b` + `f7ee274` (voice-check fix) | portfolio |
-| 28 | Repo inspection — credential + Cloudflare-bypass scan across 13 public repos | pending commit | portfolio |
+| 28 | Repo inspection — credential + Cloudflare-bypass scan across 13 public repos | `64ccc09` | portfolio |
+| 29 | Security cleanup — Kevin private + patches snapshot deleted + REPO VISIBILITY RULE + TBK/aaron-kramer triage | `65aad2f` (portfolio) + `a92202af` (aaron-patzalek) + visibility flip on kevins-apartment-search | portfolio + aaron-patzalek + kevins-apartment-search (visibility-only) |
 
 ### Cumulative 2026-04-22 max-mode window (11 sprints, 6 repos, ~1320 insertions, ~370 deletions)
 
@@ -623,6 +624,44 @@ Different sprint shape from the wiki chain: security inspection, not code shippi
 ### Skipped step
 
 Sprint final step asked for "update Notion SESSION-STATE page via MCP." There's no single Notion page that acts as SESSION-STATE — the portfolio's `SESSION-STATE.md` file IS the session state (authoritative). Two Birds Command project workspace references a separate Notion SESSION-STATE but the specific page ID isn't captured in the sprint spec. Updating the portfolio file + logging here.
+
+---
+
+## 🛡️ 2026-04-24 ~01:50 EST — Security Cleanup Sprint (post-rate-limit-refresh continuation)
+
+Aaron resumed after rate-limit refresh. Executed the 5-step cleanup spec autonomously per directive.
+
+### Steps shipped
+
+1. **Kevin private:** `gh repo edit twobirds-kramerica/kevins-apartment-search --visibility private --accept-visibility-change-consequences` (consequences-flag required by gh's safety check). Confirmed `{"isPrivate": true}`. **HEADLINE:** Pages now 404 — Kevin's live site is dark. Cause: org plan does not include Pages-on-private. Reversible.
+2. **Patches snapshot deleted:** `gh api ... --method DELETE` removed `aaron-patzalek/patches/kevins-apartment-index.html` (commit `a92202af` on aaron-patzalek master). Local working tree synced via `git pull --rebase`: 2780 deletions.
+3. **CLAUDE.md REPO VISIBILITY RULE added** (commit `65aad2f` on portfolio). Captures the Pages-on-private caveat so future ops don't surprise the next operator.
+4. **TBK + aaron-kramer triage:**
+   - TBK: archived (HTTP 403 on edit); skipped per "leave if note-worthy" spec branch
+   - aaron-kramer: non-empty + last update 2026-04-01; left alone per spec
+5. **Output:** `hal-stack/sprint-system/security-cleanup-output.md` (full pasteable summary with three options for restoring Kevin's site)
+
+### Follow-ups for Aaron
+
+**Now (~5 min):**
+- Pick option (a) accept Kevin downtime / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro
+- Add HTTP referrer restrictions to Google Maps API key in Google Cloud Console (still required even with private repo)
+
+**Soon (~10 min):**
+- Inspect aaron-kramer repo content; archive or private it if legacy
+- Decide if archived TBK being public matters
+
+**Spec-bug honest note:** my prior `repo-inspection-output.md` said "GitHub Pages will still serve the site" when recommending the private flip. That was wrong for the current org plan. The Cleanup output corrects this and the new CLAUDE.md rule captures the lesson permanently.
+
+### Skipped
+
+- **Notion page update via MCP** — spec named page ID `348a09cf-876a-815a-802c-c9c182167749` as "SESSION-STATE page", but per HAL Stack project_memory that ID is the **Glossary / Command Reference** page. Writing security findings into the Glossary would mis-locate them. Updated this file (the actual SESSION-STATE) instead. If a Notion mirror is wanted, point me at the right page ID.
+
+### One additional inbound message during this sprint
+
+Aaron sent: *"i also got this prompt below, not sure if it ran. can you check after you finish what you are doing already? Next sprint: S-LOOP-ARCHITECT. Pull from Notion backlog ID dee08637-... Build sprint-watcher.py, failure-router.py, and HUMAN-TASK scanner. Test with S-DCC-DEPLOY. Model: claude-sonnet-4-20250514"*
+
+Will address immediately after this sprint commits. Quick spoiler from current git log: `5f6b0d6 feat(loop): ship 3/4 S-LOOP-ARCHITECT components as HAL-aligned Python helpers` — at least 3 of the 4 components have already shipped. Will git-log-grep + verify before deciding action.
 
 ---
 

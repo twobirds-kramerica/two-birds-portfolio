@@ -130,7 +130,7 @@ jobs:
             echo ""
             echo "| Page | Critical | Serious | Moderate | Minor |"
             echo "|---|---|---|---|---|"
-            printf "${PER_PAGE}"
+            printf '%s' "${PER_PAGE}"
           } >> "$GITHUB_STEP_SUMMARY"
 
           if [ "$TOTAL_CRITICAL" -gt 0 ]; then
@@ -205,11 +205,11 @@ jobs:
             echo ""
             if [ -n "$BROKEN" ]; then
               echo "### ❌ Broken links"
-              printf "${BROKEN}"
+              printf '%s' "${BROKEN}"
               echo ""
             fi
             echo "### ✅ Working links"
-            printf "${OK}"
+            printf '%s' "${OK}"
           } >> "$GITHUB_STEP_SUMMARY"
 
           if [ -n "$BROKEN" ]; then

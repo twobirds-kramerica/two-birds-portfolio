@@ -1,0 +1,229 @@
+name: CI (axe-core + link checker)
+
+# Two-job CI workflow for two-birds-portfolio:
+#   1. axe-core: WCAG 2.0 + 2.1 A/AA scan of every .html file in the repo.
+#      Fails the build on any CRITICAL violation. Serious / moderate / minor
+#      reported in the summary + uploaded artifact but do not block.
+#   2. link-check: scans markdown for broken external links + checks the
+#      sibling Two Birds tool URLs that this repo's docs reference.
+#
+# Origin: P1 sprint "Add GitHub Actions CI — axe-core + link checker"
+# (Notion 34aa09cf-876a-8136-8985-eb72e4d4a290) shipped 2026-04-25.
+# Pattern adapted from working sibling workflows in
+# digital-confidence/.github/workflows/axe-core.yml and
+# clarity/.github/workflows/broken-external-link-check.yml.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '**.html'
+      - '**.md'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    branches: [master]
+  schedule:
+    # Weekly link-check (Sundays 06:00 EST = 11:00 UTC). axe-core runs
+    # on push so the schedule's main job is the link sweep.
+    - cron: '0 11 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  # ──────────────────────────────────────────────────────────────────────
+  # Job 1 — axe-core accessibility scan
+  # ──────────────────────────────────────────────────────────────────────
+  axe-core:
+    name: axe-core (WCAG 2.0 + 2.1 A/AA)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name != 'schedule'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install axe-core CLI and http-server
+        run: |
+          npm install -g @axe-core/cli@4.10.0 http-server@14.1.1
+
+      - name: Serve repo on localhost:8080
+        run: |
+          http-server . -p 8080 -s &
+          echo $! > /tmp/http-server.pid
+          for i in 1 2 3 4 5; do
+            if curl -sSf http://localhost:8080/ > /dev/null; then
+              echo "Server up."
+              break
+            fi
+            sleep 1
+          done
+
+      - name: Discover HTML pages to scan
+        id: discover
+        run: |
+          PAGES=$(find . -name "*.html" \
+            -not -path "./.git/*" \
+            -not -path "./node_modules/*" \
+            -not -path "./hal-stack/context-system/ingestion/raw/*" \
+            | sed 's|^\./||' | sort)
+          COUNT=$(echo "$PAGES" | grep -c . || echo 0)
+          echo "Found $COUNT HTML pages to scan"
+          echo "$PAGES" | tee /tmp/pages.txt
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Run axe-core on every HTML page
+        id: axe
+        if: steps.discover.outputs.count != '0'
+        run: |
+          mkdir -p axe-reports
+          set +e
+          while IFS= read -r page; do
+            [ -z "$page" ] && continue
+            slug=$(echo "$page" | sed 's|/|__|g')
+            echo "::group::axe scan — $page"
+            axe "http://localhost:8080/$page" \
+              --tags wcag2a,wcag2aa,wcag21a,wcag21aa \
+              --save "axe-reports/$slug.json" \
+              --exit
+            echo "exit=$?"
+            echo "::endgroup::"
+          done < /tmp/pages.txt
+          exit 0
+
+      - name: Summarise violations + decide fail/pass
+        if: steps.discover.outputs.count != '0'
+        run: |
+          set +e
+          TOTAL_CRITICAL=0
+          TOTAL_SERIOUS=0
+          TOTAL_MODERATE=0
+          TOTAL_MINOR=0
+          PER_PAGE=""
+
+          for f in axe-reports/*.json; do
+            [ -f "$f" ] || continue
+            page=$(basename "$f" .json | sed 's|__|/|g')
+            CRIT=$(jq '[.[].violations[] | select(.impact=="critical")] | length' "$f" 2>/dev/null || echo 0)
+            SER=$(jq '[.[].violations[] | select(.impact=="serious")] | length' "$f" 2>/dev/null || echo 0)
+            MOD=$(jq '[.[].violations[] | select(.impact=="moderate")] | length' "$f" 2>/dev/null || echo 0)
+            MIN=$(jq '[.[].violations[] | select(.impact=="minor")] | length' "$f" 2>/dev/null || echo 0)
+            TOTAL_CRITICAL=$((TOTAL_CRITICAL + CRIT))
+            TOTAL_SERIOUS=$((TOTAL_SERIOUS + SER))
+            TOTAL_MODERATE=$((TOTAL_MODERATE + MOD))
+            TOTAL_MINOR=$((TOTAL_MINOR + MIN))
+            PER_PAGE="${PER_PAGE}| ${page} | ${CRIT} | ${SER} | ${MOD} | ${MIN} |\n"
+          done
+
+          {
+            echo "## axe-core scan results"
+            echo ""
+            echo "**Totals:** critical=${TOTAL_CRITICAL} · serious=${TOTAL_SERIOUS} · moderate=${TOTAL_MODERATE} · minor=${TOTAL_MINOR}"
+            echo ""
+            echo "| Page | Critical | Serious | Moderate | Minor |"
+            echo "|---|---|---|---|---|"
+            printf "${PER_PAGE}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$TOTAL_CRITICAL" -gt 0 ]; then
+            echo "::error::Build failed — $TOTAL_CRITICAL critical WCAG violation(s) found"
+            exit 1
+          fi
+          echo "Build pass — 0 critical violations"
+
+      - name: Upload axe-core reports
+        if: always() && steps.discover.outputs.count != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-core-reports
+          path: axe-reports/
+          retention-days: 30
+
+      - name: Stop http-server
+        if: always()
+        run: |
+          if [ -f /tmp/http-server.pid ]; then
+            kill $(cat /tmp/http-server.pid) || true
+          fi
+
+  # ──────────────────────────────────────────────────────────────────────
+  # Job 2 — broken external link check
+  # ──────────────────────────────────────────────────────────────────────
+  link-check:
+    name: External link check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check critical sibling Two Birds URLs
+        id: linkcheck
+        run: |
+          BROKEN=""
+          OK=""
+
+          check_link() {
+            local url="$1"
+            local label="$2"
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 \
+              --user-agent "Mozilla/5.0 TwoBirdsPortfolio-LinkChecker/1.0" "$url" || echo "ERROR")
+            if [[ "$STATUS" == "200" || "$STATUS" == "301" || "$STATUS" == "302" || "$STATUS" == "308" ]]; then
+              OK="${OK}- ✅ ${label}: ${url} (${STATUS})\n"
+            else
+              BROKEN="${BROKEN}- ❌ ${label}: ${url} (${STATUS})\n"
+            fi
+          }
+
+          # Sibling Two Birds tools (the URLs portfolio docs reference)
+          check_link "https://twobirds-kramerica.github.io/digital-confidence/" "Digital Confidence Centre"
+          check_link "https://twobirds-kramerica.github.io/career-coach/" "Career Coach"
+          check_link "https://twobirds-kramerica.github.io/clarity/" "Clarity"
+          check_link "https://twobirds-kramerica.github.io/aaron-patzalek/" "Aaron Patzalek"
+          check_link "https://twobirds-kramerica.github.io/two-birds-innovation/" "Two Birds Innovation"
+          check_link "https://twobirds-kramerica.github.io/two-birds-command-centre/" "Two Birds Command Centre"
+          check_link "https://twobirds-kramerica.github.io/quality-dashboard/" "Quality Dashboard"
+          # Portfolio's own DCC v2 wizard POC (added 2026-04-22 S-DCC-V2)
+          check_link "https://twobirds-kramerica.github.io/digital-confidence/v2/" "DCC v2 wizard menu"
+          check_link "https://twobirds-kramerica.github.io/digital-confidence/v2/wizard.html?module=module-1&lang=en" "DCC v2 module-1 wizard"
+          # Notion external surfaces
+          check_link "https://api.notion.com/v1/" "Notion API"
+          # GitHub raw fallback (referenced in CLAUDE.md RELIABLE WORKFLOW)
+          check_link "https://raw.githubusercontent.com/twobirds-kramerica/two-birds-portfolio/master/CLAUDE.md" "GitHub raw CLAUDE.md"
+
+          {
+            echo "## External link check results"
+            echo ""
+            if [ -n "$BROKEN" ]; then
+              echo "### ❌ Broken links"
+              printf "${BROKEN}"
+              echo ""
+            fi
+            echo "### ✅ Working links"
+            printf "${OK}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -n "$BROKEN" ]; then
+            echo "broken=true" >> $GITHUB_OUTPUT
+          else
+            echo "broken=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Open issue on broken link (scheduled runs only)
+        if: steps.linkcheck.outputs.broken == 'true' && github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "External link check: broken link(s) detected on $(date -u +%Y-%m-%d)" \
+            --body "Weekly link check found broken external links. See workflow run summary: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --label "ci,link-check"

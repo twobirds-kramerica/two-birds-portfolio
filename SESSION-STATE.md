@@ -343,6 +343,7 @@ If `next sprint` comes again I'll pick the highest-leverage remaining. Not calli
 | 27 | LinkedIn batch 001 (10 Blunder-First Reveal posts from Chronicle #001+#002) | `9e4938b` + `f7ee274` (voice-check fix) | portfolio |
 | 28 | Repo inspection — credential + Cloudflare-bypass scan across 13 public repos | `64ccc09` | portfolio |
 | 29 | Security cleanup — Kevin private + patches snapshot deleted + REPO VISIBILITY RULE + TBK/aaron-kramer triage | `65aad2f` (portfolio) + `a92202af` (aaron-patzalek) + visibility flip on kevins-apartment-search | portfolio + aaron-patzalek + kevins-apartment-search (visibility-only) |
+| 30 | Add GitHub Actions CI to portfolio repo — single ci.yml with axe-core + link-check jobs | `3ca1bf2` | portfolio |
 
 ### Cumulative 2026-04-22 max-mode window (11 sprints, 6 repos, ~1320 insertions, ~370 deletions)
 
@@ -662,6 +663,41 @@ Aaron resumed after rate-limit refresh. Executed the 5-step cleanup spec autonom
 Aaron sent: *"i also got this prompt below, not sure if it ran. can you check after you finish what you are doing already? Next sprint: S-LOOP-ARCHITECT. Pull from Notion backlog ID dee08637-... Build sprint-watcher.py, failure-router.py, and HUMAN-TASK scanner. Test with S-DCC-DEPLOY. Model: claude-sonnet-4-20250514"*
 
 Will address immediately after this sprint commits. Quick spoiler from current git log: `5f6b0d6 feat(loop): ship 3/4 S-LOOP-ARCHITECT components as HAL-aligned Python helpers` — at least 3 of the 4 components have already shipped. Will git-log-grep + verify before deciding action.
+
+---
+
+## 🚦 2026-04-25 ~10:50 EST — Add GitHub Actions CI to portfolio repo (P1)
+
+Aaron's directive: strict execution mode, no new architecture, no fabricated sprints. Pre-execution verification per his explicit instruction:
+
+- **git log:** portfolio `.github/workflows/` had only `changelog.yml`; no axe-core or link-check workflows; sprint not previously shipped
+- **Notion:** sprint exists at Product Backlog id `34aa09cf-876a-8136-8985-eb72e4d4a290` — **P1 In Progress** (locked from a prior session, never completed). Not Ready as Aaron's spec said, but In Progress = legitimate continuation, not a fabrication
+- **HTML inventory:** 13 .html files in scope (portfolio-dashboard, sales/3, standards/components/7, tools/2)
+
+### Shipped
+
+`3ca1bf2` portfolio master · `.github/workflows/ci.yml` (229 lines, YAML-valid)
+
+Single workflow, two jobs:
+- **axe-core** — runs on push/PR (skipped on weekly schedule). Discovers all HTML files via `find` with appropriate excludes. Fails build on critical WCAG violations only; serious/moderate/minor reported in step summary + uploaded as 30-day artifact. Pattern adapted from `digital-confidence/.github/workflows/axe-core.yml`.
+- **link-check** — runs on push/PR + weekly Sundays 06:00 EST. Checks 11 sibling Two Birds tool URLs (DCC, Career Coach, Clarity, aaron-patzalek, TBI, TBCC, QD, DCC v2 menu + module-1 wizard, Notion API, GitHub raw CLAUDE.md). On scheduled run only: opens GitHub issue if broken (avoids issue spam during dev). Pattern adapted from `clarity/.github/workflows/broken-external-link-check.yml`.
+
+### Notion + paper trail
+
+- Sprint flipped In Progress → **Done** at id `34aa09cf-876a-8136-8985-eb72e4d4a290`
+- Notes appended with commit hash + scope summary
+- 5 follow-up Aaron-owned decisions backlogged to Notion (per yesterday's "backlog the rest" ask):
+  1. P1 — Kevin's site forward path (a/b/c options)
+  2. P1 — Google Maps API key referrer restrictions in Google Cloud Console
+  3. P1 — DCC v2 wizard POC evaluation at /v2/ live URL
+  4. P1 — Calendly URL for Clarity + TBI mailto→Calendly conversion
+  5. P2 — LinkedIn URL for TBI contact section
+
+### What the CI workflow will do on next push
+
+The push of this SESSION-STATE.md update will trigger ci.yml itself (matches the `**.md` paths filter on `master`). If the run goes green: baseline established. If axe-core finds critical violations: I'll see them in the workflow run + need to address as a follow-up sprint.
+
+### Sprint 30 of the running window
 
 ---
 
@@ -4228,5 +4264,5 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Aaron prompted to build a 4-component autonomous loop system. I challenged the design (per the Sparring-Partner Rule in CLAUDE.md): (a) a Python daemon cannot spawn authenticated Claude Code sessions, (b) the `schedule` skill already does daisy-chain scheduling at the correct layer, (c) S-DCC-DEPLOY chaining would fail immediately on the unresolved OAuth. Recommended an alternative (build components 3+4 as helpers; skip the daemon; use `schedule` for overnight chaining). Aaron responded "next sprint" without picking an option — holding the challenge per "only change position when he provides new information or a genuinely better argument".
 
-Last updated: 2026-04-23 at 00:28 EST (Toronto)
+Last updated: 2026-04-25 at 10:50 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -2,6 +2,7 @@
 
 Append-only record of sync events, errors, and completions.
 
+- 2026-04-28 21:24 EST — create-backlog-item: S-GITLEAKS (351a09cf-876a-8119-8fad-f35b8771341e) → Done; commit 1184ef8
 - 2026-04-19 15:54 Eastern Daylight Time — next-sprint locked: [P1] S-025: DCC senior-friendly UI benchmark research (347a09cf-876a-812e-9e22-edec267931c2)
 - 2026-04-19 23:16 Eastern Daylight Time — complete-sprint: S-025: DCC senior-friendly UI benchmark research (347a09cf-876a-812e-9e22-edec267931c2) → Done; [2026-04-19 23:16 Eastern Daylight Time] DONE — commit 14c3be2
 - 2026-04-19 23:50 Eastern Daylight Time — next-sprint locked: [P2] Create CLAUDE.md at repo root from Notion Glossary (348a09cf-876a-813b-b0bf-df7a858741fc)
@@ -140,3 +141,12 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-044: Notion dedupe — archived 3 S-036/037/038 duplicates from S-041 crash' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-81aa-81c6-d25b76bd4636
 - 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-045: drive-upload-split.py skeleton — RI-007 structural fix' (P2 Sprint / Done / Claude Code) -> 34ba09cf-876a-811f-ae77-cc8b18d9f289
 - 2026-04-22 22:48 Eastern Daylight Time — create_backlog_item: 'S-046: Extend feedback memory with topic-keyword-grep lesson' (P3 Task / Done / Claude Code) -> 34ba09cf-876a-81d5-aa8b-dde91be0745d
+- 2026-04-23 00:32 Eastern Daylight Time — next-sprint locked: [P1] Add GitHub Actions CI — axe-core + link checker on every push (34aa09cf-876a-8136-8985-eb72e4d4a290)
+- 2026-04-23 00:32 Eastern Daylight Time — next-sprint locked: [P2] Push HAL Stack Audit HTML to GitHub (34aa09cf-876a-81a1-9404-d82ac488a7a7)
+- 2026-04-23 00:33 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro' (P1 Decision / Backlog / Aaron) -> 34da09cf-876a-8120-825b-c27c3855f618
+- 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console' (P1 Human Action / Backlog / Aaron) -> 34da09cf-876a-8167-b213-ed1207323f44
+- 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert' (P1 Decision / Backlog / Aaron) -> 34da09cf-876a-81b6-9ba1-c2065d9a6381
+- 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs' (P1 Human Action / Backlog / Aaron) -> 34da09cf-876a-81db-99b7-fee0b9d1f25c
+- 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Confirm LinkedIn URL for Two Birds Innovation contact section' (P2 Human Action / Backlog / Aaron) -> 34da09cf-876a-81fa-b174-ec1d849b97df
+- 2026-04-28 19:49 Eastern Daylight Time — next-sprint: no Ready sprint found

@@ -4266,3 +4266,39 @@ Aaron prompted to build a 4-component autonomous loop system. I challenged the d
 
 Last updated: 2026-04-25 at 10:50 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-04-28 21:24 EST — S-GITLEAKS (just-go single sprint)
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 + sprint-queue.md S-009 human-only → queue empty. Aaron typed "just go". Max mode expired. Single-sprint normal-mode authorization.
+
+**Pre-execution verification:** `git log --oneline --all | grep gitleaks` → 0 hits. Candidate confirmed unshipped.
+
+### What Shipped
+
+`1184ef8` portfolio master — `.github/workflows/ci.yml` (+25 lines, -1 line)
+
+- Renamed workflow: `CI (axe-core + link checker)` → `CI (axe-core + link checker + gitleaks)`
+- Added **Job 3 — gitleaks (secret scan)**: `gitleaks/gitleaks-action@v2`, `fetch-depth: 0` (full history baseline), skips scheduled runs (weekly driver is link-check), fails build on any committed secret. No GITLEAKS_LICENSE required (public repo).
+
+**Notion:** Sprint filed as Done at `351a09cf-876a-8119-8fad-f35b8771341e`.
+
+### Source of candidate
+Explicitly flagged in SESSION-STATE 2026-04-25 block: "Priority 3 (Claude Code, next-queue): Install gitleaks for full secret-scanning coverage / Add gitleaks / GitHub Advanced Security CI workflow".
+
+### Phases run
+1. Phase 0 — pending-capture check (empty)
+2. Phase 1 — edit ci.yml: add gitleaks job + rename workflow (`1184ef8`)
+3. Phase 2 — Notion retro-file (Done, `351a09cf-...`)
+4. Phase 3 — SESSION-STATE update + push (this block)
+
+### Skipped
+Nothing. Sprint was a single clean deliverable.
+
+### Next recommended action for Aaron
+- **Watch the first CI run** — push will trigger gitleaks on the ~95-commit history. If it finds a clean baseline: green. If it flags something, I'll need to investigate and either add a `.gitleaks.toml` allowlist entry or assess the actual finding.
+- **Outstanding P1 human actions** (from aaron-todos-2026-04-21.md + 2026-04-25 Notion backlog): Kevin site forward path (a/b/c), Google Maps API referrer restrictions, DCC v2 wizard evaluation, Calendly URL for Clarity/TBI CTAs, LinkedIn URL for TBI contact section.
+
+Last updated: 2026-04-28 at 21:24 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

@@ -4302,3 +4302,32 @@ Nothing. Sprint was a single clean deliverable.
 
 Last updated: 2026-04-28 at 21:24 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-04-28 21:30 EST — RETRO overwrite + CLAUDE.md token audit (two-phase sprint)
+
+**Trigger:** Aaron: "Run the RETRO update first, then do the CLAUDE.md token audit — read the current CLAUDE.md, measure token count, trim to 5 rules max with file pointers for everything else, target under 500 tokens."
+
+### Phase 1 — RETRO overwrite
+Overwrote `logs/RETRO.md`. Previous RETRO was stale at April 21-22 (6 days out of date). New RETRO covers: 2026-04-23/24 security cleanup, 2026-04-25 CI workflow, 2026-04-28 gitleaks, 2026-04-28 CLAUDE.md trim.
+
+### Phase 2 — CLAUDE.md token audit + trim
+- Measured old CLAUDE.md: 227 lines, ~2,250+ tokens
+- New CLAUDE.md: 45 lines, ~415 tokens (~80% reduction)
+- 5 non-negotiable rules kept inline
+- All other content moved to three new pointer files:
+  - `hal-stack/governance/rules.md` — governance rules (Pattern Counter, Session Length, MCP Write Safety, Repo Visibility, Timestamp, Sprint Completion, Notion sync, Sovereignty, Machines)
+  - `hal-stack/governance/engagement-rules.md` — behavioral rules (Sparring Partner, Confidence %, N.B., Voice Check, SESSION-STATE final step, Scrappy Pack)
+  - `hal-stack/governance/backlog-format.md` — Backlog item template + Notion helper signatures
+- No rules deleted — all content preserved and accessible via file pointers
+
+### Commits
+- `7094cd5` — CLAUDE.md trim + RETRO overwrite + 3 new governance files
+
+### Next recommended action for Aaron
+- Start a fresh Claude Code session to validate the trimmed CLAUDE.md loads and behaves correctly
+- Outstanding P1 human items unchanged (Kevin site, Google Maps API key, DCC v2 wizard eval, Calendly URL, LinkedIn URL for TBI)
+
+Last updated: 2026-04-28 at 21:35 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

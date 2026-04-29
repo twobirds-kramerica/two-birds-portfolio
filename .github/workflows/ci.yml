@@ -1,4 +1,4 @@
-name: CI (axe-core + link checker)
+name: CI (axe-core + link checker + gitleaks)
 
 # Two-job CI workflow for two-birds-portfolio:
 #   1. axe-core: WCAG 2.0 + 2.1 A/AA scan of every .html file in the repo.
@@ -227,3 +227,27 @@ jobs:
             --title "External link check: broken link(s) detected on $(date -u +%Y-%m-%d)" \
             --body "Weekly link check found broken external links. See workflow run summary: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             --label "ci,link-check"
+
+  # ──────────────────────────────────────────────────────────────────────
+  # Job 3 — gitleaks secret scan
+  # Scans the full git history for accidentally committed secrets
+  # (API keys, tokens, passwords). Fails the build on any finding.
+  # Runs on push and PR only (not the weekly schedule).
+  # Public repo — no GITLEAKS_LICENSE required.
+  # ──────────────────────────────────────────────────────────────────────
+  gitleaks:
+    name: gitleaks (secret scan)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event_name != 'schedule'
+
+    steps:
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

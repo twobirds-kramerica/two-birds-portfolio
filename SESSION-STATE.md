@@ -4370,3 +4370,23 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Last updated: 2026-05-02 at 11:15 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-02 — S-TBI-LINKEDIN (just-go single sprint)
+
+**Trigger:** Aaron confirmed "just go". LinkedIn URL sourced from `career-ops/cv.md`.
+
+### What Shipped
+- `two-birds-innovation/index.html:318` — `https://linkedin.com/in/aaronpatzalek` added to contact-details block alongside email + phone. Commit `4eadbad` on two-birds-innovation master.
+- Notion: `354a09cf-876a-81f7-a573-f8ca13d760b5` filed as Done (P1).
+
+### P1 backlog status after today's session
+- ✅ Calendly URL wired to Clarity + TBI CTAs
+- ✅ LinkedIn link added to TBI contact section
+- ⬜ Kevin site forward path (Aaron decision)
+- ⬜ Google Maps API key referrer restrictions (Aaron action)
+- ⬜ DCC v2 wizard evaluation (Aaron review)
+
+Last updated: 2026-05-02 at 11:30 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

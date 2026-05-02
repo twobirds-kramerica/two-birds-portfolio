@@ -4350,3 +4350,23 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Last updated: 2026-05-02 at 10:00 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-02 — S-CALENDLY (just-go single sprint)
+
+**Trigger:** Aaron provided `https://calendly.com/aaronpatzalek` and typed "just go".
+
+### What Shipped
+
+- `clarity/index.html:762` — `href="#"` → `https://calendly.com/aaronpatzalek` on "Book a Free 30-Minute Call" button. `target="_blank" rel="noopener"` already present. Commit `d97607b` on clarity master.
+- `two-birds-innovation/index.html:313` — `mailto:aaron.patzalek@gmail.com?subject=...` → `https://calendly.com/aaronpatzalek`, `target="_blank" rel="noopener"` added, button text "Email Us" → "Book a Free Call". Commit `d2e788a` on two-birds-innovation master.
+- Email address + phone in `contact-details` block kept as secondary contacts on both sites.
+- Notion: `354a09cf-876a-8147-b885-e9db2328fbf1` filed as Done (P1).
+
+### Next recommended action for Aaron
+- Both repos pushed to GitHub Pages — verify the buttons open calendly.com/aaronpatzalek in a new tab
+- Next P1 human item: LinkedIn URL for TBI contact section (3 min, ask Aaron to confirm handle)
+
+Last updated: 2026-05-02 at 11:15 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

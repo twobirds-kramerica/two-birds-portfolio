@@ -150,3 +150,9 @@ Append-only record of sync events, errors, and completions.
 - 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs' (P1 Human Action / Backlog / Aaron) -> 34da09cf-876a-81db-99b7-fee0b9d1f25c
 - 2026-04-25 10:51 Eastern Daylight Time — create_backlog_item: 'Confirm LinkedIn URL for Two Birds Innovation contact section' (P2 Human Action / Backlog / Aaron) -> 34da09cf-876a-81fa-b174-ec1d849b97df
 - 2026-04-28 19:49 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-04-28 21:29 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-02 00:53 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-03 01:23 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-03 14:56 Eastern Daylight Time — create_research_row: 'Reading visual and audio media for signs of AI manipulation' (Critical-Thinking / ['13-15']) -> 355a09cf-876a-8198-8d90-d4c6387ad29d
+- 2026-05-03 14:56 Eastern Daylight Time — create_research_row: 'Big feelings are real; I get to choose what I do next' (Emotional-Safety / ['4-6']) -> 355a09cf-876a-817c-87d1-ebcbe982dcfa
+- 2026-05-03 14:56 Eastern Daylight Time — create_research_row: 'Following a story back to where it started (source tracing)' (Critical-Thinking / ['10-12']) -> 355a09cf-876a-8171-b12f-cbfc12a8568b

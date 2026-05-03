@@ -4390,3 +4390,71 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Last updated: 2026-05-02 at 11:30 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-02 (overnight) — 3-sprint autonomous run (S-OG-CARDS / S-CLARITY-WHY-BUILT / S-R01-STRETCH)
+
+**Trigger:** Aaron said "go" before sleeping. 3-hour autonomous run, normal mode. Notion queue exit 3, local queue empty. Aaron also corrected two profile errors: "solo parent" → "married, parent of twins"; ADHD never to be mentioned. CLAUDE.md + memory updated (`7f42859`).
+
+### Sprint 1 — S-OG-CARDS: OG card images for brand sites (~70 min)
+**Commits:** `aaron-patzalek/108ca44`, `two-birds-innovation/0d79577`
+
+Both brand sites previously had blank link previews on LinkedIn, Slack, iMessage, WhatsApp, Discord.
+
+- `aaron-patzalek/images/og-card.svg` (1200×630) — dark navy/blue gradient, AP initials badge, name/title/tagline, stats row (20yr, St. Thomas, Canadian-built), Calendly CTA
+- `two-birds-innovation/images/og-card.svg` (1200×630) — deep space theme, teal accent bar, company name/taglines, service pricing cards (CA$2,500 / CA$4,000), Calendly CTA
+- `og:image` meta wired on both sites (TBI had no og:image at all; AP's pointed to a missing .png → updated to .svg + added width/height/alt)
+- `images/export-og-png.html` in both repos — Chrome DevTools export helper for PNG conversion (needed for full Twitter/X coverage)
+
+**Aaron action needed:** To get full Twitter/X support, open `images/export-og-png.html` in Chrome, F12 → Ctrl+Shift+P → "Capture full size screenshot", save as `og-card.png` in the same folder, then update `og:image` from `.svg` → `.png`.
+
+**Notion:** `355a09cf-876a-810e-81ab-cc9c3c6831d6` (Done, P1)
+
+### Sprint 2 — S-CLARITY-WHY-BUILT: "Why I built this" trust section (~35 min)
+**Commit:** `clarity/4873edb`
+
+- New `<section class="why-built">` between `</main>` and `<footer>` in Clarity
+- Olive-light background, left-border accent, 4 paragraphs of Aaron's origin story
+- Content: 20yr PM at TELUS/Staples/Start.ca → watched AI widen enterprise/SME gap → built Clarity to close it → privacy reassurance (your data stays in your browser)
+- Byline with name, role, location, TBI link
+- CSS in the `<style>` block, matches existing Clarity tokens
+
+**Aaron action needed:** Review copy before promoting to a prospect. The story is accurate based on known context but Aaron should verify the framing works for his voice. Easy to edit in index.html.
+
+**Notion:** `355a09cf-876a-8169-bbbe-c7ce84155165` (Done, P2)
+
+### Sprint 3 — S-R01-STRETCH-1m/1n/1o: 3 DCC Research DB depth rows (~80 min)
+**Commit:** `portfolio/82da6be`
+
+All 3 at Status=Research. No ADHD in learning_profile per Aaron's instruction.
+
+| ID | Skill | Category | Age |
+|----|-------|----------|-----|
+| `355a09cf-876a-8198-...` | Reading visual and audio media for signs of AI manipulation (deepfakes) | Critical-Thinking | 13-15 |
+| `355a09cf-876a-817c-...` | Big feelings are real; I get to choose what I do next | Emotional-Safety | 4-6 |
+| `355a09cf-876a-8171-...` | Following a story back to where it started (source tracing / SIFT) | Critical-Thinking | 10-12 |
+
+Row 1m: C2PA/Content Authenticity Initiative, MIT Media Lab, Sensity AI, Europol 2022, liar's dividend concept.
+Row 1n: Siegel & Bryson 'name it to tame it', Kopp 1982, Eisenberg 2000, Radesky 2020 (AAP), Erikson.
+Row 1o: SIFT (Caulfield 2019), Stanford SHEG Civic Online Reasoning, RAND Truth Decay, MediaSmarts Canada.
+
+**Notion:** `355a09cf-876a-810a-b36e-e47f646a9539` (Done, P3)
+
+### What was NOT touched
+- DCC wizard evaluation — still waiting on Aaron's decision (a/b/c from SESSION-STATE 2026-04-22)
+- Kevin site forward path — Aaron decision still pending
+- Google Maps API key referrer restrictions — Aaron action still pending
+- Career Coach pricing.html — blocked on defining what Pro is
+- OG card PNG conversion — Aaron action (see Sprint 1 above)
+
+### P1 backlog status after overnight run
+- ✅ Calendly URL wired to Clarity + TBI CTAs
+- ✅ LinkedIn link added to TBI contact section
+- ✅ OG cards live on both brand sites (SVG; PNG conversion is a 5-min Aaron task)
+- ⬜ Kevin site forward path (Aaron decision)
+- ⬜ Google Maps API key referrer restrictions (Aaron action)
+- ⬜ DCC v2 wizard evaluation (Aaron review)
+
+Last updated: 2026-05-02 overnight (autonomous run)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

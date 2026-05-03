@@ -156,3 +156,6 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-03 14:56 Eastern Daylight Time — create_research_row: 'Reading visual and audio media for signs of AI manipulation' (Critical-Thinking / ['13-15']) -> 355a09cf-876a-8198-8d90-d4c6387ad29d
 - 2026-05-03 14:56 Eastern Daylight Time — create_research_row: 'Big feelings are real; I get to choose what I do next' (Emotional-Safety / ['4-6']) -> 355a09cf-876a-817c-87d1-ebcbe982dcfa
 - 2026-05-03 14:56 Eastern Daylight Time — create_research_row: 'Following a story back to where it started (source tracing)' (Critical-Thinking / ['10-12']) -> 355a09cf-876a-8171-b12f-cbfc12a8568b
+- 2026-05-03 14:56 Eastern Daylight Time — create_backlog_item: 'S-OG-CARDS: OG card SVGs for aaron-patzalek + two-birds-innovation' (P1 Sprint / Done / Claude Code) -> 355a09cf-876a-810e-81ab-cc9c3c6831d6
+- 2026-05-03 14:56 Eastern Daylight Time — create_backlog_item: 'S-CLARITY-WHY-BUILT: Add Why I built this trust section to Clarity' (P2 Sprint / Done / Claude Code) -> 355a09cf-876a-8169-bbbe-c7ce84155165
+- 2026-05-03 14:56 Eastern Daylight Time — create_backlog_item: 'S-R01-STRETCH-1m/1n/1o: 3 DCC Research DB depth rows' (P3 Sprint / Done / Claude Code) -> 355a09cf-876a-810a-b36e-e47f646a9539

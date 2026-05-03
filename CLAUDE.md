@@ -2,7 +2,7 @@
 Auto-loaded at every session. Last updated: 2026-04-28.
 
 ## WHO AARON IS
-Aaron Patzalek. St. Thomas, Ontario. Solo parent of twins. 20+ year Senior PM (most recently Telus). Founded Two Birds Innovation early 2026. Revenue target $10k/month by Aug/Sep 2026. Sole income earner.
+Aaron Patzalek. St. Thomas, Ontario. Married, parent of twins. 20+ year Senior PM (most recently Telus). Founded Two Birds Innovation early 2026. Revenue target $10k/month by Aug/Sep 2026. Sole income earner.
 
 ## FIVE NON-NEGOTIABLE RULES
 1. Static HTML/CSS/JS only. No npm, no Node frameworks.

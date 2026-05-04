@@ -165,3 +165,7 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-04 00:39 Eastern Daylight Time — create_research_row: 'My device has eyes, ears, and a memory — and I get to choose who uses them' (Tech-Safety / ['4-6']) -> 356a09cf-876a-8103-8361-f52194b91f42
 - 2026-05-04 00:39 Eastern Daylight Time — create_backlog_item: 'S-SOLO-PARENT-CLEANUP: correct solo parent in 9 remaining repo files' (P1 Sprint / Done / Claude Code) -> 356a09cf-876a-812c-aab0-d93c9db68d56
 - 2026-05-04 00:39 Eastern Daylight Time — create_backlog_item: 'S-R01-STRETCH-1p/1q/1r: 3 more DCC Research DB depth rows' (P3 Sprint / Done / Claude Code) -> 356a09cf-876a-8122-8815-c9124b8b0610
+- 2026-05-04 01:43 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-04 11:10 Eastern Daylight Time — create_research_row: 'Watching to learn vs. watching to pass time — four moves that make it stick' (Learning / ['7-9']) -> 356a09cf-876a-813c-a5c3-e5b3afff8bf9
+- 2026-05-04 11:10 Eastern Daylight Time — create_research_row: 'Noticing when my screen use is affecting how I feel — and knowing my first move' (Emotional-Safety / ['10-12']) -> 356a09cf-876a-812e-ae45-c3e5259e9bad
+- 2026-05-04 11:10 Eastern Daylight Time — create_research_row: 'Public Wi-Fi, VPNs, and keeping your data yours when you're not at home' (Tech-Safety / ['13-15']) -> 356a09cf-876a-813a-a9e8-f32b142b78a6

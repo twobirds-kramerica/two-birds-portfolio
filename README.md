@@ -97,7 +97,7 @@ Before making changes in any repo in this portfolio:
 
 ## Who + context
 
-Aaron Patzalek. St. Thomas, Ontario. Solo parent of 6-year-old twins. 20+ years Senior Product Manager, most recently at Telus. Founded Two Birds Innovation early 2026. Revenue target: $10,000/month by August/September 2026.
+Aaron Patzalek. St. Thomas, Ontario. Married, parent of 6-year-old twins. 20+ years Senior Product Manager, most recently at Telus. Founded Two Birds Innovation early 2026. Revenue target: $10,000/month by August/September 2026.
 
 The **Scrappy Pack** (five sub-personas: The Researcher, Why Not, The Fifth Why, The Ripper, Sovereignty Check) reviews Claude output as a filter. They're the "why guys" that challenge soft answers and surface cheaper-stronger alternatives.
 

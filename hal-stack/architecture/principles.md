@@ -17,7 +17,7 @@ No single vendor can hold Aaron's business hostage. Every component has a docume
 
 ## 2. Low-Cost / Free-Tier First
 
-Aaron is a solo parent building a business. Monthly costs must stay under CA$50 for all infrastructure combined. Free tiers are preferred. Paid tiers are acceptable only when the free alternative would cost more in Aaron's time than the subscription saves.
+Aaron is a parent building a business. Monthly costs must stay under CA$50 for all infrastructure combined. Free tiers are preferred. Paid tiers are acceptable only when the free alternative would cost more in Aaron's time than the subscription saves.
 
 **Current monthly:** ~CA$27 (Claude Pro) + CA$0 (everything else on free tiers)
 

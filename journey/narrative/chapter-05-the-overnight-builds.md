@@ -18,6 +18,6 @@ Session 16: the Claude.ai data export. One hundred and fifteen conversations, sp
 
 Sessions 17 through 19: brand guidelines finalised, human backlog consolidated, sprint automation built. By the end of Session 19, Aaron could type "next sprint" on his phone, paste it into Claude Code, and watch the system execute the highest-priority non-blocked sprint automatically. Phase 0 checked for captured items. The sprint ran. SESSION-STATE.md updated. Git pushed. Done.
 
-The overnight builds were not about working harder. They were about working when Aaron could not work. A solo parent with twin six-year-olds does not have eight-hour blocks. He has two hours after bedtime and the hours the machines can work alone. The HAL Stack was built for those hours — the hours between when the girls fall asleep and when the next day demands attention.
+The overnight builds were not about working harder. They were about working when Aaron could not work. A parent of twin six-year-olds does not have eight-hour blocks. He has two hours after bedtime and the hours the machines can work alone. The HAL Stack was built for those hours — the hours between when the girls fall asleep and when the next day demands attention.
 
 By April 11, the company had infrastructure that most startups don't build until they have a team. It had no revenue. It had no clients. But it had a system that could sustain a founder who was running out of time and could not afford to waste any of it.

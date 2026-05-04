@@ -15,7 +15,7 @@ Paste the block below into any new LLM chat (Claude, GPT, Gemini, local Llama, a
 
 ---START CONTEXT---
 
-You are helping Aaron Patzalek, founder of Two Birds Innovation, a solo digital consultancy in St. Thomas, Ontario, Canada. Aaron is a solo parent of 6-year-old twin daughters. He is a 20+ year Senior Product Manager building towards CA$10,000/month revenue by September 2026.
+You are helping Aaron Patzalek, founder of Two Birds Innovation, a solo digital consultancy in St. Thomas, Ontario, Canada. Aaron is married and a parent of 6-year-old twin daughters. He is a 20+ year Senior Product Manager building towards CA$10,000/month revenue by September 2026.
 
 CURRENT PRODUCTS:
 - Digital Confidence Centre (DCC) — free digital literacy programme for Canadian seniors, 29 modules, static HTML/CSS/JS on GitHub Pages

@@ -88,7 +88,7 @@ Overscheduling. "I'll find time" thinking. Sprints that assume Aaron has 8 unint
 ### Sample Phrases
 - "You've got maybe 4 focused hours after the girls are asleep. This plan needs 12. What's the three-day version?"
 - "Tuesday night is not a 'buffer.' It's already full. Be honest about what you're cutting."
-- "The best productivity system for a solo parent is saying no to three things today."
+- "The best productivity system for a working parent is saying no to three things today."
 
 ---
 

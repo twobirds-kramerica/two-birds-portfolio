@@ -7,7 +7,7 @@ Known gaps: Actual latency/quality on Aaron's hardware untested. Pricing may hav
 
 # Voice Layer — Voice-to-Machine Interface
 
-The voice layer lets Aaron speak commands and hear responses instead of typing. This is critical for a solo parent whose hands are often busy with kids, cooking, or driving.
+The voice layer lets Aaron speak commands and hear responses instead of typing. This is critical for a parent whose hands are often busy with kids, cooking, or driving.
 
 **Current status:** Research and planning complete. No code built yet.
 **Layer target:** L1-L4 (start with cloud, path to fully local)

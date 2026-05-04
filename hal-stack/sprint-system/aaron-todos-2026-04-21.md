@@ -95,7 +95,7 @@ when he switches to review mode. No inline pauses during dev.
   Needs pseudonymous quote ("— Manufacturing owner, Kitchener") from a friendly pilot. Pure content; blocked on a willing quote provider.
 
 - [ ] **"Why I built this" section for Clarity** (30 min)
-  Solo parent / St. Thomas origin is trust-building for the target demographic. Lean in.
+  Parent of twins / St. Thomas origin is trust-building for the target demographic. Lean in.
 
 ---
 

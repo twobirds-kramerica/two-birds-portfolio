@@ -102,7 +102,7 @@ All prompts authored by Aaron Patzalek. Stored in `prompt-library/` in the two-b
 
 ### Aaron Patzalek (Personal Brand)
 - 20-year Senior Product Manager
-- Solo parent building in public
+- Parent and founder building in public
 - St. Thomas, Ontario base
 - Specialisations: AI integration, digital transformation, accessibility
 

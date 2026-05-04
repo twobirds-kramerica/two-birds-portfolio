@@ -1,68 +1,61 @@
 # Retro
-Last updated: 2026-04-28 at 21:30 EST (Toronto)
-Sessions covered: 2026-04-23 through 2026-04-28
+Last updated: 2026-05-04
+Sessions covered: 2026-05-02 through 2026-05-04
 
 ---
 
-## 2026-04-23/24 — Security Cleanup Sprint
+## 2026-05-02 — S-CONTEXT-EXPORT + S-CALENDLY + S-TBI-LINKEDIN
 
-**Trigger:** Portfolio security audit revealed `kevins-apartment-search` was public despite tracking Kevin Burnett's actual apartment shortlist.
+**Three just-go sprints in a single session.**
 
-### What shipped
-- `kevins-apartment-search` flipped private (`gh repo edit --visibility private`)
-- `aaron-patzalek/patches/kevins-apartment-index.html` deleted (2,780 deletions — Kevin's private data in a public sibling repo)
-- REPO VISIBILITY RULE added to CLAUDE.md: any repo with real user data must be private by default, public is opt-in
-- Commits: `65aad2f`, `abd5c7b`
-
-### Side-effect
-Kevin's GitHub Pages went 404 — Pages-on-private requires Pro tier. Three options documented in `hal-stack/sprint-system/security-cleanup-output.md`: (a) accept downtime, (b) re-host on Cloudflare/Netlify, (c) upgrade plan. Aaron's decision pending.
+- Context export filed: `hal-stack/context-system/exports/2026-04-28-ci-hardening-claude-md-trim.md`
+- Calendly wired: Clarity "Book a Free 30-Minute Call" + TBI "Book a Free Call" both now point to `calendly.com/aaronpatzalek`
+- LinkedIn added to TBI contact section (`linkedin.com/in/aaronpatzalek`)
+- Commits: `clarity/d97607b`, `two-birds-innovation/4eadbad`
 
 ---
 
-## 2026-04-25 ~10:50 EST — Portfolio CI workflow (P1 sprint)
+## 2026-05-02 (overnight) — S-OG-CARDS + S-CLARITY-WHY-BUILT + S-R01-STRETCH 1m/1n/1o
 
-**Trigger:** Aaron directive; P1 Notion item `34aa09cf-876a-8136-8985-eb72e4d4a290` was In Progress from a prior session.
+**First full overnight autonomous run (3 sprints).**
 
-### What shipped
-- `.github/workflows/ci.yml` added to `two-birds-portfolio` (229 lines)
-  - Job 1 — axe-core: WCAG 2.0/2.1 A/AA scan of all HTML files on every push/PR; fails on critical violations
-  - Job 2 — link-check: scans 11 sibling Two Birds URLs + Notion API + GitHub raw CLAUDE.md; opens issue on weekly broken-link run
-- Notion sprint flipped In Progress → Done
-- 5 Aaron P1 decisions backlogged to Notion (Kevin site, Google Maps API key, DCC v2 eval, Calendly URL, LinkedIn URL for TBI)
-- Commits: `3ca1bf2` (ci.yml), `eaafa95` (SESSION-STATE), `dd91a4b` (printf fix for BROKEN/OK strings starting with `-`)
+- OG card SVGs (1200×630) shipped for `aaron-patzalek` and `two-birds-innovation` — link previews on Slack, iMessage, Discord, WhatsApp now show brand cards. PNG conversion helper included for full Twitter/X coverage.
+- "Why I built this" trust section added to Clarity — Aaron's origin story (TELUS → SME AI gap → built Clarity). Olive-light bg, byline.
+- 3 DCC Research DB depth rows: deepfakes/AI-media (13-15 CT), big feelings pause (4-6 ES), SIFT source-tracing (10-12 CT)
+- Aaron corrected profile: "solo parent" → "married, parent of twins"; ADHD never to be mentioned. Both saved to memory + CLAUDE.md patched.
+- Commits: `aaron-patzalek/108ca44`, `two-birds-innovation/0d79577`, `clarity/4873edb`, `portfolio/82da6be`
 
 ---
 
-## 2026-04-28 21:24 EST — S-GITLEAKS (just-go sprint)
+## 2026-05-04 (overnight) — S-SOLO-PARENT-CLEANUP + S-R01-STRETCH 1p/1q/1r
 
-**Trigger:** Notion exit 3 twice; Aaron typed `just go` after queue-empty report.
+**Two-sprint overnight run.**
 
-### What shipped
-- gitleaks/gitleaks-action@v2 added as Job 3 to `ci.yml`
-- Full git-history scan (`fetch-depth: 0`) on every push/PR; fails build on any committed secret
-- Workflow renamed: `CI (axe-core + link checker + gitleaks)`
-- Notion entry filed as Done: `351a09cf-876a-8119-8fad-f35b8771341e`
-- Commits: `1184ef8` (gitleaks job), `7c18242` (SESSION-STATE)
+- 9 remaining "solo parent" instances corrected across `two-birds-portfolio` (README, todos, chapter-05, scrappy-pack, inner-circle, voice-layer README, context-loader-prompt, principles, ip-register)
+- 3 more DCC Research DB depth rows: three-bucket sorting (7-9 CT), publishing responsibility (13-15 CM), device sensors for youngest group (4-6 TS)
+- DCC Research DB now at 26 rows (20 coverage + 6 depth)
+- Commits: `portfolio/57132ae`, `portfolio/1fe9959`
 
 ---
 
-## 2026-04-28 — CLAUDE.md token audit + trim (this session)
+## 2026-05-04 — Cross-repo solo parent sweep + more S-R01 rows
 
-### What shipped
-- RETRO.md overwritten (this file)
-- CLAUDE.md trimmed from ~2,300 tokens to <500 tokens
-- Three new governance pointer files created: `hal-stack/governance/rules.md`, `hal-stack/governance/engagement-rules.md`, `hal-stack/governance/backlog-format.md`
+**Current session.**
+
+- "Solo parent" found and corrected in 3 more files across other repos: `aaron-patzalek/source-data/identity-synthesis.md`, `aaron-patzalek/source-data/positioning.md`, `clarity/AUDIT.md`
+- Profile now fully consistent across all 10 repos
+- S-R01 rows 1p/1q/1r running in this session (see above)
 
 ---
 
 ## What needs Aaron
 
-- **Kevin site** — pick option (a) accept downtime / (b) re-host / (c) upgrade GitHub Pro
-- **Google Maps API key** — add HTTP referrer restrictions in Google Cloud Console
-- **DCC v2 wizard POC** — evaluate at `/v2/` and decide: replace long-scroll / coexist / revert
-- **Calendly URL** — required to wire mailto → Calendly on Clarity + TBI CTAs (P1 revenue move)
-- **LinkedIn URL** — required to add to TBI contact section
-- **DCC Kids Research DB rows** — 12 rows waiting for Research → Spec status advance (see `aaron-todos-2026-04-21.md`)
+- **DCC v2 wizard POC** — evaluate at `module-1-wizard.html` and decide: (a) replace long-scroll, (b) coexist permanently, (c) revert. S-035 Playwright tests are queued pending this decision.
+- **Kevin site** — pick option: (a) accept 404 downtime, (b) re-host on Cloudflare/Netlify, (c) upgrade GitHub Pro. Has been open since 2026-04-23.
+- **Google Maps API key** — add HTTP referrer restrictions in Google Cloud Console (security hygiene, Kevin's site)
+- **DCC Research DB** — 26 rows at Status=Research; batch-advance to Spec when you're ready to review
+- **OG card PNG conversion** — 5-min task: open `images/export-og-png.html` in Chrome, DevTools screenshot, save as `og-card.png`, swap meta tag. Gives full Twitter/X coverage.
+- **Clarity "Why I built this"** — review copy before showing to a prospect
 
 ## How to resume
 
@@ -70,5 +63,5 @@ Kevin's GitHub Pages went 404 — Pages-on-private requires Pro tier. Three opti
 2. `next sprint` — Notion first; exit 3 fall back to sprint-queue.md
 3. Human todos: `hal-stack/sprint-system/aaron-todos-2026-04-21.md`
 
-Last updated: 2026-04-28 at 21:30 EST (Toronto)
+Last updated: 2026-05-04
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

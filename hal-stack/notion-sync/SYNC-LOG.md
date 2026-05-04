@@ -163,3 +163,5 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-04 00:38 Eastern Daylight Time — create_research_row: 'Real, made-up, or somewhere in between — sorting what I find online' (Critical-Thinking / ['7-9']) -> 356a09cf-876a-810b-8ab3-e56ee6056444
 - 2026-05-04 00:39 Eastern Daylight Time — create_research_row: 'Publishing my work responsibly — audience, consent, and permanence' (Creative-Making / ['13-15']) -> 356a09cf-876a-81b4-b108-f1decf0da4bd
 - 2026-05-04 00:39 Eastern Daylight Time — create_research_row: 'My device has eyes, ears, and a memory — and I get to choose who uses them' (Tech-Safety / ['4-6']) -> 356a09cf-876a-8103-8361-f52194b91f42
+- 2026-05-04 00:39 Eastern Daylight Time — create_backlog_item: 'S-SOLO-PARENT-CLEANUP: correct solo parent in 9 remaining repo files' (P1 Sprint / Done / Claude Code) -> 356a09cf-876a-812c-aab0-d93c9db68d56
+- 2026-05-04 00:39 Eastern Daylight Time — create_backlog_item: 'S-R01-STRETCH-1p/1q/1r: 3 more DCC Research DB depth rows' (P3 Sprint / Done / Claude Code) -> 356a09cf-876a-8122-8815-c9124b8b0610

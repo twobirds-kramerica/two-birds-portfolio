@@ -4458,3 +4458,58 @@ Row 1o: SIFT (Caulfield 2019), Stanford SHEG Civic Online Reasoning, RAND Truth 
 
 Last updated: 2026-05-02 overnight (autonomous run)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-04 (overnight) — 2-sprint autonomous run (S-SOLO-PARENT-CLEANUP / S-R01-STRETCH-1p/1q/1r)
+
+**Trigger:** Aaron said "go" before sleeping. Normal mode. Notion queue exit 3.
+
+### Sprint 1 — S-SOLO-PARENT-CLEANUP (~20 min)
+**Commit:** `portfolio/57132ae`
+
+Corrected "solo parent" → accurate description across all 9 remaining files. The CLAUDE.md fix (`7f42859`) was done 2026-05-02; this sprint finishes the sweep.
+
+| File | Change |
+|------|--------|
+| README.md | "Solo parent" → "Married, parent" |
+| hal-stack/sprint-system/aaron-todos-2026-04-21.md | "Solo parent / St. Thomas" → "Parent of twins / St. Thomas" |
+| journey/narrative/chapter-05-the-overnight-builds.md | "A solo parent with twin six-year-olds" → "A parent of twin six-year-olds" |
+| hal-stack/personas/advisory/scrappy-pack.md | "solo parent" → "working parent" |
+| hal-stack/personas/inner-circle.md | "solo parent of twin 6-year-olds" → "parent of twin 6-year-olds" |
+| hal-stack/voice-layer/README.md | "solo parent" → "parent" |
+| hal-stack/context-system/context-loader-prompt.md | "solo parent" → "married and a parent" |
+| hal-stack/architecture/principles.md | "solo parent" → "parent" |
+| sovereignty/05-ip-register.md | "Solo parent building in public" → "Parent and founder building in public" |
+
+One remaining instance in SESSION-STATE.md is the correction log itself — intentional.
+
+**Notion:** `356a09cf-876a-812c-aab0-d93c9db68d56` (Done, P1)
+
+### Sprint 2 — S-R01-STRETCH-1p/1q/1r: 3 more DCC Research DB rows (~90 min)
+**Commit:** `portfolio/1fe9959`
+
+DCC Research DB now has 26 rows (20 coverage + 6 depth). All at Status=Research.
+
+| ID | Skill | Category | Age |
+|----|-------|----------|-----|
+| `356a09cf-876a-810b-...` | Real, made-up, or somewhere in between — sorting what I find online | Critical-Thinking | 7-9 |
+| `356a09cf-876a-81b4-...` | Publishing my work responsibly — audience, consent, and permanence | Creative-Making | 13-15 |
+| `356a09cf-876a-8103-...` | My device has eyes, ears, and a memory — and I get to choose who uses them | Tech-Safety | 4-6 |
+
+Row 1p: three-bucket sorting (verified/opinion/invented). Piaget classification, MediaSmarts Break the Fake, Lewandowsky 2012.
+Row 1q: publishing framework (audience modelling, consent, screenshot permanence). PIPEDA/CPPA, Solove 2007, Creative Commons, CCCP.
+Row 1r: device sensor awareness for youngest group. Camera cover habit, permission-check habit, smart speaker awareness. AAP/CPS, CCCP, Radesky 2020.
+
+**Notion:** `356a09cf-876a-8122-8815-c9124b8b0610` (Done, P3)
+
+### P1 backlog status (unchanged)
+- ✅ Calendly URL wired to Clarity + TBI CTAs
+- ✅ LinkedIn link added to TBI contact section
+- ✅ OG cards live on both brand sites (PNG conversion is a 5-min Aaron task)
+- ✅ "solo parent" corrected across entire repo
+- ⬜ Kevin site forward path (Aaron decision)
+- ⬜ Google Maps API key referrer restrictions (Aaron action)
+- ⬜ DCC v2 wizard evaluation (Aaron review)
+
+Last updated: 2026-05-04 overnight (autonomous run)

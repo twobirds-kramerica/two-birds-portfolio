@@ -196,3 +196,70 @@ Row 1r: device sensor awareness for youngest group. Camera cover habit, permissi
 - ⬜ DCC v2 wizard evaluation (Aaron review)
 
 Last updated: 2026-05-04 overnight (autonomous run)
+
+---
+
+## ⚡ 2026-05-08 — S-TIKTOK-VET: TikTok screenshot vetting (49 images)
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → "tiktok-vet" → "tiktok-vet-retry"
+
+### What Shipped
+
+- `C:\mnt\user-data\outputs\TikTok_Vetting_MASTER_TABLE.md` — 49 images catalogued across 12 series. Every image read and described: filename, tool, category, description, series, sovereignty tag, cost, HAL Stack fit.
+- 6 Notion backlog items created in `dee08637-7122-46cd-bc29-7775ce3ab8f6`:
+
+| Sprint ID | Priority | Status | Item |
+|-----------|----------|--------|------|
+| S-LOOP-001 | P1 | Ready | /loop automation patterns (Boris Cherny) |
+| S-029-EXTENDED | P2 | Backlog | RuFlo vs /loop trade-off analysis |
+| S-BIONIC-001 | P2 | Backlog | Bionic Reading mode for DCC |
+| S-IMPECCABLE | P2 | Backlog | Impeccable + Taste Skill design vocabulary |
+| S-OPEN-DESIGN-001 | P2 | Backlog | Evaluate Open Design (open-source Claude Design) |
+| S-PUBLIC-APIS-001 | P2 | Backlog | Catalogue public-apis for Two Birds products |
+
+### Key findings from vetting
+
+- **Series L (Boris Cherny /loop, 10 frames):** He uses /loop for PR babysitting, flaky test detection, Twitter feedback clustering every 30 min, server-side monitoring. "Dozens of loops running." S-LOOP-001 is P1 Ready.
+- **Series F (RuFlo, 6 frames):** 60+ agents, Queen hierarchy, WASM 352x faster, #1 GitHub. Sovereign but heavyweight. S-029-EXTENDED = evaluate vs /loop before adopting.
+- **Series C (Open Design, 5 frames):** Open-source Claude Design alternative. BYOK, local-first, Apache-2.0, 31 skills, 72 brand outputs. No subscription.
+- **Series G (Design Skills, 6 frames):** Impeccable (`npx skills add pbakaus/impeccable`) + Taste Skill (tasteskill.dev, 7.2K stars) — design vocabulary for AI harnesses. Directly relevant to DCC + Clarity quality.
+- **Series K (Bionic Reading, 1 frame):** 7,778 likes / 2,974 saves. CSS/JS fixation-point technique — P2 DCC accessibility enhancement.
+- **4 images [REJECTED]:** Wan2GP, Hunyuan, LTX-Video (frame 35) — all require local consumer GPU Aaron doesn't have.
+
+### Next recommended action
+
+- Type `next sprint` → S-LOOP-001 is now P1 Ready in Notion.
+
+Last updated: 2026-05-08 (TikTok vetting session)
+
+---
+
+## ⚡ 2026-05-08 — S-LOOP-001: /loop automation patterns (Boris Cherny)
+
+**Trigger:** Aaron typed "next sprint" → Notion locked S-LOOP-001 (P1)
+
+### What Shipped
+
+`hal-stack/loop-patterns/` — new directory, 5 files:
+
+| File | Loop Job | Recommended Interval |
+|------|----------|---------------------|
+| `README.md` | Pattern overview, Boris Cherny source, 4 run modes (manual/loop/Task Scheduler/schedule skill) | — |
+| `loop-pr-babysitter.md` | Scan repos for stale branches, CI failures, uncommitted work; auto-fix mechanical CI errors | Daily or on-demand |
+| `loop-backlog-health.md` | Read Notion backlog; flag P1 items going cold, stale Ready items, orphaned In Progress, any P0 not running | Weekly |
+| `loop-content-freshness.md` | Run DCC freshness script; check brand site lastmod; flag stale modules; auto-create Notion items for STALE | Weekly |
+| `loop-notion-sync-verify.md` | Verify SYNC-LOG freshness, test MCP connectivity, check NOTION_API_KEY; canary for all other loops | Daily (2 AM) |
+
+### Boris Cherny pattern principles documented
+
+1. Cron + repeat — every loop has a fixed interval
+2. Dozens in parallel — each loop is narrow and focused
+3. Server-side — most valuable loops run without Aaron present
+4. 100 agents simultaneously — loops spawn agents only when needed
+5. Sovereign — /loop is built into Claude Code, zero external deps
+
+### Next recommended action for Aaron
+
+- Run `loop-pr-babysitter.md` now (just paste the prompt) — clears any CI debt
+- Add `loop-notion-sync-verify.md` prompt to `run-overnight-build.bat` for daily 2 AM run
+- Next sprint: S-029-EXTENDED (RuFlo vs /loop trade-off) or S-BIONIC-001 (Bionic Reading DCC)

@@ -169,3 +169,7 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-04 11:10 Eastern Daylight Time — create_research_row: 'Watching to learn vs. watching to pass time — four moves that make it stick' (Learning / ['7-9']) -> 356a09cf-876a-813c-a5c3-e5b3afff8bf9
 - 2026-05-04 11:10 Eastern Daylight Time — create_research_row: 'Noticing when my screen use is affecting how I feel — and knowing my first move' (Emotional-Safety / ['10-12']) -> 356a09cf-876a-812e-ae45-c3e5259e9bad
 - 2026-05-04 11:10 Eastern Daylight Time — create_research_row: 'Public Wi-Fi, VPNs, and keeping your data yours when you're not at home' (Tech-Safety / ['13-15']) -> 356a09cf-876a-813a-a9e8-f32b142b78a6
+- 2026-05-05 01:24 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-05 01:49 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-07 23:21 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-08 08:39 Eastern Daylight Time — next-sprint locked: [P1] S-LOOP-001 — /loop automation patterns (Boris Cherny) (35aa09cf-876a-8168-8887-fcda9756e413)

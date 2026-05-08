@@ -1,63 +1,43 @@
 # Loop: PR Babysitter
-**Pattern:** Boris Cherny — "I have one that's babysitting my PRs like fixing CI auto rebasing"
-**Interval:** On-demand or daily via Task Scheduler
-**Repos:** two-birds-portfolio, digital-confidence, clarity, career-coach, aaron-patzalek, two-birds-innovation
+**Pattern:** Boris Cherny — `/loop 5m /babysit` (exact command, cited Threads post)
+**Tier:** 1 — Active session only (requires open terminal)
+**Skill:** `hal-stack/skills/babysit.md`
 
 ---
 
-## Prompt (paste at session start)
+## How to run
 
 ```
-PR BABYSITTER LOOP — Two Birds Innovation
-Read SESSION-STATE.md before starting.
-
-PHASE 1 — SCAN OPEN PRs (5 min)
-
-For each repo in C:\twobirds\:
-  git fetch origin
-  git log --oneline origin/master..HEAD (check if local is ahead)
-  git status (check for uncommitted changes)
-
-Report:
-- Any branches ahead of master with no open PR
-- Any uncommitted changes sitting in working tree
-- Any merge conflicts
-
-PHASE 2 — CI HEALTH CHECK (5 min)
-
-Check the most recent GitHub Actions run status for:
-  - two-birds-portfolio (axe-core + link checker + gitleaks)
-  - digital-confidence (content-count, build-health)
-
-Use: gh run list --limit 3 --repo twobirds-kramerica/[repo]
-
-For any FAILED run:
-  - Read the failure log: gh run view [id] --log-failed
-  - If the fix is a 1-line change (printf, YAML syntax, etc.) apply it and commit
-  - If the fix requires more than 5 minutes, log to SESSION-STATE.md under "CI Blockers"
-
-PHASE 3 — STALE BRANCH ALERT (2 min)
-
-For each repo:
-  git branch -a --sort=-committerdate | head -10
-  Flag any branch not merged to master that is >14 days old.
-  List them in SESSION-STATE.md under "Stale Branches".
-
-PHASE 4 — REPORT
-
-Append to SESSION-STATE.md:
----
-## PR Babysitter Run — [DATE]
-- Repos scanned: N
-- CI failures found: N (list)
-- Fixes applied: N (list commits)
-- Stale branches: N (list)
-- Uncommitted work: N (list)
----
-
-Commit: chore(loop): pr-babysitter run [DATE]
-Push to master.
+/loop 5m /babysit
 ```
+
+That's it. Boris's exact pattern. The skill (`/babysit`) contains the logic.
+The loop fires it every 5 minutes while your session is open.
+
+To run once manually (no loop):
+
+```
+/babysit
+```
+
+---
+
+## What `/babysit` does each iteration
+
+See full logic in `hal-stack/skills/babysit.md`. Summary:
+
+1. Fetch all Two Birds repos — check for CI failures
+2. For any FAILED run: read log, apply fix if mechanical (≤5 min), commit
+3. Scan for stale branches (>14 days unmerged)
+4. Report to SESSION-STATE.md
+
+---
+
+## loop.md integration
+
+Bare `/loop` in the `two-birds-portfolio` project automatically runs babysit
+as part of the `.claude/loop.md` maintenance default. You don't need to type
+`/loop 5m /babysit` explicitly unless you want the faster 5-minute cadence.
 
 ---
 
@@ -65,3 +45,4 @@ Push to master.
 - Never force-push. Never reset --hard. Flag conflicts to Aaron.
 - Only auto-fix CI failures that are clearly mechanical (YAML syntax, printf flag, missing file reference).
 - Leave anything requiring product judgement for Aaron.
+- This loop stops when you close the terminal. For overnight CI monitoring, use GitHub Actions (already live).

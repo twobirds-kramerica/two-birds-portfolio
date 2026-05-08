@@ -234,6 +234,27 @@ Last updated: 2026-05-08 (TikTok vetting session)
 
 ---
 
+## ⚡ 2026-05-08 — loop-pr-babysitter run
+
+### Results
+
+| Check | Result |
+|-------|--------|
+| Repos ahead of remote | 0 — all clean |
+| Uncommitted work | two-birds-portfolio: 2 untracked files (`helpers-README.md`, `mcp-write-log.txt`) — not blocking |
+| Stale branches | 0 — all repos are clean single-branch |
+| CI: two-birds-portfolio | ✅ PASS (latest: S-LOOP-001 push, today) |
+| CI: digital-confidence | ❌ FAIL → ✅ FIXED — `build-health-report.yml` commit `5650be6` |
+
+### CI fix applied
+
+**DCC `build-health-report.yml`** — `SyntaxError: Invalid or unexpected token`
+- **Root cause:** Commit messages with backticks (`` `abc1234` ``) injected directly into JS template literals via `${{ steps.*.outputs.* }}`, breaking JS syntax at YAML-parse time.
+- **Fix:** Moved all step outputs to `env:` block; read via `process.env` inside the script. Safe regardless of commit message content.
+- **Commit:** `digital-confidence/5650be6`
+
+---
+
 ## ⚡ 2026-05-08 — S-LOOP-001: /loop automation patterns (Boris Cherny)
 
 **Trigger:** Aaron typed "next sprint" → Notion locked S-LOOP-001 (P1)

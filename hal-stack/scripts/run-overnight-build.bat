@@ -3,29 +3,36 @@ REM ============================================
 REM Two Birds Innovation — Overnight Build
 REM Runs: Daily at 2:00 AM via Windows Task Scheduler
 REM Logs: C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+REM Updated: 2026-05-08 — added Notion sync verify, content freshness (Mon), backlog health (Sun)
 REM ============================================
 
-echo [%date% %time%] Overnight build starting... >> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+set LOG=C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+
+echo [%date% %time%] Overnight build starting... >> %LOG%
+
+REM --- Detect day of week ---
+for /f %%w in ('powershell -command "(Get-Date).DayOfWeek"') do set WEEKDAY=%%w
+echo [%date% %time%] Day of week: %WEEKDAY% >> %LOG%
 
 REM --- Pull and push all repos ---
 cd C:\twobirds
 
 for /D %%d in (digital-confidence career-coach clarity two-birds-innovation aaron-patzalek kevins-apartment-search two-birds-command-centre quality-dashboard elite-karate-site two-birds-portfolio) do (
     if exist "%%d\.git" (
-        echo [%date% %time%] Syncing %%d... >> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+        echo [%date% %time%] Syncing %%d... >> %LOG%
         cd C:\twobirds\%%d
-        git pull --ff-only origin 2>> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
-        git push origin master 2>> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+        git pull --ff-only origin 2>> %LOG%
+        git push origin master 2>> %LOG%
         REM Push to Codeberg if remote exists
         git remote | findstr codeberg >nul 2>&1
         if not errorlevel 1 (
-            git push codeberg master 2>> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+            git push codeberg master 2>> %LOG%
         )
     )
 )
 
 REM --- Lighthouse Audits ---
-echo [%date% %time%] Running Lighthouse audits... >> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+echo [%date% %time%] Running Lighthouse audits... >> %LOG%
 
 set LHDATE=%date:~10,4%-%date:~4,2%-%date:~7,2%
 set LHFILE=C:\twobirds\two-birds-portfolio\quality\lighthouse-results\%LHDATE%.md
@@ -33,7 +40,6 @@ set LHFILE=C:\twobirds\two-birds-portfolio\quality\lighthouse-results\%LHDATE%.m
 echo # Lighthouse Audit Results — %LHDATE% > "%LHFILE%"
 echo. >> "%LHFILE%"
 
-REM Audit each product
 for %%u in (
     "DCC|https://twobirds-kramerica.github.io/digital-confidence/"
     "Career Coach|https://twobirds-kramerica.github.io/career-coach/"
@@ -45,7 +51,7 @@ for %%u in (
         echo Auditing %%a...
         echo ## %%a >> "%LHFILE%"
         echo URL: %%b >> "%LHFILE%"
-        lighthouse "%%b" --output=json --output-path="%TEMP%\lh-temp.json" --chrome-flags="--headless --no-sandbox" --quiet 2>> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+        lighthouse "%%b" --output=json --output-path="%TEMP%\lh-temp.json" --chrome-flags="--headless --no-sandbox" --quiet 2>> %LOG%
         if exist "%TEMP%\lh-temp.json" (
             node -e "const r=JSON.parse(require('fs').readFileSync('%TEMP%/lh-temp.json','utf8'));const c=r.categories;console.log('Performance: '+Math.round(c.performance.score*100));console.log('Accessibility: '+Math.round(c.accessibility.score*100));console.log('Best Practices: '+Math.round(c['best-practices'].score*100));console.log('SEO: '+Math.round(c.seo.score*100))" >> "%LHFILE%"
             echo. >> "%LHFILE%"
@@ -60,18 +66,47 @@ REM --- Update RETRO.md ---
 cd C:\twobirds\two-birds-portfolio
 echo Updating RETRO.md with Lighthouse scores...
 
-REM Copy Lighthouse results into RETRO if file exists
 if exist "%LHFILE%" (
     echo. >> logs\RETRO.md
     echo ## Lighthouse Scores >> logs\RETRO.md
     type "%LHFILE%" >> logs\RETRO.md
 )
 
+REM ============================================================
+REM HAL STACK AUTOMATION — added 2026-05-08
+REM ============================================================
+
+REM --- Notion sync verify (nightly) ---
+echo [%date% %time%] Running Notion sync verify... >> %LOG%
+cd C:\twobirds\two-birds-portfolio
+python hal-stack/notion-sync/next-sprint.py >> %LOG% 2>&1
+echo [%date% %time%] Notion sync verify exit code: %errorlevel% >> %LOG%
+
+REM --- Content freshness check (Mondays only) ---
+if "%WEEKDAY%"=="Monday" (
+    echo [%date% %time%] Running content freshness check (Monday)... >> %LOG%
+    cd C:\twobirds\digital-confidence
+    node C:\twobirds\two-birds-portfolio\hal-stack\content-freshness\check-freshness.js >> %LOG% 2>&1
+    echo [%date% %time%] Content freshness complete. >> %LOG%
+)
+
+REM --- Backlog health check (Sundays only) ---
+if "%WEEKDAY%"=="Sunday" (
+    echo [%date% %time%] Running backlog health check (Sunday)... >> %LOG%
+    cd C:\twobirds\two-birds-portfolio
+    python hal-stack/notion-sync/backlog-health.py >> %LOG% 2>&1
+    echo [%date% %time%] Backlog health complete. >> %LOG%
+)
+
+REM ============================================================
+
+REM --- Final commit ---
+cd C:\twobirds\two-birds-portfolio
 git add -A
-git commit -m "chore: overnight build complete — Lighthouse scores updated"
+git commit -m "chore: overnight build complete — Lighthouse + HAL checks [%LHDATE%]"
 git push origin master
 
-echo [%date% %time%] Overnight build complete. >> C:\twobirds\two-birds-portfolio\logs\automated-run-log.md
+echo [%date% %time%] Overnight build complete. >> %LOG%
 
 REM --- RETRO Health Check ---
 echo Running RETRO health check...

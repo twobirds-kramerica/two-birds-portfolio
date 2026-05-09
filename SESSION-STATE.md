@@ -584,4 +584,30 @@ Key changes:
 - **Google Maps API key** — still in the repo (now only in v1's removed section, but may be in git history). Aaron needs to add HTTP referrer restrictions in Google Cloud Console (P1 backlog item).
 - **Auto-refresh (listing staleness)** — there's no automated mechanism. The AUDIT.md recommended a `listing-availability-probe.yml` GitHub Action (HEAD request to each listing URL). Want me to build that?
 
+---
+
+## ⚡ 2026-05-09 — KAS: autonomous run + multi-user transformation
+
+**Trigger:** Aaron asked for autonomous cleanup + multi-user vision
+
+### What Shipped Autonomously (`e37d933`)
+
+| File | What |
+|---|---|
+| `.github/workflows/listing-availability-probe.yml` | Weekly Monday GitHub Action — HEAD-requests all active listing URLs, opens/updates issue for any 404/410/5xx. Replaces broken date_added heuristic with real URL evidence. |
+| `js/kas-setup.js` | Multi-user personalisation module. Access code gate + first-visit onboarding modal (name, city, commute anchor, budget) + ⚙️ settings button for return visits. Syncs to kevin_criteria localStorage. Non-invasive — no kevin.js changes. |
+| `config.json` | + tool_name, access_code ("find-my-flat" placeholder), show_demo_listings |
+| `index-v2.html` | + kas-setup.js wired in |
+
+### Notion housekeeping
+- Closed: "Make kevins-apartment-search private" × 2 (superseded — going public/multi-user)
+- Created 5 human backlog items (all Owner=Aaron, P1/P2)
+
+### Aaron's 5 decisions (in order)
+1. Open `index-v2.html` on GitHub Pages → approve or redirect
+2. Choose the access code to publish (or remove for open access)
+3. Google Maps API key → 5 min in Google Cloud Console
+4. Repo name — what to call it publicly
+5. Listing data strategy — keep Kevin's as demo, replace, or ship empty
+
 Last updated: 2026-05-09

@@ -510,6 +510,28 @@ Installed 70+ skills from `nexu-io/open-design` (Apache-2.0). Three families: Op
 - **Highest impact for prospects:** HIBP "was my data leaked?" in DCC — needs a Cloudflare Worker proxy (~60 min to set up, free)
 - Notion backlog is now empty — time to promote new items or pull from DCC Research DB
 
+---
+
+## ⚡ 2026-05-09 — Career Coach: Live Remote Jobs panel
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → highest product value pick
+
+### What Shipped
+
+`career-coach/5baf798` — new "Live Remote Jobs" collapsible panel below Job Market Insights.
+
+- Fetches from Remotive API (`https://remotive.com/api/remote-jobs?limit=10`) on first open — lazy, no eager load
+- Displays 6 live remote listings: title, company, date posted, category badge, "View & Apply →" link
+- No auth, no backend, CORS-safe — pure static HTML JS
+- XSS-safe (esc() helper on all API data before rendering)
+- Bilingual labels matching existing Career Coach i18n pattern
+- Verified API is live and returning data before committing
+
+### Next recommended action for Aaron
+- Visit Career Coach in browser → expand "Live Remote Jobs" panel → confirm live listings appear
+- The existing "Job Market Insights — Canada, March 2026" static panel is now stale — update copy to current date when convenient (5 min)
+- Next sprint candidates: Bank of Canada Valet → Clarity economic context card, or DCC Research DB rows
+
 Last updated: 2026-05-09
 
 Last updated: 2026-05-08

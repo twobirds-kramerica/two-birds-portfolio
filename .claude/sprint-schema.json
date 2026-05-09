@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HAL Stack Sprint Contract",
+  "description": "SSOT for sprint shape. Sprint payloads from next-sprint.py must conform to this schema.",
+  "version": "1.0",
+  "schema_updated": "2026-05-08",
+  "type": "object",
+  "required": ["notion_id", "item", "priority", "status"],
+  "properties": {
+    "notion_id":  { "type": "string", "description": "Notion page UUID" },
+    "notion_url": { "type": "string", "description": "Direct link to Notion page" },
+    "item":       { "type": "string", "description": "Sprint title (max 120 chars)" },
+    "priority":   { "type": "string", "enum": ["P0", "P1", "P2", "P3"] },
+    "status":     {
+      "type": "string",
+      "enum": ["Backlog", "Ready", "In Progress", "Blocked", "Review", "Done", "Archived"],
+      "description": "Must match status-semantics.yaml vocabulary"
+    },
+    "product": { "type": "string" },
+    "owner":   { "type": "string", "enum": ["Claude Code", "Aaron"] },
+    "notes":   { "type": "string" }
+  }
+}

@@ -1,0 +1,3 @@
+2026-04-23T03:45:28+00:00 | OK   | attempt=1 | smoke-test | safe-write module import + log OK
+2026-04-23T03:45:34+00:00 | HEARTBEAT | SLOW          | latency=4.584s | 
+2026-04-23T03:45:40+00:00 | HEARTBEAT | SLOW          | latency=4.253s | 

@@ -284,3 +284,43 @@ Last updated: 2026-05-08 (TikTok vetting session)
 - Run `loop-pr-babysitter.md` now (just paste the prompt) — clears any CI debt
 - Add `loop-notion-sync-verify.md` prompt to `run-overnight-build.bat` for daily 2 AM run
 - Next sprint: S-029-EXTENDED (RuFlo vs /loop trade-off) or S-BIONIC-001 (Bionic Reading DCC)
+
+---
+
+## ⚡ 2026-05-08 — Automation Governance System Phase 1 (SSOT + Verification + Audit)
+
+**Trigger:** Aaron typed "next sprint" → Notion locked `35ba09cf-876a-81d3-94b7-df95a876fd2f` (P2)
+
+### What Shipped
+
+4 new SSOT files in `.claude/`:
+
+| File | Purpose |
+|------|---------|
+| `.claude/status-semantics.yaml` | Canonical Notion status strings — auto_pick_status, in_progress_status, done_statuses |
+| `.claude/sprint-schema.json` | Sprint payload shape + required fields (notion_id, item, priority, status) |
+| `.claude/verification-checklist.md` | Pre-flight checks + smoke test commands |
+| `.claude/automation-governance.md` | Rules 1-4: Verify, SSOT, Schema, Next-action mandatory |
+
+`hal-stack/notion-sync/next-sprint.py` updated:
+- Added `_load_status_semantics()` — parses status-semantics.yaml, no external deps
+- `pick_next_ready()` now takes `auto_pick_status` param (loaded from SSOT, default "Ready")
+- `main()` loads SSOT on startup; uses `auto_pick_status` + `in_progress_status` from YAML
+- Hardcoded `"Ready"` and `"In Progress"` strings replaced — Rule 2 enforced
+
+Also committed: `hal-stack/sprint-system/helpers-README.md` + `logs/mcp-write-log.txt` (untracked since loop session)
+
+**Notion:** `35ba09cf-876a-81d3-94b7-df95a876fd2f` → Done
+
+### Test
+```bash
+python hal-stack/notion-sync/next-sprint.py
+# Exit 0 = sprint locked from SSOT-driven status check
+# Exit 3 = no Ready items (expected if Notion backlog is empty)
+```
+
+### Next recommended action for Aaron
+- Phase 2 (next week): `audit-sprints.py` nightly enforcement — wire into `run-overnight-build.bat`
+- Next content sprint: S-BIONIC-001 (Bionic Reading DCC) or S-029-EXTENDED (RuFlo vs /loop)
+
+Last updated: 2026-05-08

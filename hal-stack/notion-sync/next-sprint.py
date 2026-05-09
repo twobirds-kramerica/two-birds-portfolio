@@ -13,11 +13,15 @@ Exit codes:
   1 — Notion API unreachable (fallback path)
   2 — configuration or auth error
   3 — no Ready sprint found
+
+Status strings are NOT hardcoded here — they are loaded from
+.claude/status-semantics.yaml (Rule 2, automation-governance.md).
 """
 from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -36,11 +40,38 @@ load_config = _nc.load_config
 
 REPO_ROOT = HERE.parent.parent
 LOCAL_QUEUE_PATH = REPO_ROOT / "hal-stack" / "sprint-system" / "sprint-queue.md"
+SSOT_PATH = REPO_ROOT / ".claude" / "status-semantics.yaml"
 
 
-def pick_next_ready(sprints: list[dict], priority_order: list[str]) -> dict | None:
+def _load_status_semantics() -> dict:
+    """Parse .claude/status-semantics.yaml. No external deps (no PyYAML)."""
+    data: dict = {}
+    try:
+        with open(SSOT_PATH, encoding="utf-8") as f:
+            for raw in f:
+                line = raw.strip()
+                if not line or line.startswith("#"):
+                    continue
+                m = re.match(r'^(\w+)\s*:\s*(.+)$', line)
+                if not m:
+                    continue
+                key, val = m.group(1), m.group(2).strip()
+                if val.startswith('['):
+                    data[key] = re.findall(r'"([^"]+)"', val)
+                else:
+                    data[key] = val.strip('"')
+    except OSError:
+        log_sync_event(f"WARN: {SSOT_PATH} not found — falling back to defaults")
+    return data
+
+
+def pick_next_ready(
+    sprints: list[dict],
+    priority_order: list[str],
+    auto_pick_status: str = "Ready",
+) -> dict | None:
     rank = {p: i for i, p in enumerate(priority_order)}
-    ready = [s for s in sprints if (s.get("status") or "") == "Ready"]
+    ready = [s for s in sprints if (s.get("status") or "") == auto_pick_status]
     if not ready:
         return None
     ready.sort(key=lambda s: (
@@ -71,12 +102,20 @@ def main() -> int:
         print(f"FAIL: {e}", file=sys.stderr)
         return 2
 
+    ssot = _load_status_semantics()
+    auto_pick_status = ssot.get("auto_pick_status", "Ready")
+    in_progress_status = ssot.get("in_progress_status", "In Progress")
+
     try:
         sprints = list_claude_code_sprints(client, exclude_done=True)
     except NotionError as e:
         return fallback_notice(str(e))
 
-    next_item = pick_next_ready(sprints, cfg.get("priority_order", ["P0", "P1", "P2", "P3"]))
+    next_item = pick_next_ready(
+        sprints,
+        cfg.get("priority_order", ["P0", "P1", "P2", "P3"]),
+        auto_pick_status,
+    )
     if not next_item:
         print("No Ready Claude Code sprints in Notion.")
         print(f"Check hal-stack/sprint-system/sprint-queue.md for local-only items.")
@@ -84,7 +123,7 @@ def main() -> int:
         return 3
 
     try:
-        client.set_select(next_item["id"], "Status", "In Progress")
+        client.set_select(next_item["id"], "Status", in_progress_status)
     except NotionError as e:
         print(f"WARN: found next sprint but failed to mark In Progress: {e}")
         print("Proceeding without status update. Reconcile manually.")

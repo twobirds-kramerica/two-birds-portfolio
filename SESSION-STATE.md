@@ -441,6 +441,36 @@ RuFlo solves parallel multi-agent coordination, distributed consensus, vector me
 - Read `hal-stack/research/ruflo-vs-loop-2026-05-09.md` (2 min) — confirm or override the decision
 - Next sprint: S-OPEN-DESIGN-001 (Open Design evaluation) or S-PUBLIC-APIS-001
 
+---
+
+## ⚡ 2026-05-09 — S-OPEN-DESIGN-001: Open Design evaluation
+
+**Trigger:** Aaron typed "next sprint" → S-OPEN-DESIGN-001 selected
+
+### What Shipped
+
+Installed 70+ skills from `nexu-io/open-design` (Apache-2.0). Three families: Open Design surfaces (~25), zhangzara HTML slide deck variants (~35), specialty outputs (~10). All available after session restart.
+
+`hal-stack/research/open-design-eval-2026-05-09.md` — full evaluation.
+
+**Decision: Partial adoption — hold for net-new work.**
+
+| Scenario | Decision |
+|---|---|
+| Existing pages (Clarity, TBI, DCC) | ❌ Wrong workflow for in-place edits |
+| Clarity v2 full rebuild | ✅ Use `kami-landing` as starting point |
+| Client pitch decks | ✅ Use `open-design-landing-deck` or `html-ppt-pitch-deck` — use now |
+| TBI blog / email outreach | ✅ Use `blog-post` / `email-marketing` when ready |
+| Design critique | ❌ Use Impeccable — better tool for that job |
+
+**Key insight:** Open Design is a code-generation framework (inputs.json → HTML), not an in-place editor. Atelier Zero aesthetic (warm paper, coral, Inter Tight + Playfair) doesn't match current brand — but could anchor Clarity v2.
+
+**Notion:** `35aa09cf-876a-8168-a4de-fd16356d2439` → Done
+
+### Next recommended action for Aaron
+- Lowest-friction use: generate a pitch deck for a prospect meeting using `/open-design-landing-deck` or `/html-ppt-pitch-deck` in a new session (skills load on restart)
+- Remaining backlog: S-PUBLIC-APIS-001 (catalogue public-apis for Two Birds products) — last P2 item
+
 Last updated: 2026-05-09
 
 Last updated: 2026-05-08

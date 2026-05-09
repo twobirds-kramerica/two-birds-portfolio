@@ -471,6 +471,45 @@ Installed 70+ skills from `nexu-io/open-design` (Apache-2.0). Three families: Op
 - Lowest-friction use: generate a pitch deck for a prospect meeting using `/open-design-landing-deck` or `/html-ppt-pitch-deck` in a new session (skills load on restart)
 - Remaining backlog: S-PUBLIC-APIS-001 (catalogue public-apis for Two Birds products) — last P2 item
 
+---
+
+## ⚡ 2026-05-09 — S-PUBLIC-APIS-001: Public APIs catalogue
+
+**Trigger:** Aaron typed "next sprint"
+
+### What Shipped
+
+`hal-stack/research/public-apis-catalogue-2026-05-09.md` — shortlist of 10 APIs across 4 products with integration notes and static-HTML-safe flag.
+
+**Immediately usable (no key, CORS-safe):**
+| API | Product | Feature |
+|---|---|---|
+| Remotive | Career Coach | Live remote job listings panel |
+| Bank of Canada Valet | Clarity | Economic context card (prime rate, CAD/USD) |
+| StatCan Labour Force Survey | Career Coach | Canadian unemployment rate badge |
+| Currents | DCC | "AI & digital safety in the news" sidebar |
+
+**Deferred (need Cloudflare Worker proxy):**
+- Have I Been Pwned → DCC "was my data leaked?" tool — highest engagement potential with seniors
+- NewsAPI → Clarity industry news sidebar
+
+**Cloudflare Worker pattern documented** — free tier (100K req/day) as sovereign backend proxy for key-protected APIs.
+
+**Notion:** `35aa09cf-876a-819c-a4bd-d1a01c4f8639` → Done
+
+### P2 Backlog Status — All 6 TikTok-vetting items now Done
+- ✅ S-LOOP-001 — loop patterns library
+- ✅ S-BIONIC-001 — Bionic Reading DCC
+- ✅ S-IMPECCABLE — Impeccable + Taste Skill installed
+- ✅ S-029-EXTENDED — RuFlo vs /loop decision
+- ✅ S-OPEN-DESIGN-001 — Open Design 70+ skills installed
+- ✅ S-PUBLIC-APIS-001 — public-apis catalogue
+
+### Next recommended action for Aaron
+- **Quickest product win:** Wire Remotive API into Career Coach — live remote job listings, no key needed, CORS-safe, ~45 min sprint
+- **Highest impact for prospects:** HIBP "was my data leaked?" in DCC — needs a Cloudflare Worker proxy (~60 min to set up, free)
+- Notion backlog is now empty — time to promote new items or pull from DCC Research DB
+
 Last updated: 2026-05-09
 
 Last updated: 2026-05-08

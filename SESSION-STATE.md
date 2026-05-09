@@ -413,6 +413,34 @@ Post-fix scan: 0 real WCAG AA failures. Remaining scanner flags (`#B0B0A8` × 3)
 - Clarity is now prospect-safe on accessibility. Remaining impeccable flags (Roboto font) are design preference — address in Clarity v2.
 - Next sprint: S-029-EXTENDED (RuFlo vs /loop) or S-OPEN-DESIGN-001
 
+---
+
+## ⚡ 2026-05-09 — S-029-EXTENDED: RuFlo vs /loop decision
+
+**Trigger:** Aaron said "you pick: next sprint" → S-029-EXTENDED selected and locked
+
+### What Shipped
+
+`hal-stack/research/ruflo-vs-loop-2026-05-09.md` — 1-page decision doc.
+
+**Decision: Defer RuFlo. Stay with /loop.**
+
+RuFlo solves parallel multi-agent coordination, distributed consensus, vector memory, and cost routing at scale. None of those are current bottlenecks. /loop is sovereign, zero-maintenance, and already running overnight.
+
+**Revisit triggers:**
+- Monthly CC spend > $200 (3-tier routing saves matter)
+- Need 5+ parallel agents simultaneously
+- DCC reaches 100+ modules (RuVector earns its place)
+- Second developer joins
+
+**Insight surfaced:** The real gap /loop doesn't fill is *persistent context between sessions* — not multi-agent orchestration. The `schedule` skill is the sovereign path to that, not RuFlo.
+
+**Notion:** `35aa09cf-876a-81cd-84c0-edb43a991dba` → Done
+
+### Next recommended action for Aaron
+- Read `hal-stack/research/ruflo-vs-loop-2026-05-09.md` (2 min) — confirm or override the decision
+- Next sprint: S-OPEN-DESIGN-001 (Open Design evaluation) or S-PUBLIC-APIS-001
+
 Last updated: 2026-05-09
 
 Last updated: 2026-05-08

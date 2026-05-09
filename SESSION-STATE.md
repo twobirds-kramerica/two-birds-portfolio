@@ -532,6 +532,24 @@ Installed 70+ skills from `nexu-io/open-design` (Apache-2.0). Three families: Op
 - The existing "Job Market Insights — Canada, March 2026" static panel is now stale — update copy to current date when convenient (5 min)
 - Next sprint candidates: Bank of Canada Valet → Clarity economic context card, or DCC Research DB rows
 
-Last updated: 2026-05-09
+---
 
-Last updated: 2026-05-08
+## ⚡ 2026-05-09 — Clarity: Canadian Economic Context card
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → highest prospect-impact pick
+
+### What Shipped
+
+`clarity/32e294b` — economic context card in results section (between next-step and CTA).
+
+- Fetches CAD/USD + CORRA overnight rate from Bank of Canada Valet API on page load
+- No auth, no backend, CORS-safe, daily updates
+- Live values as of 2026-05-08: CAD/USD 0.7307 · CORRA 2.27%
+- Silent-fail if API unreachable (card simply absent — no broken UI)
+- Placed between actionable recommendations and the "Book a Call" CTA — macro context for AI investment timing
+
+### Next recommended action for Aaron
+- Run Clarity diagnostic and verify the economic context card appears in results with live BoC data
+- Remaining from public-apis catalogue: StatCan LFS unemployment badge for Career Coach (~30 min), Currents news feed for DCC (~45 min)
+
+Last updated: 2026-05-09

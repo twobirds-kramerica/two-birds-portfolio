@@ -640,3 +640,32 @@ Last updated: 2026-05-09
 - Flight path noise — needs OpenAIP/FlightAware keys
 
 Last updated: 2026-05-09
+---
+
+## ⚡ 2026-05-09 — KAS: StatCan Crime Data Pipeline
+
+### What Shipped (`623043d`)
+
+**`data/crime-stats.json`** — CMA-level StatCan crime data for London ON + 4 Ontario cities.
+- Fields: crime_severity_index, violent/property/break-in rates, derived risk (low/moderate/high), vs_national comparison
+- data_year: 2023 | data_published: 2024-07-23 | stale_after_months: 16
+- Clearly labelled as CMA-level (not neighbourhood-specific)
+
+**`scripts/fetch-crime-stats.js`** — Node.js stdlib-only script.
+- Downloads StatCan full-table ZIP → parses CSV → writes crime-stats.json
+- No npm deps. Run: `node scripts/fetch-crime-stats.js`
+
+**`.github/workflows/crime-stats-freshness.yml`** — Annual August 5 check.
+- Compares data_year to StatCan WDS metadata; opens GitHub issue if newer data exists
+- Label: crime-stats
+
+**`kas-neighbourhood.js`** — Updated to show StatCan CMA context + staleness indicator.
+- Two layers: (1) community estimates (neighbourhood-level) + (2) StatCan UCR (city-level)
+- Yellow ⚠️ stale indicator if data_published + stale_after_months is exceeded
+
+### Why StatCan (not LPS)
+StatCan Table 35-10-0189-01 is the authoritative national source — annual UCR survey,
+machine-readable, no API key, covers all Canadian CMAs consistently. London ON Police
+Service has no open data API. LPS data is CMA-level anyway.
+
+Last updated: 2026-05-09

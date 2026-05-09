@@ -323,4 +323,39 @@ python hal-stack/notion-sync/next-sprint.py
 - Phase 2 (next week): `audit-sprints.py` nightly enforcement — wire into `run-overnight-build.bat`
 - Next content sprint: S-BIONIC-001 (Bionic Reading DCC) or S-029-EXTENDED (RuFlo vs /loop)
 
+---
+
+## ⚡ 2026-05-09 — S-BIONIC-001: Bionic Reading mode for DCC
+
+**Trigger:** Aaron selected S-BIONIC-001 → Notion locked `35aa09cf-876a-8185-969d-e60660dcf5ea` (P2)
+
+### What Shipped
+
+`digital-confidence/aee6239`
+
+| File | Change |
+|------|--------|
+| `js/bionic-reading.js` | New standalone module — TreeWalker bolds first ~50% of each word; reversible; skips UI chrome; `window.DCC_BionicReading` API; `dc-bionic-reading` localStorage key |
+| `css/accessibility.css` | `.bionic-reading b.dc-b { font-weight: 700 }` + dark mode softened to 600 |
+| `accessibility/settings.html` | New toggle row in Reading Aids (EN + FR), script tag, `dc-bionic-reading` added to reset array |
+| `js/accessibility.js` | `initBionicReading()` injects 𝐁 bar button; called in DOMContentLoaded |
+
+### How it works
+- Enable: TreeWalker finds text nodes in `main/article/body`, splits each word on midpoint, wraps first half in `<b class="dc-b">`
+- Disable: finds all `b.dc-b`, merges back with next text sibling, calls `normalize()`
+- Skips: buttons, nav, `.accessibility-bar`, `.top-bar`, footer, code, pre, inputs
+- Settings page: toggle in Reading Aids section alongside high-contrast, text-spacing, reading guide, reduce-motion
+
+**Notion:** `35aa09cf-876a-8185-969d-e60660dcf5ea` → Done
+
+### Note — pre-existing deletion
+`js/feedback-github.js` was missing from working tree before this sprint (not in git, not committed). Restored it via `git checkout` and excluded from this commit. Aaron should investigate if that file was intentionally removed.
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/accessibility/settings.html` — verify the Bionic Reading toggle appears in Reading Aids and the 𝐁 button appears in the header bar
+- Toggle it on a module page and confirm text bolding + reversal works
+- Next sprint: S-029-EXTENDED (RuFlo vs /loop) or S-IMPECCABLE (design vocabulary)
+
+Last updated: 2026-05-09
+
 Last updated: 2026-05-08

@@ -391,6 +391,28 @@ python hal-stack/notion-sync/next-sprint.py
 
 **Notion:** `35aa09cf-876a-81b9-bc78-c4ac0cd216bb` → Done
 
+---
+
+## ⚡ 2026-05-09 — Clarity WCAG AA contrast fix
+
+**Trigger:** Aaron typed "next sprint" × 2 → Notion exit 3 → highest-value available work
+
+### What Shipped
+
+`clarity/dae4994` — 3 inline colour fixes in `.cta-card`:
+
+| Element | Before | After | Contrast (on #EDE8DF) |
+|---|---|---|---|
+| Caption "No obligation..." | `#888` | `#5C584E` | 2.9 → 5.3:1 ✓ |
+| Meta "Aaron Patzalek..." | `#999` | `#5C584E` | 2.3 → 5.3:1 ✓ |
+| Portfolio links | `#999` | `#4A5640` | 2.3 → 5.8:1 ✓ |
+
+Post-fix scan: 0 real WCAG AA failures. Remaining scanner flags (`#B0B0A8` × 3) are false positives — scanner can't resolve `var(--charcoal)` CSS custom properties; actual contrast on `#2C2C2C` header/footer is 6.4:1.
+
+### Next recommended action for Aaron
+- Clarity is now prospect-safe on accessibility. Remaining impeccable flags (Roboto font) are design preference — address in Clarity v2.
+- Next sprint: S-029-EXTENDED (RuFlo vs /loop) or S-OPEN-DESIGN-001
+
 Last updated: 2026-05-09
 
 Last updated: 2026-05-08

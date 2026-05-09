@@ -356,6 +356,41 @@ python hal-stack/notion-sync/next-sprint.py
 - Toggle it on a module page and confirm text bolding + reversal works
 - Next sprint: S-029-EXTENDED (RuFlo vs /loop) or S-IMPECCABLE (design vocabulary)
 
+---
+
+## ⚡ 2026-05-09 — S-IMPECCABLE: Impeccable + Taste Skill evaluation
+
+**Trigger:** Aaron typed "next sprint" → Notion locked `35aa09cf-876a-81b9-bc78-c4ac0cd216bb` (P2)
+
+### What Shipped
+
+- Installed 13 skills via `npx skills add`: 1 Impeccable + 12 Taste Skill variants
+- Skills live in `.agents/skills/` (symlinked to Claude Code — available after session restart)
+- `hal-stack/research/design-skills-eval-2026-05-09.md` — full evaluation with scan results, applicability matrix, command reference
+
+### Live scan results
+
+**Clarity** (`npx impeccable --json clarity/index.html`):
+- 6× WCAG AA contrast failures: `#888888`, `#999999`, `#b0b0a8` on `#ede8df` backgrounds (2.2–2.9:1 vs 4.5:1 required)
+- Roboto flagged as overused/generic font
+
+**DCC** (`npx impeccable --json --fast digital-confidence/index.html`):
+- `border-left: 6px solid #c0392b` at line 744 — flagged as "side-tab AI tell"
+- Single font (Georgia only — no UI/body pairing)
+- Flat type hierarchy: 12 sizes between 12px–22px
+
+### Key verdict
+- **Impeccable:** ✅ Use now — works on static HTML, found real issues, commands are actionable
+- **Taste Skill:** ⚠️ Design vocabulary only — assumes React/Tailwind stack (not our sites)
+- **Taste Skill variants `minimalist-ui` + `redesign-existing-projects`:** Worth reading when planning Clarity v2 or DCC redesign
+
+### Next recommended action for Aaron
+- **P1:** Fix Clarity contrast: change `#888888`/`#999999`/`#b0b0a8` → `#5a5850` on `#ede8df` sections (WCAG AA passes at 4.6:1) — or run `/impeccable colorize` in a new session
+- **P2:** Run `/impeccable teach` on Clarity to create `PRODUCT.md` — unlocks brand-aware output for all future design commands
+- Note: skills load on next Claude Code session restart (they're symlinked, not yet in this session's context)
+
+**Notion:** `35aa09cf-876a-81b9-bc78-c4ac0cd216bb` → Done
+
 Last updated: 2026-05-09
 
 Last updated: 2026-05-08

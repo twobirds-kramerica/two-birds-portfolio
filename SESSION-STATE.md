@@ -553,3 +553,35 @@ Installed 70+ skills from `nexu-io/open-design` (Apache-2.0). Three families: Op
 - Remaining from public-apis catalogue: StatCan LFS unemployment badge for Career Coach (~30 min), Currents news feed for DCC (~45 min)
 
 Last updated: 2026-05-09
+
+---
+
+## ⚡ 2026-05-09 — Kevin's Apartment Search: bug fixes + v2 design preview
+
+**Trigger:** Aaron asked for a UI refresh + QA fixes
+
+### Bugs Fixed (index.html + kevin.js)
+
+| Bug | Fix |
+|---|---|
+| Hardcoded `new Date('2026-03-28')` in expiry check | → `new Date()` — expiry warnings now use today |
+| Duplicate `#map-embed` section (Google Maps iframe with exposed API key) | Removed — Leaflet map covers it |
+| 16 per-card OpenStreetMap iframes loading simultaneously | → `KAS_NO_CARD_MAP` flag — removed from v2, preserved in v1 |
+
+### V2 Design Preview (index-v2.html + css/kevin-v2.css)
+
+Open `kevins-apartment-search/index-v2.html` in browser (or via GitHub Pages once it builds).
+
+Key changes:
+- **Header**: live stat bar (active listing count, last updated date, commute time) — no more hardcoded text
+- **Section headings**: emoji removed; accent bar visual treatment instead
+- **Section order**: listings → single Leaflet map → criteria panel → second-tier → table → archive
+- **Cards**: tighter padding, hover lift effect, grid action bar (primary CTA + compact icon buttons for fav/compare/flag)
+- **No per-card iframes** — cuts 16 concurrent OSM loads
+
+### What still needs Aaron's call
+- **Approve v2 or redirect?** Open index-v2.html, compare with index.html, tell me what to change
+- **Google Maps API key** — still in the repo (now only in v1's removed section, but may be in git history). Aaron needs to add HTTP referrer restrictions in Google Cloud Console (P1 backlog item).
+- **Auto-refresh (listing staleness)** — there's no automated mechanism. The AUDIT.md recommended a `listing-availability-probe.yml` GitHub Action (HEAD request to each listing URL). Want me to build that?
+
+Last updated: 2026-05-09

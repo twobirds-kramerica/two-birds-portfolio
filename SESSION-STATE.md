@@ -611,3 +611,32 @@ Key changes:
 5. Listing data strategy — keep Kevin's as demo, replace, or ship empty
 
 Last updated: 2026-05-09
+
+---
+
+## ⚡ 2026-05-09 — KAS: Neighbourhood Intelligence + Persona System
+
+**Trigger:** Aaron asked for social/safety/convenience indicators with persona-based flags
+
+### What Shipped (`2397390`)
+
+**`js/kas-neighbourhood.js`** — OSM Overpass proximity module, IntersectionObserver lazy-load, 10 flag types (hospital/pharmacy/school/park/transit/train/grocery/low-nightlife/quiet-rail/quiet-road), persona-aware flag filtering, crime context from neighbourhood-data.json, localStorage cache.
+
+**`js/kas-setup.js`** — 6 persona toggles added to onboarding: Elder/Senior, Single woman, Family with kids, Young professional, Student, Pet owner. Saved to kas_user_setup.personas.
+
+**`neighbourhood-data.json`** — all 13 London ON neighbourhoods extended with: violent_risk / property_risk / break_in_risk / noise_level / noise_notes / railway_nearby / major_road_nearby (community estimates, disclaimer prominent).
+
+**`css/kas-neighbourhood.css`** — panel styles, persona grid, spinner.
+
+### Human backlog created (Notion, Owner=Aaron)
+- **P2** Walk Score API key + Cloudflare Worker proxy
+- **P2** Verify crime annotations against LPS data
+- **P2** Decide on Add My Own Listing feature
+- **P3** Noise pollution data expansion
+
+### What's deferred (and why)
+- Walk Score — no CORS, needs proxy + API key
+- Automated crime data — no free Canadian crime API for static sites
+- Flight path noise — needs OpenAIP/FlightAware keys
+
+Last updated: 2026-05-09

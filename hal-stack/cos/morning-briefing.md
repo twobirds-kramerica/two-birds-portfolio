@@ -1,5 +1,18 @@
 # CoS Morning Briefing — 2026-05-10
-_Generated overnight at 02:29 Eastern Daylight Time. Read this before the `cos` check-in adds live calendar/email._
+_Generated overnight at 02:32 Eastern Daylight Time._
+
+---
+
+## Your Commands (always here so you never have to remember)
+
+| Type this | When | What it does |
+|---|---|---|
+| `cos` | Any morning | Full check-in: wins + calendar + email + priorities + energy |
+| `cos-week` | Monday | Weekly Priority Dashboard + overcommitment check |
+| `cos-retro` | Friday | Pattern review + weekly summary + Monday setup |
+| `next sprint` | Ready to build | Picks and locks next sprint from Notion backlog |
+| `state` | Feeling lost | Top 3 next actions from SESSION-STATE |
+| `just go` | Quick autonomous build | One sprint, no chaining, returns control after |
 
 ---
 

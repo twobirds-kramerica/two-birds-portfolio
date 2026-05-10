@@ -19,6 +19,7 @@ Aaron Patzalek. St. Thomas, Ontario. Married, parent of twins. 20+ year Senior P
 - `dashboard` → read `WIP-DASHBOARD.md`
 - `hal` → read `hal-stack/HAL-BACKLOG.md`
 - `journey` → read latest `journey/` entry
+- `cos` → Chief of Staff daily check-in (see `hal-stack/cos/README.md`); pulls Google Calendar (today + tomorrow via MCP), Gmail urgent scan (via MCP), Notion P1 backlog, SESSION-STATE recent sprints; applies Logan Currie CoS protocol + Head/Heart/Hand procrastination diagnostic; ADHD-aware energy matching
 
 ## KEY FILES
 - Session state: `SESSION-STATE.md`

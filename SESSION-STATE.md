@@ -669,3 +669,27 @@ machine-readable, no API key, covers all Canadian CMAs consistently. London ON P
 Service has no open data API. LPS data is CMA-level anyway.
 
 Last updated: 2026-05-09
+---
+
+## ⚡ 2026-05-10 — DCC Research DB rows 1v/1w/1x
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → DCC Research DB sprint
+
+### What Shipped (Notion only — no code)
+
+| ID | Skill | Category | Age |
+|----|-------|----------|-----|
+| `35ca09cf-876a-8142-...` | Spotting hidden advertising — when content is really an ad | Critical-Thinking | 10-12 |
+| `35ca09cf-876a-812c-...` | Building a safe online identity — what to share, what to protect | Tech-Safety | 7-9 |
+| `35ca09cf-876a-815f-...` | Understanding filter bubbles — why everyone doesn't see the same internet | Critical-Thinking | 13-15 |
+
+Row 1v: Ad Standards Canada, Horton & Wohl parasocial theory, Cialdini persuasion, Bandura social learning. Creator luring: influencer peers, undisclosed sponsorship.
+Row 1w: CCCP/Cybertip.ca, Childnet SMART rules, PIPEDA/CPPA, Finkelhor grooming research. Creator luring: strangers posing as peers gathering personal info.
+Row 1x: Pariser Filter Bubble, Sunstein group polarization, Ribeiro YouTube rabbit holes, Wason confirmation bias, Tversky/Kahneman availability heuristic.
+
+### Next recommended action for Aaron
+- DCC Research DB now has 26+ depth rows (tracking all 1a-1x)
+- Remaining: 3 more rows to reach full 29-row coverage
+- Or: say the word to batch-advance from Research → Spec
+
+Last updated: 2026-05-10

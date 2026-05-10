@@ -173,3 +173,18 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-05 01:49 Eastern Daylight Time — next-sprint: no Ready sprint found
 - 2026-05-07 23:21 Eastern Daylight Time — next-sprint: no Ready sprint found
 - 2026-05-08 08:39 Eastern Daylight Time — next-sprint locked: [P1] S-LOOP-001 — /loop automation patterns (Boris Cherny) (35aa09cf-876a-8168-8887-fcda9756e413)
+- 2026-05-08 21:08 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-08 23:35 Eastern Daylight Time — next-sprint locked: [P2] Automation Governance System — SSOT + Verification + Audit (35ba09cf-876a-81d3-94b7-df95a876fd2f)
+- 2026-05-08 23:39 Eastern Daylight Time — create_backlog_item: '[TODO] `, `BLOCKED:`, `HUMAN NEEDED:`, `MANUAL STEP:`, `NEEDS AARON:`, `AARON TO DO:`' (P2 Human Action / Backlog / Aaron) -> 35ba09cf-876a-819d-b9fa-c5c359bcb657
+- 2026-05-09 00:33 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-09 00:37 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-09 00:53 Eastern Daylight Time — next-sprint locked: [P2] S-IMPECCABLE — Impeccable + Taste Skill design vocabulary (35aa09cf-876a-81b9-bc78-c4ac0cd216bb)
+- 2026-05-09 01:31 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-09 10:24 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-09 10:39 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-09 10:52 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-09 10:58 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-10 00:32 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-10 00:37 Eastern Daylight Time — create_research_row: 'Spotting hidden advertising — when content is really an ad' (Critical-Thinking / ['10-12']) -> 35ca09cf-876a-8142-ba37-fc1991f4e98e
+- 2026-05-10 00:37 Eastern Daylight Time — create_research_row: 'Building a safe online identity — what to share, what to protect' (Tech-Safety / ['7-9']) -> 35ca09cf-876a-812c-8632-e447a6c9f591
+- 2026-05-10 00:37 Eastern Daylight Time — create_research_row: 'Understanding filter bubbles — why everyone doesn't see the same internet' (Critical-Thinking / ['13-15']) -> 35ca09cf-876a-815f-9dc9-e818dea06d48

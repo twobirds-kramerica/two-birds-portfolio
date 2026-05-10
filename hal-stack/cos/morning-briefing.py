@@ -32,6 +32,15 @@ REPO_ROOT = HERE.parent.parent
 OUT_PATH  = HERE / "morning-briefing.md"
 SS_PATH   = REPO_ROOT / "SESSION-STATE.md"
 
+# Load .env file into os.environ (stdlib only — no python-dotenv needed)
+_env_path = REPO_ROOT / ".env"
+if _env_path.exists():
+    for _line in _env_path.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 COMMANDS = [
     ("cos",        "Any morning",  "Full check-in: wins + calendar + email + priorities + energy"),
     ("cos-week",   "Monday",       "Weekly Priority Dashboard + overcommitment check"),
@@ -148,7 +157,7 @@ def update_notion_page(client, page_id: str, p1_items: list[dict], date_str: str
 # ── Send Gmail email ──────────────────────────────────────────────────────────
 
 def send_gmail(p1_items: list[dict], date_str: str, time_str: str, cfg: dict) -> None:
-    app_password = os.environ.get("GMAIL_APP_PASSWORD", "").strip()
+    app_password = os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", "").strip()
     if not app_password:
         print("SKIP  Gmail email — GMAIL_APP_PASSWORD not set (see script header for setup)")
         return

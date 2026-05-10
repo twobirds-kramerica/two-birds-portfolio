@@ -98,6 +98,12 @@ if "%WEEKDAY%"=="Sunday" (
     echo [%date% %time%] Backlog health complete. >> %LOG%
 )
 
+REM --- CoS morning briefing (daily) ---
+echo [%date% %time%] Generating CoS morning briefing... >> %LOG%
+cd C:\twobirds\two-birds-portfolio
+python hal-stack/cos/morning-briefing.py >> %LOG% 2>&1
+echo [%date% %time%] CoS morning briefing complete. >> %LOG%
+
 REM ============================================================
 
 REM --- Final commit ---

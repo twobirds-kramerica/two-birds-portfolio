@@ -1,5 +1,5 @@
 # CoS Morning Briefing — 2026-05-10
-_Generated overnight at 02:32 Eastern Daylight Time._
+_Generated overnight at 02:42 Eastern Daylight Time._
 
 ---
 
@@ -12,11 +12,11 @@ _Generated overnight at 02:32 Eastern Daylight Time._
 | `cos-retro` | Friday | Pattern review + weekly summary + Monday setup |
 | `next sprint` | Ready to build | Picks and locks next sprint from Notion backlog |
 | `state` | Feeling lost | Top 3 next actions from SESSION-STATE |
-| `just go` | Quick autonomous build | One sprint, no chaining, returns control after |
+| `just go` | Quick build | One autonomous sprint, returns control after |
 
 ---
 
-## P1 Open Actions (Owner: Aaron)
+## P1 Open Actions (Owner: Aaron) — 58 items
 
 - **[Backlog]** Create og-card.png for portfolio
 - **[Ready]** Send Davie Lee LinkedIn outreach
@@ -82,16 +82,6 @@ _Generated overnight at 02:32 Eastern Daylight Time._
 ## Recent Sprint Context (from SESSION-STATE)
 
 ```
-### What's deferred (and why)
-- Walk Score — no CORS, needs proxy + API key
-- Automated crime data — no free Canadian crime API for static sites
-- Flight path noise — needs OpenAIP/FlightAware keys
-
-Last updated: 2026-05-09
----
-
-## ⚡ 2026-05-09 — KAS: StatCan Crime Data Pipeline
-
 ### What Shipped (`623043d`)
 
 **`data/crime-stats.json`** — CMA-level StatCan crime data for London ON + 4 Ontario cities.
@@ -151,4 +141,4 @@ _Filled in by Claude when `cos` runs — checks for items not mentioned in 3+ da
 
 ---
 
-_Next step: type `cos` to add live calendar + email and run the full check-in._
+_Type `cos` to add live calendar + email and run the full check-in._

@@ -36,5 +36,8 @@
     "type_sprint": "Sprint",
     "owner_claude_code": "Claude Code"
   },
-  "priority_order": ["P0", "P1", "P2", "P3"]
+  "priority_order": ["P0", "P1", "P2", "P3"],
+  "cos_briefing_page": "35ca09cf-876a-811b-9704-c83c6313c28c",
+  "cos_email_to": "getkramer@gmail.com",
+  "cos_email_from": "getkramer@gmail.com"
 }

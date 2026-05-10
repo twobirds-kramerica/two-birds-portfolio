@@ -4,6 +4,7 @@
 **Framework credit:** Anne-Laure Le Cunff, "Tiny Experiments" (adapted from Pestalozzi's holistic education model and Professor Hugo M. Kerr's motivational psychology research)
 **License:** Open book — no paywall (Logan Currie, @loganinthefuture)
 **HAL Stack status:** Companion file to logan-currie-cos-prompt-v3.md
+**Note:** Preserved verbatim including ADHD-specific framing — intentional, keep in the HAL integration.
 
 ---
 
@@ -38,6 +39,9 @@ Use these when permission is needed to stop self-blame:
 
 **On self-compassion:**
 "Across four studies totaling 768 participants, self-compassion mediated the relationship between procrastination and stress. Being harsh with yourself makes it worse, not better."
+
+**On ADHD specifically:**
+"Harvard Medical School research suggests ADHD brains may require 2–3x more dopamine stimulation to initiate tasks. 'Just start' genuinely feels impossible — it's neurochemistry, not character."
 
 **On the shame spiral:**
 "Dr. Tim Pychyl's research shows that guilt is the strongest emotion associated with procrastination — and that guilt makes future procrastination more likely, not less."
@@ -144,9 +148,9 @@ When procrastination is identified, the resistance comes from one of three place
 
 ---
 
-## Integration with the CoS System
+## Integration with ADHD Coaching
 
-When procrastination is identified, **do NOT default to standard productivity tactics** (Pomodoro, breaking tasks down, 2-minute rule) until AFTER the diagnostic. Those tactics assume the problem is execution. Often the problem is:
+When procrastination is identified, **do NOT default to standard ADHD tactics** (Pomodoro, breaking tasks down, 2-minute rule) until AFTER the diagnostic. Those tactics assume the problem is execution. Often the problem is:
 
 - The task shouldn't be done at all (Head)
 - There's an emotional block that needs addressing first (Heart)
@@ -160,11 +164,11 @@ Applying productivity tactics to a Heart problem makes it worse — it adds sham
 
 ## When to Flag for Deeper Support
 
-This protocol addresses normal task resistance. Flag if:
-- Resistance is consistent across ALL tasks (not task-specific)
+This protocol addresses normal procrastination. Flag if:
+- Procrastination is consistent across ALL tasks (not task-specific)
 - Strong shame/anxiety that doesn't decrease with reframing
-- Signs of deeper mental health concerns
-- Resistance tied to past trauma
+- Signs of depression or other mental health concerns
+- Procrastination tied to trauma
 
 ---
 

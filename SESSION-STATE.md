@@ -696,6 +696,54 @@ Last updated: 2026-05-10
 
 ---
 
+## ⚡ 2026-05-10 — S-FOUNDING-BOARD: Founding Board + Brain Trustee Review Matrix
+
+**Trigger:** Aaron typed "next sprint" → Notion locked `35da09cf-876a-8110-ac80-e0fb281027c3` (P1)
+
+### What Shipped
+
+Two new files in `hal-stack/founding-board/`:
+
+**`founding-board.md`** — 6 Founding Board advisors (Opus/Sonnet tier, above operational departments):
+
+| Name | Archetype | Invoke For |
+|------|-----------|-----------|
+| Diana | The Operator | Delivery model, capacity, first hire, client retention |
+| Marcus G. | The Revenue Engineer | Pricing, pipeline, sales process, deal structure |
+| Sonia | The Product Strategist | Feature prioritization, MVP scope, PMF signals |
+| Rohan | The AI Industry Insider | AI market positioning, technical credibility, differentiation |
+| Elena | The Patient Capital | Investor signal, stage-appropriate decisions, fundraising |
+| Gord | The Canadian Market Specialist | Canadian SME dynamics, CDAP/BDC programs, regional fit |
+
+Each member has: background, what they see that others miss, pushback style, what they protect, response format.
+
+**`brain-trustee-review-matrix.md`** — Decision routing guide across 8 decision types:
+- Pricing & Revenue → Marcus G. + Elena + Raj
+- Positioning & Messaging → Rohan + Gord + Ava
+- Product & Build → Sonia + Naveen (+ Rohan for AI claims)
+- Operational & Delivery → Diana + Val
+- Partnerships & Deals → Elena + Helen
+- Strategic Direction (big bets) → All 6 Founding Board
+- Confidence & Credibility → Rohan + Gord
+- Personal Sustainability → Love Balance Advisor (sole voice)
+
+Includes: convening size guidelines (Low/Medium/High/Critical), Brain Trust protocol, quick reference card.
+
+**Notion:** `35da09cf-876a-8110-ac80-e0fb281027c3` → Done
+
+### Relationship to existing persona system
+- **31 operational personas** (departments) run every sprint
+- **6 Founding Board advisors** are invoked for strategic decisions
+- **5 Scrappy Pack** for quick gut-checks
+- **The Hand** synthesizes all layers
+- Total advisory capacity: 42 distinct perspectives
+
+### Next recommended action for Aaron
+- Try invoking the Founding Board on a real decision — read the quick-reference card in the matrix
+- Next sprint: DCC Research DB rows 1y/1z/1aa (last 3 to close 29-row target), or any new Notion P1
+
+---
+
 ## ⚡ 2026-05-10 — S-HAL-SELF-DISCOVERY: HAL Stack self-discovery document
 
 **Trigger:** Aaron typed "next sprint" → Notion locked `35ca09cf-876a-818d-8e5b-dee4a2022f97` (P1)

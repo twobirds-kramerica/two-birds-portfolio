@@ -16,6 +16,11 @@ If Aaron asks the same question 3+ times in a session, stop troubleshooting inst
 ## SPRINT COMPLETION RULE
 Every sprint MUST end with SESSION-STATE.md update and git push. No exceptions. If the FINAL STEP cannot complete, log the blocker in sprint-queue.md with status BLOCKED.
 
+**Aaron action filing (2026-05-11):** Before pushing, for each "Next recommended action for Aaron" item that requires a decision or explicit human action, call:
+`python hal-stack/notion-sync/file-aaron-action.py "description" P1|P2 --notes "context"`
+Do NOT file: build tasks, future sprints, code-only work — those go to the sprint queue.
+Script: `hal-stack/notion-sync/file-aaron-action.py`
+
 ## SESSION LENGTH RULE (S-MCP-RELIABILITY-001, 2026-04-22)
 A single Claude Code session should not exceed ~3 hours of continuous active work or ~40 sequential tool calls against the same Notion data source. Longer sessions compound cache-warmth failures and decision fatigue. When approaching the limit: finalise current sprint, commit + push + update SESSION-STATE, then stop.
 

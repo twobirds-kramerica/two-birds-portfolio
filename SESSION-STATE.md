@@ -692,7 +692,45 @@ Row 1x: Pariser Filter Bubble, Sunstein group polarization, Ribeiro YouTube rabb
 - Remaining: 3 more rows to reach full 29-row coverage
 - Or: say the word to batch-advance from Research → Spec
 
-Last updated: 2026-05-10
+Last updated: 2026-05-11
+
+---
+
+## ⚡ 2026-05-11 — Option A: Auto-file Aaron actions to Notion
+
+**Trigger:** Aaron asked "do you backlog unanswered questions?" → Option A built immediately, Option B filed to queue.
+
+### What Shipped
+
+**`hal-stack/notion-sync/file-aaron-action.py`** — new standalone script.
+- CLI: `python file-aaron-action.py "description" P1|P2 --notes "context"`
+- Creates Notion backlog item: Owner=Aaron, Status=Backlog, Type=Task
+- Logs to SYNC-LOG.md
+- Used at end of every sprint for all Aaron-facing decision/action items
+
+**CLAUDE.md** — new rule added: "SPRINT COMPLETION — AARON ACTION FILING"
+- Mandates calling `file-aaron-action.py` for every "Next recommended action for Aaron" item before pushing
+
+**`hal-stack/governance/rules.md`** — Sprint Completion Rule updated with Aaron action filing step.
+
+**8 outstanding Aaron actions swept from SESSION-STATE history and filed to Notion:**
+
+| Item | Priority | Notion ID |
+|------|----------|-----------|
+| Google Maps API key — HTTP referrer restrictions | P1 | `35da09cf-...-e5f1f363b503` |
+| KAS: approve v2 design or redirect | P1 | `35da09cf-...-c45540e0c9da` |
+| KAS: choose access code to publish | P1 | `35da09cf-...-f38380588ad9` |
+| KAS: public repo name decision | P2 | `35da09cf-...-e6f30766e26c` |
+| KAS: listing data strategy | P2 | `35da09cf-...-fee47aa231c7` |
+| Clarity "Why I Built This" — review copy | P1 | `35da09cf-...-d110fd3d3e68` |
+| DCC v2 wizard evaluation | P1 | `35da09cf-...-eadbec7e111d` |
+| OG card PNG conversion | P2 | `35da09cf-...-fcea8f60c4eb` |
+
+**Option B filed to Notion queue:**
+- S2-AGENT-TRIAGE: Agent triage system (P2, Backlog) → `35da09cf-...-d53381077149`
+
+### How the system works going forward
+End of every sprint → `file-aaron-action.py` for each Aaron-facing item → lands in Notion as Owner=Aaron, Status=Backlog → surfaces in `cos` check-in (Notion P1 Owner=Aaron pull) → nothing buried in SESSION-STATE again.
 
 ---
 

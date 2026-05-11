@@ -11,6 +11,11 @@ Aaron Patzalek. St. Thomas, Ontario. Married, parent of twins. 20+ year Senior P
 4. Read SESSION-STATE.md before starting any work session.
 5. `git log --oneline -30` first. Never re-propose a sprint without grepping git log for it first.
 
+## SPRINT COMPLETION — AARON ACTION FILING (2026-05-11)
+At the end of every sprint, before pushing: for each item in "Next recommended action for Aaron" that requires a decision or explicit human action, call:
+`python hal-stack/notion-sync/file-aaron-action.py "description" P1|P2 --notes "context"`
+This ensures no Aaron-facing item gets buried in SESSION-STATE. Items land in Notion as Owner=Aaron, Status=Backlog, Type=Task. Do NOT file items Aaron can't act on (build tasks, future sprints, code-only work — those go to the sprint queue).
+
 ## TRIGGERS
 - `next sprint` → `python hal-stack/notion-sync/next-sprint.py`; exit 3 → `hal-stack/sprint-system/sprint-queue.md`; check `hal-stack/sprint-system/pending-capture.md` first (Phase 0); max-mode rules: `hal-stack/governance/max-mode.md`
 - `just go` → execute ONE sprint autonomously, normal mode, no chaining; stop + return control after

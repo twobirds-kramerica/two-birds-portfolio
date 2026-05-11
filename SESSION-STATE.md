@@ -696,6 +696,34 @@ Last updated: 2026-05-10
 
 ---
 
+## ⚡ 2026-05-10 — DCC Research DB rows 1y/1z/1aa — 29-ROW MILESTONE REACHED
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → DCC Research DB final 3 rows
+
+### What Shipped (Notion + Python scripts)
+
+| ID | Skill | Category | Age |
+|----|-------|----------|-----|
+| `35da09cf-876a-813a-...` | Online kindness counts — words stick longer online than in person | Emotional-Safety | 7-9 |
+| `35da09cf-876a-816b-...` | Making something together — sharing ideas and giving credit even as a little creator | Creative-Making | 4-6 |
+| `35da09cf-876a-8166-...` | Checking if my AI helper is right — the verify-before-share habit | Learning | 10-12 |
+
+Row 1y: Valkenburg & Peter (2009), PREVNet Canada, MediaSmarts Canada, Kohlberg Stage 3, Common Sense Media Digital Citizenship. Prosocial complement to the existing "tell a grown-up" row — the upstander side of digital emotional safety.
+
+Row 1z: Piaget (1952), Vygotsky (1978), Common Sense Media Copyright & Creativity K-6, Lessig Free Culture, Bers (2018). Developmental foundation for the 10-12 "When I remix, I name the original" row — attribution as a social norm at age 4-6.
+
+Row 1aa: Caulfield SIFT (2019), Stanford SHEG Civic Online Reasoning, News Literacy Project Checkology (2024), Laban et al. (2025), MediaSmarts Canada AI Literacy, OpenAI GPT-4 Technical Report. Bridge between "asking good questions" (7-9) and "lateral reading + AI check" (13-15).
+
+### DCC Research DB — 29-ROW MILESTONE ✅
+All 29 rows filed at Status=Research. Coverage matrix complete (20 cells). Depth rows complete (1m through 1aa). The full DCC curriculum research database is now ready for Aaron's review and batch-advance to Spec.
+
+### Next recommended action for Aaron
+- DCC Research DB is complete at 29 rows — time to start the Spec review
+- Say "batch-advance DCC rows to Spec" to begin the review and status-advance process
+- Or: open the Notion database and review individual rows before advancing
+
+---
+
 ## ⚡ 2026-05-10 — S-FOUNDING-BOARD: Founding Board + Brain Trustee Review Matrix
 
 **Trigger:** Aaron typed "next sprint" → Notion locked `35da09cf-876a-8110-ac80-e0fb281027c3` (P1)

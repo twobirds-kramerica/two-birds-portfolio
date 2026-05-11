@@ -696,6 +696,33 @@ Last updated: 2026-05-11
 
 ---
 
+## ⚡ 2026-05-11 — Career Coach: StatCan LFS Unemployment Badge
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → highest-value buildable item
+
+### What Shipped (`career-coach/5b596dc`)
+
+| File | What |
+|------|------|
+| `data/lfs-unemployment.json` | Seeded data: 6.7%, March 2025, StatCan Table 14-10-0287-01 |
+| `scripts/fetch-lfs.py` | stdlib-only Python script — downloads StatCan ZIP, parses CSV, writes JSON |
+| `.github/workflows/update-lfs-data.yml` | Monthly GitHub Action (first Friday of month) — auto-fetches latest LFS figure and commits |
+| `index.html` | New "Unemployment Rate (CA)" row in Job Market Insights panel; panel title + source line update dynamically when data loads; graceful silent-fail if fetch fails |
+
+### How it works
+- Panel opens → JS fetches `data/lfs-unemployment.json` (served from GitHub Pages, no CORS)
+- Injects: `6.7% (seasonally adj.)` in the live row
+- Updates panel title: "Job Market Insights — Canada, March 2025"
+- Updates source line: "Source: Statistics Canada LFS (2025-03) + Two Birds Innovation"
+- Monthly Action updates the JSON automatically — no manual maintenance
+
+### Next recommended action for Aaron
+- Visit Career Coach → open Job Market Insights panel → verify unemployment badge shows with StatCan source
+- The seeded data (6.7%, March 2025) is the initial value — the Action will update it on first-Friday of next month
+- Trigger the Action manually via GitHub Actions → "Run workflow" to get the very latest figure now
+
+---
+
 ## ⚡ 2026-05-11 — Option A: Auto-file Aaron actions to Notion
 
 **Trigger:** Aaron asked "do you backlog unanswered questions?" → Option A built immediately, Option B filed to queue.

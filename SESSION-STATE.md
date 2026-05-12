@@ -696,6 +696,29 @@ Last updated: 2026-05-11
 
 ---
 
+## ⚡ 2026-05-11 — Codex Hybrid Evaluation: BACKLOG filed
+
+**Trigger:** Aaron shared Taki Wong TikTok series analysis (8 images) — Codex + Claude Code parallel agent
+
+### Decision: BACKLOG — P2
+
+**Concept:** Claude Code (orchestration/git/integration) + Codex/OpenAI agent (rapid chat-to-code prototypes). Codex = "disposable hands," Claude Code = brain. Kill switch mandatory.
+
+**Unlock conditions (BOTH required before sprint runs):**
+1. Claude Code baseline confirmed <$25/mo for 2 consecutive weeks (Aaron measurement task filed P1)
+2. One specific task type identified where Codex measurably outperforms Claude Code
+
+**Filed to Notion:**
+- `35ea09cf-...-f0f2de864eff` — S-CODEX-HYBRID (Claude Code Sprint, P2, Backlog)
+- `35ea09cf-...-d38c490de2b7` — Measure Claude Code spend (Aaron Task, P1, Backlog)
+
+**Key additions to Aaron's analysis:**
+- "Faster iteration" is too vague — need a specific task type before pilot starts
+- o4-mini/o3 cost can spike fast; "prototype only" rule must be written before pilot, not after
+- Kill switch already exists by definition (Codex has no HAL integration today)
+
+---
+
 ## ⚡ 2026-05-11 — Career Coach: StatCan LFS Unemployment Badge
 
 **Trigger:** Aaron typed "next sprint" → Notion exit 3 → highest-value buildable item

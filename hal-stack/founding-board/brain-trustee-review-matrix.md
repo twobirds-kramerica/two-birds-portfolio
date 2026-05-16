@@ -122,6 +122,26 @@
 
 ---
 
+### CONTENT & PRODUCT VALIDATION (SME REVIEWER LAYER)
+
+> SME Reviewers run after operational departments sign off and before Aaron approves.
+> Two or more shared flags = hard stop. One flag = strong recommendation to address.
+
+| Decision | SME Reviewer(s) | Operational backup | Hard Stop rule |
+|----------|----------------|-------------------|----------------|
+| DCC module → Ready-to-Build | All 3 (Vera + Dr. Lena + Frank) | Naveen + Maya | 2+ shared flags |
+| DCC module aimed at children (4-15) | Dr. Lena (primary) + Frank | Maya + Anil | Any Dr. Lena flag |
+| Privacy disclosure or consent copy | Vera (primary) | Helen + Anil | Any Vera flag |
+| Senior-facing UX or copy | Frank (primary) + Vera | Maya + Theo | 2+ shared flags |
+| AI feature disclosure ("AI-powered", "AI suggests...") | Vera + Rohan (Founding Board) | Helen + Ava | Any Vera flag |
+| Library / school / institution pitch materials | Frank + Vera | Ava + Gord (Founding Board) | 2+ shared flags |
+| Child data handling or parental consent flow | Vera + Dr. Lena | Helen + Anil | Any single flag |
+| Age-range assignment for curriculum row | Dr. Lena | Maya | Any Dr. Lena flag |
+
+**Quick rule:** Before any DCC content ships, Frank says it works for real users, Dr. Lena says it's age-appropriate, Vera says it's legally clean. All three, in that order. The Hand synthesises if they conflict.
+
+---
+
 ### PERSONAL SUSTAINABILITY
 
 | Decision | Founding Board | Operational | The Hand |

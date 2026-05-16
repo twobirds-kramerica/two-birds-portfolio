@@ -8,7 +8,7 @@ Confidence: HIGH — derived from existing department files
 
 Complete roster of all personas in the Two Birds Innovation boardroom.
 
-**Total:** 24 department personas + 2 Inner Circle + 5 Scrappy Pack = **31 personas**
+**Total:** 24 department personas + 2 Inner Circle + 5 Scrappy Pack + 3 SME Reviewers + 6 Founding Board = **40 personas**
 
 ---
 
@@ -77,7 +77,19 @@ Complete roster of all personas in the Two Birds Innovation boardroom.
 
 ---
 
-## Advisory Layer — Scrappy Pack
+## Advisory Layer — SME Reviewers (domain validators)
+
+Invoked before content ships or a DCC row advances to Ready-to-Build. Hard stop if 2+ flag the same issue.
+
+| Name | Domain | Invoke For | Model Tier | File |
+|------|--------|-----------|------------|------|
+| Vera | Canadian Privacy & Compliance | Any data-touching feature, privacy copy, AI disclosure, children's data | Sonnet | `advisory/sme-reviewers.md` |
+| Dr. Lena | Child & Digital Development | Any DCC content for ages 4-15, age-range assignments, learning objectives | Sonnet | `advisory/sme-reviewers.md` |
+| Frank | Frontline Digital Literacy | Any DCC module UX, senior-facing copy, library/programme adoption questions | Sonnet | `advisory/sme-reviewers.md` |
+
+---
+
+## Advisory Layer — Scrappy Pack (founder gut-checks)
 
 | Name | Archetype | Lens | Model Tier | File |
 |------|-----------|------|------------|------|
@@ -86,6 +98,19 @@ Complete roster of all personas in the Two Birds Innovation boardroom.
 | Grit | The Time Tactician | Time as constrained asset | Sonnet | `advisory/scrappy-pack.md` |
 | Patch | The Tech Pragmatist | Simplicity & maintainability | Sonnet | `advisory/scrappy-pack.md` |
 | Sage | The Long-Game Thinker | Sustainability & reputation | Sonnet | `advisory/scrappy-pack.md` |
+
+---
+
+## Advisory Layer — Founding Board (strategic decisions)
+
+| Name | Archetype | Invoke For | Model Tier | File |
+|------|-----------|-----------|------------|------|
+| Diana | The Operator | Delivery model, first hire, client retention | Opus | `founding-board/founding-board.md` |
+| Marcus G. | The Revenue Engineer | Pricing, pipeline, deal structure | Opus | `founding-board/founding-board.md` |
+| Sonia | The Product Strategist | Feature prioritisation, MVP scope, PMF signals | Sonnet | `founding-board/founding-board.md` |
+| Rohan | The AI Industry Insider | AI positioning, technical credibility | Sonnet | `founding-board/founding-board.md` |
+| Elena | The Patient Capital | Investor signal, stage-appropriate decisions | Opus | `founding-board/founding-board.md` |
+| Gord | The Canadian Market Specialist | Canadian SME dynamics, CDAP/BDC | Sonnet | `founding-board/founding-board.md` |
 
 ---
 
@@ -99,8 +124,11 @@ Complete roster of all personas in the Two Birds Innovation boardroom.
 
 ## Summary by Layer
 
-| Layer | Description |
-|-------|-------------|
-| **Inner Circle** | The Hand + Love Balance Advisor — always active, speak on every decision |
-| **Departments (6)** | Engineering, Marketing, Strategy, Legal-Risk, Finance, Operations-EA — activated by weight profiles |
-| **Advisory** | Scrappy Pack — invoked separately for founder gut checks |
+| Layer | Count | Description |
+|-------|-------|-------------|
+| **Inner Circle** | 2 | The Hand + Love Balance Advisor — always active, speak on every decision |
+| **Departments (6)** | 24 | Engineering, Marketing, Strategy, Legal-Risk, Finance, Operations-EA — activated by weight profiles |
+| **SME Reviewers** | 3 | Vera (Privacy), Dr. Lena (Child Dev), Frank (Practitioner) — domain validators before content ships |
+| **Scrappy Pack** | 5 | Mack, Tess, Grit, Patch, Sage — founder gut-checks |
+| **Founding Board** | 6 | Diana, Marcus G., Sonia, Rohan, Elena, Gord — strategic decisions only |
+| **Total** | **40** | |

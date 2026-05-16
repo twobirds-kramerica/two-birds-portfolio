@@ -46,7 +46,7 @@ Name: Aaron Patzalek · Email: aaron.patzalek@gmail.com · Org: twobirds-krameri
 - Backlog item format + Notion helper signatures: `hal-stack/governance/backlog-format.md`
 - Max mode full rules: `hal-stack/governance/max-mode.md`
 - Sovereignty/L1-L4 architecture: `hal-stack/architecture/decapitation-checklist.md`
-- Personas (Founding Board, 22 personas): `hal-stack/personas/`
+- Personas (40 total — 24 dept + 6 Founding Board + 3 SME Reviewers + 5 Scrappy Pack + 2 Inner Circle): `hal-stack/personas/` · `hal-stack/founding-board/`
 - Voice-check banned words: `hal-stack/sprint-system/backlog/P2-voice-check-protocol.md`
 - Notion sync scripts + README: `hal-stack/notion-sync/`
 - Notion Glossary (canonical source): page `348a09cf-876a-815a-802c-c9c182167749`

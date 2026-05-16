@@ -923,3 +923,30 @@ Status=Spec is the gate before Ready-to-Build. The next phase is Aaron reviewing
 
 Last updated: 2026-05-16 12:56 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-16 — S-CURRENTS-DCC: Live news feed on DCC home page
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → picked A (Currents/news feed)
+
+### What Shipped (`digital-confidence/a9618de`)
+
+| File | What |
+|------|------|
+| `js/dcc-news-feed.js` | Fetches `data/news-feed.json` (same-origin), renders up to 5 headlines with dates and CBC links. Silent-fail on any fetch error — section hides itself. DOM-safe (no innerHTML for URLs). |
+| `data/news-feed.json` | Seeded with 5 CBC Technology articles (2026-05-16). GitHub Action updates daily. |
+| `scripts/fetch-dcc-news.py` | Fetches CBC Technology RSS via `requests`, filters for AI/safety/privacy keywords, falls back to top 5 if none match. |
+| `.github/workflows/update-dcc-news.yml` | Daily cron at 06:00 UTC — runs fetch-dcc-news.py, commits any change with `[skip ci]`. `workflow_dispatch` for manual runs. |
+| `index.html` | New `<section id="dcc-news-feed">` between Testimonials and Share DCC. Style block included inline (matches DCC pattern). |
+
+### Architecture note
+Used same-origin static JSON (not a live proxy) — same pattern as StatCan LFS on Career Coach. GitHub Action fetches server-side daily; client JS reads a local file. No CORS, no API key, no third-party dependency at runtime.
+
+### Next recommended action for Aaron
+- Visit DCC home page on GitHub Pages → verify "AI & Digital Safety in the News" section appears with 5 CBC headlines
+- Trigger the Action manually: GitHub → digital-confidence → Actions → "Update DCC News Feed" → "Run workflow" to refresh now
+- The daily cron will keep it fresh automatically going forward
+
+Last updated: 2026-05-16 13:20 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

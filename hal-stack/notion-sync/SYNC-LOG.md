@@ -251,3 +251,6 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Creating a strong password I can remember' (348a09cf-876a-81ee-a960-fddd07c64331)
 - 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: 34 Research→Spec, 0 failed.
 - 2026-05-16 12:57 Eastern Daylight Time — file-aaron-action: filed 'Review DCC Research DB in Notion (Status=Spec) — advance individual rows to Ready-to-Build when specs are confirmed' [P2] → 362a09cf-876a-81b8-bd59-cdb80501f03b
+- 2026-05-16 12:57 Eastern Daylight Time — create_backlog_item: '[HUMAN NEEDED] `, `MANUAL STEP:`, `NEEDS AARON:`, `AARON TO DO:`' (P2 Human Action / Backlog / Aaron) -> 35ba09cf-876a' (P2 Human Actio' (P2 Human Action / Blocked / Aaron) -> 362a09cf-876a-81e1-8a22-da946f190acc
+- 2026-05-16 12:58 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-16 13:12 Eastern Daylight Time — file-aaron-action: filed 'Verify DCC news feed on GitHub Pages — check AI & Digital Safety in the News section, then trigger workflow_dispatch to refresh now' [P2] → 362a09cf-876a-81dd-bfa2-f1a849b4acf9

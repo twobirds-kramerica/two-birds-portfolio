@@ -981,3 +981,36 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 Last updated: 2026-05-16 13:45 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-16 — S-SME-REVIEW-002: Full 4-6 cohort batch review
+
+**Trigger:** Aaron typed "next sprint" x4 → autonomous pick → batch SME review
+
+### What Shipped
+
+**8 DCC rows now Ready-to-Build** (full 4-6 age cohort):
+
+| Row | Skill | Flags | Build order |
+|-----|-------|-------|-------------|
+| 1r | My device has eyes, ears, and a memory (Tech-Safety) | 5 | 3rd |
+| 2 | Making something together (Creative-Making) | 0 | 4th+ |
+| 3 | Big feelings are real (Emotional-Safety) | 1 | 4th+ |
+| 4 | Making my own thing first (Creative-Making) | 1 | 4th+ |
+| **5** | **True things and story things (Critical-Thinking)** | **0** | **1st — build template** |
+| 6 | Real, pretend, maybe-made-up (Learning) | 3 | 4th+ |
+| 7 | Secret stuff and share stuff (Tech-Safety) | 3 | 2nd (pair with Row 8) |
+| 8 | Who is my safe grown-up? (Emotional-Safety) | 2 | 2nd (pair with Row 7) |
+
+**Zero hard stops across the full cohort.** All flags are build-spec annotations.
+
+Review log: `hal-stack/personas/review-log/2026-05-16-sme-review-002-batch-4-6.md`
+
+### Next recommended action for Aaron
+- Start building Row 5 (True things and story things) — zero flags, zero prep, the build template
+- Build Rows 7+8 as a pair (curricularly linked: Secret stuff → Who is my safe grown-up?)
+- 27 rows remain at Spec (ages 7-9, 10-12, 13-15) — ready for batch SME review when you say go
+
+Last updated: 2026-05-16 17:52 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

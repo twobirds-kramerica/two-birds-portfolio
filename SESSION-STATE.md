@@ -950,3 +950,34 @@ Used same-origin static JSON (not a live proxy) — same pattern as StatCan LFS 
 
 Last updated: 2026-05-16 13:20 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-16 — S-SME-REVIEWERS: 3 Domain Validators added to persona system
+
+**Trigger:** Aaron asked about "3 advisory special folks vetting things" → built now
+
+### What Shipped (`e99486a`)
+
+**`hal-stack/personas/advisory/sme-reviewers.md`** — 3 new personas:
+
+| Name | Domain | Hard Stop |
+|------|--------|-----------|
+| **Vera** | Canadian Privacy & Compliance (PIPEDA/CPPA, AI disclosure, children's data) | Any privacy flag blocks shipping |
+| **Dr. Lena** | Child & Digital Development (ages 4-15, curriculum, age-appropriateness) | Any Dr. Lena flag on child content |
+| **Frank** | Frontline Digital Literacy Practitioner (seniors, libraries, real-world UX) | 2+ shared flags = block |
+
+**Hard stop rule:** If 2 or more SME Reviewers flag the same issue independently, it cannot ship until resolved.
+
+**Updated files:**
+- `hal-stack/personas/master-index.md` — count corrected to **40 total** (24 dept + 6 Founding Board + 3 SME Reviewers + 5 Scrappy Pack + 2 Inner Circle); CLAUDE.md was stale at "22 personas"
+- `hal-stack/founding-board/brain-trustee-review-matrix.md` — new CONTENT & PRODUCT VALIDATION section routing DCC modules, privacy copy, senior UX, and institution pitches through the SME layer
+- `CLAUDE.md` — persona count updated to 40 with layer breakdown
+
+### How to use going forward
+- "Run this DCC module through the SME Reviewers" → Vera + Dr. Lena + Frank respond in order, The Hand synthesises
+- Single reviewer: "Frank, does this onboarding flow work for a 70-year-old?"
+- Before any DCC row advances from Spec → Ready-to-Build, all 3 should clear it
+
+Last updated: 2026-05-16 13:45 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

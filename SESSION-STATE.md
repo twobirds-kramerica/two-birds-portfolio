@@ -13,7 +13,7 @@ Last fetch: exit 3 (queue empty as of 2026-05-05).
 - ⬜ Google Maps API key — add HTTP referrer restrictions in Google Cloud Console
 - ⬜ OG card PNG conversion — open export-og-png.html in Chrome → DevTools screenshot → save as og-card.png → swap meta tag (5 min each site)
 - ⬜ Clarity "Why I built this" — review copy before showing a prospect
-- ⬜ DCC Research DB — 29 rows at Status=Research; batch-advance to Spec when ready
+- ✅ DCC Research DB — 35 rows batch-advanced Research → Spec (2026-05-16)
 
 ---
 
@@ -888,3 +888,38 @@ Includes: convening size guidelines (Low/Medium/High/Critical), Brain Trust prot
 - Next sprint: DCC Research DB rows 1y/1z/1aa to close the 29-row target, or any new Notion P1
 
 Last updated: 2026-05-10
+
+---
+
+## ⚡ 2026-05-16 — S-DCC-BATCH-ADVANCE: Research DB → Spec (35 rows)
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → "just go" → highest-value milestone
+
+### What Shipped
+
+`hal-stack/notion-sync/batch-advance-research.py` — new reusable script.
+- Queries kids_research_data_source for Status=Research, advances each to Spec
+- Importlib loader handles `notion-client.py` hyphen filename cleanly
+- Dry-run mode (`--dry-run`) for pre-flight checks
+- Logs every update to SYNC-LOG.md; prints per-row confirmation
+
+**35 rows updated Research → Spec (0 failures):**
+
+| Status | Count |
+|--------|-------|
+| Research → Spec | 35 |
+| Failed | 0 |
+
+All skills across 5 categories (Tech-Safety, Learning, Emotional-Safety, Critical-Thinking, Creative-Making) and 4 age bands (4-6, 7-9, 10-12, 13-15) are now at Spec.
+
+### What this unlocks
+
+Status=Spec is the gate before Ready-to-Build. The next phase is Aaron reviewing each row in Notion and advancing to Ready-to-Build as specs are confirmed — at which point Claude Code can begin building the actual DCC modules.
+
+### Next recommended action for Aaron
+- Open DCC Research DB in Notion — filter by Status=Spec, review rows
+- Advance individual rows to Ready-to-Build when you're satisfied with the spec
+- Say "batch-advance DCC rows to Ready-to-Build" when a batch is ready to build
+
+Last updated: 2026-05-16 12:56 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

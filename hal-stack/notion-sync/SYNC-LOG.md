@@ -188,3 +188,66 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-10 00:37 Eastern Daylight Time — create_research_row: 'Spotting hidden advertising — when content is really an ad' (Critical-Thinking / ['10-12']) -> 35ca09cf-876a-8142-ba37-fc1991f4e98e
 - 2026-05-10 00:37 Eastern Daylight Time — create_research_row: 'Building a safe online identity — what to share, what to protect' (Tech-Safety / ['7-9']) -> 35ca09cf-876a-812c-8632-e447a6c9f591
 - 2026-05-10 00:37 Eastern Daylight Time — create_research_row: 'Understanding filter bubbles — why everyone doesn't see the same internet' (Critical-Thinking / ['13-15']) -> 35ca09cf-876a-815f-9dc9-e818dea06d48
+- 2026-05-10 00:38 Eastern Daylight Time — create_backlog_item: '[BLOCKED] `, `HUMAN NEEDED:`, `MANUAL STEP:`, `NEEDS AARON:`, `AARON TO DO:`' (P2 Human Action / Backlog / Aaron) -> 35ba09cf-876a' (P2 Human Action / Blocked / Aaron) -> 35ca09cf-876a-8109-9fda-e084e0fd6179
+- 2026-05-10 02:24 Eastern Daylight Time — next-sprint locked: [P1] HAL Stack self-discovery: learn what you built + industry terminology (35ca09cf-876a-818d-8e5b-dee4a2022f97)
+- 2026-05-10 21:07 Eastern Daylight Time — next-sprint locked: [P1] HAL Stack self-discovery: learn what you built + industry terminology (35ca09cf-876a-818d-8e5b-dee4a2022f97)
+- 2026-05-10 21:13 Eastern Daylight Time — complete-sprint: (page 35ca09cf-876a-818d-8e5b-dee4a2022f97) (35ca09cf-876a-818d-8e5b-dee4a2022f97) → Done; [2026-05-10 21:13 Eastern Daylight Time] DONE
+- 2026-05-10 21:17 Eastern Daylight Time — next-sprint locked: [P1] NEXT SPRINT: Founding Board + Brain Trustee Review Matrix (35da09cf-876a-8110-ac80-e0fb281027c3)
+- 2026-05-10 21:20 Eastern Daylight Time — complete-sprint: (page 35da09cf-876a-8110-ac80-e0fb281027c3) (35da09cf-876a-8110-ac80-e0fb281027c3) → Done; [2026-05-10 21:20 Eastern Daylight Time] DONE
+- 2026-05-10 21:47 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-10 21:55 Eastern Daylight Time — create_research_row: 'Online kindness counts — words stick longer online than in person' (Emotional-Safety / ['7-9']) -> 35da09cf-876a-813a-9525-f92013de9ab3
+- 2026-05-10 21:55 Eastern Daylight Time — create_research_row: 'Making something together — sharing ideas and giving credit even as a little creator' (Creative-Making / ['4-6']) -> 35da09cf-876a-816b-8f44-d23d152d0cd3
+- 2026-05-10 21:55 Eastern Daylight Time — create_research_row: 'Checking if my AI helper is right — the verify-before-share habit' (Learning / ['10-12']) -> 35da09cf-876a-8166-8e46-d6fe8f082fc1
+- 2026-05-11 01:25 Eastern Daylight Time — file-aaron-action: filed 'Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min)' [P1] → 35da09cf-876a-81fd-adc5-e5f1f363b503
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide)' [P1] → 35da09cf-876a-8114-925e-c45540e0c9da
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'KAS: choose access code to publish (or remove for open access)' [P1] → 35da09cf-876a-81a5-8ccf-f38380588ad9
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'KAS: decide public repo name for kevins-apartment-search' [P2] → 35da09cf-876a-813a-9cdd-e6f30766e26c
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'KAS: listing data strategy — keep Kevin's listings as demo, replace with generic, or ship empty' [P2] → 35da09cf-876a-8120-bc00-fee47aa231c7
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'Clarity 'Why I Built This' trust section — review copy before showing to a prospect' [P1] → 35da09cf-876a-8176-a094-d110fd3d3e68
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert' [P1] → 35da09cf-876a-81a8-9d3d-eadbec7e111d
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'OG card PNG conversion — export og-card.svg to og-card.png for Twitter/X support' [P2] → 35da09cf-876a-81bc-a1b0-fcea8f60c4eb
+- 2026-05-11 01:26 Eastern Daylight Time — file-aaron-action: filed 'S2-AGENT-TRIAGE: Build agent triage system to auto-route unanswered session items (Option B)' [P2] → 35da09cf-876a-8129-8b0f-d53381077149
+- 2026-05-11 12:52 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-11 14:14 Eastern Daylight Time — file-aaron-action: filed 'Career Coach: trigger StatCan LFS Action manually to get latest unemployment figure' [P2] → 35da09cf-876a-81b1-be9d-e3ea363584b3
+- 2026-05-11 23:35 Eastern Daylight Time — file-aaron-action: filed 'Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot' [P1] → 35ea09cf-876a-81eb-8ec1-d38c490de2b7
+- 2026-05-11 23:36 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-11 23:36 Eastern Daylight Time — self-test OK — 10 open sprint(s)
+- 2026-05-11 23:36 Eastern Daylight Time — filed S-CODEX-HYBRID to Notion backlog: 35ea09cf-876a-81b7-98ac-f0f2de864eff
+- 2026-05-16 12:52 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research→Spec 'Checking if my AI helper is right — the verify-before-share habit' (35da09cf-876a-8166-8e46-d6fe8f082fc1)
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research->Spec 'Making something together — sharing ideas and giving credit even as a little creator' (35da09cf-876a-816b-8f44-d23d152d0cd3)
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research->Spec 'Online kindness counts — words stick longer online than in person' (35da09cf-876a-813a-9525-f92013de9ab3)
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research->Spec 'Understanding filter bubbles — why everyone doesn't see the same internet' (35ca09cf-876a-815f-9dc9-e818dea06d48)
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research->Spec 'Building a safe online identity — what to share, what to protect' (35ca09cf-876a-812c-8632-e447a6c9f591)
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research->Spec 'Spotting hidden advertising — when content is really an ad' (35ca09cf-876a-8142-ba37-fc1991f4e98e)
+- 2026-05-16 12:55 Eastern Daylight Time — batch-advance-research: Research->Spec 'Public Wi-Fi, VPNs, and keeping your data yours when you're not at home' (356a09cf-876a-813a-a9e8-f32b142b78a6)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Noticing when my screen use is affecting how I feel — and knowing my first move' (356a09cf-876a-812e-ae45-c3e5259e9bad)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Watching to learn vs. watching to pass time — four moves that make it stick' (356a09cf-876a-813c-a5c3-e5b3afff8bf9)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'My device has eyes, ears, and a memory — and I get to choose who uses them' (356a09cf-876a-8103-8361-f52194b91f42)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Publishing my work responsibly — audience, consent, and permanence' (356a09cf-876a-81b4-b108-f1decf0da4bd)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Real, made-up, or somewhere in between — sorting what I find online' (356a09cf-876a-810b-8ab3-e56ee6056444)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Following a story back to where it started (source tracing)' (355a09cf-876a-8171-b12f-cbfc12a8568b)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Big feelings are real; I get to choose what I do next' (355a09cf-876a-817c-87d1-ebcbe982dcfa)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Reading visual and audio media for signs of AI manipulation' (355a09cf-876a-8198-8d90-d4c6387ad29d)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Using AI as a tutor that grows me, not a shortcut that hollows me out' (349a09cf-876a-819e-88b5-d4ed38ef43cf)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Pause and show a grown-up whenever an app asks for something' (349a09cf-876a-816f-b441-c4bfce802a0b)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Stepping out of a group pile-on (without becoming the next target)' (349a09cf-876a-8122-9afb-c334a458b2eb)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'When I remix something, I name who made the original' (349a09cf-876a-8124-a6ff-cdda22772fd9)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Reading around something before I believe it (lateral reading + AI check)' (349a09cf-876a-8163-8d69-ebbca1da0b2a)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Using a password manager so every account gets its own password' (349a09cf-876a-811d-b763-c94c8fdef76e)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'What to do if someone pressures me to send a picture (sextortion)' (349a09cf-876a-816a-a0b2-d5b4bc4aa532)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Making something useful for someone else' (349a09cf-876a-8192-af6c-d7ec8f7e578b)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Turning on two-factor authentication on the accounts I care about' (349a09cf-876a-8153-9a64-f3f460ed1f3a)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Making my own thing first, then watching other people's' (349a09cf-876a-8136-8c50-df26892b81c6)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Telling a grown-up when something online feels weird' (349a09cf-876a-81c0-9d73-c5997f72a204)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'True things and story things' (349a09cf-876a-8118-8e9a-f1228d597509)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Real, pretend, and maybe-made-up pictures' (349a09cf-876a-8149-826c-d6303c871a73)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Secret stuff and share stuff' (349a09cf-876a-8142-99bd-d92198f8c4a8)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Who is my safe grown-up?' (349a09cf-876a-816a-adbe-f527ed60dfa5)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Making a story with AI as my helper, not my author' (348a09cf-876a-81bd-a6e9-cbbf1edbcd39)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Is this an ad, or did they really mean it?' (348a09cf-876a-815b-9435-df11c72e1a24)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Spotting a 'please don't tell your parent' message' (348a09cf-876a-81b6-896e-d9ab0a9f234a)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Asking good questions when I search or ask AI' (348a09cf-876a-8136-9830-ef44e2835482)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: Research->Spec 'Creating a strong password I can remember' (348a09cf-876a-81ee-a960-fddd07c64331)
+- 2026-05-16 12:56 Eastern Daylight Time — batch-advance-research: 34 Research→Spec, 0 failed.
+- 2026-05-16 12:57 Eastern Daylight Time — file-aaron-action: filed 'Review DCC Research DB in Notion (Status=Spec) — advance individual rows to Ready-to-Build when specs are confirmed' [P2] → 362a09cf-876a-81b8-bd59-cdb80501f03b

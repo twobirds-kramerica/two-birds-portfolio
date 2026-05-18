@@ -1042,6 +1042,71 @@ CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
 
 ---
 
+## ⚡ 2026-05-18 — S-STORY-DIAL: Story Dial project created
+
+**Trigger:** Aaron reviewed Entry #005 (approved), requested Story Dial project, encoded scribe honesty rules, and asked about 3am automation.
+
+### What Shipped (`d978f83`)
+
+**`hal-stack/story-dial/`** — new project (5 files):
+
+| File | Purpose |
+|------|---------|
+| `README.md` | Project overview, Agency Log table, naming candidates ("True Story: My AI Journey") |
+| `scribe-rules.md` | Two hard rules: (1) honest/humble/defensible — qualify all projections; (2) keep receipts — every claim traces to a commit hash or Notion ID |
+| `dial-spec.md` | Dial 1–5 mapped to personas × channels (1=Twitter/X big bang → 5=technical/founder intimate) |
+| `raw-data-sources.md` | What feeds the raw layer: git commits, SESSION-STATE, Notion Agency Log |
+| `chronicle-weekly.py` | Layer 1 autonomous script — pulls commits, identifies story candidates, creates Notion stub. No Claude API needed. |
+
+**`run-overnight-build.bat`** — Thursday block added: `chronicle-weekly.py` runs at 2am Thursday, creates Notion page with `Status: Raw Data Ready`.
+
+**Notion #003** — $479K reframed retroactively per scribe rules: "An optimistic projection — reverse-engineered from assumed demand and untested pricing — sat at $479K for Year 1." Scribe Rule note added to Format 2 section.
+
+**Two P1 Aaron actions filed to Notion:**
+- Voice unlock: set `OPENAI_API_KEY` OR install Whispering (guide: `hal-stack/voice-layer/VOICE-SETUP.md`)
+- Story Dial full 3am: run `/schedule` skill to create Thursday 3am remote agent for story writing (Layer 2)
+
+### Answering Aaron's questions
+
+**What are you approving (Agency Log)?**
+The Agency Log entries (#003–#005) are Notion pages I wrote — each has a Raw Story (400 words, founder voice), a LinkedIn Short (~200 words ready to post), a LinkedIn Long (~600 words), and a Blog Outline. "Draft" means Aaron hasn't reviewed them. Approving = saying "this sounds like me, I'm OK to post this." Nothing auto-posts. Aaron copy-pastes the LinkedIn Short and posts it himself whenever ready. Entry #005 is approved.
+
+**Voice unlock — do I need Aaron?**
+Yes, one of these (Aaron's choice):
+- Option A: Set `$env:OPENAI_API_KEY = "sk-..."` in PowerShell profile → full VoiceMode activates (best quality)
+- Option B: Download Whispering from GitHub (free, no GPU, system-wide hotkey) → sovereign STT, replaces Wispr Flow
+- Mobile (optional): Install Happy Coder app → voice to Claude Code Remote
+Both filed as P1 Notion action.
+
+**3am chronicle automation:**
+- Layer 1 (tonight): `chronicle-weekly.py` runs Thursday 2am via overnight bat. Creates Notion stub with raw commits. No Claude API needed. Happens automatically.
+- Layer 2 (story writing): Still requires a live Claude Code session. To fully automate: run `/schedule` skill → set up Thursday 3am remote agent → story writes itself overnight.
+- Full 3am filed as P1 Aaron action in Notion.
+
+### Story Dial — how to use
+
+**Dial settings:**
+- `dial 1` → Big bang / Twitter/X hook + LinkedIn teaser (1-3 sentences, broad audience)
+- `dial 3` → Standard (LinkedIn Short + Long + Blog outline) — **default for all chronicle entries**
+- `dial 5` → Intimate / technical step-by-step (founders, investors, discerning readers)
+
+**In a Claude Code session:**
+```
+Chronicle this week's entry at dial 3.
+Rewrite the LinkedIn Short at dial 1 — I want a sharper hook.
+```
+
+### Scribe Rules — applied going forward
+
+All future Agency Log entries (and any edits to existing ones) must follow:
+1. Every projection qualified as "optimistic," "estimated," or "what-if" — never presented as outcome
+2. Every claim traces to a receipt (commit hash, Notion ID, file path)
+3. Standard: "based on a true story, with receipts available on request"
+
+Last updated: 2026-05-18 at 03:20 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-17 — S-CHRONICLE-WEEKLY: First cadence run + Entry #005
 
 **Trigger:** Notion P1 sprint locked by next-sprint.py

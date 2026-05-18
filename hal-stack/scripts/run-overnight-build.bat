@@ -98,6 +98,16 @@ if "%WEEKDAY%"=="Sunday" (
     echo [%date% %time%] Backlog health complete. >> %LOG%
 )
 
+REM --- Story Dial Chronicle Weekly (Thursdays only) ---
+REM Layer 1: pulls git commits, creates Notion stub (Raw Data Ready)
+REM Layer 2 (Chronicle session) completes the entry next time Aaron opens Claude Code
+if "%WEEKDAY%"=="Thursday" (
+    echo [%date% %time%] Running Story Dial chronicle weekly (Thursday)... >> %LOG%
+    cd C:\twobirds\two-birds-portfolio
+    python hal-stack/story-dial/chronicle-weekly.py >> %LOG% 2>&1
+    echo [%date% %time%] Chronicle weekly Layer 1 complete. >> %LOG%
+)
+
 REM --- CoS morning briefing (daily) ---
 echo [%date% %time%] Generating CoS morning briefing... >> %LOG%
 cd C:\twobirds\two-birds-portfolio

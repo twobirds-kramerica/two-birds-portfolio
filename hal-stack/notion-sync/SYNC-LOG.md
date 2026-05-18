@@ -270,3 +270,9 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-16 19:15 Eastern Daylight Time — SME-REVIEW-002 batch: Ready-to-Build [Real, pretend, maybe-made-up]
 - 2026-05-16 19:15 Eastern Daylight Time — SME-REVIEW-002 batch: Ready-to-Build [Secret stuff and share stuff]
 - 2026-05-16 19:15 Eastern Daylight Time — SME-REVIEW-002 batch: Ready-to-Build [Who is my safe grown-up?]
+- 2026-05-16 19:16 Eastern Daylight Time — create_backlog_item: '[AARON TO DO] `' (P2 Human Action / Backlog / Aaron) -> 35ba09cf-876a' (P2 Human Actio' (P2 Human Acti' (P2 Human Acti' (P2 Human Acti' (P2 Human Action / Backlog / Aaron) -> 362a09cf-876a-811a-adb0-f1704881aebf
+- 2026-05-17 22:59 Eastern Daylight Time — file-aaron-action: filed 'KevsCasa: Set up Netlify — connect kevins-apartment-search repo, deploy, paste the URL back to Claude Code to complete the sprint' [P1] → 364a09cf-876a-812e-a4c1-e31a80e9905b
+- 2026-05-17 22:59 Eastern Daylight Time — file-aaron-action: filed 'KevsCasa: Review v2 design at Netlify URL and approve or redirect — do this AFTER Netlify is live' [P1] → 364a09cf-876a-81ea-972f-f09d7a8e51af
+- 2026-05-17 22:59 Eastern Daylight Time — file-aaron-action: filed 'Google Maps API key: add HTTP referrer restrictions in Google Cloud Console — billing risk until done' [P2] → 364a09cf-876a-818d-b6f5-f47f4c1bf104
+- 2026-05-17 23:02 Eastern Daylight Time — next-sprint locked: [P1] S-CHRONICLE-BACKFILL: Convert April 22 – May 16 NB raw material into Agency Log entries #003+ (364a09cf-876a-818e-8762-e84b56696264)
+- 2026-05-17 23:05 Eastern Daylight Time — complete-sprint: (page 364a09cf-876a-818e-8762-e84b56696264) (364a09cf-876a-818e-8762-e84b56696264) → Done; [2026-05-17 23:05 Eastern Daylight Time] DONE — commit no-code-notion-only

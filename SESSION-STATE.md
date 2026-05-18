@@ -1014,3 +1014,28 @@ Review log: `hal-stack/personas/review-log/2026-05-16-sme-review-002-batch-4-6.m
 
 Last updated: 2026-05-16 17:52 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-17 — S-CHRONICLE-BACKFILL: Agency Log entries #003 + #004
+
+**Trigger:** Notion P1 sprint locked by next-sprint.py
+
+### What Shipped (Notion only — no code)
+
+5 source pages (Apr 21 + May 8) collapsed into 2 distinct story arcs:
+
+| Entry | Title | Date | Notion URL |
+|-------|-------|------|-----------|
+| #003 | The $479K Question | April 21, 2026 | https://www.notion.so/364a09cf876a810d9691d580f015dbdd |
+| #004 | The 2 AM Discovery | May 8, 2026 | https://www.notion.so/364a09cf876a81f4964fc35053b5ae66 |
+
+Each entry includes: metadata block · raw story (300-500 words, honest founder voice) · LinkedIn Short (~200 words) · LinkedIn Long (~600 words) · Blog Post Outline (7-8 points) · Evidence block with source page IDs and commit hashes.
+
+**Source consolidation note:** Pages 1-4 (ROI Reality Check, Decision Pivot, Transcript Archive, Chronicle Handoff) all document the same Apr 21 event from different angles → one entry (#003). Page 5 (loop discovery) is a distinct story → #004. Transcript Archive and Chronicle Handoff had no new story arcs; their content was fully captured in the NB pages.
+
+**Next Agency Log entry number: #005**
+Thursday cadence (S-CHRONICLE-WEEKLY) handles May 17 forward.
+
+Last updated: 2026-05-17 23:07 EST (Toronto)
+CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.

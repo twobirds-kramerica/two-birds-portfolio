@@ -279,3 +279,6 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-17 23:07 Eastern Daylight Time — next-sprint locked: [P1] S-CHRONICLE-WEEKLY: Thursday Chronicle synthesis cadence (recurring) (364a09cf-876a-81ad-be30-fb07300ad60e)
 - 2026-05-17 23:09 Eastern Daylight Time — complete-sprint: (page 364a09cf-876a-81ad-be30-fb07300ad60e) (364a09cf-876a-81ad-be30-fb07300ad60e) → Done; [2026-05-17 23:09 Eastern Daylight Time] DONE — commit no-code-notion-only
 - 2026-05-17 23:09 Eastern Daylight Time — create_backlog_item: 'S-CHRONICLE-WEEKLY: Thursday Chronicle synthesis cadence (recurring)' (P1 Sprint / Ready / Claude Code) -> 364a09cf-876a-81cd-bcd6-d7cc661aa238
+- 2026-05-17 23:26 Eastern Daylight Time — file-aaron-action: filed 'Voice: Install Whispering (replaces Wispr Flow) — free, local, sovereign, no weekly limit' [P1] → 364a09cf-876a-81be-9bb5-e2a898f5331c
+- 2026-05-17 23:26 Eastern Daylight Time — file-aaron-action: filed 'Voice: Set OPENAI_API_KEY env var on EZbook to activate VoiceMode MCP full two-way' [P1] → 364a09cf-876a-81ac-b010-feb527028ea1
+- 2026-05-17 23:26 Eastern Daylight Time — file-aaron-action: filed 'Voice: Install Happy Coder app on phone for mobile voice + Claude Code remote' [P2] → 364a09cf-876a-81be-bb01-f39ffd11850c

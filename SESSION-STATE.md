@@ -1196,3 +1196,47 @@ Story: VoiceMode MCP failed on Windows (Unix `fcntl` dependency). Built Kokoro-F
 **Next Chronicle run: Thursday May 29, 2026** (Notion: `365a09cf-876a-8112-8ec5-cfd1d24645e1`)
 
 Last updated: 2026-05-19 02:45 EST (Toronto)
+
+---
+
+## ⚡ 2026-05-19 — S-DCC-KIDS-ROW5: First kids module built (build template)
+
+**Trigger:** Aaron said "just go" → Notion exit 3 → highest-value available work
+
+### What Shipped (`digital-confidence/kids/4-6/true-things-story-things.html`)
+
+First DCC kids module — sets the HTML/CSS template for all future kids modules.
+
+| Detail | Value |
+|--------|-------|
+| Skill | True things and story things |
+| Category | Critical-Thinking |
+| Age band | 4–6 |
+| SME flags | 0 (zero — strongest row in cohort) |
+| Screen time | Zero — fully offline activity |
+| File | `digital-confidence/kids/4-6/true-things-story-things.html` |
+| Notion row | `349a09cf-876a-8118-8e9a-f1228d597509` → Done |
+
+### Template structure established
+
+| Section | Purpose |
+|---------|---------|
+| Caregiver banner | "This activity is for you and your child together" |
+| Badge row | Age / Category / Time / Screen indicator |
+| Concept grid | TRUE / STORY / NOT SURE with colour coding |
+| What you'll need | Green card, yellow card, stickers |
+| How to play | 5-step numbered instructions |
+| Six statements | With caregiver answers + notes |
+| Brave Thinker sticker | Gamification block |
+| Signs of growth | What to watch for |
+| Caregiver aside | Research backing, do/avoid, sources |
+
+### CSS pattern
+Inline `<style>` block with `--kids-*` CSS custom properties (green, yellow, purple palette). Inherits DCC `main.css` base tokens. Mobile-first, print-ready.
+
+### Next recommended action for Aaron
+- Visit `digital-confidence/kids/4-6/true-things-story-things.html` locally and verify layout
+- 7 more rows remain Ready-to-Build (age 4–6): rows 1r, 2, 3, 4, 6, 7, 8 — say "next sprint" to continue building
+- A `kids/index.html` and `kids/4-6/index.html` landing page should be built once 2–3 modules exist
+
+Last updated: 2026-05-19 11:15 EST (Toronto)

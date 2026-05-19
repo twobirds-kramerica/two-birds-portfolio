@@ -4,14 +4,21 @@
 
 param()
 
+$logFile = "$env:TEMP\claude-tts-debug.log"
+$timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+
 $input_data = $input | Out-String
+"[$timestamp] Hook fired. Raw input length: $($input_data.Length)" | Out-File $logFile -Append
+
 $json = $input_data | ConvertFrom-Json -ErrorAction SilentlyContinue
+"[$timestamp] transcript_path: $($json.transcript_path)" | Out-File $logFile -Append
 
 $text = ""
 
 # Try to get text from stop_hook_active transcript
 if ($json.transcript_path -and (Test-Path $json.transcript_path)) {
     $lines = Get-Content $json.transcript_path -ErrorAction SilentlyContinue
+    "[$timestamp] Transcript lines: $($lines.Count)" | Out-File $logFile -Append
     for ($i = $lines.Count - 1; $i -ge 0; $i--) {
         $msg = $lines[$i] | ConvertFrom-Json -ErrorAction SilentlyContinue
         if ($msg.role -eq "assistant") {
@@ -23,9 +30,18 @@ if ($json.transcript_path -and (Test-Path $json.transcript_path)) {
             if ($text) { break }
         }
     }
+} elseif (-not $json.transcript_path) {
+    "[$timestamp] ERROR: no transcript_path in hook input" | Out-File $logFile -Append
+} else {
+    "[$timestamp] ERROR: transcript_path not found on disk: $($json.transcript_path)" | Out-File $logFile -Append
 }
 
-if (-not $text) { exit 0 }
+"[$timestamp] text extracted (first 100 chars): $($text.Substring(0, [Math]::Min(100, $text.Length)))" | Out-File $logFile -Append
+
+if (-not $text) {
+    "[$timestamp] No text — exiting without speaking" | Out-File $logFile -Append
+    exit 0
+}
 
 # Trim to 800 chars max to avoid very long TTS runs
 if ($text.Length -gt 800) { $text = $text.Substring(0, 800) + "..." }
@@ -61,8 +77,12 @@ try {
 
 # Fallback: Windows built-in TTS
 if (-not $kokoro) {
+    "[$timestamp] Using Windows TTS fallback" | Out-File $logFile -Append
     Add-Type -AssemblyName System.Speech
     $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer
     $synth.Rate = 2
     $synth.Speak($text)
+    "[$timestamp] Windows TTS done" | Out-File $logFile -Append
+} else {
+    "[$timestamp] Kokoro TTS done" | Out-File $logFile -Append
 }

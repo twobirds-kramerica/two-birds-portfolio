@@ -1124,3 +1124,55 @@ Story: Built 3 AI domain validators (Vera, Dr. Lena, Frank), ran them immediatel
 
 Last updated: 2026-05-17 23:11 EST (Toronto)
 CDN note: If Retro shows stale data, wait 5 minutes and type Retro again.
+
+---
+
+## ⚡ 2026-05-18 — S-VOICE-KOKORO: Desktop TTS via Kokoro + Stop hook
+
+**Trigger:** Aaron asked to fix voice output — sovereign/free path, no OpenAI.
+
+### Root cause diagnosis
+
+VoiceMode MCP `converse` tool does not work on Windows — requires Unix `fcntl` module (not available on Windows). This is why MCP showed `✗ Failed to connect`. Not fixable without forking VoiceMode.
+
+### What Shipped (`cb353b3`)
+
+| Component | What |
+|-----------|------|
+| `hal-stack/voice-layer/stop-hook-tts.ps1` | Claude Code Stop hook — fires after every response, calls Kokoro (port 8880) or falls back to Windows TTS |
+| `hal-stack/voice-layer/VOICE-SETUP.md` | Full rewrite: cross-PC setup guide, what failed on Windows and why, architecture diagram, fresh machine checklist |
+| `~/.claude/settings.json` | Stop hook wired: `powershell.exe -NonInteractive -File stop-hook-tts.ps1` |
+
+**Installed on this machine (not in git — too large):**
+- ffmpeg (winget), pyaudio, eSpeak NG 1.52.0
+- Kokoro-FastAPI cloned to `C:\twobirds\tools\Kokoro-FastAPI\`
+- 286 packages installed in `.venv` (CPU mode, Python 3.10)
+- Model: `kokoro-v1_0.pth` (327MB) at `api/src/models/v1_0/`
+
+**To use voice on desktop:**
+1. Run `C:\twobirds\tools\Kokoro-FastAPI\start-kokoro.ps1` in a terminal (keep open)
+2. Open Claude Code normally — Stop hook auto-speaks responses
+
+**If Kokoro not running:** Hook falls back to Windows built-in TTS automatically.
+
+### Notion actions filed
+
+| Item | Priority | Notion ID |
+|------|----------|-----------|
+| Install Happy Coder app on phone (mobile voice IN) | P1 | `365a09cf-876a-81e3-b63c-fedfcb3f3ecc` |
+| S-VOICE-CLOUD sprint (VoiceMode Connect + Tailscale, mobile voice OUT) | P2 | `365a09cf-876a-8100-9389-c95f1cc1eec6` |
+
+### Decisions made this session
+
+- **HF Spaces = freemium**, not suitable for real-time voice (cold starts, rate limits)
+- **VoiceMode on Windows = broken for converse** — Stop hook is the Windows-native replacement
+- **OpenAI API key IS set** in system environment (from prior session) — not used, Kokoro preferred
+- **Cloud voice (Track 2)** = VoiceMode Connect + Tailscale (free, sovereign, mobile-accessible)
+- **True cloud TTS** (no PC required) = Google Cloud TTS free tier when that time comes
+
+### Fresh machine setup
+
+Full steps in `hal-stack/voice-layer/VOICE-SETUP.md` — "Fresh Machine Setup" section.
+Short version: winget ffmpeg → pip pyaudio → install eSpeak NG MSI → git clone Kokoro-FastAPI → uv venv → uv pip install -e ".[cpu]" → wire Stop hook in settings.json.
+
+Last updated: 2026-05-18 23:30 EST (Toronto)

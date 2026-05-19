@@ -11,6 +11,13 @@ Aaron Patzalek. St. Thomas, Ontario. Married, parent of twins. 20+ year Senior P
 4. Read SESSION-STATE.md before starting any work session.
 5. `git log --oneline -30` first. Never re-propose a sprint without grepping git log for it first.
 
+## ONE-SHOT LAUNCHER RULE (2026-05-19)
+Any new tool or background service that needs to run alongside Claude Code MUST be wired into:
+- `hal-stack/scripts/launch-claude.bat` — add a `start /min` line for the new service
+- `hal-stack/scripts/setup-new-machine.ps1` — add the install step
+Never give Aaron manual "run this separately" instructions. One double-click starts everything.
+Fresh machine = clone two-birds-portfolio → run setup-new-machine.ps1 → desktop shortcut appears.
+
 ## SPRINT COMPLETION — AARON ACTION FILING (2026-05-11)
 At the end of every sprint, before pushing: for each item in "Next recommended action for Aaron" that requires a decision or explicit human action, call:
 `python hal-stack/notion-sync/file-aaron-action.py "description" P1|P2 --notes "context"`

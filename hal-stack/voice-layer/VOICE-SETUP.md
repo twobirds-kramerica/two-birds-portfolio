@@ -1,92 +1,130 @@
 # Two-Way Voice Setup — HAL Stack
-**Built:** 2026-05-17 | **Sprint:** S-VOICE-TWO-WAY
+**Built:** 2026-05-17 | **Updated:** 2026-05-18 | **Sprint:** S-VOICE-TWO-WAY + S-VOICE-KOKORO
 
-## Current state (what works right now)
+## Current Architecture (as of 2026-05-18)
 
-### Voice IN → Claude Code
+```
+Voice IN:   /voice in Claude Code CLI (hold spacebar) → transcribed text → Claude
+Voice OUT:  Claude Stop hook → stop-hook-tts.ps1 → Kokoro (local) → spoken audio
+                                                  ↓ fallback if Kokoro not running
+                                              Windows built-in TTS
+Mobile IN:  Happy Coder app → Claude Code Remote (Aaron action — install on phone)
+Mobile OUT: Not yet wired (Track 2 sprint)
+```
+
+**VoiceMode MCP note:** VoiceMode's `converse` tool does not work on Windows (requires Unix `fcntl` module). Removed from active architecture. Stop hook approach is the Windows-native replacement.
+
+---
+
+## Desktop Voice OUT — How to use
+
+### Step 1: Start Kokoro TTS server (before Claude Code)
+```powershell
+C:\twobirds\tools\Kokoro-FastAPI\start-kokoro.ps1
+```
+Leave this terminal open. Server runs on http://localhost:8880. First start takes ~30s to load model.
+
+### Step 2: Open Claude Code normally
+The Stop hook fires automatically. When Claude finishes a response, it speaks.
+
+**If Kokoro isn't running:** Hook falls back to Windows built-in TTS automatically. No crash.
+
+---
+
+## Fresh Machine Setup (cross-PC guide)
+
+Run these once on any new Windows machine:
+
+```powershell
+# 1. Install ffmpeg
+winget install --id Gyan.FFmpeg --silent --accept-package-agreements --accept-source-agreements
+
+# 2. Install pyaudio (portaudio)
+pip install pyaudio
+
+# 3. Install eSpeak NG (phonemizer for Kokoro)
+# Download: https://github.com/espeak-ng/espeak-ng/releases/download/1.52.0/espeak-ng.msi
+# Then: Start-Process msiexec.exe -ArgumentList "/i espeak-ng.msi /quiet /norestart" -Wait
+
+# 4. Clone Kokoro-FastAPI
+git clone https://github.com/remsky/Kokoro-FastAPI.git C:\twobirds\tools\Kokoro-FastAPI
+
+# 5. Set up Kokoro (model already in repo after first run — or re-download)
+Set-Location C:\twobirds\tools\Kokoro-FastAPI
+uv venv
+uv pip install -e ".[cpu]"
+# Model downloads automatically on first start (~327MB, one time)
+
+# 6. The Stop hook is in two-birds-portfolio git — already committed.
+# Just ensure settings.json has the hook (see below).
+```
+
+### Claude Code settings.json hook (C:\Users\<you>\.claude\settings.json)
+The Stop hook must be present. Copy this block into settings.json:
+```json
+"hooks": {
+  "Stop": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell.exe -NonInteractive -File \"C:\\twobirds\\two-birds-portfolio\\hal-stack\\voice-layer\\stop-hook-tts.ps1\""
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+## Voice IN — Desktop
+
+### Option A: Claude Code native (built-in, no install)
 Type `/voice` in Claude Code CLI. Hold spacebar while speaking. Release to transcribe.
-This is Boris Cherny's method — built into Claude Code, no extra install.
+Quality: acceptable for most use. Dictation is slow — speak at 60-70% normal pace.
 
-**For reliable dictation everywhere (replacing Wispr Flow):**
-See the Whispering / Speaches section below. Local Whisper, no subscription, no limits.
-
-### Voice OUT ← Claude Code (fallback, works now)
-PowerShell TTS — no API key, no install, available on every Windows machine:
-```powershell
-# Read any text aloud
-.\hal-stack\voice-layer\tts-speak.ps1 "Claude says this"
-
-# Or pipe a SESSION-STATE section aloud
-Get-Content SESSION-STATE.md | Select-Object -First 20 | .\hal-stack\voice-layer\tts-speak.ps1
-```
-Quality: passable. Not Jarvis. Gets the job done while VoiceMode full setup is pending.
+### Option B: Whispering (recommended — replaces Wispr Flow)
+Open source, local Whisper models, system-wide hotkey, no account, no limits.
+Install: https://github.com/braden-w/whispering — download release, runs immediately.
 
 ---
 
-## Full two-way: VoiceMode MCP (installed, needs OpenAI key to activate)
+## Mobile
 
-VoiceMode MCP is installed at user scope. When Aaron's OpenAI API key is set,
-full two-way voice activates automatically — local Whisper STT + OpenAI TTS.
+**Voice IN (mobile → Claude Code):** Happy Coder app — filed as P1 Aaron action in Notion.
+**Voice OUT (Claude → mobile speaker):** Track 2 sprint — S-VOICE-CLOUD. Not yet built.
 
-**To activate:**
-```powershell
-# Set once in PowerShell profile or system env
-$env:OPENAI_API_KEY = "sk-..."
-# Then in Claude Code: just talk. VoiceMode handles both directions.
-```
-
-**Without OpenAI key (fully local path — more setup):**
-VoiceMode supports local Kokoro TTS + Speaches/faster-whisper STT.
-See: https://github.com/mbailey/voicemode/blob/master/docs/tutorials/getting-started.md
+Track 2 design: VoiceMode Connect (`uvx voice-mode serve`) + Tailscale (free) for
+remote access. Kokoro runs on desktop, audio streams to mobile. No cloud cost.
 
 ---
 
-## Replacing Wispr Flow — open source, free, sovereign
+## Kokoro voices
+Default voice: `af_sky` (female, clear, natural).
+Other options: `af_bella`, `af_nova`, `am_adam` (male). Change in stop-hook-tts.ps1 line ~26.
 
-Wispr Flow free tier has a weekly limit. Local alternatives:
-
-| Tool | Platform | STT Engine | Cost | Notes |
-|------|----------|-----------|------|-------|
-| **Whispering** | Win/Mac/Linux | Whisper.cpp local | Free forever | Best Wispr Flow replacement. System-wide. Open source. |
-| **OpenWhispr** | Win/Mac/Linux | Whisper + Parakeet | Free | System tray app, no GPU needed |
-| **TypeWhisper** | Win/Mac | whisper.cpp models | Free | Windows-native feel |
-| **Speaches** | Win/Mac/Linux | faster-whisper | Free | Server mode — feeds VoiceMode too |
-
-**Recommended:** [Whispering](https://github.com/braden-w/whispering) — closest to Wispr Flow UX,
-open source (MIT), runs local Whisper models, system-wide hotkey, no account, no limits.
-
-Install: Download release from GitHub → runs immediately, no Python/GPU needed.
+## TTS character limit
+Hook trims responses to 800 chars to avoid reading out long code blocks.
+Adjust the limit in stop-hook-tts.ps1 line ~41.
 
 ---
 
-## Mobile path (Aaron install required)
+## What was tried and why it failed
 
-Claude Code Remote Control (official) doesn't support voice over SSH.
-**Happy Coder** fills the gap — open source companion app that adds voice to remote sessions.
-
-- iOS/Android app
-- Connects to Claude Code Remote session
-- Adds voice input on top
-- GitHub: search "Happy Coder Claude Code" or via the Claude Code mobile docs
-
-Filed as Aaron P1 action in Notion.
+| Approach | Result | Reason |
+|----------|--------|--------|
+| VoiceMode MCP `converse` | Does not work on Windows | Requires Unix `fcntl` module |
+| `uvx kokoro-fastapi[cpu]` | Package not found | Not published as uvx tool |
+| VoiceMode `service install kokoro` | Fails on Windows | Service manager (systemd/launchd) not supported |
+| Kokoro-FastAPI download_model.py | Partial failure | Verification bug in script, model actually downloaded |
 
 ---
 
-## Architecture summary
-
-```
-Voice IN (desktop):    /voice in Claude Code CLI  →  transcribed text → Claude
-Voice IN (system-wide): Whispering (local Whisper) → any app including Claude Code
-Voice OUT (now):       tts-speak.ps1              ← Claude response
-Voice OUT (full):      VoiceMode MCP              ← Claude (needs OPENAI_API_KEY)
-Mobile:               Happy Coder app             ↔ Claude Code Remote
-```
-
-## What unlocks what
-
-| Action | Unlocks |
-|--------|---------|
-| Set OPENAI_API_KEY env var | Full VoiceMode two-way (best quality) |
-| Install Whispering | Sovereign STT, replaces Wispr Flow, no limits |
-| Install Happy Coder on phone | Mobile voice → Claude Code |
+## Files
+| File | Purpose |
+|------|---------|
+| `hal-stack/voice-layer/stop-hook-tts.ps1` | Claude Code Stop hook — speaks responses via Kokoro or Windows TTS |
+| `hal-stack/voice-layer/tts-speak.ps1` | Manual TTS — pipe any text to speak it |
+| `C:\twobirds\tools\Kokoro-FastAPI\start-kokoro.ps1` | Start Kokoro server before Claude Code |

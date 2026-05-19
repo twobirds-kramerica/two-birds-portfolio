@@ -38,8 +38,20 @@ try {
     Invoke-RestMethod -Uri "http://localhost:8880/v1/audio/speech" `
         -Method POST -Body $body -ContentType "application/json" `
         -OutFile $tmpMp3 -TimeoutSec 10 -ErrorAction Stop
-    # Play with ffplay (installed with ffmpeg)
-    $ffplay = (Get-Command ffplay -ErrorAction SilentlyContinue)?.Source
+    # Play with ffplay — check PATH-refreshed location or WinGet links
+    $ffplayCandidates = @(
+        "ffplay",
+        "C:\Users\getkr\AppData\Local\Microsoft\WinGet\Links\ffplay.exe",
+        "C:\Program Files\ffmpeg\bin\ffplay.exe"
+    )
+    $ffplay = $null
+    foreach ($c in $ffplayCandidates) {
+        if (Get-Command $c -ErrorAction SilentlyContinue) { $ffplay = $c; break }
+    }
+    if (-not $ffplay) {
+        $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH","User")
+        $ffplay = (Get-Command ffplay -ErrorAction SilentlyContinue)?.Source
+    }
     if ($ffplay) {
         Start-Process $ffplay -ArgumentList "-autoexit", "-nodisp", "`"$tmpMp3`"" -Wait -NoNewWindow
         Remove-Item $tmpMp3 -ErrorAction SilentlyContinue

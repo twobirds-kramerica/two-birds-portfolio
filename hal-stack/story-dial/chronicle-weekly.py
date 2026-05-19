@@ -32,7 +32,7 @@ DAYS_BACK = 7
 
 # Notion Agency Log database ID (from SESSION-STATE / existing chronicle sprints)
 # This is the parent page where new entries are created as sub-pages
-AGENCY_LOG_PARENT_ID = "364a09cf-876a-800b-aef8-fa6d0a20a3e0"  # Command Center / Agency Log
+AGENCY_LOG_PARENT_ID = "347a09cf-876a-81fb-9a5c-eca696fb585b"  # Command Center
 
 LOG_PATH = r"C:\twobirds\two-birds-portfolio\logs\automated-run-log.md"
 SYNC_LOG = r"C:\twobirds\two-birds-portfolio\hal-stack\notion-sync\SYNC-LOG.md"
@@ -136,8 +136,8 @@ def get_next_entry_number() -> int:
             return max(int(m) for m in matches) + 1
     except Exception:
         pass
-    # Fallback: assume #005 was last, so next is #006
-    return 6
+    # Fallback: assume #006 was last, so next is #007
+    return 7
 
 
 # ── Build Notion page content ─────────────────────────────────────────────────

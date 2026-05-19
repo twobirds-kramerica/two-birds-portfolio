@@ -1176,3 +1176,23 @@ Full steps in `hal-stack/voice-layer/VOICE-SETUP.md` — "Fresh Machine Setup" s
 Short version: winget ffmpeg → pip pyaudio → install eSpeak NG MSI → git clone Kokoro-FastAPI → uv venv → uv pip install -e ".[cpu]" → wire Stop hook in settings.json.
 
 Last updated: 2026-05-18 23:30 EST (Toronto)
+
+---
+
+## ⚡ 2026-05-19 — S-CHRONICLE-WEEKLY: Agency Log Entry #006
+
+**Trigger:** Aaron typed "next sprint" → Notion locked S-CHRONICLE-WEEKLY (P1)
+
+### What Shipped (Notion only — no code)
+
+**Entry #006 — The Machine That Speaks (May 19, 2026)**
+Notion: https://www.notion.so/365a09cf876a81d79832dd42c0a98f2e
+
+Story: VoiceMode MCP failed on Windows (Unix `fcntl` dependency). Built Kokoro-FastAPI as sovereign TTS alternative — Claude Code Stop hook fires after every response, hits Kokoro on port 8880, falls back to Windows TTS if Kokoro isn't running. Voice setup friction surfaced the One-Shot Launcher rule: any new service wired into `launch-claude.bat` or it doesn't ship.
+
+**chronicle-weekly.py bug fixed:** `AGENCY_LOG_PARENT_ID` corrected from stale placeholder to `347a09cf-876a-81fb-9a5c-eca696fb585b` (Command Center). Fallback entry number updated to 7.
+
+**Next Agency Log entry number: #007**
+**Next Chronicle run: Thursday May 29, 2026** (Notion: `365a09cf-876a-8112-8ec5-cfd1d24645e1`)
+
+Last updated: 2026-05-19 02:45 EST (Toronto)

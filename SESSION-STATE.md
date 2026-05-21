@@ -1240,3 +1240,36 @@ Inline `<style>` block with `--kids-*` CSS custom properties (green, yellow, pur
 - A `kids/index.html` and `kids/4-6/index.html` landing page should be built once 2–3 modules exist
 
 Last updated: 2026-05-19 11:15 EST (Toronto)
+
+---
+
+## ⚡ 2026-05-20 — S-CLAUDE-CODE-MODEL-LOCK: Dynamic model tier system
+
+**Trigger:** Aaron typed "next sprint" → Notion locked `366a09cf-876a-81cf-b7b4-e2d87fff830c` (P1)
+
+### What Shipped (`8f4de48`)
+
+| File | What |
+|------|------|
+| `hal-stack/config/models.env` | SSOT for Claude model IDs. Tier names (SONNET/OPUS/HAIKU) are stable; model IDs change here when new versions ship. CLAUDE_DEFAULT_TIER controls which launches. |
+| `hal-stack/scripts/launch-claude.bat` | Reads models.env at launch time, resolves tier → model ID, sets `ANTHROPIC_MODEL` before opening Claude Code terminal. Accepts optional arg: `launch-claude.bat OPUS`. |
+| `hal-stack/scripts/setup-new-machine.ps1` | Step 6 added: creates "Claude Code (Opus)" desktop shortcut (points to launch-claude.bat with OPUS arg). Fresh machine now gets both shortcuts. |
+
+### How the tier system works
+
+1. `models.env` maps tier names → model IDs
+2. `launch-claude.bat` reads models.env, resolves `CLAUDE_DEFAULT_TIER` (SONNET by default), sets `ANTHROPIC_MODEL=claude-sonnet-4-6` in the launched terminal
+3. When a new model ships: edit one line in `models.env` — both launchers pick it up next run
+4. Opus on-demand: double-click "Claude Code (Opus)" shortcut OR run `launch-claude.bat OPUS`
+
+### What's now on desktop (after running setup-new-machine.ps1)
+- "Claude Code" → Sonnet (daily work, default)
+- "Claude Code (Opus)" → Opus (deeper reasoning tasks)
+
+### Next recommended action for Aaron
+- No action needed — model tier is now automatic
+- Next sprint: S-ORPHANED-WORK-AUDIT (P1 Ready) — forensic check for lost/orphaned work from May 16 cloud session
+
+**Notion:** `366a09cf-876a-81cf-b7b4-e2d87fff830c` → Done
+
+Last updated: 2026-05-20 23:08 EST (Toronto)

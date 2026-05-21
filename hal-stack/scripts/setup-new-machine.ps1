@@ -52,8 +52,8 @@ Write-Host "     Installing Python deps (first time: 2-5 min)..." -ForegroundCol
 uv pip install --python .venv\Scripts\python.exe -e ".[cpu]" --quiet
 Write-Host "     Kokoro deps OK" -ForegroundColor Green
 
-# 5. Desktop shortcut
-Write-Host "[5/5] Creating desktop shortcut..." -ForegroundColor Yellow
+# 5. Desktop shortcut (Sonnet default)
+Write-Host "[5/6] Creating desktop shortcut (Sonnet)..." -ForegroundColor Yellow
 $launcherBat = "$TwoBirdsRoot\two-birds-portfolio\hal-stack\scripts\launch-claude.bat"
 $desktopLnk  = "$env:USERPROFILE\Desktop\Claude Code.lnk"
 
@@ -62,14 +62,33 @@ if (Test-Path $launcherBat) {
     $lnk    = $shell.CreateShortcut($desktopLnk)
     $lnk.TargetPath       = $launcherBat
     $lnk.WorkingDirectory = "$TwoBirdsRoot\two-birds-portfolio"
-    $lnk.Description      = "Start Kokoro TTS + Claude Code"
+    $lnk.Description      = "Start Kokoro TTS + Claude Code (Sonnet)"
     $lnk.Save()
     Write-Host "     Shortcut created: $desktopLnk" -ForegroundColor Green
 } else {
     Write-Host "     [WARN] launch-claude.bat not found — clone two-birds-portfolio first" -ForegroundColor Red
 }
 
+# 6. Desktop shortcut (Opus override)
+Write-Host "[6/6] Creating desktop shortcut (Opus)..." -ForegroundColor Yellow
+$opusLnk = "$env:USERPROFILE\Desktop\Claude Code (Opus).lnk"
+if (Test-Path $launcherBat) {
+    $shell2  = New-Object -ComObject WScript.Shell
+    $lnk2    = $shell2.CreateShortcut($opusLnk)
+    $lnk2.TargetPath       = $launcherBat
+    $lnk2.Arguments        = "OPUS"
+    $lnk2.WorkingDirectory = "$TwoBirdsRoot\two-birds-portfolio"
+    $lnk2.Description      = "Start Kokoro TTS + Claude Code (Opus)"
+    $lnk2.Save()
+    Write-Host "     Shortcut created: $opusLnk" -ForegroundColor Green
+} else {
+    Write-Host "     [WARN] launch-claude.bat not found" -ForegroundColor Red
+}
+
 Write-Host ""
 Write-Host "=== Done ===" -ForegroundColor Cyan
-Write-Host "Double-click 'Claude Code' on your desktop to launch everything." -ForegroundColor White
+Write-Host "Desktop shortcuts:" -ForegroundColor White
+Write-Host "  'Claude Code'        — Sonnet (default, fastest)" -ForegroundColor White
+Write-Host "  'Claude Code (Opus)' — Opus (deeper reasoning)" -ForegroundColor White
+Write-Host "Model IDs: edit hal-stack\config\models.env to update when new versions ship." -ForegroundColor White
 Write-Host "First Kokoro start takes ~30s to load the model. Subsequent starts are faster."

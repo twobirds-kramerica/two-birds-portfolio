@@ -1273,3 +1273,44 @@ Last updated: 2026-05-19 11:15 EST (Toronto)
 **Notion:** `366a09cf-876a-81cf-b7b4-e2d87fff830c` → Done
 
 Last updated: 2026-05-20 23:08 EST (Toronto)
+
+---
+
+## ⚡ 2026-05-21 — S-ORPHANED-WORK-AUDIT: Forensic check + overnight fixes
+
+**Trigger:** Aaron typed "next sprint" × 2 → Notion In Progress → executed
+
+### What Shipped (`7ef632f`)
+
+**May 16 session claims audit — all 6 files verified present:**
+
+| Claim | File | Status |
+|-------|------|--------|
+| S-DCC-BATCH-ADVANCE | `hal-stack/notion-sync/batch-advance-research.py` | ✅ EXISTS |
+| S-CURRENTS-DCC | `digital-confidence/js/dcc-news-feed.js` | ✅ EXISTS |
+| S-CURRENTS-DCC | `digital-confidence/data/news-feed.json` | ✅ EXISTS |
+| S-SME-REVIEWERS | `hal-stack/personas/advisory/sme-reviewers.md` | ✅ EXISTS |
+| S-SME-REVIEW-002 | review log in `review-log/` | ✅ EXISTS |
+| S-DCC-KIDS-ROW5 | `digital-confidence/kids/4-6/true-things-story-things.html` | ✅ EXISTS |
+
+**No orphaned branches** — all repos on single branch (main or master), no stale PRs.
+
+**Two silent bugs found and fixed:**
+
+| Bug | Impact | Fix |
+|-----|--------|-----|
+| `git push origin master` fails for DCC + career-coach (use `main`) | Nightly pushes silently failing for 2 repos | `git push origin HEAD` (branch-agnostic) |
+| `%date:~10,4%...` locale-dependent date parsing → `--0--1` filename | Garbled Lighthouse files nightly | PowerShell `Get-Date -Format yyyy-MM-dd` |
+
+**Other fixes:**
+- `.gitignore`: added `.agents/`, `.claude/skills/` (Claude Code runtime), `*.md.txt` (stale export duplicates)
+- `skills-lock.json` committed (34KB manifest for 80+ installed skills — enables one-shot fresh-machine restore)
+- Deleted `quality/lighthouse-results/--0--1.md` (garbled artifact)
+
+### Next recommended action for Aaron
+- No action needed — all findings were fixable in code, no human decisions required
+- Overnight build will now push DCC + career-coach correctly on next 2am run
+
+**Notion:** `366a09cf-876a-81c4-8434-ec5215fdc914` → Done
+
+Last updated: 2026-05-21 02:00 EST (Toronto)

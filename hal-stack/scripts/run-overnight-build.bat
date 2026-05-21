@@ -21,8 +21,8 @@ for /D %%d in (digital-confidence career-coach clarity two-birds-innovation aaro
     if exist "%%d\.git" (
         echo [%date% %time%] Syncing %%d... >> %LOG%
         cd C:\twobirds\%%d
-        git pull --ff-only origin 2>> %LOG%
-        git push origin master 2>> %LOG%
+        git pull --ff-only 2>> %LOG%
+        git push origin HEAD 2>> %LOG%
         REM Push to Codeberg if remote exists
         git remote | findstr codeberg >nul 2>&1
         if not errorlevel 1 (
@@ -34,7 +34,7 @@ for /D %%d in (digital-confidence career-coach clarity two-birds-innovation aaro
 REM --- Lighthouse Audits ---
 echo [%date% %time%] Running Lighthouse audits... >> %LOG%
 
-set LHDATE=%date:~10,4%-%date:~4,2%-%date:~7,2%
+for /f "usebackq" %%d in (`powershell -Command "Get-Date -Format yyyy-MM-dd"`) do set LHDATE=%%d
 set LHFILE=C:\twobirds\two-birds-portfolio\quality\lighthouse-results\%LHDATE%.md
 
 echo # Lighthouse Audit Results — %LHDATE% > "%LHFILE%"

@@ -1548,6 +1548,50 @@ Last updated: 2026-05-23 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-23 — S-DCC-KIDS-7-9-ROWS7-4-1: First 3 modules of 7-9 cohort
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → 7-9 cohort build (post SME-REVIEW-003)
+
+### What Shipped (`digital-confidence/7132cb4`)
+
+| File | Skill | Category | SME flags | Build order |
+|------|-------|----------|-----------|-------------|
+| `kids/7-9/telling-a-grown-up-when-something-feels-weird.html` | Telling a grown-up when something online feels weird | Emotional-Safety | 3 | 1st |
+| `kids/7-9/real-made-up-or-somewhere-in-between.html` | Real, made-up, or somewhere in between | Critical-Thinking | 3 | 2nd |
+| `kids/7-9/online-kindness-counts.html` | Online kindness counts | Emotional-Safety | 1 | 3rd |
+| `kids/7-9/index.html` | Age group landing page | — | — | — |
+| `kids/index.html` | 7-9 card now active + linked; 4-6 count corrected to 8 | — | — | — |
+
+**All 3 SME-REVIEW-003 annotations incorporated per review log.**
+
+**3 Notion rows → Built:** `349a09cf-...-c5997f72a204`, `356a09cf-...-e56ee6056444`, `35da09cf-...-f92013de9ab3`
+
+### Key build notes
+
+- **Row 7 (Telling):** Physical "feels weird" signal examples (Dr. Lena); cross-link to 4-6 "Who is my safe grown-up?" (Vera); facilitator safeguarding note for library staff (Frank)
+- **Row 4 (Real/made-up):** Three-bucket framework (VERIFIED/OPINION/INVENTED); "invented" not "made-up" per Dr. Lena; 6 printable sorting cards for offline library use (Frank); adult supervision note for online navigation (Vera)
+- **Row 1 (Online kindness):** Bystander vs. upstander; physical "words stick longer" framing; facilitator empowerment note for children who've experienced online unkindness (Dr. Lena)
+
+### 7-9 cohort build status (3 of 7 done)
+
+| Row | Skill | Status |
+|-----|-------|--------|
+| 7 | Telling a grown-up when something online feels weird | ✅ 2026-05-23 |
+| 4 | Real, made-up, or somewhere in between | ✅ 2026-05-23 |
+| 1 | Online kindness counts | ✅ 2026-05-23 |
+| 3 | Watching to learn vs. watching to pass time | ⬜ next (4th in order, 2 annotations) |
+| 6 | Making something useful for someone else | ⬜ (4th in order, 2 annotations) |
+| 2 | Building a safe online identity | ⬜ (5th in order, 3 annotations) |
+| 5 | Pause and show a grown-up whenever an app asks | ⬜ (6th in order, 3 annotations + printed dialogs) |
+
+### Next recommended action for Aaron
+- Visit `digital-confidence/kids/7-9/` to verify all 3 modules and the index
+- Say "next sprint" to continue — Rows 3 + 6 are the recommended pair (both 2 annotations, analogous to the 4-6 Rows 2+3+4 batch)
+
+Last updated: 2026-05-23 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

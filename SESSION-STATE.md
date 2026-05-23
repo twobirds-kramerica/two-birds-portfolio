@@ -1511,6 +1511,43 @@ Last updated: 2026-05-23 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-23 — S-SME-REVIEW-003: Full 7-9 cohort batch SME review
+
+**Trigger:** Aaron typed "next sprint" → exit 3 → 7-9 cohort ready for SME review
+
+### What Shipped (`2c6de76`)
+
+`C:\twobirds\two-birds-portfolio\hal-stack\personas\review-log\2026-05-23-sme-review-003-batch-7-9.md`
+
+**7 rows reviewed. All approved. Zero hard stops. 17 annotations.**
+
+| Row | Skill | Category | Flags | Build order |
+|-----|-------|----------|-------|-------------|
+| 1 | Online kindness counts | Emotional-Safety | 1 | 3rd |
+| 2 | Building a safe online identity | Tech-Safety | 3 | 5th |
+| 3 | Watching to learn vs. watching to pass time | Learning | 2 | 4th |
+| 4 | Real, made-up, or somewhere in between | Critical-Thinking | 3 | 2nd |
+| 5 | Pause and show a grown-up whenever an app asks | Tech-Safety | 3 | 6th |
+| 6 | Making something useful for someone else | Creative-Making | 2 | 4th |
+| 7 | Telling a grown-up when something online feels weird | Emotional-Safety | 3 | **1st** |
+
+**All 7 advanced to Ready-to-Build in Notion.**
+
+**3 multi-age rows deferred** to 10-12 cohort review: "Is this an ad?", "Asking good questions", "Strong password" (span 7-9, 10-12, and/or 13-15).
+
+### Key annotations to carry into builds
+- **Row 7**: somatic "feels weird" examples; safeguarding facilitator note for library staff; reference to 4-6 safe grown-up module
+- **Row 4**: "invented" not "made-up"; pre-printed fallback for library programmes; adult supervision for any online navigation
+- **Row 5**: framing shift from full deferral to growing agency (pause → read → decide → ask if unsure); printed permission dialog screenshots
+- **Row 2**: children at 7-9 already have accounts — acknowledge that; context-dependency (combinations of info, not individual pieces)
+
+### Next recommended action for Aaron
+- Type "next sprint" to begin building — Row 7 first (Telling a grown-up when something online feels weird)
+
+Last updated: 2026-05-23 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

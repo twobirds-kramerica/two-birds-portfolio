@@ -1357,6 +1357,46 @@ Last updated: 2026-05-21 03:15 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-22 — S-AUDIT: HAL Stack Integration Audit
+
+**Trigger:** Aaron typed "next sprint" → Notion locked `367a09cf-876a-810f-8054-ff0f4989e49f` (P0)
+
+### Scorecard
+
+| Item | Grade | One-line verdict |
+|------|-------|-----------------|
+| Sprint pipe | **B** | Works; 3 P0s invisible due to dirty Notion Type/Owner data |
+| Capture pipe | **A** | Live-verified 2s round-trip |
+| Retro pipe | **D** | 18d stale; redirected `retro` trigger to SESSION-STATE.md |
+| Notion-GitHub bridge | **B** | Hook wired; NOTION_API_KEY confirmed in User env; fires silently |
+| Voice-check protocol | **F** | Never implemented; filed as P1 Aaron action |
+| Persona infrastructure | **D** | All markdown; zero automation; acceptable at solo scale |
+| DCC design system | **B** | 758 var() usages; tokens genuinely consumed |
+| QA/QC | **A** | axe-core + Playwright + visual regression — real CI, runs on every push |
+
+### What shipped (`758e73a`)
+- `hal-stack/architecture/hal-integration-audit-2026-05-22.md` — full audit report with evidence, grades, fix recommendations
+- `CLAUDE.md` — `retro` trigger updated: reads SESSION-STATE.md (live) not logs/RETRO.md (18d stale Lighthouse archive)
+
+### Aaron actions filed
+| Item | Priority |
+|------|----------|
+| Voice-check protocol — paste into Claude.ai user preferences (3 min, P1 backlog unguarded since Apr 13) | P1 |
+| Fix Notion P0 items: BULL SPRINT 1/2 + S-OVERNIGHT-V2 → set Type=Sprint, Owner=Claude Code | P2 |
+| Delete Notion test item `369a09cf-876a-8155-b212-dce5a5bdfb1c` | P2 |
+
+### Honest findings
+- The capture pipe and QA/QC are the strongest components — both live, both verified
+- The voice-check gap is the most impactful miss: every draft since April 13 was unguarded
+- Persona infrastructure is markdown that works when invoked; that's appropriate for a solopreneur, but Aaron should stop calling it "wired"
+- post-commit-hook is real code that genuinely fires — NOTION_API_KEY in User env confirms it
+
+**Notion:** `367a09cf-876a-810f-8054-ff0f4989e49f` → Done
+
+Last updated: 2026-05-22 20:12 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

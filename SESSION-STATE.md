@@ -1632,6 +1632,54 @@ Last updated: 2026-05-23 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-23 — S-DCC-KIDS-7-9-ROWS2-5: Safe online identity + App permissions — 7-9 COHORT COMPLETE
+
+**Trigger:** Aaron typed "next sprint" → exit 3 → Rows 2+5 (final pair of 7-9 cohort)
+
+### What Shipped (`digital-confidence/300057a`)
+
+| File | Skill | Category | SME flags |
+|------|-------|----------|-----------|
+| `kids/7-9/building-a-safe-online-identity.html` | Building a safe online identity — what to share, what to protect | Tech-Safety | 3 |
+| `kids/7-9/pause-and-show-a-grown-up-when-an-app-asks.html` | Pause and show a grown-up whenever an app asks | Tech-Safety | 3 |
+| `kids/7-9/index.html` | Count updated to "7 activities · cohort complete ✅", both cards activated | — | — |
+| `kids/index.html` | 7-9 card updated "7 activities · complete" | — | — |
+
+**Notion rows → Built:** Row 2 `35ca09cf-876a-812c-8632-e447a6c9f591`, Row 5 `349a09cf-876a-816f-b441-c4bfce802a0b`
+
+**SME annotations incorporated:**
+- **Row 2 (Safe identity):** Children at 7-9 already have accounts acknowledged (Vera) — uses "if you have any apps..." framing; combination rule with worked example (Jordan + name + school + street) (Dr. Lena); variant prompts for children with and without accounts (Frank)
+- **Row 5 (App permissions):** Framing shift from full deferral to growing agency — 4-step progression: pause → read → ask yourself → ask adult if unsure (Vera + Dr. Lena); two-tier framework (always-ask: location/camera/contacts; start-deciding: notifications); 3 printable permission dialog sorting cards with "makes sense / not sure / seems wrong" sort (Frank)
+
+### 7-9 cohort build status — ALL 7 ROWS COMPLETE ✅
+
+| Row | Skill | Category | Date |
+|-----|-------|----------|------|
+| 7 | Telling a grown-up when something online feels weird | Emotional-Safety | 2026-05-23 |
+| 4 | Real, made-up, or somewhere in between | Critical-Thinking | 2026-05-23 |
+| 1 | Online kindness counts | Emotional-Safety | 2026-05-23 |
+| 3 | Watching to learn vs. watching to pass time | Learning | 2026-05-23 |
+| 6 | Making something useful for someone else | Creative-Making | 2026-05-23 |
+| 2 | Building a safe online identity | Tech-Safety | 2026-05-23 |
+| 5 | Pause and show a grown-up when an app asks | Tech-Safety | 2026-05-23 |
+
+### DCC Kids — Two complete cohorts now live
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 |
+| Ages 7–9 | ✅ Complete | 7 of 7 |
+| Ages 10–12 | ⬜ Next cohort | SME review pending |
+| Ages 13–15 | ⬜ Future | |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/7-9/` to review the completed cohort
+- Next sprint: 10-12 cohort SME review (S-SME-REVIEW-004) — 27 rows at Status=Spec across 3 cohorts (7-9 multi-age, 10-12, 13-15) waiting for review pass
+
+Last updated: 2026-05-23 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

@@ -4,6 +4,10 @@ Auto-loaded at every session. Last updated: 2026-04-28.
 ## WHO AARON IS
 Aaron Patzalek. St. Thomas, Ontario. Married, parent of twins. 20+ year Senior PM (most recently Telus). Founded Two Birds Innovation early 2026. Revenue target $10k/month by Aug/Sep 2026. Sole income earner.
 
+## VOICE-CHECK RULE (2026-05-22)
+When producing any written content Aaron will send or use externally (email, LinkedIn post, CV bullet, cover letter, Agency Log entry, bio), apply the voice-check protocol and append the compliance tag. Protocol text and LLM portability guide: `hal-stack/protocols/voice-check.md`.
+Tag format: `✓ voice check: [scanned items] | [count caught] | [count fixed]`
+
 ## FIVE NON-NEGOTIABLE RULES
 1. Static HTML/CSS/JS only. No npm, no Node frameworks.
 2. Canadian English throughout all content.

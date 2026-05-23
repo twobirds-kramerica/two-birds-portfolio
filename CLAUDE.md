@@ -26,7 +26,7 @@ This ensures no Aaron-facing item gets buried in SESSION-STATE. Items land in No
 ## TRIGGERS
 - `next sprint` → `python hal-stack/notion-sync/next-sprint.py`; exit 3 → `hal-stack/sprint-system/sprint-queue.md`; check `hal-stack/sprint-system/pending-capture.md` first (Phase 0); max-mode rules: `hal-stack/governance/max-mode.md`
 - `just go` → execute ONE sprint autonomously, normal mode, no chaining; stop + return control after
-- `retro` → read `logs/RETRO.md`
+- `retro` → read `SESSION-STATE.md`, summarise last 5 sprints shipped, patterns, and what's stalled; `logs/RETRO.md` is Lighthouse-only archive (18d+ stale, not the live source)
 - `state` → read `SESSION-STATE.md`, report top 3 next actions
 - `dashboard` → read `WIP-DASHBOARD.md`
 - `hal` → read `hal-stack/HAL-BACKLOG.md`
@@ -37,7 +37,7 @@ This ensures no Aaron-facing item gets buried in SESSION-STATE. Items land in No
 
 ## KEY FILES
 - Session state: `SESSION-STATE.md`
-- Retro: `logs/RETRO.md`
+- Retro: `SESSION-STATE.md` (live, per sprint) · `logs/RETRO.md` (Lighthouse archive only)
 - Notion backlog: data source `dee08637-7122-46cd-bc29-7775ce3ab8f6`
 - Human todos: `hal-stack/sprint-system/aaron-todos-2026-04-21.md`
 

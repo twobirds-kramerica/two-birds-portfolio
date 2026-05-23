@@ -1476,6 +1476,41 @@ Last updated: 2026-05-22 22:00 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-23 — S-DCC-KIDS-ROW6: Real, pretend, maybe-made-up — 4-6 COHORT COMPLETE
+
+**Trigger:** Aaron typed "next sprint" → exit 3 → Row 6, last module in 4-6 cohort
+
+### What Shipped (`digital-confidence/6b5e42c`)
+
+`C:\twobirds\digital-confidence\kids\4-6\real-pretend-maybe-made-up.html`
+
+**3 SME annotations from batch review incorporated:**
+- Dr. Lena: Two-session structure — Session 1 (real/pretend only), Session 2 (add maybe-made-up). One concept per day; no cognitive overload.
+- Frank: 3 inline SVG pictures embedded (dog=real, dragon=pretend, purple-glowing-rabbit=maybe-made-up). Zero external URL dependency — works fully offline for library programmes.
+- Vera: Caregiver section notes that any online extension requires adult-supervised navigation — "with a grown-up's help, never alone."
+
+### 4-6 cohort — ALL 8 ROWS COMPLETE ✅
+
+| Row | Skill | Category | Date |
+|-----|-------|----------|------|
+| 5 | True things and story things | Critical-Thinking | 2026-05-19 |
+| 7 | Secret stuff and share stuff | Tech-Safety | 2026-05-21 |
+| 8 | Who is my safe grown-up? | Emotional-Safety | 2026-05-21 |
+| 1r | My device has eyes, ears, and a memory | Tech-Safety | 2026-05-22 |
+| 2 | Making something together | Creative-Making | 2026-05-22 |
+| 3 | Big feelings are real | Emotional-Safety | 2026-05-22 |
+| 4 | Making my own thing first | Creative-Making | 2026-05-22 |
+| 6 | Real, pretend, maybe-made-up | Learning | 2026-05-23 |
+
+### What's next
+- Ages 7-9 cohort: 27 rows at Status=Spec in Notion. Next step is SME review batch for 7-9, then build.
+- `kids/index.html` age group cards still show 7-9/10-12/13-15 as "coming soon" — accurate.
+- DCC kids section now has a complete, deployable age group live at `https://twobirds-kramerica.github.io/digital-confidence/kids/4-6/`
+
+Last updated: 2026-05-23 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

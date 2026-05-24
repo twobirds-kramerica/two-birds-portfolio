@@ -1768,6 +1768,50 @@ Last updated: 2026-05-23 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-23 — S-DCC-KIDS-10-12-ROWS8-3: Strong password ×2 + SIFT
+
+**Trigger:** Aaron typed "next sprint" → exit 3 → Row 8 + Row 3 per SME-REVIEW-004 build order
+
+### What Shipped (`digital-confidence/cd634e0`)
+
+| File | What |
+|------|------|
+| `kids/7-9/creating-a-strong-password.html` | Row 8 (7-9 version) — caregiver-paired, 15 min, passphrase method |
+| `kids/10-12/creating-a-strong-password.html` | Row 8 (10-12 version) — solo with check-in, 20 min, passphrase method |
+| `kids/10-12/following-a-story-back-to-where-it-started.html` | Row 3 — SIFT, critical thinking, 20 min, internet optional |
+| `kids/10-12/spotting-please-dont-tell-your-parent.html` | Next-module link added → `creating-a-strong-password.html` |
+| `kids/10-12/index.html` | Row 8 + Row 3 activated; count "1 activity" → "3 activities" |
+| `kids/7-9/index.html` | 8th card added; count 7 → 8 |
+| `kids/index.html` | 10-12 count "1 activity" → "3 activities" |
+
+**Notion advanced to Built:**
+- Row 8: `348a09cf-876a-81ee-a960-fddd07c64331` (Creating a strong password)
+- Row 3: `355a09cf-876a-8171-b12f-cbfc12a8568b` (SIFT — following a story)
+
+**Key design decisions:**
+- 7-9 version: caregiver-paired, strength table (password / P@ssw0rd / passphrase), "make one together" activity box, cross-link to 10-12 version
+- 10-12 version: solo with check-in, breach-scenario box, HaveIBeenPwned in caregiver callout only (Vera annotation), next-module link → SIFT
+- SIFT: Great Wall worked example (pre-1969 US textbook claim, NASA/astronaut debunk), 60-second challenge ("10% of brains" myth), printable reference card, "leave the page" as the primary habit
+- Frank annotation: fact-check sites may be blocked in library filters — pre-download/print recommended
+- Canadian Centre for Cyber Security cited (cyber.gc.ca) throughout password modules
+
+### DCC Kids — Three cohorts
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 8 of 8 built (7 cohort + password cross-age) |
+| Ages 10–12 | 🔶 Building | 3 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 3 active modules
+- Next build sprint: Row 5 — Using a password manager (Tech Safety, family setup, depends on Row 8 ✅)
+
+Last updated: 2026-05-23 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

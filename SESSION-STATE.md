@@ -1728,6 +1728,46 @@ Last updated: 2026-05-23 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-23 — S-DCC-KIDS-10-12-ROW2: Grooming awareness module + 10-12 cohort launch
+
+**Trigger:** Aaron typed "next sprint" → exit 3 → Row 2 first per SME-REVIEW-004 build order
+
+### What Shipped (`digital-confidence/af1d6b6`)
+
+| File | What |
+|------|------|
+| `kids/10-12/spotting-please-dont-tell-your-parent.html` | Row 2 — Emotional Safety, ages 10–12, 20 min, no screens |
+| `kids/10-12/index.html` | 10-12 landing page — 9 module cards (1 active, 8 coming soon) |
+| `kids/index.html` | 10-12 card activated: "1 activity · building" |
+| `kids/7-9/index.html` | 10-12 link updated to 10-12/index.html |
+
+**All 4 SME annotations incorporated:**
+- Vera: Cybertip.ca reference + platform-agnostic framing (no platform shaming)
+- Dr. Lena (×2): peer-secret distinction made explicit (two-column comparison); shame/self-blame removal ("this is a pattern adults use — it's not about anything you did")
+- Frank: mandatory library facilitator safeguarding note (pre-run protocol reminder; no confidentiality promises; response script)
+
+**Key design decisions:**
+- 10-12 cohort colour: indigo/violet (`#3949AB`) — distinct from 4-6 (green) and 7-9 (teal/blue)
+- No sticker/gamification block — Frank's annotation: "reward is the relationship"
+- "Not your fault" section replaces sticker — empowerment without celebration of the topic
+
+### DCC Kids — Three cohorts launched
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 7 of 7 built |
+| Ages 10–12 | 🔶 Building | 1 of 9 built |
+| Ages 13–15 | ⬜ Future | |
+
+### Next recommended action for Aaron
+- Visit `digital-confidence/kids/10-12/spotting-please-dont-tell-your-parent.html` to verify the module
+- Next build: Row 8 (Creating a strong password) → Row 3 (SIFT source tracing) → Row 5 (Password manager)
+
+Last updated: 2026-05-23 EST (Toronto)
+
+---
+
 ## /backlog-triage (overnight) — 2026-05-21 02:02
 - Total open items: 300
 - [STALE-P1] (P1 Backlog >7d): Measure Claude Code actual token spend over 2 weeks — unlock condition for Codex hybrid pilot (9d old), DCC v2 wizard evaluation — evaluate module-1-wizard.html, decide: replace / coexist with v1 / revert (10d old), Clarity 'Why I Built This' trust section — review copy before showing to a prospect (10d old), KAS: choose access code to publish (or remove for open access) (10d old), Kevin's Apartment Search: approve v2 design or redirect (open index-v2.html vs index.html and decide) (10d old), Google Maps API key — add HTTP referrer restrictions in Google Cloud Console (5 min) (10d old), Honest elevator pitch — rewrite what-i-built.md with verified vs aspirational clearly separated (10d old), Morning brief pattern — audit draft vs sent, fix the broken pattern, establish reliable daily delivery (10d old), HAL Stack integration audit — test every stated component end-to-end; grade what actually works vs what is on shelf (10d old), HUMAN MUST FINISH FIRST: CoS Influencer Evaluation Framework — personas + funnel + effort/benefit/risk matrix (10d old), CoS: Generate Gmail App Password for morning briefing emails (10d old), Logan Currie outreach — DM draft + partnership framing (10d old), Resume + LinkedIn: articulate HAL Stack in professional terms (10d old), HAL Stack architecture diagram — visual SVG/HTML with industry labels (10d old), Clarity 'Why I Built This' — review copy before showing a prospect (11d old), DCC v2 wizard evaluation — decide replace / coexist / revert (11d old), KAS: Kevin site forward path — resolve open P1 action (11d old), KAS: Decide and publish the access code (11d old), KAS: Review v2 design preview and approve or redirect (11d old), KAS: Google Maps API key — add HTTP referrer restrictions (11d old), Gig work — apply to Mercor and Outlier (P1 income, not a sprint) (22d old), context-mode plugin — verify command before installing (original install command was invalid) (22d old), Provide Calendly URL — unlocks mailto->Calendly conversion on Clarity + Two Birds Innovation contact CTAs (25d old), Evaluate DCC v2 wizard POC at /v2/ live URL — decide coexist / replace / revert (25d old), Add HTTP referrer restrictions to Google Maps Embed API key in Google Cloud Console (25d old), Decide Kevin's site forward path: (a) accept Pages downtime + Kevin uses local copy / (b) re-host on Cloudflare/Netlify/Vercel / (c) upgrade GitHub plan to Pro (25d old), Prep for Utilidata interview — CV + company research (26d old), Restrict Google Maps API key in Google Cloud Console — exposed in 2 public repos (27d old), Rotate/restrict exposed Google Maps API key — flagged April 4, confirmed April 23 (27d old), BOARD REVIEW: S-LOOP-ARCHITECT — Founding Board sign-off before shipping as ecosystem infrastructure (29d old), EPIC: Aaron's Rental Search Platform (Rentals + Sublets, Bilingual, SaaS) (29d old), Create full systems inventory in Notion (31d old), DCC skin redesign — research senior-friendly UI benchmarks (32d old), Full re-audit of all HAL Stack context across all chats (32d old), Create Google Drive folder for reference docs (32d old), Update CV per Phil's feedback (32d old), Set up Apify job search (32d old), Create og-card.png for portfolio (32d old), DCC skin redesign — 3 themes (32d old)

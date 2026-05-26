@@ -39,7 +39,7 @@ if ($json.transcript_path -and (Test-Path $json.transcript_path)) {
 "[$timestamp] text extracted (first 100 chars): $($text.Substring(0, [Math]::Min(100, $text.Length)))" | Out-File $logFile -Append
 
 if (-not $text) {
-    "[$timestamp] No text — exiting without speaking" | Out-File $logFile -Append
+    "[$timestamp] No text - exiting without speaking" | Out-File $logFile -Append
     exit 0
 }
 
@@ -66,7 +66,8 @@ try {
     }
     if (-not $ffplay) {
         $env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH","User")
-        $ffplay = (Get-Command ffplay -ErrorAction SilentlyContinue)?.Source
+        $ffplay = Get-Command ffplay -ErrorAction SilentlyContinue
+        $ffplay = if ($ffplay) { $ffplay.Source } else { $null }
     }
     if ($ffplay) {
         Start-Process $ffplay -ArgumentList "-autoexit", "-nodisp", "`"$tmpMp3`"" -Wait -NoNewWindow

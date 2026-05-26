@@ -5,7 +5,7 @@
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
-Last fetch: exit 3 (queue empty as of 2026-05-05).
+Last fetch: 2026-05-26 — two sprints processed (Paperwork Labs v3 cancelled; CLAUDE-PREFERENCES v3 shipped).
 
 ## Open P1 Actions (Aaron)
 - ⬜ DCC v2 wizard evaluation — evaluate `module-1-wizard.html`, decide: replace / coexist / revert
@@ -14,6 +14,29 @@ Last fetch: exit 3 (queue empty as of 2026-05-05).
 - ⬜ OG card PNG conversion — open export-og-png.html in Chrome → DevTools screenshot → save as og-card.png → swap meta tag (5 min each site)
 - ⬜ Clarity "Why I built this" — review copy before showing a prospect
 - ✅ DCC Research DB — 35 rows batch-advanced Research → Spec (2026-05-16)
+
+---
+
+## ⚡ 2026-05-26 — S-CLAUDE-PREFERENCES-V3: CLAUDE-PREFERENCES v3 committed to system-rules
+
+**Trigger:** Aaron typed "next sprint" → Notion locked P2 HAL Stack item
+
+### What Shipped (`two-birds-portfolio/88aa523`)
+
+| File | What |
+|------|------|
+| `hal-stack/system-rules/CLAUDE-PREFERENCES-2026-05-26.md` | CLAUDE-PREFERENCES v3 — fetched from Google Drive ID `1VcKCUzn-qNl7tHFT_CDMdSRBjVpYiVD7`, written and committed |
+
+**v3 change:** Presentation tool rule added (LLM-agnostic). Covers Gamma/Canva data integrity, workflow, and access constraints. Applies to every tool call, every session, every LLM.
+
+**Cancelled same session:** Paperwork Labs brief v3 sprint (`36ba09cf`) — superseded by v7 Word doc (Google Drive, built 2026-05-26). Marked Done in Notion, no file committed.
+
+**Note:** The Paperwork Labs v7 Word doc is a separate file. Drive file ID `1VcKCUzn-qNl7tHFT_CDMdSRBjVpYiVD7` is CLAUDE-PREFERENCES, not Paperwork Labs.
+
+### Next recommended action for Aaron
+- Type `next sprint` to continue — DCC Row 5 (password manager) is next in the build queue
+
+Last updated: 2026-05-26 EST (Toronto)
 
 ---
 

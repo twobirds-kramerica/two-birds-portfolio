@@ -17,6 +17,48 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW7: Is this an ad? shipped
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order
+
+### What Shipped (`digital-confidence/504c3c9`)
+
+| File | What |
+|------|------|
+| `kids/10-12/is-this-an-ad-or-did-they-really-mean-it.html` | Row 7 — Critical Thinking, 20 min, Internet optional, kid-leads |
+| `kids/10-12/index.html` | Row 7 activated; count 5 → 6; section-label updated |
+| `kids/index.html` | 10-12 count updated to 6 activities |
+
+**Notion Row 7 (`348a09cf-876a-815b-9435-df11c72e1a24`) → Built**
+
+**Key design decisions:**
+- Disclosure Clock: three-zone timeline (first 30 sec ✅ / mid-video ⚠️ / end of video 🚫) — makes video-specific timing concrete
+- Relationship types grid: cash, gifted product, affiliate link, sponsored experience (all require disclosure) vs no-relationship purchase (doesn't)
+- Ad Read Challenge: 5 text/screenshot scenarios distinct from Row 1 — caption-only, on-screen overlay, "honest review" title fallacy, end-of-video too-late disclosure, correct gifted disclosure
+- Two-viewer compare format (kid-leads pairs, each makes independent call before comparing)
+- Library-compatible: all scenarios are text-based, no live video required; optional clip enrichment noted
+- Vera: description-only disclosure does not meet Canadian Ad Standards
+- Dr. Lena: disappointment when a favourite creator doesn't disclose = the skill working; parasocial trust is real, not a weakness
+- Frank: Scenario 3 ("honest review" title, no disclosure) generates strongest group discussion; Disclosure Clock becomes practical with a live device as optional enrichment
+- Prereq link to spotting-hidden-advertising.html (soft prerequisite, not hard gate)
+
+### DCC Kids — Three cohorts
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 8 of 8 built |
+| Ages 10–12 | 🔶 Building | 6 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 6 active modules
+- Next build sprint: Row 6 — When I remix something, I name who made the original (Creative Making; Canadian Copyright Act; fr-QC gap; English build unblocked)
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-26 — S-DCC-KIDS-10-12-ROW1: Spotting hidden advertising shipped
 
 **Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order

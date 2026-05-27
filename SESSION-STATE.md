@@ -17,6 +17,33 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-KEVIN-LISTING-AUDIT: Stale listing audit & last_verified refresh
+
+**Trigger:** next-sprint.py → P1 locked — Notion issue #61 (all 13 active listings 70 days stale)
+
+### What Shipped (`kevins-apartment-search`)
+
+| File | What |
+|------|------|
+| `data/listings.json` | `last_verified` field added to all active listings; notes stamped; `last_refreshed` → 2026-05-27 |
+
+**HTTP audit results (2026-05-27):**
+
+| Result | Count | Listings |
+|--------|-------|---------|
+| 200 — verified | 6 | 237-starlight-bsmt, 116-king-edward-11, 220-ashland-22, 86-oakville-ave, 1270-webster-st, 1450-beckworth-ave |
+| 403 — bot-blocked | 7 | 1-court-lane-fairmont (Zillow), 117-lincoln-place, 852-trafalgar, 435-grey-street (rentals.ca), 18-queenston-crescent (apartments.com), 892-queens-ave-2 (Zillow), 250-oakland-ave (rentcafe.com) |
+
+**Decision:** 403s NOT auto-archived. Cloudflare/bot protection on Zillow, rentals.ca, apartments.com, rentcafe.com blocks automated requests — not an indicator of dead listings. Notes added to all 7; Aaron to manually visit and confirm.
+
+### Next recommended action for Aaron
+- **Manually check the 7 bot-blocked listings** — open each URL in a browser and confirm whether the listing is still live or expired
+- Any dead → flag `status: "expired"`, `archive_reason`, `date_archived` in listings.json
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-CONSULTING-PAGE-PHOTO: Headshot wired into consulting page
 
 **Trigger:** Aaron provided Google Drive folder (50+ headshots, April 21 + May 15 sessions)

@@ -17,6 +17,42 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-CONSULTING-PAGE: Aaron Patzalek consulting page shipped
+
+**Trigger:** Aaron typed "next sprint" → exit 3 → Notion P1 backlog item "Publish consulting service page" identified
+
+### What Shipped (`aaron-patzalek`)
+
+| File | What |
+|------|------|
+| `consulting.html` | Single-page consulting offer — process improvement + AI adoption for SME service businesses, SW Ontario |
+| `index.html` | Added "Consulting" nav link pointing to consulting.html |
+
+**Cal.com booking URLs embedded:**
+- 15-min intro call: `https://cal.com/twobirds-4n5ajg/15min`
+- 30-min discovery call: `https://cal.com/twobirds-4n5ajg/30min`
+
+**Key design decisions:**
+- Problem-led: three pain cards (recurring breaks, AI confusion, no documentation) before any offer language
+- Four-step "how it works" (discovery → proposal → work → you keep everything) — no retainer, no lock-in framing
+- Two booking cards in dark CTA section; 30-min is primary, 15-min is secondary
+- Email fallback: aaron.patzalek@gmail.com
+- Matches existing `aaron-patzalek` design tokens (Inter, navy/blue palette)
+- Cal.com selected over Calendly for sovereignty: open-source, exportable, free tier has no paywalled multi-calendar (ICS workaround documented)
+
+**Architecture documented:** `hal-stack/architecture/cal-com-setup.md` — account, event types, calendar connections, ICS bug status, sovereignty rationale
+
+**Notion P3 filed:** Cal.com ICS feed multi-calendar bug (`36da09cf-876a-8194-b110-e1632e3c6ce8`) — revisit when volume picks up
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/aaron-patzalek/consulting.html` to review the page before sharing with prospects
+- Add a phone number to the contact fallback section if desired (currently email-only)
+- Share the link on LinkedIn once reviewed
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW9: Asking good questions shipped — 10-12 cohort COMPLETE
 
 **Trigger:** Aaron typed "next sprint" → Notion exit 3 → final build from SME-REVIEW-004 order

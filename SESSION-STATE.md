@@ -17,6 +17,49 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW9: Asking good questions shipped — 10-12 cohort COMPLETE
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → final build from SME-REVIEW-004 order
+
+### What Shipped (`digital-confidence/c00b724`)
+
+| File | What |
+|------|------|
+| `kids/10-12/asking-good-questions-when-i-search-or-ask-ai.html` | Row 9 — Learning, 20 min, device optional |
+| `kids/10-12/index.html` | Row 9 activated; count 8 → 9; section-label → "9 activities ready · cohort complete"; age-nav → done |
+| `kids/index.html` | 10-12 card → "9 activities · complete" |
+
+**Notion Row 9 (`348a09cf-876a-8136-9830-ef44e2835482`) → Built**
+
+**Key design decisions:**
+- Three-Why Game: 4-level visual (Start vague → Why 1 → Why 2 → Why 3 searchable) using sky colour / Rayleigh scattering example; progression model from Bloom taxonomy (1956)
+- Source diff grid: Google (index, citable, stable, best for verifiable facts) vs AI (synthesised, no citations, may be outdated, best for explanation) — Flavell metacognition (1979)
+- Pre-printed comparison: "How do migratory birds navigate?" — Frank's annotation requiring a neutral topic safe for shared library screens
+- Google column: magnetite crystals, cryptochrome protein, sun compass, star patterns, cites peer-reviewed 2022 source
+- AI column: conversational synthesis, mentions magnetic field, sun, stars, landmarks, experienced birds — illustrates difference in register
+- Metacognitive question (Flavell): "What would have to be true about where this source comes from for this answer to be correct?"
+- Four "when answers disagree" strategies: check the date, check if it's a fact/explanation, check peer-reviewed sources, ask a librarian
+- Cohort complete banner (green callout) links to 4-6 and 7-9 completed cohorts
+- Caulfield SIFT (2019) and MediaSmarts Canada cited; Canadian English throughout
+- Purple colour identity: `--kids-purple: #4527A0`, hero gradient `linear-gradient(135deg, #EDE7F6 0%, #E8EAF6 100%)`
+
+### DCC Kids — All three cohorts COMPLETE
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 7 of 7 built |
+| Ages 10–12 | ✅ Complete | 9 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify all 9 modules live
+- 10-12 cohort is the largest cohort (9 modules vs 8 and 7 for prior cohorts) — confirm all cards active before sharing
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW4: AI story helper shipped
 
 **Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order
@@ -43,18 +86,14 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 - Dr. Lena: Erikson industry stage (genuine accomplishment), AI-assisted identity matters for creative self-concept
 - Frank: ownership meter sticker activity for groups; "who got 7 or above?" debrief question; never facilitate AI account sign-ins in library sessions
 
-### DCC Kids — Three cohorts
+### DCC Kids — cohort state at time of this sprint
 
 | Cohort | Status | Modules |
 |--------|--------|---------|
 | Ages 4–6 | ✅ Complete | 8 of 8 built |
-| Ages 7–9 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 7 of 7 built |
 | Ages 10–12 | 🔶 Building | 8 of 9 built |
 | Ages 13–15 | ⬜ Future | — |
-
-### Next recommended action for Aaron
-- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 8 active modules
-- One module remains: Row 9 — Asking good questions when I search or ask AI (Learning; pre-selected neutral topic for library; caregiver-supervised AI access)
 
 Last updated: 2026-05-27 EST (Toronto)
 

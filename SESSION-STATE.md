@@ -17,6 +17,48 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW6: Remix attribution shipped
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order
+
+### What Shipped (`digital-confidence/99c47ec`)
+
+| File | What |
+|------|------|
+| `kids/10-12/when-i-remix-something-i-name-who-made-the-original.html` | Row 6 — Creative Making, 15 min, no screens, kid-leads |
+| `kids/10-12/index.html` | Row 6 activated; count 6 → 7; section-label updated |
+| `kids/index.html` | 10-12 count updated to 7 activities |
+
+**Notion Row 6 (`349a09cf-876a-8124-a6ff-cdda22772fd9`) → Built**
+
+**Key design decisions:**
+- Kohlberg Stage 3 community ethics framing throughout: "attribution is how creative communities sustain themselves" — not legalistic
+- Six remix types as visual tiles: fan art, memes, TikTok stitches, Roblox mods, music mash-ups, fan fiction
+- Three-type copyright explainer: Creative Commons (CC BY), Canadian Copyright Act (fair dealing, not "fair use"), Crown copyright + Open Government Licence
+- Vera: Crown copyright explicitly addressed — government content is not automatically free; look for the OGL badge
+- Simple credit formula: [work description] by [creator], [source], [licence if known] — with 5 concrete examples
+- Sources Named Running Count activity: TikTok stitch scenario with 5 sources (cooking clip, background music, downloaded font, food blog photo, own commentary) — check-off tally format; printable
+- FAQ: 4 questions (can't find the original / memes / Roblox-Minecraft / fair dealing vs. fair use)
+- Frank: tally gamification, physical worksheet, "Distracted Boyfriend" meme example for FAQ prep
+- fr-QC gap noted in facilitator note: French build requires Québécois creator examples before going live
+
+### DCC Kids — Three cohorts
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 8 of 8 built |
+| Ages 10–12 | 🔶 Building | 7 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 7 active modules
+- Next build sprint: Row 4 — Making a story with AI as my helper (most complex; no-login library variant; platform age restrictions must be addressed)
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW7: Is this an ad? shipped
 
 **Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order

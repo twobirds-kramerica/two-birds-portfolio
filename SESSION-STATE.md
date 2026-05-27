@@ -17,6 +17,32 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-CONSULTING-PAGE-PHOTO: Headshot wired into consulting page
+
+**Trigger:** Aaron provided Google Drive folder (50+ headshots, April 21 + May 15 sessions)
+
+### What Shipped (`aaron-patzalek`)
+
+| File | What |
+|------|------|
+| `images/aaron-headshot.jpg` | Outdoor portrait — navy blazer, white shirt, big open smile; Apr 21 session |
+| `consulting.html` | Headshot added to credential strip as 80px circular avatar |
+
+**Photo selection rationale:**
+- Apr 21 outdoor (city street, navy blazer) chosen: most approachable, natural light, strong trust signal for SME audience
+- May 15 purple-background images excluded — HeadshotPro AI had artificially added grey hair (Aaron deleted those from Drive)
+- Photo placed in `.cred-strip` alongside the 20+ years / TELUS / St. Thomas / No retainer credential items
+
+**Notion asset page:** `36da09cf-876a-81da-afe4-df97135d6ac7` — holds Drive file IDs and contact/social info (private, not in public repo)
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/aaron-patzalek/consulting.html` to verify photo renders correctly
+- Share the consulting page link with first prospects / LinkedIn
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-CONSULTING-PAGE: Aaron Patzalek consulting page shipped
 
 **Trigger:** Aaron typed "next sprint" → exit 3 → Notion P1 backlog item "Publish consulting service page" identified

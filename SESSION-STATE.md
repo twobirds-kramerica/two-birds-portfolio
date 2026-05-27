@@ -17,6 +17,48 @@ Last fetch: 2026-05-26 — two sprints processed (Paperwork Labs v3 cancelled; C
 
 ---
 
+## ⚡ 2026-05-26 — S-DCC-KIDS-10-12-ROW5: Password manager module shipped
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → highest-value build from SME-REVIEW-004 order
+
+### What Shipped (`digital-confidence/f638653`)
+
+| File | What |
+|------|------|
+| `kids/10-12/using-a-password-manager.html` | Row 5 — Tech Safety, family setup, 60-90 min, needs a device |
+| `kids/10-12/creating-a-strong-password.html` | "Ready for next step" callout now links to password manager |
+| `kids/10-12/index.html` | Row 5 activated; count 3 → 4 |
+| `kids/index.html` | 10-12 count updated to 4 activities |
+
+**Notion Row 5 (`349a09cf-876a-811d-b763-c94c8fdef76e`) → Built**
+
+**Key design decisions:**
+- Family-account framing throughout: caregiver is account owner (Vera annotation)
+- One-time setup framing; child adds and manages at least one vault item themselves (Dr. Lena: skill-transfer requirement)
+- Bitwarden (free, open source) and 1Password (paid, strong UX) — both presented as valid choices
+- Credential-stuffing chain explainer (how one breach cascades to all accounts)
+- Vault diagram showing master key → entries
+- Diceware passphrase method (4+ random words + number + symbol)
+- 6-step family setup guide + printable home checklist
+- Library version = 20-min preview-only + printed checklist (Frank annotation); fr-QC gap flagged
+
+### DCC Kids — Three cohorts
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 8 of 8 built |
+| Ages 10–12 | 🔶 Building | 4 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 4 active modules
+- Next build sprint: Row 1 — Spotting hidden advertising (Critical Thinking; parasocial framing + printed examples)
+
+Last updated: 2026-05-26 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-26 — S-CLAUDE-PREFERENCES-V3: CLAUDE-PREFERENCES v3 committed to system-rules
 
 **Trigger:** Aaron typed "next sprint" → Notion locked P2 HAL Stack item

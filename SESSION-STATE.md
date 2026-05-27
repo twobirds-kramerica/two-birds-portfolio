@@ -5,7 +5,7 @@
 ## Notion Sync Status
 ✅ LIVE — next-sprint.py pulls from Notion successfully (2026-04-19)
 Scripts verified on EZbook. Environment variable set.
-Last fetch: 2026-05-26 — two sprints processed (Paperwork Labs v3 cancelled; CLAUDE-PREFERENCES v3 shipped).
+Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; CLAUDE-PREFERENCES v3 shipped; ROW5 password manager shipped; ROW1 hidden advertising shipped).
 
 ## Open P1 Actions (Aaron)
 - ⬜ DCC v2 wizard evaluation — evaluate `module-1-wizard.html`, decide: replace / coexist / revert
@@ -14,6 +14,47 @@ Last fetch: 2026-05-26 — two sprints processed (Paperwork Labs v3 cancelled; C
 - ⬜ OG card PNG conversion — open export-og-png.html in Chrome → DevTools screenshot → save as og-card.png → swap meta tag (5 min each site)
 - ⬜ Clarity "Why I built this" — review copy before showing a prospect
 - ✅ DCC Research DB — 35 rows batch-advanced Research → Spec (2026-05-16)
+
+---
+
+## ⚡ 2026-05-26 — S-DCC-KIDS-10-12-ROW1: Spotting hidden advertising shipped
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order
+
+### What Shipped (`digital-confidence/c16f6aa`)
+
+| File | What |
+|------|------|
+| `kids/10-12/spotting-hidden-advertising.html` | Row 1 — Critical Thinking, 20 min, no screens, kid-leads |
+| `kids/10-12/index.html` | Row 1 activated; count 4 → 5; section-label updated |
+| `kids/index.html` | 10-12 count updated to 5 activities |
+
+**Notion Row 1 (`35ca09cf-876a-8142-ba37-fc1991f4e98e`) → Built**
+
+**Key design decisions:**
+- Parasocial trust framing (Horton & Wohl 1956): one-directional emotional bonds with creators make paid recommendations feel like friend advice
+- Creator earnings callout: $1K–$50K per sponsored post; familiarity is the product
+- Two-layer taxonomy: obvious ads (banners/skippable) vs paid recommendations (harder to spot)
+- Vera annotation: behavioural targeting as a third invisible layer
+- Canadian Ad Standards: disclosure must be early and visible, never buried
+- Ad Detective Challenge: 5 text-based scenarios, detective-and-witness pair format, printable (no live internet required for library use)
+- Trust moment section: Dr. Lena's cognitive dissonance framing ("that disappointment is the lesson working")
+- Research: Horton & Wohl (1956), Colliander & Dahlén (2011), Jin & Phua (2014), Ad Standards Canada, MediaSmarts Canada, CRTC
+
+### DCC Kids — Three cohorts
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 8 of 8 built |
+| Ages 10–12 | 🔶 Building | 5 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 5 active modules
+- Next build sprint: Row 7 — Is this an ad? (multi-age Critical Thinking; kid-leads 10-12 variant)
+
+Last updated: 2026-05-26 EST (Toronto)
 
 ---
 

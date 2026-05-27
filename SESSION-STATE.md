@@ -17,6 +17,49 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW4: AI story helper shipped
+
+**Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order
+
+### What Shipped (`digital-confidence/3eb23b6`)
+
+| File | What |
+|------|------|
+| `kids/10-12/making-a-story-with-ai-as-my-helper-not-my-author.html` | Row 4 — Creative Making, 20 min, device optional, kid-leads |
+| `kids/10-12/index.html` | Row 4 activated; count 7 → 8; section-label updated |
+| `kids/index.html` | 10-12 count updated to 8 activities |
+
+**Notion Row 4 (`348a09cf-876a-81bd-a6e9-cbbf1edbcd39`) → Built**
+
+**Key design decisions:**
+- Age restriction notice: prominent red callout — AI chat tools are 13+ minimum; no-login variant is the primary/recommended path
+- My Line / AI Line Rule: 7 of 10 lines must be the child's; lines 1, 2, 4, 5, 7, 8, 10 always theirs; lines 3, 6, 9 are AI option positions
+- Story ownership meter: 1-10 visual scale (low/mid/good/target) — physical sticker marker for group settings
+- AI-assisted vs AI-generated: side-by-side comparison grid; "what did you contribute?" framing
+- Three story prompts (inventor/dreams, library/doors, attic map/grandparent) with pre-written AI sentence options for positions 3, 6, 9 — all self-contained in the HTML, no device needed
+- Safety signal: real AI tools don't ask personal questions about home/school — prominent section
+- No-login library variant is the default: pre-printed scaffold, no accounts, no network
+- Vera: age restrictions enforced, AIDA reference, caregiver/parent account framing for supervised use
+- Dr. Lena: Erikson industry stage (genuine accomplishment), AI-assisted identity matters for creative self-concept
+- Frank: ownership meter sticker activity for groups; "who got 7 or above?" debrief question; never facilitate AI account sign-ins in library sessions
+
+### DCC Kids — Three cohorts
+
+| Cohort | Status | Modules |
+|--------|--------|---------|
+| Ages 4–6 | ✅ Complete | 8 of 8 built |
+| Ages 7–9 | ✅ Complete | 8 of 8 built |
+| Ages 10–12 | 🔶 Building | 8 of 9 built |
+| Ages 13–15 | ⬜ Future | — |
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/kids/10-12/` to verify 8 active modules
+- One module remains: Row 9 — Asking good questions when I search or ask AI (Learning; pre-selected neutral topic for library; caregiver-supervised AI access)
+
+Last updated: 2026-05-27 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-DCC-KIDS-10-12-ROW6: Remix attribution shipped
 
 **Trigger:** Aaron typed "next sprint" → Notion exit 3 → next build from SME-REVIEW-004 order

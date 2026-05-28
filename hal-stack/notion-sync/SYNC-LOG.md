@@ -294,3 +294,52 @@ Append-only record of sync events, errors, and completions.
 
 - 2026-05-19 02:45 EST — chronicle-weekly: Agency Log #006 created — The Machine That Speaks (May 19, 2026) — https://www.notion.so/365a09cf876a81d79832dd42c0a98f2e
 - 2026-05-19 02:45 EST — chronicle-weekly: S-CHRONICLE-WEEKLY (364a09cf-876a-81cd-bcd6-d7cc661aa238) → Done; next run filed May 29 (365a09cf-876a-8112-8ec5-cfd1d24645e1)
+- 2026-05-19 11:09 Eastern Daylight Time — next-sprint locked: [P1] S-CHRONICLE-WEEKLY: Thursday Chronicle synthesis cadence (recurring) (365a09cf-876a-8112-8ec5-cfd1d24645e1)
+- 2026-05-28 EST — chronicle-weekly: Agency Log #007 created — Three Cohorts, Twenty-Four Modules (May 19–27, 2026) — https://www.notion.so/36ea09cf876a817e81fde00e70f37faa
+- 2026-05-28 EST — chronicle-weekly: Agency Log #008 created — The First Public Pitch (May 27, 2026) — https://www.notion.so/36ea09cf876a81cabc2aeba9b48efc44
+- 2026-05-28 EST — chronicle-weekly: S-CHRONICLE-WEEKLY (365a09cf-876a-8112-8ec5-cfd1d24645e1) → Done; gap May 19–27 filled; next run June 5 filed (36ea09cf-876a-8117-858e-c6cf9ee67c72)
+- 2026-05-19 11:09 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-20 23:03 Eastern Daylight Time — next-sprint locked: [P1] S-CLAUDE-CODE-MODEL-LOCK: Dynamic Sonnet default + Opus override + future model flexibility (366a09cf-876a-81cf-b7b4-e2d87fff830c)
+- 2026-05-20 23:08 Eastern Daylight Time — next-sprint locked: [P1] S-ORPHANED-WORK-AUDIT: Forensic check for lost/orphaned work from May 16 cloud session + any other automation failures (366a09cf-876a-81c4-8434-ec5215fdc914)
+- 2026-05-20 23:08 Eastern Daylight Time — complete-sprint: (page 366a09cf-876a-81cf-b7b4-e2d87fff830c) (366a09cf-876a-81cf-b7b4-e2d87fff830c) → Done; [2026-05-20 23:08 Eastern Daylight Time] DONE
+- 2026-05-21 01:56 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-21 02:00 Eastern Daylight Time — complete-sprint: (page 366a09cf-876a-81c4-8434-ec5215fdc914) (366a09cf-876a-81c4-8434-ec5215fdc914) → Done; [2026-05-21 02:00 Eastern Daylight Time] DONE
+- 2026-05-21 02:02 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-21 02:02 Eastern Daylight Time — backlog-health complete — 300 open, findings=True
+- 2026-05-22 20:06 Eastern Daylight Time — next-sprint locked: [P0] S-AUDIT: HAL Stack integration audit (5-day hard cap) (367a09cf-876a-810f-8054-ff0f4989e49f)
+- 2026-05-22 20:06 Eastern Daylight Time — file-aaron-action: filed 'S-AUDIT test capture — delete after audit' [P2] → 369a09cf-876a-8155-b212-dce5a5bdfb1c
+- 2026-05-22 20:11 Eastern Daylight Time — file-aaron-action: filed 'Voice-check protocol: paste the text from hal-stack/sprint-system/backlog/P2-voice-check-protocol.md into Claude.ai Settings > Profile > User Preferences (3 min). Every drafted email/CV/LinkedIn post since Apr 13 has been unguarded.' [P1] → 369a09cf-876a-81a5-a7c1-fb769cf8af87
+- 2026-05-22 20:11 Eastern Daylight Time — file-aaron-action: filed 'Fix Notion P0 items stuck in Not-Running: open BULL SPRINT 1, BULL SPRINT 2, S-OVERNIGHT-V2 in Notion and set Type=Sprint + Owner=Claude Code so next-sprint.py can pick them up. Phil Butler reply stays as Owner=Aaron (correct).' [P2] → 369a09cf-876a-81d2-a991-f0d56672c227
+- 2026-05-22 20:11 Eastern Daylight Time — file-aaron-action: filed 'Delete Notion test item 369a09cf-876a-8155-b212-dce5a5bdfb1c (titled: S-AUDIT test capture -- delete after audit)' [P2] → 369a09cf-876a-81cc-afff-cc6048d7847d
+- 2026-05-22 20:12 Eastern Daylight Time — complete-sprint: (page 367a09cf-876a-810f-8054-ff0f4989e49f) (367a09cf-876a-810f-8054-ff0f4989e49f) → Done; [2026-05-22 20:12 Eastern Daylight Time] DONE
+- 2026-05-22 20:53 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-22 20:58 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-22 21:40 Eastern Daylight Time — create_backlog_item: 'S-LLM-INSTRUCTIONS-SYNC: Multi-LLM instructions sync system -- one source, all providers, automated propagation' (P3 Sprint / Backlog / Claude Code) -> 369a09cf-876a-81a8-ac26-e67f85d22617
+- 2026-05-23 00:07 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 00:33 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 00:33 Eastern Daylight Time — API 400 on POST data_sources/e184382b-b59a-41e7-9152-d90fbee1abe6/query: {"object":"error","status":400,"code":"validation_error","message":"The property type in the database does not match the property type of the filter provided: database property select does not match filter status","request_id":"6c0f662a-e3df-4209-8094-ecf8c9539743"}
+- 2026-05-23 00:34 Eastern Daylight Time — API 400 on POST data_sources/e184382b-b59a-41e7-9152-d90fbee1abe6/query: {"object":"error","status":400,"code":"validation_error","message":"Could not find property with name or id: Age Band","request_id":"4c5bc605-e854-4f65-8fb1-9fb5ff4ea406"}
+- 2026-05-23 00:36 Eastern Daylight Time — API 400 on POST data_sources/e184382b-b59a-41e7-9152-d90fbee1abe6/query: {"object":"error","status":400,"code":"validation_error","message":"The property type in the database does not match the property type of the filter provided: database property multi_select does not match filter select","request_id":"6b6cb2aa-b730-4328-b921-cc27a37a1a67"}
+- 2026-05-23 02:28 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 13:52 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 14:03 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 17:42 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 19:35 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-23 20:16 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-26 12:53 Eastern Daylight Time — next-sprint locked: [P1] Git: commit + push Paperwork Labs brief v3 (red-team patches) (36ba09cf-876a-8122-ad30-ec3cd8b9329a)
+- 2026-05-26 13:32 Eastern Daylight Time — next-sprint locked: [P2] Commit CLAUDE-PREFERENCES v3 to GitHub system-rules (36ca09cf-876a-8174-bfa4-c7954cba03a5)
+- 2026-05-26 13:42 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-26 21:18 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-26 21:58 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-27 00:26 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-27 08:03 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-27 08:11 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-27 08:22 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-27 12:24 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-27 15:20 Eastern Daylight Time — file-aaron-action: filed 'Resolve Cal.com ICS feed multi-calendar conflict checking' [P3] → 36da09cf-876a-8194-b110-e1632e3c6ce8
+- 2026-05-27 19:07 Eastern Daylight Time — next-sprint locked: [P1] Kevin's Apartment — Stale Listing Audit & last_verified Refresh (36da09cf-876a-8191-96b6-d7e44337db79)
+- 2026-05-27 19:10 Eastern Daylight Time — file-aaron-action: filed 'Manually check 7 bot-blocked listings in Kevin apartment search — open each in browser, confirm live or expired, update listings.json status/archive_reason accordingly' [P1] → 36da09cf-876a-814c-bf8f-f0c1ac6ae72c
+- 2026-05-27 21:00 Eastern Daylight Time — file-aaron-action: filed 'Set up Cloudflare Pages for kevins-apartment-search repo' [P1] → 36ea09cf-876a-8161-80bc-c502ca43e52d
+- 2026-05-27 21:59 Eastern Daylight Time — file-aaron-action: filed 'KevsCasa: manually verify remaining 7 bot-blocked listings and report which are expired' [P2] → 36ea09cf-876a-8131-b1ad-f10e629f0ed7
+- 2026-05-27 23:10 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-28 08:21 Eastern Daylight Time — next-sprint: no Ready sprint found

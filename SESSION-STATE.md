@@ -8,12 +8,40 @@ Scripts verified on EZbook. Environment variable set.
 Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; CLAUDE-PREFERENCES v3 shipped; ROW5 password manager shipped; ROW1 hidden advertising shipped).
 
 ## Open P1 Actions (Aaron)
-- ⬜ DCC v2 wizard evaluation — evaluate `module-1-wizard.html`, decide: replace / coexist / revert
+- ✅ DCC v2 wizard evaluation — verdict delivered 2026-05-28: **Coexist** — v2 is canonical wizard, v1 stays untouched; next sprint: extract inline JSON → `v2/data/module-1/en.json`
 - ✅ Kevin site forward path — Cloudflare Pages deployed 2026-05-27 · `kevins-apartment-search.pages.dev`
 - ⬜ Google Maps API key — add HTTP referrer restrictions in Google Cloud Console
 - ⬜ OG card PNG conversion — open export-og-png.html in Chrome → DevTools screenshot → save as og-card.png → swap meta tag (5 min each site)
 - ⬜ Clarity "Why I built this" — review copy before showing a prospect
 - ✅ DCC Research DB — 35 rows batch-advanced Research → Spec (2026-05-16)
+
+---
+
+## ⚡ 2026-05-28 — S-CHRONICLE-WEEKLY: Agency Log gap fill (May 19–27)
+
+**Trigger:** Aaron asked to fill full Chronicle gap, not just current week
+
+### What Shipped
+
+| Action | Details |
+|--------|---------|
+| Agency Log #007 | Three Cohorts, Twenty-Four Modules — DCC Kids 4-6/7-9/10-12 complete |
+| Agency Log #008 | The First Public Pitch — consulting page launch, Cal.com decision |
+| Sprint closed | 365a09cf → Done; recurring sprint re-filed for June 5 (36ea09cf-876a-8117-858e-c6cf9ee67c72) |
+
+**Gap covered:** May 19–27, 2026 (9 days, 27 sprints since last Chronicle)
+
+**Stories not written (future candidates):**
+- Kevin's Cloudflare migration (overlaps with #002 infra/403 genre — defer)
+
+**Next Chronicle entry:** #009 — due Thursday June 5, 2026
+
+### Next recommended action for Aaron
+- Review Agency Log #007 + #008 in Notion, approve/edit before LinkedIn posts
+- Agency Log #007 LinkedIn Long is ready to publish as-is or lightly edited
+- Agency Log #008 LinkedIn Short is the cleanest for a first consulting page post
+
+Last updated: 2026-05-28 EST (Toronto)
 
 ---
 

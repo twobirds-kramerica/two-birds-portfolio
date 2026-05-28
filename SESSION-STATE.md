@@ -9,7 +9,7 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ## Open P1 Actions (Aaron)
 - ⬜ DCC v2 wizard evaluation — evaluate `module-1-wizard.html`, decide: replace / coexist / revert
-- ⬜ Kevin site forward path — (a) accept downtime / (b) re-host / (c) upgrade GitHub Pro
+- ✅ Kevin site forward path — Cloudflare Pages deployed 2026-05-27 · `kevins-apartment-search.pages.dev`
 - ⬜ Google Maps API key — add HTTP referrer restrictions in Google Cloud Console
 - ⬜ OG card PNG conversion — open export-og-png.html in Chrome → DevTools screenshot → save as og-card.png → swap meta tag (5 min each site)
 - ⬜ Clarity "Why I built this" — review copy before showing a prospect

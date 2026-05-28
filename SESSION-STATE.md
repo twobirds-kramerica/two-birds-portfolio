@@ -45,6 +45,28 @@ Last updated: 2026-05-28 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-28 — S-CLAUDE-MD-AUDIT: CLAUDE.md trimmed to ~480 tokens
+
+**Trigger:** Notion P1 Ready — "CLAUDE.md audit — trim to under 500 tokens"
+
+### What Changed
+
+| Removed | Saved |
+|---------|-------|
+| WHO AARON IS section | ~40 tokens (now in memory only) |
+| COS trigger inline details → file pointer | ~80 tokens |
+| DEEPER RULES parenthetical labels | ~50 tokens |
+| One-shot launcher + sprint completion → 2 lines each | ~50 tokens |
+
+**Before:** ~800 tokens · **After:** ~480 tokens · **Saving:** ~40% per session
+
+### Next recommended action for Aaron
+- None. No action needed. CLAUDE.md is the most auto-loaded file in the stack — savings compound across every sprint.
+
+Last updated: 2026-05-28 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-27 — S-KEVIN-LISTING-AUDIT: Stale listing audit & last_verified refresh
 
 **Trigger:** next-sprint.py → P1 locked — Notion issue #61 (all 13 active listings 70 days stale)

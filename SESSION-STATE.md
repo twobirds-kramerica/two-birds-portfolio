@@ -45,6 +45,32 @@ Last updated: 2026-05-28 EST (Toronto)
 
 ---
 
+## ⚡ 2026-05-28 — S-DCC-V2-WIZARD-WIRE: v2 wizard wired to module-1
+
+**Trigger:** Aaron: option 2 from sprint menu (DCC v2 wizard data extraction)
+
+### What Shipped (`digital-confidence`)
+
+| File | What |
+|------|------|
+| `module-1.html` | Wizard CTA banner added after hero image: "Prefer to go one step at a time? Try the guided step-by-step version →" links to `v2/wizard.html?module=module-1` |
+| `css/module-enhance.css` | `.wizard-cta-banner` CSS added (teal border, dark mode support) |
+| `v2/js/wizard.js` | `document.title` now set dynamically from `data.title` on both initial load and language toggle |
+
+**Already done (no action needed):**
+- `v2/data/module-1/en.json` — confirmed exists, matches inline fallback exactly
+- `v2/data/module-1/fr.json` — FR version also exists
+
+**Wizard state:** v2 wizard is now the canonical path for module-1. v1 (`module-1-wizard.html`) remains untouched.
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/module-1.html` to verify CTA banner renders
+- Click "Try the guided step-by-step version" to confirm wizard loads with correct title
+
+Last updated: 2026-05-28 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-28 — S-CLAUDE-MD-AUDIT: CLAUDE.md trimmed to ~480 tokens
 
 **Trigger:** Notion P1 Ready — "CLAUDE.md audit — trim to under 500 tokens"

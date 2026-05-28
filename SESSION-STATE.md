@@ -17,6 +17,25 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-28 — S-DCC-UI-BUG-FIX: Three module-page UI bugs repaired
+
+**Trigger:** Aaron screenshot of module-1.html showing multiple broken elements
+
+### What Shipped (`digital-confidence`)
+
+| File | Fix |
+|------|-----|
+| `css/main.css` | `.sidebar-close` bg changed from `rgba(0,0,0,0.06)` (invisible) → `#ffffff` with `1.5px solid #666` border — now clearly visible |
+| `css/module-enhance.css` | `.module-progress-dots` CSS added — `components.css` was never linked on module pages, causing the `<ol>` to render as raw numbered items with no visible content |
+| `js/module-enhancements.js` | Section progress bar now initialises at `1` instead of `savedSection` — was showing "Section 2 of 8" on every page load for any returning user |
+
+**Root causes:**
+- Close button: existing code comment said "always visible, clear contrast" — the implementation contradicted it
+- Progress dots: `components.css` is design-system only (linked from SHOWCASE.html, never modules)
+- Section bar: `savedSection` was passed to initial HTML rather than `currentSection = 1`
+
+---
+
 ## ⚡ 2026-05-28 — S-CHRONICLE-WEEKLY: Agency Log gap fill (May 19–27)
 
 **Trigger:** Aaron asked to fill full Chronicle gap, not just current week

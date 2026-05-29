@@ -17,6 +17,39 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-29 — S-DCC-REBUILD-P5: Commercial layer shipped (institutional + family)
+
+**Trigger:** next sprint — Notion empty; Phase 5 of DCC Rebuild Plan
+
+### What Shipped (`digital-confidence`)
+
+| File | What |
+|------|------|
+| `b2b/index.html` | Updated: hero stats 15+ → 29 modules; DLEP/NHSP funding gap section added ($47M ended March 2025); Partner $299 → $500/year; Multi-Site $1,000/year tier added; no-grant-dependency framing |
+| `family.html` | New: adult-children landing page. Scenario cards, 5-step module path, family-relevant framing, waitlist form (Formspree), CTA to Module 1 and family-setup.html |
+| `index.html` | family.html added to sidebar nav + footer nav |
+
+**DCC Rebuild scorecard — COMPLETE:**
+| Phase | Status |
+|---|---|
+| P0: Decision Lock | ✅ |
+| P1: Design System Lock (module-1) | ✅ |
+| P2: Template Extraction | ✅ |
+| P3: Core Curriculum (28 adult modules) | ✅ |
+| P4: Full Site Sweep (kids + all supporting pages) | ✅ |
+| P5: Commercial Layer (institutional + family) | ✅ |
+
+**Phase 5 still outstanding:** CRA government services pilot module (resources/cra-guide.html) — deferred pending Aaron's review of strategic plan from Two Birds Command session.
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/family.html` — confirm look and feel matches intent
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/b2b/index.html` — confirm DLEP gap section and new pricing are correct
+- Review research docs (P1 Notion flag) against Two Birds Command session before proceeding with CRA pilot
+
+Last updated: 2026-05-29 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-29 — S-DCC-REBUILD-COMPLETE: Warm Hearth design system applied to entire DCC site
 
 **Trigger:** Overnight autonomous run — Phase 4 (Kids + supporting pages + full site sweep)

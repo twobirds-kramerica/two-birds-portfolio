@@ -17,6 +17,45 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-28 — S-DCC-REBUILD-P2: Template Extraction — module-template.html created
+
+**Trigger:** Notion empty; sprint-queue S-009 is a human task; Phase 2 of DCC Rebuild Plan is the next logical step
+
+### What Shipped (`digital-confidence`)
+
+| File | What |
+|------|------|
+| `module-template.html` | Clean, well-commented module template. Strip of all content, TEMPLATE: markers at every injection point |
+
+**Template covers:**
+- Full comment header with component class quick-reference and JS-injected element list
+- CSS load order (Phase 1 result) — verbatim, with comment warning not to change
+- All 6 JSON-LD stubs (`LearningResource`, `FAQPage` ×2, `Article`, `HowTo`, `WebPage`, `BreadcrumbList`)
+- Accessibility bar, top-bar, sidebar nav (verbatim — same on all modules)
+- All content component examples with TEMPLATE: markers: story-block, tip-block, tip-box, device-content ×3, walkthrough, visual-example-card, confidence-check-box, confidence-check, feeling-stuck-box, related-modules, module-nav, quick-answers-accordion, sources-block, local-help-cards
+- Footer (verbatim)
+- All 24 JS script tags in correct load order
+
+**TEMPLATE: markers are at every injection point:** title, meta description, og/twitter tags, JSON-LD content, module number, hero image, story block, section headings, all content blocks, related modules, nav prev/next, FAQ Q&A, sources.
+
+**What's NOT in Phase 2:**
+- max-width change to 720px — Phase 3 (applied as a design token override when migrating individual modules)
+- Nav restructure (Adult Track / Kids Track / etc.) — Phase 3 task after all modules migrated
+
+### How to use the template (Phase 3 workflow)
+1. `cp module-template.html module-N.html`
+2. Find all `TEMPLATE:` markers and replace them
+3. Update all `MODULE_NUMBER`, `MODULE_TITLE`, `MODULE_SLUG` placeholders
+4. Run Phase 1 verification checklist before pushing
+
+### Next recommended action for Aaron
+- Phase 3 is ready to begin: migrate modules 2–27 to the new template, 3–4 per sprint
+- Module 2 (`module-2.html`) is next in sequence
+
+Last updated: 2026-05-28 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-28 — S-DCC-REBUILD-P1: Design System Lock — tokens + components wired to module-1
 
 **Trigger:** DCC Rebuild Plan Phase 0 complete (all 5 decisions locked 2026-05-28); Phase 1 kicked off

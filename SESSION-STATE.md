@@ -17,6 +17,35 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-28 — S-DCC-REBUILD-P3: Core Curriculum Migration — design system applied to all 28 modules
+
+**Trigger:** Notion empty; Phase 3 of DCC Rebuild Plan
+
+### What Shipped (`digital-confidence`)
+
+| Commit | Files | What |
+|--------|-------|------|
+| P3A | modules 2–5 | tokens.css, tokens-dark.css, fonts.css, components.css added to CSS load order |
+| P3B | modules 6–27, module-2-5, module-visual-ai (24 files) | same; module-visual-ai also gained print.css (was missing) |
+
+**Result:** All 28 adult module pages now load the Warm Hearth design system:
+- `tokens.css` → CSS custom properties (`--color-primary`, `--color-bg`, etc.) active
+- `tokens-dark.css` → dark mode via `[data-theme='dark']` active
+- `fonts.css` → Merriweather + Source Sans 3 self-hosted fonts active
+- `components.css` → design system component structures active
+
+**What's still NOT done (Phase 4 backlog):**
+- max-width 900px → 720px (Phase 4 design token override per module)
+- Nav sidebar restructure: tiered Adult Track / Kids Track / Resources / Org
+- v2 wizard JSON for modules 4–27 (currently only modules 1–3 have v2 JSON)
+
+### Next recommended action for Aaron
+- Visit any module (e.g. `https://twobirds-kramerica.github.io/digital-confidence/module-9.html`) and confirm Merriweather body font + warm dark mode
+
+Last updated: 2026-05-28 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-28 — S-DCC-REBUILD-P2: Template Extraction — module-template.html created
 
 **Trigger:** Notion empty; sprint-queue S-009 is a human task; Phase 2 of DCC Rebuild Plan is the next logical step

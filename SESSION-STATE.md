@@ -17,6 +17,45 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-28 — S-DCC-REBUILD-P1: Design System Lock — tokens + components wired to module-1
+
+**Trigger:** DCC Rebuild Plan Phase 0 complete (all 5 decisions locked 2026-05-28); Phase 1 kicked off
+
+### What Shipped (`digital-confidence`)
+
+| File | What |
+|------|------|
+| `module-1.html` | CSS load order updated: `tokens.css` + `tokens-dark.css` + `fonts.css` + `components.css` added after `main.css`, before `module-enhance.css` |
+| `css/module-enhance.css` | Removed 61-line `.module-progress-dots` block (comment said it mirrored components.css — now components.css is actually loaded) |
+
+**What this unlocks:**
+- Warm Hearth design tokens (`--color-primary`, `--color-bg`, etc.) now resolve on all module-enhance.css and components.css rules — no more hex fallbacks firing
+- Merriweather (body) + Source Sans 3 (headings) self-hosted fonts now active on module-1 — removes Google Fonts CDN dependency
+- `components.css` live on a module page for the first time — all its component classes (progress dots, callouts, etc.) fully styled
+- `tokens-dark.css` wired in — dark mode now uses Warm Hearth dark tokens via `[data-theme='dark']` selector
+
+**What's NOT changed yet:**
+- `main.css` still loaded (165KB) — still provides `.story-block`, `.tip-block`, `.sidebar`, `.top-bar`, all major module components
+- `module-enhance.css` still loaded — module-specific additions not yet in components.css
+- max-width still 900px — Phase 2 will reduce to 720px per research
+- Other 24 modules unchanged — module-1 is the reference implementation
+
+**Phase 1 verification checklist (Aaron):**
+1. `https://twobirds-kramerica.github.io/digital-confidence/module-1.html` — body text should be Merriweather (serif), not Inter
+2. 200% zoom — no overflow
+3. Dark mode toggle — Warm Hearth dark palette active (warm brown, not blue-tinted)
+4. Progress dots render correctly (no raw numbered list)
+5. Wizard CTA banner visible below hero image
+6. Section progress bar (bottom of page) present
+
+### Next recommended action for Aaron
+- Visit `https://twobirds-kramerica.github.io/digital-confidence/module-1.html` to confirm Merriweather body font and Warm Hearth dark mode
+- Phase 2 (next sprint): extract `module-template.html` from the rebuilt module-1 — this becomes the blueprint for migrating modules 2–27
+
+Last updated: 2026-05-28 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-28 — S-DCC-UI-BUG-FIX: Three module-page UI bugs repaired
 
 **Trigger:** Aaron screenshot of module-1.html showing multiple broken elements

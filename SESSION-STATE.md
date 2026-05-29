@@ -17,6 +17,33 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-29 — S-DCC-V2-MODULES-4-8: v2 wizard JSON + CTAs for modules 4-8
+
+**Trigger:** next sprint — Notion empty; v2 wizard coverage was 3/27 modules; sitemap missing family.html
+
+### What Shipped (`digital-confidence`)
+
+| File | What |
+|------|------|
+| `v2/data/module-4/en.json` | App Store Safety — Frank's story, 6 screens, 7 min |
+| `v2/data/module-5/en.json` | Email & Messages — Rose's story, 6 screens, 8 min |
+| `v2/data/module-6/en.json` | Banking & Transactions — Jean's story, 6 screens, 8 min |
+| `v2/data/module-7/en.json` | Photos & Memories — Betty's story, 6 screens, 7 min |
+| `v2/data/module-8/en.json` | Stay Connected — Gloria's story, 6 screens, 8 min |
+| `v2/data/index.json` | screenCount updated 0→6 for modules 4-8 |
+| `module-4.html` through `module-8.html` | Wizard CTA banners added after hero image |
+| `sitemap.xml` | `family.html` added (priority 0.9) |
+
+**v2 wizard coverage: 8/27 modules. 19 remaining.**
+
+### Next recommended action
+- Verify wizard CTAs work on modules 4-8 at GitHub Pages
+- Continue v2 JSON generation: next batch is modules 9-13 (Understanding AI, Grocery, Ride-Sharing, Getting Help, Social Media)
+
+Last updated: 2026-05-29 EST (Toronto)
+
+---
+
 ## ⚡ 2026-05-29 — S-DCC-REBUILD-P5: Commercial layer shipped (institutional + family)
 
 **Trigger:** next sprint — Notion empty; Phase 5 of DCC Rebuild Plan

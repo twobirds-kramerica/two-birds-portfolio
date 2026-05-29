@@ -17,6 +17,46 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-29 — S-CLARITY-OVERNIGHT: Clarity product improvements + 4-product competitive research
+
+**Trigger:** Aaron voice note before sleep — overnight sprint on Clarity + research on DCC Adults, DCC Kids, KevsCasa
+
+### Research Delivered (raw data, pending review against Two Birds Command strategic plan)
+
+| File | Topic |
+|------|-------|
+| `hal-stack/research/dcc-adults-competitive-2026-05-29.md` | 8 competitors; DLEP gap ($47M ended Mar 2025); $500-2k institutional licensing validated; NHSP grant path |
+| `hal-stack/research/dcc-kids-competitive-2026-05-29.md` | 8 competitors; YouTube engagement-bait gap confirmed for ages 7-9 (no one covers it); Ontario A2 curriculum hook |
+| `hal-stack/research/kevscasa-competitive-2026-05-29.md` | No Canadian rental portal has crime/safety data; settlement agency white-label model uncontested |
+| `hal-stack/research/clarity-competitive-2026-05-29.md` | 8 competitors; BYOK is unique but a barrier; 5 actionable feature recs; email capture confirmed as #1 gap |
+| `hal-stack/research/dcc-kids-youtube-manipulation-brief.md` | Aaron's "Would You Rather" engagement-bait content brief for DCC Kids 7-9 cohort |
+
+**⚠️ All research flagged P1 in Notion for review against Two Birds Command strategic plan before acting. Research was run without direction from that session.**
+
+### Clarity Shipped (`clarity` repo, commit 251f915)
+
+| Change | Detail |
+|--------|--------|
+| Industries | 7 → 15: added Automotive, Construction, Agriculture, Food & Hospitality, Legal & Accounting, Personal Services, Real Estate, Transportation & Logistics |
+| AI Readiness Score | Added `readiness_score` (1–10) to prompt; displayed as badge in results header |
+| Demo mode | "See a sample report" link on setup screen; pre-baked Riverside Plumbing & Heating example; dismiss returns to setup |
+| Lead capture | Email field in CTA card; falls back to `mailto:` if `FORMSPREE_ENDPOINT` not configured in `clarity.js`; set endpoint to activate Formspree |
+| CTA button | Text in results changed from "Book a Free 30-Minute Call" to "Email Aaron about my results →" |
+| Prompt | Ontario/Canadian SME context added; named-tool recommendations requested; `readiness_score` field added to JSON schema |
+
+**Aaron action needed:** Set `FORMSPREE_ENDPOINT` in `C:\twobirds\clarity\js\clarity.js` line 1 of Lead Capture section to activate email collection. Get a free endpoint at formspree.io.
+
+### 3 Notion Actions Filed
+
+- P1: Review 2026-05-29 research against Two Birds Command strategic plan
+- P2: Build NHSP-ready pitch page (institutional.html) for DCC
+- P2: Add YouTube engagement-bait module to DCC Kids Research DB (7-9 cohort)
+- P2: Identify 2 Ontario settlement agency pilot partners for KevsCasa
+
+Last updated: 2026-05-29 EST (Toronto) — overnight autonomous run
+
+---
+
 ## ⚡ 2026-05-28 — S-DCC-REBUILD-P3: Core Curriculum Migration — design system applied to all 28 modules
 
 **Trigger:** Notion empty; Phase 3 of DCC Rebuild Plan

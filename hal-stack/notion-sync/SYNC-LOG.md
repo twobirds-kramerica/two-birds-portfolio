@@ -343,3 +343,10 @@ Append-only record of sync events, errors, and completions.
 - 2026-05-27 21:59 Eastern Daylight Time — file-aaron-action: filed 'KevsCasa: manually verify remaining 7 bot-blocked listings and report which are expired' [P2] → 36ea09cf-876a-8131-b1ad-f10e629f0ed7
 - 2026-05-27 23:10 Eastern Daylight Time — next-sprint: no Ready sprint found
 - 2026-05-28 08:21 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-28 13:10 Eastern Daylight Time — next-sprint locked: [P1] S-CHRONICLE-WEEKLY: Thursday Chronicle synthesis cadence (recurring) (36ea09cf-876a-8117-858e-c6cf9ee67c72)
+- 2026-05-28 22:52 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-28 23:02 Eastern Daylight Time — next-sprint: no Ready sprint found
+- 2026-05-29 00:45 Eastern Daylight Time — file-aaron-action: filed 'Build NHSP-ready pitch page on institutional.html — one-page for libraries to paste into New Horizons for Seniors grant applications using DCC as curriculum platform' [P2] → 36fa09cf-876a-813f-8f14-ceb44bc88e71
+- 2026-05-29 00:45 Eastern Daylight Time — file-aaron-action: filed 'Add YouTube engagement-bait module to DCC Kids Research DB — 7-9 cohort, Critical Thinking, Would You Rather manipulation brief is in hal-stack/research/dcc-kids-youtube-manipulation-brief.md' [P2] → 36fa09cf-876a-8145-8e5c-c10b850dfc18
+- 2026-05-29 00:46 Eastern Daylight Time — file-aaron-action: filed 'Identify 2 Ontario settlement agency pilot partners for KevsCasa Newcomer Housing Navigator — target ACCES Employment, Centre for Immigrant and Community Services, or similar IRCC-funded orgs' [P2] → 36fa09cf-876a-8107-a968-dfd318764d1f
+- 2026-05-29 00:47 Eastern Daylight Time — file-aaron-action: filed 'Review 2026-05-29 research docs against the strategic plan from Two Birds Command Claude.ai session before acting on any findings — research was run without that criteria and may not fit the plan' [P1] → 36fa09cf-876a-81da-bdc9-d98783b7fe45

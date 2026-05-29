@@ -17,6 +17,34 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## ⚡ 2026-05-29 — S-DCC-REBUILD-COMPLETE: Warm Hearth design system applied to entire DCC site
+
+**Trigger:** Overnight autonomous run — Phase 4 (Kids + supporting pages + full site sweep)
+
+### What Shipped (`digital-confidence`)
+
+| Commit | Files | What |
+|--------|-------|------|
+| P4 | 29 kids pages | `kids/index.html` + all 4-6, 7-9, 10-12 cohort pages — two path depths (`../css/`, `../../css/`) |
+| P4B | 13 supporting pages | `index.html`, `resources.html`, `faq.html`, `about.html`, `glossary.html`, `print-centre.html`, `recommended-tools.html`, `accessibility.html`, `privacy.html`, `family-setup.html`, `digital-literacy-101.html`, `whats-coming.html`, `scam-simulator.html` |
+| P4C | 170 pages | All remaining: `answers/`, `b2b/`, `beta/`, `demo/`, `fr/`, `geo-content/`, `interactive/`, `lang/fr/`, `lang/fr/modules/`, `resources/`, `resources/scam-deep-dives/`, `scam-alerts/`, `tips/` + 11 root-level pages |
+
+**Result:** `tokens.css`, `tokens-dark.css`, `fonts.css`, `components.css` now active on every page in the DCC site that has a stylesheet link. Three path depths handled (1, 2, 3 levels deep). Content unchanged throughout.
+
+**DCC Rebuild scorecard:**
+| Phase | Status |
+|---|---|
+| P0: Decision Lock | ✅ |
+| P1: Design System Lock (module-1 reference) | ✅ |
+| P2: Template Extraction | ✅ |
+| P3: Core Curriculum (28 adult modules) | ✅ |
+| P4: Full Site Sweep (kids + supporting + all subdirs) | ✅ |
+| P5: Commercial Layer (institutional.html, family.html, CRA pilot) | ⬜ Pending research review |
+
+Last updated: 2026-05-29 EST (Toronto) — overnight autonomous run
+
+---
+
 ## ⚡ 2026-05-29 — S-CLARITY-OVERNIGHT: Clarity product improvements + 4-product competitive research
 
 **Trigger:** Aaron voice note before sleep — overnight sprint on Clarity + research on DCC Adults, DCC Kids, KevsCasa

@@ -17,6 +17,25 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## 2026-05-30 -- S-DCC-CLEANUP: SESSION-STATE encoding fixed + template sync + residual pages
+
+**Trigger:** next sprint -- Notion empty; housekeeping after v2 wizard completion
+
+### What Shipped
+
+| Action | Detail |
+|--------|--------|
+| SESSION-STATE.md encoding | Fixed double-encoded UTF-8 (CP1252 round-trip). Em dashes, arrows, emoji all clean. |
+| module-template.html | family.html + b2b/index.html added to sidebar and footer nav; header comment updated |
+| accessibility/settings.html + shortcuts.html | tokens.css, tokens-dark.css, fonts.css, components.css added |
+| exercises/email-sorting.html + password-strength.html + scam-detective.html | same |
+
+Skipped intentionally: v2/ (own wizard CSS), admin/, components/, white-label-demo/
+
+Last updated: 2026-05-30 EST (Toronto)
+
+---
+
 ## 2026-05-30 -- S-DCC-V2-COMPLETE: v2 wizard JSON + CTAs for final 9 modules (19-27)
 
 **Trigger:** next sprint -- Notion empty; final batch of v2 wizard expansion

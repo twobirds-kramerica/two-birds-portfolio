@@ -17,6 +17,29 @@ Last fetch: 2026-05-26 â€” four sprints processed (Paperwork Labs v3 cancel
 
 ---
 
+## 2026-05-30 -- S-DCC-V2-COMPLETE: v2 wizard JSON + CTAs for final 9 modules (19-27)
+
+**Trigger:** next sprint -- Notion empty; final batch of v2 wizard expansion
+
+| Module | Topic | Screens |
+|--------|-------|---------|
+| 19: Digital Life | accounts, photos backup, digital instructions, Apple Legacy Contact | 6 |
+| 20: Internet Plan | data caps, speed, overage trap, negotiation script | 6 |
+| 21: Mobile Plan | long-term customer overpay, roaming, budget carriers, number porting | 6 |
+| 22: TV and Home Phone | bundle trap, skinny basic CRTC package, free streaming | 6 |
+| 23: Online Marketplaces | Frank's 3 messages, safe exchange zones, factory reset before selling | 6 |
+| 24: Communication Apps | Dorothy's daily text habit, WhatsApp voice notes | 6 |
+| 25: When Things Stop Working | dinosaur screen, downdetector, 4 fixes | 6 |
+| 26: Notifications | Helen's 47 notifs, Do Not Disturb, quiet hours schedule | 6 |
+| 27: Inbox and Spam | Robert's 14327 emails, archive vs delete, safe unsubscribe | 6 |
+
+**v2 wizard COMPLETE -- all 27/27 adult modules have wizard JSON and CTAs.**
+Total: 162 screens across 27 modules. Coverage started at 3/27 (2026-05-28).
+
+Last updated: 2026-05-30 EST (Toronto)
+
+---
+
 ## 2026-05-29 -- S-DCC-V2-MODULES-14-18: v2 wizard JSON + CTAs for modules 14-18
 
 **Trigger:** next sprint -- Notion empty; continuing v2 wizard expansion

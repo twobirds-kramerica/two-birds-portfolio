@@ -17,6 +17,24 @@ Last fetch: 2026-05-26 â€” four sprints processed (Paperwork Labs v3 cancel
 
 ---
 
+## 2026-05-29 -- S-DCC-V2-MODULES-14-18: v2 wizard JSON + CTAs for modules 14-18
+
+**Trigger:** next sprint -- Notion empty; continuing v2 wizard expansion
+
+| Module | Topic | Screens |
+|--------|-------|---------|
+| 14: Smart Home Basics | Robert Nest thermostat, smart plugs, Apple Watch fall detection | 6 |
+| 15: Telehealth | Helen hip replacement, LifeLabs booking, Telehealth Ontario 1-866-797-0000 | 6 |
+| 16: Travel Safety | Margaret hotel Wi-Fi risk, offline maps, digital boarding passes | 6 |
+| 17: AI for Research | Health questions safely, privacy golden rule, Telehealth Ontario fallback | 6 |
+| 18: Staying Connected | Scheduled calls, time zones, grief support, Connected Canadians | 6 |
+
+**v2 wizard coverage: 18/27 modules. 9 remaining (19-27).**
+
+Last updated: 2026-05-29 EST (Toronto)
+
+---
+
 ## âš¡ 2026-05-29 â€” S-DCC-V2-MODULES-4-8: v2 wizard JSON + CTAs for modules 4-8
 
 **Trigger:** next sprint â€” Notion empty; v2 wizard coverage was 3/27 modules; sitemap missing family.html

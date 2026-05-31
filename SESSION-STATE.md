@@ -17,6 +17,19 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## 2026-05-31 -- S-DCC-SERVICEONTARIO: ServiceOntario guide + NHSP pitch section
+
+Dorothy story (Woodstock, 3-hr office trips). Health card renewal (ontario.ca/renewhealthcard),
+driver licence (ontario.ca/renewlicence), 80+ exception noted, plate sticker, My ServiceOntario
+Account. Resources index: 3 featured government services cards now (CRA, Service Canada, ServiceOntario).
+
+b2b/index.html: NHSP grant pitch section added with copy-paste application language, letter of support
+offer, and programme stats. Libraries can use this directly in their 2026-27 NHSP grant applications.
+
+Government services track: 3 of planned suite now live.
+
+---
+
 ## 2026-05-31 -- S-CLARITY-BENCHMARK: Industry benchmark comparison added to Clarity
 
 **Trigger:** next sprint -- Notion empty; #1 competitive gap from May 2026 research

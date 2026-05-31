@@ -17,6 +17,36 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## 2026-05-31 -- S-DCC-CRA-PILOT: CRA My Account guide shipped — Phase 5 complete
+
+**Trigger:** next sprint — Notion empty; final unbuilt Phase 5 item from rebuild plan
+
+### What Shipped (`digital-confidence`)
+
+| File | What |
+|------|------|
+| `resources/cra-guide.html` | Plain-language CRA My Account guide for Canadian seniors |
+| `resources/index.html` | CRA guide added as featured first card (gold border, New tag) |
+| `sitemap.xml` | cra-guide.html added (priority 0.9) |
+
+**Guide content:** Eleanor's story (Hamilton ON, 2-hour hold waits replaced by self-serve). Covers: safety reassurance, Sign-In Partner (bank) registration, GCKey registration, three priority actions (direct deposit, refund status, benefit dates), CVITP free tax clinic finder, CRA scam warning, 5 FAQ answers, HowTo + FAQPage JSON-LD.
+
+**Why this matters:** The Canadian government services angle is DCC's #1 moat vs. US competitors — they literally cannot build content about CRA MyAccount, Service Canada, or Ontario-specific programs.
+
+**DCC Rebuild Plan: All 5 phases now complete.**
+
+Last updated: 2026-05-31 EST (Toronto)
+
+## 2026-05-31 -- S-KEVSCASA-LISTINGS: 6 new listings + 2 image URLs from fresh search
+
+6 new second_tier listings added for Kevin's July 30 deadline:
+940 Commissioners Rd E ($1,497 ALL-inclusive, 2mo free), 740 Kipps Lane ($1,295 1BR),
+122 Highbury Ave N (closest to Scanlan ~4-5min, call for price), 351 Hill St Unit 202
+($1,680 in-suite+underground), 1921 Frederick Cres ($1,450 basement), 175 Grey St Unit 1
+($1,395+hydro, immediate). Image URLs added for 1 Court Lane and 852 Trafalgar.
+
+---
+
 ## 2026-05-30 -- S-KEVSCASA-UX-SPRINT: Major KevsCasa UX overhaul + KevsCasa branding
 
 **Trigger:** Aaron live review of kevins-apartment-search.pages.dev; Kevin's house sold, July 30 move-out deadline

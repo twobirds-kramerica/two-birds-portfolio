@@ -17,6 +17,21 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## 2026-05-31 -- S-CLARITY-BENCHMARK: Industry benchmark comparison added to Clarity
+
+**Trigger:** next sprint -- Notion empty; #1 competitive gap from May 2026 research
+
+INDUSTRY_BENCHMARKS constant added to clarity.js: Canadian SME AI readiness averages
+(1-10 scale) for all 15 industries, sourced from BDC AI Adoption Report 2023 and ISED
+Digital Economy data. Results header now shows industry average (e.g. "Industry avg: 3/10")
+alongside the user's readiness score, with a directional indicator (above/below/at average)
+colour-coded green/red/neutral. Tooltip shows industry-specific context note + source.
+
+Impact Maker was the only free competitor with benchmarking -- now Clarity has it too.
+Aaron action still needed: set FORMSPREE_ENDPOINT in clarity.js to activate email capture.
+
+---
+
 ## 2026-05-31 -- S-DCC-SERVICE-CANADA: My Service Canada Account guide shipped
 
 **Trigger:** next sprint -- natural sequel to CRA guide; CPP/OAS complement

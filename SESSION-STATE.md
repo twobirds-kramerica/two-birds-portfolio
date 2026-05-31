@@ -17,6 +17,61 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## 2026-05-30 -- S-KEVSCASA-UX-SPRINT: Major KevsCasa UX overhaul + KevsCasa branding
+
+**Trigger:** Aaron live review of kevins-apartment-search.pages.dev; Kevin's house sold, July 30 move-out deadline
+
+### What Shipped (`kevins-apartment-search`)
+
+**Listing data fixes:**
+- 5 bot-blocked URLs replaced with property management sources (yorkproperty.ca, cogir.net, Zumper, bluestoneprop.com)
+- 435 Grey Street pricing corrected ($1,114 -> $1,350+, parking $90/mo extra not free)
+- 250 Oakland price corrected ($1,399 -> $1,499+)
+- Active top10 re-ranked 1-7 consecutively (gaps from archived listings)
+- `available_date` field added to all listings (null default)
+- 220 Ashland broken local_image cleared
+
+**Probe upgrade:**
+- Weekly HEAD check -> Daily GET with content validation (browser User-Agent)
+- Generic-page detection: checks final URL against known homepage patterns
+- Address validation: page body must contain listing street address
+- 403 now flagged as BLOCKED/unverifiable (was silently passing)
+- Two-tier GitHub issue reporting: confirmed dead vs. blocked
+
+**UX improvements (multiple sprints):**
+- Contact status tracker: Contacted / Viewed / Applied / Skip buttons on every card (localStorage, event delegation, togglable)
+- July 30 deadline countdown in header (configurable date field, turns red at 14 days)
+- Expiry warning badges removed from cards
+- Flag button -> "Report a problem" with descriptive title tooltip
+- Neighbourhood rating ? info button: popover with green/yellow/red explanation + data sources (StatCan UCR, London Police, Reddit r/londonontario, Facebook, Google Maps, AreaVibes, WalkScore)
+- Days on market badge (computed from date_added)
+- Available date badge (shows when available_date set)
+- Two-column criteria panel layout (CSS grid)
+- Criteria compact/expand toggle (persists in localStorage)
+- Your Name criteria field (personalises site title + subtitle)
+- Move-out deadline criteria field (date picker, drives countdown)
+- Parking, Laundry, Unit Type: radio buttons replacing free text
+- Top-N selector: Show 10/20/30/All above listing grid
+- Top10 + second_tier merged into one sorted grid with tier divider
+- Housing Budget 101 section (30% rule CMHC, 50/30/20, London ON cost breakdown)
+
+**KevsCasa branding:**
+- Site de-Kevin-ified: "Your Apartment Search" by default, personalises with name
+- "Your Search Criteria" always (not name-prefixed)
+- KevsCasa logo: Canva-designed, castle rooftop + key icon, dark navy palette
+  - Primary: `images/kevscasa-logo.png` (74.5 KB)
+  - Runner-up: `images/kevscasa-logo-v2.png` (83.7 KB) -- keep as alternate
+- Font licensing: Canva fonts commercially usable per Canva policy; PNGs in repo are clean; SIL OFL Google Fonts alternatives identified for future sovereign rebuild
+
+**Open Aaron actions:**
+- Google Maps API key referrer restrictions (Google Cloud Console)
+- Image URLs for #1 Court Lane, #4 220 Ashland, #6 852 Trafalgar (manual from property sites)
+- Set available_date in listings.json as landlords confirm
+
+Last updated: 2026-05-31 EST (Toronto)
+
+---
+
 ## 2026-05-30 -- S-DCC-CLEANUP: SESSION-STATE encoding fixed + template sync + residual pages
 
 **Trigger:** next sprint -- Notion empty; housekeeping after v2 wizard completion

@@ -17,6 +17,21 @@ Last fetch: 2026-05-26 — four sprints processed (Paperwork Labs v3 cancelled; 
 
 ---
 
+## 2026-05-31 -- S-DCC-SERVICE-CANADA: My Service Canada Account guide shipped
+
+**Trigger:** next sprint -- natural sequel to CRA guide; CPP/OAS complement
+
+Arthur's story (Kingston ON, OAS to wrong bank after switching, 6 weeks missing).
+Covers: MSCA vs CRA distinction, registration, direct deposit update, T4A tax slips,
+CPP/OAS/GIS explainers, Service Canada 1-800-277-9914, scam warning.
+Cross-linked to CRA guide. Added to resources index and sitemap.
+
+Canadian government services track: CRA + Service Canada = 2 of planned suite live.
+
+Last updated: 2026-05-31 EST (Toronto)
+
+---
+
 ## 2026-05-31 -- S-DCC-CRA-PILOT: CRA My Account guide shipped — Phase 5 complete
 
 **Trigger:** next sprint — Notion empty; final unbuilt Phase 5 item from rebuild plan
